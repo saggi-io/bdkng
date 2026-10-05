@@ -184,6 +184,163 @@ footer p{font-size:13px;line-height:1.6;margin:0}
 .hero-final::after{background:linear-gradient(90deg,rgba(0,0,0,0),rgba(0,0,0,0) 60%,rgba(0,0,0,.04))}
 .hero-actions-only{top:auto;bottom:34px;left:6%;transform:none}
 .hero-actions-only .ctas{filter:drop-shadow(0 3px 8px rgba(0,0,0,.25))}
+
+/* --- BDKNG Header final responsive --- */
+.hero.hero-final{
+  position:relative;
+  width:100%;
+  height:auto;
+  min-height:0;
+  aspect-ratio:3 / 1;
+  margin-top:18px;
+  border-radius:22px;
+  overflow:hidden;
+  background:#eef4ef;
+}
+.hero.hero-final > img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.hero.hero-final::after{
+  display:none;
+}
+.hero-actions-only{
+  position:absolute;
+  left:clamp(18px,3vw,42px);
+  bottom:clamp(15px,2vw,28px);
+  top:auto;
+  transform:none;
+  max-width:none;
+}
+.hero-actions-only .ctas{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.hero-actions-only .btn{
+  padding:12px 18px;
+  font-size:15px;
+  min-height:46px;
+}
+.credit{
+  margin-top:5px;
+}
+
+/* Navigation */
+nav{
+  min-height:70px;
+  height:auto;
+  padding:7px 0;
+}
+.brand-logo img{
+  height:56px;
+  width:auto;
+  max-width:170px;
+  object-fit:contain;
+}
+.navlinks{
+  align-items:center;
+}
+
+/* Tablet */
+@media (max-width:900px){
+  .hero.hero-final{
+    aspect-ratio:3 / 1;
+    border-radius:16px;
+  }
+  .hero-actions-only .btn{
+    padding:10px 14px;
+    font-size:14px;
+    min-height:44px;
+  }
+}
+
+/* Mobile: whole banner stays visible; actions are moved below it */
+@media (max-width:600px){
+  .wrap{
+    width:min(100% - 20px,1220px);
+  }
+  header{
+    position:sticky;
+    top:0;
+  }
+  nav{
+    min-height:62px;
+    padding:5px 0;
+  }
+  .brand-logo img{
+    height:48px;
+    max-width:145px;
+  }
+  .shopnav{
+    padding:9px 13px;
+    font-size:13px;
+  }
+  .hero.hero-final{
+    overflow:visible;
+    aspect-ratio:auto;
+    background:transparent;
+    border-radius:12px;
+    margin-bottom:112px;
+  }
+  .hero.hero-final > img{
+    width:100%;
+    height:auto;
+    aspect-ratio:3 / 1;
+    object-fit:contain;
+    border-radius:12px;
+  }
+  .hero-actions-only{
+    position:absolute;
+    left:0;
+    right:0;
+    top:calc(100% + 10px);
+    bottom:auto;
+  }
+  .hero-actions-only .ctas{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+  .hero-actions-only .btn{
+    width:100%;
+    justify-content:center;
+    min-height:46px;
+    padding:11px 14px;
+    font-size:15px;
+  }
+  .hero-actions-only .btn-secondary{
+    background:#1B4D2E;
+    border-color:#1B4D2E;
+    color:#fff;
+  }
+  .credit{
+    display:none;
+  }
+  .grid{
+    grid-template-columns:1fr;
+  }
+  .cardtop{
+    height:auto;
+    aspect-ratio:16 / 9;
+  }
+  .cardtop img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .section-head h2{
+    font-size:30px;
+  }
+  .shop{
+    padding:24px 18px;
+    border-radius:18px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -199,7 +356,7 @@ footer p{font-size:13px;line-height:1.6;margin:0}
 
 <main class="wrap">
 <section class="hero hero-final">
-<img src="/assets/bdkng-header.webp" alt="BDKNG – Bad König Panorama mit Schloss und Logo" fetchpriority="high" decoding="async">
+<img src="/assets/bdkng-header.webp" alt="BDKNG – Bad König mit Schloss, Stadtkern und Logo" fetchpriority="high" decoding="async">
 <div class="herocopy hero-actions-only">
 <div class="ctas">
 <a href="#shop" class="btn btn-shop">🛍 Zum BDKNG Shop →</a>
