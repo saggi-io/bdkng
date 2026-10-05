@@ -7,6 +7,9 @@
 <meta name="description" content="BDKNG ist das lokale Portal für Bad König im Odenwald: Shop, aktuelle Meldungen, Verkehr, Veranstaltungen, Vereine, Gastronomie, Gewerbe und regionale Tipps.">
 
 <link rel="canonical" href="https://bdkng.de/">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<meta name="msapplication-TileImage" content="/assets/favicon-512.png">
 <link rel="preload" as="image" href="https://www.badkoenig.de/bilder/altes-neues-schloss-blick-vom-hirtenberg.jpg" fetchpriority="high">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1">
@@ -30,7 +33,6 @@
 <meta name="twitter:description" content="Shop, Aktuelles, Verkehr, Veranstaltungen und Genuss aus Bad König im Odenwald.">
 <meta name="twitter:image" content="https://www.badkoenig.de/bilder/altes-neues-schloss-blick-vom-hirtenberg.jpg">
 
-<link rel="icon" type="image/png" href="/assets/favicon-512.png">
 <link rel="preconnect" href="https://www.badkoenig.de">
 <link rel="alternate" type="text/markdown" href="/llms.txt" title="BDKNG – maschinenlesbare Website-Zusammenfassung">
 <script type="application/ld+json">
@@ -166,12 +168,24 @@ footer p{font-size:13px;line-height:1.6;margin:0}
 .seo-about{margin:10px 0 42px;padding:4px 0}.seo-about .section-head{max-width:900px}.seo-about .section-head p{font-size:17px;line-height:1.7;color:#555}
 @media(max-width:900px){nav a:not(.shopnav){display:none}.shop{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.hero{height:470px}.herocopy h1{letter-spacing:-3px}.grid{grid-template-columns:1fr}.shop{padding:25px}.wa{align-items:flex-start;flex-direction:column}.test{margin-left:0}.foot{grid-template-columns:1fr}}
+
+.brand-logo{display:flex;align-items:center;padding:2px 0}
+.brand-logo img{height:58px;width:auto;display:block}
+.icon-tile{height:220px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.icon-tile.aktuell{background:linear-gradient(145deg,#f7f3e9,#e7efe8)}
+.icon-tile.verkehr{background:linear-gradient(145deg,#f7f3e9,#f3e7e7)}
+.icon-symbol{width:94px;height:94px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:46px;font-weight:900}
+.aktuell .icon-symbol{background:#1B4D2E;color:#fff}
+.verkehr .icon-symbol{background:#df262f;color:#fff}
+.cardtop img{object-fit:cover;object-position:center}
+@media(max-width:560px){.brand-logo img{height:50px}}
+
 </style>
 </head>
 <body>
 
 <header><div class="wrap"><nav>
-<div class="brand">BDKNG<span>BAD KÖNIG</span></div>
+<a class="brand brand-logo" href="/" aria-label="BDKNG Startseite"><img src="/assets/bdkng-logo.png" alt="BDKNG – Bad König"></a>
 <a href="#aktuell">Aktuell</a>
 <a href="#verkehr">Verkehr</a>
 <a href="#wochenende">Wochenende</a>
@@ -213,23 +227,23 @@ footer p{font-size:13px;line-height:1.6;margin:0}
 <div class="grid">
 
 <article class="card" id="aktuell">
-<div class="cardtop nophoto"><div class="megaphone">📣</div><span class="tag" style="background:#1B4D2E">AKTUELL</span></div>
+<div class="icon-tile aktuell"><div class="icon-symbol">i</div><span class="tag" style="background:#1B4D2E">AKTUELL</span></div>
 <div class="cardbody"><h3>Neuigkeiten aus Bad König</h3><p>Wichtige Informationen, Entscheidungen und aktuelle Meldungen aus unserer Stadt.</p><a class="more" href="#">Mehr erfahren →</a></div>
 </article>
 
 <article class="card" id="verkehr">
-<div class="cardtop"><img src="assets/verkehr.webp" style="object-position:33% 70%;transform:scale(1.55)" alt="B45 / Zell"><span class="tag" style="background:#df262f">VERKEHR</span></div>
-<div class="cardbody"><h3>B45 / Zell</h3><p>Sperrungen, Baustellen, Umleitungen und aktuelle Verkehrsinformationen.</p><a class="more" href="#">Verkehr ansehen →</a></div>
+<div class="icon-tile verkehr"><div class="icon-symbol">!</div><span class="tag" style="background:#df262f">VERKEHR</span></div>
+<div class="cardbody"><h3>Verkehr & Sperrungen</h3><p>Baustellen, Sperrungen, Umleitungen und wichtige Verkehrsinformationen rund um Bad König.</p><a class="more" href="#">Verkehr ansehen →</a></div>
 </article>
 
 <article class="card" id="wochenende">
-<div class="cardtop"><img src="assets/wochenende.webp" alt="Bad König Innenstadt"><span class="tag" style="background:#2F5D8A">WOCHENENDE</span></div>
+<div class="cardtop"><img src="/assets/wochenende.webp" alt="Bad König – Veranstaltungen und Wochenendtipps"><span class="tag" style="background:#2F5D8A">WOCHENENDE</span></div>
 <div class="cardbody"><h3>Was ist los in Bad König?</h3><p>Veranstaltungen, Feste, Vereinstermine und Highlights auf einen Blick.</p><a class="more" href="#">Events ansehen →</a></div>
 </article>
 
 <article class="card" id="genuss">
-<div class="cardtop"><img src="assets/genuss.webp" alt="Gastronomie in Bad König"><span class="tag" style="background:#D4A857">GENUSS</span></div>
-<div class="cardbody"><h3>Genuss in Bad König</h3><p>Gastronomie, regionale Angebote und später ausgewählte BDKNG-Partner.</p><a class="more" href="#">Genuss entdecken →</a></div>
+<div class="cardtop"><img src="/assets/genuss.webp" alt="Gastronomie in Bad König"><span class="tag" style="background:#D4A857">GENUSS</span></div>
+<div class="cardbody"><h3>Genuss in Bad König</h3><p>Gastronomie, regionale Angebote und ausgewählte BDKNG-Partner.</p><a class="more" href="#">Genuss entdecken →</a></div>
 </article>
 
 </div>
