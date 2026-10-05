@@ -10,7 +10,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 <meta name="msapplication-TileImage" content="/assets/favicon-512.png">
-<link rel="preload" as="image" href="https://www.badkoenig.de/bilder/altes-neues-schloss-blick-vom-hirtenberg.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/bdkng-header.webp" fetchpriority="high">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="theme-color" content="#1B4D2E">
@@ -25,13 +25,13 @@
 <meta property="og:title" content="BDKNG | Bad König kompakt">
 <meta property="og:description" content="Bad König auf einen Blick: Shop, Aktuelles, Verkehr, Veranstaltungen, Vereine, Genuss und Gewerbe. Regional, kompakt und mit Quellen.">
 <meta property="og:url" content="https://bdkng.de/">
-<meta property="og:image" content="https://www.badkoenig.de/bilder/altes-neues-schloss-blick-vom-hirtenberg.jpg">
+<meta property="og:image" content="https://bdkng.de/assets/bdkng-header.webp">
 <meta property="og:image:alt" content="Bad König im Odenwald – Blick auf Stadtkern, Schloss und Kirchturm">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="BDKNG | Bad König kompakt">
 <meta name="twitter:description" content="Shop, Aktuelles, Verkehr, Veranstaltungen und Genuss aus Bad König im Odenwald.">
-<meta name="twitter:image" content="https://www.badkoenig.de/bilder/altes-neues-schloss-blick-vom-hirtenberg.jpg">
+<meta name="twitter:image" content="https://bdkng.de/assets/bdkng-header.webp">
 
 <link rel="preconnect" href="https://www.badkoenig.de">
 <link rel="alternate" type="text/markdown" href="/llms.txt" title="BDKNG – maschinenlesbare Website-Zusammenfassung">
@@ -49,7 +49,7 @@
         "Bad König kompakt"
       ],
       "url": "https://bdkng.de/",
-      "logo": "https://bdkng.de/assets/bdkng-logo.webp",
+      "logo": "https://bdkng.de/assets/bdkng-logo.png",
       "sameAs": [
         "https://www.facebook.com/bdkng.de/",
         "https://whatsapp.com/channel/0029VaQq65RCxoAv42xpsi0M"
@@ -170,7 +170,7 @@ footer p{font-size:13px;line-height:1.6;margin:0}
 @media(max-width:560px){.hero{height:470px}.herocopy h1{letter-spacing:-3px}.grid{grid-template-columns:1fr}.shop{padding:25px}.wa{align-items:flex-start;flex-direction:column}.test{margin-left:0}.foot{grid-template-columns:1fr}}
 
 .brand-logo{display:flex;align-items:center;padding:2px 0}
-.brand-logo img{height:58px;width:auto;display:block}
+.brand-logo img{height:58px;width:auto;display:block;object-fit:contain}
 .icon-tile{height:220px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .icon-tile.aktuell{background:linear-gradient(145deg,#f7f3e9,#e7efe8)}
 .icon-tile.verkehr{background:linear-gradient(145deg,#f7f3e9,#f3e7e7)}
@@ -180,6 +180,10 @@ footer p{font-size:13px;line-height:1.6;margin:0}
 .cardtop img{object-fit:cover;object-position:center}
 @media(max-width:560px){.brand-logo img{height:50px}}
 
+
+.hero-final::after{background:linear-gradient(90deg,rgba(0,0,0,0),rgba(0,0,0,0) 60%,rgba(0,0,0,.04))}
+.hero-actions-only{top:auto;bottom:34px;left:6%;transform:none}
+.hero-actions-only .ctas{filter:drop-shadow(0 3px 8px rgba(0,0,0,.25))}
 </style>
 </head>
 <body>
@@ -194,19 +198,16 @@ footer p{font-size:13px;line-height:1.6;margin:0}
 </nav></div></header>
 
 <main class="wrap">
-<section class="hero">
-<img src="https://www.badkoenig.de/bilder/altes-neues-schloss-blick-vom-hirtenberg.jpg" alt="Bad König im Odenwald – Stadtkern mit Schloss und Kirchturm" fetchpriority="high" decoding="async">
-<div class="herocopy">
-<h1>BDKNG</h1>
-<span class="city">BAD KÖNIG</span>
-<p class="claim">Unsere Stadt. Unsere Heimat.</p>
+<section class="hero hero-final">
+<img src="/assets/bdkng-header.webp" alt="BDKNG – Bad König Panorama mit Schloss und Logo" fetchpriority="high" decoding="async">
+<div class="herocopy hero-actions-only">
 <div class="ctas">
 <a href="#shop" class="btn btn-shop">🛍 Zum BDKNG Shop →</a>
 <a href="#kompakt" class="btn btn-secondary">Bad König kompakt</a>
 </div>
 </div>
 </section>
-<div class="credit">Foto: R. Veit · Nutzung mit Freigabe</div>
+<div class="credit">BDKNG · Bad König</div>
 
 <section class="shop" id="shop">
 <div>
@@ -227,12 +228,12 @@ footer p{font-size:13px;line-height:1.6;margin:0}
 <div class="grid">
 
 <article class="card" id="aktuell">
-<div class="icon-tile aktuell"><div class="icon-symbol">i</div><span class="tag" style="background:#1B4D2E">AKTUELL</span></div>
+<div class="cardtop"><img src="/assets/bdkng-news.webp" alt="BDKNG News – Aktuelles aus Bad König"><span class="tag" style="background:#1B4D2E">AKTUELL</span></div>
 <div class="cardbody"><h3>Neuigkeiten aus Bad König</h3><p>Wichtige Informationen, Entscheidungen und aktuelle Meldungen aus unserer Stadt.</p><a class="more" href="#">Mehr erfahren →</a></div>
 </article>
 
 <article class="card" id="verkehr">
-<div class="icon-tile verkehr"><div class="icon-symbol">!</div><span class="tag" style="background:#df262f">VERKEHR</span></div>
+<div class="cardtop"><img src="/assets/bdkng-verkehr.webp" alt="BDKNG Verkehr – Auto auf der Brücke"><span class="tag" style="background:#df262f">VERKEHR</span></div>
 <div class="cardbody"><h3>Verkehr & Sperrungen</h3><p>Baustellen, Sperrungen, Umleitungen und wichtige Verkehrsinformationen rund um Bad König.</p><a class="more" href="#">Verkehr ansehen →</a></div>
 </article>
 
