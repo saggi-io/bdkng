@@ -9,6 +9,3 @@ BDKNG Website – bereinigte Version
 - Hauptbild bleibt die reale Originalaufnahme von Bad König
 - SEO/Schema/robots/sitemap/llms bleiben enthalten
 
-Noch offen:
-- Printify-Shop-Link einsetzen
-- ggf. später hochauflösendes Originalfoto für Verkehr ergänzen
