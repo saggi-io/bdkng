@@ -341,6 +341,111 @@ nav{
   }
 }
 
+
+/* --- Shop + WhatsApp nebeneinander --- */
+.promo-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin:28px 0 40px;
+  align-items:stretch;
+}
+.promo-card{
+  min-width:0;
+  border-radius:22px;
+  padding:24px 26px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  min-height:245px;
+}
+.promo-shop{
+  background:var(--green);
+  color:#fff;
+}
+.promo-whatsapp{
+  background:#efece3;
+  color:var(--text);
+  border:1px solid #e2dccf;
+}
+.promo-card .kicker{
+  align-self:flex-start;
+  margin-bottom:10px;
+}
+.kicker-wa{
+  background:#25D366;
+  color:#10331d;
+}
+.promo-card h2{
+  font-size:clamp(25px,2.2vw,34px);
+  line-height:1.06;
+  margin:0 0 10px;
+}
+.promo-card p{
+  margin:0;
+  font-size:16px;
+  line-height:1.45;
+}
+.promo-shop p{
+  color:#e6eee8;
+}
+.promo-whatsapp p{
+  color:#555;
+}
+.promo-copy{
+  margin-bottom:auto;
+}
+.promo-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:max-content;
+  max-width:100%;
+  min-height:46px;
+  margin-top:18px;
+  padding:12px 18px;
+  border-radius:999px;
+  font-weight:900;
+  font-size:15px;
+}
+.promo-btn-shop{
+  background:var(--gold);
+  color:#173120;
+}
+.promo-btn-wa{
+  background:#25D366;
+  color:#10331d;
+}
+.promo-card small{
+  display:block;
+  margin-top:8px;
+  font-size:12px;
+  opacity:.72;
+}
+
+@media(max-width:700px){
+  .promo-row{
+    grid-template-columns:1fr;
+    gap:12px;
+    margin:20px 0 32px;
+  }
+  .promo-card{
+    min-height:0;
+    padding:20px 18px 17px;
+    border-radius:18px;
+  }
+  .promo-card h2{
+    font-size:27px;
+  }
+  .promo-card p{
+    font-size:15px;
+  }
+  .promo-btn{
+    width:100%;
+    margin-top:16px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -366,19 +471,29 @@ nav{
 </section>
 <div class="credit">BDKNG · Bad König</div>
 
-<section class="shop" id="shop">
-<div>
-<span class="kicker">BDKNG SHOP</span>
-<h2>Bad König zum Anziehen, Verschenken & Behalten.</h2>
-<p>BDKNG Merch, Shirts, Hoodies, Tassen und weitere regionale Produkte. Der Shop ist der zentrale kommerzielle Bereich von BDKNG.</p>
-</div>
-<div class="shopbox">
-<strong>BDKNG SHOP</strong>
-<p>Der Printify-Shop wird hier direkt verlinkt.</p>
-<a class="shopplaceholder" href="#" aria-disabled="true">Zum Shop →</a>
-<small style="display:block;margin-top:10px;color:#888">Printify-Link folgt</small>
-</div>
+
+<section class="promo-row" aria-label="BDKNG Shop und WhatsApp">
+  <article class="promo-card promo-shop" id="shop">
+    <div class="promo-copy">
+      <span class="kicker">BDKNG SHOP</span>
+      <h2>Bad König zum Anziehen & Verschenken.</h2>
+      <p>BDKNG Merch, Shirts, Hoodies, Tassen und regionale Produkte.</p>
+    </div>
+    <a class="promo-btn promo-btn-shop" href="#" aria-disabled="true">Zum BDKNG Shop →</a>
+    <small>Printify-Link folgt</small>
+  </article>
+
+  <article class="promo-card promo-whatsapp">
+    <div class="promo-copy">
+      <span class="kicker kicker-wa">WHATSAPP</span>
+      <h2>Bad König kompakt direkt aufs Handy.</h2>
+      <p>Aktuelles, Verkehr, Termine und wichtige Meldungen im BDKNG-Kanal.</p>
+    </div>
+    <a class="promo-btn promo-btn-wa" href="https://whatsapp.com/channel/0029VaQq65RCxoAv42xpsi0M" target="_blank" rel="noopener">WhatsApp-Kanal öffnen →</a>
+    <small>Der Kanal befindet sich in der Testphase.</small>
+  </article>
 </section>
+
 
 <section id="kompakt">
 <div class="section-head"><h2>Bad König kompakt</h2><p>Was gerade wichtig, interessant oder einfach gut zu wissen ist.</p></div>
@@ -418,11 +533,6 @@ nav{
       Inhalte werden kompakt aufbereitet und bei Meldungen nach Möglichkeit mit Quellen versehen.
     </p>
   </div>
-</section>
-
-<section class="wa">
-<div><h3>BDKNG | Bad König kompakt auf WhatsApp</h3><p>Der Nachrichtenkanal läuft zunächst bewusst im kleinen Testkreis. Danach sollen Meldungen und Termine schrittweise automatisiert werden.</p></div>
-<div style="margin-left:auto;display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-shop" href="https://whatsapp.com/channel/0029VaQq65RCxoAv42xpsi0M" target="_blank" rel="noopener">WhatsApp-Kanal öffnen →</a><span class="test">TESTPHASE</span></div>
 </section>
 </main>
 
