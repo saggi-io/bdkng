@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# ChatGPT Search / OpenAI-Suche ausdrücklich zulassen
+User-agent: OAI-SearchBot
+Allow: /
+
+# Auffindbarkeit in ChatGPT erlauben, Training nicht automatisch freigeben
+User-agent: GPTBot
+Disallow: /
+
+Sitemap: https://bdkng.de/sitemap.xml
