@@ -1,0 +1,1 @@
+'use strict';const today=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Berlin'}).format(new Date());document.querySelectorAll('[data-valid-until]').forEach(el=>{if(today>el.dataset.validUntil)el.querySelector('.expired-label').hidden=false;});

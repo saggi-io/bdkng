@@ -1,0 +1,109 @@
+[
+  {
+    "id": "zell-2026-10-23",
+    "categories": [
+      "verkehr"
+    ],
+    "title": "Zell: Ortsdurchfahrt ab 23. Oktober gesperrt",
+    "paragraphs": [
+      "Hessen Mobil kündigt die Vollsperrung ab Freitagmorgen, 23. Oktober, an. Betroffen ist der Abschnitt vom Bahnübergang „An der alten Schule“ bis zur Einmündung der Königer Straße in die K 91.",
+      "Die Fahrbahnerneuerung beginnt am 26. Oktober und soll voraussichtlich am 6. November abgeschlossen sein. Pkw werden über die L 3414 bei Langenbrombach oder die K 92 bei Weiten-Gesäß umgeleitet."
+    ],
+    "source": "Hessen Mobil · 13.10.2026",
+    "url": "https://mobil.hessen.de/presse/b-45-fahrbahnerneuerung-in-der-ortsdurchfahrt-bad-koenigzell",
+    "checked": "2026-10-15",
+    "valid_until": "2026-11-06"
+  },
+  {
+    "id": "gaensbrunnen-2026-10",
+    "categories": [
+      "aktuell",
+      "wichtig",
+      "muell"
+    ],
+    "title": "Bauarbeiten: Tonnen am Vortag bis 15:30 Uhr bereitstellen",
+    "paragraphs": [
+      "Die Stadt informiert über Arbeiten am Gänsbrunnen und Gickelsgraben. Für gesperrte Abschnitte sollen Tonnen und Gelbe Säcke am Vortag der Abholung bis 15:30 Uhr vor dem Haus stehen und mit der Hausnummer gekennzeichnet sein.",
+      "Die Baufirma bringt sie zum Sammelplatz an der Berggartenstraße. Zufahrten und Parkmöglichkeiten können zeitweise eingeschränkt sein. Bitte die aktuellen Hinweise der Stadt beachten."
+    ],
+    "source": "Stadt Bad König · 09.10.2026",
+    "url": "https://www.badkoenig.de/aktuelle-nachrichten/information-zur-baumassnahme-endstufenausbau-am-gaensbrunnen-und-instandsetzung-der-strasse-am-gickelsgraben-baustart-und-hinweise-fuer-anwohner/",
+    "checked": "2026-10-15",
+    "valid_until": null
+  },
+  {
+    "id": "finanzausschuss-2026-10-26",
+    "categories": [
+      "aktuell",
+      "termine"
+    ],
+    "title": "Freibad und Krisenvorsorge auf der Tagesordnung",
+    "paragraphs": [
+      "Der Haupt- und Finanzausschuss tagt am Montag, 26. Oktober, um 19:30 Uhr öffentlich im großen Saal der Rentmeisterei.",
+      "Laut Echo geht es unter anderem um ein alternatives Konzept für das Freibad und die Teilnahme am Landesprogramm „KOMPASS Resilienz“."
+    ],
+    "source": "Echo Online · 14.10.2026",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/oeffentliche-sitzung-6546344",
+    "checked": "2026-10-15",
+    "valid_until": "2026-10-26"
+  },
+  {
+    "id": "ortsbeirat-2026-10-27",
+    "categories": [
+      "termine"
+    ],
+    "title": "Ortsbeirat Ober-Kinzig/Gumpersberg tagt am 27. Oktober",
+    "paragraphs": [
+      "Die öffentliche Sitzung beginnt am Dienstag, 27. Oktober, um 19:30 Uhr im Sportlerheim Ober-Kinzig, Nieder-Kinziger-Straße 1.",
+      "Auf der Tagesordnung stehen unter anderem die Friedhöfe, der Katastrophenschutz und Parkplätze an der Hummetrötherstraße."
+    ],
+    "source": "LINUS WITTICH · Stadtnachrichten 42/2026, Seite 5 (Ausgabedatum 16.10.)",
+    "url": "https://epaper.wittich.de/frontend/mvc/catalog/by-name/2173/2173_42_2026",
+    "checked": "2026-10-15",
+    "valid_until": "2026-10-27"
+  },
+  {
+    "id": "fussball-2026-10-11",
+    "categories": [
+      "sport"
+    ],
+    "title": "SG Bad König/Zell holt einen Punkt in Vielbrunn",
+    "paragraphs": [
+      "Rückblick auf den 11. Oktober 2026: Die erste Mannschaft spielte bei der KSG Vielbrunn 2:2 (Halbzeit 2:1). Nach zweimaligem Rückstand trafen Daniel Studniarek in der 26. und Philipp Heisel in der 47. Minute für die SG."
+    ],
+    "source": "Echo Online · Spielbericht vom 11.10.2026",
+    "url": "https://www.echo-online.de/sport/fussball/fussball-odenwald/fsv-erbach-festigt-die-tabellenfuehrung-6513060",
+    "checked": "2026-10-15",
+    "valid_until": null
+  },
+  {
+    "id": "gewerbe-mitmachen",
+    "categories": [
+      "genuss"
+    ],
+    "title": "Lokale Unternehmen und Genuss-Tipps gesucht",
+    "paragraphs": [
+      "Du hast ein Geschäft, einen Gastronomiebetrieb oder ein besonderes Angebot in Bad König? Wir freuen uns auf deine Hinweise und Ideen.",
+      "Werbung und Rubrikpartnerschaften besprechen wir persönlich und kennzeichnen sie klar. Mehr dazu auf unserer Werbepartnerseite."
+    ],
+    "source": "BDKNG · eigene Mitteilung",
+    "url": "https://bdkng.de/werbung.html",
+    "checked": "2026-10-16",
+    "valid_until": null
+  },
+  {
+    "id": "wetter-2026-10-16",
+    "categories": [
+      "wetter"
+    ],
+    "title": "Wetter vom 16. bis 18. Oktober",
+    "paragraphs": [
+      "Vorhersage vom 15. Oktober: Freitag etwa 6 bis 21 °C, zeitweise Nebel und voraussichtlich trocken. Samstag etwa 6 bis 14 °C mit Regenrisiko bis 40 %. Sonntag etwa 5 bis 11 °C mit Regenrisiko bis 29 %.",
+      "Die Prognose kann sich ändern. Die Übersicht zeigt ausdrücklich den damaligen Vorhersagestand."
+    ],
+    "source": "Open-Meteo · Prognose für Bad König vom 15.10.2026",
+    "url": "https://open-meteo.com/",
+    "checked": "2026-10-15",
+    "valid_until": "2026-10-18"
+  }
+]
