@@ -22,3 +22,7 @@ BDKNG bereitet lokale Informationen kompakt und in eigener Formulierung auf. Bei
 
 ## Ort
 Bad König, Odenwaldkreis, Hessen, Deutschland.
+
+## Kontakt und lokale Werbepartner
+- [Werbepartner](https://bdkng.de/werbung.html): Rubrikpartnerschaften, lokale Angebote und Kooperationen. Konditionen werden individuell besprochen; Werbung wird gekennzeichnet.
+- [Kontakt & Anregungen](https://bdkng.de/kontakt.html): Wünsche, Meldungshinweise, Veranstaltungstipps und Werbeanfragen. Das Formular erstellt eine E-Mail an info@bdkng.de; versendet wird im E-Mail-Programm des Besuchers.
