@@ -1,5 +1,27 @@
 [
   {
+    "id": "wochenende-2026-10-23",
+    "categories": [
+      "termine"
+    ],
+    "title": "Dein Wochenende in Bad König · 23.–25. Oktober",
+    "paragraphs": [
+      "Eine Auswahl für Freitag, 23., bis Sonntag, 25. Oktober 2026. Die folgenden drei Termine finden alle am Sonntag, 25. Oktober, in der Kernstadt statt.",
+      "09:30 Uhr: Musikalischer Jubiläumsgottesdienst in der Schlosskirche – 275 Jahre Schlosskirche und 25 Jahre evangelisches Gemeindehaus. Anschließend Gemeindefest in Kirche und Gemeindehaus. Veranstalter: Evangelische Kirchengemeinde Bad König.",
+      "10:30–12:00 Uhr: Das Georg-Vetter-Museum in der Alexanderstraße 2 öffnet seine Ausstellung.",
+      "Ab 14:00 Uhr: Tanztee mit Armin & Andrea in der Wandelhalle Bad König, veranstaltet von der Kurgesellschaft Bad König.",
+      "Mit den Bad Königer Stadtnachrichten, Ausgabe 43/2026, Seiten 6 und 10, abgeglichen. Aktuelle Änderungen bitte beim Veranstalter prüfen."
+    ],
+    "source": "Stadt Bad König · Veranstaltungskalender, geprüft am 22.10.2026",
+    "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/",
+    "checked": "2026-10-22",
+    "valid_until": "2026-10-25",
+    "verification_sources": [
+      "https://www.badkoenig.de/kalender/veranstaltungskalender/event.ics?start=2026-10-23&end=2026-10-25&count=30",
+      "https://epaper.wittich.de/frontend/mvc/catalog/by-name/2173/2173_43_2026"
+    ]
+  },
+  {
     "id": "zell-2026-10-23",
     "categories": [
       "verkehr"
