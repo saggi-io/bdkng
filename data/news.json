@@ -1,5 +1,124 @@
 [
   {
+    "checked": "2026-10-26",
+    "valid_until": "2026-10-30",
+    "id": "termine-woche-2026-10-26",
+    "categories": [
+      "termine"
+    ],
+    "title": "Diese Woche in Bad König · 26.–30. Oktober",
+    "paragraphs": [
+      "Eine Auswahl für Montag, 26., bis Freitag, 30. Oktober 2026.",
+      "Mittwoch, 28.10., 19:30 Uhr: Jahreshauptversammlung des Fördervereins der Waldbachschule Zell e.V. im Gasthaus „Eulbacher Hof“ in Zell.",
+      "Donnerstag, 29.10., 14:30–16:00 Uhr: Seniorennachmittag der AWO Tagespflege, Schwimmbadstraße 2b, Bad König.",
+      "Donnerstag, 29.10., 19:30 Uhr: Öffentliche Stadtverordnetenversammlung im großen Saal der Rentmeisterei, Schlossplatz 2, Bad König.",
+      "Freitag, 30.10., ab 18:00 Uhr: Oktoberfest der Spvgg. Kinzigtal im Vereinsheim in Ober-Kinzig. Der Verein bittet um Vorbestellung.",
+      "Aktuelle Änderungen bitte beim jeweiligen Veranstalter prüfen."
+    ],
+    "source": "LINUS WITTICH · Bad Königer Stadtnachrichten 44/2026, Seiten 5–6 und 19; Abgleich mit Stadt-Kalender",
+    "url": "https://epaper.wittich.de/frontend/mvc/catalog/by-name/2173/2173_44_2026",
+    "verification_sources": [
+      "https://www.badkoenig.de/kalender/veranstaltungskalender/event.ics?start=2026-10-26&end=2026-10-30&count=50",
+      "https://epaper.wittich.de/frontend/catalogs/555285/1/pdf/complete.pdf"
+    ]
+  },
+  {
+    "checked": "2026-10-26",
+    "valid_until": null,
+    "id": "sport-fussball-2026-10-25",
+    "categories": [
+      "sport"
+    ],
+    "title": "Fußball: 1a gewinnt auswärts, 1b-Spiel abgesagt",
+    "paragraphs": [
+      "Rückblick auf Sonntag, 25. Oktober 2026: Die SG Bad König/Zell gewann in der Kreisliga A Odenwald mit 2:0 beim SV Hummetroth II.",
+      "Die Begegnung der SG Bad König/Zell II beim KSV Haingrund in der Kreisliga B Odenwald ist bei FuPa als abgesagt gekennzeichnet."
+    ],
+    "source": "Kinnicher FFC · aktuelle FuPa-Spielpläne für SG 1a und SG 1b",
+    "url": "https://www.kinnicherffc.de/fupa.html",
+    "verification_sources": [
+      "https://www.fupa.net/match/sv-hummetroth-m2-tsg-bad-koenig-m1-261025",
+      "https://www.fupa.net/match/ksv-haingrund-m1-tsg-bad-koenig-m2-261025"
+    ]
+  },
+  {
+    "checked": "2026-10-26",
+    "valid_until": null,
+    "id": "sport-handball-2026-10-25",
+    "categories": [
+      "sport"
+    ],
+    "title": "HSG Odenwald: Vier Heimsiege bei fünf Erwachsenenpartien",
+    "paragraphs": [
+      "Rückblick auf das Wochenende 24./25. Oktober 2026: Am Samstag besiegten die Herren I die SG RW Babenhausen mit 35:32. Die Herren II unterlagen der SG RW Babenhausen II mit 24:30; die Herren III gewannen gegen die SG RW Babenhausen III mit 34:29. Alle drei Begegnungen waren Heimspiele.",
+      "Am Sonntag gewannen die Damen I zu Hause mit 35:23 gegen die FSG Bürgstadt/Kirchzell II. Die Damen II setzten sich ebenfalls zu Hause mit 24:23 gegen den TV Schaafheim durch."
+    ],
+    "source": "Hessischer Handball-Verband · nuLiga, HSG Odenwald, Vereinsnummer 19153",
+    "url": "https://hhv-handball.liga.nu/cgi-bin/WebObjects/nuLigaHBDE.woa/wa/clubInfoDisplay?club=95078"
+  },
+  {
+    "checked": "2026-10-26",
+    "valid_until": null,
+    "id": "sport-tt-badkoenig-2026-10-25",
+    "categories": [
+      "sport"
+    ],
+    "title": "Tischtennis: TSG Bad König gewinnt 8:2",
+    "paragraphs": [
+      "Am Samstag, 24. Oktober 2026, gewann die Erwachsenenmannschaft der TSG Bad König 1863 ihr Heimspiel in der Kreisliga mit 8:2 gegen den TTC Langen-Brombach III."
+    ],
+    "source": "HeTTV · click-TT/myTischtennis, Spielplan 23.–25.10.2026",
+    "url": "https://www.mytischtennis.de/click-tt/HeTTV/26--27/verein/45002/TSG_Bad_K%C3%B6nig_1863/spielplan?date_start=2026-10-23&date_end=2026-10-25"
+  },
+  {
+    "checked": "2026-10-26",
+    "valid_until": null,
+    "id": "sport-tt-fuerstengrund-2026-10-25",
+    "categories": [
+      "sport"
+    ],
+    "title": "Tischtennis Fürstengrund: Kein Spiel am Wochenende eingetragen",
+    "paragraphs": [
+      "Im Vereins-Spielplan des RV-TTC Fürstengrund ist für Freitag, 23., bis Sonntag, 25. Oktober 2026, keine Begegnung eingetragen."
+    ],
+    "source": "HeTTV · click-TT/myTischtennis, Vereins-Spielplan 23.–25.10.2026",
+    "url": "https://www.mytischtennis.de/click-tt/HeTTV/26--27/verein/45009/RV-TTC_F%C3%BCrstengrund/spielplan?date_start=2026-10-23&date_end=2026-10-25"
+  },
+  {
+    "checked": "2026-10-26",
+    "valid_until": null,
+    "id": "sport-tt-kimbach-2026-10-25",
+    "categories": [
+      "sport"
+    ],
+    "title": "Tischtennis Kimbach: Unentschieden für die Zweite",
+    "paragraphs": [
+      "Am Freitag, 23. Oktober 2026, trennte sich der TTC Kimbach II zu Hause mit 5:5 von der SG Sandbach III.",
+      "Am Samstag, 24. Oktober 2026, verlor der TTC Kimbach VI auswärts beim SV 1908 Falken-Gesäß III mit 3:7."
+    ],
+    "source": "HeTTV · click-TT/myTischtennis, Vereins-Spielplan 23.–25.10.2026",
+    "url": "https://www.mytischtennis.de/click-tt/HeTTV/26--27/verein/45016/TTC_Kimbach/spielplan?date_start=2026-10-23&date_end=2026-10-25"
+  },
+  {
+    "checked": "2026-10-26",
+    "valid_until": null,
+    "id": "sport-tennis-2026-10-25",
+    "categories": [
+      "sport"
+    ],
+    "title": "TC Bad König: Beide Winterteams am Wochenende spielfrei",
+    "paragraphs": [
+      "Für das Wochenende 23.–25. Oktober 2026 war in den aktuellen Winter-Spielplänen weder für die Herren noch für die Damen 30 eine Partie angesetzt.",
+      "Die Herren beginnen ihre Winterrunde laut Spielplan am 7. November gegen den TC Kelsterbach. Die Damen 30 spielen nach ihrer Auftaktpartie am 4. Oktober erst am 21. November gegen den SVS Griesheim weiter."
+    ],
+    "source": "Hessischer Tennis-Verband · nuLiga, Winterrunde 2026/27, Herren und Damen 30",
+    "url": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/clubTeams?club=25561",
+    "verification_sources": [
+      "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/teamPortrait?team=3743646&championship=Winterrunde+26%2F27",
+      "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/teamPortrait?team=3743084&championship=Winterrunde+26%2F27"
+    ]
+  },
+  {
     "id": "wochenende-2026-10-23",
     "categories": [
       "termine"
