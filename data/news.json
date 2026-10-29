@@ -1,5 +1,30 @@
 [
   {
+    "id": "wochenende-2026-10-30",
+    "categories": [
+      "termine"
+    ],
+    "title": "Wochenende in Bad König · 30. Oktober–1. November",
+    "paragraphs": [
+      "Eine Auswahl für Freitag, 30. Oktober, bis Sonntag, 1. November 2026.",
+      "Freitag, 30.10., ab 18:00 Uhr: Oktoberfest der Spvgg. Kinzigtal im Vereinsheim in Ober-Kinzig. Der Verein bittet um Vorbestellung.",
+      "Samstag, 31.10., 18:00–22:00 Uhr: Offenes Singen der NaturFreunde Bad König in der Alten Schule, Schulstraße 7. Anmeldung erbeten.",
+      "Sonntag, 01.11., 10:30–12:00 Uhr: Das Heimatmuseum des Heimat- und Geschichtsvereins Bad König ist geöffnet; Zugang über den Schlosshof, Schlossplatz 3.",
+      "Sonntag, 01.11., ebenfalls 10:30–12:00 Uhr: Das Georg-Vetter-Museum in der Alexanderstraße 2 öffnet seine Ausstellung.",
+      "Sonntag, 01.11., 14:00–18:00 Uhr: Tanz & Tee mit Bernd in der Wandelhalle Bad König, veranstaltet von der Kurgesellschaft.",
+      "Stand: 29.10.2026. Aktuelle Änderungen bitte beim jeweiligen Veranstalter prüfen."
+    ],
+    "source": "LINUS WITTICH · Bad Königer Stadtnachrichten 44/2026, Seiten 6 und 19; Abgleich mit dem städtischen Veranstaltungskalender",
+    "url": "https://epaper.wittich.de/frontend/mvc/catalog/by-name/2173/2173_44_2026",
+    "verification_sources": [
+      "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/",
+      "https://www.badkoenig.de/kalender/veranstaltungskalender/event.ics?start=2026-10-30&end=2026-11-01&count=50",
+      "https://epaper.wittich.de/frontend/catalogs/555285/1/pdf/complete.pdf"
+    ],
+    "checked": "2026-10-29",
+    "valid_until": "2026-11-01"
+  },
+  {
     "checked": "2026-10-26",
     "valid_until": "2026-10-30",
     "id": "termine-woche-2026-10-26",
