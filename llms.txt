@@ -1,6 +1,6 @@
 # BDKNG – Bad König kompakt
 
-Lokales Informationsangebot von Mercatora, Felix Sagmeister, für Bad König. Quellen und Prüfstand stehen an jeder Meldung.
+Privat betriebenes lokales Informationsangebot von Felix Sagmeister, für Bad König. Quellen und Prüfstand stehen an jeder Meldung.
 
 - [Aktuelles](https://bdkng.de/aktuell.html)
 - [Verkehr](https://bdkng.de/verkehr.html)
@@ -11,7 +11,6 @@ Lokales Informationsangebot von Mercatora, Felix Sagmeister, für Bad König. Qu
 - [Wetter](https://bdkng.de/wetter.html)
 - [Müllabfuhr](https://bdkng.de/muell.html)
 
-- [Kontakt](https://bdkng.de/kontakt.html): Direkter Formularversand an info@bdkng.de.
-- [Werbepartner](https://bdkng.de/werbung.html)
+- [Kontakt](https://bdkng.de/kontakt.html): Kontaktformular und E-Mail an info@bdkng.de.
 - [Impressum](https://bdkng.de/impressum.html)
 - [Datenschutz](https://bdkng.de/datenschutz.html)

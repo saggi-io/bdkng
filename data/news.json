@@ -243,18 +243,18 @@
     "valid_until": null
   },
   {
-    "id": "gewerbe-mitmachen",
+    "id": "genuss-hinweise",
     "categories": [
       "genuss"
     ],
-    "title": "Lokale Unternehmen und Genuss-Tipps gesucht",
+    "title": "Genuss und Alltag in Bad König",
     "paragraphs": [
-      "Du hast ein Geschäft, einen Gastronomiebetrieb oder ein besonderes Angebot in Bad König? Wir freuen uns auf deine Hinweise und Ideen.",
-      "Werbung und Rubrikpartnerschaften besprechen wir persönlich und kennzeichnen sie klar. Mehr dazu auf unserer Werbepartnerseite."
+      "Hier sammeln wir redaktionelle Meldungen über Gastronomie, Geschäfte und das örtliche Leben.",
+      "Du kennst einen öffentlich angekündigten Termin oder hast einen sachlichen Hinweis? Teile uns Datum, Ort und eine nachvollziehbare Quelle über die Kontaktseite mit."
     ],
-    "source": "BDKNG · eigene Mitteilung",
-    "url": "https://bdkng.de/werbung.html",
-    "checked": "2026-10-16",
+    "source": "BDKNG · Redaktioneller Hinweis",
+    "url": "https://bdkng.de/kontakt.html",
+    "checked": "2026-11-02",
     "valid_until": null
   },
   {

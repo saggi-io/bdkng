@@ -10,7 +10,7 @@ nav{height:72px;display:flex;align-items:center;gap:28px}
 .brand{font-weight:950;color:var(--green);font-size:28px;line-height:.8;letter-spacing:-1.4px;margin-right:auto}
 .brand span{display:block;font-size:8px;letter-spacing:3.5px;margin:8px 0 0 2px}
 nav a{font-size:14px;font-weight:800}
-.shopnav{background:var(--gold);padding:10px 17px;border-radius:999px;color:#173120}
+.channelnav{background:var(--gold);padding:10px 17px;border-radius:999px;color:#173120}
 .hero{position:relative;margin-top:18px;height:min(620px,62vw);min-height:380px;border-radius:22px;overflow:hidden;background:#234}
 .hero img{width:100%;height:100%;object-fit:cover;object-position:center 48%;display:block}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.67),rgba(0,0,0,.22) 48%,rgba(0,0,0,.04) 72%)}
@@ -20,17 +20,17 @@ nav a{font-size:14px;font-weight:800}
 .claim{font-size:clamp(24px,3.2vw,46px);font-style:italic;margin:0 0 28px}
 .ctas{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:15px 22px;font-weight:900}
-.btn-shop{background:var(--gold);color:#163322;font-size:18px}
+.btn-primary{background:var(--gold);color:#163322;font-size:18px}
 .btn-secondary{background:rgba(255,255,255,.15);color:white;border:1px solid rgba(255,255,255,.65)}
 .credit{font-size:11px;color:#777;margin:6px 6px 0;text-align:right}
-.shop{margin:34px 0;background:var(--green);border-radius:24px;color:white;padding:38px;display:grid;grid-template-columns:1.4fr .8fr;gap:28px;align-items:center}
+
 .kicker{display:inline-block;background:var(--gold);color:#173120;border-radius:999px;padding:7px 12px;font-weight:900;font-size:12px;letter-spacing:.08em}
-.shop h2{font-size:clamp(34px,5vw,58px);margin:13px 0 12px;line-height:1}
-.shop p{font-size:18px;line-height:1.55;color:#e8f0e9;max-width:700px}
-.shopbox{background:#fff;color:var(--text);border-radius:18px;padding:24px;text-align:center}
-.shopbox strong{font-size:25px;color:var(--green)}
-.shopbox p{color:#555;font-size:14px}
-.shopplaceholder{display:block;margin-top:15px;background:var(--gold);border-radius:999px;padding:14px;font-weight:900;color:#173120}
+
+
+
+
+
+
 .section-head{margin:50px 0 18px}
 .section-head h2{font-size:38px;color:var(--green);margin:0}
 .section-head p{color:#666;margin:8px 0 0}
@@ -54,8 +54,8 @@ footer{background:#122e20;color:#d8e5dc;padding:38px 0}
 footer h4{margin:0 0 10px;color:white}
 footer p{font-size:13px;line-height:1.6;margin:0}
 .seo-about{margin:10px 0 42px;padding:4px 0}.seo-about .section-head{max-width:900px}.seo-about .section-head p{font-size:17px;line-height:1.7;color:#555}
-@media(max-width:900px){nav a:not(.shopnav){display:none}.shop{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.hero{height:470px}.herocopy h1{letter-spacing:-3px}.grid{grid-template-columns:1fr}.shop{padding:25px}.wa{align-items:flex-start;flex-direction:column}.test{margin-left:0}.foot{grid-template-columns:1fr}}
+@media(max-width:900px){nav a:not(.channelnav){display:none}.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.hero{height:470px}.herocopy h1{letter-spacing:-3px}.grid{grid-template-columns:1fr}.wa{align-items:flex-start;flex-direction:column}.test{margin-left:0}.foot{grid-template-columns:1fr}}
 
 .brand-logo{display:flex;align-items:center;padding:2px 0}
 .brand-logo img{height:58px;width:auto;display:block;object-fit:contain}
@@ -163,7 +163,7 @@ nav{
     height:48px;
     max-width:145px;
   }
-  .shopnav{
+  .channelnav{
     padding:9px 13px;
     font-size:13px;
   }
@@ -223,14 +223,11 @@ nav{
   .section-head h2{
     font-size:30px;
   }
-  .shop{
-    padding:24px 18px;
-    border-radius:18px;
-  }
+
 }
 
 
-/* --- Shop + WhatsApp nebeneinander --- */
+/* --- Nachrichten und WhatsApp --- */
 .promo-row{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -247,7 +244,7 @@ nav{
   justify-content:flex-start;
   min-height:245px;
 }
-.promo-shop{
+.promo-news{
   background:var(--green);
   color:#fff;
 }
@@ -274,7 +271,7 @@ nav{
   font-size:16px;
   line-height:1.45;
 }
-.promo-shop p{
+.promo-news p{
   color:#e6eee8;
 }
 .promo-whatsapp p{
@@ -296,7 +293,7 @@ nav{
   font-weight:900;
   font-size:15px;
 }
-.promo-btn-shop{
+.promo-btn-primary{
   background:var(--gold);
   color:#173120;
 }

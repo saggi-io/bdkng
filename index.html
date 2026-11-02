@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BDKNG – Bad König kompakt | Shop, News, Verkehr & Veranstaltungen</title>
-<meta name="description" content="BDKNG ist das lokale Portal für Bad König im Odenwald: Shop, aktuelle Meldungen, Verkehr, Veranstaltungen, Vereine, Gastronomie, Gewerbe und regionale Tipps.">
+<title>BDKNG – Bad König kompakt | Nachrichten, Verkehr & Veranstaltungen</title>
+<meta name="description" content="BDKNG ist das lokale Portal für Bad König im Odenwald: aktuelle Meldungen, Verkehr, Veranstaltungen, Vereine, Gastronomie, Gewerbe und regionale Tipps.">
 
 <link rel="canonical" href="https://bdkng.de/">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
@@ -14,7 +14,7 @@
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="theme-color" content="#1B4D2E">
-<meta name="author" content="BDKNG · Mercatora">
+<meta name="author" content="Felix Sagmeister">
 <meta name="geo.region" content="DE-HE">
 <meta name="geo.placename" content="Bad König">
 <meta name="language" content="de">
@@ -23,14 +23,14 @@
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="BDKNG">
 <meta property="og:title" content="BDKNG | Bad König kompakt">
-<meta property="og:description" content="Bad König auf einen Blick: Shop, Aktuelles, Verkehr, Veranstaltungen, Vereine, Genuss und Gewerbe. Regional, kompakt und mit Quellen.">
+<meta property="og:description" content="Bad König auf einen Blick: Aktuelles, Verkehr, Veranstaltungen, Vereine, Genuss und Gewerbe. Regional, kompakt und mit Quellen.">
 <meta property="og:url" content="https://bdkng.de/">
 <meta property="og:image" content="https://bdkng.de/assets/bdkng-header.webp">
 <meta property="og:image:alt" content="Bad König im Odenwald – Blick auf Stadtkern, Schloss und Kirchturm">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="BDKNG | Bad König kompakt">
-<meta name="twitter:description" content="Shop, Aktuelles, Verkehr, Veranstaltungen und Genuss aus Bad König im Odenwald.">
+<meta name="twitter:description" content="Aktuelles, Verkehr, Veranstaltungen und Genuss aus Bad König im Odenwald.">
 <meta name="twitter:image" content="https://bdkng.de/assets/bdkng-header.webp">
 
 <link rel="preconnect" href="https://www.badkoenig.de">
@@ -40,37 +40,14 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://bdkng.de/#organization",
-      "name": "BDKNG",
-      "legalName": "Mercatora",
-      "alternateName": [
-        "BDKNG Bad König",
-        "Bad König kompakt"
-      ],
+      "@type": "Person",
+      "@id": "https://bdkng.de/#betreiber",
+      "name": "Felix Sagmeister",
       "url": "https://bdkng.de/",
-      "logo": "https://bdkng.de/assets/bdkng-logo.png",
+      "email": "info@bdkng.de",
       "sameAs": [
         "https://www.facebook.com/bdkng.de/",
         "https://whatsapp.com/channel/0029VaQq65RCxoAv42xpsi0M"
-      ],
-      "areaServed": {
-        "@type": "City",
-        "name": "Bad König",
-        "containedInPlace": {
-          "@type": "AdministrativeArea",
-          "name": "Odenwaldkreis, Hessen, Deutschland"
-        }
-      },
-      "knowsAbout": [
-        "Bad König",
-        "Odenwaldkreis",
-        "Lokale Nachrichten",
-        "Verkehr und Sperrungen",
-        "Veranstaltungen",
-        "Vereine und Sport",
-        "Gastronomie und Gewerbe",
-        "Regionale Produkte"
       ]
     },
     {
@@ -81,7 +58,7 @@
       "alternateName": "BDKNG",
       "inLanguage": "de-DE",
       "publisher": {
-        "@id": "https://bdkng.de/#organization"
+        "@id": "https://bdkng.de/#betreiber"
       },
       "about": {
         "@type": "City",
@@ -93,12 +70,12 @@
       "@id": "https://bdkng.de/#webpage",
       "url": "https://bdkng.de/",
       "name": "BDKNG | Bad König kompakt",
-      "description": "Bad König auf einen Blick: Shop, Aktuelles, Verkehr, Veranstaltungen, Vereine, Genuss und Gewerbe.",
+      "description": "Bad König auf einen Blick: Aktuelles, Verkehr, Veranstaltungen, Vereine, Genuss und Gewerbe.",
       "isPartOf": {
         "@id": "https://bdkng.de/#website"
       },
       "about": {
-        "@id": "https://bdkng.de/#organization"
+        "@id": "https://bdkng.de/#betreiber"
       },
       "inLanguage": "de-DE",
       "primaryImageOfPage": {
@@ -122,7 +99,7 @@ nav{height:72px;display:flex;align-items:center;gap:28px}
 .brand{font-weight:950;color:var(--green);font-size:28px;line-height:.8;letter-spacing:-1.4px;margin-right:auto}
 .brand span{display:block;font-size:8px;letter-spacing:3.5px;margin:8px 0 0 2px}
 nav a{font-size:14px;font-weight:800}
-.shopnav{background:var(--gold);padding:10px 17px;border-radius:999px;color:#173120}
+.channelnav{background:var(--gold);padding:10px 17px;border-radius:999px;color:#173120}
 .hero{position:relative;margin-top:18px;height:min(620px,62vw);min-height:380px;border-radius:22px;overflow:hidden;background:#234}
 .hero img{width:100%;height:100%;object-fit:cover;object-position:center 48%;display:block}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.67),rgba(0,0,0,.22) 48%,rgba(0,0,0,.04) 72%)}
@@ -132,17 +109,17 @@ nav a{font-size:14px;font-weight:800}
 .claim{font-size:clamp(24px,3.2vw,46px);font-style:italic;margin:0 0 28px}
 .ctas{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:15px 22px;font-weight:900}
-.btn-shop{background:var(--gold);color:#163322;font-size:18px}
+.btn-primary{background:var(--gold);color:#163322;font-size:18px}
 .btn-secondary{background:rgba(255,255,255,.15);color:white;border:1px solid rgba(255,255,255,.65)}
 .credit{font-size:11px;color:#777;margin:6px 6px 0;text-align:right}
-.shop{margin:34px 0;background:var(--green);border-radius:24px;color:white;padding:38px;display:grid;grid-template-columns:1.4fr .8fr;gap:28px;align-items:center}
+
 .kicker{display:inline-block;background:var(--gold);color:#173120;border-radius:999px;padding:7px 12px;font-weight:900;font-size:12px;letter-spacing:.08em}
-.shop h2{font-size:clamp(34px,5vw,58px);margin:13px 0 12px;line-height:1}
-.shop p{font-size:18px;line-height:1.55;color:#e8f0e9;max-width:700px}
-.shopbox{background:#fff;color:var(--text);border-radius:18px;padding:24px;text-align:center}
-.shopbox strong{font-size:25px;color:var(--green)}
-.shopbox p{color:#555;font-size:14px}
-.shopplaceholder{display:block;margin-top:15px;background:var(--gold);border-radius:999px;padding:14px;font-weight:900;color:#173120}
+
+
+
+
+
+
 .section-head{margin:50px 0 18px}
 .section-head h2{font-size:38px;color:var(--green);margin:0}
 .section-head p{color:#666;margin:8px 0 0}
@@ -166,8 +143,8 @@ footer{background:#122e20;color:#d8e5dc;padding:38px 0}
 footer h4{margin:0 0 10px;color:white}
 footer p{font-size:13px;line-height:1.6;margin:0}
 .seo-about{margin:10px 0 42px;padding:4px 0}.seo-about .section-head{max-width:900px}.seo-about .section-head p{font-size:17px;line-height:1.7;color:#555}
-@media(max-width:900px){nav a:not(.shopnav){display:none}.shop{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.hero{height:470px}.herocopy h1{letter-spacing:-3px}.grid{grid-template-columns:1fr}.shop{padding:25px}.wa{align-items:flex-start;flex-direction:column}.test{margin-left:0}.foot{grid-template-columns:1fr}}
+@media(max-width:900px){nav a:not(.channelnav){display:none}.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.hero{height:470px}.herocopy h1{letter-spacing:-3px}.grid{grid-template-columns:1fr}.wa{align-items:flex-start;flex-direction:column}.test{margin-left:0}.foot{grid-template-columns:1fr}}
 
 .brand-logo{display:flex;align-items:center;padding:2px 0}
 .brand-logo img{height:58px;width:auto;display:block;object-fit:contain}
@@ -275,7 +252,7 @@ nav{
     height:48px;
     max-width:145px;
   }
-  .shopnav{
+  .channelnav{
     padding:9px 13px;
     font-size:13px;
   }
@@ -284,7 +261,7 @@ nav{
     aspect-ratio:auto;
     background:transparent;
     border-radius:12px;
-    margin-bottom:112px;
+    margin-bottom:64px;
   }
   .hero.hero-final > img{
     width:100%;
@@ -335,14 +312,11 @@ nav{
   .section-head h2{
     font-size:30px;
   }
-  .shop{
-    padding:24px 18px;
-    border-radius:18px;
-  }
+
 }
 
 
-/* --- Shop + WhatsApp nebeneinander --- */
+/* --- Nachrichten und WhatsApp --- */
 .promo-row{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -359,7 +333,7 @@ nav{
   justify-content:flex-start;
   min-height:245px;
 }
-.promo-shop{
+.promo-news{
   background:var(--green);
   color:#fff;
 }
@@ -386,7 +360,7 @@ nav{
   font-size:16px;
   line-height:1.45;
 }
-.promo-shop p{
+.promo-news p{
   color:#e6eee8;
 }
 .promo-whatsapp p{
@@ -408,7 +382,7 @@ nav{
   font-weight:900;
   font-size:15px;
 }
-.promo-btn-shop{
+.promo-btn-primary{
   background:var(--gold);
   color:#173120;
 }
@@ -450,56 +424,32 @@ nav{
 <link rel="stylesheet" href="/assets/bdkng-news.css"></head>
 <body>
 
-<header><div class="wrap"><nav>
-<a class="brand brand-logo" href="/" aria-label="BDKNG Startseite"><img src="/assets/bdkng-logo.png" alt="BDKNG – Bad König"></a>
-<a href="#kompakt">Rubriken</a>
-<a href="/werbung.html">Werbepartner</a>
-<a href="/kontakt.html">Kontakt</a>
-<a class="shopnav" href="https://shop.bdkng.de">SHOP</a>
-</nav></div></header>
+<header><div class="wrap"><nav><a class="brand brand-logo" href="/" aria-label="BDKNG Startseite"><img src="/assets/bdkng-logo.png" alt="BDKNG – Bad König" width="170" height="56"></a><a href="/#kompakt">Rubriken</a><a href="/kontakt.html">Kontakt</a><a class="channelnav" href="https://whatsapp.com/channel/0029VaQq65RCxoAv42xpsi0M" target="_blank" rel="noopener">WhatsApp-Kanal</a></nav></div></header>
 
 <main class="wrap">
 <section class="hero hero-final">
 <img src="/assets/bdkng-header.webp" alt="BDKNG – Bad König mit Schloss, Stadtkern und Logo" fetchpriority="high" decoding="async">
 <div class="herocopy hero-actions-only">
 <div class="ctas">
-<a href="https://shop.bdkng.de" class="btn btn-shop">🛍 Zum BDKNG Shop →</a>
-<a href="#kompakt" class="btn btn-secondary">Bad König kompakt</a>
+<a href="#kompakt" class="btn btn-secondary">Meldungen entdecken</a>
 </div>
 </div>
 </section>
 <div class="credit">BDKNG · Bad König</div>
 
 
-<section class="promo-row" aria-label="BDKNG Shop und WhatsApp">
-  <article class="promo-card promo-shop" id="shop">
-    <div class="promo-copy">
-      <span class="kicker">BDKNG SHOP</span>
-      <h2>Ein Stück Bad König. Für deinen Alltag.</h2>
-      <p>BDKNG Merch, Shirts, Hoodies, Tassen und regionale Produkte.</p>
-    </div>
-    <a class="promo-btn promo-btn-shop" href="https://shop.bdkng.de">Zum BDKNG Shop →</a>
-    
-  </article>
-
-  <article class="promo-card promo-whatsapp">
-    <div class="promo-copy">
-      <span class="kicker kicker-wa">WHATSAPP</span>
-      <h2>Bad König kompakt direkt aufs Handy.</h2>
-      <p>Aktuelles, Verkehr, Termine und wichtige Meldungen im BDKNG-Kanal.</p>
-    </div>
-    <a class="promo-btn promo-btn-wa" href="https://whatsapp.com/channel/0029VaQq65RCxoAv42xpsi0M" target="_blank" rel="noopener">WhatsApp-Kanal öffnen →</a>
-    <small>Der Kanal befindet sich in der Testphase.</small>
-  </article>
+<section class="promo-row" aria-label="Nachrichten auf der Website und im WhatsApp-Kanal">
+  <article class="promo-card promo-news"><div class="promo-copy"><span class="kicker">BAD KÖNIG KOMPAKT</span><h2>Was unsere Stadt bewegt.</h2><p>Nachrichten, Verkehr, Termine, Sport, Wetter und Müllabfuhr – kurz zusammengefasst, mit Datum und nachvollziehbaren Quellen.</p></div><a class="promo-btn promo-btn-primary" href="#kompakt">Zu den acht Rubriken →</a></article>
+  <article class="promo-card promo-whatsapp"><div class="promo-copy"><span class="kicker kicker-wa">WHATSAPP</span><h2>Bad König kompakt direkt aufs Handy.</h2><p>Folge unserem Kanal für regionale Meldungen und kompakte Übersichten aus Bad König und seinen Ortsteilen.</p></div><a class="promo-btn promo-btn-wa" href="https://whatsapp.com/channel/0029VaQq65RCxoAv42xpsi0M" target="_blank" rel="noopener">WhatsApp-Kanal öffnen →</a></article>
 </section>
 
 
 <section id="kompakt"><div class="section-head"><h2>Bad König kompakt</h2><p>Deine acht Rubriken – Meldungen mit Datum und Quellen.</p></div><div class="grid"><article class="card" id="aktuell"><div class="cardtop"><img src="/assets/bdkng-news.webp" alt="Aktuelles aus Bad König" loading="lazy"><span class="tag">📰 Aktuelles</span></div><div class="cardbody"><h3>Aktuelles</h3><p>Nachrichten und Entscheidungen aus Bad König.</p><a class="more" href="/aktuell.html">Meldungen lesen →</a></div></article><article class="card" id="verkehr"><div class="cardtop"><img src="/assets/bdkng-verkehr.webp" alt="Verkehr aus Bad König" loading="lazy"><span class="tag">🚧 Verkehr</span></div><div class="cardbody"><h3>Verkehr</h3><p>Baustellen, Sperrungen und Umleitungen.</p><a class="more" href="/verkehr.html">Meldungen lesen →</a></div></article><article class="card" id="termine"><div class="cardtop"><img src="/assets/bdkng-termine.webp" alt="Illustration: Termine und Veranstaltungen in Bad König" loading="lazy" width="1536" height="1024"><span class="tag">📅 Termine &amp; Veranstaltungen</span></div><div class="cardbody"><h3>Termine &amp; Veranstaltungen</h3><p>Was in unserer Stadt und ihren Ortsteilen ansteht.</p><a class="more" href="/termine.html">Meldungen lesen →</a></div></article><article class="card" id="sport"><div class="cardtop"><img src="/assets/bdkng-sport.webp" alt="Illustration: Sport und Vereine in Bad König" loading="lazy" width="1536" height="1024"><span class="tag">⚽ Sport &amp; Vereine</span></div><div class="cardbody"><h3>Sport &amp; Vereine</h3><p>Ergebnisse, Vereinsleben und Menschen in Bewegung.</p><a class="more" href="/sport.html">Meldungen lesen →</a></div></article><article class="card" id="genuss"><div class="cardtop"><img src="/assets/bdkng-genuss.webp" alt="Illustration: Genuss und Gewerbe in Bad König" loading="lazy" width="1536" height="1024"><span class="tag">🍴 Genuss &amp; Gewerbe</span></div><div class="cardbody"><h3>Genuss &amp; Gewerbe</h3><p>Lokale Angebote, Gastronomie und Unternehmen.</p><a class="more" href="/genuss.html">Meldungen lesen →</a></div></article><article class="card" id="wichtig"><div class="cardtop"><img src="/assets/bdkng-wichtig.webp" alt="Illustration: Wichtige Meldungen in Bad König" loading="lazy" width="1536" height="1024"><span class="tag">⚠️ Wichtige Meldungen</span></div><div class="cardbody"><h3>Wichtige Meldungen</h3><p>Hinweise, die im Alltag besondere Aufmerksamkeit brauchen.</p><a class="more" href="/wichtig.html">Meldungen lesen →</a></div></article><article class="card" id="wetter"><div class="cardtop"><img src="/assets/bdkng-wetter.webp" alt="Illustration: Wetter in Bad König" loading="lazy" width="1536" height="1024"><span class="tag">🌤️ Wetter</span></div><div class="cardbody"><h3>Wetter</h3><p>Vorhersagen für die nächsten Tage, mit Quellenstand.</p><a class="more" href="/wetter.html">Meldungen lesen →</a></div></article><article class="card" id="muell"><div class="cardtop"><img src="/assets/bdkng-muell.webp" alt="Illustration: Müllabfuhr in Bad König" loading="lazy" width="1536" height="1024"><span class="tag">🗑️ Müllabfuhr</span></div><div class="cardbody"><h3>Müllabfuhr</h3><p>Abfuhrtermine und Hinweise für die Ortsteile.</p><a class="more" href="/muell.html">Meldungen lesen →</a></div></article></div></section>
 
 
-<section class="promo-row community-links" aria-label="Kontakt und Werbepartner">
-  <article class="promo-card promo-whatsapp"><div class="promo-copy"><span class="kicker">DEINE IDEEN</span><h2>Bad König lebt vom Mitmachen.</h2><p>Du hast Wünsche, Anregungen oder einen Tipp für unseren Kanal? Schreib uns – wir freuen uns auf deine Nachricht.</p></div><a class="promo-btn promo-btn-shop" href="/kontakt.html">Zum Kontaktformular →</a></article>
-  <article class="promo-card promo-shop"><div class="promo-copy"><span class="kicker">FÜR LOKALES GEWERBE</span><h2>Dein Angebot. Unsere Region.</h2><p>Wir suchen Werbepartner für unsere Rubriken. Zeige dein Unternehmen dort, wo Bad König informiert bleibt.</p></div><a class="promo-btn promo-btn-shop" href="/werbung.html">Werbepartner werden →</a></article>
+<section class="promo-row community-links" aria-label="Hinweise und Austausch">
+  <article class="promo-card promo-whatsapp"><div class="promo-copy"><span class="kicker">DEINE IDEEN</span><h2>Bad König lebt vom Mitmachen.</h2><p>Du hast einen Veranstaltungstipp, eine Anregung oder einen Hinweis auf einen Fehler? Schreib uns.</p></div><a class="promo-btn promo-btn-primary" href="/kontakt.html">Kontakt aufnehmen →</a></article>
+  <article class="promo-card promo-news"><div class="promo-copy"><span class="kicker">KURZ. REGIONAL. QUELLENBASIERT.</span><h2>Auch auf Facebook dabei.</h2><p>Regionale Meldungen findest du auf unserer BDKNG-Seite. Die Quellen und der Stand der Prüfung stehen bei den Beiträgen.</p></div><a class="promo-btn promo-btn-primary" href="https://www.facebook.com/bdkng.de/" target="_blank" rel="noopener">BDKNG auf Facebook →</a></article>
 </section>
 
 <section class="seo-about" aria-labelledby="ueber-bdkng">
@@ -508,14 +458,14 @@ nav{
     <p>
       BDKNG bündelt Informationen und Angebote aus Bad König im Odenwaldkreis:
       lokale Nachrichten, Verkehr und Sperrungen, Veranstaltungen, Vereine und Sport,
-      Gastronomie, Gewerbe sowie regionale Produkte im BDKNG Shop.
-      Inhalte werden kompakt aufbereitet und bei Meldungen nach Möglichkeit mit Quellen versehen.
+      Gastronomie, Gewerbe, Wetter und Müllabfuhr.
+      Das Angebot wird privat von Felix Sagmeister betrieben. Meldungen werden kompakt aufbereitet; Quellen und Prüfstand machen die Angaben nachvollziehbar.
     </p>
   </div>
 </section>
 </main>
 
-<footer><div class="wrap foot"><div><h4>BDKNG</h4><p>Unsere Stadt. Unsere Heimat.<br>Ein Angebot von Mercatora.</p></div><div><h4>Entdecken</h4><p><a href="/#kompakt">Alle Rubriken</a><br><a href="https://shop.bdkng.de">Merch-Shop</a><br><a href="/werbung.html">Werbepartner</a><br><a href="/kontakt.html">Kontakt &amp; Anregungen</a></p></div><div><h4>Folgen</h4><p><a href="https://www.facebook.com/bdkng.de/" target="_blank" rel="noopener">Facebook</a><br><a href="https://whatsapp.com/channel/0029VaQq65RCxoAv42xpsi0M" target="_blank" rel="noopener">WhatsApp-Kanal</a><br><span class="social-pending" aria-disabled="true">Instagram · Link folgt</span><br><span class="social-pending" aria-disabled="true">TikTok · Link folgt</span></p></div><div><h4>Rechtliches</h4><p><a href="/impressum.html">Impressum</a><br><a href="/datenschutz.html">Datenschutz</a><br><a href="/bildnachweise.html">Bildnachweise &amp; Quellen</a><br><a href="mailto:info@bdkng.de">info@bdkng.de</a></p></div></div></footer>
+<footer><div class="wrap foot"><div><h4>BDKNG</h4><p>Unsere Stadt. Unsere Heimat.<br>Ein privates Nachrichtenangebot von Felix Sagmeister.</p><p class="design-credit">Gestaltung: by Mercatora.</p></div><div><h4>Entdecken</h4><p><a href="/#kompakt">Alle Rubriken</a><br><a href="/termine.html">Termine &amp; Veranstaltungen</a><br><a href="/kontakt.html">Kontakt &amp; Anregungen</a></p></div><div><h4>Folgen</h4><p><a href="https://www.facebook.com/bdkng.de/" target="_blank" rel="noopener">Facebook</a><br><a href="https://whatsapp.com/channel/0029VaQq65RCxoAv42xpsi0M" target="_blank" rel="noopener">WhatsApp-Kanal</a></p></div><div><h4>Rechtliches</h4><p><a href="/impressum.html">Impressum</a><br><a href="/datenschutz.html">Datenschutz</a><br><a href="/bildnachweise.html">Bildnachweise &amp; Quellen</a><br><a href="mailto:info@bdkng.de">info@bdkng.de</a></p></div></div></footer>
 
 </body>
 </html>
