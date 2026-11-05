@@ -1,5 +1,31 @@
 [
   {
+    "id": "wochenende-2026-11-06",
+    "checked": "2026-11-05",
+    "valid_until": "2026-11-08",
+    "categories": [
+      "termine"
+    ],
+    "title": "Das Wochenende in Bad König · 6.–8. November",
+    "paragraphs": [
+      "Eine Auswahl für Freitag, 6., bis Sonntag, 8. November 2026.",
+      "Freitag, 06.11., 18:00–20:00 Uhr: Leseabend im Anbau der Hans-Neidig-Halle, Nieder-Kinzig. Ortsbeirat Nieder-Kinzig; Eintritt frei.",
+      "Freitag, 06.11., 18:00 Uhr: Öffentliche Informationsveranstaltung des Ausländerbeirats mit griechischen Gästen zu Integration und sozialen Anliegen. Rentmeisterei, kleiner Saal.",
+      "Samstag, 07.11., 19:30 Uhr: Autoren in der Rentmeisterei, Schlossplatz 2. Mit Sabine Hofmann und Rainer Moritz; Initiative der Stadt und der Literaturhandlung Paperback.",
+      "Sonntag, 08.11., 09:30 Uhr: Wanderung des Odenwaldklubs nach Kimbach. Treffpunkt gegenüber der Odenwald-Therme. Voranmeldung erforderlich: 06063 4451; auch für Nichtmitglieder.",
+      "Sonntag, 08.11., 10:30–12:00 Uhr: Georg-Vetter-Museum, Alexanderstraße 2, geöffnet.",
+      "Sonntag, 08.11., 14:30 Uhr: Jahreshauptübung der Jugendfeuerwehren an der Straßenmeisterei Bad König. Interessierte können zuschauen.",
+      "Änderungen bitte beim Veranstalter prüfen. Stand: 05.11.2026. Automatisch zusammengestellt und anhand der genannten Quellen geprüft."
+    ],
+    "source": "Stadt Bad König; LINUS WITTICH – Bad Königer Stadtnachrichten 45/2026, S. 5, 8, 9 und 16",
+    "url": "https://epaper.wittich.de/frontend/mvc/catalog/by-name/2173/2173_45_2026",
+    "verification_sources": [
+      "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/",
+      "https://www.badkoenig.de/kalender/veranstaltungskalender/event.ics?start=2026-11-06&end=2026-11-08&count=50",
+      "https://epaper.wittich.de/frontend/catalogs/555820/1/pdf/complete.pdf"
+    ]
+  },
+  {
     "id": "termine-woche-2026-11-02",
     "checked": "2026-11-02",
     "valid_until": "2026-11-06",
