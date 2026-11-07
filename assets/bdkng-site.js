@@ -37,4 +37,20 @@
     }
   });
   if ('serviceWorker' in navigator) window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });
+
+  ready(function () {
+    var nav = document.querySelector('header nav'); if (!nav || nav.querySelector('.menunav')) return;
+    var R = [['/aktuell.html','📰','Aktuelles'],['/verkehr.html','🚧','Verkehr'],['/termine.html','📅','Termine & Veranstaltungen'],['/sport.html','⚽','Sport & Vereine'],['/genuss.html','🍽️','Genuss & Gewerbe'],['/wichtig.html','⚠️','Wichtige Meldungen'],['/wetter.html','⛅','Wetter'],['/muell.html','🗑️','Müllabfuhr'],['/kontakt.html','✉️','Kontakt']];
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'menunav'; b.setAttribute('aria-expanded', 'false'); b.setAttribute('aria-label', 'Menü mit allen Rubriken');
+    b.innerHTML = '<span aria-hidden="true">☰</span> Menü';
+    var logo = nav.querySelector('.brand'); nav.insertBefore(b, logo ? logo.nextSibling : nav.firstChild);
+    var p = document.createElement('div'); p.className = 'menupanel'; p.hidden = true;
+    p.innerHTML = '<a class="mp-home" href="/">🏠 Startseite</a>' + R.map(function (r) { return '<a href="' + r[0] + '"><span aria-hidden="true">' + r[1] + '</span> ' + r[2].replace('&', '&amp;') + '</a>'; }).join('');
+    document.body.appendChild(p);
+    function zu() { p.hidden = true; b.setAttribute('aria-expanded', 'false'); }
+    b.addEventListener('click', function (e) { e.stopPropagation(); if (!p.hidden) return zu(); p.style.top = document.querySelector('header').getBoundingClientRect().bottom + 'px'; p.hidden = false; b.setAttribute('aria-expanded', 'true'); });
+    document.addEventListener('click', function (e) { if (!p.contains(e.target)) zu(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') zu(); });
+    window.addEventListener('scroll', zu, { passive: true });
+  });
 })();
