@@ -1,5 +1,66 @@
 [
   {
+    "id": "brand-brombachtal-2026-11-06",
+    "checked": "2026-11-07",
+    "valid_until": "2026-11-14",
+    "categories": [
+      "aktuell",
+      "wichtig"
+    ],
+    "title": "Brombachtal: Scheune und Wohnhaus in Birkert brennen – Feuerwehr Bad König im Einsatz",
+    "paragraphs": [
+      "Am Freitagabend (6.11.) gegen 23:40 Uhr meldeten Anwohner der Rettungsleitstelle Odenwald einen Brand einer Scheune und des angrenzenden Wohnhauses in der Pfälzer Straße in Birkert (Brombachtal).",
+      "Die Feuerwehren Brombachtal, Michelstadt, Bad König und Erbach waren im Einsatz. Die Bewohner blieben unverletzt und konnten das Haus selbstständig verlassen; die Familie kommt zunächst bei Freunden unter.",
+      "Die Höhe des Sachschadens ist noch unklar. Die Kriminalpolizei Erbach ermittelt zur Brandursache."
+    ],
+    "source": "Polizeipräsidium Südhessen (Presseportal) · Erstmeldung 7.11.2026",
+    "url": "https://www.presseportal.de/blaulicht/pm/4969/6385901"
+  },
+  {
+    "id": "polizei-opel-ober-kinzig-2026-11-06",
+    "checked": "2026-11-07",
+    "valid_until": "2026-11-21",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Ober-Kinzig: Brauner Opel gestohlen – Kripo sucht Zeugen",
+    "paragraphs": [
+      "Zwischen Mittwochabend (4.11.) und Donnerstagabend (5.11.) wurde in Ober-Kinzig ein brauner Opel Insignia Kombi mit polnischen Kennzeichen gestohlen. Das Auto stand „Am Kalkofen“.",
+      "Die Kriminalpolizei Erbach (K 20) bittet um Hinweise zu den Tätern oder dem Verbleib des Wagens: Telefon 06062/953-0."
+    ],
+    "source": "Polizeipräsidium Südhessen (Presseportal) · 6.11.2026",
+    "url": "https://www.presseportal.de/blaulicht/pm/4969/6385421"
+  },
+  {
+    "id": "muntere-muemlingtal-2026-11-03",
+    "checked": "2026-11-07",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Fördermittel für das „Muntere Mümlingtal“: Bad König ist dabei",
+    "paragraphs": [
+      "Sechs Kommunen – Höchst, Bad König, Breuberg, Brombachtal, Lützelbach und Mömlingen (Bayern) – bilden die Touristische Arbeitsgemeinschaft „Munteres Mümlingtal“. Für ihre gemeinsame Markenkampagne gibt es LEADER-Fördermittel von insgesamt 67.300 Euro, davon rund 57.500 Euro für die fünf hessischen Kommunen.",
+      "Den Förderbescheid überreichte Kreisbeigeordneter Kevin Schmauß am 3.11. im Höchster Rathaus. Die Kampagne „Handshake“ kostet insgesamt 89.900 Euro; die sechs Kommunen tragen zusammen 22.600 Euro, etwa 3.700 Euro je Kommune.",
+      "Geplant sind unter anderem eine Imagebroschüre, Roll-ups, eine digitale Präsentation für Messeauftritte und eine einjährige Social-Media-Kampagne."
+    ],
+    "source": "Stadt Bad König · Meldung vom 4.11.2026",
+    "url": "https://www.badkoenig.de/aktuelle-nachrichten/gemeinsam-fuer-eine-starke-region-foerdermittel-fuer-das-muntere-muemlingtal/"
+  },
+  {
+    "id": "spendenaktion-liegebank-kimbach-2026-11-02",
+    "checked": "2026-11-07",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Kimbach: Spendenaktion für eine neue Liegebank an der Bergwachtshütte",
+    "paragraphs": [
+      "Der Ortsbeirat Kimbach sammelt über die Plattform „Gemeinsam für Euch“ Spenden für eine neue Liegebank an der Bergwachtshütte.",
+      "Wer das Projekt unterstützen möchte, findet es unter gemeinsam-fuer-euch.de (Projekt „Liegebank Bergwachtshütte“)."
+    ],
+    "source": "Stadt Bad König · Meldung vom 2.11.2026",
+    "url": "https://www.badkoenig.de/aktuelle-nachrichten/jetzt-mitmachen-bei-der-spendenaktion-gemeinsam-fuer-euch/"
+  },
+  {
     "id": "wochenende-2026-11-06",
     "checked": "2026-11-05",
     "valid_until": "2026-11-08",
