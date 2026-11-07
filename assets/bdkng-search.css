@@ -21,3 +21,6 @@
 .bs-foot{font-size:12px;color:#666;margin:10px 0 0}
 .bs-kaffee-btn{display:inline-block;padding:11px 20px;text-decoration:none}
 .bs-kaffee{background:var(--cream);border-radius:14px;padding:4px 16px}
+.bs-hint{display:flex;gap:10px;align-items:center;justify-content:space-between;margin:8px 0;padding:8px 14px;background:var(--cream);border-radius:999px;font-size:13px}
+.bs-hint a{font-weight:800;text-decoration:underline;color:var(--green)}
+.bs-hint button{border:0;background:none;font-size:20px;line-height:1;cursor:pointer;color:#666}
