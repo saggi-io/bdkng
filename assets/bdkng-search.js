@@ -134,4 +134,14 @@
       rec.start();
     });
   }
+
+  (function () {
+    var K = 'bdkng-kaffee-zu', zu = 0;
+    try { zu = +localStorage.getItem(K) || 0; } catch (e) {}
+    if (Date.now() - zu < 14 * 864e5) return;
+    var d = document.createElement('div'); d.className = 'bs-hint';
+    d.innerHTML = '<span>☕ BDKNG ist privat, ohne Werbung und ohne Paywall. <a href="https://paypal.me/saggi" target="_blank" rel="noopener">Kaffee ausgeben</a> – freiwillig, danke dir!</span><button type="button" aria-label="Hinweis schließen">×</button>';
+    d.querySelector('button').addEventListener('click', function () { try { localStorage.setItem(K, Date.now()); } catch (e) {} d.remove(); });
+    box.insertAdjacentElement('afterend', d);
+  })();
 })();
