@@ -1,5 +1,22 @@
 [
   {
+    "id": "zell-2026-11-06-frei",
+    "checked": "2026-11-07",
+    "valid_until": "2026-11-21",
+    "categories": [
+      "verkehr",
+      "aktuell"
+    ],
+    "title": "Zell: Ortsdurchfahrt seit Freitag wieder frei",
+    "paragraphs": [
+      "Die Vollsperrung der Ortsdurchfahrt Bad König/Zell ist aufgehoben: Seit Freitagnachmittag (6.11.) können Pkw den Abschnitt wieder befahren, nachdem er rund zwei Wochen gesperrt war.",
+      "Laut Stadtverwaltung laufen noch letzte Asphalt- und Fugenarbeiten; danach wird die Baustelle geräumt.",
+      "Die Ortsdurchfahrt bleibt weiterhin offizielle Pkw-Umleitung, bis der Neubau der benachbarten B-45-Brücke komplett abgeschlossen ist."
+    ],
+    "source": "Odenwälder Journal · 5.11.2026 (Ankündigung der Freigabe); Hessen Mobil zur Sperrung",
+    "url": "https://www.odw-journal.de/freie-fahrt-bei-bad-koenig-zell-ortsdurchfahrt-ab-freitagnachmittag-geoeffnet"
+  },
+  {
     "id": "brand-brombachtal-2026-11-06",
     "checked": "2026-11-07",
     "valid_until": "2026-11-14",
@@ -371,7 +388,7 @@
     "source": "Hessen Mobil · 13.10.2026",
     "url": "https://mobil.hessen.de/presse/b-45-fahrbahnerneuerung-in-der-ortsdurchfahrt-bad-koenigzell",
     "checked": "2026-10-15",
-    "valid_until": "2026-11-06"
+    "valid_until": "2026-11-05"
   },
   {
     "id": "gaensbrunnen-2026-10",
