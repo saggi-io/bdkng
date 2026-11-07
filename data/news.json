@@ -1,5 +1,20 @@
 [
   {
+    "id": "hgv-film-2026-11-14",
+    "checked": "2026-11-07",
+    "valid_until": "2026-11-14",
+    "categories": [
+      "termine"
+    ],
+    "title": "HGV zeigt Film „Die Eisfalle“ in der Rentmeisterei",
+    "paragraphs": [
+      "Der HGV Bad König zeigt am Samstag, 14. November, um 19 Uhr in der Rentmeisterei den Film „Die Eisfalle – Die arktische Odyssee der Tegetthoff“.",
+      "Es handelt sich um eine rund 90-minütige österreichische Dokumentation. Weitere Details stehen im vollständigen Echo-Artikel (teils hinter der Bezahlschranke)."
+    ],
+    "source": "Echo Online · Anreißer",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/filmvorfuehrung-des-hgv-6666781"
+  },
+  {
     "id": "zell-2026-11-06-frei",
     "checked": "2026-11-07",
     "valid_until": "2026-11-21",
