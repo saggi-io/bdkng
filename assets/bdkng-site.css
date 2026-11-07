@@ -26,3 +26,4 @@ nav .installnav[hidden]{display:none}
 .wl-d{font-weight:800;color:#444}.wl-i{font-size:24px;line-height:1.2}.wl-t strong{color:var(--green)}
 .wl-src{grid-column:1/-1;margin:2px 0 0;font-size:11px;color:#777}.wl-src a{text-decoration:underline}
 @media(max-width:600px){.wl{grid-template-columns:1fr;padding:10px 14px;border-radius:16px}.wl-days{justify-content:space-between;flex-wrap:nowrap}.wl-days li{flex:1;min-width:0}.wl-big{font-size:38px}.wl-temp{font-size:24px}}
+.sp-list{list-style:none;margin:.6rem 0;padding:0}.sp-list li{display:flex;gap:.9rem;padding:.55rem 0;border-bottom:1px solid rgba(0,0,0,.08)}.sp-list li:last-child{border-bottom:0}.sp-d{flex:0 0 5.2rem;font-weight:700;color:#1B4D2E;font-size:.92rem;line-height:1.3}.sp-m{line-height:1.35}.sp-m small{opacity:.7}
