@@ -1,5 +1,33 @@
 [
   {
+    "id": "windpark-beinefeld-2026-11-07",
+    "checked": "2026-11-07",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Windpark Beinefeld: PNE baut vorerst nicht zwischen Höchst und Bad König",
+    "paragraphs": [
+      "Der Projektierer PNE zieht seinen Antrag für den geplanten Windpark am Beinefeld zwischen Höchst und Bad König zurück. Grund ist laut Echo die fehlende Wirtschaftlichkeit.",
+      "Die Auswirkungen auf die beteiligten Kommunen schildert der vollständige Echo-Artikel (teils kostenpflichtig)."
+    ],
+    "source": "Echo Online · Anreißer vom 7.11.2026",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/hoechst-im-odenwald-odenwaldkreis/projekt-fuer-windraeder-zwischen-hoechst-und-bad-koenig-gestoppt-6713488"
+  },
+  {
+    "id": "bahnhofstrasse-spielhallen-2026-11-03",
+    "checked": "2026-11-07",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Bad König will keine Wettbüros und Spielhallen in der Bahnhofstraße",
+    "paragraphs": [
+      "Die Stadt möchte in der Bahnhofstraße und der Frankfurter Straße keine Wettbüros, Spielhallen oder Bordelle ansiedeln lassen und ihre künftige Entwicklung entsprechend steuern.",
+      "Hintergründe und Details stehen im vollständigen Echo-Artikel (teils kostenpflichtig)."
+    ],
+    "source": "Echo Online · Anreißer vom 3.11.2026",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/bad-koenig-will-in-der-bahnhofstrasse-keine-vergnuegungsstaetten-6631713"
+  },
+  {
     "id": "hgv-film-2026-11-14",
     "checked": "2026-11-07",
     "valid_until": "2026-11-14",
@@ -43,9 +71,10 @@
     "paragraphs": [
       "Am Freitagabend (6.11.) gegen 23:40 Uhr meldeten Anwohner der Rettungsleitstelle Odenwald einen Brand einer Scheune und des angrenzenden Wohnhauses in der Pfälzer Straße in Birkert (Brombachtal).",
       "Die Feuerwehren Brombachtal, Michelstadt, Bad König und Erbach waren im Einsatz. Die Bewohner blieben unverletzt und konnten das Haus selbstständig verlassen; die Familie kommt zunächst bei Freunden unter.",
-      "Die Höhe des Sachschadens ist noch unklar. Die Kriminalpolizei Erbach ermittelt zur Brandursache."
+      "Die Höhe des Sachschadens ist noch unklar. Die Kriminalpolizei Erbach ermittelt zur Brandursache.",
+      "Laut Echo Online steht eine Familie mit fünf Kindern nach dem Brand vor dem Nichts."
     ],
-    "source": "Polizeipräsidium Südhessen (Presseportal) · Erstmeldung 7.11.2026",
+    "source": "Polizeipräsidium Südhessen (Presseportal) · 7.11.2026; Echo Online",
     "url": "https://www.presseportal.de/blaulicht/pm/4969/6385901"
   },
   {
