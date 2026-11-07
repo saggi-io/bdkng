@@ -1,0 +1,21 @@
+.bs{margin:18px 0 8px;background:#fff;border:1px solid #ece8df;border-radius:20px;padding:18px 20px;box-shadow:0 9px 24px rgba(0,0,0,.06)}
+.bs h2{margin:0 0 4px;font-size:20px;color:var(--green)}
+.bs-form{display:flex;gap:8px;align-items:stretch;margin-top:10px}
+.bs-form input[type=search]{flex:1;min-width:0;font:inherit;font-size:16px;padding:13px 16px;border:2px solid #d9d3c4;border-radius:999px;background:#fbfaf6;color:var(--text)}
+.bs-form input[type=search]:focus{outline:none;border-color:var(--green)}
+.bs-btn,.bs-mic{border:0;border-radius:999px;font:inherit;font-weight:900;cursor:pointer}
+.bs-btn{background:var(--green);color:#fff;padding:0 20px}
+.bs-mic{background:var(--gold);color:#173120;width:48px;font-size:18px}
+.bs-mic.on{background:var(--red);color:#fff}
+.bs-examples{margin:10px 0 0;display:flex;gap:8px;flex-wrap:wrap}
+.bs-example,.bs-chip{border:1px solid #d9d3c4;background:var(--cream);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;color:#333}
+.bs-chips{display:flex;gap:8px;flex-wrap:wrap}
+.bs-out{margin-top:14px;padding-top:12px;border-top:1px solid #ece8df;font-size:15px;line-height:1.5}
+.bs-out ul{padding-left:20px;margin:8px 0}
+.bs-hit h3{margin:10px 0 2px;font-size:17px;color:var(--green)}
+.bs-hit p{margin:2px 0}
+.bs-src,.bs-note{font-size:12px;color:#666;margin:6px 0}
+.bs-src a{text-decoration:underline}
+.bs-tools{margin-top:8px}
+.bs-speak{border:0;background:none;color:var(--green);font:inherit;font-weight:800;cursor:pointer;padding:0}
+.bs-foot{font-size:12px;color:#666;margin:10px 0 0}
