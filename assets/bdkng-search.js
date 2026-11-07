@@ -21,7 +21,8 @@
   function laden() {
     if (loading) return loading;
     loading = Promise.all([fetch('/data/muell.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
-      fetch('/data/news.json').then(function (r) { return r.json(); }).catch(function () { return []; })]).then(function (a) { data.muell = a[0]; data.news = a[1] || []; });
+      fetch('/data/news.json').then(function (r) { return r.json(); }).catch(function () { return []; }),
+      fetch('/data/sport-termine.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; });
     return loading;
   }
   function ortsteil(q, muell) {
@@ -87,12 +88,24 @@
       return '<div class="bs-hit"><h3><a href="/' + esc(c) + '.html#' + esc(n.id) + '">' + esc(n.title) + '</a></h3><p>' + esc(n.paragraphs[0] || '') + '</p><p class="bs-src">' + esc(RUB[c] || c) + ' · Quelle: <a href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.source) + '</a> · Stand ' + esc(n.checked.slice(8) + '.' + n.checked.slice(5, 7) + '.' + n.checked.slice(0, 4)) + '</p></div>';
     }).join('');
   }
+  function spieleAntwort(q) {
+    if (!/fu(ß|ss)ball|spiel|kreisliga|heimspiel|ausw(ä|ae)rts|anpfiff|sg bad|bad k(ö|oe)nig\/zell|derby|n(ä|ae)chste/i.test(q)) return null;
+    var t = heute(), l = (data.spiele || []).filter(function (x) { return x.date >= t; });
+    if (!l.length) return null;
+    var w = q.toLowerCase().split(/[^a-zäöüß0-9-]+/).filter(function (x) { return x.length > 4 && !/fußball|fussball|spiel|spiele|kreisliga|heimspiel|auswärts|nächste|nächsten|anstehende|wann|wieder|nächstes|wochenende/.test(x); });
+    var f = w.length ? l.filter(function (x) { var s = (x.home + ' ' + x.away).toLowerCase(); return w.some(function (y) { return s.indexOf(y) >= 0; }); }) : l;
+    if (!f.length) f = l;
+    var h = '<p>Die nächsten Fußballspiele der SG Bad König/Zell:</p><ul>';
+    f.slice(0, 6).forEach(function (x) { h += '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr (' + tageBis(x.date) + '): <strong>' + esc(x.home) + ' – ' + esc(x.away) + '</strong> <small>(Kreisliga ' + (x.team === 'm1' ? 'A, 1. Mannschaft' : 'B, 2. Mannschaft') + ')</small></li>'; });
+    return h + '</ul><p class="bs-src">Quelle: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a> · Änderungen bitte beim Verein prüfen.</p>';
+  }
   function antworten(q) {
     q = q.trim(); if (!q) return;
     out.innerHTML = '<p class="bs-load">Ich suche …</p>'; out.hidden = false;
     laden().then(function () {
       var h = null;
       if (/müll|muell|abfall|abfuhr|tonne|sack|säcke|saecke|papier|biotonne|restmüll|sperrmüll|schadstoff|sonderabfall/i.test(q)) h = muellAntwort(q);
+      if (!h) h = spieleAntwort(q);
       if (!h) h = terminAntwort(q);
       if (!h) h = news(q);
       if (!h) return ki(q);
@@ -117,6 +130,17 @@
         zeige('<p>' + esc(j.antwort || 'Dazu habe ich nichts gefunden.').replace(/\n+/g, '<br>') + '</p><p class="bs-note">KI-Antwort aus den Infos dieser Seite – bitte bei Wichtigem die genannte Quelle prüfen.</p>');
       }).catch(function () { clearTimeout(t); zeige('<p>Dazu habe ich auf dieser Seite nichts gefunden. Du kannst uns einen Hinweis über das <a href="/kontakt.html?thema=hinweis">Kontaktformular</a> schicken.</p>'); });
   }
+  (function () {
+    var fld = input.closest('.bs-field'); if (!fld) return;
+    var x = document.createElement('button'); x.type = 'button'; x.className = 'bs-clear'; x.hidden = true; x.setAttribute('aria-label', 'Eingabe löschen'); x.textContent = '✕';
+    fld.appendChild(x);
+    function sync() { x.hidden = !input.value; }
+    input.addEventListener('input', sync);
+    x.addEventListener('click', function () { input.value = ''; sync(); out.hidden = true; out.innerHTML = ''; input.focus(); });
+    form.addEventListener('submit', function () { setTimeout(sync, 0); });
+    out.addEventListener('click', function () { setTimeout(sync, 0); });
+    setInterval(sync, 600);
+  })();
   form.addEventListener('submit', function (e) { e.preventDefault(); antworten(input.value); });
   out.addEventListener('click', function (e) { var b = e.target.closest('.bs-chip'); if (b) { input.value = b.getAttribute('data-q'); antworten(input.value); } });
   box.querySelectorAll('.bs-example').forEach(function (b) { b.addEventListener('click', function () { input.value = b.textContent; antworten(input.value); }); });
