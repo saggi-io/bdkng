@@ -27,3 +27,14 @@ nav .installnav[hidden]{display:none}
 .wl-src{grid-column:1/-1;margin:2px 0 0;font-size:11px;color:#777}.wl-src a{text-decoration:underline}
 @media(max-width:600px){.wl{grid-template-columns:1fr;padding:10px 14px;border-radius:16px}.wl-days{justify-content:space-between;flex-wrap:nowrap}.wl-days li{flex:1;min-width:0}.wl-big{font-size:38px}.wl-temp{font-size:24px}}
 .sp-list{list-style:none;margin:.6rem 0;padding:0}.sp-list li{display:flex;gap:.9rem;padding:.55rem 0;border-bottom:1px solid rgba(0,0,0,.08)}.sp-list li:last-child{border-bottom:0}.sp-d{flex:0 0 5.2rem;font-weight:700;color:#1B4D2E;font-size:.92rem;line-height:1.3}.sp-m{line-height:1.35}.sp-m small{opacity:.7}
+
+.bs-ki{display:inline-block;margin-left:.5rem;padding:.14rem .6rem;border-radius:999px;background:#D6A858;color:#1b1b1b;font-size:.72rem;font-weight:700;letter-spacing:.03em;vertical-align:middle}
+.menunav{font:inherit;cursor:pointer;white-space:nowrap;border:2px solid #1B4D2E;background:#fff;color:#1B4D2E;border-radius:999px;padding:.35rem .8rem;font-weight:700;line-height:1.2;display:inline-flex;align-items:center;gap:.35rem}
+.menunav:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.menupanel{position:fixed;left:0;right:0;z-index:60;background:#fff;color:#1b1b1b;box-shadow:0 12px 28px rgba(0,0,0,.22);padding:.4rem 16px .8rem;max-height:calc(100vh - 80px);overflow:auto}
+.menupanel a{display:block;padding:.78rem .4rem;border-bottom:1px solid rgba(0,0,0,.08);color:#1B4D2E;font-weight:600;text-decoration:none;font-size:1.02rem}
+.menupanel a:last-child{border-bottom:0}.menupanel .mp-home{font-weight:700}
+@media(min-width:760px){.menupanel{left:auto;right:max(16px,calc((100vw - 1100px)/2));width:320px;border-radius:0 0 14px 14px}}
+@media(max-width:700px){header nav a[href="/#kompakt"]{display:none}}
+
+@media(max-width:700px){header nav .channelnav,header nav a[href="/kontakt.html"]{display:none}header nav .menunav,header nav .installnav,header nav .kaffeenav{padding:.3rem .6rem;font-size:.85rem}header nav{gap:.4rem;flex-wrap:nowrap}}
