@@ -1,0 +1,15 @@
+nav .kaffeenav{background:#fff;border:2px solid var(--gold);color:#173120;padding:8px 15px;border-radius:999px;white-space:nowrap}
+nav .kaffeenav:hover{background:#fff7e3}
+nav .installnav{font:inherit;font-size:14px;font-weight:800;background:var(--green);color:#fff;border:0;padding:10px 15px;border-radius:999px;cursor:pointer;white-space:nowrap}
+nav .installnav[hidden]{display:none}
+@media(max-width:900px){nav a.kaffeenav{display:inline-flex}}
+@media(max-width:600px){nav{gap:8px}nav .kaffeenav,nav .installnav{padding:8px 11px;font-size:13px}nav .kaffeenav{border-width:2px}}
+@media(max-width:380px){nav .installnav{padding:8px 9px}}
+.backbtn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:10px 20px;margin:0 0 16px;background:var(--green);color:#fff;border-radius:999px;font-weight:900;font-size:15px}
+.backbtn:hover{background:#24633b}
+.bs-modal{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.5);display:flex;align-items:flex-end;justify-content:center}
+.bs-sheet{background:#fff;width:min(480px,100%);border-radius:22px 22px 0 0;padding:24px 22px 28px}
+.bs-sheet h3{margin:0 0 10px;color:var(--green);font-size:22px}
+.bs-sheet ol{padding-left:20px;line-height:1.7;margin:0 0 16px}
+.bs-sheet-ok{width:100%;border:0;border-radius:999px;background:var(--gold);color:#173120;font:inherit;font-weight:900;padding:13px;cursor:pointer}
+@media(max-width:600px){nav .brand-logo img{height:auto;max-height:46px;max-width:84px;width:auto}nav a.channelnav{padding:8px 10px;font-size:12px;white-space:nowrap}nav .kaffeenav,nav .installnav{font-size:12px;padding:7px 9px}nav{gap:6px}}
