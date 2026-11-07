@@ -81,7 +81,7 @@
   var RUB = { aktuell: 'Aktuelles', verkehr: 'Verkehr', termine: 'Termine', sport: 'Sport', genuss: 'Genuss', wichtig: 'Wichtig', wetter: 'Wetter', muell: 'Müll' };
   function news(q) {
     var r = stichwort(q); if (!r) return '<p>Bitte stelle eine Frage oder gib ein Stichwort ein.</p>';
-    if (!r.length) return '<p>Dazu habe ich auf dieser Seite nichts gefunden. Du kannst uns einen Hinweis über das <a href="/kontakt.html?thema=hinweis">Kontaktformular</a> schicken.</p>';
+    if (!r.length) return null;
     return r.map(function (x) {
       var n = x.n, c = n.categories[0];
       return '<div class="bs-hit"><h3><a href="/' + esc(c) + '.html#' + esc(n.id) + '">' + esc(n.title) + '</a></h3><p>' + esc(n.paragraphs[0] || '') + '</p><p class="bs-src">' + esc(RUB[c] || c) + ' · Quelle: <a href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.source) + '</a> · Stand ' + esc(n.checked.slice(8) + '.' + n.checked.slice(5, 7) + '.' + n.checked.slice(0, 4)) + '</p></div>';
@@ -95,12 +95,27 @@
       if (/müll|muell|abfall|abfuhr|tonne|sack|säcke|saecke|papier|biotonne|restmüll|sperrmüll|schadstoff|sonderabfall/i.test(q)) h = muellAntwort(q);
       if (!h) h = terminAntwort(q);
       if (!h) h = news(q);
-      out.innerHTML = h + '<div class="bs-tools"><button type="button" class="bs-speak">🔊 Vorlesen</button></div>';
+      if (!h) return ki(q);
+      zeige(h);
+    });
+  }
+  var KAFFEE = 'https://paypal.me/saggi';
+  function zeige(h) {
+    out.innerHTML = h + '<div class="bs-tools"><button type="button" class="bs-speak">🔊 Vorlesen</button></div>';
       var sp = out.querySelector('.bs-speak');
       if (!window.speechSynthesis) sp.hidden = true; else sp.addEventListener('click', function () {
         window.speechSynthesis.cancel(); var u = new SpeechSynthesisUtterance(out.innerText.replace('🔊 Vorlesen', '')); u.lang = 'de-DE'; window.speechSynthesis.speak(u);
       });
-    });
+  }
+  function ki(q) {
+    out.innerHTML = '<p class="bs-load">Ich schaue genauer nach …</p>';
+    var c = new AbortController(), t = setTimeout(function () { c.abort(); }, 40000);
+    fetch('https://n8n.sagmeister.io/webhook/bdkng-frage', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: q }), signal: c.signal })
+      .then(function (r) { return r.json(); }).then(function (j) {
+        clearTimeout(t);
+        if (j.limit) return zeige('<div class="bs-kaffee"><p><strong>Für heute ist das Limit der KI-Suche erreicht.</strong> ☕</p><p>BDKNG ist ein privates Angebot ohne Werbung und ohne Paywall. Die KI-Suche kostet pro Frage ein paar Cent. Wenn du magst, gib mir einen Kaffee aus – freiwillig, danke dir! 🙏</p><p><a class="bs-btn bs-kaffee-btn" href="' + KAFFEE + '" target="_blank" rel="noopener">☕ Kaffee ausgeben</a></p><p class="bs-note">Müll, Termine und Stichworte kannst du weiterhin suchen. Morgen geht die KI-Suche wieder.</p></div>');
+        zeige('<p>' + esc(j.antwort || 'Dazu habe ich nichts gefunden.').replace(/\n+/g, '<br>') + '</p><p class="bs-note">KI-Antwort aus den Infos dieser Seite – bitte bei Wichtigem die genannte Quelle prüfen.</p>');
+      }).catch(function () { clearTimeout(t); zeige('<p>Dazu habe ich auf dieser Seite nichts gefunden. Du kannst uns einen Hinweis über das <a href="/kontakt.html?thema=hinweis">Kontaktformular</a> schicken.</p>'); });
   }
   form.addEventListener('submit', function (e) { e.preventDefault(); antworten(input.value); });
   out.addEventListener('click', function (e) { var b = e.target.closest('.bs-chip'); if (b) { input.value = b.getAttribute('data-q'); antworten(input.value); } });
