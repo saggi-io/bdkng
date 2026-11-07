@@ -61,6 +61,13 @@
       if (n.categories.indexOf('termine') < 0) return;
       n.paragraphs.forEach(function (p) { tage.forEach(function (d) { if (p.indexOf(d.slice(8) + '.' + d.slice(5, 7) + '.') >= 0 && p.length < 400) treffer.push({ p: p, n: n }); }); });
     });
+    var sp = (data.spiele || []).filter(function (x) { return tage.indexOf(x.date) >= 0; });
+    if (sp.length) {
+      var hs = '<ul>';
+      sp.forEach(function (x) { hs += '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr: Fußball – ' + esc(x.home) + ' – ' + esc(x.away) + '<br><small>Quelle: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a></small></li>'; });
+      var seen0 = {}; treffer.forEach(function (x) { if (seen0[x.p]) return; seen0[x.p] = 1; hs += '<li>' + esc(x.p) + '<br><small>Quelle: <a href="' + esc(x.n.url) + '" target="_blank" rel="noopener">' + esc(x.n.source) + '</a></small></li>'; });
+      return hs + '</ul>';
+    }
     if (!treffer.length) return '<p>Dafür habe ich keine Termine gefunden. Schau in <a href="/termine.html">Termine &amp; Veranstaltungen</a>.</p>';
     var seen = {}, h = '<ul>';
     treffer.forEach(function (x) { if (seen[x.p]) return; seen[x.p] = 1; h += '<li>' + esc(x.p) + '<br><small>Quelle: <a href="' + esc(x.n.url) + '" target="_blank" rel="noopener">' + esc(x.n.source) + '</a></small></li>'; });
@@ -89,7 +96,9 @@
     }).join('');
   }
   function spieleAntwort(q) {
-    if (!/fu(ß|ss)ball|spiel|kreisliga|heimspiel|ausw(ä|ae)rts|anpfiff|sg bad|bad k(ö|oe)nig\/zell|derby|n(ä|ae)chste/i.test(q)) return null;
+    var ql = q.toLowerCase();
+    var gegner = (data.spiele || []).some(function (x) { return (x.home + ' ' + x.away).toLowerCase().split(/[^a-zäöüß-]+/).some(function (t) { return t.length > 5 && !/könig|zell/.test(t) && ql.indexOf(t) >= 0; }); });
+    if (!gegner && !/fu(ß|ss)ball|spiel|kreisliga|heimspiel|ausw(ä|ae)rts|anpfiff|sg bad|bad k(ö|oe)nig\/zell|derby/i.test(q)) return null;
     var t = heute(), l = (data.spiele || []).filter(function (x) { return x.date >= t; });
     if (!l.length) return null;
     var w = q.toLowerCase().split(/[^a-zäöüß0-9-]+/).filter(function (x) { return x.length > 4 && !/fußball|fussball|spiel|spiele|kreisliga|heimspiel|auswärts|nächste|nächsten|anstehende|wann|wieder|nächstes|wochenende/.test(x); });
