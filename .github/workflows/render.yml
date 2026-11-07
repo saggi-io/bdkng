@@ -1,0 +1,18 @@
+name: Seiten rendern
+on:
+  push:
+    paths: ['data/news.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/render_news.py
+      - run: |
+          git config user.name "bdkng-bot"
+          git config user.email "bot@bdkng.de"
+          git add -A
+          git diff --cached --quiet || (git commit -m "Rubrikseiten neu gerendert" && git push)
