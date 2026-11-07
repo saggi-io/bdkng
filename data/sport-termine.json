@@ -1,0 +1,244 @@
+{
+ "stand": "2026-11-07T22:08",
+ "quelle": "FuPa",
+ "spiele": [
+  {
+   "date": "2026-11-08",
+   "time": "12:00",
+   "home": "TSV Seckmauern II",
+   "away": "SG Bad König/Zell",
+   "team": "m1"
+  },
+  {
+   "date": "2026-11-08",
+   "time": "12:30",
+   "home": "VfL Michelstadt II",
+   "away": "SG Bad König/Zell II",
+   "team": "m2"
+  },
+  {
+   "date": "2026-11-14",
+   "time": "15:00",
+   "home": "FV Mümling-Grumbach",
+   "away": "SG Bad König/Zell",
+   "team": "m1"
+  },
+  {
+   "date": "2026-11-15",
+   "time": "13:00",
+   "home": "SG Sandbach II",
+   "away": "SG Bad König/Zell II",
+   "team": "m2"
+  },
+  {
+   "date": "2026-11-22",
+   "time": "13:00",
+   "home": "SG Bad König/Zell II",
+   "away": "SV Beerfelden",
+   "team": "m2"
+  },
+  {
+   "date": "2026-11-22",
+   "time": "15:00",
+   "home": "SG Bad König/Zell",
+   "away": "SV Gammelsbach",
+   "team": "m1"
+  },
+  {
+   "date": "2026-11-29",
+   "time": "12:30",
+   "home": "SG Rimhorn/Neustadt II",
+   "away": "SG Bad König/Zell II",
+   "team": "m2"
+  },
+  {
+   "date": "2026-11-29",
+   "time": "14:30",
+   "home": "FSV Erbach",
+   "away": "SG Bad König/Zell",
+   "team": "m1"
+  },
+  {
+   "date": "2026-12-06",
+   "time": "14:00",
+   "home": "SG Bad König/Zell",
+   "away": "VfL Michelstadt",
+   "team": "m1"
+  },
+  {
+   "date": "2026-12-06",
+   "time": "14:00",
+   "home": "KSV Haingrund",
+   "away": "SG Bad König/Zell II",
+   "team": "m2"
+  },
+  {
+   "date": "2027-02-21",
+   "time": "14:30",
+   "home": "GSV Breitenbrunn",
+   "away": "SG Bad König/Zell",
+   "team": "m1"
+  },
+  {
+   "date": "2027-02-28",
+   "time": "12:30",
+   "home": "SG Bad König/Zell II",
+   "away": "TV Fränkisch-Crumbach II",
+   "team": "m2"
+  },
+  {
+   "date": "2027-03-07",
+   "time": "13:00",
+   "home": "TSV Günterfürst II",
+   "away": "SG Bad König/Zell II",
+   "team": "m2"
+  },
+  {
+   "date": "2027-03-07",
+   "time": "15:00",
+   "home": "Türkiyemspor Breuberg",
+   "away": "SG Bad König/Zell",
+   "team": "m1"
+  },
+  {
+   "date": "2027-03-14",
+   "time": "13:00",
+   "home": "SG Bad König/Zell II",
+   "away": "TSG Steinbach II",
+   "team": "m2"
+  },
+  {
+   "date": "2027-03-14",
+   "time": "15:00",
+   "home": "SG Bad König/Zell",
+   "away": "FC Finkenbachtal",
+   "team": "m1"
+  },
+  {
+   "date": "2027-03-19",
+   "time": "19:00",
+   "home": "TSV Höchst II",
+   "away": "SG Bad König/Zell",
+   "team": "m1"
+  },
+  {
+   "date": "2027-03-21",
+   "time": "13:00",
+   "home": "SG Bad König/Zell II",
+   "away": "Türkspor Beerfelden",
+   "team": "m2"
+  },
+  {
+   "date": "2027-04-04",
+   "time": "13:00",
+   "home": "SV Lützel-Wiebelsbach II",
+   "away": "SG Bad König/Zell II",
+   "team": "m2"
+  },
+  {
+   "date": "2027-04-04",
+   "time": "15:00",
+   "home": "SG Bad König/Zell",
+   "away": "SSV Brensbach II",
+   "team": "m1"
+  },
+  {
+   "date": "2027-04-11",
+   "time": "13:00",
+   "home": "SG Bad König/Zell II",
+   "away": "TSV Bullau",
+   "team": "m2"
+  },
+  {
+   "date": "2027-04-11",
+   "time": "15:00",
+   "home": "SG Bad König/Zell",
+   "away": "SG Nieder-Kainsbach",
+   "team": "m1"
+  },
+  {
+   "date": "2027-04-18",
+   "time": "15:00",
+   "home": "SG Rothenberg",
+   "away": "SG Bad König/Zell",
+   "team": "m1"
+  },
+  {
+   "date": "2027-04-18",
+   "time": "15:00",
+   "home": "VfR Würzberg",
+   "away": "SG Bad König/Zell II",
+   "team": "m2"
+  },
+  {
+   "date": "2027-04-25",
+   "time": "13:00",
+   "home": "SG Bad König/Zell II",
+   "away": "SG Hainstadt/Rai-Breitenbach",
+   "team": "m2"
+  },
+  {
+   "date": "2027-04-25",
+   "time": "15:00",
+   "home": "SG Bad König/Zell",
+   "away": "KSG Vielbrunn",
+   "team": "m1"
+  },
+  {
+   "date": "2027-05-02",
+   "time": "15:00",
+   "home": "KSV Reichelsheim",
+   "away": "SG Bad König/Zell",
+   "team": "m1"
+  },
+  {
+   "date": "2027-05-02",
+   "time": "15:00",
+   "home": "TV Hetzbach",
+   "away": "SG Bad König/Zell II",
+   "team": "m2"
+  },
+  {
+   "date": "2027-05-09",
+   "time": "13:00",
+   "home": "SG Bad König/Zell II",
+   "away": "KSV Haingrund",
+   "team": "m2"
+  },
+  {
+   "date": "2027-05-09",
+   "time": "15:00",
+   "home": "SG Bad König/Zell",
+   "away": "SV Hummetroth II",
+   "team": "m1"
+  },
+  {
+   "date": "2027-05-15",
+   "time": "15:00",
+   "home": "TSV Sensbachtal",
+   "away": "SG Bad König/Zell",
+   "team": "m1"
+  },
+  {
+   "date": "2027-05-15",
+   "time": "15:00",
+   "home": "Spvgg Kinzigtal",
+   "away": "SG Bad König/Zell II",
+   "team": "m2"
+  },
+  {
+   "date": "2027-05-23",
+   "time": "13:00",
+   "home": "SG Bad König/Zell II",
+   "away": "VfL Michelstadt II",
+   "team": "m2"
+  },
+  {
+   "date": "2027-05-23",
+   "time": "17:00",
+   "home": "SG Bad König/Zell",
+   "away": "TSV Seckmauern II",
+   "team": "m1"
+  }
+ ]
+}
