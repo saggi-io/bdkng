@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-08-204375666",
+    "checked": "2026-11-08",
+    "valid_until": "2026-11-18",
+    "categories": [
+      "sport"
+    ],
+    "title": "Re-Live: HSG Odenwald schlägt HSG Erbach im Bezirksoberliga-Derby deutlich",
+    "paragraphs": [
+      "Das Odenwald-Derby ist entschieden: Die HSG Erbach/Dorf-Erbach verliert zu Hause mit 28:36 gegen die HSG Odenwald. Die ganze Partie sehen Sie jetzt im Re-Live auf Echo Online!",
+      "Der vollständige Artikel kann beim Medium kostenpflichtig sein."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/sport/handball/handball-odenwald-spessart/re-live-hsg-odenwald-schlaegt-hsg-erbach-deutlich-6554174"
+  },
+  {
     "id": "2026-11-08-wetter",
     "checked": "2026-11-08",
     "valid_until": "2026-11-11",
