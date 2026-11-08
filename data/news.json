@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-11-08-news-347335202",
+    "checked": "2026-11-08",
+    "valid_until": "2026-11-15",
+    "categories": [
+      "aktuell",
+      "sport"
+    ],
+    "title": "BAD KÖNIG KOMPAKT · Abendüberblick 08.11.",
+    "paragraphs": [
+      "Handball: TV Groß-Umstadt will Lauf fortsetzen, Derby bei der SG Arheilgen Handball-Regionalligist TV Groß-Umstadt möchte seine Spitzenposition verteidigen. In der Oberliga rückt das Derby zwischen der SG Arheilgen und dem TSV Pfungstadt in den … https://www.echo-online.de/sport/handball/handball-darmstadt-dieburg/tv-gross-umstadt-will-seinen-lauf-fortsetzen-6599298"
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/sport/handball/handball-darmstadt-dieburg/tv-gross-umstadt-will-seinen-lauf-fortsetzen-6599298"
+  },
+  {
     "id": "medien-2026-11-08-239100852",
     "checked": "2026-11-08",
     "valid_until": "2026-11-18",
@@ -13,21 +28,6 @@
     ],
     "source": "Echo Online",
     "url": "https://www.echo-online.de/sport/handball/handball-landesliga-sued/tv-buettelborn-erlebt-deftige-derby-niederlage-in-pfungstadt-3524897"
-  },
-  {
-    "id": "medien-2026-11-08-208219732",
-    "checked": "2026-11-08",
-    "valid_until": "2026-11-18",
-    "categories": [
-      "sport"
-    ],
-    "title": "Handball: TV Groß-Umstadt will Lauf fortsetzen, Derby bei der SG Arheilgen",
-    "paragraphs": [
-      "Handball-Regionalligist TV Groß-Umstadt möchte seine Spitzenposition verteidigen. In der Oberliga rückt das Derby zwischen der SG Arheilgen und dem TSV Pfungstadt in den Fokus.",
-      "Der vollständige Artikel kann beim Medium kostenpflichtig sein."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/sport/handball/handball-darmstadt-dieburg/tv-gross-umstadt-will-seinen-lauf-fortsetzen-6599298"
   },
   {
     "id": "medien-2026-11-08-202622621",
