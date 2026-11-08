@@ -116,11 +116,10 @@
     laden().then(function () {
       var h = null;
       if (/müll|muell|abfall|abfuhr|tonne|sack|säcke|saecke|papier|biotonne|restmüll|sperrmüll|schadstoff|sonderabfall/i.test(q)) h = muellAntwort(q);
-      if (!h) h = spieleAntwort(q);
-      if (!h) h = terminAntwort(q);
-      if (!h) h = news(q);
-      if (!h) return ki(q);
-      zeige(h);
+      if (!h && !/gespielt|ergebnis|ausgang|gewonnen|verloren|letzte|vergangen|tabelle|torsch/i.test(q)) h = spieleAntwort(q);
+      if (h) return zeige(h);
+      var fb = terminAntwort(q) || news(q);
+      ki(q, fb);
     });
   }
   var KAFFEE = 'https://paypal.me/saggi';
@@ -131,7 +130,7 @@
         window.speechSynthesis.cancel(); var u = new SpeechSynthesisUtterance(out.innerText.replace('🔊 Vorlesen', '')); u.lang = 'de-DE'; window.speechSynthesis.speak(u);
       });
   }
-  function ki(q) {
+  function ki(q, fb) {
     out.innerHTML = '<p class="bs-load">Ich schaue genauer nach …</p>';
     var c = new AbortController(), t = setTimeout(function () { c.abort(); }, 40000);
     fetch('https://n8n.sagmeister.io/webhook/bdkng-frage', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: q }), signal: c.signal })
@@ -139,7 +138,7 @@
         clearTimeout(t);
         if (j.limit) return zeige('<div class="bs-kaffee"><p><strong>Für heute ist das Limit der KI-Suche erreicht.</strong> ☕</p><p>BDKNG ist ein privates Angebot ohne Werbung und ohne Paywall. Die KI-Suche kostet pro Frage ein paar Cent. Wenn du magst, gib mir einen Kaffee aus – freiwillig, danke dir! 🙏</p><p><a class="bs-kaffee-btn" href="' + KAFFEE + '" target="_blank" rel="noopener">☕ Kaffee ausgeben</a></p><p class="bs-note">Müll, Termine und Stichworte kannst du weiterhin suchen. Morgen geht die KI-Suche wieder.</p></div>');
         zeige('<p>' + esc(j.antwort || 'Dazu habe ich nichts gefunden.').replace(/\n+/g, '<br>') + '</p><p class="bs-note">KI-Antwort aus den Infos dieser Seite – bitte bei Wichtigem die genannte Quelle prüfen.</p>');
-      }).catch(function () { clearTimeout(t); zeige('<p>Dazu habe ich auf dieser Seite nichts gefunden. Du kannst uns einen Hinweis über das <a href="/kontakt.html?thema=hinweis">Kontaktformular</a> schicken.</p>'); });
+      }).catch(function () { clearTimeout(t); if (fb) return zeige(fb); zeige('<p>Dazu habe ich auf dieser Seite nichts gefunden. Du kannst uns einen Hinweis über das <a href="/kontakt.html?thema=hinweis">Kontaktformular</a> schicken.</p>'); });
   }
   (function () {
     var fld = input.closest('.bs-field'); if (!fld) return;
