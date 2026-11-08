@@ -1,36 +1,68 @@
 {
-  "stand": "2026-11-08",
-  "quelle_hinweis": "Von der Seite der Stadt Bad König einmalig gelesen; Angaben ohne Gewähr, bitte bei Wichtigem bei der Stadt prüfen.",
-  "eintraege": [
-    {
-      "titel": "Öffnungszeiten der Stadtverwaltung Bad König",
-      "text": "Montag 8:30–12:00 und 13:00–16:00 Uhr. Dienstag 8:30–12:00 Uhr. Mittwoch 8:30–12:00 Uhr. Donnerstag 8:30–12:00 und 13:00–18:00 Uhr. Freitag 8:30–12:00 Uhr. Adresse: Schloßplatz 3, 64732 Bad König. E-Mail: stadtverwaltung@badkoenig.de.",
-      "url": "https://www.badkoenig.de/rathaus-service/rathaus-buergerservice/ansprechpersonen/"
-    },
-    {
-      "titel": "Bürgerbus Bad König (Verein Bürgerbus Bad König e.V.)",
-      "text": "Der Bürgerbus fährt in Bad König und allen Stadtteilen. Fahrzeiten: Dienstag 8–17 Uhr, Mittwoch bis Freitag 8–13 Uhr. Buchung nur über die Servicenummer 06063 579861: Montag 9–12 Uhr für Dienstag und Mittwoch, Mittwoch 9–12 Uhr für Donnerstag und Freitag. Im Bus sind die Fahrer unter 0176 55 212 212 erreichbar. Abholung zu Hause und Rückbringung, bei der ersten Buchung werden Kontaktdaten benötigt. Das Angebot richtet sich an Seniorinnen und Senioren, Menschen mit eingeschränkter Mobilität und andere hilfsbedürftige Personen. Kostenlos, Spenden willkommen.",
-      "url": "https://www.badkoenig.de/leben-wohnen/verkehr-mobilitaet/buergerbus/"
-    },
-    {
-      "titel": "Bürgermeister Frank Hofferbert",
-      "text": "Bürgermeister der Stadt Bad König ist Frank Hofferbert. Telefon 06063 5009-25, E-Mail buergermeister@badkoenig.de, Schloßplatz 3, 64732 Bad König.",
-      "url": "https://www.badkoenig.de/rathaus-service/rathaus-buergerservice/ansprechpersonen/"
-    },
-    {
-      "titel": "Ansprechpartner Stadtverwaltung (Auswahl)",
-      "text": "Büro des Magistrats / Hauptverwaltung & Stadtkasse: Frau Ehrhardt, 06063 5009-26, ehrhardt@stadt.badkoenig.de. Stabsstelle des Bürgermeisters: Herr Lautenschläger, 06063 5009-39. Steueramt: Herr Arndt, 06063 5009-31. Ordnungs- und Sozialverwaltung, Straßenverkehrsbehörde: Herr Bachert, 06063 5009-59. Feuerwehr, Kindergartenverwaltung, Ortsgericht, Personalverwaltung: Frau Bär, 06063 5009-51. Die vollständige Liste steht auf der Seite der Stadt.",
-      "url": "https://www.badkoenig.de/rathaus-service/rathaus-buergerservice/ansprechpersonen/"
-    },
-    {
-      "titel": "Rathaus & Bürgerservice – wo finde ich was",
-      "text": "Auf badkoenig.de gibt es unter Rathaus & Service: Ansprechpersonen, Anträge & Leistungen A–Z (Wohnsitzanmeldung, Bauantrag, Melderegisterauskunft, Formulare, Friedpark), Melde- und Passamt, Müllentsorgung, Mängelmelder, Aktuelles, Amtliche Bekanntmachungen, Politik & Recht (Ratsinformationssystem, Wahlen, Satzungen, Finanzen), Stadtportrait und Karriere. Die Stadt hat außerdem die Bürger-App meinOrt.",
-      "url": "https://www.badkoenig.de/rathaus-service/rathaus-buergerservice/"
-    },
-    {
-      "titel": "Rente, Sozialleistungen und Beratung",
-      "text": "Zu Rente und Rentenanträgen hat BDKNG keine eigenen Infos. Zuständig ist die Deutsche Rentenversicherung (kostenloses Servicetelefon 0800 1000 480 70). Allgemeine Fragen zu Sozialleistungen kann die Ordnungs- und Sozialverwaltung der Stadt beantworten (Herr Bachert, 06063 5009-59).",
-      "url": "https://www.deutsche-rentenversicherung.de/"
-    }
-  ]
+ "stand": "2026-11-08",
+ "quelle_hinweis": "Von der Seite der Stadt Bad König einmalig gelesen; Angaben ohne Gewähr, bitte bei Wichtigem bei der Stadt prüfen.",
+ "eintraege": [
+  {
+   "titel": "Öffnungszeiten der Stadtverwaltung Bad König",
+   "text": "Montag 8:30–12:00 und 13:00–16:00 Uhr. Dienstag 8:30–12:00 Uhr. Mittwoch 8:30–12:00 Uhr. Donnerstag 8:30–12:00 und 13:00–18:00 Uhr. Freitag 8:30–12:00 Uhr. Adresse: Schloßplatz 3, 64732 Bad König. E-Mail: stadtverwaltung@badkoenig.de.",
+   "url": "https://www.badkoenig.de/rathaus-service/rathaus-buergerservice/ansprechpersonen/"
+  },
+  {
+   "titel": "Bürgerbus Bad König (Verein Bürgerbus Bad König e.V.)",
+   "text": "Der Bürgerbus fährt in Bad König und allen Stadtteilen. Fahrzeiten: Dienstag 8–17 Uhr, Mittwoch bis Freitag 8–13 Uhr. Buchung nur über die Servicenummer 06063 579861: Montag 9–12 Uhr für Dienstag und Mittwoch, Mittwoch 9–12 Uhr für Donnerstag und Freitag. Im Bus sind die Fahrer unter 0176 55 212 212 erreichbar. Abholung zu Hause und Rückbringung, bei der ersten Buchung werden Kontaktdaten benötigt. Das Angebot richtet sich an Seniorinnen und Senioren, Menschen mit eingeschränkter Mobilität und andere hilfsbedürftige Personen. Kostenlos, Spenden willkommen.",
+   "url": "https://www.badkoenig.de/leben-wohnen/verkehr-mobilitaet/buergerbus/"
+  },
+  {
+   "titel": "Bürgermeister Frank Hofferbert",
+   "text": "Bürgermeister der Stadt Bad König ist Frank Hofferbert. Telefon 06063 5009-25, E-Mail buergermeister@badkoenig.de, Schloßplatz 3, 64732 Bad König.",
+   "url": "https://www.badkoenig.de/rathaus-service/rathaus-buergerservice/ansprechpersonen/"
+  },
+  {
+   "titel": "Ansprechpartner Stadtverwaltung (Auswahl)",
+   "text": "Büro des Magistrats / Hauptverwaltung & Stadtkasse: Frau Ehrhardt, 06063 5009-26, ehrhardt@stadt.badkoenig.de. Stabsstelle des Bürgermeisters: Herr Lautenschläger, 06063 5009-39. Steueramt: Herr Arndt, 06063 5009-31. Ordnungs- und Sozialverwaltung, Straßenverkehrsbehörde: Herr Bachert, 06063 5009-59. Feuerwehr, Kindergartenverwaltung, Ortsgericht, Personalverwaltung: Frau Bär, 06063 5009-51. Die vollständige Liste steht auf der Seite der Stadt.",
+   "url": "https://www.badkoenig.de/rathaus-service/rathaus-buergerservice/ansprechpersonen/"
+  },
+  {
+   "titel": "Rathaus & Bürgerservice – wo finde ich was",
+   "text": "Auf badkoenig.de gibt es unter Rathaus & Service: Ansprechpersonen, Anträge & Leistungen A–Z (Wohnsitzanmeldung, Bauantrag, Melderegisterauskunft, Formulare, Friedpark), Melde- und Passamt, Müllentsorgung, Mängelmelder, Aktuelles, Amtliche Bekanntmachungen, Politik & Recht (Ratsinformationssystem, Wahlen, Satzungen, Finanzen), Stadtportrait und Karriere. Die Stadt hat außerdem die Bürger-App meinOrt.",
+   "url": "https://www.badkoenig.de/rathaus-service/rathaus-buergerservice/"
+  },
+  {
+   "titel": "Rente, Sozialleistungen und Beratung",
+   "text": "Zu Rente und Rentenanträgen hat BDKNG keine eigenen Infos. Zuständig ist die Deutsche Rentenversicherung (kostenloses Servicetelefon 0800 1000 480 70). Allgemeine Fragen zu Sozialleistungen kann die Ordnungs- und Sozialverwaltung der Stadt beantworten (Herr Bachert, 06063 5009-59).",
+   "url": "https://www.deutsche-rentenversicherung.de/"
+  },
+  {
+   "titel": "Ärztlicher Bereitschaftsdienst, Notfälle und Notdienste",
+   "text": "Ärztlicher Bereitschaftsdienst: bundesweit 116 117. Die ÄBD-Zentrale ist im Gesundheitszentrum Odenwaldkreis, Albert-Schweitzer-Straße 10, 64711 Erbach. Geöffnet Mo, Di, Do 19–22 Uhr, Mi und Fr 14–22 Uhr, Sa, So und Feiertage 8–22 Uhr. Nachts ist die Zentrale nicht besetzt, dann hilft 116 117 telefonisch. Zahnärztlicher Notdienst am Wochenende und an Feiertagen: Zentralrufnummer 01805 607011 (14 ct/min). Unfallchirurgischer Notfalldienst: Kreiskrankenhaus Erbach, Albert-Schweitzer-Str. 10, Tel. 06062 790. Notruf Feuerwehr und Rettungsdienst 112, Polizei 110.",
+   "url": "https://epaper.wittich.de/frontend/mvc/catalog/by-name/2173/newest"
+  },
+  {
+   "titel": "Apotheken-Notdienst in Bad König",
+   "text": "In der Ausgabe der Stadtnachrichten vom 5.11.2026 steht für Bad König: Mittwoch, 11.11.2026 hat die Brunnen Apotheke (Elisabethenstr. 11, Tel. 06063 912318) Notdienst. Weitere Notdienste in der Umgebung (u. a. Lindenfels, Höchst, Michelstadt, Erbach) stehen in den Stadtnachrichten. Aktuelle Notdienste auch unter aponet.de oder 22833 per SMS.",
+   "url": "https://epaper.wittich.de/frontend/mvc/catalog/by-name/2173/newest",
+   "gueltig_bis": "2026-11-18"
+  },
+  {
+   "titel": "Müllabfuhr Hotline und Grünschnitt",
+   "text": "Fragen zur Müllabfuhr beantwortet die kostenlose Hotline 0800 9600100. Grünschnitt wird am Bauhof Bad König angenommen, nächster Termin Samstag, 21.11.2026, 9–12 Uhr.",
+   "url": "https://epaper.wittich.de/frontend/mvc/catalog/by-name/2173/newest",
+   "gueltig_bis": "2026-11-21"
+  },
+  {
+   "titel": "Regelmäßige Angebote in Bad König",
+   "text": "Jeden Dienstag Bürger- und Gästewanderung des VKT Bad König, Treffpunkt 13:45 Uhr an der Piazza (Wandelhalle). Jeden ersten Samstag im Monat Stammcafé des VdK im Kaffee Kännchen, 15 Uhr. Jeden ersten Dienstag im Monat BUND-Treffen, Alte Schule, Schulstr. 7, 18 Uhr. Jeden zweiten Dienstag (ungerade Wochen) Kreativwerkstatt für Frauen der Jugendwerkstätten Odenwald, Bahnhofstr. 2, 10–12 Uhr. Jeden zweiten Donnerstag (gerade Wochen) Senioren-Café der Jugendwerkstätten, Bahnhofstr. 2, 10:15–11:45 Uhr. Georg-Vetter-Museum (Alexanderstr. 2) sonntags 10:30–12 Uhr mit Führung. Heimatmuseum Bad König (Eingang Schlosshof) an ausgewählten Sonntagen 10:30–12 Uhr. TECMUMAS Technikmuseum (Kimbacher Str. 79) an Öffnungswochenenden, Sa und So 12–18 Uhr, Eintritt Erwachsene 4 €, Kinder 2 €. Yesterchips Museum an ausgewählten Donnerstagabenden 17–21 Uhr, Eintritt frei.",
+   "url": "https://epaper.wittich.de/frontend/mvc/catalog/by-name/2173/newest"
+  },
+  {
+   "titel": "Kirchen: Kontakte und Büros",
+   "text": "Katholische Kontaktstelle Bad König: Friedrichstr. 12, Tel. 06063 1539, Öffnungszeit Montag 9–12 Uhr, E-Mail verwaltung.im-odenwaldkreis@bistum-mainz.de. Sonntags fährt ein Kirchenbus (Bad König und Ortsteile), Anmeldung im Pfarrbüro. Katholische Bücherei Vielbrunn: Di 16–18 Uhr, So 10–11:30 Uhr, Tel. 06061 969065. Evangelisches Gemeindebüro Vielbrunn: Ohrnbachtalstr. 24, Tel. 06066 270, Mittwoch 7–10 Uhr, Donnerstag 14–17 Uhr. Evangelischer Pfarrer in Zell: Armin Hammes, Michelstädter Str. 3, Bad König-Zell.",
+   "url": "https://epaper.wittich.de/frontend/mvc/catalog/by-name/2173/newest"
+  },
+  {
+   "titel": "Hospizgruppe und Beratung",
+   "text": "Hospizgruppe der Sozialstation Höchst, Groß-Umstädter Str. 6, 64739 Höchst, Tel. 06163 9397450, E-Mail hospiz@sozialstation-hoechst.de (Letzte-Hilfe-Kurs 20.11.2026, 16–20 Uhr, 10 € Unkostenbeitrag, Anmeldung nötig).",
+   "url": "https://epaper.wittich.de/frontend/mvc/catalog/by-name/2173/newest"
+  }
+ ]
 }
