@@ -74,14 +74,14 @@
     return h + '</ul>';
   }
   function stichwort(q) {
-    var w = q.toLowerCase().split(/[^a-zäöüß0-9-]+/).filter(function (x) { return x.length > 2; });
+    var w = q.toLowerCase().split(/[^a-zäöüß0-9-]+/).filter(function (x) { return x.length > 2 && !/^(kann|ich|von|nach|wann|die|der|das|wie|was|ist|und|für|mit|gibt|es|bad|könig|koenig|fahren|fahrenn|wird|wer|wo|zum|zur|den|dem|ein|eine|noch|auch|nicht|heute|morgen)$/.test(x); });
     if (!w.length) return null;
     var t = heute(), res = [];
     data.news.forEach(function (n) {
       var txt = (n.title + ' ' + n.paragraphs.join(' ')).toLowerCase(), s = 0;
       w.forEach(function (x) { if (txt.indexOf(x) >= 0) s += n.title.toLowerCase().indexOf(x) >= 0 ? 3 : 1; });
       if (s && n.valid_until && n.valid_until < t) s -= 2;
-      if (s > 0) res.push({ n: n, s: s });
+      if (s >= (w.length > 1 ? 2 : 1)) res.push({ n: n, s: s });
     });
     res.sort(function (a, b) { return b.s - a.s || (b.n.checked > a.n.checked ? 1 : -1); });
     return res.slice(0, 3);
@@ -97,8 +97,10 @@
   }
   function spieleAntwort(q) {
     var ql = q.toLowerCase();
-    var gegner = (data.spiele || []).some(function (x) { return (x.home + ' ' + x.away).toLowerCase().split(/[^a-zäöüß-]+/).some(function (t) { return t.length > 5 && !/könig|zell/.test(t) && ql.indexOf(t) >= 0; }); });
-    if (!gegner && !/fu(ß|ss)ball|spiel|kreisliga|heimspiel|ausw(ä|ae)rts|anpfiff|sg bad|bad k(ö|oe)nig\/zell|derby/i.test(q)) return null;
+    var absicht = /\b(spiel|spiele|spielt|spielen|spielplan|fußballspiel|fussballspiel|fußballspiele|fussballspiele|heimspiel|heimspiele|auswärtsspiel|anpfiff|anstoß|derby|kreisliga|ergebnis(se)?)\b/.test(ql);
+    var gegner = /\b(gegen|wann|spielt|nächste|nächsten)\b/.test(ql) && (data.spiele || []).some(function (x) { return (x.home + ' ' + x.away).toLowerCase().split(/[^a-zäöüß-]+/).some(function (t) { return t.length > 5 && !/könig|zell|michelstadt/.test(t) && ql.indexOf(t) >= 0; }); });
+    if (/gehfu|walking|training|trainier/.test(ql)) return null;
+    if (!absicht && !gegner) return null;
     var t = heute(), l = (data.spiele || []).filter(function (x) { return x.date >= t; });
     if (!l.length) return null;
     var w = q.toLowerCase().split(/[^a-zäöüß0-9-]+/).filter(function (x) { return x.length > 4 && !/fußball|fussball|spiel|spiele|kreisliga|heimspiel|auswärts|nächste|nächsten|anstehende|wann|wieder|nächstes|wochenende/.test(x); });
