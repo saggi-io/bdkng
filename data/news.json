@@ -1,5 +1,43 @@
 [
   {
+    "id": "wetter-aussicht-2026-11-08",
+    "checked": "2026-11-08",
+    "valid_until": "2026-11-10",
+    "categories": [
+      "wetter"
+    ],
+    "title": "Wetter in Bad König: Aussichten für die nächsten Tage",
+    "paragraphs": [
+      "Aktuell: 3 °C, bewölkt, Wind 9 km/h.",
+      "So, 08.11.: 2 bis 8 °C, bewölkt, Regen 0 mm",
+      "Mo, 09.11.: 3 bis 7 °C, bewölkt, Regen 0 mm",
+      "Di, 10.11.: 3 bis 7 °C, bewölkt, Regen 0 mm",
+      "Mi, 11.11.: 5 bis 5 °C, bewölkt, Regen 0 mm"
+    ],
+    "source": "Deutscher Wetterdienst über Bright Sky",
+    "url": "https://brightsky.dev/"
+  },
+  {
+    "id": "wetter-rueckblick-2026-11-01",
+    "checked": "2026-11-08",
+    "categories": [
+      "wetter"
+    ],
+    "title": "Wetterrückblick Bad König: 1. bis 7. November",
+    "paragraphs": [
+      "Gemessene Werte der vergangenen Woche (Tiefst- und Höchsttemperatur, Niederschlag je Tag):",
+      "So, 01.11.: 4 bis 8 °C, Niederschlag 0.0 mm",
+      "Mo, 02.11.: 2 bis 7 °C, Niederschlag 0.0 mm",
+      "Di, 03.11.: 3 bis 6 °C, Niederschlag 0.0 mm",
+      "Mi, 04.11.: 4 bis 7 °C, Niederschlag 0.0 mm",
+      "Do, 05.11.: 2 bis 8 °C, Niederschlag 0.0 mm",
+      "Fr, 06.11.: 0 bis 6 °C, Niederschlag 0.0 mm",
+      "Sa, 07.11.: 0 bis 6 °C, Niederschlag 0.0 mm"
+    ],
+    "source": "Deutscher Wetterdienst über Bright Sky",
+    "url": "https://brightsky.dev/"
+  },
+  {
     "id": "2026-11-08-news-125161317",
     "checked": "2026-11-08",
     "valid_until": "2026-11-15",
