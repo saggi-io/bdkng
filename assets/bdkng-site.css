@@ -38,3 +38,4 @@ nav .installnav[hidden]{display:none}
 @media(max-width:700px){header nav a[href="/#kompakt"]{display:none}}
 
 @media(max-width:700px){header nav .channelnav,header nav a[href="/kontakt.html"]{display:none}header nav .menunav,header nav .installnav,header nav .kaffeenav{padding:.3rem .6rem;font-size:.85rem}header nav{gap:.4rem;flex-wrap:nowrap}}
+.mw-sel{display:flex;gap:.6rem;align-items:center;margin:.4rem 0 .8rem}.mw-sel select{font:inherit;padding:.4rem .6rem;border-radius:8px;border:1px solid rgba(0,0,0,.25)}.mw-list{list-style:none;padding:0;margin:.2rem 0 .8rem}.mw-list li{padding:.45rem 0;border-bottom:1px solid rgba(0,0,0,.08)}.mw-none{opacity:.7;margin:.2rem 0 .8rem}
