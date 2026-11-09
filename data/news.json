@@ -1,5 +1,23 @@
 [
   {
+    "id": "2026-11-09-termine",
+    "checked": "2026-11-09",
+    "valid_until": "2026-11-16",
+    "categories": [
+      "termine"
+    ],
+    "title": "TERMINE & VERANSTALTUNGEN · Diese Woche",
+    "paragraphs": [
+      "• Montag, 09.11., 17:00 Uhr: Laternenfest der Kindertagesstätte mit Gottesdienst in Bewegung (Evangelische Kirchengemeinde Bad König)",
+      "• Dienstag, 10.11., 13:45 Uhr: Bürger- und Gästewanderung – Treffpunkt Piazza, Wandelhalle, Kernstadt (Verein zur Förderung von Kur- und Tourismus (VKT) Bad König). findet jeden Dienstag statt",
+      "• Dienstag, 10.11., 17:30 Uhr: Gedenkfeier zur Pogromnacht, Beginn am Schlossplatz – Schlossplatz, Kernstadt (Evangelische Kirchengemeinde Bad König)",
+      "• Donnerstag, 12.11., 10:15 Uhr: Senioren Café – Jugendwerkstätten Odenwald, Bahnhofstr. 2, Kernstadt (Jugendwerkstätten Odenwald). findet jeden zweiten Donnerstag (gerade Wochen) von 10:15 bis 11:45 Uhr statt",
+      "Änderungen bitte beim Veranstalter prüfen. Quellen: Stadt Bad König, Veranstaltungskalender; Bad Königer Stadtnachrichten (meinOrt-App) https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/ https://meinort.de/neues?ort=2307 Stand: 09.11.2026. Automatisch zusammengestellt."
+    ],
+    "source": "Stadt Bad König, Veranstaltungskalender; Bad Königer Stadtnachrichten (meinOrt-App)",
+    "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/"
+  },
+  {
     "id": "medien-2026-11-09-202651597",
     "checked": "2026-11-09",
     "valid_until": "2026-11-19",
