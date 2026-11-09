@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-09-256931796",
+    "checked": "2026-11-09",
+    "valid_until": "2026-11-23",
+    "categories": [
+      "verkehr"
+    ],
+    "title": "Nach zwei Wochen Sperrung: Zeller Ortsdurchfahrt wird wieder für Pkw freigegeben",
+    "paragraphs": [
+      "Autofahrer können ab Freitagnachmittag wieder durch Bad König-Zell fahren. Die sanierte Ortsdurchfahrt dient weiter als Umleitung für Pkw, bis die neue B45-Brücke fertig ist.",
+      "Der vollständige Artikel kann beim Medium kostenpflichtig sein."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/zeller-ortsdurchfahrt-wird-wieder-freigegeben-6701675"
+  },
+  {
     "id": "2026-11-09-termine",
     "checked": "2026-11-09",
     "valid_until": "2026-11-16",
