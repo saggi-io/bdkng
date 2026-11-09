@@ -1,5 +1,21 @@
 [
   {
+    "id": "medien-2026-11-09-203457010",
+    "checked": "2026-11-09",
+    "valid_until": "2026-11-23",
+    "categories": [
+      "verkehr",
+      "aktuell"
+    ],
+    "title": "Nach Bauarbeiten: Odenwaldbahn fährt wieder zwischen Bad König und Michelstadt",
+    "paragraphs": [
+      "Für die Fahrgäste endet am Montag der Ersatzverkehr auf der Odenwaldbahn zwischen Bad König und Michelstadt. Wie es jetzt weitergeht, lest ihr hier.",
+      "Der vollständige Artikel kann beim Medium kostenpflichtig sein."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/zeller-bruecke-odenwaldbahn-bauarbeiten-bad-koenig-michelstadt-betrieb-bahn-db-6544692"
+  },
+  {
     "id": "medien-2026-11-09-203457791",
     "checked": "2026-11-09",
     "valid_until": "2026-11-19",
