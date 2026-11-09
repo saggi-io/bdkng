@@ -1,5 +1,19 @@
 [
   {
+    "id": "2026-11-09-wetter",
+    "checked": "2026-11-09",
+    "valid_until": "2026-11-12",
+    "categories": [
+      "wetter"
+    ],
+    "title": "WETTER · Die nächsten 3 Tage",
+    "paragraphs": [
+      "Dienstag, 10.11.: wechselnd bewölkt, 3 bis 8 °C  Mittwoch, 11.11.: bedeckt, 6 bis 12 °C, Regenrisiko 59 % (ca. 7 l/m²)  Donnerstag, 12.11.: bedeckt, 6 bis 11 °C, Regenrisiko 30 % (ca. 2 l/m²)"
+    ],
+    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
+    "url": "https://bdkng.de"
+  },
+  {
     "id": "medien-2026-11-09-334105337",
     "checked": "2026-11-09",
     "valid_until": "2026-11-23",
