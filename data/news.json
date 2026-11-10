@@ -1,5 +1,20 @@
 [
   {
+    "id": "stadt-2026-11-10-gewaesserentwicklung",
+    "checked": "2026-11-10",
+    "valid_until": "2026-11-24",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Bürgerinformation zur Gewässerentwicklung an der Mümling",
+    "paragraphs": [
+      "Am 9. November fand in Bad König die Bürgerinformation zur Gewässerentwicklung an der Mümling statt.",
+      "Die Präsentation der Stadt fasst die wichtigsten Inhalte zusammen: Gewässerökologie, Anforderungen der Wasserrahmenrichtlinie sowie Förder- und Unterstützungsangebote des Landes, zum Beispiel „100 Wilde Bäche“ und der Gewässermanager."
+    ],
+    "source": "Stadt Bad König",
+    "url": "https://www.badkoenig.de/aktuelle-nachrichten/gewaesserentwicklung-an-der-muemling/"
+  },
+  {
     "id": "medien-2026-11-10-264409394",
     "checked": "2026-11-10",
     "valid_until": "2026-11-20",
