@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-11-10-news-330431606",
+    "checked": "2026-11-10",
+    "valid_until": "2026-11-17",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "BAD KÖNIG KOMPAKT · Morgenüberblick 10.11.",
+    "paragraphs": [
+      "Gutes Zeichen aus Bad Königs Gewerbepark, doch Geduld bleibt weiter gefragt Die erste Ansiedlung ist für Bad Königs neues Gewerbegebiet ein wichtiges Signal, doch bei dessen weiterer Belegung bleiben Geduld und Sorgfalt gefragt, meint Jörg … https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/ein-gutes-zeichen-aus-bad-koenigs-gewerbegebiet-5937269",
+      "Filmvorführung des HGV Der HGV Bad König zeigt am Samstag, 14. November, um 19 Uhr in der Rentmeisterei den Film „Die Eisfalle – Die arktische Odyssee der Tegetthoff“. Das 90-minütige … https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/filmvorfuehrung-des-hgv-6666781"
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/ein-gutes-zeichen-aus-bad-koenigs-gewerbegebiet-5937269"
+  },
+  {
     "id": "2026-11-09-wetter",
     "checked": "2026-11-09",
     "valid_until": "2026-11-12",
@@ -845,22 +860,6 @@
     "url": "https://www.badkoenig.de/aktuelle-nachrichten/information-zur-baumassnahme-endstufenausbau-am-gaensbrunnen-und-instandsetzung-der-strasse-am-gickelsgraben-baustart-und-hinweise-fuer-anwohner/",
     "checked": "2026-10-15",
     "valid_until": null
-  },
-  {
-    "id": "finanzausschuss-2026-10-26",
-    "categories": [
-      "aktuell",
-      "termine"
-    ],
-    "title": "Freibad und Krisenvorsorge auf der Tagesordnung",
-    "paragraphs": [
-      "Der Haupt- und Finanzausschuss tagt am Montag, 26. Oktober, um 19:30 Uhr öffentlich im großen Saal der Rentmeisterei.",
-      "Laut Echo geht es unter anderem um ein alternatives Konzept für das Freibad und die Teilnahme am Landesprogramm „KOMPASS Resilienz“."
-    ],
-    "source": "Echo Online · 14.10.2026",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/oeffentliche-sitzung-6546344",
-    "checked": "2026-10-15",
-    "valid_until": "2026-10-26"
   },
   {
     "id": "ortsbeirat-2026-10-27",
