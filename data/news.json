@@ -1,5 +1,21 @@
 [
   {
+    "id": "fupa-2026-11-10-fussball-ergebnisse",
+    "checked": "2026-11-10",
+    "valid_until": "2026-11-17",
+    "categories": [
+      "sport"
+    ],
+    "title": "Fußball: SG Bad König/Zell – Ergebnisse vom Wochenende",
+    "paragraphs": [
+      "Kreisliga A, 1. Mannschaft: TSV Seckmauern II – SG Bad König/Zell 1:3 (Sonntag, 8.11.). Die SG gewann auswärts.",
+      "Kreisliga B, 2. Mannschaft: VfL Michelstadt II – SG Bad König/Zell II 3:3 (Sonntag, 8.11.).",
+      "Nächste Spiele: Samstag, 14.11., 15:00 Uhr: FV Mümling-Grumbach – SG Bad König/Zell. Sonntag, 15.11., 13:00 Uhr: SG Sandbach II – SG Bad König/Zell II."
+    ],
+    "source": "FuPa",
+    "url": "https://www.fupa.net/club/tsg-bad-koenig"
+  },
+  {
     "id": "2026-11-10-news-347335225",
     "checked": "2026-11-10",
     "valid_until": "2026-11-17",
