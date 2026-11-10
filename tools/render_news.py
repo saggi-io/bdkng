@@ -6,6 +6,8 @@ categories=('aktuell','verkehr','termine','sport','genuss','wichtig','wetter','m
 news=json.loads((root/'data/news.json').read_text(encoding='utf-8'))
 seen=set()
 for n in news:
+ n['checked']=str(n['checked'])[:10]
+ if n.get('valid_until'):n['valid_until']=str(n['valid_until'])[:10]
  if not re.fullmatch(r'[a-z0-9-]+',n['id']) or n['id'] in seen: raise ValueError('Duplicate/invalid news ID')
  seen.add(n['id'])
  if not n['url'].startswith('https://') or not set(n['categories'])<=set(categories):raise ValueError('Invalid source/category')
