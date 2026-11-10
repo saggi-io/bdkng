@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-09T06:00",
+ "stand": "2026-11-10T18:06",
  "quelle": "FuPa",
  "spiele": [
   {
@@ -225,6 +225,248 @@
    "home": "SG Bad König/Zell",
    "away": "TSV Seckmauern II",
    "team": "m1"
+  }
+ ],
+ "ergebnisse": [
+  {
+   "date": "2026-11-08",
+   "home": "TSV Seckmauern II",
+   "away": "SG Bad König/Zell",
+   "hg": 1,
+   "ag": 3,
+   "team": "m1"
+  },
+  {
+   "date": "2026-11-08",
+   "home": "VfL Michelstadt II",
+   "away": "SG Bad König/Zell II",
+   "hg": 3,
+   "ag": 3,
+   "team": "m2"
+  },
+  {
+   "date": "2026-11-01",
+   "home": "SG Bad König/Zell",
+   "away": "TSV Sensbachtal",
+   "hg": 7,
+   "ag": 1,
+   "team": "m1"
+  },
+  {
+   "date": "2026-11-01",
+   "home": "SG Bad König/Zell II",
+   "away": "Spvgg Kinzigtal",
+   "hg": 2,
+   "ag": 3,
+   "team": "m2"
+  },
+  {
+   "date": "2026-10-25",
+   "home": "SV Hummetroth II",
+   "away": "SG Bad König/Zell",
+   "hg": 0,
+   "ag": 2,
+   "team": "m1"
+  },
+  {
+   "date": "2026-10-18",
+   "home": "SG Bad König/Zell",
+   "away": "KSV Reichelsheim",
+   "hg": 1,
+   "ag": 1,
+   "team": "m1"
+  },
+  {
+   "date": "2026-10-18",
+   "home": "SG Bad König/Zell II",
+   "away": "TV Hetzbach",
+   "hg": 0,
+   "ag": 2,
+   "team": "m2"
+  },
+  {
+   "date": "2026-10-11",
+   "home": "KSG Vielbrunn",
+   "away": "SG Bad König/Zell",
+   "hg": 2,
+   "ag": 2,
+   "team": "m1"
+  },
+  {
+   "date": "2026-10-11",
+   "home": "SG Hainstadt/Rai-Breitenbach",
+   "away": "SG Bad König/Zell II",
+   "hg": 1,
+   "ag": 2,
+   "team": "m2"
+  },
+  {
+   "date": "2026-10-04",
+   "home": "SG Bad König/Zell II",
+   "away": "VfR Würzberg",
+   "hg": 7,
+   "ag": 5,
+   "team": "m2"
+  },
+  {
+   "date": "2026-10-02",
+   "home": "SG Bad König/Zell",
+   "away": "SG Rothenberg",
+   "hg": 3,
+   "ag": 0,
+   "team": "m1"
+  },
+  {
+   "date": "2026-09-27",
+   "home": "SG Nieder-Kainsbach",
+   "away": "SG Bad König/Zell",
+   "hg": 2,
+   "ag": 0,
+   "team": "m1"
+  },
+  {
+   "date": "2026-09-27",
+   "home": "TSV Bullau",
+   "away": "SG Bad König/Zell II",
+   "hg": 0,
+   "ag": 10,
+   "team": "m2"
+  },
+  {
+   "date": "2026-09-24",
+   "home": "SG Bad König/Zell",
+   "away": "TSV Höchst II",
+   "hg": 5,
+   "ag": 0,
+   "team": "m1"
+  },
+  {
+   "date": "2026-09-20",
+   "home": "SSV Brensbach II",
+   "away": "SG Bad König/Zell",
+   "hg": 1,
+   "ag": 4,
+   "team": "m1"
+  },
+  {
+   "date": "2026-09-20",
+   "home": "SG Bad König/Zell II",
+   "away": "SV Lützel-Wiebelsbach II",
+   "hg": 3,
+   "ag": 3,
+   "team": "m2"
+  },
+  {
+   "date": "2026-09-10",
+   "home": "VfL Michelstadt",
+   "away": "SG Bad König/Zell",
+   "hg": 2,
+   "ag": 2,
+   "team": "m1"
+  },
+  {
+   "date": "2026-09-10",
+   "home": "Türkspor Beerfelden",
+   "away": "SG Bad König/Zell II",
+   "hg": 1,
+   "ag": 2,
+   "team": "m2"
+  },
+  {
+   "date": "2026-09-06",
+   "home": "FC Finkenbachtal",
+   "away": "SG Bad König/Zell",
+   "hg": 1,
+   "ag": 1,
+   "team": "m1"
+  },
+  {
+   "date": "2026-09-04",
+   "home": "SG Bad König/Zell II",
+   "away": "TSG Steinbach II",
+   "hg": 6,
+   "ag": 2,
+   "team": "m2"
+  },
+  {
+   "date": "2026-08-30",
+   "home": "SG Bad König/Zell",
+   "away": "Türkiyemspor Breuberg",
+   "hg": 2,
+   "ag": 2,
+   "team": "m1"
+  },
+  {
+   "date": "2026-08-30",
+   "home": "SG Bad König/Zell II",
+   "away": "TSV Günterfürst II",
+   "hg": 1,
+   "ag": 1,
+   "team": "m2"
+  },
+  {
+   "date": "2026-08-23",
+   "home": "TV Fränkisch-Crumbach II",
+   "away": "SG Bad König/Zell II",
+   "hg": 0,
+   "ag": 6,
+   "team": "m2"
+  },
+  {
+   "date": "2026-08-15",
+   "home": "SG Bad König/Zell",
+   "away": "FV Mümling-Grumbach",
+   "hg": 3,
+   "ag": 0,
+   "team": "m1"
+  },
+  {
+   "date": "2026-08-15",
+   "home": "SG Bad König/Zell II",
+   "away": "SG Sandbach II",
+   "hg": 6,
+   "ag": 2,
+   "team": "m2"
+  },
+  {
+   "date": "2026-08-12",
+   "home": "SG Bad König/Zell",
+   "away": "GSV Breitenbrunn",
+   "hg": 2,
+   "ag": 3,
+   "team": "m1"
+  },
+  {
+   "date": "2026-08-09",
+   "home": "SV Gammelsbach",
+   "away": "SG Bad König/Zell",
+   "hg": 3,
+   "ag": 5,
+   "team": "m1"
+  },
+  {
+   "date": "2026-08-09",
+   "home": "SV Beerfelden",
+   "away": "SG Bad König/Zell II",
+   "hg": 2,
+   "ag": 5,
+   "team": "m2"
+  },
+  {
+   "date": "2026-08-02",
+   "home": "SG Bad König/Zell",
+   "away": "FSV Erbach",
+   "hg": 0,
+   "ag": 6,
+   "team": "m1"
+  },
+  {
+   "date": "2026-08-02",
+   "home": "SG Bad König/Zell II",
+   "away": "SG Rimhorn/Neustadt II",
+   "hg": 2,
+   "ag": 4,
+   "team": "m2"
   }
  ]
 }
