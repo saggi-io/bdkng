@@ -1,5 +1,19 @@
 [
   {
+    "id": "2026-11-10-wetter",
+    "checked": "2026-11-10",
+    "valid_until": "2026-11-13",
+    "categories": [
+      "wetter"
+    ],
+    "title": "WETTER · Die nächsten 3 Tage",
+    "paragraphs": [
+      "Mittwoch, 11.11.: bedeckt, 6 bis 11 °C, Regenrisiko 34 % (ca. 3 l/m²)  Donnerstag, 12.11.: bedeckt, 5 bis 11 °C  Freitag, 13.11.: wechselnd bewölkt, 2 bis 6 °C"
+    ],
+    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
+    "url": "https://bdkng.de"
+  },
+  {
     "id": "fupa-2026-11-10-fussball-ergebnisse",
     "checked": "2026-11-10",
     "valid_until": "2026-11-17",
