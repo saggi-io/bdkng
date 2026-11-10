@@ -1,5 +1,24 @@
 [
   {
+    "id": "2026-11-10-news-347335225",
+    "checked": "2026-11-10",
+    "valid_until": "2026-11-17",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "BAD KÖNIG KOMPAKT · Abendüberblick 10.11.",
+    "paragraphs": [
+      "Einladung zur Einweihung der Orange Bank Ein sichtbares Zeichen gegen Gewalt an Frauen und Mädchen am Dienstag, den 25. November 2025, um 14.00 Uhr wird auf dem Areal der Argentat-Anlage anlässlich des … https://www.badkoenig.de/aktuelle-nachrichten/einweihung-der-orange-bank/",
+      "Gewässerentwicklung an der Mümling Präsentation zur Bürgerinformationsveranstaltung vom 09.11.2026 Am 09.11.2026 fand in Bad König die Bürgerinformation zur Gewässerentwicklung an der Mümling statt. Die … https://www.badkoenig.de/aktuelle-nachrichten/gewaesserentwicklung-an-der-muemling/",
+      "Gedenkfeiern zum Volkstrauertag Am Sonntag, 15. Novembe, finden in der Gemeinde Höchst i. Odw. folgende Gedenkfeiern statt: Höchst: 14 Uhr mit dem Herbertschen Chor „Eintracht 1847“; Ortsteil … https://www.echo-online.de/lokales/odenwaldkreis/hoechst-im-odenwald-odenwaldkreis/gedenkfeiern-zum-volkstrauertag-6670055",
+      "Höchst: Feuerwehrkräfte sind bei ihrer Übung schwer gefordert Bei ihrer Hauptübung hatten die Wehren Mümling-Grumbach und Annelsbach/Forstel alle Hände voll zu tun. Was es zu meistern galt. Was das Szenario besonders realistische … https://www.echo-online.de/lokales/odenwaldkreis/hoechst-im-odenwald-odenwaldkreis/hoechst-feuerwehrkraefte-sind-bei-uebung-schwer-gefordert-6657620",
+      "Adventsbasar in der Rentmeisterei Die Aktion „Behindertes Kind Odenwaldkreis“ und das Teilhabezentrum Odenwald veranstalten am Sonntag, 22. November, von 11 bis 17 Uhr einen Adventsbasar in der … https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/adventsbasar-in-der-rentmeisterei-6784021",
+      "Blut spenden und Leben retten Das Deutsche Rote Kreuz bietet am Dienstag, 1. Dezember, von 15.30 bis 19.30 Uhr einen Blutspendetermin in der Sporthalle der Grundschule, Martin-Luther-Straße 3, in Bad … https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/blut-spenden-und-leben-retten-6784690"
+    ],
+    "source": "Stadt Bad König, Echo Online",
+    "url": "https://www.badkoenig.de/aktuelle-nachrichten/einweihung-der-orange-bank/"
+  },
+  {
     "id": "echo-2026-11-10-adventsbasar",
     "checked": "2026-11-10",
     "valid_until": "2026-11-22",
