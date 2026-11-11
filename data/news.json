@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-11-11-news-567392054",
+    "checked": "2026-11-11",
+    "valid_until": "2026-11-18",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "BAD KÖNIG KOMPAKT · Abendüberblick 11.11.",
+    "paragraphs": [
+      "Raum für Begegnung: Wie das Mümlingtalfest in Lützelbach gelaufen ist Das Mümlingtalfest in Lützelbach bietet ein gemeinsames Erlebnis über die Gemeindegrenzen hinweg. Auch lebendige … https://www.echo-online.de/lokales/odenwaldkreis/luetzelbach-odenwaldkreis/raum-fuer-begegnung-wie-das-muemlingtalfest-gelaufen-ist-6521715",
+      "Pogrom-Gedenken Bad König: Antisemitismusbeauftragter warnt vor „Schon wieder“ Beim Pogrom-Bedenken in Bad König sieht Hessen Antisemitismusbeauftragter Uwe Becker Deutschland auf dem Weg vom „Nie … https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/bad-koenig-erlebt-pogrom-gedenken-das-in-die-zukunft-weist-6792647",
+      "Bad Königs Kurpark als märchenhafter Ort: „Christmas Lights“ leuchten wieder Die „Christmas Lights“ mit ihren faszinierenden Lichtinstallationen erleben ihre sechste Saison in Bad König. Wer Trubel … https://www.echo-online.de/lokales/odenwaldkreis/erbach-odenwaldkreis/verzauberter-kurpark-odenwaelder-lichter-spektakel-startet-6697196"
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/luetzelbach-odenwaldkreis/raum-fuer-begegnung-wie-das-muemlingtalfest-gelaufen-ist-6521715"
+  },
+  {
     "id": "medien-2026-11-11-118610016",
     "checked": "2026-11-11",
     "valid_until": "2026-11-21",
@@ -58,21 +74,6 @@
     ],
     "source": "Echo Online",
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/oberzent-odenwaldkreis/vermuellung-gruene-fordern-stadt-oberzent-zum-handeln-auf-6657130"
-  },
-  {
-    "id": "medien-2026-11-11-201521311",
-    "checked": "2026-11-11",
-    "valid_until": "2026-11-21",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Raum für Begegnung: Wie das Mümlingtalfest in Lützelbach gelaufen ist",
-    "paragraphs": [
-      "Das Mümlingtalfest in Lützelbach bietet ein gemeinsames Erlebnis über die Gemeindegrenzen hinweg. Auch lebendige Darbietungen und regionale Treffen sorgen für die gute Stimmung.",
-      "Der vollständige Artikel kann beim Medium kostenpflichtig sein."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/luetzelbach-odenwaldkreis/raum-fuer-begegnung-wie-das-muemlingtalfest-gelaufen-ist-6521715"
   },
   {
     "id": "2026-11-11-news-943379865",
