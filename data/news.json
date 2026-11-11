@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-11-205389362",
+    "checked": "2026-11-11",
+    "valid_until": "2026-11-21",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Warum in Mümling-Grumbach Pilze tanzen und Raben niesen",
+    "paragraphs": [
+      "Bei der Mümling-Grumbacher Puppenbühne ist allerlei möglich und Spaß garantiert. Ab November können Karten für das Marionettenstück „Der blaue Kristall“ bestellt werden.",
+      "Der vollständige Artikel kann beim Medium kostenpflichtig sein."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/hoechst-im-odenwald-odenwaldkreis/tanzende-fliegenpilze-und-tiere-die-dialekt-sprechen-6567220"
+  },
+  {
     "id": "medien-2026-11-10-228329427",
     "checked": "2026-11-10",
     "valid_until": "2026-11-20",
@@ -1014,21 +1029,6 @@
     "url": "https://www.badkoenig.de/aktuelle-nachrichten/information-zur-baumassnahme-endstufenausbau-am-gaensbrunnen-und-instandsetzung-der-strasse-am-gickelsgraben-baustart-und-hinweise-fuer-anwohner/",
     "checked": "2026-10-15",
     "valid_until": null
-  },
-  {
-    "id": "ortsbeirat-2026-10-27",
-    "categories": [
-      "termine"
-    ],
-    "title": "Ortsbeirat Ober-Kinzig/Gumpersberg tagt am 27. Oktober",
-    "paragraphs": [
-      "Die öffentliche Sitzung beginnt am Dienstag, 27. Oktober, um 19:30 Uhr im Sportlerheim Ober-Kinzig, Nieder-Kinziger-Straße 1.",
-      "Auf der Tagesordnung stehen unter anderem die Friedhöfe, der Katastrophenschutz und Parkplätze an der Hummetrötherstraße."
-    ],
-    "source": "LINUS WITTICH · Stadtnachrichten 42/2026, Seite 5 (Ausgabedatum 16.10.)",
-    "url": "https://epaper.wittich.de/frontend/mvc/catalog/by-name/2173/2173_42_2026",
-    "checked": "2026-10-15",
-    "valid_until": "2026-10-27"
   },
   {
     "id": "fussball-2026-10-11",
