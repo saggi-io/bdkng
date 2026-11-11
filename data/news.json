@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-11-118610016",
+    "checked": "2026-11-11",
+    "valid_until": "2026-11-21",
+    "categories": [
+      "sport"
+    ],
+    "title": "Nach Spielabbruch im Odenwald: Zurück zum Miteinander",
+    "paragraphs": [
+      "Die Vorfälle im Spiel zwischen dem VfL Michelstadt und Türk Breuberg sorgen für Entsetzen. Alle Beteiligten sollten zur Aufklärung beitragen, findet Sportreporter Frank Leber.",
+      "Der vollständige Artikel kann beim Medium kostenpflichtig sein."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/sport/fussball/fussball-odenwald/eine-rueckkehr-zum-gemeinsamen-miteinander-4196624"
+  },
+  {
     "id": "medien-2026-11-11-236788338",
     "checked": "2026-11-11",
     "valid_until": "2026-11-21",
@@ -597,21 +612,6 @@
     ],
     "source": "Deutscher Wetterdienst über Bright Sky",
     "url": "https://brightsky.dev/"
-  },
-  {
-    "id": "medien-2026-11-08-118610016",
-    "checked": "2026-11-08",
-    "valid_until": "2026-11-18",
-    "categories": [
-      "sport"
-    ],
-    "title": "Nach Spielabbruch im Odenwald: Zurück zum Miteinander",
-    "paragraphs": [
-      "Die Vorfälle im Spiel zwischen dem VfL Michelstadt und Türk Breuberg sorgen für Entsetzen. Alle Beteiligten sollten zur Aufklärung beitragen, findet Sportreporter Frank Leber.",
-      "Der vollständige Artikel kann beim Medium kostenpflichtig sein."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/sport/fussball/fussball-odenwald/eine-rueckkehr-zum-gemeinsamen-miteinander-4196624"
   },
   {
     "id": "bahn-odenwaldbahn-info",
