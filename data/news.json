@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-12-205455646",
+    "checked": "2026-11-12",
+    "valid_until": "2026-11-22",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Freibad Bad König: Das Schwimmbadgelände soll kein Lost Place werden",
+    "paragraphs": [
+      "Die Bad Königer Stadtverordneten haben neue Pläne für das verlassene Areal und einigen sich auf verschiedene Optionen. Was auf dem Freibadgelände passieren soll, lest ihr hier.",
+      "🔒 Der vollständige Artikel ist bei Echo Online kostenpflichtig (Echo+)."
+    ],
+    "source": "Echo Online 🔒 Echo+",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/bad-koenig-odenwald-odenwaldkreis-freibad-lost-place-sommer-schwimmen-verlassen-6569916"
+  },
+  {
     "id": "medien-2026-11-12-256931796",
     "checked": "2026-11-12",
     "valid_until": "2026-11-26",
@@ -355,21 +370,6 @@
         "url": "https://www.vias-online.de/"
       }
     ]
-  },
-  {
-    "id": "2026-11-09-news-311070826",
-    "checked": "2026-11-09",
-    "valid_until": "2026-11-16",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Freibad Bad König: Das Schwimmbadgelände soll kein Lost Place werden",
-    "paragraphs": [
-      "Die Bad Königer Stadtverordneten haben neue Pläne für das verlassene Areal und einigen sich auf verschiedene Optionen. Was auf dem Freibadgelände passieren soll, lest ihr hier.",
-      "🔒 Der vollständige Artikel ist bei Echo Online kostenpflichtig (Echo+)."
-    ],
-    "source": "Echo Online 🔒 Echo+",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/bad-koenig-odenwald-odenwaldkreis-freibad-lost-place-sommer-schwimmen-verlassen-6569916"
   },
   {
     "id": "medien-2026-11-09-202651597",
