@@ -1,6 +1,6 @@
 {
- "stand": "2026-11-12T06:00",
- "quelle": "FuPa",
+ "stand": "2026-11-12T14:58",
+ "quelle": "FuPa, nuLiga",
  "spiele": [
   {
    "date": "2026-11-14",
@@ -467,6 +467,64 @@
    "hg": 2,
    "ag": 4,
    "team": "m2"
+  }
+ ],
+ "handball": [
+  {
+   "date": "2026-11-15",
+   "time": "14:00",
+   "liga": "M-BK-2",
+   "team": "Männer",
+   "home": "HSG Bachgau IV",
+   "away": "HSG Odenwald III"
+  },
+  {
+   "date": "2026-11-15",
+   "time": "14:00",
+   "liga": "F-BL",
+   "team": "Frauen",
+   "home": "HSG Bachgau III",
+   "away": "HSG Odenwald II"
+  },
+  {
+   "date": "2026-11-15",
+   "time": "16:00",
+   "liga": "M-BOL",
+   "team": "Männer",
+   "home": "HSG Bachgau II",
+   "away": "HSG Odenwald"
+  },
+  {
+   "date": "2026-11-15",
+   "time": "18:00",
+   "liga": "M-BL",
+   "team": "Männer",
+   "home": "TV Niedernberg",
+   "away": "HSG Odenwald II"
+  },
+  {
+   "date": "2026-11-21",
+   "time": "15:30",
+   "liga": "F-BL",
+   "team": "Frauen",
+   "home": "HSG Odenwald II",
+   "away": "TuSpo Obernburg II"
+  },
+  {
+   "date": "2026-11-21",
+   "time": "17:30",
+   "liga": "F-BOL",
+   "team": "Frauen",
+   "home": "HSG Odenwald",
+   "away": "TuSpo Obernburg"
+  },
+  {
+   "date": "2026-11-21",
+   "time": "19:30",
+   "liga": "M-BL",
+   "team": "Männer",
+   "home": "HSG Odenwald II",
+   "away": "TV Bürgstadt"
   }
  ]
 }
