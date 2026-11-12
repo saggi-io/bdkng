@@ -1,21 +1,5 @@
 [
   {
-    "id": "medien-2026-11-12-235777241",
-    "checked": "2026-11-12",
-    "valid_until": "2026-11-22",
-    "categories": [
-      "sport",
-      "aktuell"
-    ],
-    "title": "TV Fränkisch-Crumbach II verdient sich Punkt in Sandbach",
-    "paragraphs": [
-      "Türk Beerfelden tritt zum Spitzenspiel bei der SG Hainstadt/Rai-Breitenbach nicht an. Gewinner des Spieltags ist die Spvgg. Kinzigtal, die oben aufschließt.",
-      "Der vollständige Artikel kann beim Medium kostenpflichtig sein."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/sport/fussball/fussball-odenwald/tv-fraenkisch-crumbach-ii-verdient-sich-punkt-in-sandbach-6684355"
-  },
-  {
     "id": "2026-11-12-termine",
     "checked": "2026-11-12",
     "valid_until": "2026-11-19",
@@ -49,21 +33,6 @@
     "valid_until": "2026-11-26"
   },
   {
-    "id": "2026-11-12-news-943379896",
-    "checked": "2026-11-12",
-    "valid_until": "2026-11-19",
-    "categories": [
-      "aktuell",
-      "sport"
-    ],
-    "title": "BAD KÖNIG KOMPAKT · Morgenüberblick 12.11.",
-    "paragraphs": [
-      "Dynamites bleiben ungeschlagen und erobern Tabellenspitze Die Zweitliga-Handballerinnen der Dynamites gewinnen auch ihr fünftes Saisonspiel. Auch die TSG Bretzenheim bleibt in … https://www.echo-online.de/sport/handball/handball-zweite-bundesliga/dynamites-bleiben-ungeschlagen-und-erobern-tabellenspitze-6537619"
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/sport/handball/handball-zweite-bundesliga/dynamites-bleiben-ungeschlagen-und-erobern-tabellenspitze-6537619"
-  },
-  {
     "id": "2026-11-11-wetter",
     "checked": "2026-11-11",
     "valid_until": "2026-11-14",
@@ -76,22 +45,6 @@
     ],
     "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
     "url": "https://bdkng.de"
-  },
-  {
-    "id": "2026-11-11-news-567392054",
-    "checked": "2026-11-11",
-    "valid_until": "2026-11-18",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "BAD KÖNIG KOMPAKT · Abendüberblick 11.11.",
-    "paragraphs": [
-      "Raum für Begegnung: Wie das Mümlingtalfest in Lützelbach gelaufen ist Das Mümlingtalfest in Lützelbach bietet ein gemeinsames Erlebnis über die Gemeindegrenzen hinweg. Auch lebendige … https://www.echo-online.de/lokales/odenwaldkreis/luetzelbach-odenwaldkreis/raum-fuer-begegnung-wie-das-muemlingtalfest-gelaufen-ist-6521715",
-      "Pogrom-Gedenken Bad König: Antisemitismusbeauftragter warnt vor „Schon wieder“ Beim Pogrom-Bedenken in Bad König sieht Hessen Antisemitismusbeauftragter Uwe Becker Deutschland auf dem Weg vom „Nie … https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/bad-koenig-erlebt-pogrom-gedenken-das-in-die-zukunft-weist-6792647",
-      "Bad Königs Kurpark als märchenhafter Ort: „Christmas Lights“ leuchten wieder Die „Christmas Lights“ mit ihren faszinierenden Lichtinstallationen erleben ihre sechste Saison in Bad König. Wer Trubel … https://www.echo-online.de/lokales/odenwaldkreis/erbach-odenwaldkreis/verzauberter-kurpark-odenwaelder-lichter-spektakel-startet-6697196"
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/luetzelbach-odenwaldkreis/raum-fuer-begegnung-wie-das-muemlingtalfest-gelaufen-ist-6521715"
   },
   {
     "id": "medien-2026-11-11-236788338",
@@ -139,34 +92,6 @@
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/oberzent-odenwaldkreis/vermuellung-gruene-fordern-stadt-oberzent-zum-handeln-auf-6657130"
   },
   {
-    "id": "2026-11-11-news-943379865",
-    "checked": "2026-11-11",
-    "valid_until": "2026-11-18",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "BAD KÖNIG KOMPAKT · Morgenüberblick 11.11.",
-    "paragraphs": [
-      "Höchst vertagt Entscheidung über Radweg an der B45 vorerst Keine Entscheidung über den geplanten Radweg: Höchst setzt das umstrittene Bauprojekt vorerst für eine Bürger-Info mit … https://www.echo-online.de/lokales/odenwaldkreis/hoechst-im-odenwald-odenwaldkreis/b45-radweg-in-hoechst-entscheidung-vorerst-vertagt-6591390"
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/hoechst-im-odenwald-odenwaldkreis/b45-radweg-in-hoechst-entscheidung-vorerst-vertagt-6591390"
-  },
-  {
-    "id": "2026-11-10-wetter",
-    "checked": "2026-11-10",
-    "valid_until": "2026-11-13",
-    "categories": [
-      "wetter"
-    ],
-    "title": "WETTER · Die nächsten 3 Tage",
-    "paragraphs": [
-      "Mittwoch, 11.11.: bedeckt, 6 bis 11 °C, Regenrisiko 34 % (ca. 3 l/m²)  Donnerstag, 12.11.: bedeckt, 5 bis 11 °C  Freitag, 13.11.: wechselnd bewölkt, 2 bis 6 °C"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
-    "url": "https://bdkng.de"
-  },
-  {
     "id": "fupa-2026-11-10-fussball-ergebnisse",
     "checked": "2026-11-10",
     "valid_until": "2026-11-17",
@@ -181,25 +106,6 @@
     ],
     "source": "FuPa",
     "url": "https://www.fupa.net/club/tsg-bad-koenig"
-  },
-  {
-    "id": "2026-11-10-news-347335225",
-    "checked": "2026-11-10",
-    "valid_until": "2026-11-17",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "BAD KÖNIG KOMPAKT · Abendüberblick 10.11.",
-    "paragraphs": [
-      "Einladung zur Einweihung der Orange Bank Ein sichtbares Zeichen gegen Gewalt an Frauen und Mädchen am Dienstag, den 25. November 2025, um 14.00 Uhr wird auf dem Areal der Argentat-Anlage anlässlich des … https://www.badkoenig.de/aktuelle-nachrichten/einweihung-der-orange-bank/",
-      "Gewässerentwicklung an der Mümling Präsentation zur Bürgerinformationsveranstaltung vom 09.11.2026 Am 09.11.2026 fand in Bad König die Bürgerinformation zur Gewässerentwicklung an der Mümling statt. Die … https://www.badkoenig.de/aktuelle-nachrichten/gewaesserentwicklung-an-der-muemling/",
-      "Gedenkfeiern zum Volkstrauertag Am Sonntag, 15. Novembe, finden in der Gemeinde Höchst i. Odw. folgende Gedenkfeiern statt: Höchst: 14 Uhr mit dem Herbertschen Chor „Eintracht 1847“; Ortsteil … https://www.echo-online.de/lokales/odenwaldkreis/hoechst-im-odenwald-odenwaldkreis/gedenkfeiern-zum-volkstrauertag-6670055",
-      "Höchst: Feuerwehrkräfte sind bei ihrer Übung schwer gefordert Bei ihrer Hauptübung hatten die Wehren Mümling-Grumbach und Annelsbach/Forstel alle Hände voll zu tun. Was es zu meistern galt. Was das Szenario besonders realistische … https://www.echo-online.de/lokales/odenwaldkreis/hoechst-im-odenwald-odenwaldkreis/hoechst-feuerwehrkraefte-sind-bei-uebung-schwer-gefordert-6657620",
-      "Adventsbasar in der Rentmeisterei Die Aktion „Behindertes Kind Odenwaldkreis“ und das Teilhabezentrum Odenwald veranstalten am Sonntag, 22. November, von 11 bis 17 Uhr einen Adventsbasar in der … https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/adventsbasar-in-der-rentmeisterei-6784021",
-      "Blut spenden und Leben retten Das Deutsche Rote Kreuz bietet am Dienstag, 1. Dezember, von 15.30 bis 19.30 Uhr einen Blutspendetermin in der Sporthalle der Grundschule, Martin-Luther-Straße 3, in Bad … https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/blut-spenden-und-leben-retten-6784690"
-    ],
-    "source": "Stadt Bad König, Echo Online",
-    "url": "https://www.badkoenig.de/aktuelle-nachrichten/einweihung-der-orange-bank/"
   },
   {
     "id": "echo-2026-11-10-adventsbasar",
@@ -262,35 +168,6 @@
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/sabine-hofmann-stellt-ihren-neuen-krimi-in-bad-koenig-vor-6725202"
   },
   {
-    "id": "2026-11-10-news-330431606",
-    "checked": "2026-11-10",
-    "valid_until": "2026-11-17",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "BAD KÖNIG KOMPAKT · Morgenüberblick 10.11.",
-    "paragraphs": [
-      "Gutes Zeichen aus Bad Königs Gewerbepark, doch Geduld bleibt weiter gefragt Die erste Ansiedlung ist für Bad Königs neues Gewerbegebiet ein wichtiges Signal, doch bei dessen weiterer Belegung bleiben Geduld und Sorgfalt gefragt, meint Jörg … https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/ein-gutes-zeichen-aus-bad-koenigs-gewerbegebiet-5937269",
-      "Filmvorführung des HGV Der HGV Bad König zeigt am Samstag, 14. November, um 19 Uhr in der Rentmeisterei den Film „Die Eisfalle – Die arktische Odyssee der Tegetthoff“. Das 90-minütige … https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/filmvorfuehrung-des-hgv-6666781"
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/ein-gutes-zeichen-aus-bad-koenigs-gewerbegebiet-5937269"
-  },
-  {
-    "id": "2026-11-09-wetter",
-    "checked": "2026-11-09",
-    "valid_until": "2026-11-12",
-    "categories": [
-      "wetter"
-    ],
-    "title": "WETTER · Die nächsten 3 Tage",
-    "paragraphs": [
-      "Dienstag, 10.11.: wechselnd bewölkt, 3 bis 8 °C  Mittwoch, 11.11.: bedeckt, 6 bis 12 °C, Regenrisiko 59 % (ca. 7 l/m²)  Donnerstag, 12.11.: bedeckt, 6 bis 11 °C, Regenrisiko 30 % (ca. 2 l/m²)"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
-    "url": "https://bdkng.de"
-  },
-  {
     "id": "medien-2026-11-09-334105337",
     "checked": "2026-11-09",
     "valid_until": "2026-11-23",
@@ -305,23 +182,6 @@
     ],
     "source": "Echo Online",
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/rund-um-die-zeller-bruecke-waechst-die-zuversicht-5982775"
-  },
-  {
-    "id": "2026-11-09-news-347335203",
-    "checked": "2026-11-09",
-    "valid_until": "2026-11-16",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "BAD KÖNIG KOMPAKT · Abendüberblick 09.11.",
-    "paragraphs": [
-      "Frauenhandball-Bezirksoberliga: HSG Odenwald deklassiert FSG Wallstadt Die Handballfrauen der HSG Odenwald gewinnen in der Bezirksoberliga deutlich gegen die FSG Wallstadt. Die HSG Rodenstein landet einen Last-Minute-Sieg gegen die HSG … https://www.echo-online.de/sport/handball/handball-odenwald-spessart/frauenhandball-hsg-odenwald-zieht-nach-der-halbzeit-davon-6538577",
-      "Bad König zieht Grenzen: keine Wettbüros und Spielhallen in der Bahnhofstraße. Wettbüros, Prostitution oder Spielhallen unerwünscht: Wie die Odenwälder Kurstadt ihre Bahnhof- und Frankfurter Straße künftig entwickeln will. https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/bad-koenig-will-in-der-bahnhofstrasse-keine-vergnuegungsstaetten-6631713",
-      "Die Odenwaldtherme ist ein wichtiger Anziehungspunkt, der gepflegt werden muss Unmittelbar in Geld auszahlen wird sich die Odenwaldtherme zwar für Bad König nie. Aber ihre Bedeutung für die Stadt ist immens, meint Jörg Schwinn. https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/anziehungspunkt-odenwaldtherme-will-gepflegt-sein-6527315",
-      "Kommentar: Die Zeller Brücke hält trotz Hürden Kurs und kann zum Vorbild werden Trotz Felsbrocken, Bürokratie und Logistikproblemen bleibt die B45‑Talbrücke auf Kurs. Warum Zell ein Vorbild für den Bausektor sein kann, kommentiert Clara Bickelmann. https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/zell-zeigt-wie-es-geht-6295062"
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/sport/handball/handball-odenwald-spessart/frauenhandball-hsg-odenwald-zieht-nach-der-halbzeit-davon-6538577"
   },
   {
     "id": "medien-2026-11-09-985390477",
@@ -471,21 +331,6 @@
     ],
     "source": "Echo Online",
     "url": "https://www.echo-online.de/sport/handball/handball-odenwald-spessart/re-live-hsg-odenwald-schlaegt-hsg-erbach-deutlich-6554174"
-  },
-  {
-    "id": "2026-11-08-news-347335202",
-    "checked": "2026-11-08",
-    "valid_until": "2026-11-15",
-    "categories": [
-      "aktuell",
-      "sport"
-    ],
-    "title": "BAD KÖNIG KOMPAKT · Abendüberblick 08.11.",
-    "paragraphs": [
-      "Handball: TV Groß-Umstadt will Lauf fortsetzen, Derby bei der SG Arheilgen Handball-Regionalligist TV Groß-Umstadt möchte seine Spitzenposition verteidigen. In der Oberliga rückt das Derby zwischen der SG Arheilgen und dem TSV Pfungstadt in den … https://www.echo-online.de/sport/handball/handball-darmstadt-dieburg/tv-gross-umstadt-will-seinen-lauf-fortsetzen-6599298"
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/sport/handball/handball-darmstadt-dieburg/tv-gross-umstadt-will-seinen-lauf-fortsetzen-6599298"
   },
   {
     "id": "wetter-rueckblick-2026-11-01",
