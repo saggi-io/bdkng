@@ -45,7 +45,7 @@ def pills(ld,y,a,size=58):
 def alt_frame(txt,t,dur,last=False):
     im=Image.new('RGB',(W,H),GR); d=ImageDraw.Draw(im)
     im.paste(headimg(),(0,70)); d.rectangle([0,70+HH,W,70+HH+12],fill=GOLD)
-    a=ease(t/0.6); fo=1 if last else min(1,max(0,(dur-t)/0.4))
+    a=ease(t/0.4); fo=1 if last else min(1,max(0,(dur-t)/0.3))
     al=a*fo
     f,L,s=fit2(d,txt,190 if not last else 220,W-120)
     lh=int(s*1.1); tot=lh*len(L); top=70+HH+12; y0=top+(H-top-tot)//2-40+int((1-a)*60)
@@ -65,14 +65,14 @@ def alt_chat(t,dur=5):
     hh=HH+40; im.paste(headimg(),(0,40))
     d.text((W//2,hh+90),'Frag die BDKNG-KI',font=F(BLACK,104),fill=GOLD,anchor='ma')
     f=F('Inter-Bold.otf',58); y=hh+230
-    q='Was geht am Wochenende?'; n=int(len(q)*min(1,t/1.0))
+    q='Was geht am Wochenende?'; n=int(len(q)*min(1,t/0.8))
     y=bubble(d,(0,y),q[:n] or ' ',f,GOLD,DK,True)
-    if 1.1<t<1.6:
+    if 0.9<t<1.3:
         for i in range(3): d.ellipse([90+i*56,y+20,126+i*56,y+56],fill=CR)
-    if t>=1.6:
+    if t>=1.3:
         for i,a in enumerate(['Sa 19 Uhr: Vortrag in der Rentmeisterei','Sa 15 Uhr: Fußball SG Bad König/Zell','So 14 Uhr: Handball HSG Odenwald']):
-            if t>=1.6+i*0.5: y=bubble(d,(0,y),a,f,WH,DK,False)
-    if t>3.2: d.text((W//2,H-180),'Sofort Antwort. Mit Quelle.',font=F(BLACK,72),fill=WH,anchor='ma')
+            if t>=1.3+i*0.4: y=bubble(d,(0,y),a,f,WH,DK,False)
+    if t>2.6: d.text((W//2,H-180),'Sofort Antwort. Mit Quelle.',font=F(BLACK,72),fill=WH,anchor='ma')
     return im
 # ---------- JUNG: Kinetic Type, harte Farbwechsel, Chat ----------
 PAL=[(GOLD,DK),(DK,GOLD),(WH,GR),(GR,WH),((255,90,60),WH),((40,40,40),GOLD)]
@@ -110,7 +110,7 @@ def chat(t):
         for i,a in enumerate(['Sa 19 Uhr: Vortrag in der Rentmeisterei','Sa 15 Uhr: Fußball SG Bad König/Zell','So 14 Uhr: Handball HSG Odenwald']):
             if t>=1.5+i*0.45: y=bubble(d,(0,y),a,f,WH,DK,False)
     if t>2.6: d.text((W//2,H-330),'In Sekunden. Mit Quelle.',font=F(BLACK,80),fill=WH,anchor='ma')
-    return im
+    im=im.convert('RGBA'); logo_on(im,1,W-150,150,220,t); return im.convert('RGB')
 def folg(t):
     im=slam(['Folg','uns!'],t,(255,90,60),WH,230,0.15).convert('RGBA')
     im2=Image.new('RGB',(W,H),(255,90,60)); d2=ImageDraw.Draw(im2)
@@ -118,19 +118,39 @@ def folg(t):
     f=F(BLACK,200); k=back_out(t/0.3); ld.text((W//2,330+int((1-k)*-300)),'Folg uns!',font=f,fill=WH+(255,),anchor='ma')
     pills(ld,760,t-0.3,66)
     im2=im2.convert('RGBA'); im2.alpha_composite(lay); return im2.convert('RGB')
+LG=[Image.open(B+'/assets/logos/bdkng-krone-gold.png').convert('RGBA'),Image.open(B+'/assets/logos/bdkng-krone-weiss.png').convert('RGBA')]
+LG=[l.crop(l.getbbox()) for l in LG]
+def logo_on(im,which,cx,cy,size,t,alpha=1.0):
+    p=1+0.06*math.sin(t*2*math.pi*1.6)
+    l=LG[which].copy(); l.thumbnail((int(size*p),int(size*p)))
+    if alpha<1: l.putalpha(l.getchannel('A').point(lambda v:int(v*alpha)))
+    im.alpha_composite(l,(cx-l.width//2,cy-l.height//2))
+def intro(t):
+    im=Image.new('RGBA',(W,H),DK+(255,)); k=back_out(t/0.35)
+    for r in range(3):
+        rr=int((t*900+r*300)%900)+100; d=ImageDraw.Draw(im); d.ellipse([W//2-rr,H//2-rr-60,W//2+rr,H//2+rr-60],outline=GOLD+(max(0,255-rr//4),),width=6)
+    logo_on(im,0,W//2,H//2-60,int(820*min(1,k)),t)
+    return im.convert('RGB')
 def endcard(t):
+    im=Image.new('RGBA',(W,H),DK+(255,)); d=ImageDraw.Draw(im)
+    which=0 if (t%1.2)<0.6 else 1
+    logo_on(im,which,W//2,640,int(760*min(1,back_out(t/0.35))),t)
+    d.text((W//2,1180),'bdkng.de',font=F(BLACK,180),fill=GOLD,anchor='ma')
+    d.text((W//2,1420),'Dein Info-Kanal',font=F(BLACK,80),fill=WH,anchor='ma'); d.text((W//2,1515),'rund um Bad König',font=F(BLACK,80),fill=WH,anchor='ma')
+    return im.convert('RGB')
+def endcard_old(t):
     im=Image.new('RGB',(W,H),GOLD); d=ImageDraw.Draw(im)
     k=back_out(t/0.4); hh=int(HEAD.height*W/HEAD.width); hd=HEAD.resize((W,hh))
     im.paste(hd,(0,int(560-(1-k)*700)))
     f=F(BLACK,190*min(1,0.5+k/2)); d.text((W//2,1120),'bdkng.de',font=f,fill=DK,anchor='ma')
     d.text((W//2,1360),'Dein Info-Kanal',font=F(BLACK,84),fill=GR,anchor='ma'); d.text((W//2,1460),'rund um Bad König',font=F(BLACK,84),fill=GR,anchor='ma')
     return im
-JUNG=[(1.7,lambda t:slam(['WAS','GEHT IN','BAD','KÖNIG?'],t,GOLD,DK,250,0.2)),
+JUNG=[(1.0,intro),(1.5,lambda t:slam(['WAS','GEHT IN','BAD','KÖNIG?'],t,GOLD,DK,250,0.2)),
  (0.7,lambda t:pop('Müll?',t,GR,WH)),(0.7,lambda t:pop('Fußball?',t,(255,90,60),WH,200)),(0.7,lambda t:pop('Events?',t,DK,GOLD,240)),
- (1.3,lambda t:slam(['Frag','einfach.'],t,WH,GR,260,0.25)),
- (3.6,chat),
+ (1.0,lambda t:slam(['Frag','einfach.'],t,WH,GR,260,0.2)),
+ (3.3,chat),
  (1.8,lambda t:slam(['News','Termine','Verkehr'],t,GR,WH,230,0.3)),
- (2.2,lambda t:folg(t)),
+ (2.0,lambda t:folg(t)),
  (2.5,endcard)]
 def render(scenes,out):
     tmp=out[:-4]+'.tmp.mp4'
@@ -147,7 +167,7 @@ if __name__=='__main__':
     else:
         sc=[]
         for i,tx in enumerate(ALT):
-            if tx=='CHAT': sc.append((5,alt_chat))
-            elif tx=='SOCIAL': sc.append((3.5,lambda t:alt_social(t,3.5)))
-            else: sc.append((3,(lambda tx,last:(lambda t:alt_frame(tx,t,3,last)))(tx,i==len(ALT)-1)))
+            if tx=='CHAT': sc.append((4,alt_chat))
+            elif tx=='SOCIAL': sc.append((2.6,lambda t:alt_social(t,2.6)))
+            else: sc.append((2.2,(lambda tx,last:(lambda t:alt_frame(tx,t,2.2,last)))(tx,i==len(ALT)-1)))
         render(sc,'/tmp/film/bdkng-alt.mp4')
