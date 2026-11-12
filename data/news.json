@@ -1,5 +1,19 @@
 [
   {
+    "id": "medien-2026-11-12-985478540",
+    "checked": "2026-11-12",
+    "valid_until": "2026-11-22",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Mangelware Gras: Landwirte hoffen auf einen nassen, langen Winter",
+    "paragraphs": [
+      "Nach dem trockenen, heißen Sommer fehlt es vielen Tierhaltern im Odenwald an Futter. Besonders Heu ist Mangelware und teuer. Für viele bleibt nur der Einkauf in anderen Regionen - und die Hoffnung aufs Frühjahr."
+    ],
+    "source": "hessenschau.de",
+    "url": "https://www.hessenschau.de/wirtschaft/mangelware-gras-odenwaelder-landwirte-hoffen-auf-nassen-langen-winter-v1,futtermangel-landwirte-100.html"
+  },
+  {
     "id": "2026-11-12-news-943379896",
     "checked": "2026-11-12",
     "valid_until": "2026-11-19",
