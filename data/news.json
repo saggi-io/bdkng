@@ -1,5 +1,20 @@
 [
   {
+    "categories": [
+      "verkehr"
+    ],
+    "checked": "2026-11-12",
+    "id": "verkehr-live-837739352",
+    "paragraphs": [
+      "Die B45 Michelstadt – Höchst im Odenwald ist zwischen dem Abzweig nach Asselbrunn und Bad König-Zell wegen einer Baustelle in beiden Richtungen bis Ende Juni 2027 gesperrt. Umleitungen sind eingerichtet.",
+      "Stand: 12.11.2026, 12:42 Uhr"
+    ],
+    "source": "hessenschau.de Verkehrsservice",
+    "title": "B45: Sperrung zwischen Asselbrunn und Bad König-Zell bis Ende Juni 2027",
+    "url": "https://www.hessenschau.de/verkehr/index.html#837739352",
+    "valid_until": "2026-11-26"
+  },
+  {
     "id": "2026-11-12-news-943379896",
     "checked": "2026-11-12",
     "valid_until": "2026-11-19",
