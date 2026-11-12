@@ -1,81 +1,103 @@
-import sys, os, subprocess, math
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+import sys, os, subprocess, math, random
+from PIL import Image, ImageDraw, ImageFont
 B='/home/claude/bdkng'; FD=B+'/tools/fonts'
-def F(n,s): return ImageFont.truetype(os.path.join(FD,n),s)
+def F(n,s): return ImageFont.truetype(os.path.join(FD,n),max(8,int(s)))
+BLACK='InterDisplay-Black.otf'
 W,H,FPS=1080,1920,30
-GR=(27,77,46); GOLD=(232,184,74); WH=(255,255,255); CR=(247,243,234)
-hd=Image.open(B+'/assets/bdkng-header-jens.png').convert('RGB').crop((1150,40,2172,704))
-r=H*1.12/hd.height; BG=hd.resize((int(hd.width*r),int(hd.height*r))).filter(ImageFilter.GaussianBlur(3))
-logo=Image.open(B+'/assets/bdkng-logo-jens.png').convert('RGBA')
+GR=(27,77,46); GOLD=(232,184,74); WH=(255,255,255); DK=(16,32,22); CR=(247,243,234)
+HEAD=Image.open(B+'/assets/bdkng-header-jens.png').convert('RGB')
 def ease(t): t=max(0,min(1,t)); return 1-(1-t)**3
-def back(t,dur,dark):
-    z=1+0.06*t/dur; w,h=int(W*1.0/z*1.0), int(H/z)
-    x=int((BG.width-W)/2+40*math.sin(t*0.4)); y=int((BG.height-H)/2)
-    im=BG.crop((x,y,x+W,y+H)).resize((W,H)) if False else BG.crop((x,y,x+W,y+H))
-    ov=Image.new('RGB',(W,H),GR); return Image.blend(im,ov,dark)
+def back_out(t):
+    t=max(0,min(1,t)); c1=1.70158; c3=c1+1; return 1+c3*(t-1)**3+c1*(t-1)**2
 def wrap(d,txt,font,maxw):
     out=[];l=''
     for w in txt.split():
         t=(l+' '+w).strip()
-        if d.textlength(t,font=font)<=maxw: l=t
+        if d.textlength(t,font=font)<=maxw or not l: l=t
         else: out.append(l); l=w
     out.append(l); return out
-def frame(sc,t,T):
-    dur=sc['d']; im=back(T,1,sc.get('dark',0.86)); d=ImageDraw.Draw(im)
-    a=ease(t/sc.get('in',0.35))
-    font=F('InterDisplay-Black.otf',sc['size']); lines=wrap(d,sc['txt'],font,W-140); lh=int(sc['size']*1.08)
-    tot=lh*len(lines); y0=(H-tot)//2-60+int((1-a)*120)
-    if sc.get('pop'): 
-        s=0.7+0.3*a; font=F('InterDisplay-Black.otf',max(10,int(sc['size']*s))); lh=int(sc['size']*s*1.08); tot=lh*len(lines); y0=(H-tot)//2-60
+def fit(d,txt,size,maxw,maxlines=4):
+    while size>40:
+        f=F(BLACK,size); L=wrap(d,txt,f,maxw)
+        if len(L)<=maxlines and all(d.textlength(x,font=f)<=maxw for x in L): return f,L,size
+        size-=6
+    f=F(BLACK,size); return f,wrap(d,txt,f,maxw),size
+# ---------- ALT: obere Drittel Header, darunter eine Farbe ----------
+def alt_frame(txt,t,dur,last=False):
+    im=Image.new('RGB',(W,H),GR); d=ImageDraw.Draw(im)
+    hh=int(HEAD.height*W/HEAD.width); im.paste(HEAD.resize((W,hh)),(0,int(H/3-hh)//2+40))
+    d.rectangle([0,int(H/3)+10,W,int(H/3)+22],fill=GOLD)
+    a=ease(t/0.6); fo=1 if last else min(1,max(0,(dur-t)/0.4))
+    al=a*fo
+    f,L,s=fit(d,txt,190 if not last else 220,W-120)
+    lh=int(s*1.1); tot=lh*len(L); top=int(H/3)+22; y0=top+(H-top-tot)//2-40+int((1-a)*60)
     lay=Image.new('RGBA',(W,H),(0,0,0,0)); ld=ImageDraw.Draw(lay)
-    for i,l in enumerate(lines):
-        col=GOLD if i in sc.get('gold',[]) else WH
-        ld.text((W//2,y0+i*lh),l,font=font,fill=col+(int(255*a),),anchor='ma')
-    bw=int(ease((t-0.15)/0.5)*360); ld.rounded_rectangle([W//2-bw//2,y0+tot+40,W//2+bw//2,y0+tot+56],8,fill=GOLD+(255,))
-    if sc.get('sub'):
-        fs=F('Inter-Bold.otf',sc.get('subsize',54)); sa=ease((t-0.4)/0.4)
-        for i,l in enumerate(wrap(ld,sc['sub'],fs,W-160)): ld.text((W//2,y0+tot+110+i*int(sc.get('subsize',54)*1.25)),l,font=fs,fill=CR+(int(255*sa),),anchor='ma')
-    if sc.get('search'):
-        q=sc['search']; n=int(len(q)*max(0,min(1,(t-0.3)/(dur*0.55))))
-        bx=[90,y0-260,W-90,y0-120]; ld.rounded_rectangle(bx,70,fill=(255,255,255,240)); 
-        ld.text((150,y0-190),q[:n]+('|' if int(t*3)%2==0 else ''),font=F('Inter-Bold.otf',50),fill=(28,33,30,255),anchor='lm')
-    if sc.get('logo'):
-        lg=logo.copy(); s=0.6+0.4*a; lg.thumbnail((int(620*s),int(400*s))); pad=Image.new('RGBA',(lg.width+60,lg.height+40),(255,255,255,int(245*a))); pad.paste(lg,(30,20),lg)
-        lay.alpha_composite(pad,((W-pad.width)//2,y0-pad.height-90))
-    if not sc.get('logo'):
-        lg=logo.copy(); lg.thumbnail((200,120)); pad=Image.new('RGBA',(lg.width+30,lg.height+20),(255,255,255,235)); pad.paste(lg,(15,10),lg); lay.alpha_composite(pad,(W-pad.width-50,90))
-    # Ausblenden
-    fo=sc.get('out',0.2)
-    if t>dur-fo: 
-        k=(t-(dur-fo))/fo; lay.putalpha(lay.getchannel('A').point(lambda v:int(v*(1-k))))
+    for i,l in enumerate(L): ld.text((W//2,y0+i*lh),l,font=f,fill=(GOLD if last else WH)+(int(255*al),),anchor='ma')
+    if last:
+        fs=F('Inter-Bold.otf',64); ld.text((W//2,y0+tot+50),'Bad König kompakt',font=fs,fill=CR+(int(255*al),),anchor='ma')
     im=im.convert('RGBA'); im.alpha_composite(lay); return im.convert('RGB')
+ALT=['Neues aus Bad König?','Alles an einem Ort.','Müll, Termine, Wetter, Verkehr.','Frag die BDKNG-KI.','Und erhalte sofort Antwort.','Sport, Vereine, Neuigkeiten.','Im WhatsApp-Kanal folgen.','bdkng.de']
+# ---------- JUNG: Kinetic Type, harte Farbwechsel, Chat ----------
+PAL=[(GOLD,DK),(DK,GOLD),(WH,GR),(GR,WH),((255,90,60),WH),((40,40,40),GOLD)]
+def slam(words,t,bg,fg,size=240,stagger=0.18,rot=0):
+    im=Image.new('RGB',(W,H),bg); lay=Image.new('RGBA',(W,H),(0,0,0,0)); ld=ImageDraw.Draw(lay)
+    n=len(words); lh=int(size*1.02); y0=(H-lh*n)//2
+    for i,w in enumerate(words):
+        k=back_out((t-i*stagger)/0.28)
+        if t<i*stagger: continue
+        f,L,s=fit(ld,w,size,W-100,1); x=W//2+int((1-k)*(-W if i%2 else W))
+        ld.text((x,y0+i*lh),w,font=f,fill=fg+(255,),anchor='ma')
+    if rot: lay=lay.rotate(rot*math.sin(t*9)*max(0,1-t*2),resample=Image.BICUBIC)
+    im=im.convert('RGBA'); im.alpha_composite(lay); return im.convert('RGB')
+def pop(word,t,bg,fg,size=300):
+    im=Image.new('RGB',(W,H),bg); d=ImageDraw.Draw(im)
+    s=size*(0.4+0.6*back_out(t/0.22)); f=F(BLACK,s)
+    lay=Image.new('RGBA',(W,H),(0,0,0,0)); ld=ImageDraw.Draw(lay); ld.text((W//2,H//2),word,font=f,fill=fg+(255,),anchor='mm')
+    lay=lay.rotate(-6+4*math.sin(t*5),resample=Image.BICUBIC,center=(W//2,H//2))
+    im=im.convert('RGBA'); im.alpha_composite(lay); return im.convert('RGB')
+def bubble(d,xy,txt,f,bg,fg,right):
+    x,y=xy; L=wrap(d,txt,f,700); lh=int(f.size*1.3); w=max(d.textlength(l,font=f) for l in L)+70; h=lh*len(L)+44
+    x0=W-60-w if right else 60
+    d.rounded_rectangle([x0,y,x0+w,y+h],44,fill=bg)
+    for i,l in enumerate(L): d.text((x0+35,y+22+i*lh),l,font=f,fill=fg)
+    return y+h+30
+def chat(t):
+    im=Image.new('RGB',(W,H),DK); d=ImageDraw.Draw(im)
+    d.text((W//2,250),'Frag die BDKNG-KI',font=F(BLACK,96),fill=GOLD,anchor='ma')
+    f=F('Inter-Bold.otf',54); y=520
+    q='Was geht am Wochenende?'; n=int(len(q)*min(1,t/0.9))
+    y=bubble(d,(0,y),q[:n] or ' ',f,GOLD,DK,True)
+    if t>1.0 and t<1.5:
+        for i in range(3): d.ellipse([90+i*50,y+20-int(10*abs(math.sin(t*10+i))),120+i*50,y+50-int(10*abs(math.sin(t*10+i)))],fill=CR)
+    if t>=1.5:
+        for i,a in enumerate(['Sa 19 Uhr: Vortrag in der Rentmeisterei','Sa 15 Uhr: Fußball SG Bad König/Zell','So 14 Uhr: Handball HSG Odenwald']):
+            if t>=1.5+i*0.45: y=bubble(d,(0,y),a,f,WH,DK,False)
+    if t>2.6: d.text((W//2,H-330),'In Sekunden. Mit Quelle.',font=F(BLACK,80),fill=WH,anchor='ma')
+    return im
+def endcard(t):
+    im=Image.new('RGB',(W,H),GOLD); d=ImageDraw.Draw(im)
+    k=back_out(t/0.4); hh=int(HEAD.height*W/HEAD.width); hd=HEAD.resize((W,hh))
+    im.paste(hd,(0,int(560-(1-k)*700)))
+    f=F(BLACK,190*min(1,0.5+k/2)); d.text((W//2,1120),'bdkng.de',font=f,fill=DK,anchor='ma')
+    d.text((W//2,1360),'Dein Info-Kanal',font=F(BLACK,84),fill=GR,anchor='ma'); d.text((W//2,1460),'rund um Bad König',font=F(BLACK,84),fill=GR,anchor='ma')
+    return im
+JUNG=[(1.7,lambda t:slam(['WAS','GEHT IN','BAD','KÖNIG?'],t,GOLD,DK,250,0.2)),
+ (0.7,lambda t:pop('Müll?',t,GR,WH)),(0.7,lambda t:pop('Fußball?',t,(255,90,60),WH,200)),(0.7,lambda t:pop('Party?',t,DK,GOLD)),
+ (1.3,lambda t:slam(['Frag','einfach.'],t,WH,GR,260,0.25)),
+ (3.6,chat),
+ (2.0,lambda t:slam(['News.','Termine.','Verkehr.'],t,GR,WH,230,0.3)),
+ (1.6,lambda t:slam(['Folg','uns!'],t,(255,90,60),WH,280,0.2,rot=3)),
+ (2.7,endcard)]
 def render(scenes,out):
     tmp=out[:-4]+'.tmp.mp4'
-    p=subprocess.Popen(['ffmpeg','-y','-loglevel','error','-f','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','-','-f','lavfi','-i','anullsrc=r=44100:cl=stereo','-shortest','-c:v','libx264','-preset','veryfast','-crf','20','-pix_fmt','yuv420p','-c:a','aac','-movflags','+faststart',tmp],stdin=subprocess.PIPE)
-    T=0
-    for sc in scenes:
-        for i in range(int(sc['d']*FPS)):
-            p.stdin.write(frame(sc,i/FPS,T).tobytes()); T+=1/FPS
+    p=subprocess.Popen(['ffmpeg','-y','-loglevel','error','-f','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','-','-c:v','libx264','-preset','veryfast','-crf','20','-pix_fmt','yuv420p','-movflags','+faststart',tmp],stdin=subprocess.PIPE)
+    for dur,fn in scenes:
+        for i in range(int(round(dur*FPS))): p.stdin.write(fn(i/FPS).tobytes())
     p.stdin.close(); assert p.wait()==0; os.replace(tmp,out)
-JUNG=[dict(d=1.6,txt='Was geht in Bad König?',size=150,gold=[1]),
- dict(d=0.8,txt='Müll?',size=230,pop=1,out=0.1,in_=0.2),dict(d=0.8,txt='Fußball?',size=210,pop=1,out=0.1),dict(d=0.8,txt='Party?',size=230,pop=1,out=0.1,gold=[0]),
- dict(d=1.4,txt='Frag einfach.',size=170,gold=[0]),
- dict(d=3.2,txt='Die BDKNG-KI antwortet.',size=120,search='Was geht am Wochenende?',sub='In Sekunden. Mit Quelle.',dark=0.9),
- dict(d=2.2,txt='News. Termine. Verkehr.',size=130,sub='Alles aus Bad König an einem Ort.'),
- dict(d=1.6,txt='Folg uns!',size=190,sub='WhatsApp · Instagram · TikTok',gold=[0]),
- dict(d=2.6,txt='bdkng.de',size=170,logo=1,sub='Dein Info-Kanal rund um Bad König',out=0.01)]
-ALT=[dict(d=3,txt='Neues aus Bad König?',size=170,in_=0.6,out=0.4),
- dict(d=3,txt='Alles an einem Ort.',size=175,gold=[1],out=0.4),
- dict(d=3,txt='Müll, Termine, Wetter, Verkehr.',size=150,out=0.4),
- dict(d=3,txt='Einfach fragen. Sofort Antwort.',size=160,gold=[1],out=0.4),
- dict(d=3,txt='Notruf, Apotheke, Rathaus.',size=160,out=0.4),
- dict(d=3,txt='Kostenlos und ohne Werbung.',size=160,gold=[1],out=0.4),
- dict(d=3,txt='Im WhatsApp-Kanal folgen.',size=160,out=0.4),
- dict(d=3,txt='bdkng.de',size=190,logo=1,sub='Bad König kompakt',subsize=70,out=0.01)]
-for s in ALT: s['in']=0.6
-for s in JUNG: s.setdefault('in',0.3)
 if __name__=='__main__':
-    which=sys.argv[1]
-    if which=='probe':
-        for nm,sc,t in [('j6',JUNG[5],2.5),('a3',ALT[2],1.5),('a8',ALT[7],2),('j2',JUNG[1],0.6)]: frame(sc,t,1).save(f'/tmp/film/{nm}.jpg',quality=85)
-    else: render(JUNG if which=='jung' else ALT,f'/tmp/film/bdkng-{which}.mp4')
+    w=sys.argv[1]
+    if w=='probe':
+        fr=[JUNG[0][1](1.2),JUNG[2][1](0.4),JUNG[5][1](3.2),JUNG[8][1](2),alt_frame(ALT[2],1.5,3),alt_frame(ALT[7],2,3,True)]
+        c=Image.new('RGB',(360*6,640));[c.paste(x.resize((360,640)),(i*360,0)) for i,x in enumerate(fr)];c.save('/tmp/film/probe2.jpg')
+    elif w=='jung': render(JUNG,'/tmp/film/bdkng-jung.mp4')
+    else: render([(3,(lambda tx,last:(lambda t:alt_frame(tx,t,3,last)))(tx,i==len(ALT)-1)) for i,tx in enumerate(ALT)],'/tmp/film/bdkng-alt.mp4')
