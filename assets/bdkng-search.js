@@ -24,7 +24,7 @@
       fetch('/data/news.json').then(function (r) { return r.json(); }).catch(function () { return []; }),
       fetch('/data/sport-termine.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/data/wetter-aktuell.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
-      fetch('/data/wissen-badkoenig.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.handball = a[2] && a[2].handball || []; data.wetter = a[3]; data.wissen = a[4] && a[4].eintraege || []; });
+      fetch('/data/wissen-badkoenig.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.handball = a[2] && a[2].handball || []; data.la = a[2] && a[2].leichtathletik || []; data.wetter = a[3]; data.wissen = a[4] && a[4].eintraege || []; });
     return loading;
   }
   function ortsteil(q, muell) {
@@ -65,16 +65,18 @@
     });
     var fb = (data.spiele || []).filter(function (x) { return tage.indexOf(x.date) >= 0; });
     var hb = (data.handball || []).filter(function (x) { return tage.indexOf(x.date) >= 0; });
+    var la = (data.la || []).filter(function (x) { return tage.indexOf(x.date) >= 0; });
     var ev = [], seen = {};
     treffer.forEach(function (x) { if (seen[x.p] || /Handball|Fußball/.test(x.p)) return; seen[x.p] = 1; ev.push(x); });
-    if (!ev.length && !fb.length && !hb.length) return '<p>' + (/heute/.test(l) ? 'Für heute habe ich keine Termine gefunden.' : 'Dafür habe ich keine Termine gefunden.') + ' Alle kommenden Termine findest du unter <a href="/termine.html">Termine &amp; Veranstaltungen</a>.</p>';
+    if (!ev.length && !fb.length && !hb.length && !la.length) return '<p>' + (/heute/.test(l) ? 'Für heute habe ich keine Termine gefunden.' : 'Dafür habe ich keine Termine gefunden.') + ' Alle kommenden Termine findest du unter <a href="/termine.html">Termine &amp; Veranstaltungen</a>.</p>';
     var h = '<p><strong>📅 Veranstaltungen</strong></p>';
     h += ev.length ? '<ul>' + ev.map(function (x) { return '<li>' + esc(x.p) + '</li>'; }).join('') + '</ul><p class="bs-src">Quelle: <a href="/termine.html">Termine &amp; Veranstaltungen</a> (Stadt Bad König, Stadtnachrichten)</p>' : '<p>Keine Veranstaltungen eingetragen.</p>';
-    if (fb.length || hb.length) {
+    if (fb.length || hb.length || la.length) {
       h += '<p><strong>🏆 Sport</strong></p><ul>';
       fb.forEach(function (x) { h += '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr: ⚽ ' + esc(x.home) + ' – ' + esc(x.away) + '</li>'; });
       hb.forEach(function (x) { h += '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr: 🤾 ' + esc(x.home) + ' – ' + esc(x.away) + ' (' + esc(x.team) + ')</li>'; });
-      h += '</ul><p class="bs-src">Quellen: FuPa, nuLiga</p>';
+      la.forEach(function (x) { h += '<li>' + esc(deDatum(x.date)) + (x.time ? ', ' + esc(x.time) + ' Uhr' : '') + ': 🏃 ' + esc(x.titel) + (x.ort ? ' (' + esc(x.ort) + ')' : '') + '</li>'; });
+      h += '</ul><p class="bs-src">Quellen: FuPa, nuLiga, HLV Kreis Odenwald</p>';
     }
     return h;
   }
@@ -176,13 +178,15 @@
   function wissen(re) { return (data.wissen || []).filter(function (e) { return re.test(e.titel); })[0]; }
   function wQuelle(e) { return '<p class="bs-src">Quelle: <a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(/wittich/.test(e.url) ? 'Bad Königer Stadtnachrichten' : 'Stadt Bad König') + '</a></p>'; }
   function sportAntwort(q) {
-    if (!/handball|fußball und|fussball und|wann spielen|spiele am wochenende|hsg/i.test(q)) return null;
-    var t = heute(), fb = (data.spiele || []).filter(function (x) { return x.date >= t; }).slice(0, 4), hb = (data.handball || []).filter(function (x) { return x.date >= t; }).slice(0, 5);
-    if (!fb.length && !hb.length) return null;
+    if (!/handball|fußball und|fussball und|wann spielen|spiele am wochenende|hsg|leichtathlet/i.test(q)) return null;
+    var t = heute(), fb = (data.spiele || []).filter(function (x) { return x.date >= t; }).slice(0, 4), hb = (data.handball || []).filter(function (x) { return x.date >= t; }).slice(0, 5), la = (data.la || []).filter(function (x) { return x.date >= t; }).slice(0, 3);
+    if (/leichtathlet/i.test(q) && !/fu(ß|ss)ball|handball/i.test(q)) { fb = []; hb = []; }
+    if (!fb.length && !hb.length && !la.length) return null;
     var h = '';
     if (fb.length) h += '<p><strong>⚽ Fußball – SG Bad König/Zell</strong></p><ul>' + fb.map(function (x) { return '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr: ' + esc(x.home) + ' – ' + esc(x.away) + '</li>'; }).join('') + '</ul>';
     if (hb.length) h += '<p><strong>🤾 Handball – HSG Odenwald</strong></p><ul>' + hb.map(function (x) { return '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr (' + esc(x.team) + '): ' + esc(x.home) + ' – ' + esc(x.away) + '</li>'; }).join('') + '</ul>';
-    return h + '<p class="bs-src">Quellen: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a> · <a href="https://hhv-handball.liga.nu/" target="_blank" rel="noopener">nuLiga Handball</a></p>';
+    if (la.length) h += '<p><strong>🏃 Leichtathletik in Bad König</strong></p><ul>' + la.map(function (x) { return '<li>' + esc(deDatum(x.date)) + (x.time ? ', ' + esc(x.time) + ' Uhr' : '') + ': ' + esc(x.titel) + (x.ort ? ' (' + esc(x.ort) + ')' : '') + '</li>'; }).join('') + '</ul>';
+    return h + '<p class="bs-src">Quellen: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a> · <a href="https://hhv-handball.liga.nu/" target="_blank" rel="noopener">nuLiga Handball</a> · <a href="https://odenwald.hlv.de/home/veranstaltungen/sportveranstaltungen" target="_blank" rel="noopener">HLV Kreis Odenwald</a></p>';
   }
   function rathausAntwort(q) {
     var l = q.toLowerCase();
