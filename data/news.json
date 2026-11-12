@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-11-12-wetter",
+    "checked": "2026-11-12",
+    "valid_until": "2026-11-15",
+    "categories": [
+      "wetter"
+    ],
+    "title": "WETTER · Die nächsten 3 Tage",
+    "paragraphs": [
+      "Freitag, 13.11.: wechselnd bewölkt, 1 bis 6 °C  Samstag, 14.11.: wechselnd bewölkt, 0 bis 6 °C. Frost möglich  Sonntag, 15.11.: bedeckt, 0 bis 9 °C",
+      "Amtliche WARNUNG vor FROST (Fr 00:00 bis Fr 09:00 Uhr)"
+    ],
+    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
+    "url": "https://bdkng.de"
+  },
+  {
     "id": "medien-2026-11-12-205455646",
     "checked": "2026-11-12",
     "valid_until": "2026-11-22",
