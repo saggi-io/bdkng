@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-12-206109218",
+    "checked": "2026-11-12",
+    "valid_until": "2026-11-22",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Warum einer der beiden Bad Königer Kurpark-Seen kein Wasser mehr führt",
+    "paragraphs": [
+      "Das Wasser im kleineren der beiden Gewässer des Bad Königer Kurparks ist abgelassen, Fische und Muscheln sind nach nebenan umgezogen. Was hinter dieser Aktion steckt.",
+      "🔒 Der vollständige Artikel ist bei Echo Online kostenpflichtig (Echo+)."
+    ],
+    "source": "Echo Online 🔒 Echo+",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/ebbe-im-bad-koeniger-kurpark-der-kleine-see-ist-leer-6570745"
+  },
+  {
     "id": "2026-11-12-wetter",
     "checked": "2026-11-12",
     "valid_until": "2026-11-15",
@@ -327,21 +342,6 @@
         "url": "https://www.odw-journal.de/neubau-der-talbruecke-bei-bad-koenig-zell-sperrpause-der-bahnlinie-in-den-herbst-und-winterferien/"
       }
     ]
-  },
-  {
-    "id": "2026-11-09-news-208184678",
-    "checked": "2026-11-09",
-    "valid_until": "2026-11-16",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Warum einer der beiden Bad Königer Kurpark-Seen kein Wasser mehr führt",
-    "paragraphs": [
-      "Das Wasser im kleineren der beiden Gewässer des Bad Königer Kurparks ist abgelassen, Fische und Muscheln sind nach nebenan umgezogen. Was hinter dieser Aktion steckt.",
-      "🔒 Der vollständige Artikel ist bei Echo Online kostenpflichtig (Echo+)."
-    ],
-    "source": "Echo Online 🔒 Echo+",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/ebbe-im-bad-koeniger-kurpark-der-kleine-see-ist-leer-6570745"
   },
   {
     "id": "medien-2026-11-09-203458935",
