@@ -1,6 +1,6 @@
 'use strict';
 (function () {
-  var PP = 'https://paypal.me/saggi';
+  var PP = 'https://www.paypal.com/donate/?business=odins_geist%40web.de&currency_code=EUR';
   function ready(f) { if (document.readyState !== 'loading') f(); else document.addEventListener('DOMContentLoaded', f); }
   ready(function () {
     var nav = document.querySelector('header nav');

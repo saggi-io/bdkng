@@ -122,7 +122,7 @@
       ki(q, fb);
     });
   }
-  var KAFFEE = 'https://paypal.me/saggi';
+  var KAFFEE = 'https://www.paypal.com/donate/?business=odins_geist%40web.de&currency_code=EUR';
   function zeige(h) {
     out.innerHTML = h + '<div class="bs-tools"><button type="button" class="bs-speak">🔊 Vorlesen</button></div>';
       var sp = out.querySelector('.bs-speak');
@@ -174,7 +174,7 @@
     try { zu = +localStorage.getItem(K) || 0; } catch (e) {}
     if (Date.now() - zu < 14 * 864e5) return;
     var d = document.createElement('div'); d.className = 'bs-hint';
-    d.innerHTML = '<span class="bs-cup" aria-hidden="true">☕</span><span class="bs-txt"><strong>BDKNG ist privat – ohne Werbung, ohne Paywall.</strong> Wenn dir die Infos helfen, freue ich mich über einen Kaffee. Freiwillig, danke dir!</span><a class="bs-gift" href="https://paypal.me/saggi" target="_blank" rel="noopener">Kaffee ausgeben</a><button type="button" aria-label="Hinweis schließen">×</button>';
+    d.innerHTML = '<span class="bs-cup" aria-hidden="true">☕</span><span class="bs-txt"><strong>BDKNG ist privat – ohne Werbung, ohne Paywall.</strong> Wenn dir die Infos helfen, freue ich mich über einen Kaffee. Freiwillig, danke dir!</span><a class="bs-gift" href="https://www.paypal.com/donate/?business=odins_geist%40web.de&currency_code=EUR" target="_blank" rel="noopener">Kaffee ausgeben</a><button type="button" aria-label="Hinweis schließen">×</button>';
     d.querySelector('button').addEventListener('click', function () { try { localStorage.setItem(K, Date.now()); } catch (e) {} d.remove(); });
     box.insertAdjacentElement('afterend', d);
   })();
