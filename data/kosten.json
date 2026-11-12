@@ -1,19 +1,19 @@
 {
  "stand": "2026-11-12",
- "hinweis": "Laufende Kosten von BDKNG pro Monat. KI-Kosten geschätzt.",
+ "hinweis": "Laufende Kosten von BDKNG pro Monat. KI-Kosten werden täglich aus dem Verbrauch der KI-Suche übernommen.",
  "posten": [
   {
    "name": "Server (IONOS VPS)",
-   "monat": 12.0
+   "monat": 12
   },
   {
    "name": "Domains (90 € im Jahr)",
    "monat": 7.5
   },
   {
-   "name": "KI für Suche und Zusammenfassungen (geschätzt)",
-   "monat": 3.0
+   "name": "KI für Suche und Zusammenfassungen (gemessen, laufender Monat)",
+   "monat": 1
   }
  ],
- "spenden_monat": 0.0
+ "spenden_monat": 0
 }
