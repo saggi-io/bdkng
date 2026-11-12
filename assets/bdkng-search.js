@@ -52,10 +52,10 @@
   function terminAntwort(q) {
     var l = q.toLowerCase(), t = heute(), tage = [];
     if (/übermorgen|uebermorgen/.test(l)) tage = [plus(t, 2)]; else if (/morgen/.test(l)) tage = [plus(t, 1)]; else if (/heute/.test(l)) tage = [t];
-    else if (/wochenende/.test(l)) { var wd = new Date(t + 'T12:00:00Z').getUTCDay(); var sa = plus(t, (6 - wd + 7) % 7); tage = [plus(sa, -1), sa, plus(sa, 1)]; }
+    else if (/wochenende|\bwe\b/.test(l)) { var wd = new Date(t + 'T12:00:00Z').getUTCDay(); var sa = plus(t, (6 - wd + 7) % 7); tage = [plus(sa, -1), sa, plus(sa, 1)]; }
     tage = tage.filter(function (d) { return d >= t; });
     var dm = l.match(/(\d{1,2})\.(\d{1,2})\./); if (dm) { tage = [t.slice(0, 4) + '-' + ('0' + dm[2]).slice(-2) + '-' + ('0' + dm[1]).slice(-2)]; }
-    if (!tage.length) return /wochenende|heute|morgen/.test(l) ? '<p>Dafür habe ich keine kommenden Termine gefunden.</p>' : null;
+    if (!tage.length) return /wochenende|\bwe\b|heute|morgen/.test(l) ? '<p>Dafür habe ich keine kommenden Termine gefunden.</p>' : null;
     var treffer = [];
     data.news.forEach(function (n) {
       if (n.categories.indexOf('termine') < 0) return;
@@ -118,7 +118,9 @@
       if (/müll|muell|abfall|abfuhr|tonne|sack|säcke|saecke|papier|biotonne|restmüll|sperrmüll|schadstoff|sonderabfall/i.test(q)) h = muellAntwort(q);
       if (!h && !/gespielt|ergebnis|ausgang|gewonnen|verloren|letzte|vergangen|tabelle|torsch/i.test(q)) h = spieleAntwort(q);
       if (h) return zeige(h);
-      var fb = terminAntwort(q) || news(q);
+      var ta = terminAntwort(q);
+      if (ta && /heute|morgen|wochenende|\bwe\b/i.test(q) && !/wetter|regen|müll|muell/i.test(q)) return zeige(ta);
+      var fb = ta || news(q);
       ki(q, fb);
     });
   }
