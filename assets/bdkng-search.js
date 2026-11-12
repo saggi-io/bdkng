@@ -63,17 +63,20 @@
       if (n.categories.indexOf('termine') < 0) return;
       n.paragraphs.forEach(function (p) { if (/^\s*(Änderungen|Quellen?:|Stand:)/.test(p) || /Stand: \d/.test(p)) return; if ((data.spiele || []).length && /Fußball/.test(p)) return; tage.forEach(function (d) { if (p.indexOf(d.slice(8) + '.' + d.slice(5, 7) + '.') >= 0 && p.length < 400) treffer.push({ p: p.replace(/^•\s*/, ''), n: n }); }); });
     });
-    var sp = (data.spiele || []).filter(function (x) { return tage.indexOf(x.date) >= 0; });
-    if (sp.length) {
-      var hs = '<ul>';
-      sp.forEach(function (x) { hs += '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr: Fußball – ' + esc(x.home) + ' – ' + esc(x.away) + '<br><small>Quelle: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a></small></li>'; });
-      var seen0 = {}; treffer.forEach(function (x) { if (seen0[x.p]) return; seen0[x.p] = 1; hs += '<li>' + esc(x.p) + '<br><small>Quelle: <a href="' + esc(x.n.url) + '" target="_blank" rel="noopener">' + esc(x.n.source) + '</a></small></li>'; });
-      return hs + '</ul>';
+    var fb = (data.spiele || []).filter(function (x) { return tage.indexOf(x.date) >= 0; });
+    var hb = (data.handball || []).filter(function (x) { return tage.indexOf(x.date) >= 0; });
+    var ev = [], seen = {};
+    treffer.forEach(function (x) { if (seen[x.p] || /Handball|Fußball/.test(x.p)) return; seen[x.p] = 1; ev.push(x); });
+    if (!ev.length && !fb.length && !hb.length) return '<p>' + (/heute/.test(l) ? 'Für heute habe ich keine Termine gefunden.' : 'Dafür habe ich keine Termine gefunden.') + ' Alle kommenden Termine findest du unter <a href="/termine.html">Termine &amp; Veranstaltungen</a>.</p>';
+    var h = '<p><strong>📅 Veranstaltungen</strong></p>';
+    h += ev.length ? '<ul>' + ev.map(function (x) { return '<li>' + esc(x.p) + '</li>'; }).join('') + '</ul><p class="bs-src">Quelle: <a href="/termine.html">Termine &amp; Veranstaltungen</a> (Stadt Bad König, Stadtnachrichten)</p>' : '<p>Keine Veranstaltungen eingetragen.</p>';
+    if (fb.length || hb.length) {
+      h += '<p><strong>🏆 Sport</strong></p><ul>';
+      fb.forEach(function (x) { h += '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr: ⚽ ' + esc(x.home) + ' – ' + esc(x.away) + '</li>'; });
+      hb.forEach(function (x) { h += '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr: 🤾 ' + esc(x.home) + ' – ' + esc(x.away) + ' (' + esc(x.team) + ')</li>'; });
+      h += '</ul><p class="bs-src">Quellen: FuPa, nuLiga</p>';
     }
-    if (!treffer.length) return '<p>' + (/heute/.test(l) ? 'Für heute habe ich keine Termine gefunden.' : 'Dafür habe ich keine Termine gefunden.') + ' Alle kommenden Termine findest du unter <a href="/termine.html">Termine &amp; Veranstaltungen</a>.</p>';
-    var seen = {}, h = '<ul>';
-    treffer.forEach(function (x) { if (seen[x.p]) return; seen[x.p] = 1; h += '<li>' + esc(x.p) + '<br><small>Quelle: <a href="' + esc(x.n.url) + '" target="_blank" rel="noopener">' + esc(x.n.source) + '</a></small></li>'; });
-    return h + '</ul>';
+    return h;
   }
   function stichwort(q) {
     var w = q.toLowerCase().split(/[^a-zäöüß0-9-]+/).filter(function (x) { return x.length > 2 && !/^(kann|ich|von|nach|wann|die|der|das|wie|was|ist|und|für|mit|gibt|es|bad|könig|koenig|fahren|fahrenn|wird|wer|wo|zum|zur|den|dem|ein|eine|noch|auch|nicht|heute|morgen)$/.test(x); });
@@ -144,16 +147,32 @@
     if (!r.length) return '<p>' + esc(titel) + ': Gerade liegt dazu nichts Aktuelles vor.</p>';
     return '<p><strong>' + esc(titel) + '</strong></p>' + r.map(function (x) { return '<div class="bs-hit"><h3><a href="/' + esc(kat) + '.html#' + esc(x.id) + '">' + esc(x.title) + '</a></h3><p>' + esc(x.paragraphs[0] || '') + '</p><p class="bs-src">Quelle: <a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a> · Stand ' + esc(x.checked.slice(8) + '.' + x.checked.slice(5, 7) + '.') + '</p></div>'; }).join('');
   }
+  function standJetzt() { var d = new Date(); return d.toLocaleString('de-DE', { timeZone: Z, day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }) + ' Uhr'; }
+  function aktuell(kat, re, tage) {
+    var t = heute(), grenze = plus(t, -tage);
+    return (data.news || []).filter(function (x) { return (x.categories || []).indexOf(kat) >= 0 && x.checked >= grenze && (!x.valid_until || x.valid_until >= t) && (!re || re.test(x.title + ' ' + (x.paragraphs || []).join(' '))); })
+      .sort(function (a, b) { return a.checked < b.checked ? 1 : -1; });
+  }
+  function treffer(r, kat) { return r.map(function (x) { return '<div class="bs-hit"><h3><a href="/' + esc(kat) + '.html#' + esc(x.id) + '">' + esc(x.title) + '</a></h3><p>' + esc(x.paragraphs[0] || '') + '</p><p class="bs-src">Quelle: <a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a> · Stand ' + esc(x.checked.slice(8) + '.' + x.checked.slice(5, 7) + '.') + '</p></div>'; }).join(''); }
   function schnellAntwort(q) {
     if (/odenwaldbahn|\bzug\b|züge|zuege|bahn\b|vias|rb ?82/i.test(q)) {
-      var t = heute(), r = (data.news || []).filter(function (x) { return (x.categories || []).indexOf('verkehr') >= 0 && /bahn|zug|vias|schiene/i.test(x.title + ' ' + (x.paragraphs || []).join(' ')) && (!x.valid_until || x.valid_until >= t); });
-      if (r.length) { return '<p><strong>Aktuelles zur Odenwaldbahn</strong></p>' + r.slice(0, 3).map(function (x) { return '<div class="bs-hit"><h3><a href="/verkehr.html#' + esc(x.id) + '">' + esc(x.title) + '</a></h3><p>' + esc(x.paragraphs[0] || '') + '</p><p class="bs-src">Quelle: <a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></p></div>'; }).join('') + '<p class="bs-src">Live-Fahrplan: <a href="https://www.vias-online.de/" target="_blank" rel="noopener">VIAS</a> · <a href="https://www.rmv.de/" target="_blank" rel="noopener">RMV</a></p>'; }
-      return null;
+      var st = aktuell('verkehr', /(bahn|zug|vias|rmv|schiene)/i, 3).filter(function (x) { var tx = x.title + ' ' + (x.paragraphs || []).join(' '); return /(störung|ausfall|fällt aus|ersatzverkehr|verspät|sperr|gesperrt|bauarbeit)/i.test(tx) && !/(fährt wieder|wieder frei|endet|beendet|freigabe)/i.test(tx); });
+      var h = st.length ? '<p><strong>🚆 Aktuelle Meldungen zur Odenwaldbahn</strong></p>' + treffer(st.slice(0, 3), 'verkehr')
+        : '<div class="bs-hit"><h3>🚆 Odenwaldbahn</h3><p>✅ Derzeit liegen uns keine Infos über Störungen vor (Stand ' + esc(standJetzt()) + ').</p></div>';
+      return h + '<p class="bs-src">Live-Fahrplan und kurzfristige Ausfälle: <a href="https://www.vias-online.de/" target="_blank" rel="noopener">VIAS</a> · <a href="https://www.rmv.de/" target="_blank" rel="noopener">RMV</a></p>';
     }
-    if (/sperrung|gesperrt|stau|verkehr|baustelle|umleitung|b ?45|unfall/i.test(q)) return liste('verkehr', 'Verkehr rund um Bad König', 4);
+    if (/sperrung|gesperrt|stau|verkehr|baustelle|umleitung|b ?45|unfall/i.test(q)) {
+      var live = aktuell('verkehr', null, 2).filter(function (x) { return /^verkehr-live/.test(x.id) && !/bis Ende|202[7-9]/.test(x.title + (x.paragraphs || []).join(' ')); });
+      var dauer = aktuell('verkehr', /(sperrung|gesperrt|baustelle|umleitung|b ?45)/i, 14).filter(function (x) { return live.indexOf(x) < 0; }).slice(0, 3);
+      var h = live.length ? '<p><strong>🚧 Aktuell (Stau, Unfall, Sperrung)</strong></p>' + treffer(live.slice(0, 4), 'verkehr')
+        : '<div class="bs-hit"><h3>🚧 Verkehr rund um Bad König</h3><p>✅ Derzeit liegen uns keine Meldungen über Staus oder Unfälle vor (Stand ' + esc(standJetzt()) + ').</p></div>';
+      if (dauer.length) h += '<p><strong>Baustellen und längere Sperrungen</strong></p>' + treffer(dauer, 'verkehr');
+      return h + '<p class="bs-src">Live-Lage: <a href="https://www.hessenschau.de/verkehr/index.html" target="_blank" rel="noopener">hessenschau Verkehrsservice</a></p>';
+    }
     if (/neues|neuigkeit|was gibt.?s|nachrichten|aktuell/i.test(q) && !/termin|wochenende|heute|morgen/i.test(q)) return liste('aktuell', 'Neues aus Bad König', 5);
     return null;
   }
+
   function wissen(re) { return (data.wissen || []).filter(function (e) { return re.test(e.titel); })[0]; }
   function wQuelle(e) { return '<p class="bs-src">Quelle: <a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(/wittich/.test(e.url) ? 'Bad Königer Stadtnachrichten' : 'Stadt Bad König') + '</a></p>'; }
   function sportAntwort(q) {
@@ -189,9 +208,10 @@
       return '<div class="bs-hit"><h3>Grünschnitt am Bauhof</h3><p>' + esc(satz) + '</p><p>Fragen zur Müllabfuhr: Hotline 0800 9600100 (kostenlos).</p></div>' + wQuelle(g);
     }
     if (/apotheke|notdienst|bereitschaft|arzt|116 ?117/.test(l)) {
-      var ap = wissen(/Apotheken-Notdienst/), nd = wissen(/Bereitschaftsdienst/);
-      var h = '<div class="bs-hit"><h3>💊 Apotheken-Notdienst</h3><p>Den heute diensthabenden Notdienst findest du immer aktuell bei <a href="https://www.aponet.de/apotheke/notdienstsuche" target="_blank" rel="noopener">aponet.de (PLZ 64732)</a> oder per SMS mit deiner PLZ an 22833.</p>' + (ap ? '<p><small>Aus den Stadtnachrichten: ' + esc(ap.text) + '</small></p>' : '') + '</div>';
-      if (nd) h += '<div class="bs-hit"><h3>🩺 Ärztlicher Bereitschaftsdienst</h3><p>' + esc(nd.text) + '</p></div>';
+      var ap = wissen(/Apotheken-Notdienst/), nd = wissen(/Bereitschaftsdienst/), hin = '';
+      if (ap) { var m = ap.text.match(/(\d{1,2})\.(\d{1,2})\.(\d{4}) hat die ([^.(]+?)\s*\(([^)]*)\)/); if (m) { var iso = m[3] + '-' + ('0' + m[2]).slice(-2) + '-' + ('0' + m[1]).slice(-2); if (iso >= heute()) hin = '<p>Laut Stadtnachrichten am ' + esc(deDatum(iso)) + ': <strong>' + esc(m[4]) + '</strong>, ' + esc(m[5]) + '.</p>'; } }
+      var h = '<div class="bs-hit"><h3>💊 Apotheken-Notdienst</h3>' + hin + '<p><a class="bs-kaffee-btn bs-link-btn" href="https://www.aponet.de/apotheke/notdienstsuche" target="_blank" rel="noopener">Notdienst heute finden (aponet.de, PLZ 64732)</a></p></div>';
+      h += '<div class="bs-hit"><h3>🩺 Ärztlicher Bereitschaftsdienst</h3><p><strong>116 117</strong> · Notruf <strong>112</strong></p>' + (nd ? '<p><small>Zentrale im Gesundheitszentrum Erbach: Mo, Di, Do 19–22 Uhr, Mi und Fr 14–22 Uhr, Sa, So und Feiertage 8–22 Uhr.</small></p>' : '') + '</div>';
       return h + (ap ? wQuelle(ap) : '');
     }
     if (/bürgerbus|buergerbus/.test(l)) { var bb = wissen(/Bürgerbus/); if (bb) return '<div class="bs-hit"><h3>🚌 Bürgerbus Bad König</h3><p>' + esc(bb.text) + '</p></div>' + wQuelle(bb); }

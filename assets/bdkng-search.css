@@ -69,3 +69,7 @@
 .kosten-balken i{display:block;height:100%;width:0;background:linear-gradient(90deg,#1B4D2E,#e8b84a);border-radius:999px;transition:width .6s}
 .kosten-text{font-size:14px;color:#555;margin:8px 0}
 .kosten-btn{display:inline-block;background:#e8b84a;color:#173120;font-weight:900;border-radius:999px;padding:11px 20px;text-decoration:none}
+
+.kosten-skala{display:flex;justify-content:space-between;font-weight:900;color:#1B4D2E;margin:14px 0 6px}
+.kosten-balken{height:22px}
+.bs-link-btn{background:#1B4D2E;color:#fff!important;border-radius:999px;font-weight:800}
