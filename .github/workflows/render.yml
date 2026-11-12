@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 tools/render_news.py
+      - run: python3 tools/render_news.py && python3 tools/seo.py
       - run: |
           git config user.name "bdkng-bot"
           git config user.email "bot@bdkng.de"
