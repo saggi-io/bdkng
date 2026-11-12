@@ -213,7 +213,7 @@
     }
     if (/notfall,|notruf|apotheke|notdienst|bereitschaft|ärzte|arzt|116 ?117|zahnarzt|giftnotruf|störungsdienst/.test(l)) {
       var ap = wissen(/Apotheken-Notdienst/), nt = wissen(/Notruftafel/), hin = '';
-      if (ap) { var m = ap.text.match(/(\d{1,2})\.(\d{1,2})\.(\d{4}) hat die ([^.(]+?)\s*\(([^)]*)\)/); if (m) { var iso = m[3] + '-' + ('0' + m[2]).slice(-2) + '-' + ('0' + m[1]).slice(-2); if (iso >= heute()) hin = '<p>Laut Stadtnachrichten am ' + esc(deDatum(iso)) + ': <strong>' + esc(m[4]) + '</strong>, ' + esc(m[5]) + '.</p>'; } }
+      if (ap) { var m = ap.text.match(/(\d{1,2})\.(\d{1,2})\.(\d{4}) hat die ([^.(]+?)\s*\(([^)]*)\)/); if (m) { var iso = m[3] + '-' + ('0' + m[2]).slice(-2) + '-' + ('0' + m[1]).slice(-2); hin = iso >= heute() ? '<p>Laut Stadtnachrichten am ' + esc(deDatum(iso)) + ': <strong>' + esc(m[4]) + '</strong>, ' + esc(m[5]) + '.</p>' : '<p>Die aktuelle Ausgabe der Stadtnachrichten nennt für Bad König nur den ' + esc(deDatum(iso)) + ' (' + esc(m[4]) + '). Für heute und die nächsten Tage hilft die Notdienstsuche:</p>'; } }
       var tel = function (n, nr) { return '<li>' + n + ': <a href="tel:' + nr.replace(/[^\d+]/g, '') + '"><strong>' + nr + '</strong></a></li>'; };
       var h = '<div class="bs-hit"><h3>🚨 Notruf</h3><ul>' + tel('Feuerwehr, Notarzt, Rettungsdienst', '112') + tel('Polizei', '110') + '</ul></div>';
       h += '<div class="bs-hit"><h3>🩺 Ärzte</h3><ul>' + tel('Ärztlicher Bereitschaftsdienst', '116 117') + tel('Zahnärztlicher Notdienst', '01805 607011') + tel('Giftnotruf Mainz', '06131 19240') + '</ul><p><small>Bereitschaftsdienst-Zentrale im Gesundheitszentrum Erbach: Mo, Di, Do 19–22 Uhr, Mi und Fr 14–22 Uhr, Sa, So und Feiertage 8–22 Uhr.</small></p></div>';
