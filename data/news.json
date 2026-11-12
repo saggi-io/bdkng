@@ -1,6 +1,22 @@
 [
   {
     "categories": [
+      "verkehr",
+      "aktuell"
+    ],
+    "checked": "2026-11-12",
+    "id": "q-2026-11-12-164387793",
+    "paragraphs": [
+      "Fertigstellung der Behelfsumfahrung im Frühjahr 2027 – Brückenprüfung in der kommenden Woche.",
+      "Seit Ende 2025 wird im Auftrag von Hessen Mobil an einer Behelfsumfahrung samt Behelfsbrücke über die Mümling im Zuge der B 45 auf Höhe des Kurparks gebaut. Das alte Bauwerk ist nicht mehr instand zu setzen und wird durch einen Neubau ersetzt."
+    ],
+    "source": "Hessen Mobil · 12.11.2026",
+    "title": "B 45: Ersatzneubau der Unterführung Mümling bei Bad König",
+    "url": "https://mobil.hessen.de/presse/b-45-ersatzneubau-der-unterfuehrung-muemling-bei-bad-koenig-0",
+    "valid_until": "2026-11-26"
+  },
+  {
+    "categories": [
       "termine"
     ],
     "checked": "2026-11-12",
