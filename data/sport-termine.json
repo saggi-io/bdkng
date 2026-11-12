@@ -1,6 +1,6 @@
 {
- "stand": "2026-11-12T14:58",
- "quelle": "FuPa, nuLiga",
+ "stand": "2026-11-12T15:30",
+ "quelle": "FuPa, nuLiga, HLV Kreis Odenwald",
  "spiele": [
   {
    "date": "2026-11-14",
@@ -525,6 +525,16 @@
    "team": "Männer",
    "home": "HSG Odenwald II",
    "away": "TV Bürgstadt"
+  }
+ ],
+ "leichtathletik": [
+  {
+   "date": "2026-12-05",
+   "time": "10:00",
+   "titel": "Hallensportfest Bad König",
+   "veranstalter": "TSG Bad König",
+   "ort": "Sportzentrum Bad König",
+   "url": "https://odenwald.hlv.de/home/veranstaltungen/sportveranstaltungen"
   }
  ]
 }
