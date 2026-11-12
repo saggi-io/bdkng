@@ -1,5 +1,27 @@
 [
   {
+    "id": "medien-2026-11-12-256931796",
+    "checked": "2026-11-12",
+    "valid_until": "2026-11-26",
+    "categories": [
+      "verkehr"
+    ],
+    "title": "Nach zwei Wochen Sperrung: Zeller Ortsdurchfahrt wird wieder für Pkw freigegeben",
+    "paragraphs": [
+      "Autofahrer können ab Freitagnachmittag wieder durch Bad König-Zell fahren. Die sanierte Ortsdurchfahrt dient weiter als Umleitung für Pkw, bis die neue B45-Brücke fertig ist.",
+      "Frei zugänglich bei Odenwälder Journal · 5.11.2026 (Ankündigung der Freigabe); Hessen Mobil zur Sperrung: Die Vollsperrung der Ortsdurchfahrt Bad König/Zell ist aufgehoben: Seit Freitagnachmittag (6.11.) können Pkw den Abschnitt wieder befahren, nachdem er rund zwei Wochen gesperrt war. Laut Stadtverwaltung laufen noch letzte Asphalt- und Fugenarbeiten; danach …",
+      "🔒 Der vollständige Artikel ist bei Echo Online kostenpflichtig (Echo+)."
+    ],
+    "source": "Echo Online 🔒 Echo+",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/zeller-ortsdurchfahrt-wird-wieder-freigegeben-6701675",
+    "weitere": [
+      {
+        "source": "Odenwälder Journal · 5.11.2026 (Ankündigung der Freigabe); Hessen Mobil zur Sperrung",
+        "url": "https://www.odw-journal.de/freie-fahrt-bei-bad-koenig-zell-ortsdurchfahrt-ab-freitagnachmittag-geoeffnet"
+      }
+    ]
+  },
+  {
     "id": "medien-2026-11-12-235775224",
     "checked": "2026-11-12",
     "valid_until": "2026-11-22",
@@ -348,33 +370,6 @@
     ],
     "source": "Echo Online 🔒 Echo+",
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/bad-koenig-odenwald-odenwaldkreis-freibad-lost-place-sommer-schwimmen-verlassen-6569916"
-  },
-  {
-    "id": "medien-2026-11-09-256931796",
-    "checked": "2026-11-09",
-    "valid_until": "2026-11-23",
-    "categories": [
-      "verkehr"
-    ],
-    "title": "Nach zwei Wochen Sperrung: Zeller Ortsdurchfahrt wird wieder für Pkw freigegeben",
-    "paragraphs": [
-      "Autofahrer können ab Freitagnachmittag wieder durch Bad König-Zell fahren. Die sanierte Ortsdurchfahrt dient weiter als Umleitung für Pkw, bis die neue B45-Brücke fertig ist.",
-      "Frei zugänglich bei Odenwälder Journal: Reichelsheim-Unter-Ostern. Die Arbeiten an der Landesstraße L 3105 (Grundstraße) in der Ortsdurchfahrt des Reichelsheimer Ortsteils Unter-Ostern dauern länger als ursprünglich geplant. Der derzeitige, zweite Bauabschnitt von der Mitte der Einmündung …",
-      "Frei zugänglich bei Odenwälder Journal · 5.11.2026 (Ankündigung der Freigabe); Hessen Mobil zur Sperrung: Die Vollsperrung der Ortsdurchfahrt Bad König/Zell ist aufgehoben: Seit Freitagnachmittag (6.11.) können Pkw den Abschnitt wieder befahren, nachdem er rund zwei Wochen gesperrt war. Laut Stadtverwaltung laufen noch letzte Asphalt- und Fugenarbeiten; danach …",
-      "🔒 Der vollständige Artikel ist bei Echo Online kostenpflichtig (Echo+)."
-    ],
-    "source": "Echo Online 🔒 Echo+",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/zeller-ortsdurchfahrt-wird-wieder-freigegeben-6701675",
-    "weitere": [
-      {
-        "source": "Odenwälder Journal",
-        "url": "https://www.odw-journal.de/fahrbahnerneuerung-bei-reichelsheim-unter-ostern-l-3105-arbeiten-dauern-noch-bis-fruehjahr-2026/"
-      },
-      {
-        "source": "Odenwälder Journal · 5.11.2026 (Ankündigung der Freigabe); Hessen Mobil zur Sperrung",
-        "url": "https://www.odw-journal.de/freie-fahrt-bei-bad-koenig-zell-ortsdurchfahrt-ab-freitagnachmittag-geoeffnet"
-      }
-    ]
   },
   {
     "id": "medien-2026-11-09-202651597",
