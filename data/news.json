@@ -1,5 +1,21 @@
 [
   {
+    "id": "medien-2026-11-12-235777241",
+    "checked": "2026-11-12",
+    "valid_until": "2026-11-22",
+    "categories": [
+      "sport",
+      "aktuell"
+    ],
+    "title": "TV Fränkisch-Crumbach II verdient sich Punkt in Sandbach",
+    "paragraphs": [
+      "Türk Beerfelden tritt zum Spitzenspiel bei der SG Hainstadt/Rai-Breitenbach nicht an. Gewinner des Spieltags ist die Spvgg. Kinzigtal, die oben aufschließt.",
+      "Der vollständige Artikel kann beim Medium kostenpflichtig sein."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/sport/fussball/fussball-odenwald/tv-fraenkisch-crumbach-ii-verdient-sich-punkt-in-sandbach-6684355"
+  },
+  {
     "id": "2026-11-12-termine",
     "checked": "2026-11-12",
     "valid_until": "2026-11-19",
@@ -425,21 +441,6 @@
     ],
     "source": "Echo Online",
     "url": "https://www.echo-online.de/sport/handball/handball-odenwald-spessart/hsg-odenwald-weiterhin-ungeschlagener-tabellenfuehrer-6538560"
-  },
-  {
-    "id": "2026-11-09-news-330431584",
-    "checked": "2026-11-09",
-    "valid_until": "2026-11-16",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "BAD KÖNIG KOMPAKT · Morgenüberblick 09.11.",
-    "paragraphs": [
-      "TV Fränkisch-Crumbach II verdient sich Punkt in Sandbach Türk Beerfelden tritt zum Spitzenspiel bei der SG Hainstadt/Rai-Breitenbach nicht an. Gewinner des Spieltags ist die Spvgg. Kinzigtal, die oben aufschließt. https://www.echo-online.de/sport/fussball/fussball-odenwald/tv-fraenkisch-crumbach-ii-verdient-sich-punkt-in-sandbach-6684355",
-      "Frauenhandball-Bezirksoberliga: HSG Odenwald mit drittem Sieg in Serie Mit einer starken Leistung haben die Handballerinnen der HSG Odenwald die FSG Bürgstadt/Kirchzell II geschlagen. Bereits zur Halbzeit stand eine deutliche Führung. https://www.echo-online.de/sport/handball/handball-odenwald-spessart/handballerinnen-der-hsg-odenwald-mit-drittem-sieg-in-serie-6553765"
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/sport/fussball/fussball-odenwald/tv-fraenkisch-crumbach-ii-verdient-sich-punkt-in-sandbach-6684355"
   },
   {
     "id": "medien-2026-11-09-204351611",
