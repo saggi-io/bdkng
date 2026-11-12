@@ -121,7 +121,7 @@ def folg(t):
 LG=[Image.open(B+'/assets/logos/bdkng-krone-gold.png').convert('RGBA'),Image.open(B+'/assets/logos/bdkng-krone-weiss.png').convert('RGBA')]
 LG=[l.crop(l.getbbox()) for l in LG]
 def logo_on(im,which,cx,cy,size,t,alpha=1.0):
-    p=1+0.06*math.sin(t*2*math.pi*1.6)
+    p=1+0.06*math.sin(t*2*math.pi*1.6); size=max(20,size)
     l=LG[which].copy(); l.thumbnail((int(size*p),int(size*p)))
     if alpha<1: l.putalpha(l.getchannel('A').point(lambda v:int(v*alpha)))
     im.alpha_composite(l,(cx-l.width//2,cy-l.height//2))
