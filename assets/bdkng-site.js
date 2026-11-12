@@ -1,6 +1,6 @@
 'use strict';
 (function () {
-  var PP = 'https://www.paypal.com/donate/?business=odins_geist%40web.de&currency_code=EUR';
+  var PP = 'https://bdkng.de/kaffee/';
   function ready(f) { if (document.readyState !== 'loading') f(); else document.addEventListener('DOMContentLoaded', f); }
   ready(function () {
     var nav = document.querySelector('header nav');
