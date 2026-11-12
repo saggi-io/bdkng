@@ -23,7 +23,8 @@
     loading = Promise.all([fetch('/data/muell.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/data/news.json').then(function (r) { return r.json(); }).catch(function () { return []; }),
       fetch('/data/sport-termine.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
-      fetch('/data/wetter-aktuell.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.wetter = a[3]; });
+      fetch('/data/wetter-aktuell.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
+      fetch('/data/wissen-badkoenig.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.handball = a[2] && a[2].handball || []; data.wetter = a[3]; data.wissen = a[4] && a[4].eintraege || []; });
     return loading;
   }
   function ortsteil(q, muell) {
@@ -116,9 +117,9 @@
     out.innerHTML = '<p class="bs-load">Ich suche …</p>'; out.hidden = false;
     laden().then(function () {
       var h = null;
-      if (/müll|muell|abfall|abfuhr|tonne|sack|säcke|saecke|papier|biotonne|restmüll|sperrmüll|schadstoff|sonderabfall/i.test(q)) h = muellAntwort(q);
-      if (!h && !/gespielt|ergebnis|ausgang|gewonnen|verloren|letzte|vergangen|tabelle|torsch/i.test(q)) h = spieleAntwort(q);
-      if (!h) h = wetterAntwort(q) || schnellAntwort(q);
+      if (!/grünschnitt|gruenschnitt|bauhof/i.test(q) && /müll|muell|abfall|abfuhr|tonne|sack|säcke|saecke|papier|biotonne|restmüll|sperrmüll|schadstoff|sonderabfall/i.test(q)) h = muellAntwort(q);
+      if (!h && !/handball/i.test(q) && !/gespielt|ergebnis|ausgang|gewonnen|verloren|letzte|vergangen|tabelle|torsch/i.test(q)) h = spieleAntwort(q);
+      if (!h) h = serviceAntwort(q) || rathausAntwort(q) || sportAntwort(q) || wetterAntwort(q) || schnellAntwort(q);
       if (h) return zeige(h);
       var ta = terminAntwort(q);
       if (ta && /heute|morgen|wochenende|\bwe\b/i.test(q) && !/wetter|regen|müll|muell/i.test(q)) return zeige(ta);
@@ -153,6 +154,52 @@
     if (/neues|neuigkeit|was gibt.?s|nachrichten|aktuell/i.test(q) && !/termin|wochenende|heute|morgen/i.test(q)) return liste('aktuell', 'Neues aus Bad König', 5);
     return null;
   }
+  function wissen(re) { return (data.wissen || []).filter(function (e) { return re.test(e.titel); })[0]; }
+  function wQuelle(e) { return '<p class="bs-src">Quelle: <a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(/wittich/.test(e.url) ? 'Bad Königer Stadtnachrichten' : 'Stadt Bad König') + '</a></p>'; }
+  function sportAntwort(q) {
+    if (!/handball|fußball und|fussball und|wann spielen|spiele am wochenende|hsg/i.test(q)) return null;
+    var t = heute(), fb = (data.spiele || []).filter(function (x) { return x.date >= t; }).slice(0, 4), hb = (data.handball || []).filter(function (x) { return x.date >= t; }).slice(0, 5);
+    if (!fb.length && !hb.length) return null;
+    var h = '';
+    if (fb.length) h += '<p><strong>⚽ Fußball – SG Bad König/Zell</strong></p><ul>' + fb.map(function (x) { return '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr: ' + esc(x.home) + ' – ' + esc(x.away) + '</li>'; }).join('') + '</ul>';
+    if (hb.length) h += '<p><strong>🤾 Handball – HSG Odenwald</strong></p><ul>' + hb.map(function (x) { return '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr (' + esc(x.team) + '): ' + esc(x.home) + ' – ' + esc(x.away) + '</li>'; }).join('') + '</ul>';
+    return h + '<p class="bs-src">Quellen: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a> · <a href="https://hhv-handball.liga.nu/" target="_blank" rel="noopener">nuLiga Handball</a></p>';
+  }
+  function rathausAntwort(q) {
+    var l = q.toLowerCase();
+    if (/öffnungszeit|oeffnungszeit|geöffnet|rathaus.*(offen|auf)|wann hat .*rathaus/.test(l)) {
+      var o = wissen(/Öffnungszeiten der Stadtverwaltung/); if (!o) return null;
+      return '<div class="bs-hit"><h3>Öffnungszeiten Rathaus Bad König</h3><p>' + esc(o.text).replace(/\. /g, '.<br>') + '</p></div>' + wQuelle(o);
+    }
+    if (/ansprechpartner|ansprechperson|zuständig|zustaendig|wie erreiche ich das rathaus|amt\b|verwaltung/.test(l)) {
+      var a = wissen(/Ansprechpartner Stadtverwaltung/), b = wissen(/Bürgermeister/); if (!a) return null;
+      var teile = a.text.split(/\.\s+(?=[A-ZÄÖÜ])/).filter(function (x) { return /\d{3}/.test(x); });
+      var treffer = teile.filter(function (x) { var k = x.split(':')[0].toLowerCase(); return k.split(/[\s,\/&]+/).some(function (w) { return w.length > 4 && l.indexOf(w) >= 0; }); });
+      if (treffer.length) return '<div class="bs-hit"><h3>Ansprechpartner im Rathaus</h3><ul>' + treffer.map(function (x) { return '<li>' + esc(x.replace(/\.$/, '')) + '</li>'; }).join('') + '</ul></div>' + wQuelle(a);
+      var chips = teile.map(function (x) { var k = x.split(':')[0]; return '<button type="button" class="bs-chip" data-q="' + esc('Ansprechpartner ' + k) + '">' + esc(k.length > 40 ? k.slice(0, 38) + '…' : k) + '</button>'; }).join('');
+      return '<p><strong>Wofür suchst du einen Ansprechpartner?</strong></p><div class="bs-chips">' + chips + '</div><p>Zentrale: 06063 5009-0 · <a href="mailto:stadtverwaltung@badkoenig.de">stadtverwaltung@badkoenig.de</a></p>' + (b ? '<p>' + esc(b.titel) + ': ' + esc(b.text.slice(0, 160)) + '</p>' : '') + wQuelle(a);
+    }
+    return null;
+  }
+  function serviceAntwort(q) {
+    var l = q.toLowerCase();
+    if (/grünschnitt|gruenschnitt|bauhof|grüngut/.test(l)) {
+      var g = wissen(/Grünschnitt/); if (!g) return null;
+      var satz = g.text.split(/(?<=\.)\s+/).filter(function (x) { return /Grünschnitt/.test(x); }).join(' ');
+      return '<div class="bs-hit"><h3>Grünschnitt am Bauhof</h3><p>' + esc(satz) + '</p><p>Fragen zur Müllabfuhr: Hotline 0800 9600100 (kostenlos).</p></div>' + wQuelle(g);
+    }
+    if (/apotheke|notdienst|bereitschaft|arzt|116 ?117/.test(l)) {
+      var ap = wissen(/Apotheken-Notdienst/), nd = wissen(/Bereitschaftsdienst/);
+      var h = '<div class="bs-hit"><h3>💊 Apotheken-Notdienst</h3><p>Den heute diensthabenden Notdienst findest du immer aktuell bei <a href="https://www.aponet.de/apotheke/notdienstsuche" target="_blank" rel="noopener">aponet.de (PLZ 64732)</a> oder per SMS mit deiner PLZ an 22833.</p>' + (ap ? '<p><small>Aus den Stadtnachrichten: ' + esc(ap.text) + '</small></p>' : '') + '</div>';
+      if (nd) h += '<div class="bs-hit"><h3>🩺 Ärztlicher Bereitschaftsdienst</h3><p>' + esc(nd.text) + '</p></div>';
+      return h + (ap ? wQuelle(ap) : '');
+    }
+    if (/bürgerbus|buergerbus/.test(l)) { var bb = wissen(/Bürgerbus/); if (bb) return '<div class="bs-hit"><h3>🚌 Bürgerbus Bad König</h3><p>' + esc(bb.text) + '</p></div>' + wQuelle(bb); }
+    if (/katastroph|krisenfall|notfall|stromausfall|sirene|warnung|evakuier/.test(l)) {
+      return '<div class="bs-hit"><h3>Was tun im Katastrophenfall?</h3><ul><li><strong>Notruf:</strong> Feuerwehr und Rettungsdienst 112, Polizei 110.</li><li><strong>Warnungen:</strong> Warn-App <a href="https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warn-App-NINA/warn-app-nina_node.html" target="_blank" rel="noopener">NINA</a> installieren, Radio (hr) einschalten, auf Sirenen und Cell Broadcast achten. Aktuelle Warnungen für Bad König stehen auch unter <a href="/wichtig.html">Wichtige Meldungen</a>.</li><li><strong>Vorsorge:</strong> Vorrat für 10 Tage, Notgepäck, wichtige Dokumente griffbereit – Checklisten beim <a href="https://www.bbk.bund.de/DE/Warnung-Vorsorge/Vorsorge/vorsorge_node.html" target="_blank" rel="noopener">Bundesamt für Bevölkerungsschutz (BBK)</a>.</li><li><strong>Infos der Stadt:</strong> <a href="https://www.badkoenig.de/" target="_blank" rel="noopener">badkoenig.de</a></li></ul></div><p class="bs-src">Quellen: BBK, Stadt Bad König</p>';
+    }
+    return null;
+  }
   var KAFFEE = 'https://bdkng.de/kaffee/';
   function zeige(h) {
     out.innerHTML = h + '<div class="bs-tools"><button type="button" class="bs-speak">🔊 Vorlesen</button></div>';
@@ -167,7 +214,7 @@
     fetch('https://n8n.sagmeister.io/webhook/bdkng-frage', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: q }), signal: c.signal })
       .then(function (r) { return r.json(); }).then(function (j) {
         clearTimeout(t);
-        if (j.limit) return zeige('<div class="bs-kaffee"><p><strong>Für heute ist das Limit der KI-Suche erreicht.</strong> ☕</p><p>BDKNG ist ein privates Angebot ohne Werbung und ohne Paywall. Die KI-Suche kostet pro Frage ein paar Cent. Wenn du magst, gib mir einen Kaffee aus – freiwillig, danke dir! 🙏</p><p><a class="bs-kaffee-btn" href="' + KAFFEE + '" target="_blank" rel="noopener">☕ Kaffee ausgeben</a></p><p class="bs-note">Müll, Termine und Stichworte kannst du weiterhin suchen. Morgen geht die KI-Suche wieder.</p></div>');
+        if (j.limit) return zeige('<div class="bs-kaffee"><p><strong>Für heute ist das Limit der KI-Suche erreicht.</strong> ☕</p><p>BDKNG ist ein privates Angebot ohne Werbung und ohne Paywall. Die KI-Suche kostet pro Frage ein paar Cent. Wenn du magst, gib mir einen Kaffee aus – das hilft auch beim Ziel, eine eigene BDKNG-App für iPhone und Android anzubieten. Freiwillig, danke dir! 🙏</p><p><a class="bs-kaffee-btn" href="' + KAFFEE + '" target="_blank" rel="noopener">☕ Kaffee ausgeben</a></p><p class="bs-note">Müll, Termine und Stichworte kannst du weiterhin suchen. Morgen geht die KI-Suche wieder.</p></div>');
         zeige('<p>' + esc(j.antwort || 'Dazu habe ich nichts gefunden.').replace(/\n+/g, '<br>') + '</p><p class="bs-note">KI-Antwort aus den Infos dieser Seite – bitte bei Wichtigem die genannte Quelle prüfen.</p>');
       }).catch(function () { clearTimeout(t); if (fb) return zeige(fb); zeige('<p>Dazu habe ich auf dieser Seite nichts gefunden. Du kannst uns einen Hinweis über das <a href="/kontakt.html?thema=hinweis">Kontaktformular</a> schicken.</p>'); });
   }
@@ -205,7 +252,7 @@
     try { zu = +localStorage.getItem(K) || 0; } catch (e) {}
     if (Date.now() - zu < 14 * 864e5) return;
     var d = document.createElement('div'); d.className = 'bs-hint';
-    d.innerHTML = '<span class="bs-cup" aria-hidden="true">☕</span><span class="bs-txt"><strong>BDKNG ist privat – ohne Werbung, ohne Paywall.</strong> Wenn dir die Infos helfen, freue ich mich über einen Kaffee. Freiwillig, danke dir!</span><a class="bs-gift" href="https://bdkng.de/kaffee/" target="_blank" rel="noopener">Kaffee ausgeben</a><button type="button" aria-label="Hinweis schließen">×</button>';
+    d.innerHTML = '<span class="bs-cup" aria-hidden="true">☕</span><span class="bs-txt"><strong>BDKNG ist privat – ohne Werbung, ohne Paywall.</strong> Wenn dir die Infos helfen, freue ich mich über einen Kaffee. Ziel ist eine eigene BDKNG-App für iPhone und Android – jede Spende hilft dabei. Freiwillig, danke dir!</span><a class="bs-gift" href="https://bdkng.de/kaffee/" target="_blank" rel="noopener">Kaffee ausgeben</a><button type="button" aria-label="Hinweis schließen">×</button>';
     d.querySelector('button').addEventListener('click', function () { try { localStorage.setItem(K, Date.now()); } catch (e) {} d.remove(); });
     box.insertAdjacentElement('afterend', d);
   })();
