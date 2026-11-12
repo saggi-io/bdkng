@@ -22,7 +22,8 @@
     if (loading) return loading;
     loading = Promise.all([fetch('/data/muell.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/data/news.json').then(function (r) { return r.json(); }).catch(function () { return []; }),
-      fetch('/data/sport-termine.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; });
+      fetch('/data/sport-termine.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
+      fetch('/data/wetter-aktuell.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.wetter = a[3]; });
     return loading;
   }
   function ortsteil(q, muell) {
@@ -59,7 +60,7 @@
     var treffer = [];
     data.news.forEach(function (n) {
       if (n.categories.indexOf('termine') < 0) return;
-      n.paragraphs.forEach(function (p) { tage.forEach(function (d) { if (p.indexOf(d.slice(8) + '.' + d.slice(5, 7) + '.') >= 0 && p.length < 400) treffer.push({ p: p, n: n }); }); });
+      n.paragraphs.forEach(function (p) { if (/^\s*(Änderungen|Quellen?:|Stand:)/.test(p) || /Stand: \d/.test(p)) return; if ((data.spiele || []).length && /Fußball/.test(p)) return; tage.forEach(function (d) { if (p.indexOf(d.slice(8) + '.' + d.slice(5, 7) + '.') >= 0 && p.length < 400) treffer.push({ p: p.replace(/^•\s*/, ''), n: n }); }); });
     });
     var sp = (data.spiele || []).filter(function (x) { return tage.indexOf(x.date) >= 0; });
     if (sp.length) {
@@ -68,7 +69,7 @@
       var seen0 = {}; treffer.forEach(function (x) { if (seen0[x.p]) return; seen0[x.p] = 1; hs += '<li>' + esc(x.p) + '<br><small>Quelle: <a href="' + esc(x.n.url) + '" target="_blank" rel="noopener">' + esc(x.n.source) + '</a></small></li>'; });
       return hs + '</ul>';
     }
-    if (!treffer.length) return '<p>Dafür habe ich keine Termine gefunden. Schau in <a href="/termine.html">Termine &amp; Veranstaltungen</a>.</p>';
+    if (!treffer.length) return '<p>' + (/heute/.test(l) ? 'Für heute habe ich keine Termine gefunden.' : 'Dafür habe ich keine Termine gefunden.') + ' Alle kommenden Termine findest du unter <a href="/termine.html">Termine &amp; Veranstaltungen</a>.</p>';
     var seen = {}, h = '<ul>';
     treffer.forEach(function (x) { if (seen[x.p]) return; seen[x.p] = 1; h += '<li>' + esc(x.p) + '<br><small>Quelle: <a href="' + esc(x.n.url) + '" target="_blank" rel="noopener">' + esc(x.n.source) + '</a></small></li>'; });
     return h + '</ul>';
@@ -117,12 +118,40 @@
       var h = null;
       if (/müll|muell|abfall|abfuhr|tonne|sack|säcke|saecke|papier|biotonne|restmüll|sperrmüll|schadstoff|sonderabfall/i.test(q)) h = muellAntwort(q);
       if (!h && !/gespielt|ergebnis|ausgang|gewonnen|verloren|letzte|vergangen|tabelle|torsch/i.test(q)) h = spieleAntwort(q);
+      if (!h) h = wetterAntwort(q) || schnellAntwort(q);
       if (h) return zeige(h);
       var ta = terminAntwort(q);
       if (ta && /heute|morgen|wochenende|\bwe\b/i.test(q) && !/wetter|regen|müll|muell/i.test(q)) return zeige(ta);
       var fb = ta || news(q);
       ki(q, fb);
     });
+  }
+  var WI = { 'clear-day': 'sonnig', 'clear-night': 'klar', 'partly-cloudy-day': 'teils bewölkt', 'partly-cloudy-night': 'teils bewölkt', cloudy: 'bewölkt', fog: 'neblig', wind: 'windig', rain: 'Regen', sleet: 'Schneeregen', snow: 'Schnee', hail: 'Hagel', thunderstorm: 'Gewitter' };
+  function wetterAntwort(q) {
+    if (!/wetter|regen|temperatur|frost|grad|sonne|schnee|kalt|warm/i.test(q)) return null;
+    var w = data.wetter; if (!w || !w.tage) return null;
+    var t = heute(), tage = w.tage.filter(function (d) { return d.datum >= t; }).slice(0, 3);
+    var h = '<div class="bs-hit"><h3>Wetter in Bad König</h3>';
+    if (w.jetzt) h += '<p>Jetzt: ' + esc(w.jetzt.temp) + ' °C, ' + esc(WI[w.jetzt.icon] || w.jetzt.icon) + ', Wind ' + esc(w.jetzt.wind) + ' km/h</p>';
+    h += '<ul>' + tage.map(function (d) { return '<li>' + esc(deDatum(d.datum)) + ': ' + esc(WI[d.icon] || d.icon) + ', ' + esc(d.tmin) + ' bis ' + esc(d.tmax) + ' °C' + (d.regen >= 0.5 ? ', Regen ca. ' + esc(Math.round(d.regen)) + ' mm' : '') + (d.tmin <= 0 ? ', Frost möglich' : '') + '</li>'; }).join('') + '</ul>';
+    return h + '<p class="bs-src">Quelle: <a href="' + esc(w.quelle_url || 'https://brightsky.dev/') + '" target="_blank" rel="noopener">' + esc(w.quelle || 'Deutscher Wetterdienst') + '</a> · <a href="/wetter.html">Mehr auf der Wetterseite</a></p></div>';
+  }
+  function liste(kat, titel, n) {
+    var t = heute();
+    var r = (data.news || []).filter(function (x) { return (x.categories || []).indexOf(kat) >= 0 && (!x.valid_until || x.valid_until >= t); })
+      .sort(function (a, b) { return a.checked < b.checked ? 1 : -1; }).slice(0, n);
+    if (!r.length) return '<p>' + esc(titel) + ': Gerade liegt dazu nichts Aktuelles vor.</p>';
+    return '<p><strong>' + esc(titel) + '</strong></p>' + r.map(function (x) { return '<div class="bs-hit"><h3><a href="/' + esc(kat) + '.html#' + esc(x.id) + '">' + esc(x.title) + '</a></h3><p>' + esc(x.paragraphs[0] || '') + '</p><p class="bs-src">Quelle: <a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a> · Stand ' + esc(x.checked.slice(8) + '.' + x.checked.slice(5, 7) + '.') + '</p></div>'; }).join('');
+  }
+  function schnellAntwort(q) {
+    if (/odenwaldbahn|\bzug\b|züge|zuege|bahn\b|vias|rb ?82/i.test(q)) {
+      var t = heute(), r = (data.news || []).filter(function (x) { return (x.categories || []).indexOf('verkehr') >= 0 && /bahn|zug|vias|schiene/i.test(x.title + ' ' + (x.paragraphs || []).join(' ')) && (!x.valid_until || x.valid_until >= t); });
+      if (r.length) { return '<p><strong>Aktuelles zur Odenwaldbahn</strong></p>' + r.slice(0, 3).map(function (x) { return '<div class="bs-hit"><h3><a href="/verkehr.html#' + esc(x.id) + '">' + esc(x.title) + '</a></h3><p>' + esc(x.paragraphs[0] || '') + '</p><p class="bs-src">Quelle: <a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></p></div>'; }).join('') + '<p class="bs-src">Live-Fahrplan: <a href="https://www.vias-online.de/" target="_blank" rel="noopener">VIAS</a> · <a href="https://www.rmv.de/" target="_blank" rel="noopener">RMV</a></p>'; }
+      return null;
+    }
+    if (/sperrung|gesperrt|stau|verkehr|baustelle|umleitung|b ?45|unfall/i.test(q)) return liste('verkehr', 'Verkehr rund um Bad König', 4);
+    if (/neues|neuigkeit|was gibt.?s|nachrichten|aktuell/i.test(q) && !/termin|wochenende|heute|morgen/i.test(q)) return liste('aktuell', 'Neues aus Bad König', 5);
+    return null;
   }
   var KAFFEE = 'https://bdkng.de/kaffee/';
   function zeige(h) {
