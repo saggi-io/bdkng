@@ -212,19 +212,24 @@
       return '<div class="bs-hit"><h3>Grünschnitt am Bauhof</h3><p>' + esc(satz) + '</p><p>Fragen zur Müllabfuhr: Hotline 0800 9600100 (kostenlos).</p></div>' + wQuelle(g);
     }
     if (/notfall,|notruf|apotheke|notdienst|bereitschaft|ärzte|arzt|116 ?117|zahnarzt|giftnotruf|störungsdienst/.test(l)) {
-      var ap = wissen(/Apotheken-Notdienst/), nt = wissen(/Notruftafel/), hin = '';
-      if (ap) { var m = ap.text.match(/(\d{1,2})\.(\d{1,2})\.(\d{4}) hat die ([^.(]+?)\s*\(([^)]*)\)/); if (m) { var iso = m[3] + '-' + ('0' + m[2]).slice(-2) + '-' + ('0' + m[1]).slice(-2); hin = iso >= heute() ? '<p>Laut Stadtnachrichten am ' + esc(deDatum(iso)) + ': <strong>' + esc(m[4]) + '</strong>, ' + esc(m[5]) + '.</p>' : '<p>Die aktuelle Ausgabe der Stadtnachrichten nennt für Bad König nur den ' + esc(deDatum(iso)) + ' (' + esc(m[4]) + '). Für heute und die nächsten Tage hilft die Notdienstsuche:</p>'; } }
-      var tel = function (n, nr) { return '<li>' + n + ': <a href="tel:' + nr.replace(/[^\d+]/g, '') + '"><strong>' + nr + '</strong></a></li>'; };
+      var ap = wissen(/Apotheken-Notdienst/), nt = wissen(/Notruftafel/), nd = wissen(/Bereitschaftsdienst/);
+      var tel = function (n, nr) { return '<li>' + esc(n) + ': <a href="tel:' + nr.replace(/[^\d+]/g, '') + '"><strong>' + esc(nr) + '</strong></a></li>'; };
       var h = '<div class="bs-hit"><h3>🚨 Notruf</h3><ul>' + tel('Feuerwehr, Notarzt, Rettungsdienst', '112') + tel('Polizei', '110') + '</ul></div>';
-      h += '<div class="bs-hit"><h3>🩺 Ärzte</h3><ul>' + tel('Ärztlicher Bereitschaftsdienst', '116 117') + tel('Zahnärztlicher Notdienst', '01805 607011') + tel('Giftnotruf Mainz', '06131 19240') + '</ul><p><small>Bereitschaftsdienst-Zentrale im Gesundheitszentrum Erbach: Mo, Di, Do 19–22 Uhr, Mi und Fr 14–22 Uhr, Sa, So und Feiertage 8–22 Uhr.</small></p></div>';
-      h += '<div class="bs-hit"><h3>💊 Apotheken-Notdienst</h3>' + hin + '<p><a class="bs-kaffee-btn bs-link-btn" href="https://www.aponet.de/apotheke/notdienstsuche" target="_blank" rel="noopener">Notdienst heute finden (aponet.de, PLZ 64732)</a></p></div>';
-      h += '<div class="bs-hit"><h3>🔧 Störungen und weitere Nummern</h3><ul>' + tel('Strom (e-Netz)', '0800 7018040') + tel('Gas (e-Netz)', '0800 7018080') + tel('Wasser (Wasserwerk Bad König)', '0171 5517483') + tel('Klärwerk', '06163 912751') + tel('Polizeistation Erbach', '06062 9530') + tel('City-Streife', '06063 35196-0') + tel('Odenwälder Frauenhaus', '06062 5646') + '</ul></div>';
-      return h + (nt ? wQuelle(nt) : '');
+      var apOk = ap && (!ap.gueltig_bis || ap.gueltig_bis >= heute());
+      h += '<div class="bs-hit"><h3>💊 Apotheken-Notdienst</h3>' + (apOk ? '<p>' + esc(ap.text) + '</p>' : '') + '<p><a class="bs-kaffee-btn bs-link-btn" href="https://www.aponet.de/apotheke/notdienstsuche" target="_blank" rel="noopener">Notdienst heute finden (aponet.de, PLZ 64732)</a></p></div>';
+      if (nt) {
+        var li = nt.text.split(/\.\s+/).map(function (x) { var mm = x.replace(/\.$/, '').match(/^(.*?)\s+((?:0|1)[\d \/-]*\d)$/); return mm && !/^(Polizei-Notruf|Feuerwehr-Notruf|Notarzt)/.test(mm[1]) ? tel(mm[1], mm[2].replace('/', ' ')) : ''; }).join('');
+        h += '<div class="bs-hit"><h3>📞 Ärzte, Störungen und weitere Nummern</h3><ul>' + li + '</ul>' + (nd ? '<p><small>' + esc((nd.text.match(/Die ÄBD-Zentrale[^]*?Uhr\./) || [''])[0]) + '</small></p>' : '') + '</div>';
+      }
+      return h + (nt ? wQuelle(nt) : '') + (apOk ? '<p class="bs-src">Apotheken-Notdienst: <a href="' + esc(ap.url) + '" target="_blank" rel="noopener">Bad Königer Stadtnachrichten</a></p>' : '');
     }
     if (/bürgerbus|buergerbus/.test(l)) { var bb = wissen(/Bürgerbus/); if (bb) return '<div class="bs-hit"><h3>🚌 Bürgerbus Bad König</h3><p>' + esc(bb.text) + '</p></div>' + wQuelle(bb); }
     if (/parken|parkpl|parkhaus|brötchentaste|e-mobil|emobil|lades|laden.*auto|e-auto|elektroauto/.test(l)) {
-      var pk = wissen(/Parken und E-Lade/);
-      return '<div class="bs-hit"><h3>🅿️ Parken in Bad König</h3><ul><li><strong>Brunnengärten 1–3</strong> (Therme): 0,50 € je 30 Min., 7–20 Uhr</li><li><strong>Bachgasse</strong> (Altstadt): 0,50 € je 30 Min., Mo–Fr 8–19, Sa 8–12 Uhr</li><li><strong>Alte Schule, Bleichstraße</strong> (lang parken): 2 € für 4 Std., 7-Tage-Ticket 10 €</li><li><strong>Brötchentaste:</strong> Bachgasse, Alte Schule, Bleichstraße – 60 Min. kostenlos</li><li>Bezahlen mit Münzen oder per Handy am Automaten</li></ul><p><small>Behindertenparkplätze u. a. an den P+R-Plätzen Werkstraße und Bahnhofstraße, am Schlossplatz und auf allen städtischen Parkplätzen.</small></p></div><div class="bs-hit"><h3>⚡ E-Ladesäulen</h3><ul><li>Parkplatz Alte Schule</li><li>Ecke Berggartenstraße / Mainstraße</li><li>Am Bahndamm / Parkplatz Brunnengärten</li></ul></div>' + (pk ? wQuelle(pk) : '');
+      var pk = wissen(/Parken und E-Lade/); if (!pk) return null;
+      var saetze = pk.text.split(/(?<!\bu\. a)\.\s+(?=[A-ZÄÖÜ])/).map(function (x) { return x.replace(/\.$/, ''); });
+      var lade = saetze.filter(function (x) { return /^E-Ladesäulen/.test(x); }), rest = saetze.filter(function (x) { return !/^E-Ladesäulen/.test(x); });
+      var fett = function (x) { var i = x.indexOf(':'); return i > 0 && i < 60 ? '<strong>' + esc(x.slice(0, i)) + '</strong>' + esc(x.slice(i)) : esc(x); };
+      return '<div class="bs-hit"><h3>🅿️ Parken in Bad König</h3><ul>' + rest.map(function (x) { return '<li>' + fett(x) + '</li>'; }).join('') + '</ul></div>' + (lade.length ? '<div class="bs-hit"><h3>⚡ E-Ladesäulen</h3><ul>' + lade[0].replace(/^E-Ladesäulen:\s*/, '').split(/,\s*/).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div>' : '') + wQuelle(pk);
     }
     if (/katastroph|krisenfall|stromausfall|sirene|warntag|warnung|evakuier|bevölkerungsschutz|schweinepest/.test(l)) {
       var BS = 'https://www.badkoenig.de/leben-wohnen/schutz-hilfe/bevoelkerungsschutz/';
