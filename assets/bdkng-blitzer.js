@@ -6,7 +6,7 @@
     var h = '';
     var jetzt = new Date(), pad = function (n) { return ('0' + n).slice(-2); }, jz = jetzt.getFullYear() + '-' + pad(jetzt.getMonth() + 1) + '-' + pad(jetzt.getDate()) + 'T' + pad(jetzt.getHours()) + ':' + pad(jetzt.getMinutes());
     var gm = (d.gemeldet || []).filter(function (x) { return x.bis > jz; });
-    if (gm.length) h += '<h3>🚨 Gerade gemeldet</h3><ul class="bz-list">' + gm.map(function (x) { return '<li><strong>' + esc(x.zeit.slice(11)) + ' Uhr · ' + esc(x.ort) + ':</strong> ' + esc(x.strasse) + ' · ' + esc(x.art) + (x.hinweis ? ' · ' + esc(x.hinweis) : '') + '<br><small>Von Leserinnen und Lesern gemeldet, nicht amtlich. Angezeigt bis ' + esc(x.bis.slice(11)) + ' Uhr.</small></li>'; }).join('') + '</ul>';
+    if (gm.length) h += '<h3>🚨 Gerade gemeldet (Blitzer- &amp; Stau-Melder)</h3><ul class="bz-list">' + gm.map(function (x) { return '<li><strong>' + esc(x.zeit.slice(11)) + ' Uhr · ' + esc(x.ort) + ':</strong> ' + esc(x.strasse) + ' · ' + esc(x.art) + (x.hinweis ? ' · ' + esc(x.hinweis) : '') + '<br><small>Von zwei Nutzern unabhängig gemeldet, nicht amtlich. Angezeigt bis ' + esc(x.bis.slice(11)) + ' Uhr.</small></li>'; }).join('') + '</ul>';
     var ms = d.messstellen || [];
     h += '<h3>👮 Von der Polizei angekündigte Messstellen</h3>';
     h += ms.length ? '<ul class="bz-list">' + ms.map(function (m) {
@@ -31,7 +31,7 @@
     btn.disabled = true; out.textContent = 'Wird gesendet …';
     fetch('https://n8n.sagmeister.io/webhook/bdkng-blitzer-melden', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(daten) })
       .then(function (r) { return r.json(); })
-      .then(function (j) { if (j.ok) { out.textContent = 'Danke! Deine Meldung wird kurz geprüft und erscheint dann hier.'; f.reset(); } else { out.textContent = j.fehler || 'Das hat nicht geklappt.'; btn.disabled = false; } })
+      .then(function (j) { if (j.ok) { out.textContent = 'Danke! Sobald jemand Zweites dasselbe meldet, erscheint es hier und in unseren Kanälen.'; f.reset(); } else { out.textContent = j.fehler || 'Das hat nicht geklappt.'; btn.disabled = false; } })
       .catch(function () { out.textContent = 'Senden gerade nicht möglich. Bitte später noch einmal.'; btn.disabled = false; });
   });
 })();
