@@ -5,14 +5,25 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: seiten-rendern
+  cancel-in-progress: false
 jobs:
   render:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 tools/render_news.py && python3 tools/seo.py
       - run: |
           git config user.name "bdkng-bot"
           git config user.email "bot@bdkng.de"
-          git add -A
-          git diff --cached --quiet || (git commit -m "Rubrikseiten neu gerendert" && git push)
+          # Bis zu 5 Versuche: bei gleichzeitigen Meldungen immer auf dem neuesten Stand neu rendern
+          for i in 1 2 3 4 5; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            python3 tools/render_news.py && python3 tools/seo.py
+            git add -A
+            if git diff --cached --quiet; then echo "nichts zu tun"; exit 0; fi
+            git commit -q -m "Rubrikseiten neu gerendert"
+            if git push -q origin HEAD:main; then echo "gepusht"; exit 0; fi
+            echo "Push abgelehnt, neuer Versuch $i"; sleep $((i*5))
+          done
+          exit 1
