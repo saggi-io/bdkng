@@ -83,3 +83,7 @@
 .bs .bs-example{white-space:nowrap;font-size:14px;padding:9px 14px}
 .bs .bs-examples.am-ende{-webkit-mask-image:none;mask-image:none}
 }
+/* Blitzer-Knöpfe unter der KI-Suche (13.11.2026) */
+.bs .bs-blitz{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.bs .bs-blitz-btn{display:inline-block;padding:9px 14px;border-radius:999px;background:#c0392b;color:#fff;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+.bs .bs-blitz-btn.bs-blitz-2{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.45)}

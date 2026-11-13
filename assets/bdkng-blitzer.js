@@ -4,6 +4,9 @@
   function de(iso) { return iso.slice(8, 10) + '.' + iso.slice(5, 7) + '.' + iso.slice(0, 4); }
   fetch('/data/blitzer.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (d) {
     var h = '';
+    var jetzt = new Date(), pad = function (n) { return ('0' + n).slice(-2); }, jz = jetzt.getFullYear() + '-' + pad(jetzt.getMonth() + 1) + '-' + pad(jetzt.getDate()) + 'T' + pad(jetzt.getHours()) + ':' + pad(jetzt.getMinutes());
+    var gm = (d.gemeldet || []).filter(function (x) { return x.bis > jz; });
+    if (gm.length) h += '<h3>🚨 Gerade gemeldet</h3><ul class="bz-list">' + gm.map(function (x) { return '<li><strong>' + esc(x.zeit.slice(11)) + ' Uhr · ' + esc(x.ort) + ':</strong> ' + esc(x.strasse) + ' · ' + esc(x.art) + (x.hinweis ? ' · ' + esc(x.hinweis) : '') + '<br><small>Von Leserinnen und Lesern gemeldet, nicht amtlich. Angezeigt bis ' + esc(x.bis.slice(11)) + ' Uhr.</small></li>'; }).join('') + '</ul>';
     var ms = d.messstellen || [];
     h += '<h3>👮 Von der Polizei angekündigte Messstellen</h3>';
     h += ms.length ? '<ul class="bz-list">' + ms.map(function (m) {
@@ -19,4 +22,16 @@
     h += '<p class="form-note">' + esc(d.hinweis) + ' Quellen: feste Blitzer ' + esc(d.fest_quelle.replace(/, https.*/, '')) + ' (<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">Lizenz</a>); Messstellen: <a href="https://www.presseportal.de/blaulicht/nr/4969" target="_blank" rel="noopener">Polizeipräsidium Südhessen</a>. Stand: ' + esc(de(d.stand.slice(0, 10))) + '.</p>';
     document.getElementById('blitzerDaten').innerHTML = h;
   }).catch(function () { document.getElementById('blitzerDaten').innerHTML = '<p class="form-note">Blitzer-Daten gerade nicht verfügbar.</p>'; });
+  var f = document.getElementById('bmForm');
+  if (f) f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var out = document.getElementById('bmOut'), btn = f.querySelector('button');
+    var daten = { ort: f.ort.value, strasse: f.strasse.value.trim(), art: f.art.value, hinweis: f.hinweis.value.trim(), website: f.website.value };
+    if (!daten.ort || daten.strasse.length < 3) { out.textContent = 'Bitte Ort und Straße angeben.'; return; }
+    btn.disabled = true; out.textContent = 'Wird gesendet …';
+    fetch('https://n8n.sagmeister.io/webhook/bdkng-blitzer-melden', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(daten) })
+      .then(function (r) { return r.json(); })
+      .then(function (j) { if (j.ok) { out.textContent = 'Danke! Deine Meldung wird kurz geprüft und erscheint dann hier.'; f.reset(); } else { out.textContent = j.fehler || 'Das hat nicht geklappt.'; btn.disabled = false; } })
+      .catch(function () { out.textContent = 'Senden gerade nicht möglich. Bitte später noch einmal.'; btn.disabled = false; });
+  });
 })();
