@@ -54,7 +54,7 @@ def alt_frame(txt,t,dur,last=False):
     if last:
         fs=F('Inter-Bold.otf',64); ld.text((W//2,y0+tot+50),'Bad König kompakt',font=fs,fill=CR+(int(255*al),),anchor='ma')
     im=im.convert('RGBA'); im.alpha_composite(lay); return im.convert('RGB')
-ALT=['Neues aus\nBad König?','Alles an\neinem Ort.','Müll\nTermine\nWetter\nVerkehr','CHAT','Sport\nVereine\nNeuigkeiten','SOCIAL','bdkng.de']
+ALT=['Neues aus\nBad König?','Alles an\neinem Ort.','Müll\nTermine\nWetter\nVerkehr','CHAT','Sport\nVereine\nNeuigkeiten','MELDER','SOCIAL','bdkng.de']
 def alt_social(t,dur=3):
     im=Image.new('RGB',(W,H),GR); d=ImageDraw.Draw(im); im.paste(headimg(),(0,70)); d.rectangle([0,70+HH,W,70+HH+12],fill=GOLD)
     im=im.convert('RGBA'); lay=Image.new('RGBA',(W,H),(0,0,0,0)); ld=ImageDraw.Draw(lay)
@@ -145,10 +145,24 @@ def endcard_old(t):
     f=F(BLACK,190*min(1,0.5+k/2)); d.text((W//2,1120),'bdkng.de',font=f,fill=DK,anchor='ma')
     d.text((W//2,1360),'Dein Info-Kanal',font=F(BLACK,84),fill=GR,anchor='ma'); d.text((W//2,1460),'rund um Bad König',font=F(BLACK,84),fill=GR,anchor='ma')
     return im
+RED=(192,57,43)
+def melder(t):
+    # Zusatzseite: Blitzer- & Stau-Melder
+    im=Image.new('RGB',(W,H),RED); lay=Image.new('RGBA',(W,H),(0,0,0,0)); ld=ImageDraw.Draw(lay)
+    k=back_out(t/0.3); f,L,s=fit(ld,'Blitzer- & Stau-Melder',150,W-120,2)
+    for i,l in enumerate(L): ld.text((W//2+int((1-k)*W)*(1 if i%2 else -1),520+i*int(s*1.08)),l,font=f,fill=WH+(255,),anchor='ma')
+    if t>0.6:
+        a=ease((t-0.6)/0.4); fs=F(BLACK,84)
+        for i,l in enumerate(['Gesehen?','Melde es auf bdkng.de']): ld.text((W//2,1000+i*110+int((1-a)*40)),l,font=fs,fill=GOLD+(int(255*a),),anchor='ma')
+    if t>1.2:
+        a=ease((t-1.2)/0.4); fs=F('Inter-Bold.otf',60)
+        for i,l in enumerate(['Zwei Meldungen –','ganz Bad König weiß Bescheid.']): ld.text((W//2,1320+i*80),l,font=fs,fill=WH+(int(255*a),),anchor='ma')
+    im=im.convert('RGBA'); im.alpha_composite(lay); return im.convert('RGB')
 JUNG=[(1.0,intro),(1.5,lambda t:slam(['WAS','GEHT IN','BAD','KÖNIG?'],t,GOLD,DK,250,0.2)),
  (0.7,lambda t:pop('Müll?',t,GR,WH)),(0.7,lambda t:pop('Fußball?',t,(255,90,60),WH,200)),(0.7,lambda t:pop('Events?',t,DK,GOLD,240)),
  (1.0,lambda t:slam(['Frag','einfach.'],t,WH,GR,260,0.2)),
  (3.3,chat),
+ (0.6,lambda t:pop('Blitzer?',t,RED,WH,230)),(0.6,lambda t:pop('Stau?',t,DK,GOLD,260)),(2.4,melder),
  (1.8,lambda t:slam(['News','Termine','Verkehr'],t,GR,WH,230,0.3)),
  (2.0,lambda t:folg(t)),
  (2.5,endcard)]
@@ -168,6 +182,7 @@ if __name__=='__main__':
         sc=[]
         for i,tx in enumerate(ALT):
             if tx=='CHAT': sc.append((4,alt_chat))
+            elif tx=='MELDER': sc.append((2.8,melder))
             elif tx=='SOCIAL': sc.append((2.6,lambda t:alt_social(t,2.6)))
             else: sc.append((2.2,(lambda tx,last:(lambda t:alt_frame(tx,t,2.2,last)))(tx,i==len(ALT)-1)))
         render(sc,'/tmp/film/bdkng-alt.mp4')
