@@ -25,7 +25,7 @@ for slug in categories:
   from datetime import date,timedelta
   grenze=(date.today()-timedelta(days=7)).isoformat()
   WICHTIG=re.compile(r'(Polizei|Feuerwehr|Brand|Unfall|Vollsperrung|gesperrt|Warnung|Unwetter|Hochwasser|Störung|Stromausfall|Wasserrohrbruch|Evakuierung|Zeugen)',re.I)
-  items=[n for n in news if 'wichtig' in n['categories'] or (n['checked']>=grenze and (WICHTIG.search(n['source']+' '+n['title'])))]
+  items=[n for n in news if 'wichtig' in n['categories'] or (n.get('valid_until') and n['checked']>=grenze and (WICHTIG.search(n['source']+' '+n['title'])))]  # statische Infoseiten (ohne valid_until) nicht als Meldung
  else:
   items=[n for n in news if slug in n['categories']]
  # Neueste zuerst; Quellen mischen, freie Quellen vor Bezahlangeboten (Echo+)
