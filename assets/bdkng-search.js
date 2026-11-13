@@ -44,12 +44,19 @@
       var b = Object.keys(m.ortsteile).map(function (o) { return '<button type="button" class="bs-chip" data-q="' + esc(q + ' ' + o) + '">' + esc(o) + '</button>'; }).join('');
       return '<p>Für welchen Ortsteil?</p><div class="bs-chips">' + b + '</div>';
     }
-    if (!arten.length) arten = ARTEN.slice(0, 4);
-    var h = '<p><strong>Abfuhr in ' + esc(ot) + '</strong></p><ul>';
+    var alle = !arten.length; if (alle) arten = ARTEN.slice(0, 4);
+    // Alle kommenden Abholungen nach Datum aufsteigend (gleiche Tage zusammengefasst)
+    var grenze = plus(heute(), alle ? 28 : 120), tage = {}, leer = [];
     arten.forEach(function (a) {
       var l = naechster(ot, a.key, m);
-      h += l.length ? '<li><strong>' + esc(a.name) + ':</strong> ' + esc(deDatum(l[0])) + ' (' + tageBis(l[0]) + ')' + (l[1] ? ', danach ' + esc(l[1].slice(8) + '.' + l[1].slice(5, 7) + '.') : '') + (a.key === 'SA' ? '<br><small>' + esc(m.arten.SA) + '</small>' : '') + '</li>' : '<li>' + esc(a.name) + ': kein weiterer Termin im Kalender.</li>';
+      if (!l.length) { leer.push(a.name); return; }
+      l.filter(function (d, k) { return k === 0 || (d <= grenze && k < (alle ? 9 : 3)); }).forEach(function (d) { (tage[d] = tage[d] || []).push(a); });
     });
+    var h = '<p><strong>Abfuhr in ' + esc(ot) + '</strong> (nach Datum)</p><ul>';
+    Object.keys(tage).sort().forEach(function (d) {
+      h += '<li><strong>' + esc(deDatum(d).replace(/\.\d{4}$/, '.')) + '</strong> (' + tageBis(d) + '): ' + tage[d].map(function (a) { return esc(a.name); }).join(', ') + (tage[d].some(function (a) { return a.key === 'SA'; }) ? '<br><small>' + esc(m.arten.SA) + '</small>' : '') + '</li>';
+    });
+    leer.forEach(function (n) { h += '<li>' + esc(n) + ': kein weiterer Termin im Kalender.</li>'; });
     return h + '</ul><p class="bs-note">' + esc(m.hinweis) + '</p>' + quelleMuell(m);
   }
   function terminAntwort(q) {

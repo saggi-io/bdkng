@@ -1,0 +1,451 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BDKNG//Bad Koenig kompakt//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BDKNG Termine Bad König
+X-WR-CALDESC:Veranstaltungen in Bad König (Quelle: Veranstaltungskalender 
+ der Stadt Bad König). Privates Angebot von bdkng.de\, ohne Gewähr.
+X-WR-TIMEZONE:Europe/Berlin
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:f56b18daa85f87801de2@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261114T190000
+DTEND;TZID=Europe/Berlin:20261114T210000
+SUMMARY:"Die Eisfalle" - Die arktische Odyssee der Tegetthoff
+LOCATION:Rentmeisterei Bad König\, Schlossplatz 2
+DESCRIPTION:Die filmische Rekonstruktion der ungarisch-österreichischen Po
+ larexpertin unter der Leitung von Carl Weyprecht und Julius Payer Eintritt
+  frei – Quelle: Stadt Bad König\, Veranstaltungskalender https://www.ba
+ dkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:9c4929640bcb12735275@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261115T103000
+DTEND;TZID=Europe/Berlin:20261115T123000
+SUMMARY:Heimatmuseum Bad König
+LOCATION:Schlosshof\, Schlossplatz 3\, Bad König
+DESCRIPTION:Eingang Schlosshof – Veranstalter: Heimat- und Geschichtsvere
+ in Bad König e.V. – Quelle: Stadt Bad König\, Veranstaltungskalender h
+ ttps://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskale
+ nder/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:51b65acb4de1bbead424@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261120T120000
+DTEND;TZID=Europe/Berlin:20261120T140000
+SUMMARY:Orgel um 12
+LOCATION:Schlosskirche Bad König
+DESCRIPTION:"Das ewige Leben" - Orgelvariationen von Pachelbel\, Buxtehude 
+ und Walther Orgel: Christian Lorenz (Pfungstadt) – Quelle: Stadt Bad Kö
+ nig\, Veranstaltungskalender https://www.badkoenig.de/kultur-freizeit/vera
+ nstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:46b008aac8e34800f584@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261121T120000
+DTEND;TZID=Europe/Berlin:20261121T140000
+SUMMARY:TECMUMAS Technikmuseum Bad König
+LOCATION:Kulturdenkmal "Hamburger Zigarrenfabrik"\, Kimbacher Straße 79\, 
+ Bad König
+DESCRIPTION:Eintrittspreis: Erwachsene EUR 4\, Kinder / Jugendliche EUR 2 
+ – Veranstalter: TECMUMAS Technikmuseum Bad König – Quelle: Stadt Bad 
+ König\, Veranstaltungskalender https://www.badkoenig.de/kultur-freizeit/v
+ eranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:b2388642c9643fe3c954@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261122T120000
+DTEND;TZID=Europe/Berlin:20261122T140000
+SUMMARY:TECMUMAS Technikmuseum Bad König
+LOCATION:Kulturdenkmal "Hamburger Zigarrenfabrik"\, Kimbacher Straße 79\, 
+ Bad König
+DESCRIPTION:Eintrittspreis: Erwachsene EUR 4\, Kinder / Jugendliche EUR 2 
+ – Veranstalter: TECMUMAS Technikmuseum Bad König – Quelle: Stadt Bad 
+ König\, Veranstaltungskalender https://www.badkoenig.de/kultur-freizeit/v
+ eranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:d7ea024cef1c9406257a@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261126T143000
+DTEND;TZID=Europe/Berlin:20261126T163000
+SUMMARY:Seniorennachmittag der AWO Tagespflege
+LOCATION:AWO Tagespflege\, Schwimmbadstraße 2b\, Bad König
+DESCRIPTION:Quelle: Stadt Bad König\, Veranstaltungskalender https://www.b
+ adkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:fe64962d8cf1e3ba6eb7@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261128T163000
+DTEND;TZID=Europe/Berlin:20261128T183000
+SUMMARY:Weihnachtsmarkt Kimbach
+LOCATION:Am und im Gemeinschaftshaus\, Bad König
+DESCRIPTION:mit Kinderbelustigung und Weihnachtsmannsuche – Quelle: Stadt
+  Bad König\, Veranstaltungskalender https://www.badkoenig.de/kultur-freiz
+ eit/veranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:9d65fb6313081a92826c@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261128T180000
+DTEND;TZID=Europe/Berlin:20261128T200000
+SUMMARY:Offenes Singen der NaturFreunde Bad König
+LOCATION:Alte Schule Bad König\, Schulstraße 7
+DESCRIPTION:Anmeldung unter: 06062/5208\; www.naturfreunde-bad-koenig.de 
+ – Veranstalter: NaturFreunde Bad König – Quelle: Stadt Bad König\, V
+ eranstaltungskalender https://www.badkoenig.de/kultur-freizeit/veranstaltu
+ ngen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:a8a0fc949cebb24aad4a@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261129T140000
+DTEND;TZID=Europe/Berlin:20261129T160000
+SUMMARY:Tanz & Tee
+LOCATION:Wandelhalle Bad König
+DESCRIPTION:Veranstalter: Kurgesellschaft Bad König – Quelle: Stadt Bad 
+ König\, Veranstaltungskalender https://www.badkoenig.de/kultur-freizeit/v
+ eranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:a256d93c87cd218c5b97@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261205T160000
+DTEND;TZID=Europe/Berlin:20261205T180000
+SUMMARY:Weihnachtsmarkt mit Nikolaustag
+LOCATION:Sportlerheim Ober-Kinzig\, Bad König
+DESCRIPTION:Veranstalter: Dorfverschönerungsverein Ober-Kinzig/Gumpersberg
+  – Quelle: Stadt Bad König\, Veranstaltungskalender https://www.badkoen
+ ig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:99b15d67dd69f353ca5a@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261206T103000
+DTEND;TZID=Europe/Berlin:20261206T123000
+SUMMARY:Heimatmuseum Bad König
+LOCATION:Schlosshof\, Schlossplatz 3\, Bad König
+DESCRIPTION:Eingang Schlosshof – Veranstalter: Heimat- und Geschichtsvere
+ in Bad König e.V. – Quelle: Stadt Bad König\, Veranstaltungskalender h
+ ttps://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskale
+ nder/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:1e96ffff26a31f93db91@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261206T140000
+DTEND;TZID=Europe/Berlin:20261206T160000
+SUMMARY:Tanz & Tee
+LOCATION:Wandelhalle Bad König
+DESCRIPTION:Veranstalter: Kurgesellschaft Bad König – Quelle: Stadt Bad 
+ König\, Veranstaltungskalender https://www.badkoenig.de/kultur-freizeit/v
+ eranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:13443791094e4229bb1a@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;VALUE=DATE:20261211
+DTEND;VALUE=DATE:20261214
+SUMMARY:Nikolausmarkt Bad König 2026
+LOCATION:Rentmeisterei\, Scahlossplatz 2\, Bad König
+DESCRIPTION:Quelle: Stadt Bad König\, Veranstaltungskalender https://www.b
+ adkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:cf573853b9d4b82922d4@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;VALUE=DATE:20261211
+DTEND;VALUE=DATE:20261214
+SUMMARY:Nikolausmarkt in und um die Rentmeisterei/Freilichtbühne
+LOCATION:Rentmeisterei / Freilichtbühne\, Schlossplatz 2\, Bad König
+DESCRIPTION:Informationen folgen – Quelle: Stadt Bad König\, Veranstaltu
+ ngskalender https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veran
+ staltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:1ad15c228ffbb7309b09@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261211T190000
+DTEND;TZID=Europe/Berlin:20261211T210000
+SUMMARY:Musikalische Adventsandacht
+LOCATION:Schlosskirche Bad König
+DESCRIPTION:Mit Johannes Schmidtke (Orgel) und Pfarrer Martin Hecker. – Q
+ uelle: Stadt Bad König\, Veranstaltungskalender https://www.badkoenig.de/
+ kultur-freizeit/veranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:83a6bfc6ea4b559f014c@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261217T143000
+DTEND;TZID=Europe/Berlin:20261217T163000
+SUMMARY:Adventscafé im Rahmen des Seniorennachmittags der AWO Tagespflege
+LOCATION:AWO Tagespflege\, Schwimmbadstraße 2b\, Bad König
+DESCRIPTION:Quelle: Stadt Bad König\, Veranstaltungskalender https://www.b
+ adkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:032fb030b9d75d80034c@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261219T120000
+DTEND;TZID=Europe/Berlin:20261219T140000
+SUMMARY:TECMUMAS Technikmuseum Bad König
+LOCATION:Kulturdenkmal "Hamburger Zigarrenfabrik"\, Kimbacher Straße 79\, 
+ Bad König
+DESCRIPTION:Eintrittspreis: Erwachsene EUR 4\, Kinder / Jugendliche EUR 2 
+ – Veranstalter: TECMUMAS Technikmuseum Bad König – Quelle: Stadt Bad 
+ König\, Veranstaltungskalender https://www.badkoenig.de/kultur-freizeit/v
+ eranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:680a8f88118a72f9df1a@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261220T103000
+DTEND;TZID=Europe/Berlin:20261220T123000
+SUMMARY:Heimatmuseum Bad König
+LOCATION:Schlosshof\, Schlossplatz 3\, Bad König
+DESCRIPTION:Eingang Schlosshof – Veranstalter: Heimat- und Geschichtsvere
+ in Bad König e.V. – Quelle: Stadt Bad König\, Veranstaltungskalender h
+ ttps://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskale
+ nder/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:4fa3e4628531646cdf52@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261220T120000
+DTEND;TZID=Europe/Berlin:20261220T140000
+SUMMARY:TECMUMAS Technikmuseum Bad König
+LOCATION:Kulturdenkmal "Hamburger Zigarrenfabrik"\, Kimbacher Straße 79\, 
+ Bad König
+DESCRIPTION:Eintrittspreis: Erwachsene EUR 4\, Kinder / Jugendliche EUR 2 
+ – Veranstalter: TECMUMAS Technikmuseum Bad König – Quelle: Stadt Bad 
+ König\, Veranstaltungskalender https://www.badkoenig.de/kultur-freizeit/v
+ eranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:f8d8e4aa94af426dec30@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261220T140000
+DTEND;TZID=Europe/Berlin:20261220T160000
+SUMMARY:Tanz & Tee
+LOCATION:Wandelhalle Bad König
+DESCRIPTION:Veranstalter: Kurgesellschaft Bad König – Quelle: Stadt Bad 
+ König\, Veranstaltungskalender https://www.badkoenig.de/kultur-freizeit/v
+ eranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:c73e9eed52319ccd19d5@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261226T180000
+DTEND;TZID=Europe/Berlin:20261226T200000
+SUMMARY:Offenes Singen der NaturFreunde Bad König
+LOCATION:Alte Schule Bad König\, Schulstraße 7
+DESCRIPTION:Anmeldung unter: 06062/5208\; www.naturfreunde-bad-koenig.de 
+ – Veranstalter: NaturFreunde Bad König – Quelle: Stadt Bad König\, V
+ eranstaltungskalender https://www.badkoenig.de/kultur-freizeit/veranstaltu
+ ngen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:ce33a68756974faeb993@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;VALUE=DATE:20261227
+DTEND;VALUE=DATE:20261231
+SUMMARY:Silvesterturnier der TSG Bad König\, Abt. Fußball / Förderverein
+LOCATION:Sportzentrum Bad König\, Schwimmbadstraße 38
+DESCRIPTION:Genauer Turnierplan wird bei Zeit genannt\; für das leibliche 
+ Wohl wird gesorgt sein – Veranstalter: TSG Bad König\, Abt. Fußball / 
+ Förderverein – Quelle: Stadt Bad König\, Veranstaltungskalender https:
+ //www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:93b2882b3541f8f9efa5@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20261228T143000
+DTEND;TZID=Europe/Berlin:20261228T163000
+SUMMARY:Hüttenzauber
+LOCATION:Piazza vor der Wandelhalle\, Bad König
+DESCRIPTION:Veranstalter: TSG Bad König\, Abt. Handball – Quelle: Stadt 
+ Bad König\, Veranstaltungskalender https://www.badkoenig.de/kultur-freize
+ it/veranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:f65bb25d1de07ef617d4@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20270123T193000
+DTEND;TZID=Europe/Berlin:20270123T213000
+SUMMARY:Susanne Hasenstab und Emil Emaille präsentieren: "Ochsenmaulsalat"
+  - Kabarettistische Lesung
+LOCATION:Rentmeisterei\, Schlossplatz 2\, Bad König
+DESCRIPTION:In ihrem neuen Programm „Ochsenmaulsalat“ präsentiert die 
+ Aschaffenburger Autorin\, Kolumnistin und Bühnenkünstlerin Susanne Hasen
+ stab wieder einmal die haarsträubende Komik\, die unserem alltäglichen G
+ ebabbel innewohnt. Zusammen mit ihrem langjährigen Bühnenpartner Emil Em
+ aille erkundet sie kommunika – Veranstalter: Literaturhandlung Paperback
+  – Quelle: Stadt Bad König\, Veranstaltungskalender https://www.badkoen
+ ig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:fbbe51c6de93a7a98774@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20270130T141100
+DTEND;TZID=Europe/Berlin:20270130T161100
+SUMMARY:Kinderfastnacht bei der TSG Bad König
+LOCATION:Sportlerheim Bad König\, Schwimmbadstraße
+DESCRIPTION:Veranstalter: TSG Bad König Abt. Leichtathlethik – Quelle: S
+ tadt Bad König\, Veranstaltungskalender https://www.badkoenig.de/kultur-f
+ reizeit/veranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:afc3226ed984381122f6@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20270130T141100
+DTEND;TZID=Europe/Berlin:20270130T161100
+SUMMARY:Kinderfastnacht der Dorfverschönerung Ober-Kinzig/Gumpersberg
+LOCATION:Neues Feuerwehrhaus Nieder-Kinzig\, Außenliegend 112\, Bad König
+DESCRIPTION:Veranstalter: Dorfverschönerung Ober-Kinzig/Gumpersberg – Qu
+ elle: Stadt Bad König\, Veranstaltungskalender https://www.badkoenig.de/k
+ ultur-freizeit/veranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:b5cf9cc37cf44892df84@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20270130T201100
+DTEND;TZID=Europe/Berlin:20270130T221100
+SUMMARY:Fastnachtsparty Vol. 2 bei der TSG Bad König
+LOCATION:Sportzentrum Bad König\, Schwimmbadstraße
+DESCRIPTION:Letztes Jahr war einfach sensationell – und genau daran wolle
+ n wir anknüpfen! Am Samstag\, 30. Januar 2027\, feiern wir ab 20:11 Uhr w
+ ieder gemeinsam im Sportzentrum Bad König. DJ Sunny Reed sorgt für die p
+ assende Musik\, dazu gibt es Bar\, Snacks und Getränke. Natürlich darf a
+ uch die Prämierung des bes – Quelle: Stadt Bad König\, Veranstaltungsk
+ alender https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstal
+ tungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:15a5a4a0af84d475e69d@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20270213T193000
+DTEND;TZID=Europe/Berlin:20270213T213000
+SUMMARY:Mark Zak präsentiert die Stand-Up-Show: "Back to UDSSR - Warum ich
+  nicht in den Krieg zog."
+LOCATION:Rentmeisterei\, Schlossplatz 2\, Bad König
+DESCRIPTION:Mark Zak kommt wieder nach Bad König. Der Schauspieler\, Hörb
+ uchsprecher und Autor Mark Zak ist bei den AUTOREN IN DER RENTMEISTEREI in
+  Bad König kein Unbekannter. Schon zweimal war der Darsteller\, der schon
+  mit Steven Spielberg\, John Malkovich\, Angelina Jolie und Johny Depp ged
+ reht hat\, in Deutschla – Veranstalter: Literaturhandlung Paperback – 
+ Quelle: Stadt Bad König\, Veranstaltungskalender https://www.badkoenig.de
+ /kultur-freizeit/veranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:2982e3d430d6dd7a6b34@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20270312T180000
+DTEND;TZID=Europe/Berlin:20270312T200000
+SUMMARY:Kinnicher Abend in der Kinnicher Stubb
+LOCATION:Sportzentrum Bad König\, Schwimmbadstraße
+DESCRIPTION:weitere Informationen folgen – Veranstalter: TSG Bad König 1
+ 863 e.V. – Quelle: Stadt Bad König\, Veranstaltungskalender https://www
+ .badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+BEGIN:VEVENT
+UID:6979cec740e31f47a1ed@bdkng.de
+DTSTAMP:20261113T110218Z
+DTSTART;TZID=Europe/Berlin:20270313T193000
+DTEND;TZID=Europe/Berlin:20270313T213000
+SUMMARY:Peter Brandt liest aus: "Sich ändern\, um sich treu zu bleiben. Er
+ innerungen und Begegnungen."
+LOCATION:Rentmeisterei\, Schlossplatz 2\, Bad König
+DESCRIPTION:Wenn sich die politische Geschichte der Bundesrepublik seit den
+  1960er-Jahren in einer Biografie wiederfindet\, dann in der des Intellekt
+ uellen\, Historikers und bekennenden Sozialisten Peter Brandt – des 1948
+  geborenen ältesten Sohns von Willy Brandt. Früh ging er eigene Wege\, w
+ ar Teil der Protestbew – Veranstalter: Literaturhandlung Paperback – Q
+ uelle: Stadt Bad König\, Veranstaltungskalender https://www.badkoenig.de/
+ kultur-freizeit/veranstaltungen/veranstaltungskalender/
+URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
+ kalender/
+END:VEVENT
+END:VCALENDAR
