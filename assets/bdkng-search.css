@@ -101,3 +101,17 @@
 .bs .bs-kurz{display:none}
 @media(max-width:600px){.bs .bs-lang{display:none}.bs .bs-kurz{display:inline}}
 @media(max-width:600px){.bs .bs-top .bs-blitz-btn{font-size:12px;padding:6px 9px}.bs .bs-top{gap:5px}}
+/* Desktop wie Handy: 2-zeilige Wischleiste mit Pfeilen (13.11.2026 abends) */
+@media(min-width:601px){
+.bs .bs-examples{display:block;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;margin:14px 0 0;padding:2px 0 8px;scroll-behavior:smooth;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.bs .bs-examples::-webkit-scrollbar{display:none}
+.bs .bs-ex-inner{display:flex;flex-wrap:wrap;gap:8px}
+.bs .bs-example{white-space:nowrap}
+.bs .bs-examples.am-ende{-webkit-mask-image:none;mask-image:none}
+.bs .bs-examples.am-start.am-ende{-webkit-mask-image:none;mask-image:none}
+.bs .bs-ex-wrap{position:relative}
+.bs .bs-ex-pfeil{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:38px;height:38px;border-radius:50%;border:0;background:var(--gold,#e8b84a);color:#10201a;font-size:22px;font-weight:700;line-height:1;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.bs .bs-ex-pfeil[hidden]{display:none}
+.bs .bs-ex-pfeil.l{left:-12px}.bs .bs-ex-pfeil.r{right:-12px}
+}
+@media(max-width:600px){.bs .bs-ex-pfeil{display:none}}

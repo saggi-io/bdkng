@@ -292,7 +292,11 @@
   (function () { var ex = box.querySelector('.bs-examples'), inn = box.querySelector('.bs-ex-inner'); if (!ex) return;
     function breite() { if (!inn) return; inn.style.width = ''; if (getComputedStyle(inn).display !== 'flex') return; var bs = inn.querySelectorAll('.bs-example'), sum = 0, max = 0; bs.forEach(function (b) { var w = b.getBoundingClientRect().width + 8; sum += w; if (w > max) max = w; }); inn.style.width = Math.max(ex.clientWidth, Math.ceil(sum / 2 + max)) + 'px'; }
     breite(); window.addEventListener('resize', function () { breite(); ende(); }); if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { breite(); ende(); });
-    function ende() { ex.classList.toggle('am-ende', ex.scrollLeft + ex.clientWidth >= ex.scrollWidth - 4); } ex.addEventListener('scroll', ende, { passive: true }); window.addEventListener('resize', ende); ende(); })();
+    var wrap = document.createElement('div'); wrap.className = 'bs-ex-wrap'; ex.parentNode.insertBefore(wrap, ex); wrap.appendChild(ex);
+    var pl = document.createElement('button'), pr = document.createElement('button'); pl.type = pr.type = 'button'; pl.className = 'bs-ex-pfeil l'; pr.className = 'bs-ex-pfeil r'; pl.textContent = '‹'; pr.textContent = '›'; pl.setAttribute('aria-label', 'Weitere Fragen links'); pr.setAttribute('aria-label', 'Weitere Fragen rechts'); wrap.appendChild(pl); wrap.appendChild(pr);
+    pl.addEventListener('click', function () { ex.scrollBy({ left: -ex.clientWidth * 0.8 }); }); pr.addEventListener('click', function () { ex.scrollBy({ left: ex.clientWidth * 0.8 }); });
+    ex.addEventListener('wheel', function (e) { if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && ex.scrollWidth > ex.clientWidth) { var vor = ex.scrollLeft; ex.scrollLeft += e.deltaY; if (ex.scrollLeft !== vor) e.preventDefault(); } }, { passive: false });
+    function ende() { var a = ex.scrollLeft <= 4, z = ex.scrollLeft + ex.clientWidth >= ex.scrollWidth - 4; ex.classList.toggle('am-ende', z); ex.classList.toggle('am-start', a); pl.hidden = a; pr.hidden = z; } ex.addEventListener('scroll', ende, { passive: true }); window.addEventListener('resize', ende); ende(); })();
   box.querySelectorAll('button.bs-example').forEach(function (b) { b.addEventListener('click', function () { input.value = b.textContent; antworten(input.value); }); });
   input.addEventListener('focus', laden, { once: true });
   var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
