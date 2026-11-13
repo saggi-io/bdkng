@@ -1,5 +1,19 @@
 [
   {
+    "id": "medien-2026-11-13-258893938",
+    "checked": "2026-11-10",
+    "valid_until": "2026-11-20",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Sabine Hofmann stellt ihren neuen Krimi in der Rentmeisterei in Bad König vor",
+    "paragraphs": [
+      "Im Rahmen der Leseraktion „Echo hilft“ war die in Erbach lebende Autorin auf der Lesebühne der Rentmeisterei zu Gast. Die Erlöse fließen in soziale Projekte der Region."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/sabine-hofmann-stellt-ihren-neuen-krimi-in-bad-koenig-vor-6725202"
+  },
+  {
     "id": "2026-11-13-wetter",
     "checked": "2026-11-13",
     "valid_until": "2026-11-16",
