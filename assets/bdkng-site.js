@@ -97,3 +97,20 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
+
+/* Datensparsamer Zugriffszähler: keine Cookies, keine IP-Speicherung, nicht sichtbar.
+   Nichts wird im Browser gespeichert. Übertragen werden nur Seite, ob der Besuch von außen kommt, und die Herkunftsseite (nur Domain).
+   Eigene Aufrufe ausschließen: bdkng.de/?ich=1 aufrufen (wieder zählen: ?ich=0). */
+(function () {
+  try {
+    var q = location.search;
+    if (/[?&]ich=1/.test(q)) localStorage.setItem('bdkng_ich', '1');
+    if (/[?&]ich=0/.test(q)) localStorage.removeItem('bdkng_ich');
+    if (localStorage.getItem('bdkng_ich') || navigator.doNotTrack === '1' || !/(^|\.)bdkng\.de$/.test(location.hostname)) return;
+    var ref = document.referrer || '', intern = ref.indexOf('://' + location.hostname) > 0 || ref.indexOf('://www.' + location.hostname) > 0;
+    var neu = !intern, r = neu && ref ? ref.split('/').slice(0, 3).join('/') : '';
+    var d = JSON.stringify({ p: location.pathname, n: neu ? 1 : 0, r: r }), u = 'https://n8n.sagmeister.io/webhook/bdkng-zugriff';
+    if (navigator.sendBeacon) navigator.sendBeacon(u, new Blob([d], { type: 'text/plain' }));
+    else fetch(u, { method: 'POST', body: d, mode: 'no-cors', keepalive: true });
+  } catch (e) {}
+})();
