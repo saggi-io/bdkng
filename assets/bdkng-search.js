@@ -225,6 +225,14 @@
       }
       return h + (nt ? wQuelle(nt) : '') + (apOk ? '<p class="bs-src">Apotheken-Notdienst: <a href="' + esc(ap.url) + '" target="_blank" rel="noopener">Bad Königer Stadtnachrichten</a></p>' : '');
     }
+    if (/therme|hallenbad|schwimmbad(?!str)|thermalbad|sauna|salzgrotte|baden gehen|schwimmen/.test(l)) {
+      var th = wissen(/Odenwald-Therme/); if (!th) return null;
+      var ts = th.text.split(/(?<=\.)\s+(?=[A-ZÄÖÜ])/).filter(function (x) { return !/https?:/.test(x); });
+      var son = ts.filter(function (x) { return /^Sonder/.test(x); })[0] || '';
+      var rest = ts.filter(function (x) { return x !== son; });
+      var sonder = son.replace(/^Sonder-Öffnungszeiten:\s*/, '').replace(/\.$/, '').split(/;\s*/).filter(function (x) { var m = x.match(/(\d{2})\.(\d{2})\.(\d{4})(?![\s\S]*\d{2}\.\d{2}\.\d{4})/); return !m || (m[3] + '-' + m[2] + '-' + m[1]) >= heute(); });
+      return '<div class="bs-hit"><h3>♨️ Odenwald-Therme Bad König</h3><ul>' + rest.map(function (x) { return '<li>' + esc(x.replace(/\.$/, '')) + '</li>'; }).join('') + '</ul>' + (sonder.length ? '<p><strong>Abweichende Zeiten:</strong></p><ul>' + sonder.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '') + '<p><a class="bs-kaffee-btn bs-link-btn" href="https://ampel.odenwald-therme.de/thermalbad.php" target="_blank" rel="noopener">Wie voll ist es gerade?</a> <a class="bs-kaffee-btn bs-link-btn" href="https://www.odenwald-therme.de/eintrittspreise/" target="_blank" rel="noopener">Eintrittspreise</a></p></div><p class="bs-src">Quelle: <a href="' + esc(th.url) + '" target="_blank" rel="noopener">Odenwald-Therme</a> · Angaben ohne Gewähr</p>';
+    }
     if (/bürgerbus|buergerbus/.test(l)) { var bb = wissen(/Bürgerbus/); if (bb) return '<div class="bs-hit"><h3>🚌 Bürgerbus Bad König</h3><p>' + esc(bb.text) + '</p></div>' + wQuelle(bb); }
     if (/parken|parkpl|parkhaus|brötchentaste|e-mobil|emobil|lades|laden.*auto|e-auto|elektroauto/.test(l)) {
       var pk = wissen(/Parken und E-Lade/); if (!pk) return null;
