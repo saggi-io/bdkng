@@ -6,7 +6,7 @@
     var h = '';
     var jetzt = new Date(), pad = function (n) { return ('0' + n).slice(-2); }, jz = jetzt.getFullYear() + '-' + pad(jetzt.getMonth() + 1) + '-' + pad(jetzt.getDate()) + 'T' + pad(jetzt.getHours()) + ':' + pad(jetzt.getMinutes());
     var gm = (d.gemeldet || []).filter(function (x) { return x.bis > jz; });
-    if (gm.length) h += '<h3>🚨 Gerade gemeldet (Blitzer- &amp; Stau-Melder)</h3><ul class="bz-list">' + gm.map(function (x) { return '<li><strong>' + esc(x.zeit.slice(11)) + ' Uhr · ' + esc(x.ort) + ':</strong> ' + esc(x.strasse) + ' · ' + esc(x.art) + (x.hinweis ? ' · ' + esc(x.hinweis) : '') + '<br><small>Von zwei Nutzern unabhängig gemeldet, nicht amtlich. Angezeigt bis ' + esc(x.bis.slice(11)) + ' Uhr.</small></li>'; }).join('') + '</ul>';
+    if (gm.length) h += '<h3>🚨 Gerade gemeldet (Blitzer- &amp; Stau-Melder)</h3><ul class="bz-list">' + gm.map(function (x) { return '<li><strong>' + esc(x.zeit.slice(11)) + ' Uhr · ' + esc(x.ort) + ':</strong> ' + esc(x.strasse) + ' · ' + esc(x.art) + (x.hinweis ? ' · ' + esc(x.hinweis) : '') + '<br><small>Gemeldet über den Blitzer- &amp; Stau-Melder, nicht amtlich. Angezeigt bis ' + esc(x.bis.slice(11)) + ' Uhr.</small></li>'; }).join('') + '</ul>';
     var ms = d.messstellen || [];
     h += '<h3>👮 Von der Polizei angekündigte Messstellen</h3>';
     h += ms.length ? '<ul class="bz-list">' + ms.map(function (m) {

@@ -54,3 +54,24 @@
     window.addEventListener('scroll', zu, { passive: true });
   });
 })();
+
+/* BDKNG weiterempfehlen (13.11.2026) */
+(function () {
+  var TEXT = 'Kennst du schon BDKNG? Dein Info-Kanal rund um Bad König: News, Termine, Müll, Verkehr, KI-Suche und der Blitzer- & Stau-Melder.';
+  var URL = 'https://bdkng.de/';
+  function teilen(e) {
+    if (e) e.preventDefault();
+    if (navigator.share) { navigator.share({ title: 'BDKNG – Bad König kompakt', text: TEXT, url: URL }).catch(function () {}); return; }
+    window.open('https://wa.me/?text=' + encodeURIComponent(TEXT + ' ' + URL), '_blank', 'noopener');
+  }
+  function init() {
+    document.querySelectorAll('[data-bdkng-share]').forEach(function (b) { b.addEventListener('click', teilen); });
+    var h = Array.prototype.filter.call(document.querySelectorAll('footer h4'), function (x) { return /Folgen/.test(x.textContent); })[0];
+    if (h && h.nextElementSibling && !document.getElementById('bdkngShareFoot')) {
+      var a = document.createElement('a'); a.href = '#'; a.id = 'bdkngShareFoot'; a.textContent = '💚 BDKNG weiterempfehlen';
+      a.addEventListener('click', teilen);
+      h.nextElementSibling.appendChild(document.createElement('br')); h.nextElementSibling.appendChild(a);
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();

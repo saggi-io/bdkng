@@ -125,6 +125,15 @@ def logo_on(im,which,cx,cy,size,t,alpha=1.0):
     l=LG[which].copy(); l.thumbnail((int(size*p),int(size*p)))
     if alpha<1: l.putalpha(l.getchannel('A').point(lambda v:int(v*alpha)))
     im.alpha_composite(l,(cx-l.width//2,cy-l.height//2))
+def cover(t):
+    # Titelbild (erstes Bild = Vorschaubild in WhatsApp & Co.): sofort voll sichtbar, mit Logos
+    im=Image.new('RGBA',(W,H),GR+(255,)); im.paste(headimg(),(0,0)); d=ImageDraw.Draw(im)
+    d.rectangle([0,HH,W,HH+12],fill=GOLD)
+    logo_on(im,0,W//2,HH+430,620,t)
+    d.text((W//2,HH+800),'Bad König kompakt',font=F(BLACK,104),fill=WH,anchor='ma')
+    d.text((W//2,HH+940),'News · Termine · Müll · Verkehr',font=F('Inter-Bold.otf',58),fill=CR,anchor='ma')
+    d.text((W//2,H-230),'bdkng.de',font=F(BLACK,150),fill=GOLD,anchor='ma')
+    return im.convert('RGB')
 def intro(t):
     im=Image.new('RGBA',(W,H),DK+(255,)); k=back_out(t/0.35)
     for r in range(3):
@@ -158,7 +167,7 @@ def melder(t):
         a=ease((t-1.2)/0.4); fs=F('Inter-Bold.otf',60)
         for i,l in enumerate(['Zwei Meldungen –','ganz Bad König weiß Bescheid.']): ld.text((W//2,1320+i*80),l,font=fs,fill=WH+(int(255*a),),anchor='ma')
     im=im.convert('RGBA'); im.alpha_composite(lay); return im.convert('RGB')
-JUNG=[(1.0,intro),(1.5,lambda t:slam(['WAS','GEHT IN','BAD','KÖNIG?'],t,GOLD,DK,250,0.2)),
+JUNG=[(1.2,cover),(0.8,intro),(1.5,lambda t:slam(['WAS','GEHT IN','BAD','KÖNIG?'],t,GOLD,DK,250,0.2)),
  (0.7,lambda t:pop('Müll?',t,GR,WH)),(0.7,lambda t:pop('Fußball?',t,(255,90,60),WH,200)),(0.7,lambda t:pop('Events?',t,DK,GOLD,240)),
  (1.0,lambda t:slam(['Frag','einfach.'],t,WH,GR,260,0.2)),
  (3.3,chat),
@@ -179,7 +188,7 @@ if __name__=='__main__':
         c=Image.new('RGB',(360*6,640));[c.paste(x.resize((360,640)),(i*360,0)) for i,x in enumerate(fr)];c.save('/tmp/film/probe2.jpg')
     elif w=='jung': render(JUNG,'/tmp/film/bdkng-jung.mp4')
     else:
-        sc=[]
+        sc=[(1.4,cover)]
         for i,tx in enumerate(ALT):
             if tx=='CHAT': sc.append((4,alt_chat))
             elif tx=='MELDER': sc.append((2.8,melder))
