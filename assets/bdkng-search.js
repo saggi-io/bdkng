@@ -217,8 +217,12 @@
     var l = q.toLowerCase();
     if (/grünschnitt|gruenschnitt|bauhof|grüngut/.test(l)) {
       var g = wissen(/Grünschnitt/); if (!g) return null;
-      var satz = g.text.split(/(?<=\.)\s+/).filter(function (x) { return /Grünschnitt/.test(x); }).join(' ');
-      return '<div class="bs-hit"><h3>Grünschnitt am Bauhof</h3><p>' + esc(satz) + '</p><p>Fragen zur Müllabfuhr: Hotline 0800 9600100 (kostenlos).</p></div>' + wQuelle(g);
+      var ss = g.text.split(/(?<=\.)\s+(?=[A-ZÄÖÜ])/).filter(function (x) { return !/Hotline/.test(x); });
+      var naechst = ss.filter(function (x) { return /Nächster|nächste/.test(x); });
+      var rest = ss.filter(function (x) { return naechst.indexOf(x) < 0; });
+      var top = naechst.length ? '<p class="bs-gruen-next"><strong>📅 ' + esc(naechst.join(' ').replace(/^Nächster Grünschnitt-Termin:\s*/, 'Nächster Termin: ').replace(/\.$/, '')) + '</strong></p>' : '';
+      var zeiten = rest.filter(function (x) { return /Annahmezeiten|Uhr/.test(x); }), ort = rest.filter(function (x) { return zeiten.indexOf(x) < 0; });
+      return '<div class="bs-hit"><h3>Grünschnitt am Bauhof</h3>' + top + (zeiten.length ? '<p>🕘 ' + esc(zeiten.join(' ')) + '</p>' : '') + (ort.length ? '<p>📍 ' + esc(ort.join(' ')) + '</p>' : '') + '<p>Fragen zur Müllabfuhr: Hotline 0800 9600100 (kostenlos).</p></div>' + wQuelle(g);
     }
     if (/notfall,|notruf|apotheke|notdienst|bereitschaft|ärzte|arzt|116 ?117|zahnarzt|giftnotruf|störungsdienst/.test(l)) {
       var ap = wissen(/Apotheken-Notdienst/), nt = wissen(/Notruftafel/), nd = wissen(/Bereitschaftsdienst/);
@@ -289,7 +293,7 @@
     function breite() { if (!inn) return; inn.style.width = ''; if (getComputedStyle(inn).display !== 'flex') return; var bs = inn.querySelectorAll('.bs-example'), sum = 0, max = 0; bs.forEach(function (b) { var w = b.getBoundingClientRect().width + 8; sum += w; if (w > max) max = w; }); inn.style.width = Math.max(ex.clientWidth, Math.ceil(sum / 2 + max)) + 'px'; }
     breite(); window.addEventListener('resize', function () { breite(); ende(); }); if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { breite(); ende(); });
     function ende() { ex.classList.toggle('am-ende', ex.scrollLeft + ex.clientWidth >= ex.scrollWidth - 4); } ex.addEventListener('scroll', ende, { passive: true }); window.addEventListener('resize', ende); ende(); })();
-  box.querySelectorAll('.bs-example').forEach(function (b) { b.addEventListener('click', function () { input.value = b.textContent; antworten(input.value); }); });
+  box.querySelectorAll('button.bs-example').forEach(function (b) { b.addEventListener('click', function () { input.value = b.textContent; antworten(input.value); }); });
   input.addEventListener('focus', laden, { once: true });
   var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SR) { mic.hidden = true; } else {

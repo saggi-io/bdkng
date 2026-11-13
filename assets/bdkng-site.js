@@ -59,10 +59,32 @@
 (function () {
   var TEXT = 'Kennst du schon BDKNG? Dein Info-Kanal rund um Bad König: News, Termine, Müll, Verkehr, KI-Suche und der Blitzer- & Stau-Melder.';
   var URL = 'https://bdkng.de/';
+  var menu = null;
+  function schliessen() { if (menu) { menu.remove(); menu = null; document.removeEventListener('click', aussen, true); } }
+  function aussen(ev) { if (menu && !menu.contains(ev.target)) schliessen(); }
   function teilen(e) {
-    if (e) e.preventDefault();
-    if (navigator.share) { navigator.share({ title: 'BDKNG – Bad König kompakt', text: TEXT, url: URL }).catch(function () {}); return; }
-    window.open('https://wa.me/?text=' + encodeURIComponent(TEXT + ' ' + URL), '_blank', 'noopener');
+    if (e) { e.preventDefault(); e.stopPropagation(); }
+    var mobil = window.matchMedia && matchMedia('(pointer: coarse)').matches;
+    if (mobil && navigator.share) { navigator.share({ title: 'BDKNG – Bad König kompakt', text: TEXT, url: URL }).catch(function () {}); return; }
+    if (menu) { schliessen(); return; }
+    var t = encodeURIComponent(TEXT + ' ' + URL);
+    menu = document.createElement('div');
+    menu.setAttribute('role', 'dialog'); menu.setAttribute('aria-label', 'BDKNG weiterempfehlen');
+    menu.style.cssText = 'position:fixed;z-index:9999;left:50%;top:50%;transform:translate(-50%,-50%);background:#fff;color:#10201a;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.35);padding:18px 18px 12px;width:min(320px,90vw);font:15px/1.4 Inter,system-ui,sans-serif';
+    var b = 'display:block;padding:11px 14px;margin:0 0 8px;border-radius:12px;background:#edf5ec;color:#10201a;text-decoration:none;font-weight:700;border:0;width:100%;text-align:left;cursor:pointer;font:inherit;font-weight:700';
+    menu.innerHTML = '<p style="margin:0 0 12px;font-weight:800">💚 BDKNG weiterempfehlen</p>' +
+      '<a style="' + b + '" target="_blank" rel="noopener" href="https://wa.me/?text=' + t + '">WhatsApp</a>' +
+      '<a style="' + b + '" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(URL) + '">Facebook</a>' +
+      '<a style="' + b + '" href="mailto:?subject=' + encodeURIComponent('Tipp: BDKNG – Bad König kompakt') + '&body=' + t + '">E-Mail</a>' +
+      '<button type="button" data-k style="' + b + '">Link kopieren</button>' +
+      (navigator.share ? '<button type="button" data-s style="' + b + '">Weitere Apps …</button>' : '') +
+      '<button type="button" data-x style="' + b + ';background:none;text-align:center;font-weight:600">Schließen</button>';
+    document.body.appendChild(menu);
+    menu.querySelector('[data-k]').addEventListener('click', function () { var k = this; (navigator.clipboard ? navigator.clipboard.writeText(TEXT + ' ' + URL) : Promise.reject()).then(function () { k.textContent = '✔ Kopiert'; }).catch(function () { prompt('Link kopieren:', URL); }); });
+    var sb = menu.querySelector('[data-s]'); if (sb) sb.addEventListener('click', function () { navigator.share({ title: 'BDKNG', text: TEXT, url: URL }).catch(function () {}); schliessen(); });
+    menu.querySelector('[data-x]').addEventListener('click', schliessen);
+    menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setTimeout(schliessen, 100); }); });
+    setTimeout(function () { document.addEventListener('click', aussen, true); }, 0);
   }
   function init() {
     document.querySelectorAll('[data-bdkng-share]').forEach(function (b) { b.addEventListener('click', teilen); });
