@@ -73,3 +73,13 @@
 .kosten-strip .kosten-balken i{display:block;height:100%;width:0;background:linear-gradient(90deg,#1B4D2E,#e8b84a);transition:width .6s}
 .kosten-strip .ks-sp{color:#555;white-space:nowrap}
 .kosten-strip .ks-btn{background:#e8b84a;color:#173120;font-weight:800;border-radius:999px;padding:4px 12px;white-space:nowrap}
+
+/* Handy: Häufige Fragen als 2-zeilige Wischleiste statt langer Liste (13.11.2026) */
+.bs-ex-inner{display:contents}
+@media(max-width:600px){
+.bs .bs-examples{display:block;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:14px 0 0;padding:2px 0 8px;-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+.bs .bs-examples::-webkit-scrollbar{display:none}
+.bs .bs-ex-inner{display:flex;flex-wrap:wrap;gap:8px;width:1100px}
+.bs .bs-example{white-space:nowrap;font-size:14px;padding:9px 14px}
+.bs .bs-examples.am-ende{-webkit-mask-image:none;mask-image:none}
+}

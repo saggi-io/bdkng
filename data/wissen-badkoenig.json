@@ -4,7 +4,7 @@
  "eintraege": [
   {
    "titel": "Öffnungszeiten der Stadtverwaltung Bad König",
-   "text": "Montag 8:30–12:00 und 13:00–16:00 Uhr. Dienstag 8:30–12:00 Uhr. Mittwoch 8:30–12:00 Uhr. Donnerstag 8:30–12:00 und 13:00–18:00 Uhr. Freitag 8:30–12:00 Uhr. Adresse: Schloßplatz 3, 64732 Bad König. E-Mail: stadtverwaltung@badkoenig.de.",
+   "text": "Montag 8:30–12:00 und 13:00–16:00 Uhr. Dienstag 8:30–12:00 Uhr. Mittwoch 8:30–12:00 Uhr. Donnerstag 8:30–12:00 und 13:00–18:00 Uhr. Freitag 8:30–12:00 Uhr. Adresse: Schloßplatz 3, 64732 Bad König. E-Mail: stadtverwaltung@badkoenig.de. Zentrale Telefonnummer der Stadtverwaltung: 06063 5009-0.",
    "url": "https://www.badkoenig.de/rathaus-service/rathaus-buergerservice/ansprechpersonen/"
   },
   {
@@ -78,6 +78,11 @@
    "titel": "Bevölkerungsschutz Bad König",
    "text": "Die Stadt Bad König arbeitet im Bevölkerungsschutz eng mit Feuerwehr, Rettungsdiensten, THW und Freiwilligen zusammen: Vorsorge, Warnung und Information, koordiniertes Handeln im Ernstfall. Themen der Stadt: Stromausfall, Afrikanische Schweinepest, Warntag. Weitere Infos beim Bundesamt für Bevölkerungsschutz (bbk.bund.de).",
    "url": "https://www.badkoenig.de/leben-wohnen/schutz-hilfe/bevoelkerungsschutz/"
+  },
+  {
+   "titel": "Feste und Märkte im Jahreslauf in Bad König",
+   "text": "Wiederkehrende Feste und Märkte in Bad König (genaue Termine stehen jeweils im Veranstaltungskalender der Stadt): Nikolausmarkt im Bereich der beiden Schlösser, traditionell am dritten Adventswochenende. Christmas Lights im Kurpark mit Lichtinstallationen in der Adventszeit bis Anfang Januar. Pfingstmarkt am Pfingstmontag. Bad Königer Kerb (Kinnicher Kerb), ausgerichtet vom Förderverein TSG Bad König Fußball. Se(h)e-Flohmarkt am Kurparksee (Werkstraße/An den Seen). Ist ein Termin für das laufende Jahr nicht bestätigt, sag das deutlich und verweise auf den Veranstaltungskalender https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/.",
+   "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/"
   }
  ]
 }

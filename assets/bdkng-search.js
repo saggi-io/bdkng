@@ -24,7 +24,8 @@
       fetch('/data/news.json').then(function (r) { return r.json(); }).catch(function () { return []; }),
       fetch('/data/sport-termine.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/data/wetter-aktuell.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
-      fetch('/data/wissen-badkoenig.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.handball = a[2] && a[2].handball || []; data.la = a[2] && a[2].leichtathletik || []; data.wetter = a[3]; data.wissen = a[4] && a[4].eintraege || []; });
+      fetch('/data/wissen-badkoenig.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
+      fetch('/data/termine-kalender.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.kal = a[5] && a[5].termine || []; data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.handball = a[2] && a[2].handball || []; data.la = a[2] && a[2].leichtathletik || []; data.wetter = a[3]; data.wissen = a[4] && a[4].eintraege || []; });
     return loading;
   }
   function ortsteil(q, muell) {
@@ -67,10 +68,11 @@
     var hb = (data.handball || []).filter(function (x) { return tage.indexOf(x.date) >= 0; });
     var la = (data.la || []).filter(function (x) { return tage.indexOf(x.date) >= 0; });
     var ev = [], seen = {};
-    treffer.forEach(function (x) { if (seen[x.p] || /Handball|Fußball/.test(x.p)) return; seen[x.p] = 1; ev.push(x); });
+    (data.kal || []).forEach(function (k) { tage.forEach(function (d) { if (k.datum === d || (k.bis && k.datum <= d && k.bis >= d)) { var p = deDatum(d).replace(/\.\d{4}$/, '.') + (k.uhrzeit ? ', ' + k.uhrzeit + ' Uhr' : '') + ': ' + k.titel + (k.ort ? ' – ' + k.ort : ''); if (!seen[k.titel + d]) { seen[k.titel + d] = 1; ev.push({ p: p, n: null, k: k.titel.slice(0, 25) }); } } }); });
+    treffer.forEach(function (x) { if (seen[x.p] || /Handball|Fußball/.test(x.p) || ev.some(function (e) { return e.k && x.p.indexOf(e.k) >= 0; })) return; seen[x.p] = 1; ev.push(x); });
     if (!ev.length && !fb.length && !hb.length && !la.length) return '<p>' + (/heute/.test(l) ? 'Für heute habe ich keine Termine gefunden.' : 'Dafür habe ich keine Termine gefunden.') + ' Alle kommenden Termine findest du unter <a href="/termine.html">Termine &amp; Veranstaltungen</a>.</p>';
     var h = '<p><strong>📅 Veranstaltungen</strong></p>';
-    h += ev.length ? '<ul>' + ev.map(function (x) { return '<li>' + esc(x.p) + '</li>'; }).join('') + '</ul><p class="bs-src">Quelle: <a href="/termine.html">Termine &amp; Veranstaltungen</a> (Stadt Bad König, Stadtnachrichten)</p>' : '<p>Keine Veranstaltungen eingetragen.</p>';
+    h += ev.length ? '<ul>' + ev.map(function (x) { return '<li>' + esc(x.p) + '</li>'; }).join('') + '</ul><p class="bs-src">Quellen: <a href="https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/" target="_blank" rel="noopener">Veranstaltungskalender der Stadt Bad König</a>, <a href="/termine.html">BDKNG Termine</a> (Stadtnachrichten)</p>' : '<p>Keine Veranstaltungen eingetragen.</p>';
     if (fb.length || hb.length || la.length) {
       h += '<p><strong>🏆 Sport</strong></p><ul>';
       fb.forEach(function (x) { h += '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr: ⚽ ' + esc(x.home) + ' – ' + esc(x.away) + '</li>'; });
@@ -268,6 +270,10 @@
   })();
   form.addEventListener('submit', function (e) { e.preventDefault(); antworten(input.value); });
   out.addEventListener('click', function (e) { var b = e.target.closest('.bs-chip'); if (b) { input.value = b.getAttribute('data-q'); antworten(input.value); } });
+  (function () { var ex = box.querySelector('.bs-examples'), inn = box.querySelector('.bs-ex-inner'); if (!ex) return;
+    function breite() { if (!inn) return; inn.style.width = ''; if (getComputedStyle(inn).display !== 'flex') return; var bs = inn.querySelectorAll('.bs-example'), sum = 0, max = 0; bs.forEach(function (b) { var w = b.getBoundingClientRect().width + 8; sum += w; if (w > max) max = w; }); inn.style.width = Math.max(ex.clientWidth, Math.ceil(sum / 2 + max)) + 'px'; }
+    breite(); window.addEventListener('resize', function () { breite(); ende(); }); if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { breite(); ende(); });
+    function ende() { ex.classList.toggle('am-ende', ex.scrollLeft + ex.clientWidth >= ex.scrollWidth - 4); } ex.addEventListener('scroll', ende, { passive: true }); window.addEventListener('resize', ende); ende(); })();
   box.querySelectorAll('.bs-example').forEach(function (b) { b.addEventListener('click', function () { input.value = b.textContent; antworten(input.value); }); });
   input.addEventListener('focus', laden, { once: true });
   var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
