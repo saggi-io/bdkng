@@ -1,0 +1,209 @@
+{
+ "stand": "2026-11-13T12:10",
+ "fest_quelle": "© OpenStreetMap-Mitwirkende (ODbL), https://www.openstreetmap.org/copyright",
+ "messstellen_quelle": "Polizeipräsidium Südhessen über Presseportal, https://www.presseportal.de/blaulicht/nr/4969",
+ "hinweis": "Feste Blitzer im Umkreis von etwa 15 km um Bad König laut OpenStreetMap, ohne Gewähr. Mobile Kontrollen sind jederzeit und überall möglich.",
+ "fest": [
+  {
+   "lat": 49.75877,
+   "lon": 8.99881,
+   "tempo": "50",
+   "richtung": "10",
+   "art": "Tempo",
+   "strasse": "Theodor-Heuss-Straße",
+   "ref": "B 45",
+   "ort": "Bad König"
+  },
+  {
+   "lat": 49.75896,
+   "lon": 8.99909,
+   "tempo": "50",
+   "richtung": "190",
+   "art": "Tempo",
+   "strasse": "Theodor-Heuss-Straße",
+   "ref": "B 45",
+   "ort": "Bad König"
+  },
+  {
+   "lat": 49.65832,
+   "lon": 8.99529,
+   "tempo": "30",
+   "richtung": "180",
+   "art": "Tempo",
+   "strasse": "Am Pfarrgarten",
+   "ref": "B 45",
+   "ort": "Erbach"
+  },
+  {
+   "lat": 49.65802,
+   "lon": 8.99533,
+   "tempo": "",
+   "richtung": "340",
+   "art": "Tempo",
+   "strasse": "Am Pfarrgarten",
+   "ref": "B 45",
+   "ort": "Erbach"
+  },
+  {
+   "lat": 49.65773,
+   "lon": 8.99531,
+   "tempo": "30",
+   "richtung": "20",
+   "art": "Tempo",
+   "strasse": "Wilhelm-Leuschner-Straße",
+   "ref": "B 45",
+   "ort": "Erbach"
+  },
+  {
+   "lat": 49.73429,
+   "lon": 8.85153,
+   "tempo": "60",
+   "richtung": "",
+   "art": "Tempo",
+   "strasse": "",
+   "ref": "K 75",
+   "ort": "Fränkisch-Crumbach"
+  },
+  {
+   "lat": 49.74748,
+   "lon": 8.86732,
+   "tempo": "50",
+   "richtung": "",
+   "art": "Tempo",
+   "strasse": "Georg-Büchner-Straße",
+   "ref": "K 75",
+   "ort": "Fränkisch-Crumbach"
+  },
+  {
+   "lat": 49.81346,
+   "lon": 8.97056,
+   "tempo": "60",
+   "richtung": "50",
+   "art": "Tempo",
+   "strasse": "",
+   "ref": "B 45;B 426",
+   "ort": "Höchst im Odenwald"
+  },
+  {
+   "lat": 49.81404,
+   "lon": 8.97158,
+   "tempo": "70",
+   "richtung": "240",
+   "art": "Tempo",
+   "strasse": "",
+   "ref": "B 45;B 426",
+   "ort": "Höchst im Odenwald"
+  },
+  {
+   "lat": 49.79318,
+   "lon": 8.99085,
+   "tempo": "30",
+   "richtung": "",
+   "art": "Tempo",
+   "strasse": "Bismarckstraße",
+   "ref": "",
+   "ort": "Höchst im Odenwald"
+  },
+  {
+   "lat": 49.79695,
+   "lon": 8.99794,
+   "tempo": "50",
+   "richtung": "0",
+   "art": "Tempo",
+   "strasse": "Erbacher Straße",
+   "ref": "B 426",
+   "ort": "Höchst im Odenwald"
+  },
+  {
+   "lat": 49.77224,
+   "lon": 8.99212,
+   "tempo": "50",
+   "richtung": "175",
+   "art": "Tempo",
+   "strasse": "Friedhofsweg",
+   "ref": "B 45",
+   "ort": "Höchst im Odenwald"
+  },
+  {
+   "lat": 49.77102,
+   "lon": 8.99211,
+   "tempo": "50",
+   "richtung": "8",
+   "art": "Tempo",
+   "strasse": "Kreuzweg",
+   "ref": "B 45",
+   "ort": "Höchst im Odenwald"
+  },
+  {
+   "lat": 49.80822,
+   "lon": 9.00356,
+   "tempo": "",
+   "richtung": "",
+   "art": "Tempo",
+   "strasse": "Sandbacher Straße",
+   "ref": "K 212",
+   "ort": "Höchst im Odenwald"
+  },
+  {
+   "lat": 49.79892,
+   "lon": 8.99533,
+   "tempo": "30",
+   "richtung": "",
+   "art": "Tempo",
+   "strasse": "Schwanenstraße",
+   "ref": "",
+   "ort": "Höchst im Odenwald"
+  },
+  {
+   "lat": 49.68516,
+   "lon": 8.99193,
+   "tempo": "50",
+   "richtung": "",
+   "art": "Tempo",
+   "strasse": "Am Hang",
+   "ref": "K 50",
+   "ort": "Michelstadt"
+  },
+  {
+   "lat": 49.66898,
+   "lon": 9.00391,
+   "tempo": "",
+   "richtung": "",
+   "art": "Tempo",
+   "strasse": "Am Spritzenhaus",
+   "ref": "B 47",
+   "ort": "Michelstadt"
+  },
+  {
+   "lat": 49.68545,
+   "lon": 8.9943,
+   "tempo": "50",
+   "richtung": "",
+   "art": "Tempo",
+   "strasse": "Brückenstraße",
+   "ref": "B 47",
+   "ort": "Michelstadt"
+  },
+  {
+   "lat": 49.8359,
+   "lon": 8.89655,
+   "tempo": "50",
+   "richtung": "250",
+   "art": "Tempo",
+   "strasse": "Reinheimer Straße",
+   "ref": "B 426",
+   "ort": "Otzberg"
+  },
+  {
+   "lat": 49.73608,
+   "lon": 8.87219,
+   "tempo": "50",
+   "richtung": "",
+   "art": "Tempo",
+   "strasse": "Gersprenztalstraße",
+   "ref": "B 38",
+   "ort": "Reichelsheim (Odenwald)"
+  }
+ ],
+ "messstellen": []
+}
