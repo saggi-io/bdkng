@@ -1,14 +1,14 @@
 {
- "aktualisiert": "2026-11-13T08:00",
+ "aktualisiert": "2026-11-13T10:00",
  "ort": "Bad König",
  "quelle": "Bright Sky (Deutscher Wetterdienst)",
  "quelle_url": "https://brightsky.dev/",
  "jetzt": {
-  "temp": 1,
-  "icon": "clear-night",
+  "temp": 3,
+  "icon": "partly-cloudy-day",
   "condition": "dry",
-  "wind": 10,
-  "boen": 18,
+  "wind": 9,
+  "boen": 17,
   "regen_h": 0
  },
  "tage": [
