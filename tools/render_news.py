@@ -20,7 +20,21 @@ def render(n):
 outputs={}
 for slug in categories:
  path=root/(slug+'.html');text=path.read_text(encoding='utf-8')
- items=sorted((n for n in news if slug in n['categories']),key=lambda n:n['checked'],reverse=True)
+ if slug=='wichtig':
+  # Wichtiges: eigene Einträge plus aktuelle Polizei-, Feuerwehr-, Warn- und Sperrungsmeldungen (letzte 7 Tage)
+  from datetime import date,timedelta
+  grenze=(date.today()-timedelta(days=7)).isoformat()
+  WICHTIG=re.compile(r'(Polizei|Feuerwehr|Brand|Unfall|Vollsperrung|gesperrt|Warnung|Unwetter|Hochwasser|Störung|Stromausfall|Wasserrohrbruch|Evakuierung|Zeugen)',re.I)
+  items=[n for n in news if 'wichtig' in n['categories'] or (n['checked']>=grenze and (WICHTIG.search(n['source']+' '+n['title'])))]
+ else:
+  items=[n for n in news if slug in n['categories']]
+ # Neueste zuerst; Quellen mischen, freie Quellen vor Bezahlangeboten (Echo+)
+ rang={};pos={}
+ for n in sorted(items,key=lambda n:n['checked'],reverse=True):
+  k=(n['checked'],n['source'].split(' ·')[0]);rang[k]=rang.get(k,0)+1;pos[n['id']]=rang[k]
+ from datetime import date as _d
+ # Jede weitere Meldung derselben Quelle am selben Tag rutscht ca. ein Drittel Tag nach hinten -> gemischte Liste
+ items=sorted(items,key=lambda n:_d.fromisoformat(n['checked']).toordinal()-0.6*(pos[n["id"]]-1)-(0.1 if '🔒' in n['source'] else 0),reverse=True)
  replacement='<div class="news-list">'+''.join(render(n) for n in items)+'</div><p class="editorial-note">'
  updated,count=re.subn(r'<div class="news-list">.*?</div><p class="editorial-note">',lambda m:replacement,text,flags=re.S)
  if count!=1:raise ValueError('Rubric template not found: '+slug)
