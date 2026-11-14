@@ -1,5 +1,27 @@
 [
   {
+    "id": "2026-11-14-termine",
+    "checked": "2026-11-14",
+    "valid_until": "2026-11-21",
+    "categories": [
+      "termine"
+    ],
+    "title": "TERMINE & VERANSTALTUNGEN · Das Wochenende",
+    "paragraphs": [
+      "• Samstag, 14.11., 15:00 Uhr: Fußball (Kreisliga A): FV Mümling-Grumbach – SG Bad König/Zell",
+      "• Samstag, 14.11., 19:00 Uhr: \"Die Eisfalle\" - Die arktische Odyssee der Tegetthoff – Rentmeisterei Bad König, Schlossplatz 2",
+      "• Sonntag, 15.11., 10:30 Uhr: Heimatmuseum Bad König – Schlosshof, Schlossplatz 3 (Heimat- und Geschichtsverein Bad König e.V.)",
+      "• Sonntag, 15.11., 13:00 Uhr: Fußball (Kreisliga B): SG Sandbach II – SG Bad König/Zell II",
+      "• Sonntag, 15.11., 14:00 Uhr: Handball (Frauen): HSG Bachgau III – HSG Odenwald II",
+      "• Sonntag, 15.11., 14:00 Uhr: Handball (Männer): HSG Bachgau IV – HSG Odenwald III",
+      "• Sonntag, 15.11., 16:00 Uhr: Handball (Männer): HSG Bachgau II – HSG Odenwald",
+      "• Sonntag, 15.11., 18:00 Uhr: Handball (Männer): TV Niedernberg – HSG Odenwald II",
+      "Änderungen bitte beim Veranstalter prüfen. Quellen: Stadt Bad König, Veranstaltungskalender; FuPa (Fußball); nuLiga (Handball) https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/ Stand: 14.11.2026. Automatisch zusammengestellt."
+    ],
+    "source": "Stadt Bad König, Veranstaltungskalender; FuPa (Fußball); nuLiga (Handball)",
+    "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/"
+  },
+  {
     "id": "medien-2026-11-13-258893938",
     "checked": "2026-11-10",
     "valid_until": "2026-11-20",
@@ -168,28 +190,6 @@
     "title": "B 45: Ersatzneubau der Unterführung Mümling bei Bad König",
     "url": "https://mobil.hessen.de/presse/b-45-ersatzneubau-der-unterfuehrung-muemling-bei-bad-koenig-0",
     "valid_until": "2026-11-26"
-  },
-  {
-    "categories": [
-      "termine"
-    ],
-    "checked": "2026-11-12",
-    "id": "2026-11-12-termine",
-    "paragraphs": [
-      "• Samstag, 14.11., 15:00 Uhr: Fußball (Kreisliga A): FV Mümling-Grumbach – SG Bad König/Zell",
-      "• Samstag, 14.11., 19:00 Uhr: \"Die Eisfalle\" - Die arktische Odyssee der Tegetthoff – Rentmeisterei Bad König, Schlossplatz 2. Eintritt frei",
-      "• Sonntag, 15.11., 10:30 Uhr: Heimatmuseum Bad König – Schlosshof, Schlossplatz 3 (Heimat- und Geschichtsverein Bad König e.V.). Eintritt frei",
-      "• Sonntag, 15.11., 12:30 Uhr: Fußball (Kreisliga B): SG Sandbach II – SG Bad König/Zell II",
-      "• Sonntag, 15.11., 14:00 Uhr: Handball (Frauen): HSG Bachgau III – HSG Odenwald II",
-      "• Sonntag, 15.11., 14:00 Uhr: Handball (Männer): HSG Bachgau IV – HSG Odenwald III",
-      "• Sonntag, 15.11., 16:00 Uhr: Handball (Männer): HSG Bachgau II – HSG Odenwald",
-      "• Sonntag, 15.11., 18:00 Uhr: Handball (Männer): TV Niedernberg – HSG Odenwald II",
-      "Änderungen bitte beim Veranstalter prüfen. Quellen: Stadt Bad König, Veranstaltungskalender; FuPa (Fußball); nuLiga (Handball). Stand: 12.11.2026."
-    ],
-    "source": "Stadt Bad König, Veranstaltungskalender; FuPa (Fußball); nuLiga (Handball)",
-    "title": "TERMINE & VERANSTALTUNGEN · Das Wochenende",
-    "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/",
-    "valid_until": "2026-11-19"
   },
   {
     "categories": [
