@@ -1,6 +1,6 @@
 {
- "stand": "2026-11-13",
- "hinweis": "Laufende Kosten von BDKNG pro Monat. KI-Kosten werden täglich aus dem Verbrauch der KI-Suche übernommen.",
+ "stand": "2026-11-14",
+ "hinweis": "Laufende Kosten von BDKNG pro Monat. KI-Kosten werden täglich aus dem gemessenen Verbrauch aller BDKNG-Abläufe übernommen.",
  "posten": [
   {
    "name": "Server (IONOS VPS)",
@@ -11,8 +11,8 @@
    "monat": 7.5
   },
   {
-   "name": "KI für Suche und Zusammenfassungen (gemessen, laufender Monat)",
-   "monat": 1.18
+   "name": "KI für Suche, Termine, Sport und Wissen (gemessen, laufender Monat)",
+   "monat": 1.17
   }
  ],
  "spenden_monat": 10,
