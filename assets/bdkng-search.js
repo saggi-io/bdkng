@@ -268,7 +268,7 @@
   }
   function ki(q, fb) {
     out.innerHTML = '<p class="bs-load">Ich schaue genauer nach …</p>';
-    var c = new AbortController(), t = setTimeout(function () { c.abort(); }, 40000);
+    var c = new AbortController(), t = setTimeout(function () { c.abort(); }, 75000);
     fetch('https://n8n.sagmeister.io/webhook/bdkng-frage', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: q }), signal: c.signal })
       .then(function (r) { return r.json(); }).then(function (j) {
         clearTimeout(t);
