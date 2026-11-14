@@ -71,20 +71,6 @@
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/erbach-odenwaldkreis/warum-mitarbeiter-wie-tom-fuer-kliniken-unentbehrlich-sind-6674087"
   },
   {
-    "id": "medien-2026-11-13-236820735",
-    "checked": "2026-11-13",
-    "valid_until": "2026-11-23",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Hohe Kosten: Immer weniger Odenwälder Wirte bieten Gänse an",
-    "paragraphs": [
-      "Wer im Odenwald Martinsgans essen möchte, sollte rechtzeitig reservieren. Viele Wirte setzen auf heimische Tiere – doch hohe Kosten lassen das Angebot schrumpfen."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/landkreis-odenwaldkreis/odenwaelder-gastronomie-setzt-auf-deutsche-gaense-6698408"
-  },
-  {
     "id": "medien-2026-11-13-262590224",
     "checked": "2026-11-13",
     "valid_until": "2026-11-23",
@@ -117,21 +103,6 @@
     ],
     "source": "Bad Königer Stadtnachrichten (meinOrt)",
     "url": "https://meinort.de/neues/2173-2026-47-0-00000000000055429269?ort=2307"
-  },
-  {
-    "id": "2026-11-12-wetter",
-    "checked": "2026-11-12",
-    "valid_until": "2026-11-15",
-    "categories": [
-      "wetter"
-    ],
-    "title": "WETTER · Die nächsten 3 Tage",
-    "paragraphs": [
-      "Freitag, 13.11.: wechselnd bewölkt, 1 bis 6 °C  Samstag, 14.11.: wechselnd bewölkt, 0 bis 6 °C. Frost möglich  Sonntag, 15.11.: bedeckt, 0 bis 9 °C",
-      "Amtliche WARNUNG vor FROST (Fr 00:00 bis Fr 09:00 Uhr)"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
-    "url": "https://bdkng.de"
   },
   {
     "id": "medien-2026-11-12-256931796",
