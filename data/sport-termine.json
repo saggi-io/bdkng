@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-13T06:00",
+ "stand": "2026-11-14T06:00",
  "quelle": "FuPa, nuLiga, HLV Kreis Odenwald",
  "spiele": [
   {
@@ -525,6 +525,38 @@
    "team": "Männer",
    "home": "HSG Odenwald II",
    "away": "TV Bürgstadt"
+  },
+  {
+   "date": "2026-11-28",
+   "time": "15:30",
+   "liga": "F-BL",
+   "team": "Frauen",
+   "home": "HSG Odenwald II",
+   "away": "HSG Sulzbach/Leidersbach II"
+  },
+  {
+   "date": "2026-11-28",
+   "time": "17:30",
+   "liga": "F-BOL",
+   "team": "Frauen",
+   "home": "HSG Odenwald",
+   "away": "HSG Sulzbach/Leidersbach"
+  },
+  {
+   "date": "2026-11-28",
+   "time": "17:30",
+   "liga": "M-BK-2",
+   "team": "Männer",
+   "home": "HSG Stockstadt/Mainaschaff II",
+   "away": "HSG Odenwald III"
+  },
+  {
+   "date": "2026-11-28",
+   "time": "19:30",
+   "liga": "M-BOL",
+   "team": "Männer",
+   "home": "HSG Odenwald",
+   "away": "HSG Sulzbach/Leidersbach"
   }
  ],
  "leichtathletik": [
