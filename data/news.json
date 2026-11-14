@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-14-264403412",
+    "checked": "2026-11-10",
+    "valid_until": "2026-11-20",
+    "categories": [
+      "aktuell",
+      "termine"
+    ],
+    "title": "Adventsbasar in der Rentmeisterei",
+    "paragraphs": [
+      "Die Aktion „Behindertes Kind Odenwaldkreis“ und das Teilhabezentrum Odenwald veranstalten am Sonntag, 22. November, von 11 bis 17 Uhr einen Adventsbasar in der Rentmeisterei Bad Kö"
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/adventsbasar-in-der-rentmeisterei-6784021"
+  },
+  {
     "id": "medien-2026-11-14-264409394",
     "checked": "2026-11-10",
     "valid_until": "2026-11-20",
@@ -270,21 +285,6 @@
     ],
     "source": "FuPa",
     "url": "https://www.fupa.net/club/tsg-bad-koenig"
-  },
-  {
-    "id": "echo-2026-11-10-adventsbasar",
-    "checked": "2026-11-10",
-    "valid_until": "2026-11-22",
-    "categories": [
-      "aktuell",
-      "termine"
-    ],
-    "title": "Adventsbasar in der Rentmeisterei",
-    "paragraphs": [
-      "Die Aktion „Behindertes Kind Odenwaldkreis“ und das Teilhabezentrum Odenwald laden am Sonntag, 22. November, von 11 bis 17 Uhr zum Adventsbasar in der Rentmeisterei Bad König ein."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/adventsbasar-in-der-rentmeisterei-6784021"
   },
   {
     "id": "stadt-2026-11-10-gewaesserentwicklung",
