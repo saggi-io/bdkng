@@ -28,7 +28,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:f56b18daa85f87801de2@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261114T190000
 DTEND;TZID=Europe/Berlin:20261114T210000
 SUMMARY:"Die Eisfalle" - Die arktische Odyssee der Tegetthoff
@@ -42,7 +42,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:9c4929640bcb12735275@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261115T103000
 DTEND;TZID=Europe/Berlin:20261115T123000
 SUMMARY:Heimatmuseum Bad König
@@ -56,7 +56,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:51b65acb4de1bbead424@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261120T120000
 DTEND;TZID=Europe/Berlin:20261120T140000
 SUMMARY:Orgel um 12
@@ -70,7 +70,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:46b008aac8e34800f584@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261121T120000
 DTEND;TZID=Europe/Berlin:20261121T140000
 SUMMARY:TECMUMAS Technikmuseum Bad König
@@ -85,7 +85,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:b2388642c9643fe3c954@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261122T120000
 DTEND;TZID=Europe/Berlin:20261122T140000
 SUMMARY:TECMUMAS Technikmuseum Bad König
@@ -100,7 +100,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:d7ea024cef1c9406257a@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261126T143000
 DTEND;TZID=Europe/Berlin:20261126T163000
 SUMMARY:Seniorennachmittag der AWO Tagespflege
@@ -112,7 +112,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:fe64962d8cf1e3ba6eb7@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261128T163000
 DTEND;TZID=Europe/Berlin:20261128T183000
 SUMMARY:Weihnachtsmarkt Kimbach
@@ -125,7 +125,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:9d65fb6313081a92826c@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261128T180000
 DTEND;TZID=Europe/Berlin:20261128T200000
 SUMMARY:Offenes Singen der NaturFreunde Bad König
@@ -139,7 +139,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:a8a0fc949cebb24aad4a@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261129T140000
 DTEND;TZID=Europe/Berlin:20261129T160000
 SUMMARY:Tanz & Tee
@@ -152,7 +152,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:a256d93c87cd218c5b97@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261205T160000
 DTEND;TZID=Europe/Berlin:20261205T180000
 SUMMARY:Weihnachtsmarkt mit Nikolaustag
@@ -165,7 +165,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:99b15d67dd69f353ca5a@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261206T103000
 DTEND;TZID=Europe/Berlin:20261206T123000
 SUMMARY:Heimatmuseum Bad König
@@ -179,7 +179,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:1e96ffff26a31f93db91@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261206T140000
 DTEND;TZID=Europe/Berlin:20261206T160000
 SUMMARY:Tanz & Tee
@@ -192,7 +192,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:13443791094e4229bb1a@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261214
 SUMMARY:Nikolausmarkt Bad König 2026
@@ -204,7 +204,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:cf573853b9d4b82922d4@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261214
 SUMMARY:Nikolausmarkt in und um die Rentmeisterei/Freilichtbühne
@@ -217,7 +217,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:1ad15c228ffbb7309b09@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261211T190000
 DTEND;TZID=Europe/Berlin:20261211T210000
 SUMMARY:Musikalische Adventsandacht
@@ -230,7 +230,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:83a6bfc6ea4b559f014c@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261217T143000
 DTEND;TZID=Europe/Berlin:20261217T163000
 SUMMARY:Adventscafé im Rahmen des Seniorennachmittags der AWO Tagespflege
@@ -242,7 +242,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:032fb030b9d75d80034c@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261219T120000
 DTEND;TZID=Europe/Berlin:20261219T140000
 SUMMARY:TECMUMAS Technikmuseum Bad König
@@ -257,7 +257,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:680a8f88118a72f9df1a@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261220T103000
 DTEND;TZID=Europe/Berlin:20261220T123000
 SUMMARY:Heimatmuseum Bad König
@@ -271,7 +271,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:4fa3e4628531646cdf52@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261220T120000
 DTEND;TZID=Europe/Berlin:20261220T140000
 SUMMARY:TECMUMAS Technikmuseum Bad König
@@ -286,7 +286,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:f8d8e4aa94af426dec30@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261220T140000
 DTEND;TZID=Europe/Berlin:20261220T160000
 SUMMARY:Tanz & Tee
@@ -299,7 +299,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:c73e9eed52319ccd19d5@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261226T180000
 DTEND;TZID=Europe/Berlin:20261226T200000
 SUMMARY:Offenes Singen der NaturFreunde Bad König
@@ -313,7 +313,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:ce33a68756974faeb993@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;VALUE=DATE:20261227
 DTEND;VALUE=DATE:20261231
 SUMMARY:Silvesterturnier der TSG Bad König\, Abt. Fußball / Förderverein
@@ -327,7 +327,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:93b2882b3541f8f9efa5@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20261228T143000
 DTEND;TZID=Europe/Berlin:20261228T163000
 SUMMARY:Hüttenzauber
@@ -340,7 +340,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:f65bb25d1de07ef617d4@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20270123T193000
 DTEND;TZID=Europe/Berlin:20270123T213000
 SUMMARY:Susanne Hasenstab und Emil Emaille präsentieren: "Ochsenmaulsalat"
@@ -358,7 +358,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:fbbe51c6de93a7a98774@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20270130T141100
 DTEND;TZID=Europe/Berlin:20270130T161100
 SUMMARY:Kinderfastnacht bei der TSG Bad König
@@ -371,7 +371,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:afc3226ed984381122f6@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20270130T141100
 DTEND;TZID=Europe/Berlin:20270130T161100
 SUMMARY:Kinderfastnacht der Dorfverschönerung Ober-Kinzig/Gumpersberg
@@ -384,7 +384,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:b5cf9cc37cf44892df84@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20270130T201100
 DTEND;TZID=Europe/Berlin:20270130T221100
 SUMMARY:Fastnachtsparty Vol. 2 bei der TSG Bad König
@@ -401,7 +401,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:15a5a4a0af84d475e69d@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20270213T193000
 DTEND;TZID=Europe/Berlin:20270213T213000
 SUMMARY:Mark Zak präsentiert die Stand-Up-Show: "Back to UDSSR - Warum ich
@@ -419,7 +419,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:2982e3d430d6dd7a6b34@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20270312T180000
 DTEND;TZID=Europe/Berlin:20270312T200000
 SUMMARY:Kinnicher Abend in der Kinnicher Stubb
@@ -432,7 +432,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:6979cec740e31f47a1ed@bdkng.de
-DTSTAMP:20261113T110330Z
+DTSTAMP:20261114T050049Z
 DTSTART;TZID=Europe/Berlin:20270313T193000
 DTEND;TZID=Europe/Berlin:20270313T213000
 SUMMARY:Peter Brandt liest aus: "Sich ändern\, um sich treu zu bleiben. Er
