@@ -43,21 +43,6 @@
     "url": "https://meinort.de/bad-koenig/neues/veranstaltungen-2173-2026-47-0-55646358"
   },
   {
-    "id": "medien-2026-11-14-264403412",
-    "checked": "2026-11-10",
-    "valid_until": "2026-11-20",
-    "categories": [
-      "aktuell",
-      "termine"
-    ],
-    "title": "Adventsbasar in der Rentmeisterei",
-    "paragraphs": [
-      "Die Aktion „Behindertes Kind Odenwaldkreis“ und das Teilhabezentrum Odenwald veranstalten am Sonntag, 22. November, von 11 bis 17 Uhr einen Adventsbasar in der Rentmeisterei Bad Kö"
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/adventsbasar-in-der-rentmeisterei-6784021"
-  },
-  {
     "id": "medien-2026-11-14-264409394",
     "checked": "2026-11-10",
     "valid_until": "2026-11-20",
@@ -106,21 +91,6 @@
     ],
     "source": "Echo Online",
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/sabine-hofmann-stellt-ihren-neuen-krimi-in-bad-koenig-vor-6725202"
-  },
-  {
-    "id": "2026-11-13-wetter",
-    "checked": "2026-11-13",
-    "valid_until": "2026-11-16",
-    "categories": [
-      "wetter"
-    ],
-    "title": "WETTER · Die nächsten 3 Tage",
-    "paragraphs": [
-      "Samstag, 14.11.: wechselnd bewölkt, -1 bis 6 °C. Frost möglich  Sonntag, 15.11.: bedeckt, 1 bis 9 °C, Regenrisiko 31 % (ca. 1 l/m²)  Montag, 16.11.: bedeckt, 6 bis 9 °C, Regenrisiko 47 % (ca. 6 l/m²)",
-      "Amtliche WARNUNG vor FROST (Fr 20:00 bis Sa 09:00 Uhr)"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
-    "url": "https://bdkng.de"
   },
   {
     "id": "medien-2026-11-13-257913011",
@@ -467,24 +437,6 @@
     ],
     "source": "Odenwälder Journal · 5.11.2026 (Ankündigung der Freigabe); Hessen Mobil zur Sperrung",
     "url": "https://www.odw-journal.de/freie-fahrt-bei-bad-koenig-zell-ortsdurchfahrt-ab-freitagnachmittag-geoeffnet"
-  },
-  {
-    "id": "brand-brombachtal-2026-11-06",
-    "checked": "2026-11-07",
-    "valid_until": "2026-11-14",
-    "categories": [
-      "aktuell",
-      "wichtig"
-    ],
-    "title": "Brombachtal: Scheune und Wohnhaus in Birkert brennen – Feuerwehr Bad König im Einsatz",
-    "paragraphs": [
-      "Am Freitagabend (6.11.) gegen 23:40 Uhr meldeten Anwohner der Rettungsleitstelle Odenwald einen Brand einer Scheune und des angrenzenden Wohnhauses in der Pfälzer Straße in Birkert (Brombachtal).",
-      "Die Feuerwehren Brombachtal, Michelstadt, Bad König und Erbach waren im Einsatz. Die Bewohner blieben unverletzt und konnten das Haus selbstständig verlassen; die Familie kommt zunächst bei Freunden unter.",
-      "Die Höhe des Sachschadens ist noch unklar. Die Kriminalpolizei Erbach ermittelt zur Brandursache.",
-      "Laut Echo Online steht eine Familie mit fünf Kindern nach dem Brand vor dem Nichts."
-    ],
-    "source": "Polizeipräsidium Südhessen (Presseportal) · 7.11.2026; Echo Online",
-    "url": "https://www.presseportal.de/blaulicht/pm/4969/6385901"
   },
   {
     "id": "polizei-opel-ober-kinzig-2026-11-06",
