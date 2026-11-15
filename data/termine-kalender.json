@@ -1,19 +1,10 @@
 {
- "stand": "2026-11-13T08:33",
- "von": "2026-11-13",
- "bis": "2027-03-13",
+ "stand": "2026-11-15T05:30",
+ "von": "2026-11-15",
+ "bis": "2027-03-15",
  "quelle": "Stadt Bad König, Veranstaltungskalender",
  "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/",
  "termine": [
-  {
-   "datum": "2026-11-14",
-   "bis": "",
-   "uhrzeit": "19:00",
-   "titel": "\"Die Eisfalle\" - Die arktische Odyssee der Tegetthoff",
-   "ort": "Rentmeisterei Bad König, Schlossplatz 2",
-   "veranstalter": "",
-   "info": "Die filmische Rekonstruktion der ungarisch-österreichischen Polarexpertin unter der Leitung von Carl Weyprecht und Julius Payer Eintritt frei"
-  },
   {
    "datum": "2026-11-15",
    "bis": "",
