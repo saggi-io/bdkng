@@ -13,3 +13,4 @@
 @media(max-width:600px){.subhero .subhero-note{padding:12px 14px;font-size:.88rem}}
 
 .station-host iframe{height:400px;max-width:100%}@media(min-width:760px){.station-host iframe{height:360px}}
+.k-tag{font-weight:700;color:var(--green);margin:0 0 14px}.k-rubrik{font-weight:700}

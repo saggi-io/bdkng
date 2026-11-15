@@ -115,3 +115,5 @@
 .bs .bs-ex-pfeil.l{left:-12px}.bs .bs-ex-pfeil.r{right:-12px}
 }
 @media(max-width:600px){.bs .bs-ex-pfeil{display:none}}
+
+.bs-top a.bs-kompakt{text-decoration:none;color:#173120;letter-spacing:.02em;box-shadow:0 2px 0 rgba(0,0,0,.18)}.bs-top a.bs-kompakt:hover{filter:brightness(1.06)}.bs-frag{display:block;color:var(--gold);font-size:.72em;margin-top:4px}

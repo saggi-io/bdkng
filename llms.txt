@@ -2,6 +2,7 @@
 
 Privat betriebenes lokales Informationsangebot von Felix Sagmeister, für Bad König. Quellen und Prüfstand stehen an jeder Meldung.
 
+- [Neueste Meldungen kompakt](https://bdkng.de/kompakt.html)
 - [Aktuelles](https://bdkng.de/aktuell.html)
 - [Verkehr](https://bdkng.de/verkehr.html)
 - [Termine & Veranstaltungen](https://bdkng.de/termine.html)

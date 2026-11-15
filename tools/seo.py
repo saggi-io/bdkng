@@ -7,6 +7,7 @@ OG = BASE + '/assets/og-bdkng.jpg'
 SEITEN = {
  'index.html': ('', 'BDKNG – Bad König kompakt: Nachrichten, Verkehr, Termine, Müllabfuhr, Wetter und Sport aus Bad König im Odenwald. Mit KI-Suche und WhatsApp-Kanal.', 'daily', '1.0'),
  'aktuell.html': ('Aktuelles', 'Aktuelle Nachrichten aus Bad König und den Stadtteilen Zell, Kimbach, Etzen-Gesäß, Momart, Nieder- und Ober-Kinzig – kurz zusammengefasst, mit Quelle.', 'hourly', '0.9'),
+ 'kompakt.html': ('Neueste Meldungen kompakt', 'Neueste Meldungen kompakt: alles Neue des Tages aus Bad König auf einen Blick – Aktuelles, Verkehr, Termine, Sport und Wetter, mit Quelle.', 'hourly', '0.9'),
  'verkehr.html': ('Verkehr', 'Verkehr in Bad König: Staus, Unfälle, Sperrungen und Baustellen auf der B45, Zeller Brücke und Odenwaldbahn – live und mit Quelle.', 'hourly', '0.9'),
  'termine.html': ('Termine & Veranstaltungen', 'Veranstaltungen und Termine in Bad König: Was ist heute und am Wochenende los? Konzerte, Märkte, Vereinsfeste und mehr.', 'daily', '0.9'),
  'sport.html': ('Sport & Vereine', 'Sport in Bad König: Spielpläne und Ergebnisse von Fußball (SG Bad König/Zell), Handball (HSG Odenwald), Leichtathletik, Tischtennis und Tennis.', 'daily', '0.8'),
