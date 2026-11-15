@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-15T17:09",
+ "stand": "2026-11-15T17:54",
  "quelle": "FuPa, nuLiga, HLV Kreis Odenwald",
  "spiele": [
   {
@@ -543,6 +543,89 @@
    "team": "Männer",
    "home": "HSG Odenwald",
    "away": "HSG Sulzbach/Leidersbach"
+  }
+ ],
+ "handball_ergebnisse": [
+  {
+   "date": "2026-11-15",
+   "liga": "F-BL",
+   "team": "Frauen",
+   "home": "HSG Bachgau III",
+   "away": "HSG Odenwald II",
+   "hg": 18,
+   "ag": 35
+  },
+  {
+   "date": "2026-11-15",
+   "liga": "M-BK-2",
+   "team": "Männer",
+   "home": "HSG Bachgau IV",
+   "away": "HSG Odenwald III",
+   "hg": 21,
+   "ag": 21
+  },
+  {
+   "date": "2026-11-15",
+   "liga": "M-BOL",
+   "team": "Männer",
+   "home": "HSG Bachgau II",
+   "away": "HSG Odenwald",
+   "hg": 31,
+   "ag": 38
+  },
+  {
+   "date": "2026-11-15",
+   "liga": "M-BL",
+   "team": "Männer",
+   "home": "TV Niedernberg",
+   "away": "HSG Odenwald II",
+   "hg": 0,
+   "ag": 0
+  },
+  {
+   "date": "2026-11-08",
+   "liga": "F-BL",
+   "team": "Frauen",
+   "home": "HSG Odenwald II",
+   "away": "HSG Rodenstein II",
+   "hg": 31,
+   "ag": 12
+  },
+  {
+   "date": "2026-11-08",
+   "liga": "F-BOL",
+   "team": "Frauen",
+   "home": "HSG Odenwald",
+   "away": "HSG Rodenstein",
+   "hg": 44,
+   "ag": 23
+  },
+  {
+   "date": "2026-11-07",
+   "liga": "M-BK-2",
+   "team": "Männer",
+   "home": "HSG Odenwald III",
+   "away": "HSG Rodenstein III",
+   "hg": 33,
+   "ag": 22
+  },
+  {
+   "date": "2026-11-07",
+   "liga": "M-BL",
+   "team": "Männer",
+   "home": "HSG Odenwald II",
+   "away": "HSG Kahl/Kleinostheim II",
+   "hg": 38,
+   "ag": 35
+  },
+  {
+   "date": "2026-11-07",
+   "liga": "M-BOL",
+   "team": "Männer",
+   "home": "HSG Odenwald",
+   "away": "HSG Rodenstein",
+   "hg": 40,
+   "ag": 33
   }
  ],
  "leichtathletik": [
