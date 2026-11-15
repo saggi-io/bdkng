@@ -1,14 +1,7 @@
 {
- "stand": "2026-11-15T06:00",
+ "stand": "2026-11-15T16:43",
  "quelle": "FuPa, nuLiga, HLV Kreis Odenwald",
  "spiele": [
-  {
-   "date": "2026-11-15",
-   "time": "13:00",
-   "home": "SG Sandbach II",
-   "away": "SG Bad König/Zell II",
-   "team": "m2"
-  },
   {
    "date": "2026-11-22",
    "time": "13:00",
@@ -221,6 +214,14 @@
   }
  ],
  "ergebnisse": [
+  {
+   "date": "2026-11-14",
+   "home": "FV Mümling-Grumbach",
+   "away": "SG Bad König/Zell",
+   "hg": 2,
+   "ag": 4,
+   "team": "m1"
+  },
   {
    "date": "2026-11-08",
    "home": "TSV Seckmauern II",
@@ -452,14 +453,6 @@
    "hg": 0,
    "ag": 6,
    "team": "m1"
-  },
-  {
-   "date": "2026-08-02",
-   "home": "SG Bad König/Zell II",
-   "away": "SG Rimhorn/Neustadt II",
-   "hg": 2,
-   "ag": 4,
-   "team": "m2"
   }
  ],
  "handball": [
