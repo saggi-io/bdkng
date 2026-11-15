@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-11-15-sport",
+    "checked": "2026-11-15",
+    "valid_until": "2026-11-22",
+    "categories": [
+      "sport",
+      "termine"
+    ],
+    "title": "FUSSBALL · Die Ergebnisse vom Wochenende",
+    "paragraphs": [
+      "Fußball\n• Sa 14.11. · SG 1a: FV Mümling-Grumbach – SG Bad König/Zell 2:4\n• So 15.11. · SG 1b: SG Sandbach II – SG Bad König/Zell II 3:4",
+      "Nächste Fußballspiele\n• So 22.11., 13:00 Uhr: SG Bad König/Zell II – SV Beerfelden\n• So 22.11., 15:00 Uhr: SG Bad König/Zell – SV Gammelsbach"
+    ],
+    "source": "FuPa",
+    "url": "https://bdkng.de"
+  },
+  {
     "id": "2026-11-15-muell",
     "checked": "2026-11-15",
     "valid_until": "2026-11-23",
