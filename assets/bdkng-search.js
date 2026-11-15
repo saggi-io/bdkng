@@ -25,7 +25,7 @@
       fetch('/data/sport-termine.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/data/wetter-aktuell.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/data/wissen-badkoenig.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
-      fetch('/data/termine-kalender.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.kal = a[5] && a[5].termine || []; data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.ergebnisse = a[2] && a[2].ergebnisse || []; data.handball = a[2] && a[2].handball || []; data.la = a[2] && a[2].leichtathletik || []; data.wetter = a[3]; data.wissen = a[4] && a[4].eintraege || []; });
+      fetch('/data/termine-kalender.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.kal = a[5] && a[5].termine || []; data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.ergebnisse = a[2] && a[2].ergebnisse || []; data.hbErg = (a[2] && a[2].handball_ergebnisse || []).filter(function (x) { return x.hg + x.ag > 0; }); data.handball = a[2] && a[2].handball || []; data.la = a[2] && a[2].leichtathletik || []; data.wetter = a[3]; data.wissen = a[4] && a[4].eintraege || []; });
     return loading;
   }
   function ortsteil(q, muell) {
@@ -129,9 +129,17 @@
   function ergebnisAntwort(q) {
     var ql = q.toLowerCase();
     if (!/gespielt|ergebnis|ausgang|gewonnen|verloren|unentschieden|endstand|wie (ging|lief|stand|steht)|tore|geschossen/.test(ql)) return null;
-    if (/handball|hsg|tennis|tischtennis/.test(ql)) return null;
+    if (/tennis|tischtennis|leichtathlet/.test(ql)) return null;
+    var nurHb = /handball|hsg/.test(ql), nurFb = /fu(ß|ss)ball|\bsg\b|1a|1b|kicker/.test(ql) && !nurHb;
+    var hbH = '';
+    if (!nurFb) {
+      var hl = (data.hbErg || []).slice(), hn = hl.length ? hl[0].date : '', ht = heute();
+      if (/heute/.test(ql)) hl = hl.filter(function (x) { return x.date === ht; }); else if (/gestern/.test(ql)) hl = hl.filter(function (x) { return x.date === plus(ht, -1); }); else hl = hl.filter(function (x) { return x.date >= plus(hn, -2); });
+      if (hl.length) hbH = '<p>🤾 Handball – HSG Odenwald:</p><ul>' + hl.slice(0, 8).map(function (x) { var hh = /Odenwald/.test(x.home), d = hh ? x.hg - x.ag : x.ag - x.hg; return '<li>' + esc(deDatum(x.date)) + ' · ' + esc(x.team) + ' (' + esc(x.liga) + '): <strong>' + esc(x.home) + ' – ' + esc(x.away) + ' ' + x.hg + ':' + x.ag + '</strong> <small>(' + (d > 0 ? '✅ Sieg' : d < 0 ? '❌ Niederlage' : '🤝 Unentschieden') + ')</small></li>'; }).join('') + '</ul><p class="bs-src">Quelle: <a href="https://hhv-handball.liga.nu" target="_blank" rel="noopener">nuLiga</a></p>';
+      if (nurHb) return hbH || '<p>Dazu habe ich noch kein Handball-Ergebnis – nuLiga trägt die Ergebnisse meist kurz nach Spielende ein.</p>';
+    }
     var l = (data.ergebnisse || []).slice().sort(function (a, b) { return b.date.localeCompare(a.date); });
-    if (!l.length) return null;
+    if (!l.length) return hbH || null;
     var t = heute(), neu = l[0].date, tage = {};
     if (/heute/.test(ql)) l = l.filter(function (x) { return x.date === t; });
     else if (/gestern/.test(ql)) l = l.filter(function (x) { return x.date === plus(t, -1); });
@@ -139,6 +147,7 @@
     else if (/1b|zweite|reserve|\bii\b/.test(ql)) l = l.filter(function (x) { return x.team === 'm2'; }).slice(0, 3);
     else if (/1a|erste/.test(ql)) l = l.filter(function (x) { return x.team === 'm1'; }).slice(0, 3);
     else l = l.filter(function (x) { return x.date >= plus(neu, -2); });
+    if (!l.length && hbH) return hbH;
     if (!l.length) return '<p>' + (/heute/.test(ql) ? 'Heute hat keine Mannschaft der SG Bad König/Zell gespielt – oder das Ergebnis ist noch nicht eingetragen.' : 'Dazu habe ich kein Ergebnis gefunden.') + '</p><p class="bs-src">Quelle: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a></p>';
     var h = '<p>⚽ Ergebnisse der SG Bad König/Zell:</p><ul>';
     l.slice(0, 6).forEach(function (x) {
@@ -148,7 +157,7 @@
     h += '</ul>';
     var ber = (data.news || []).filter(function (n) { return n.categories.indexOf('sport') >= 0 && /SG Bad K|Bad K(ö|oe)nig\/Zell|TSG Bad K|Zell/i.test(n.title + ' ' + (n.paragraphs[0] || '')) && n.checked >= plus(t, -3); }).slice(0, 2);
     if (ber.length) h += '<p>Spielberichte:</p><ul>' + ber.map(function (n) { return '<li><a href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.title) + '</a> <small>(' + esc(n.source) + ')</small></li>'; }).join('') + '</ul>';
-    return h + '<p class="bs-src">Quelle: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a> · Stand: aktualisiert am Wochenende abends</p>';
+    return h + '<p class="bs-src">Quelle: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a></p>' + hbH;
   }
   function antworten(q) {
     q = q.trim(); if (!q) return;
@@ -161,7 +170,7 @@
       if (!h) h = serviceAntwort(q) || rathausAntwort(q) || sportAntwort(q) || wetterAntwort(q) || schnellAntwort(q);
       if (h) return zeige(h);
       var ta = terminAntwort(q);
-      if (ta && /heute|morgen|wochenende|\bwe\b/i.test(q) && !/wetter|regen|müll|muell/i.test(q)) return zeige(ta);
+      if (ta && /heute|morgen|wochenende|\bwe\b/i.test(q) && /termin|veranstalt|was (ist|geht|gibt|kann|läuft|laeuft|steht)|los\b|event|fest|markt|konzert|unternehm|ausgehen|spielt|spiele|tipp/i.test(q) && !/wetter|regen|müll|muell/i.test(q)) return zeige(ta);
       var fb = ta || news(q);
       ki(q, fb);
     });
