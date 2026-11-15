@@ -1,0 +1,13 @@
+{
+ "rubrik": "wetter",
+ "titel": "Wetter: Die nächsten 3 Tage",
+ "zeilen": [
+  "Bad König",
+  "Montag, 16.11.: Regen, 8 bis 10 °C, Regenrisiko 71 % (ca. 7 l/m²), Böen bis 52 km/h",
+  " Dienstag, 17.11.: Regen, 8 bis 12 °C, Regenrisiko 82 % (ca. 22 l/m²), Böen bis 52 km/h",
+  " Mittwoch, 18.11.: bedeckt, 9 bis 11 °C, Regenrisiko 59 % (ca. 9 l/m²), Böen bis 50 km/h",
+  "Amtliche WARNUNG vor STURMBÖEN (Mo 03:00 bis Mo 18:00 Uhr)",
+  " Amtliche WARNUNG vor WINDBÖEN (Mo 06:00 bis Mo 18:00 Uhr)"
+ ],
+ "quelle": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev"
+}
