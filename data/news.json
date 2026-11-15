@@ -1,5 +1,17 @@
 [
   {
+    "id": "2026-11-15-news-211151833",
+    "checked": "2026-11-15",
+    "valid_until": "2026-11-22",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Handball",
+    "paragraphs": [],
+    "source": "nuLiga Handball (HHV)",
+    "url": "https://bdkng.de"
+  },
+  {
     "id": "2026-11-15-sport",
     "checked": "2026-11-15",
     "valid_until": "2026-11-22",
