@@ -25,7 +25,7 @@
       fetch('/data/sport-termine.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/data/wetter-aktuell.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/data/wissen-badkoenig.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
-      fetch('/data/termine-kalender.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.kal = a[5] && a[5].termine || []; data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.handball = a[2] && a[2].handball || []; data.la = a[2] && a[2].leichtathletik || []; data.wetter = a[3]; data.wissen = a[4] && a[4].eintraege || []; });
+      fetch('/data/termine-kalender.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.kal = a[5] && a[5].termine || []; data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.ergebnisse = a[2] && a[2].ergebnisse || []; data.handball = a[2] && a[2].handball || []; data.la = a[2] && a[2].leichtathletik || []; data.wetter = a[3]; data.wissen = a[4] && a[4].eintraege || []; });
     return loading;
   }
   function ortsteil(q, muell) {
@@ -126,12 +126,37 @@
     f.slice(0, 6).forEach(function (x) { h += '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr (' + tageBis(x.date) + '): <strong>' + esc(x.home) + ' – ' + esc(x.away) + '</strong> <small>(Kreisliga ' + (x.team === 'm1' ? 'A, 1. Mannschaft' : 'B, 2. Mannschaft') + ')</small></li>'; });
     return h + '</ul><p class="bs-src">Quelle: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a> · Änderungen bitte beim Verein prüfen.</p>';
   }
+  function ergebnisAntwort(q) {
+    var ql = q.toLowerCase();
+    if (!/gespielt|ergebnis|ausgang|gewonnen|verloren|unentschieden|endstand|wie (ging|lief|stand|steht)|tore|geschossen/.test(ql)) return null;
+    if (/handball|hsg|tennis|tischtennis/.test(ql)) return null;
+    var l = (data.ergebnisse || []).slice().sort(function (a, b) { return b.date.localeCompare(a.date); });
+    if (!l.length) return null;
+    var t = heute(), neu = l[0].date, tage = {};
+    if (/heute/.test(ql)) l = l.filter(function (x) { return x.date === t; });
+    else if (/gestern/.test(ql)) l = l.filter(function (x) { return x.date === plus(t, -1); });
+    else if (/wochenende|\bwe\b/.test(ql)) l = l.filter(function (x) { return x.date >= plus(neu, -2); });
+    else if (/1b|zweite|reserve|\bii\b/.test(ql)) l = l.filter(function (x) { return x.team === 'm2'; }).slice(0, 3);
+    else if (/1a|erste/.test(ql)) l = l.filter(function (x) { return x.team === 'm1'; }).slice(0, 3);
+    else l = l.filter(function (x) { return x.date >= plus(neu, -2); });
+    if (!l.length) return '<p>' + (/heute/.test(ql) ? 'Heute hat keine Mannschaft der SG Bad König/Zell gespielt – oder das Ergebnis ist noch nicht eingetragen.' : 'Dazu habe ich kein Ergebnis gefunden.') + '</p><p class="bs-src">Quelle: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a></p>';
+    var h = '<p>⚽ Ergebnisse der SG Bad König/Zell:</p><ul>';
+    l.slice(0, 6).forEach(function (x) {
+      var wir = /bad k/i.test(x.home) ? x.hg - x.ag : x.ag - x.hg, sym = wir > 0 ? '✅ Sieg' : wir < 0 ? '❌ Niederlage' : '🤝 Unentschieden';
+      h += '<li>' + esc(deDatum(x.date)) + ' · ' + (x.team === 'm1' ? '1. Mannschaft' : '2. Mannschaft') + ': <strong>' + esc(x.home) + ' – ' + esc(x.away) + ' ' + x.hg + ':' + x.ag + '</strong> <small>(' + sym + ')</small></li>';
+    });
+    h += '</ul>';
+    var ber = (data.news || []).filter(function (n) { return n.categories.indexOf('sport') >= 0 && /SG Bad K|Bad K(ö|oe)nig\/Zell|TSG Bad K|Zell/i.test(n.title + ' ' + (n.paragraphs[0] || '')) && n.checked >= plus(t, -3); }).slice(0, 2);
+    if (ber.length) h += '<p>Spielberichte:</p><ul>' + ber.map(function (n) { return '<li><a href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.title) + '</a> <small>(' + esc(n.source) + ')</small></li>'; }).join('') + '</ul>';
+    return h + '<p class="bs-src">Quelle: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a> · Stand: aktualisiert am Wochenende abends</p>';
+  }
   function antworten(q) {
     q = q.trim(); if (!q) return;
     out.innerHTML = '<p class="bs-load">Ich suche …</p>'; out.hidden = false;
     laden().then(function () {
       var h = null;
       if (!/grünschnitt|gruenschnitt|bauhof/i.test(q) && /müll|muell|abfall|abfuhr|tonne|sack|säcke|saecke|papier|biotonne|restmüll|sperrmüll|schadstoff|sonderabfall/i.test(q)) h = muellAntwort(q);
+      if (!h) h = ergebnisAntwort(q);
       if (!h && !/handball/i.test(q) && !/gespielt|ergebnis|ausgang|gewonnen|verloren|letzte|vergangen|tabelle|torsch/i.test(q)) h = spieleAntwort(q);
       if (!h) h = serviceAntwort(q) || rathausAntwort(q) || sportAntwort(q) || wetterAntwort(q) || schnellAntwort(q);
       if (h) return zeige(h);
