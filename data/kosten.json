@@ -1,6 +1,6 @@
 {
  "stand": "2026-11-15",
- "hinweis": "Laufende Kosten von BDKNG pro Monat. KI-Kosten werden täglich aus dem gemessenen Verbrauch aller BDKNG-Abläufe übernommen.",
+ "hinweis": "Laufende Kosten von BDKNG pro Monat. KI-Kosten: mindestens das geplante Budget, höher, wenn der gemessene Verbrauch darüber liegt.",
  "posten": [
   {
    "name": "Server (IONOS VPS)",
@@ -11,10 +11,15 @@
    "monat": 7.5
   },
   {
-   "name": "KI für Suche, Termine, Sport und Wissen (gemessen, laufender Monat)",
-   "monat": 1.17
+   "name": "KI für Suche, Termine, Sport und Wissen (Budget; gemessen bisher 1,17 €)",
+   "monat": 10.17
+  },
+  {
+   "name": "Rücklage App-Store-Veröffentlichung (BDKNG-App)",
+   "monat": 7.26
   }
  ],
  "spenden_monat": 20,
- "spenden_stand_monat": "2026-11"
+ "spenden_stand_monat": "2026-11",
+ "ki_budget": 10.17
 }
