@@ -1,14 +1,7 @@
 {
- "stand": "2026-11-14T06:00",
+ "stand": "2026-11-15T06:00",
  "quelle": "FuPa, nuLiga, HLV Kreis Odenwald",
  "spiele": [
-  {
-   "date": "2026-11-14",
-   "time": "15:00",
-   "home": "FV Mümling-Grumbach",
-   "away": "SG Bad König/Zell",
-   "team": "m1"
-  },
   {
    "date": "2026-11-15",
    "time": "13:00",
@@ -473,18 +466,18 @@
   {
    "date": "2026-11-15",
    "time": "14:00",
-   "liga": "M-BK-2",
-   "team": "Männer",
-   "home": "HSG Bachgau IV",
-   "away": "HSG Odenwald III"
-  },
-  {
-   "date": "2026-11-15",
-   "time": "14:00",
    "liga": "F-BL",
    "team": "Frauen",
    "home": "HSG Bachgau III",
    "away": "HSG Odenwald II"
+  },
+  {
+   "date": "2026-11-15",
+   "time": "14:00",
+   "liga": "M-BK-2",
+   "team": "Männer",
+   "home": "HSG Bachgau IV",
+   "away": "HSG Odenwald III"
   },
   {
    "date": "2026-11-15",
