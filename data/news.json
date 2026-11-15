@@ -1,5 +1,19 @@
 [
   {
+    "id": "medien-2026-11-15-285802190",
+    "checked": "2026-11-15",
+    "valid_until": "2026-11-25",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Bei den Wasserverbänden Mümling/Gersprenzgebiet endet eine Ära",
+    "paragraphs": [
+      "Michael Reuter gibt nach Jahrzehnten im Ehrenamt die Führung der Wasserverbände Mümling/Gersprenzgebiet ab. Regierungspräsident Jan Hilligardt würdigt sein Wirken."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/landkreis-odenwaldkreis/bei-wasserverbaenden-muemlinggersprenzgebiet-endet-eine-aera-6809986"
+  },
+  {
     "id": "2026-11-14-wetter",
     "checked": "2026-11-14",
     "valid_until": "2026-11-17",
