@@ -117,3 +117,11 @@
 @media(max-width:600px){.bs .bs-ex-pfeil{display:none}}
 
 .bs-top a.bs-kompakt{text-decoration:none;color:#173120;letter-spacing:.02em;box-shadow:0 2px 0 rgba(0,0,0,.18)}.bs-top a.bs-kompakt:hover{filter:brightness(1.06)}.bs-frag{display:block;color:var(--gold);font-size:.72em;margin-top:4px}
+
+/* KI-Bereich: zwei gleich große Hälften – oben Erklärung, unten Eingabe + Buttons */
+.bs.bs{display:grid;grid-template-rows:1fr 1fr;padding:0;overflow:hidden}
+.bs:has(.bs-out:not([hidden])){grid-template-rows:auto auto}
+.bs .bs-head{padding:26px 30px 22px;justify-content:center;min-width:0}
+.bs .bs-unten{padding:22px 30px 16px;background:rgba(0,0,0,.16);border-top:2px solid rgba(232,184,74,.55);display:flex;flex-direction:column;justify-content:center;min-width:0}
+.bs .bs-unten .bs-form{margin-top:0}
+@media(max-width:600px){.bs .bs-head{padding:18px 16px 16px}.bs .bs-unten{padding:16px 16px 12px}}
