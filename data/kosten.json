@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-14",
+ "stand": "2026-11-15",
  "hinweis": "Laufende Kosten von BDKNG pro Monat. KI-Kosten werden täglich aus dem gemessenen Verbrauch aller BDKNG-Abläufe übernommen.",
  "posten": [
   {
@@ -15,6 +15,6 @@
    "monat": 1.17
   }
  ],
- "spenden_monat": 10,
+ "spenden_monat": 20,
  "spenden_stand_monat": "2026-11"
 }
