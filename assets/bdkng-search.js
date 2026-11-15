@@ -25,7 +25,7 @@
       fetch('/data/sport-termine.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/data/wetter-aktuell.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/data/wissen-badkoenig.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
-      fetch('/data/termine-kalender.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.kal = a[5] && a[5].termine || []; data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.ergebnisse = a[2] && a[2].ergebnisse || []; data.hbErg = (a[2] && a[2].handball_ergebnisse || []).filter(function (x) { return x.hg + x.ag > 0; }); data.handball = a[2] && a[2].handball || []; data.la = a[2] && a[2].leichtathletik || []; data.wetter = a[3]; data.wissen = a[4] && a[4].eintraege || []; });
+      fetch('/data/termine-kalender.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.kal = a[5] && a[5].termine || []; data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.ergebnisse = a[2] && a[2].ergebnisse || []; data.hbErg = (a[2] && a[2].handball_ergebnisse || []).filter(function (x) { return x.hg + x.ag > 0; }); data.tt = a[2] && a[2].tischtennis || []; data.handball = a[2] && a[2].handball || []; data.la = a[2] && a[2].leichtathletik || []; data.wetter = a[3]; data.wissen = a[4] && a[4].eintraege || []; });
     return loading;
   }
   function ortsteil(q, muell) {
@@ -126,10 +126,24 @@
     f.slice(0, 6).forEach(function (x) { h += '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr (' + tageBis(x.date) + '): <strong>' + esc(x.home) + ' – ' + esc(x.away) + '</strong> <small>(Kreisliga ' + (x.team === 'm1' ? 'A, 1. Mannschaft' : 'B, 2. Mannschaft') + ')</small></li>'; });
     return h + '</ul><p class="bs-src">Quelle: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a> · Änderungen bitte beim Verein prüfen.</p>';
   }
+  function ttAntwort(q) {
+    var ql = q.toLowerCase();
+    if (!/tischtennis|\btt\b|ttc|tt-|kimbach.*(spiel|ergebnis)|fürstengrund.*(spiel|ergebnis)/.test(ql)) return null;
+    var t = heute(), all = data.tt || [];
+    var erg = all.filter(function (x) { return x.erg && x.date <= t; }).sort(function (a, b) { return b.date.localeCompare(a.date); });
+    var kommend = all.filter(function (x) { return !x.erg && x.date >= t; });
+    var willErg = /gespielt|ergebnis|gewonnen|verloren|wie (ging|lief)|endstand/.test(ql);
+    var h = '';
+    var zeile = function (x, mitErg) { var wir = /Bad K|Kimbach|Fürstengrund/.test(x.home) ? 'h' : 'a', p = (x.erg || '0:0').split(':').map(Number), d = wir === 'h' ? p[0] - p[1] : p[1] - p[0]; return '<li>' + esc(deDatum(x.date)) + (mitErg ? '' : ', ' + esc(x.time) + ' Uhr') + ' · ' + esc(x.liga) + ': <strong>' + esc(x.home) + ' – ' + esc(x.away) + (mitErg ? ' ' + esc(x.erg) : '') + '</strong>' + (mitErg ? ' <small>(' + (d > 0 ? '✅ Sieg' : d < 0 ? '❌ Niederlage' : '🤝 Unentschieden') + ')</small>' : '') + '</li>'; };
+    if (erg.length && (willErg || !kommend.length)) h += '<p>🏓 Tischtennis – letzte Ergebnisse (TSG Bad König, TTC Kimbach, RV-TTC Fürstengrund):</p><ul>' + erg.slice(0, 8).map(function (x) { return zeile(x, true); }).join('') + '</ul>';
+    if (kommend.length && !willErg) h += '<p>🏓 Tischtennis – nächste Spiele:</p><ul>' + kommend.slice(0, 8).map(function (x) { return zeile(x, false); }).join('') + '</ul>';
+    if (!h) return null;
+    return h + '<p class="bs-src">Quelle: <a href="https://httv.click-tt.de" target="_blank" rel="noopener">click-TT (Hessischer Tischtennis-Verband)</a></p>';
+  }
   function ergebnisAntwort(q) {
     var ql = q.toLowerCase();
     if (!/gespielt|ergebnis|ausgang|gewonnen|verloren|unentschieden|endstand|wie (ging|lief|stand|steht)|tore|geschossen/.test(ql)) return null;
-    if (/tennis|tischtennis|leichtathlet/.test(ql)) return null;
+    if (/tischtennis|leichtathlet|\btennis/.test(ql)) return null;
     var nurHb = /handball|hsg/.test(ql), nurFb = /fu(ß|ss)ball|\bsg\b|1a|1b|kicker/.test(ql) && !nurHb;
     var hbH = '';
     if (!nurFb) {
@@ -165,6 +179,7 @@
     laden().then(function () {
       var h = null;
       if (!/grünschnitt|gruenschnitt|bauhof/i.test(q) && /müll|muell|abfall|abfuhr|tonne|sack|säcke|saecke|papier|biotonne|restmüll|sperrmüll|schadstoff|sonderabfall/i.test(q)) h = muellAntwort(q);
+      if (!h) h = ttAntwort(q);
       if (!h) h = ergebnisAntwort(q);
       if (!h && !/handball/i.test(q) && !/gespielt|ergebnis|ausgang|gewonnen|verloren|letzte|vergangen|tabelle|torsch/i.test(q)) h = spieleAntwort(q);
       if (!h) h = serviceAntwort(q) || rathausAntwort(q) || sportAntwort(q) || wetterAntwort(q) || schnellAntwort(q);
