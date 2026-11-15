@@ -33,12 +33,18 @@
     "checked": "2026-11-15",
     "valid_until": "2026-11-22",
     "categories": [
-      "aktuell"
+      "sport",
+      "termine"
     ],
-    "title": "Handball",
-    "paragraphs": [],
+    "title": "Handball: Die Ergebnisse vom Wochenende",
+    "paragraphs": [
+      "• So 15.11. · Frauen II: HSG Bachgau III – HSG Odenwald II 18:35",
+      "• So 15.11. · Männer III: HSG Bachgau IV – HSG Odenwald III 21:21",
+      "• So 15.11. · Männer: HSG Bachgau II – HSG Odenwald 31:38",
+      "• So 15.11. · Männer II: TV Niedernberg – HSG Odenwald II (Endstand folgt)"
+    ],
     "source": "nuLiga Handball (HHV)",
-    "url": "https://bdkng.de"
+    "url": "https://hhv-handball.liga.nu"
   },
   {
     "id": "2026-11-15-sport",
@@ -48,9 +54,9 @@
       "sport",
       "termine"
     ],
-    "title": "FUSSBALL · Die Ergebnisse vom Wochenende",
+    "title": "Fußball: Die Ergebnisse vom Wochenende",
     "paragraphs": [
-      "Fußball\n• Sa 14.11. · SG 1a: FV Mümling-Grumbach – SG Bad König/Zell 2:4\n• So 15.11. · SG 1b: SG Sandbach II – SG Bad König/Zell II 3:4",
+      "• Sa 14.11. · SG 1a: FV Mümling-Grumbach – SG Bad König/Zell 2:4\n• So 15.11. · SG 1b: SG Sandbach II – SG Bad König/Zell II 3:4",
       "Nächste Fußballspiele\n• So 22.11., 13:00 Uhr: SG Bad König/Zell II – SV Beerfelden\n• So 22.11., 15:00 Uhr: SG Bad König/Zell – SV Gammelsbach"
     ],
     "source": "FuPa",
