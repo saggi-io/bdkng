@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-11-16-termine",
+    "checked": "2026-11-16",
+    "valid_until": "2026-11-23",
+    "categories": [
+      "termine"
+    ],
+    "title": "TERMINE & VERANSTALTUNGEN · Diese Woche",
+    "paragraphs": [
+      "• Freitag, 20.11., 12:00 Uhr: Orgel um 12 – Schlosskirche Bad König",
+      "Änderungen bitte beim Veranstalter prüfen. Quellen: Stadt Bad König, Veranstaltungskalender https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/ Stand: 16.11.2026. Automatisch zusammengestellt."
+    ],
+    "source": "Stadt Bad König, Veranstaltungskalender",
+    "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/"
+  },
+  {
     "id": "q-2026-11-16-mo995367751",
     "checked": "2026-11-16",
     "valid_until": "2026-11-26",
@@ -163,28 +178,6 @@
     ],
     "source": "Echo Online",
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/blut-spenden-und-leben-retten-6784690"
-  },
-  {
-    "id": "2026-11-14-termine",
-    "checked": "2026-11-14",
-    "valid_until": "2026-11-21",
-    "categories": [
-      "termine"
-    ],
-    "title": "TERMINE & VERANSTALTUNGEN · Das Wochenende",
-    "paragraphs": [
-      "• Samstag, 14.11., 15:00 Uhr: Fußball (Kreisliga A): FV Mümling-Grumbach – SG Bad König/Zell",
-      "• Samstag, 14.11., 19:00 Uhr: \"Die Eisfalle\" - Die arktische Odyssee der Tegetthoff – Rentmeisterei Bad König, Schlossplatz 2",
-      "• Sonntag, 15.11., 10:30 Uhr: Heimatmuseum Bad König – Schlosshof, Schlossplatz 3 (Heimat- und Geschichtsverein Bad König e.V.)",
-      "• Sonntag, 15.11., 13:00 Uhr: Fußball (Kreisliga B): SG Sandbach II – SG Bad König/Zell II",
-      "• Sonntag, 15.11., 14:00 Uhr: Handball (Frauen): HSG Bachgau III – HSG Odenwald II",
-      "• Sonntag, 15.11., 14:00 Uhr: Handball (Männer): HSG Bachgau IV – HSG Odenwald III",
-      "• Sonntag, 15.11., 16:00 Uhr: Handball (Männer): HSG Bachgau II – HSG Odenwald",
-      "• Sonntag, 15.11., 18:00 Uhr: Handball (Männer): TV Niedernberg – HSG Odenwald II",
-      "Änderungen bitte beim Veranstalter prüfen. Quellen: Stadt Bad König, Veranstaltungskalender; FuPa (Fußball); nuLiga (Handball) https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/ Stand: 14.11.2026. Automatisch zusammengestellt."
-    ],
-    "source": "Stadt Bad König, Veranstaltungskalender; FuPa (Fußball); nuLiga (Handball)",
-    "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/"
   },
   {
     "id": "medien-2026-11-13-258893938",
