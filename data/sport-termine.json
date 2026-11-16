@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-16T06:00",
+ "stand": "2026-11-16T12:24",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
   {
@@ -10,11 +10,32 @@
    "team": "m2"
   },
   {
+   "time": "13:00",
+   "date": "2026-11-22",
+   "home": "SG Vielbrunn/Würzberg II",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2"
+  },
+  {
+   "time": "14:30",
+   "date": "2026-11-22",
+   "home": "VfR Würzberg",
+   "away": "Spvgg Kinzigtal",
+   "team": "k1"
+  },
+  {
    "date": "2026-11-22",
    "time": "15:00",
    "home": "SG Bad König/Zell",
    "away": "SV Gammelsbach",
    "team": "m1"
+  },
+  {
+   "time": "19:30",
+   "date": "2026-11-26",
+   "home": "FC Finkenbachtal II",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2"
   },
   {
    "date": "2026-11-29",
@@ -24,11 +45,25 @@
    "team": "m2"
   },
   {
+   "time": "12:30",
+   "date": "2026-11-29",
+   "home": "Spvgg Kinzigtal II",
+   "away": "SG Rothenberg II",
+   "team": "k2"
+  },
+  {
    "date": "2026-11-29",
    "time": "14:30",
    "home": "FSV Erbach",
    "away": "SG Bad König/Zell",
    "team": "m1"
+  },
+  {
+   "time": "14:30",
+   "date": "2026-11-29",
+   "home": "Spvgg Kinzigtal",
+   "away": "TSV Bullau",
+   "team": "k1"
   },
   {
    "date": "2026-12-06",
@@ -59,11 +94,32 @@
    "team": "m2"
   },
   {
+   "time": "12:30",
+   "date": "2027-02-28",
+   "home": "SG Sensbachtal/Hetzbach II",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2"
+  },
+  {
+   "time": "14:30",
+   "date": "2027-02-28",
+   "home": "TV Hetzbach",
+   "away": "Spvgg Kinzigtal",
+   "team": "k1"
+  },
+  {
    "date": "2027-03-07",
    "time": "13:00",
    "home": "TSV Günterfürst II",
    "away": "SG Bad König/Zell II",
    "team": "m2"
+  },
+  {
+   "time": "13:00",
+   "date": "2027-03-07",
+   "home": "Spvgg Kinzigtal II",
+   "away": "GSV Breitenbrunn II",
+   "team": "k2"
   },
   {
    "date": "2027-03-07",
@@ -73,11 +129,25 @@
    "team": "m1"
   },
   {
+   "time": "15:00",
+   "date": "2027-03-07",
+   "home": "Spvgg Kinzigtal",
+   "away": "KSV Haingrund",
+   "team": "k1"
+  },
+  {
    "date": "2027-03-14",
    "time": "13:00",
    "home": "SG Bad König/Zell II",
    "away": "TSG Steinbach II",
    "team": "m2"
+  },
+  {
+   "time": "13:00",
+   "date": "2027-03-14",
+   "home": "SG Nieder-Kainsbach II",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2"
   },
   {
    "date": "2027-03-14",
@@ -87,11 +157,25 @@
    "team": "m1"
   },
   {
+   "time": "15:00",
+   "date": "2027-03-14",
+   "home": "Türkspor Beerfelden",
+   "away": "Spvgg Kinzigtal",
+   "team": "k1"
+  },
+  {
    "date": "2027-03-19",
    "time": "19:00",
    "home": "TSV Höchst II",
    "away": "SG Bad König/Zell",
    "team": "m1"
+  },
+  {
+   "time": "17:00",
+   "date": "2027-03-20",
+   "home": "VfL Michelstadt",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2"
   },
   {
    "date": "2027-03-21",
@@ -101,11 +185,25 @@
    "team": "m2"
   },
   {
+   "time": "13:00",
+   "date": "2027-03-21",
+   "home": "VfL Michelstadt II",
+   "away": "Spvgg Kinzigtal",
+   "team": "k1"
+  },
+  {
    "date": "2027-04-04",
    "time": "13:00",
    "home": "SV Lützel-Wiebelsbach II",
    "away": "SG Bad König/Zell II",
    "team": "m2"
+  },
+  {
+   "time": "13:00",
+   "date": "2027-04-04",
+   "home": "Spvgg Kinzigtal II",
+   "away": "FSV Erbach II",
+   "team": "k2"
   },
   {
    "date": "2027-04-04",
@@ -115,6 +213,13 @@
    "team": "m1"
   },
   {
+   "time": "15:00",
+   "date": "2027-04-04",
+   "home": "Spvgg Kinzigtal",
+   "away": "SG Rimhorn/Neustadt II",
+   "team": "k1"
+  },
+  {
    "date": "2027-04-11",
    "time": "13:00",
    "home": "SG Bad König/Zell II",
@@ -122,11 +227,32 @@
    "team": "m2"
   },
   {
+   "time": "13:00",
+   "date": "2027-04-11",
+   "home": "SG Beerfelden/Gammelsbach II",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2"
+  },
+  {
    "date": "2027-04-11",
    "time": "15:00",
    "home": "SG Bad König/Zell",
    "away": "SG Nieder-Kainsbach",
    "team": "m1"
+  },
+  {
+   "time": "15:00",
+   "date": "2027-04-11",
+   "home": "SV Beerfelden",
+   "away": "Spvgg Kinzigtal",
+   "team": "k1"
+  },
+  {
+   "time": "13:00",
+   "date": "2027-04-18",
+   "home": "Spvgg Kinzigtal II",
+   "away": "FV Mümling-Grumbach II",
+   "team": "k2"
   },
   {
    "date": "2027-04-18",
@@ -143,6 +269,13 @@
    "team": "m2"
   },
   {
+   "time": "15:00",
+   "date": "2027-04-18",
+   "home": "Spvgg Kinzigtal",
+   "away": "SG Sandbach II",
+   "team": "k1"
+  },
+  {
    "date": "2027-04-25",
    "time": "13:00",
    "home": "SG Bad König/Zell II",
@@ -150,11 +283,32 @@
    "team": "m2"
   },
   {
+   "time": "13:00",
+   "date": "2027-04-25",
+   "home": "TV Fränkisch-Crumbach II",
+   "away": "Spvgg Kinzigtal",
+   "team": "k1"
+  },
+  {
+   "time": "13:00",
+   "date": "2027-04-25",
+   "home": "Türkiyemspor Breuberg II",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2"
+  },
+  {
    "date": "2027-04-25",
    "time": "15:00",
    "home": "SG Bad König/Zell",
    "away": "KSG Vielbrunn",
    "team": "m1"
+  },
+  {
+   "time": "13:00",
+   "date": "2027-05-02",
+   "home": "Spvgg Kinzigtal II",
+   "away": "FC Finkenbachtal II",
+   "team": "k2"
   },
   {
    "date": "2027-05-02",
@@ -171,11 +325,32 @@
    "team": "m2"
   },
   {
+   "time": "15:00",
+   "date": "2027-05-02",
+   "home": "Spvgg Kinzigtal",
+   "away": "TSV Günterfürst II",
+   "team": "k1"
+  },
+  {
+   "time": "17:00",
+   "date": "2027-05-08",
+   "home": "SSV Brensbach",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2"
+  },
+  {
    "date": "2027-05-09",
    "time": "13:00",
    "home": "SG Bad König/Zell II",
    "away": "KSV Haingrund",
    "team": "m2"
+  },
+  {
+   "time": "13:00",
+   "date": "2027-05-09",
+   "home": "TSG Steinbach II",
+   "away": "Spvgg Kinzigtal",
+   "team": "k1"
   },
   {
    "date": "2027-05-09",
@@ -199,11 +374,32 @@
    "team": "m2"
   },
   {
+   "time": "15:00",
+   "date": "2027-05-15",
+   "home": "TSV Höchst",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2"
+  },
+  {
+   "time": "19:00",
+   "date": "2027-05-21",
+   "home": "Spvgg Kinzigtal II",
+   "away": "SG Rimhorn/Neustadt",
+   "team": "k2"
+  },
+  {
    "date": "2027-05-23",
    "time": "13:00",
    "home": "SG Bad König/Zell II",
    "away": "VfL Michelstadt II",
    "team": "m2"
+  },
+  {
+   "time": "13:00",
+   "date": "2027-05-23",
+   "home": "SV Lützel-Wiebelsbach II",
+   "away": "Spvgg Kinzigtal",
+   "team": "k1"
   },
   {
    "date": "2027-05-23",
@@ -221,6 +417,22 @@
    "hg": 3,
    "ag": 4,
    "team": "m2"
+  },
+  {
+   "date": "2026-11-15",
+   "home": "Spvgg Kinzigtal",
+   "away": "SG Hainstadt/Rai-Breitenbach",
+   "team": "k1",
+   "hg": 1,
+   "ag": 0
+  },
+  {
+   "date": "2026-11-15",
+   "home": "Spvgg Kinzigtal II",
+   "away": "SG Hainstadt/Rai-Breitenbach II",
+   "team": "k2",
+   "hg": 1,
+   "ag": 3
   },
   {
    "date": "2026-11-14",
@@ -247,6 +459,22 @@
    "team": "m2"
   },
   {
+   "date": "2026-11-08",
+   "home": "Spvgg Kinzigtal",
+   "away": "SV Lützel-Wiebelsbach II",
+   "team": "k1",
+   "hg": 4,
+   "ag": 1
+  },
+  {
+   "date": "2026-11-08",
+   "home": "Spvgg Kinzigtal II",
+   "away": "SG Rimhorn/Neustadt",
+   "team": "k2",
+   "hg": 3,
+   "ag": 0
+  },
+  {
    "date": "2026-11-01",
    "home": "SG Bad König/Zell",
    "away": "TSV Sensbachtal",
@@ -263,12 +491,36 @@
    "team": "m2"
   },
   {
+   "date": "2026-11-01",
+   "home": "TSV Höchst",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2",
+   "hg": 3,
+   "ag": 0
+  },
+  {
    "date": "2026-10-25",
    "home": "SV Hummetroth II",
    "away": "SG Bad König/Zell",
    "hg": 0,
    "ag": 2,
    "team": "m1"
+  },
+  {
+   "date": "2026-10-25",
+   "home": "Spvgg Kinzigtal",
+   "away": "TSG Steinbach II",
+   "team": "k1",
+   "hg": 5,
+   "ag": 0
+  },
+  {
+   "date": "2026-10-25",
+   "home": "Spvgg Kinzigtal II",
+   "away": "SSV Brensbach",
+   "team": "k2",
+   "hg": 0,
+   "ag": 7
   },
   {
    "date": "2026-10-18",
@@ -287,6 +539,14 @@
    "team": "m2"
   },
   {
+   "date": "2026-10-18",
+   "home": "TSV Günterfürst II",
+   "away": "Spvgg Kinzigtal",
+   "team": "k1",
+   "hg": 3,
+   "ag": 2
+  },
+  {
    "date": "2026-10-11",
    "home": "KSG Vielbrunn",
    "away": "SG Bad König/Zell",
@@ -303,12 +563,44 @@
    "team": "m2"
   },
   {
+   "date": "2026-10-11",
+   "home": "Spvgg Kinzigtal",
+   "away": "TV Fränkisch-Crumbach II",
+   "team": "k1",
+   "hg": 5,
+   "ag": 1
+  },
+  {
+   "date": "2026-10-11",
+   "home": "Spvgg Kinzigtal II",
+   "away": "Türkiyemspor Breuberg II",
+   "team": "k2",
+   "hg": 2,
+   "ag": 3
+  },
+  {
    "date": "2026-10-04",
    "home": "SG Bad König/Zell II",
    "away": "VfR Würzberg",
    "hg": 7,
    "ag": 5,
    "team": "m2"
+  },
+  {
+   "date": "2026-10-04",
+   "home": "FV Mümling-Grumbach II",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2",
+   "hg": 5,
+   "ag": 5
+  },
+  {
+   "date": "2026-10-03",
+   "home": "SG Sandbach II",
+   "away": "Spvgg Kinzigtal",
+   "team": "k1",
+   "hg": 0,
+   "ag": 0
   },
   {
    "date": "2026-10-02",
@@ -335,6 +627,22 @@
    "team": "m2"
   },
   {
+   "date": "2026-09-27",
+   "home": "Spvgg Kinzigtal",
+   "away": "SV Beerfelden",
+   "team": "k1",
+   "hg": 3,
+   "ag": 4
+  },
+  {
+   "date": "2026-09-27",
+   "home": "Spvgg Kinzigtal II",
+   "away": "SG Beerfelden/Gammelsbach II",
+   "team": "k2",
+   "hg": 1,
+   "ag": 8
+  },
+  {
    "date": "2026-09-24",
    "home": "SG Bad König/Zell",
    "away": "TSV Höchst II",
@@ -357,6 +665,46 @@
    "hg": 3,
    "ag": 3,
    "team": "m2"
+  },
+  {
+   "date": "2026-09-20",
+   "home": "SG Rimhorn/Neustadt II",
+   "away": "Spvgg Kinzigtal",
+   "team": "k1",
+   "hg": 3,
+   "ag": 5
+  },
+  {
+   "date": "2026-09-20",
+   "home": "FSV Erbach II",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2",
+   "hg": 10,
+   "ag": 0
+  },
+  {
+   "date": "2026-09-16",
+   "home": "Spvgg Kinzigtal",
+   "away": "FV Mümling-Grumbach",
+   "team": "k1",
+   "hg": 0,
+   "ag": 2
+  },
+  {
+   "date": "2026-09-13",
+   "home": "Spvgg Kinzigtal",
+   "away": "VfL Michelstadt II",
+   "team": "k1",
+   "hg": 4,
+   "ag": 1
+  },
+  {
+   "date": "2026-09-13",
+   "home": "Spvgg Kinzigtal II",
+   "away": "VfL Michelstadt",
+   "team": "k2",
+   "hg": 1,
+   "ag": 4
   },
   {
    "date": "2026-09-10",
@@ -383,12 +731,28 @@
    "team": "m1"
   },
   {
+   "date": "2026-09-06",
+   "home": "Spvgg Kinzigtal",
+   "away": "Türkspor Beerfelden",
+   "team": "k1",
+   "hg": 1,
+   "ag": 3
+  },
+  {
    "date": "2026-09-04",
    "home": "SG Bad König/Zell II",
    "away": "TSG Steinbach II",
    "hg": 6,
    "ag": 2,
    "team": "m2"
+  },
+  {
+   "date": "2026-09-04",
+   "home": "Spvgg Kinzigtal II",
+   "away": "SG Nieder-Kainsbach II",
+   "team": "k2",
+   "hg": 3,
+   "ag": 4
   },
   {
    "date": "2026-08-30",
@@ -407,12 +771,60 @@
    "team": "m2"
   },
   {
+   "date": "2026-08-30",
+   "home": "KSV Haingrund",
+   "away": "Spvgg Kinzigtal",
+   "team": "k1",
+   "hg": 3,
+   "ag": 3
+  },
+  {
+   "date": "2026-08-29",
+   "home": "GSV Breitenbrunn II",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2",
+   "hg": 3,
+   "ag": 2
+  },
+  {
    "date": "2026-08-23",
    "home": "TV Fränkisch-Crumbach II",
    "away": "SG Bad König/Zell II",
    "hg": 0,
    "ag": 6,
    "team": "m2"
+  },
+  {
+   "date": "2026-08-23",
+   "home": "Spvgg Kinzigtal",
+   "away": "TV Hetzbach",
+   "team": "k1",
+   "hg": 1,
+   "ag": 0
+  },
+  {
+   "date": "2026-08-23",
+   "home": "Spvgg Kinzigtal II",
+   "away": "SG Sensbachtal/Hetzbach II",
+   "team": "k2",
+   "hg": 5,
+   "ag": 3
+  },
+  {
+   "date": "2026-08-16",
+   "home": "SG Hainstadt/Rai-Breitenbach",
+   "away": "Spvgg Kinzigtal",
+   "team": "k1",
+   "hg": 6,
+   "ag": 1
+  },
+  {
+   "date": "2026-08-16",
+   "home": "SG Hainstadt/Rai-Breitenbach II",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2",
+   "hg": 1,
+   "ag": 5
   },
   {
    "date": "2026-08-15",
@@ -429,6 +841,14 @@
    "hg": 6,
    "ag": 2,
    "team": "m2"
+  },
+  {
+   "date": "2026-08-13",
+   "home": "Spvgg Kinzigtal",
+   "away": "SG Rimhorn/Neustadt",
+   "team": "k1",
+   "hg": 3,
+   "ag": 0
   },
   {
    "date": "2026-08-12",
@@ -453,6 +873,22 @@
    "hg": 2,
    "ag": 5,
    "team": "m2"
+  },
+  {
+   "date": "2026-08-09",
+   "home": "Spvgg Kinzigtal",
+   "away": "VfR Würzberg",
+   "team": "k1",
+   "hg": 2,
+   "ag": 2
+  },
+  {
+   "date": "2026-08-09",
+   "home": "Spvgg Kinzigtal II",
+   "away": "SG Vielbrunn/Würzberg II",
+   "team": "k2",
+   "hg": 3,
+   "ag": 1
   }
  ],
  "handball": [
@@ -516,21 +952,21 @@
  "handball_ergebnisse": [
   {
    "date": "2026-11-15",
-   "liga": "F-BL",
-   "team": "Frauen",
-   "home": "HSG Bachgau III",
-   "away": "HSG Odenwald II",
-   "hg": 18,
-   "ag": 35
-  },
-  {
-   "date": "2026-11-15",
    "liga": "M-BK-2",
    "team": "Männer",
    "home": "HSG Bachgau IV",
    "away": "HSG Odenwald III",
    "hg": 21,
    "ag": 21
+  },
+  {
+   "date": "2026-11-15",
+   "liga": "F-BL",
+   "team": "Frauen",
+   "home": "HSG Bachgau III",
+   "away": "HSG Odenwald II",
+   "hg": 18,
+   "ag": 35
   },
   {
    "date": "2026-11-15",
