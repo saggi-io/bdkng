@@ -23,20 +23,44 @@ def wrap(d, text, font, maxw):
     return out
 def rund(im, r):
     m = Image.new('L', im.size, 0); ImageDraw.Draw(m).rounded_rectangle([0, 0, im.width - 1, im.height - 1], r, fill=255); return m
+def plan(k, W, H):
+    """Layout suchen: alles muss lesbar draufpassen. Erst Schrift leicht kleiner, dann Kopfbild flacher,
+    dann Schrift bis zur Mindestgröße, zuletzt Titel kleiner. Nur wenn das nicht reicht, wird gekürzt."""
+    d = ImageDraw.Draw(Image.new('RGB', (10, 10)))
+    hoch = H > 1500; FB = 400 if hoch else 140
+    G0, GMIN = (46, 38) if hoch else (38, 30)      # Fließtext: Start- und Mindestgröße
+    T0, TMIN = (76, 60) if hoch else (62, 50)      # Titel
+    zl = [str(z) for z in k.get('zeilen', [])][:12]
+    def mess(top, tg, gr):
+        ft = f('InterDisplay-Black.otf', tg); tl = wrap(d, k.get('titel', ''), ft, W - 110)[:4]
+        fz = f('Inter-Medium.otf', gr); zh = int(gr * 1.32); ab = max(6, gr // 4)
+        lay = [wrap(d, z, fz, W - 108) for z in zl]
+        y = int(H * top) + 44 + len(tl) * int(tg * 1.19) + 16
+        return y + sum(len(x) * zh + ab for x in lay), (top, tg, gr, tl, lay, zh, ab)
+    grenze = H - FB - 30
+    versuche = [(0.46, T0, g) for g in range(G0, G0 - 5, -2)]
+    versuche += [(t / 100, T0, G0 - 4) for t in range(42, 27, -4)]
+    versuche += [(0.30, T0, g) for g in range(G0 - 6, GMIN - 1, -2)]
+    versuche += [(0.30, t, GMIN) for t in range(T0 - 6, TMIN - 1, -6)]
+    for v in versuche:
+        ende, lay = mess(*v)
+        if ende <= grenze: return lay, grenze, False
+    return lay, grenze, True
 def karte(k, W, H, ziel):
     name, farbe, bild = RUBRIK.get(k.get('rubrik', 'aktuell'), RUBRIK['aktuell'])
-    TOP = int(H * 0.46)
+    (top, tg, gr, tl, lay, zh, ab), grenze, zuviel = plan(k, W, H)
+    TOP = int(H * top)
     im = Image.new('RGB', (W, H), CREME)
     hd = Image.open(os.path.join(BASE, 'assets', 'bdkng-header-jens.png')).convert('RGB')
     q = hd.crop((1150, 40, 2172, 704))  # ohne Logo-Reste links
     r = max(W / q.width, TOP / q.height); q = q.resize((int(q.width * r) + 1, int(q.height * r) + 1))
-    x0 = (q.width - W) // 2; im.paste(q.crop((x0, 0, x0 + W, TOP)), (0, 0))
+    x0 = (q.width - W) // 2; y0 = (q.height - TOP) // 2; im.paste(q.crop((x0, y0, x0 + W, y0 + TOP)), (0, 0))
     ov = Image.new('RGBA', (W, TOP), (0, 0, 0, 0)); od = ImageDraw.Draw(ov)
     for y in range(TOP): od.line([(0, y), (W, y)], fill=(0, 0, 0, int(120 * max(0, (y - TOP * 0.45) / (TOP * 0.55)))))
     im.paste(ov, (0, 0), ov)
     d = ImageDraw.Draw(im)
-    # Rubrikbild links, groß, eckig mit Rahmen
-    S = int(W * 0.40); ic = Image.open(os.path.join(BASE, 'assets', bild)).convert('RGB')
+    # Rubrikbild links, eckig mit Rahmen (schrumpft mit, wenn das Kopfbild flacher wird)
+    S = min(int(W * 0.40), TOP - 90); ic = Image.open(os.path.join(BASE, 'assets', bild)).convert('RGB')
     m = min(ic.width, ic.height); ic = ic.crop(((ic.width - m) // 2, (ic.height - m) // 2, (ic.width - m) // 2 + m, (ic.height - m) // 2 + m)).resize((S, S))
     px, py = 48, TOP - S - 40
     d.rounded_rectangle([px - 10, py - 10, px + S + 10, py + S + 10], 30, fill=WEISS)
@@ -49,21 +73,16 @@ def karte(k, W, H, ziel):
     fb = f('Inter-Bold.otf', 34); tw = d.textlength(name, font=fb)
     lx = px + S + 40; d.rounded_rectangle([lx, TOP - 100, lx + tw + 48, TOP - 40], 14, fill=farbe); d.text((lx + 24, TOP - 92), name, font=fb, fill=WEISS)
     hoch = H > 1500; FB = 400 if hoch else 140  # 9:16: Fußzeile höher (TikTok/Story-Bedienelemente)
-    ft = f('InterDisplay-Black.otf', 76 if hoch else 62); lh = 90 if hoch else 74; y = TOP + 44
-    for l in wrap(d, k.get('titel', ''), ft, W - 110)[:4]: d.text((54, y), l, font=ft, fill=DUNKEL); y += lh
-    y += 16; grenze = H - FB - 30
-    # Schrift so weit verkleinern, bis ALLE Zeilen in die Karte passen (nichts wird abgeschnitten)
-    zl = k.get('zeilen', [])[:10]; gr = 46 if hoch else 38
-    while True:
-        fz = f('Inter-Medium.otf', gr); zh = int(gr * 1.32); ab = max(4, gr // 4)
-        lay = [wrap(d, z, fz, W - 108) for z in zl]
-        if y + sum(len(x) * zh + ab for x in lay) <= grenze or gr <= 24: break
-        gr -= 2
+    ft = f('InterDisplay-Black.otf', tg); y = TOP + 44
+    for l in tl: d.text((54, y), l, font=ft, fill=DUNKEL); y += int(tg * 1.19)
+    y += 16; fz = f('Inter-Medium.otf', gr)
+    # Passt selbst in der Mindestgröße nicht alles: ganze Zeilen weglassen und klar darauf hinweisen (nie mitten im Wort abschneiden)
+    platz = grenze - (zh + ab if zuviel else 0); fertig = False
     for ls in lay:
-        for l in ls:
-            if y + zh > grenze + 8: break
-            d.text((54, y), l, font=fz, fill=(55, 60, 58)); y += zh
+        if y + len(ls) * zh > platz + 8: fertig = True; break
+        for l in ls: d.text((54, y), l, font=fz, fill=(55, 60, 58)); y += zh
         y += ab
+    if zuviel and fertig: d.text((54, y), '… alles Weitere auf bdkng.de', font=f('Inter-Bold.otf', gr), fill=GRUEN)
     d.rectangle([0, H - FB, W, H], fill=GRUEN)
     d.text((54, H - FB + 22), 'bdkng.de · Dein Info-Kanal rund um Bad König', font=f('Inter-Bold.otf', 34), fill=WEISS)
     d.text((54, H - FB + 72), ('Quelle: ' + k.get('quelle', 'BDKNG'))[:80], font=f('Inter-Medium.otf', 26), fill=(200, 220, 205))
