@@ -1,19 +1,10 @@
 {
- "stand": "2026-11-15T05:30",
- "von": "2026-11-15",
- "bis": "2027-03-15",
+ "stand": "2026-11-16T05:30",
+ "von": "2026-11-16",
+ "bis": "2027-03-16",
  "quelle": "Stadt Bad König, Veranstaltungskalender",
  "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/",
  "termine": [
-  {
-   "datum": "2026-11-15",
-   "bis": "",
-   "uhrzeit": "10:30",
-   "titel": "Heimatmuseum Bad König",
-   "ort": "Schlosshof, Schlossplatz 3",
-   "veranstalter": "Heimat- und Geschichtsverein Bad König e.V.",
-   "info": "Eingang Schlosshof"
-  },
   {
    "datum": "2026-11-20",
    "bis": "",
