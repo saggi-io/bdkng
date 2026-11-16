@@ -1,5 +1,19 @@
 [
   {
+    "id": "medien-2026-11-16-286539060",
+    "checked": "2026-11-16",
+    "valid_until": "2026-11-26",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Zeller Brücke: Neubau der kleinen Schwester an Bad Königs Kurpark verzögert sich",
+    "paragraphs": [
+      "In Höhe des Bad Königer Kurparks soll die B45 während Brückenbauarbeiten auf eine Behelfsumfahrung verlegt werden. Das verzögert sich nun auf das kommende Frühjahr."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/zeller-bruecke-bei-der-kleinen-schwester-dauerts-laenger-6813116"
+  },
+  {
     "id": "2026-11-16-termine",
     "checked": "2026-11-16",
     "valid_until": "2026-11-23",
