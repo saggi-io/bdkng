@@ -51,12 +51,19 @@ def karte(k, W, H, ziel):
     hoch = H > 1500; FB = 400 if hoch else 140  # 9:16: Fußzeile höher (TikTok/Story-Bedienelemente)
     ft = f('InterDisplay-Black.otf', 76 if hoch else 62); lh = 90 if hoch else 74; y = TOP + 44
     for l in wrap(d, k.get('titel', ''), ft, W - 110)[:4]: d.text((54, y), l, font=ft, fill=DUNKEL); y += lh
-    y += 16; fz = f('Inter-Medium.otf', 46 if hoch else 38); zh = 60 if hoch else 50; grenze = H - FB - 70
-    for z in k.get('zeilen', [])[:8]:
-        for l in wrap(d, z, fz, W - 120):
-            if y > grenze: break
+    y += 16; grenze = H - FB - 30
+    # Schrift so weit verkleinern, bis ALLE Zeilen in die Karte passen (nichts wird abgeschnitten)
+    zl = k.get('zeilen', [])[:10]; gr = 46 if hoch else 38
+    while True:
+        fz = f('Inter-Medium.otf', gr); zh = int(gr * 1.32); ab = max(4, gr // 4)
+        lay = [wrap(d, z, fz, W - 108) for z in zl]
+        if y + sum(len(x) * zh + ab for x in lay) <= grenze or gr <= 24: break
+        gr -= 2
+    for ls in lay:
+        for l in ls:
+            if y + zh > grenze + 8: break
             d.text((54, y), l, font=fz, fill=(55, 60, 58)); y += zh
-        y += 10
+        y += ab
     d.rectangle([0, H - FB, W, H], fill=GRUEN)
     d.text((54, H - FB + 22), 'bdkng.de · Dein Info-Kanal rund um Bad König', font=f('Inter-Bold.otf', 34), fill=WEISS)
     d.text((54, H - FB + 72), ('Quelle: ' + k.get('quelle', 'BDKNG'))[:80], font=f('Inter-Medium.otf', 26), fill=(200, 220, 205))

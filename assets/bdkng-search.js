@@ -111,20 +111,23 @@
       return '<div class="bs-hit"><h3><a href="/' + esc(c) + '.html#' + esc(n.id) + '">' + esc(n.title) + '</a></h3><p>' + esc(n.paragraphs[0] || '') + '</p><p class="bs-src">' + esc(RUB[c] || c) + ' · Quelle: <a href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.source) + '</a> · Stand ' + esc(n.checked.slice(8) + '.' + n.checked.slice(5, 7) + '.' + n.checked.slice(0, 4)) + '</p></div>';
     }).join('');
   }
+  var TEAMN = { m1: 'SG Bad König/Zell · 1. Mannschaft (Kreisliga A)', m2: 'SG Bad König/Zell · 2. Mannschaft (Kreisliga B)', k1: 'SpVgg Kinzigtal · 1. Mannschaft', k2: 'SpVgg Kinzigtal · 2. Mannschaft' };
+  function vn(s) { return esc(String(s).replace(/^Spvgg /, 'SpVgg ')); }
+  function klubFilter(l, ql) { if (/kinzig/.test(ql)) return l.filter(function (x) { return /^k/.test(x.team); }); if (/\bsg\b|bad k(ö|oe)nig\/?zell|\bzell\b|1a|1b/.test(ql)) return l.filter(function (x) { return /^m/.test(x.team); }); return l; }
   function spieleAntwort(q) {
     var ql = q.toLowerCase();
     var absicht = /\b(spiel|spiele|spielt|spielen|spielplan|fußballspiel|fussballspiel|fußballspiele|fussballspiele|heimspiel|heimspiele|auswärtsspiel|anpfiff|anstoß|derby|kreisliga|ergebnis(se)?)\b/.test(ql);
-    var gegner = /\b(gegen|wann|spielt|nächste|nächsten)\b/.test(ql) && (data.spiele || []).some(function (x) { return (x.home + ' ' + x.away).toLowerCase().split(/[^a-zäöüß-]+/).some(function (t) { return t.length > 5 && !/könig|zell|michelstadt/.test(t) && ql.indexOf(t) >= 0; }); });
+    var gegner = /\b(gegen|wann|spielt|nächste|nächsten)\b/.test(ql) && (data.spiele || []).some(function (x) { return (x.home + ' ' + x.away).toLowerCase().split(/[^a-zäöüß-]+/).some(function (t) { return t.length > 5 && !/könig|zell|michelstadt/.test(t) && ql.indexOf(t) >= 0; }); }) || (/kinzig/.test(ql) && /\b(wann|spielt|nächste|nächsten|gegen)\b/.test(ql));
     if (/gehfu|walking|training|trainier/.test(ql)) return null;
     if (!absicht && !gegner) return null;
-    var t = heute(), l = (data.spiele || []).filter(function (x) { return x.date >= t; });
+    var t = heute(), l = klubFilter((data.spiele || []).filter(function (x) { return x.date >= t; }), ql);
     if (!l.length) return null;
-    var w = q.toLowerCase().split(/[^a-zäöüß0-9-]+/).filter(function (x) { return x.length > 4 && !/fußball|fussball|spiel|spiele|kreisliga|heimspiel|auswärts|nächste|nächsten|anstehende|wann|wieder|nächstes|wochenende/.test(x); });
+    var w = q.toLowerCase().split(/[^a-zäöüß0-9-]+/).filter(function (x) { return x.length > 4 && !/fußball|fussball|spiel|spiele|kreisliga|heimspiel|auswärts|nächste|nächsten|anstehende|wann|wieder|nächstes|wochenende|kinzig|spvgg|könig|koenig/.test(x); });
     var f = w.length ? l.filter(function (x) { var s = (x.home + ' ' + x.away).toLowerCase(); return w.some(function (y) { return s.indexOf(y) >= 0; }); }) : l;
     if (!f.length) f = l;
-    var h = '<p>Die nächsten Fußballspiele der SG Bad König/Zell:</p><ul>';
-    f.slice(0, 6).forEach(function (x) { h += '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr (' + tageBis(x.date) + '): <strong>' + esc(x.home) + ' – ' + esc(x.away) + '</strong> <small>(Kreisliga ' + (x.team === 'm1' ? 'A, 1. Mannschaft' : 'B, 2. Mannschaft') + ')</small></li>'; });
-    return h + '</ul><p class="bs-src">Quelle: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a> · Änderungen bitte beim Verein prüfen.</p>';
+    var h = '<p>Die nächsten Fußballspiele' + (/kinzig/.test(ql) ? ' der SpVgg Kinzigtal' : /^m/.test(f[0].team) && f.every(function (x) { return /^m/.test(x.team); }) ? ' der SG Bad König/Zell' : ' (SG Bad König/Zell und SpVgg Kinzigtal)') + ':</p><ul>';
+    f.slice(0, 8).forEach(function (x) { h += '<li>' + esc(deDatum(x.date)) + ', ' + esc(x.time) + ' Uhr (' + tageBis(x.date) + '): <strong>' + vn(x.home) + ' – ' + vn(x.away) + '</strong> <small>(' + esc(TEAMN[x.team] || '') + ')</small></li>'; });
+    return h + '</ul><p class="bs-src">Quelle: <a href="https://www.fupa.net/region/odenwald" target="_blank" rel="noopener">FuPa</a> · Änderungen bitte beim Verein prüfen. Alle Sportarten: <a href="/sport.html">Sport &amp; Vereine</a></p>';
   }
   function ttAntwort(q) {
     var ql = q.toLowerCase();
@@ -144,7 +147,7 @@
     var ql = q.toLowerCase();
     if (!/gespielt|ergebnis|ausgang|gewonnen|verloren|unentschieden|endstand|wie (ging|lief|stand|steht)|tore|geschossen/.test(ql)) return null;
     if (/tischtennis|leichtathlet|\btennis/.test(ql)) return null;
-    var nurHb = /handball|hsg/.test(ql), nurFb = /fu(ß|ss)ball|\bsg\b|1a|1b|kicker/.test(ql) && !nurHb;
+    var nurHb = /handball|hsg/.test(ql), nurFb = /fu(ß|ss)ball|\bsg\b|1a|1b|kicker|kinzig|spvgg/.test(ql) && !nurHb;
     var hbH = '';
     if (!nurFb) {
       var hl = (data.hbErg || []).slice(), hn = hl.length ? hl[0].date : '', ht = heute();
@@ -152,21 +155,21 @@
       if (hl.length) hbH = '<p>🤾 Handball – HSG Odenwald:</p><ul>' + hl.slice(0, 8).map(function (x) { var hh = /Odenwald/.test(x.home), d = hh ? x.hg - x.ag : x.ag - x.hg; return '<li>' + esc(deDatum(x.date)) + ' · ' + esc(x.team) + ' (' + esc(x.liga) + '): <strong>' + esc(x.home) + ' – ' + esc(x.away) + ' ' + x.hg + ':' + x.ag + '</strong> <small>(' + (d > 0 ? '✅ Sieg' : d < 0 ? '❌ Niederlage' : '🤝 Unentschieden') + ')</small></li>'; }).join('') + '</ul><p class="bs-src">Quelle: <a href="https://hhv-handball.liga.nu" target="_blank" rel="noopener">nuLiga</a></p>';
       if (nurHb) return hbH || '<p>Dazu habe ich noch kein Handball-Ergebnis – nuLiga trägt die Ergebnisse meist kurz nach Spielende ein.</p>';
     }
-    var l = (data.ergebnisse || []).slice().sort(function (a, b) { return b.date.localeCompare(a.date); });
+    var l = klubFilter((data.ergebnisse || []).slice().sort(function (a, b) { return b.date.localeCompare(a.date); }), ql);
     if (!l.length) return hbH || null;
     var t = heute(), neu = l[0].date, tage = {};
     if (/heute/.test(ql)) l = l.filter(function (x) { return x.date === t; });
     else if (/gestern/.test(ql)) l = l.filter(function (x) { return x.date === plus(t, -1); });
     else if (/wochenende|\bwe\b/.test(ql)) l = l.filter(function (x) { return x.date >= plus(neu, -2); });
-    else if (/1b|zweite|reserve|\bii\b/.test(ql)) l = l.filter(function (x) { return x.team === 'm2'; }).slice(0, 3);
-    else if (/1a|erste/.test(ql)) l = l.filter(function (x) { return x.team === 'm1'; }).slice(0, 3);
+    else if (/1b|zweite|reserve|\bii\b/.test(ql)) l = l.filter(function (x) { return /2$/.test(x.team); }).slice(0, 4);
+    else if (/1a|erste/.test(ql)) l = l.filter(function (x) { return /1$/.test(x.team); }).slice(0, 4);
     else l = l.filter(function (x) { return x.date >= plus(neu, -2); });
     if (!l.length && hbH) return hbH;
-    if (!l.length) return '<p>' + (/heute/.test(ql) ? 'Heute hat keine Mannschaft der SG Bad König/Zell gespielt – oder das Ergebnis ist noch nicht eingetragen.' : 'Dazu habe ich kein Ergebnis gefunden.') + '</p><p class="bs-src">Quelle: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a></p>';
-    var h = '<p>⚽ Ergebnisse der SG Bad König/Zell:</p><ul>';
-    l.slice(0, 6).forEach(function (x) {
-      var wir = /bad k/i.test(x.home) ? x.hg - x.ag : x.ag - x.hg, sym = wir > 0 ? '✅ Sieg' : wir < 0 ? '❌ Niederlage' : '🤝 Unentschieden';
-      h += '<li>' + esc(deDatum(x.date)) + ' · ' + (x.team === 'm1' ? '1. Mannschaft' : '2. Mannschaft') + ': <strong>' + esc(x.home) + ' – ' + esc(x.away) + ' ' + x.hg + ':' + x.ag + '</strong> <small>(' + sym + ')</small></li>';
+    if (!l.length) return '<p>' + (/heute/.test(ql) ? 'Heute hat keine unserer Fußball-Mannschaften gespielt – oder das Ergebnis ist noch nicht eingetragen.' : 'Dazu habe ich kein Ergebnis gefunden.') + '</p><p class="bs-src">Quelle: <a href="https://www.fupa.net/club/tsg-bad-koenig" target="_blank" rel="noopener">FuPa</a></p>';
+    var h = '<p>⚽ Fußball-Ergebnisse' + (/kinzig/.test(ql) ? ' der SpVgg Kinzigtal' : '') + ':</p><ul>';
+    l.slice(0, 8).forEach(function (x) {
+      var wir = (/^k/.test(x.team) ? /kinzigtal/i : /bad k/i).test(x.home) ? x.hg - x.ag : x.ag - x.hg, sym = wir > 0 ? '✅ Sieg' : wir < 0 ? '❌ Niederlage' : '🤝 Unentschieden';
+      h += '<li>' + esc(deDatum(x.date)) + ' · ' + esc((TEAMN[x.team] || '').replace(/ \(Kreisliga .\)/, '')) + ': <strong>' + vn(x.home) + ' – ' + vn(x.away) + ' ' + x.hg + ':' + x.ag + '</strong> <small>(' + sym + ')</small></li>';
     });
     h += '</ul>';
     var ber = (data.news || []).filter(function (n) { return n.categories.indexOf('sport') >= 0 && /SG Bad K|Bad K(ö|oe)nig\/Zell|TSG Bad K|Zell/i.test(n.title + ' ' + (n.paragraphs[0] || '')) && n.checked >= plus(t, -3); }).slice(0, 2);

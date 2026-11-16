@@ -10,7 +10,7 @@ SEITEN = {
  'kompakt.html': ('Neueste Meldungen kompakt', 'Neueste Meldungen kompakt: alles Neue des Tages aus Bad König auf einen Blick – Aktuelles, Verkehr, Termine, Sport und Wetter, mit Quelle.', 'hourly', '0.9'),
  'verkehr.html': ('Verkehr', 'Verkehr in Bad König: Staus, Unfälle, Sperrungen und Baustellen auf der B45, Zeller Brücke und Odenwaldbahn – live und mit Quelle.', 'hourly', '0.9'),
  'termine.html': ('Termine & Veranstaltungen', 'Veranstaltungen und Termine in Bad König: Was ist heute und am Wochenende los? Konzerte, Märkte, Vereinsfeste und mehr.', 'daily', '0.9'),
- 'sport.html': ('Sport & Vereine', 'Sport in Bad König: Spielpläne und Ergebnisse von Fußball (SG Bad König/Zell), Handball (HSG Odenwald), Leichtathletik, Tischtennis und Tennis.', 'daily', '0.8'),
+ 'sport.html': ('Sport & Vereine', 'Sport in Bad König: Spielpläne und Ergebnisse von Fußball (SG Bad König/Zell, SpVgg Kinzigtal), Handball (HSG Odenwald), Tischtennis, Tennis, Leichtathletik – dazu Fahrrad und Mountainbike.', 'daily', '0.8'),
  'muell.html': ('Müllabfuhr', 'Müllabfuhr Bad König: Abfuhrtermine für Restmüll, Bio, Papier und Gelbe Tonne in allen Stadtteilen, dazu Grünschnitt und Hotline.', 'weekly', '0.8'),
  'wetter.html': ('Wetter', 'Wetter in Bad König: Vorhersage für die nächsten Tage, Live-Werte der Wetterstation und Regenradar für den Odenwald.', 'hourly', '0.8'),
  'wichtig.html': ('Wichtige Meldungen', 'Wichtige Meldungen für Bad König: Warnungen, Polizei, Feuerwehr und Bevölkerungsschutz.', 'daily', '0.8'),
