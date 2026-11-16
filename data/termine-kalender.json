@@ -1,8 +1,8 @@
 {
- "stand": "2026-11-16T05:30",
+ "stand": "2026-11-16T12:30",
  "von": "2026-11-16",
  "bis": "2027-03-16",
- "quelle": "Stadt Bad König, Veranstaltungskalender",
+ "quelle": "Stadt Bad König, Veranstaltungskalender; Freilichtbühne Bad König (freilichtbuehne-bad-koenig.de)",
  "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/",
  "termine": [
   {
@@ -256,6 +256,56 @@
    "ort": "Rentmeisterei, Schlossplatz 2",
    "veranstalter": "Literaturhandlung Paperback",
    "info": "Wenn sich die politische Geschichte der Bundesrepublik seit den 1960er-Jahren in einer Biografie wiederfindet, dann in der des Intellektuellen, Historikers und bekennenden Sozialisten Peter Brandt – des 1948 geborenen ältesten Sohns von Willy Brandt. Früh ging er eigene Wege, war Teil der Protestbew"
+  },
+  {
+   "datum": "2027-06-11",
+   "bis": "",
+   "uhrzeit": "20:00",
+   "titel": "Pe Werner",
+   "ort": "Freilichtbühne Bad König, Schlossplatz",
+   "veranstalter": "Förderkreis Freilichtbühne Bad König e.V.",
+   "info": "Einlass 19:00 Uhr. Tickets und Infos: https://freilichtbuehne-bad-koenig.de/2026/10/06/pe-werner/",
+   "quelle": "freilicht"
+  },
+  {
+   "datum": "2027-06-12",
+   "bis": "",
+   "uhrzeit": "20:00",
+   "titel": "The Michael Jackson Tribute Show",
+   "ort": "Freilichtbühne Bad König, Schlossplatz",
+   "veranstalter": "Förderkreis Freilichtbühne Bad König e.V.",
+   "info": "Einlass 19:00 Uhr. Tickets und Infos: https://freilichtbuehne-bad-koenig.de/2026/10/06/the-michael-jackson-tribute-show/",
+   "quelle": "freilicht"
+  },
+  {
+   "datum": "2027-08-06",
+   "bis": "",
+   "uhrzeit": "20:00",
+   "titel": "Queen Tribute Show",
+   "ort": "Freilichtbühne Bad König, Schlossplatz",
+   "veranstalter": "Förderkreis Freilichtbühne Bad König e.V.",
+   "info": "Einlass 19:00 Uhr. Tickets und Infos: https://freilichtbuehne-bad-koenig.de/2026/10/06/queen-tribute-show/",
+   "quelle": "freilicht"
+  },
+  {
+   "datum": "2027-08-28",
+   "bis": "",
+   "uhrzeit": "20:00",
+   "titel": "Edelle – A Night About Adele",
+   "ort": "Freilichtbühne Bad König, Schlossplatz",
+   "veranstalter": "Förderkreis Freilichtbühne Bad König e.V.",
+   "info": "Einlass 19:00 Uhr. Tickets und Infos: https://freilichtbuehne-bad-koenig.de/2026/10/06/edelle/",
+   "quelle": "freilicht"
+  },
+  {
+   "datum": "2027-08-29",
+   "bis": "",
+   "uhrzeit": "20:00",
+   "titel": "ANDERS – A-cappella-Deutschpoeten",
+   "ort": "Freilichtbühne Bad König, Schlossplatz",
+   "veranstalter": "Förderkreis Freilichtbühne Bad König e.V.",
+   "info": "Einlass 19:00 Uhr. Tickets und Infos: https://freilichtbuehne-bad-koenig.de/2026/10/06/anders/",
+   "quelle": "freilicht"
   }
  ]
 }
