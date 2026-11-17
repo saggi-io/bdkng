@@ -1,6 +1,8 @@
 """BDKNG Social-Karten: data/karten/<id>.json -> assets/social/karten/<id>.png (4:5) und <id>-9x16.png"""
 import json, sys, os, glob
 from PIL import Image, ImageDraw, ImageFont
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import karte2
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FD = os.path.join(BASE, 'tools', 'fonts')
 def f(n, s): return ImageFont.truetype(os.path.join(FD, n), s)
@@ -92,8 +94,9 @@ def main(dateien):
     for p in dateien:
         k = json.load(open(p, encoding='utf-8')); i = os.path.splitext(os.path.basename(p))[0]
         if os.path.exists(os.path.join(out, i + '.jpg')): continue
-        karte(k, 1080, 1350, os.path.join(out, i + '.jpg'))
-        karte(k, 1080, 1920, os.path.join(out, i + '-9x16.jpg'))
+        # Seit 18.11.2026: neues Design (Liste mit Rubrik-Kacheln), siehe tools/karte2.py
+        karte2.karte(k, 1080, 1350, os.path.join(out, i + '.jpg'))
+        karte2.karte(k, 1080, 1920, os.path.join(out, i + '-9x16.jpg'))
         print('Karte', i)
 if __name__ == '__main__':
     main(sys.argv[1:] or glob.glob(os.path.join(BASE, 'data', 'karten', '*.json')))
