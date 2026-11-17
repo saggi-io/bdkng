@@ -1,5 +1,19 @@
 [
   {
+    "id": "medien-2026-11-17-265273185",
+    "checked": "2026-11-11",
+    "valid_until": "2026-11-21",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Pogrom-Gedenken Bad König: Antisemitismusbeauftragter warnt vor „Schon wieder“",
+    "paragraphs": [
+      "Beim Pogrom-Gedenken in Bad König sieht Hessens Antisemitismusbeauftragter Uwe Becker Deutschland auf dem Weg vom „Nie wieder“ zum „Schon wieder“."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/bad-koenig-erlebt-pogrom-gedenken-das-in-die-zukunft-weist-6792647"
+  },
+  {
     "id": "q-2026-11-17-mo529488835",
     "checked": "2026-11-17",
     "valid_until": "2026-11-27",
@@ -343,20 +357,6 @@
     ],
     "source": "Echo Online",
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/landkreis-odenwaldkreis/bei-wasserverbaenden-muemlinggersprenzgebiet-endet-eine-aera-6809986"
-  },
-  {
-    "id": "medien-2026-11-14-265273185",
-    "checked": "2026-11-11",
-    "valid_until": "2026-11-21",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Pogrom-Gedenken Bad König: Antisemitismusbeauftragter warnt vor „Schon wieder“",
-    "paragraphs": [
-      "Beim Pogrom-Gedenken in Bad König sieht Hessens Antisemitismusbeauftragter Uwe Becker Deutschland auf dem Weg vom „Nie wieder“ zum „Schon wieder“."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/bad-koenig-erlebt-pogrom-gedenken-das-in-die-zukunft-weist-6792647"
   },
   {
     "id": "q-2026-11-14-mo968637765",
