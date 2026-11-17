@@ -330,7 +330,7 @@
     fetch('https://n8n.sagmeister.io/webhook/bdkng-frage', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: q }), signal: c.signal })
       .then(function (r) { return r.json(); }).then(function (j) {
         clearTimeout(t);
-        if (j.limit) return zeige('<div class="bs-kaffee"><p><strong>Die KI-Suche hat gerade ihr Limit erreicht.</strong> ☕</p><p>BDKNG ist ein privates Angebot ohne Werbung und ohne Paywall. Die KI-Suche kostet pro Frage ein paar Cent. Wenn du magst, gib mir einen Kaffee aus – das hilft auch beim Ziel, eine eigene BDKNG-App für iPhone und Android anzubieten. Freiwillig, danke dir! 🙏</p><p><a class="bs-kaffee-btn" href="' + KAFFEE + '" target="_blank" rel="noopener">☕ Kaffee ausgeben</a></p><p class="bs-note">Müll, Termine und Stichworte kannst du weiterhin suchen. Die KI-Suche ist bald wieder da.</p></div>');
+        if (j.limit) return zeige('<div class="bs-kaffee"><p><strong>Die KI-Suche hat gerade ihr Limit erreicht.</strong> ☕</p><p>BDKNG ist ein privates Angebot ohne Paywall. Die KI-Suche kostet pro Frage ein paar Cent. Wenn du magst, gib mir einen Kaffee aus – das hilft auch beim Ziel, eine eigene BDKNG-App für iPhone und Android anzubieten. Freiwillig, danke dir! 🙏</p><p><a class="bs-kaffee-btn" href="' + KAFFEE + '" target="_blank" rel="noopener">☕ Kaffee ausgeben</a></p><p class="bs-note">Müll, Termine und Stichworte kannst du weiterhin suchen. Die KI-Suche ist bald wieder da.</p></div>');
         zeige('<p>' + esc(j.antwort || 'Dazu habe ich nichts gefunden.').replace(/\n+/g, '<br>') + '</p><p class="bs-note">KI-Antwort aus den Infos dieser Seite – bitte bei Wichtigem die genannte Quelle prüfen.</p>');
       }).catch(function () { clearTimeout(t); if (fb) return zeige(fb); zeige('<p>Dazu habe ich auf dieser Seite nichts gefunden. Du kannst uns einen Hinweis über das <a href="/kontakt.html?thema=hinweis">Kontaktformular</a> schicken.</p>'); });
   }
@@ -376,7 +376,7 @@
     try { zu = +localStorage.getItem(K) || 0; } catch (e) {}
     if (Date.now() - zu < 14 * 864e5) return;
     var d = document.createElement('div'); d.className = 'bs-hint';
-    d.innerHTML = '<span class="bs-cup" aria-hidden="true">☕</span><span class="bs-txt"><strong>BDKNG ist privat – ohne Werbung, ohne Paywall.</strong> Wenn dir die Infos helfen, freue ich mich über einen Kaffee. Ziel ist eine eigene BDKNG-App für iPhone und Android – jede Spende hilft dabei. Freiwillig, danke dir!</span><a class="bs-gift" href="https://bdkng.de/kaffee/" target="_blank" rel="noopener">Kaffee ausgeben</a><button type="button" aria-label="Hinweis schließen">×</button>';
+    d.innerHTML = '<span class="bs-cup" aria-hidden="true">☕</span><span class="bs-txt"><strong>BDKNG ist privat und ohne Paywall.</strong> Wenn dir die Infos helfen, freue ich mich über einen Kaffee. Ziel ist eine eigene BDKNG-App für iPhone und Android – jede Spende hilft dabei. Freiwillig, danke dir!</span><a class="bs-gift" href="https://bdkng.de/kaffee/" target="_blank" rel="noopener">Kaffee ausgeben</a><button type="button" aria-label="Hinweis schließen">×</button>';
     d.querySelector('button').addEventListener('click', function () { try { localStorage.setItem(K, Date.now()); } catch (e) {} d.remove(); });
     box.insertAdjacentElement('afterend', d);
   })();

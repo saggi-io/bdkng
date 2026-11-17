@@ -7,7 +7,7 @@
     box.querySelector('.ks-summe').textContent = eur(summe);
     box.querySelector('.kosten-balken i').style.width = pz + '%';
     box.querySelector('.ks-sp').textContent = 'gespendet: ' + eur(sp);
-    box.title = 'Server, Domains und KI. BDKNG ist werbefrei – dein Kaffee hilft beim Betrieb und beim Ziel einer eigenen BDKNG-App.';
+    box.title = 'Server, Domains und KI – dein Kaffee hilft beim Betrieb und beim Ziel einer eigenen BDKNG-App.';
     box.hidden = false;
   }).catch(function () {});
 })();
