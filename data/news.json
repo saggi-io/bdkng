@@ -1,5 +1,20 @@
 [
   {
+    "id": "q-2026-11-17-615276112",
+    "checked": "2026-11-17",
+    "valid_until": "2026-12-01",
+    "categories": [
+      "verkehr",
+      "aktuell"
+    ],
+    "title": "Vollsperrung in der Leipziger Straße",
+    "paragraphs": [
+      "Ab dem 23.11.2026 ist die Durchfahrt in der Leipziger Straße aufgrund einer Kran-Aufstellung (Neubau Wohnhaus) nicht möglich. Die Zufahrt in von beiden Seiten bis zur Baustelle frei."
+    ],
+    "source": "Stadt Bad König",
+    "url": "https://www.badkoenig.de/aktuelle-nachrichten/vollsperrung-in-der-leipziger-strasse/"
+  },
+  {
     "id": "medien-2026-11-16-258893938",
     "checked": "2026-11-10",
     "valid_until": "2026-11-20",
