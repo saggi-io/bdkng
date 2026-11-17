@@ -125,3 +125,21 @@
 .bs .bs-unten{padding:22px 30px 16px;background:rgba(0,0,0,.16);border-top:2px solid rgba(232,184,74,.55);display:flex;flex-direction:column;justify-content:center;min-width:0}
 .bs .bs-unten .bs-form{margin-top:0}
 @media(max-width:600px){.bs .bs-head{padding:18px 16px 16px}.bs .bs-unten{padding:16px 16px 12px}}
+
+/* Rubriken als Sprung-Buttons unter der KI-Antwort; mobil seitlich wischbar */
+.bs .bs-rub{margin:14px 0 0;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.bs .bs-rub::-webkit-scrollbar{display:none}
+.bs .bs-rub-in{display:flex;flex-wrap:wrap;gap:8px}
+.bs .bs-rub a{display:inline-flex;align-items:center;white-space:nowrap;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);color:#fff;font-weight:800;font-size:14px;text-decoration:none}
+.bs .bs-rub a:hover,.bs .bs-rub a:focus{background:#fff;color:#1B4D2E}
+@media (max-width:700px){.bs .bs-rub-in{flex-wrap:nowrap;width:max-content;padding-right:24px}.bs .bs-rub{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}}
+/* Daumen unter KI-Antworten */
+.bs-tools{display:flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:space-between}
+.bs-rate{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:#555}
+.bs-d{border:1px solid #d9d4c8;background:#faf8f3;border-radius:999px;padding:4px 12px;font-size:18px;cursor:pointer;line-height:1.2}
+.bs-d:hover{background:#eef5ef}
+/* Daumen ganz oben */
+.daumen-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 10px;margin:10px auto 6px;padding:8px 14px;border-radius:14px;background:#eef5ef;color:#1B4D2E;font-weight:700;font-size:15px;text-align:center;max-width:1180px}
+.daumen-top button{border:1px solid #c9dccd;background:#fff;border-radius:999px;padding:4px 14px;font-size:20px;cursor:pointer;line-height:1.2}
+.daumen-top button:hover{background:#dcefe0}
+.daumen-top .dt-info{flex-basis:100%;font-weight:500;font-size:13px;color:#4a5b4f}

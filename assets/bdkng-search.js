@@ -311,14 +311,20 @@
     return null;
   }
   var KAFFEE = 'https://bdkng.de/kaffee/';
+  // Daumen hoch/runter: anonym, nur Zählung (keine IP, keine Cookies)
+  function stimme(v, w, q) { try { var d = JSON.stringify({ p: location.pathname, n: 0, v: v, w: w, q: String(q || '').slice(0, 80) }), u = 'https://n8n.sagmeister.io/webhook/bdkng-zugriff'; if (navigator.sendBeacon) navigator.sendBeacon(u, new Blob([d], { type: 'text/plain' })); else fetch(u, { method: 'POST', body: d, mode: 'no-cors', keepalive: true }); } catch (e) {} }
+  window.bdkngStimme = stimme;
+  var letzteFrage = '';
   function zeige(h) {
-    out.innerHTML = h + '<div class="bs-tools"><button type="button" class="bs-speak">🔊 Vorlesen</button></div>';
+    out.innerHTML = h + '<div class="bs-tools"><button type="button" class="bs-speak">🔊 Vorlesen</button><span class="bs-rate"><span>Hilfreich?</span><button type="button" class="bs-d" data-v="hoch" aria-label="Antwort hilfreich">👍</button><button type="button" class="bs-d" data-v="runter" aria-label="Antwort nicht hilfreich">👎</button></span></div>';
+      [].forEach.call(out.querySelectorAll('.bs-d'), function (b) { b.addEventListener('click', function () { stimme(b.getAttribute('data-v'), 'ki', letzteFrage); var r = out.querySelector('.bs-rate'); r.innerHTML = b.getAttribute('data-v') === 'hoch' ? '<span>Danke! 💚</span>' : '<span>Danke – wir verbessern das. <a href="/kontakt.html?thema=hinweis">Was fehlt?</a></span>'; }); });
       var sp = out.querySelector('.bs-speak');
       if (!window.speechSynthesis) sp.hidden = true; else sp.addEventListener('click', function () {
         window.speechSynthesis.cancel(); var u = new SpeechSynthesisUtterance(out.innerText.replace('🔊 Vorlesen', '')); u.lang = 'de-DE'; window.speechSynthesis.speak(u);
       });
   }
   function ki(q, fb) {
+    letzteFrage = q;
     out.innerHTML = '<p class="bs-load">Ich schaue genauer nach …</p>';
     var c = new AbortController(), t = setTimeout(function () { c.abort(); }, 75000);
     fetch('https://n8n.sagmeister.io/webhook/bdkng-frage', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: q }), signal: c.signal })
@@ -375,3 +381,7 @@
     box.insertAdjacentElement('afterend', d);
   })();
 })();
+(function(){var t=document.getElementById('daumenTop');if(!t)return;
+ try{if(localStorage.getItem('bdkng_daumen')){t.innerHTML='<span>Danke für dein Feedback! 💚 Das Angebot wird laufend verbessert und weiterentwickelt.</span>';return}}catch(e){}
+ [].forEach.call(t.querySelectorAll('button'),function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-v');if(window.bdkngStimme)window.bdkngStimme(v,'seite','');try{localStorage.setItem('bdkng_daumen',v)}catch(e){}
+  t.innerHTML=v==='hoch'?'<span>Danke! 💚 Erzähl es gern weiter.</span>':'<span>Danke für die ehrliche Meinung. <a href="/kontakt.html#feedback">Was sollen wir besser machen?</a></span>'})})})();
