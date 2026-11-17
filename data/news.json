@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-11-17-wetter",
+    "checked": "2026-11-17",
+    "valid_until": "2026-11-20",
+    "categories": [
+      "wetter"
+    ],
+    "title": "WETTER · Die nächsten 3 Tage",
+    "paragraphs": [
+      "Mittwoch, 18.11.: bedeckt, 9 bis 11 °C, Regenrisiko 63 % (ca. 9 l/m²), Böen bis 59 km/h  Donnerstag, 19.11.: Regen, 9 bis 10 °C, Regenrisiko 71 % (ca. 10 l/m²)  Freitag, 20.11.: bedeckt, 7 bis 9 °C, Regenrisiko 65 % (ca. 11 l/m²)",
+      "Amtliche WARNUNG vor WINDBÖEN (Di 20:00 bis Mi 10:00 Uhr)  Amtliche WARNUNG vor WINDBÖEN (Di 12:00 bis Di 20:00 Uhr)"
+    ],
+    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
+    "url": "https://bdkng.de"
+  },
+  {
     "id": "medien-2026-11-17-265273185",
     "checked": "2026-11-11",
     "valid_until": "2026-11-21",
