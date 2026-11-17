@@ -1,5 +1,23 @@
 [
   {
+    "id": "hand-2026-11-17-sauna",
+    "checked": "2026-11-17",
+    "zeit": "08:00",
+    "valid_until": "2026-11-28",
+    "categories": [
+      "termine",
+      "aktuell"
+    ],
+    "title": "Odenwald-Therme: Neue Sauna wird am 27. November eröffnet",
+    "paragraphs": [
+      "Am Freitag, 27. November 2026, eröffnet die Kurgesellschaft Bad König den neuen Saunabereich der Odenwald-Therme – von 18 bis 1 Uhr.",
+      "Um 20 Uhr ist die Eröffnung, um 21 Uhr folgt der erste Aufguss in der neuen Sauna. Dazu gibt es Motto- und Eventaufgüsse, Showeinlagen mit Musik, Klangschalen- und Peelingrituale sowie Specials in der Gastronomie. Ab 18 Uhr ist textilfreies Schwimmen auch im Bad möglich.",
+      "Tagesticket für Bad und Sauna inklusive Sauna-Event: 29 €. Kein Vorverkauf, keine Verrechnung mit Gutscheinen. Der Außenbereich des Bades schließt um 22 Uhr."
+    ],
+    "source": "Kurgesellschaft Bad König / Odenwald-Therme (Instagram)",
+    "url": "https://www.instagram.com/odenwaldtherme/"
+  },
+  {
     "id": "2026-11-17-wetter",
     "checked": "2026-11-17",
     "valid_until": "2026-11-20",
@@ -109,25 +127,10 @@
     ],
     "title": "Zeller Weihnachtsmarkt",
     "paragraphs": [
-      "*** START BODY PART #1 *** Upload vom 16.11.2026 15:45:06 1 Dokument. Benutzer: 775848 Weihnachtsmarkt 2026 OB Zell final - TITELBLATT.png.jpg *** END BODY PART #1 ***"
+      "Die Stadtnachrichten haben das Plakat zum Zeller Weihnachtsmarkt 2026 veröffentlicht. Alle Details stehen im Aushang – siehe Quelle."
     ],
     "source": "Bad Königer Stadtnachrichten (meinOrt)",
     "url": "https://meinort.de/bad-koenig/neues/zeller-weihnachtsmarkt-2173-2026-48-0-46977462"
-  },
-  {
-    "id": "q-2026-11-16-mo528620965",
-    "checked": "2026-11-16",
-    "valid_until": "2026-11-30",
-    "categories": [
-      "verkehr",
-      "aktuell"
-    ],
-    "title": "Vollsperrung in der Leipziger Straße",
-    "paragraphs": [
-      "Ab dem 23.11.2026 ist die Durchfahrt in der Leipziger Straße aufgrund einer Kran-Aufstellung (Neubau Wohnhaus) nicht möglich. Die Zufahrt ist von beiden Seiten bis zur Baustelle frei. Wir bitten um Beachtung und Verständnis. Hofferbert Bürgermeister"
-    ],
-    "source": "Bad Königer Stadtnachrichten (meinOrt)",
-    "url": "https://meinort.de/bad-koenig/neues/vollsperrung-in-der-leipziger-strasse-2173-2026-48-0-46977468"
   },
   {
     "id": "q-2026-11-16-mo528620962",
@@ -241,6 +244,7 @@
     "checked": "2026-11-16",
     "valid_until": "2026-11-26",
     "categories": [
+      "verkehr",
       "aktuell"
     ],
     "title": "Zeller Brücke: Neubau der kleinen Schwester an Bad Königs Kurpark verzögert sich",
@@ -310,8 +314,7 @@
     "checked": "2026-11-15",
     "valid_until": "2026-11-22",
     "categories": [
-      "sport",
-      "termine"
+      "sport"
     ],
     "title": "Handball: Die Ergebnisse vom Wochenende",
     "paragraphs": [
@@ -328,8 +331,7 @@
     "checked": "2026-11-15",
     "valid_until": "2026-11-22",
     "categories": [
-      "sport",
-      "termine"
+      "sport"
     ],
     "title": "Fußball: Die Ergebnisse vom Wochenende",
     "paragraphs": [

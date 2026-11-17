@@ -13,10 +13,16 @@ for n in news:
  if not n['url'].startswith('https://') or not set(n['categories'])<=set(categories):raise ValueError('Invalid source/category')
  if not re.fullmatch(r'\d{4}-\d{2}-\d{2}',n['checked']):raise ValueError('Invalid date')
  if n.get('valid_until') and not re.fullmatch(r'\d{4}-\d{2}-\d{2}',n['valid_until']):raise ValueError('Invalid expiry')
+def datum_de(n):
+    d = str(n.get("checked", ""))[:10]
+    try: d = d[8:10] + "." + d[5:7] + "." + d[0:4]
+    except Exception: pass
+    z = str(n.get("zeit", "") or "")
+    return d + (", " + z + " Uhr" if z else "")
 def render(n):
  e=html.escape
  expiry=f' data-valid-until="{n["valid_until"]}"' if n.get('valid_until') else ''
- return f'<article class="news-entry" id="{n["id"]}"{expiry}><p class="news-meta">Quellenstand: {n["checked"]}</p><h2>{e(n["title"])}</h2><p class="expired-label" hidden>Archiv: Der angegebene Zeitraum ist abgelaufen.</p>'+''.join(f'<p>{e(p)}</p>' for p in n['paragraphs'])+f'<p class="source">Quelle: <a href="{e(n["url"],quote=True)}" target="_blank" rel="noopener">{e(n["source"])}</a>'+''.join(f' · <a href="{e(w["url"],quote=True)}" target="_blank" rel="noopener">{e(w["source"])}</a>' for w in n.get('weitere',[]) if str(w.get('url','')).startswith('https://'))+'</p></article>'
+ return f'<article class="news-entry" id="{n["id"]}"{expiry}><p class="news-meta">Eingestellt: {datum_de(n)}</p><h2>{e(n["title"])}</h2><p class="expired-label" hidden>Archiv: Der angegebene Zeitraum ist abgelaufen.</p>'+''.join(f'<p>{e(p)}</p>' for p in n['paragraphs'])+f'<p class="source">Quelle: <a href="{e(n["url"],quote=True)}" target="_blank" rel="noopener">{e(n["source"])}</a>'+''.join(f' · <a href="{e(w["url"],quote=True)}" target="_blank" rel="noopener">{e(w["source"])}</a>' for w in n.get('weitere',[]) if str(w.get('url','')).startswith('https://'))+'</p></article>'
 outputs={}
 for slug in categories:
  path=root/(slug+'.html');text=path.read_text(encoding='utf-8')
