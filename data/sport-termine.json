@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-16T12:24",
+ "stand": "2026-11-17T06:00",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
   {
@@ -985,24 +985,6 @@
    "away": "HSG Odenwald II",
    "hg": 42,
    "ag": 37
-  },
-  {
-   "date": "2026-11-08",
-   "liga": "F-BL",
-   "team": "Frauen",
-   "home": "HSG Odenwald II",
-   "away": "HSG Rodenstein II",
-   "hg": 31,
-   "ag": 12
-  },
-  {
-   "date": "2026-11-08",
-   "liga": "F-BOL",
-   "team": "Frauen",
-   "home": "HSG Odenwald",
-   "away": "HSG Rodenstein",
-   "hg": 44,
-   "ag": 23
   }
  ],
  "tischtennis": [
