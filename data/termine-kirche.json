@@ -1,6 +1,198 @@
 {
- "stand": "",
+ "stand": "2026-11-18",
  "quelle": "Bad Königer Stadtnachrichten (Kirchliche Nachrichten), LINUS WITTICH",
  "url": "https://epaper.wittich.de/frontend/mvc/catalog/by-name/2173/newest",
- "termine": []
+ "termine": [
+  {
+   "datum": "2026-11-20",
+   "uhrzeit": "18:00",
+   "titel": "Hl. Messe",
+   "ort": "Kirche Bad König",
+   "gemeinde": "kath",
+   "art": "gottesdienst",
+   "info": "Pfarrer Januarius Mäurer",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-11-22",
+   "uhrzeit": "09:00",
+   "titel": "Hl. Messe (Christkönigssonntag)",
+   "ort": "Kirche Bad König",
+   "gemeinde": "kath",
+   "art": "gottesdienst",
+   "info": "Pfarrer Januarius Mäurer",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-11-22",
+   "uhrzeit": "09:30",
+   "titel": "Gottesdienst (Totensonntag)",
+   "ort": "Evangelische Kirche Bad König",
+   "gemeinde": "ev",
+   "art": "gottesdienst",
+   "info": "Der Kirchenchor singt, parallel Kinderkirche",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-11-22",
+   "uhrzeit": "10:00",
+   "titel": "Gottesdienst zum Totensonntag",
+   "ort": "Kirche Zell",
+   "gemeinde": "ev",
+   "art": "gottesdienst",
+   "info": "Verlesung und Fürbitte für die Verstorbenen des vergangenen Kirchenjahres",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-11-22",
+   "uhrzeit": "11:00",
+   "titel": "Andacht zum Totensonntag",
+   "ort": "Friedhof Etzen-Gesäß",
+   "gemeinde": "ev",
+   "art": "gedenken",
+   "info": "mit Posaunenchor",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-11-22",
+   "uhrzeit": "13:00",
+   "titel": "Andacht zum Totensonntag",
+   "ort": "Friedhof Fürstengrund",
+   "gemeinde": "ev",
+   "art": "gedenken",
+   "info": "mit Posaunenchor",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-11-22",
+   "uhrzeit": "13:00",
+   "titel": "Andacht zum Totensonntag",
+   "ort": "Friedhof Momart",
+   "gemeinde": "ev",
+   "art": "gedenken",
+   "info": "mit Posaunenchor",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-11-22",
+   "uhrzeit": "14:00",
+   "titel": "Andacht zum Totensonntag",
+   "ort": "Friedhof Nieder-Kinzig",
+   "gemeinde": "stadt",
+   "art": "gedenken",
+   "info": "",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-11-22",
+   "uhrzeit": "14:30",
+   "titel": "Gottesdienst zum Totensonntag",
+   "ort": "Friedhof Bad König",
+   "gemeinde": "ev",
+   "art": "gedenken",
+   "info": "mit Posaunenchor und MGV Liederkranz",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-11-22",
+   "uhrzeit": "15:00",
+   "titel": "Friedhofsandacht zum Ewigkeitssonntag",
+   "ort": "Friedhof Kimbach",
+   "gemeinde": "ev",
+   "art": "gedenken",
+   "info": "Prädikantin Ute Karl",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-11-25",
+   "uhrzeit": "18:00",
+   "titel": "Hl. Messe",
+   "ort": "Kirche Bad König",
+   "gemeinde": "kath",
+   "art": "gottesdienst",
+   "info": "Pfarrer Ryszard Strojek",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-11-27",
+   "uhrzeit": "18:00",
+   "titel": "Hl. Messe",
+   "ort": "Kirche Bad König",
+   "gemeinde": "kath",
+   "art": "gottesdienst",
+   "info": "Pfarrer Januarius Mäurer",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-11-27",
+   "uhrzeit": "19:00",
+   "titel": "Adventsandacht",
+   "ort": "Evangelische Kirche Bad König",
+   "gemeinde": "ev",
+   "art": "gottesdienst",
+   "info": "anschließend Mitarbeiterfeier im Gemeindehaus",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-11-29",
+   "uhrzeit": "09:00",
+   "titel": "Hl. Messe (1. Advent)",
+   "ort": "Kirche Bad König",
+   "gemeinde": "kath",
+   "art": "gottesdienst",
+   "info": "Pfarrer Ryszard Strojek",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-11-29",
+   "uhrzeit": "09:30",
+   "titel": "Gottesdienst (1. Advent)",
+   "ort": "Evangelische Kirche Bad König",
+   "gemeinde": "ev",
+   "art": "gottesdienst",
+   "info": "mit Mitarbeitervorstellung, mitgestaltet vom MGV Liederkranz",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-11-29",
+   "uhrzeit": "16:00",
+   "titel": "Hl. Messe im syro-malabarischen Ritus",
+   "ort": "Kirche Bad König",
+   "gemeinde": "kath",
+   "art": "gottesdienst",
+   "info": "Pfarrer Alexander Chundattu O. Carm.",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-12-11",
+   "uhrzeit": "19:00",
+   "titel": "Musikalische Adventsandacht",
+   "ort": "Schlosskirche Bad König",
+   "gemeinde": "ev",
+   "art": "gottesdienst",
+   "info": "mit Johannes Schmidtke (Orgel) und Pfarrer Martin Hecker",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-12-13",
+   "uhrzeit": "15:00",
+   "titel": "Gottesdienst zur Verabschiedung von Pfarrer Armin Hammes",
+   "ort": "Kirche Zell",
+   "gemeinde": "ev",
+   "art": "gottesdienst",
+   "info": "anschließend Empfang",
+   "ausgabe": "2173_47_2026"
+  },
+  {
+   "datum": "2026-12-20",
+   "uhrzeit": "14:00",
+   "titel": "Adventliche Andacht im Seniorennachmittag",
+   "ort": "Kirche Zell",
+   "gemeinde": "ev",
+   "art": "gottesdienst",
+   "info": "anschließend Kaffee und Kuchen, zusammen mit der Stadt Bad König",
+   "ausgabe": "2173_47_2026"
+  }
+ ],
+ "ausgabe": "2173_47_2026"
 }
