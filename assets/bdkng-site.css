@@ -45,3 +45,8 @@ nav .installnav[hidden]{display:none}
 .termin-melden .tm-check{display:flex;gap:10px;align-items:flex-start}.termin-melden .tm-check input{width:auto;min-height:auto;margin-top:4px}
 .termin-melden .tm-abbr{background:none;border:0;cursor:pointer;font:inherit;color:var(--green,#1B4D2E);text-decoration:underline;margin-left:10px}
 .termin-melden form{margin-top:14px}
+.nach-oben{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:#1B4D2E;text-decoration:none;border:1px solid #cfdccf;border-radius:999px;padding:3px 10px;background:#fff}
+.nach-oben:hover{background:#eef5ef}
+.nach-oben-fix{position:fixed;right:16px;bottom:18px;z-index:50;width:46px;height:46px;border-radius:50%;border:0;background:#1B4D2E;color:#fff;font-size:22px;font-weight:800;box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer}
+.nach-oben-fix[hidden]{display:none}
+@media print{.nach-oben,.nach-oben-fix{display:none}}
