@@ -93,6 +93,21 @@ def intro(t):  # 2,4 s: Kronen-Logo gold/weiß im Wechsel pulsierend, dann HP-Lo
     p = 1 + 0.06 * math.sin(t * 2 * math.pi * 1.4); aus = 1 - ease((t - 1.3) / 0.3)
     if t < 0.8: setz(im, LG[0 if (t % 0.4) < 0.2 else 1], W / 2, H / 2 - 80, 700 * p, aus)
     else: setz(im, HP, W / 2, H / 2 - 80, 820 * p, aus)
+    # Unter dem Logo: "BDKNG kompakt" und das Datum
+    try:
+        import datetime as _dt
+        uv = str(data.get('ueber', '')).split(' · ')[0]
+        tg = {'Mo.': 'Montag', 'Di.': 'Dienstag', 'Mi.': 'Mittwoch', 'Do.': 'Donnerstag', 'Fr.': 'Freitag', 'Sa.': 'Samstag', 'So.': 'Sonntag'}
+        teile = uv.split(' '); MON = ['', 'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']
+        tag, mon = teile[1].strip('.').split('.')[:2] if len(teile) > 1 else ('', '')
+        datum = tg.get(teile[0], teile[0]) + ', ' + str(int(tag)) + '. ' + MON[int(mon)] if tag else uv
+    except Exception:
+        datum = ''
+    ta = ease(t / 0.3) * aus
+    lay = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
+    ld.text((W // 2, H // 2 + 330), 'BDKNG kompakt', font=K.f('InterDisplay-Black.otf', 96), fill=(255, 255, 255, int(255 * ta)), anchor='mm')
+    if datum: ld.text((W // 2, H // 2 + 440), datum, font=K.f('Inter-Bold.otf', 60), fill=GOLD + (int(255 * ta),), anchor='mm')
+    im.alpha_composite(lay)
     return im.convert('RGB')
 def vorschau(t):
     im, d, TOP = basis(t)
