@@ -2,7 +2,8 @@
 Eingabe (data/karten/<id>.json):
   {"rubrik": "aktuell", "titel": "BDKNG News am Morgen", "quelle": "BDKNG",
    "art": "liste" | "text",
-   "zeilen": ["Text", {"t": "Text", "r": "verkehr"}, {"t": "Text", "e": "🌧️"}, ...]}
+   "ueber": "Mi. 18.11. · 07:30 Uhr" (optional),
+   "zeilen": ["Text", {"t": "Text", "r": "verkehr", "k": "Verkehr · B45"}, {"t": "Text", "e": "🌧️"}, ...]}
 Ausgabe: <id>.jpg (4:5, Feed Facebook/Instagram) und <id>-9x16.jpg (Story/Status)."""
 import os
 from PIL import Image, ImageDraw, ImageFont
@@ -45,8 +46,9 @@ def emoji(ch, s):
             im.thumbnail((s, s), Image.LANCZOS); return im
     return None
 def zeile(z, rub):
-    if isinstance(z, dict): return str(z.get('t', '')), z.get('r') or rub, z.get('e')
-    return str(z), rub, None
+    if isinstance(z, dict): return str(z.get('t', '')), z.get('r') or rub, z.get('e'), str(z.get('k') or '')
+    return str(z), rub, None, ''
+GOLD = (176, 128, 30)
 
 def plan(k, W, H, top):
     """Größte Schrift suchen, bei der alles draufpasst (Untergrenze bleibt gut lesbar)."""
@@ -62,15 +64,15 @@ def plan(k, W, H, top):
             fz = f('Inter-Bold.otf' if liste else 'Inter-Medium.otf', gs); zh = int(gs * 1.22)
             kach = int(gs * 2.9) if liste else 0
             tx = 60 + (kach + 44 if liste else 0)
-            rows = []
-            for t, r, e in zl:
+            rows = []; kh = int(gs * 0.62) + 8
+            for t, r, e, kk in zl:
                 ls = wrap(d, t, fz, W - tx - 60)[:4]
-                rows.append((ls, r, e, max(kach, len(ls) * zh) + (34 if liste else 18)))
-            y = top + 40 + len(tl) * int(ts * 1.08) + 26
+                rows.append((ls, r, e, max(kach, len(ls) * zh + (kh if kk else 0)) + (34 if liste else 18), kk))
+            y = top + 40 + (int(ts * 0.5) + 14 if k.get('ueber') else 0) + len(tl) * int(ts * 1.08) + 26
             if y + sum(r[3] for r in rows) <= H - FUSS - 24:
                 return dict(ts=ts, gs=gs, tl=tl, rows=rows, zh=zh, kach=kach, tx=tx, fuss=FUSS, liste=liste, voll=True)
     # passt nicht: Mindestgrößen, überzählige Einträge weglassen
-    rest = []; y = top + 40 + len(tl) * int(ts * 1.08) + 26
+    rest = []; y = top + 40 + (int(ts * 0.5) + 14 if k.get('ueber') else 0) + len(tl) * int(ts * 1.08) + 26
     for r in rows:
         if y + r[3] > H - FUSS - 90: break
         rest.append(r); y += r[3]
@@ -99,10 +101,13 @@ def karte(k, W, H, ziel):
     d.rounded_rectangle([lx, ly, lx + tw + 56, ly + 62], 31, fill=GRUEN); d.text((lx + 28, ly + 31), name, font=fb, fill=WEISS, anchor='lm')
     # Titel
     y = TOP + 40; ft = f('InterDisplay-Black.otf', p['ts'])
+    if k.get('ueber'):  # kleine Zeile über der Überschrift (z. B. Datum und Uhrzeit)
+        fu = f('Inter-Bold.otf', int(p['ts'] * 0.5)); d.text((52, y), str(k['ueber']).upper()[:60], font=fu, fill=GOLD); y += int(p['ts'] * 0.5) + 14
     for l in p['tl']: d.text((50, y), l, font=ft, fill=GRUEN_D); y += int(p['ts'] * 1.08)
     y += 26
     fz = f('Inter-Bold.otf' if p['liste'] else 'Inter-Medium.otf', p['gs']); K = p['kach']
-    for i, (ls, r, e, h) in enumerate(p['rows']):
+    fk = f('Inter-Bold.otf', int(p['gs'] * 0.62)); KH = int(p['gs'] * 0.62) + 8
+    for i, (ls, r, e, h, kk) in enumerate(p['rows']):
         if p['liste']:
             ky = y + (h - 34 - K) // 2
             d.rounded_rectangle([50, ky, 50 + K, ky + K], 26, fill=HELL)
@@ -112,11 +117,13 @@ def karte(k, W, H, ziel):
             else:
                 pic = quadrat(RUBRIK.get(r, RUBRIK['aktuell'])[1], K - 18); im.paste(pic, (59, ky + 9), maske(pic.size, 20))
             bx = 50 + K + 22; d.line([(bx, y + 8), (bx, y + h - 42)], fill=(120, 180, 70), width=4)
-            ty = y + (h - 34 - len(ls) * p['zh']) // 2
+            ty = y + (h - 34 - len(ls) * p['zh'] - (KH if kk else 0)) // 2
+            if kk: d.text((p['tx'], ty), kk.upper()[:40], font=fk, fill=GOLD); ty += KH  # kleine Zeile über der Überschrift
             for l in ls: d.text((p['tx'], ty), l, font=fz, fill=TEXT); ty += p['zh']
             if i < len(p['rows']) - 1: d.line([(p['tx'], y + h - 17), (W - 50, y + h - 17)], fill=LINIE, width=2)
         else:
             ty = y
+            if kk: d.text((54, ty), kk.upper()[:40], font=fk, fill=GOLD); ty += KH
             for l in ls: d.text((54, ty), l, font=fz, fill=TEXT); ty += p['zh']
         y += h
     if not p['voll']: d.text((p['tx'] if p['liste'] else 54, y + 6), '… alles Weitere auf bdkng.de', font=f('Inter-Bold.otf', p['gs']), fill=GRUEN)
