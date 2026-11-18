@@ -174,3 +174,7 @@
 @media(max-width:600px){.sozial-breit{padding:20px 16px;border-radius:18px}.sozial-knoepfe{display:grid;grid-template-columns:1fr 1fr}.sozial-knoepfe .sk{justify-content:center;padding:11px 10px}}
 .seo-about .mitmachen{margin-top:12px}
 .seo-about .mitmachen a{font-weight:800}
+/* 18.11.: "Was unsere Stadt bewegt" in derselben Größe wie der übrige Text der KI-Box */
+.bs .bs-ueber{font-size:clamp(16px,2vw,19px);line-height:1.45}
+.bs .bs-ueber .bs-ueber-neu{font-size:inherit}
+@media(max-width:600px){.bs .bs-ueber{font-size:16px}}
