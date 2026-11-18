@@ -135,10 +135,18 @@
   try {
     var P = {
       '/termine.html': [['.service-panel', 'wasistlos', '🎉 Was ist los'], ['#freilicht', 'freilicht', '🎭 Freilichtbühne'], [function () { return [].find.call(document.querySelectorAll('.news-entry'), function (a) { return /Therme|Sauna/i.test((a.querySelector('h2') || {}).textContent || ''); }); }, 'therme', '♨️ Therme'], ['.news-list', 'meldungen', '📅 Termine & Veranstaltungen'], ['#terminMelden', 'terminMelden', '📣 Termin melden']],
-      '/verkehr.html': [['#verkehrStatus', 'verkehrStatus', '🚦 Aktuelle Lage'], ['#sprit', 'sprit', '⛽ Tanken'], ['.news-list', 'meldungen', '🚧 Meldungen'], ['#blitzer', 'blitzer', '📸 Blitzer'], ['#melder', 'melder', '📣 Melden'], ['.verkehr-links', 'links', '🔗 Links']]
+      '/verkehr.html': [['#verkehrStatus', 'verkehrStatus', '🚦 Aktuelle Behinderungen'], ['#sprit', 'sprit', '⛽ Tanken'], ['.news-list', 'meldungen', '🚧 Verkehrsmeldungen'], ['#blitzer', 'blitzer', '📸 Blitzer & Stau-Melder'], ['.verkehr-links', 'links', '🔗 Links']]
     }[location.pathname];
     if (!P) return;
+    // Verkehr: Reihenfolge der Abschnitte = Reihenfolge der Knöpfe (Behinderungen, Tanken, Meldungen, Blitzer/Melder, Links)
+    function ordnen() {
+      if (location.pathname !== '/verkehr.html') return;
+      var hero = document.querySelector('main .subhero'); if (!hero) return;
+      var nach = hero;
+      ['#verkehrStatus', '#sprit', '.news-list', '#blitzer', '.verkehr-links'].forEach(function (q) { var el = document.querySelector(q); if (el) { nach.insertAdjacentElement('afterend', el); nach = el; } });
+    }
     function bauen() {
+      ordnen();
       var alt = document.querySelector('.sprung-nav'); if (alt) alt.remove();
       var nav = document.createElement('nav'); nav.className = 'sprung-nav'; nav.setAttribute('aria-label', 'Abschnitte dieser Seite');
       P.forEach(function (x) {
@@ -152,7 +160,7 @@
       if (!nav.children.length) return;
       var hero = document.querySelector('main .subhero'); if (hero) hero.insertAdjacentElement('afterend', nav);
     }
-    function los() { bauen(); setTimeout(bauen, 2500); }
+    function los() { bauen(); setTimeout(bauen, 2500); setTimeout(bauen, 6000); }
     if (document.readyState !== 'loading') los(); else document.addEventListener('DOMContentLoaded', los);
   } catch (e) {}
 })();

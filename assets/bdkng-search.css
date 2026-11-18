@@ -150,7 +150,14 @@
 .info-leiste a[hidden]{display:none}
 .info-leiste a:hover{background:#eef5ef}
 .info-leiste .il-mehr{font-weight:800;margin-left:6px}.info-leiste b{white-space:nowrap}
-@media (max-width:560px){.info-leiste{flex-direction:column;align-items:stretch}.info-leiste a{justify-content:center;font-size:13.5px}}
+.info-leiste .il-lab{font-weight:800;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#5b6b60;margin-right:8px}
+.il-ampel .amp-l{display:inline-flex;gap:4px;margin-right:8px;padding:3px 5px;background:#1d2a20;border-radius:999px}
+.il-ampel .amp-l i{width:11px;height:11px;border-radius:50%;background:#46524a;display:block}
+.il-ampel.amp-gruen .amp-l i.g{background:#2ecc55;box-shadow:0 0 6px #2ecc55}
+.il-ampel.amp-gelb .amp-l i.y{background:#f5c518;box-shadow:0 0 6px #f5c518}
+.il-ampel.amp-rot .amp-l i.r{background:#e53935;box-shadow:0 0 6px #e53935}
+.il-ampel.amp-rot{border-color:#e53935}.il-ampel.amp-gelb{border-color:#e6b800}
+@media (max-width:560px){.info-leiste{flex-direction:column;align-items:stretch}.info-leiste a{justify-content:flex-start;font-size:13.5px}.info-leiste .il-mehr{margin-left:auto}}
 /* 18.11.: untere Hälfte nur so hoch wie nötig; Rubrik-Leiste am Handy wischbar */
 .bs.bs{grid-template-rows:auto auto}
 .bs .bs-unten{justify-content:flex-start}
