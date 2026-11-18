@@ -185,3 +185,14 @@
 .bs .bs-ueber{font-size:clamp(16px,2vw,19px);line-height:1.45}
 .bs .bs-ueber .bs-ueber-neu{font-size:inherit}
 @media(max-width:600px){.bs .bs-ueber{font-size:16px}}
+
+/* KI-Box aufgeräumt (19.11.) */
+.bs .bs-head{gap:4px}
+.bs .bs-ueber{font-size:15px;line-height:1.5;padding:8px 0;margin:10px 0 12px;color:#dfeae2}
+.bs .bs-ueber .bs-ueber-neu{font-size:13.5px;margin-top:4px}
+.bs h2{font-size:clamp(24px,3.2vw,34px);line-height:1.15;letter-spacing:-.01em}
+.bs h2 .bs-frag{display:block;font-size:.62em;margin-top:4px}
+.bs .bs-pitch{font-size:15.5px;line-height:1.45;margin:6px 0 0;color:#e7efe9;max-width:62ch}
+.bs .bs-unten{margin-top:14px}
+.bs .bs-example{font-size:13.5px;padding:8px 13px}
+@media(max-width:600px){.bs .bs-ueber{font-size:14px}.bs h2{font-size:24px}.bs .bs-pitch{font-size:14.5px}}
