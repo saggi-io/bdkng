@@ -11,7 +11,7 @@
     if (j.boen >= 50) s += ' · Böen ' + j.boen + ' km/h';
     var a = el.querySelector('.il-wetter'); a.innerHTML = '<span>' + s + '</span><span class="il-mehr">→</span>'; el.hidden = false;
   }).catch(function () {});
-  fetch('/data/sprit.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
+  fetch('https://n8n.sagmeister.io/webhook/bdkng-sprit', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
     var p = d.leiste; if (!p) return;
     var a = el.querySelector('.il-sprit'); a.innerHTML = '<span>⛽ ' + p + '</span><span class="il-mehr">→</span>'; a.hidden = false; el.hidden = false;
   }).catch(function () {});

@@ -45,3 +45,16 @@ nav.rub-nav .rub-nav-in a{display:inline-flex!important}
 .wt-liste li{display:flex;gap:12px;padding:7px 12px;border-top:1px solid #e6efe6;font-size:15px}
 .wt-liste li:first-child{border-top:0}.wt-liste li:nth-child(even){background:#f6faf6}
 .wt-liste b{min-width:88px;color:#1B4D2E}
+/* Spritpreise (Verkehr) */
+.sprit-box .sp-unter{margin:.2em 0 12px;color:#3a4a3f}
+.sp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.sp-sorte{background:#f4f8f4;border:1px solid #d9e6da;border-radius:14px;padding:12px}
+.sp-sorte h3{margin:0 0 8px;font-size:17px;color:#1B4D2E}
+.sp-sorte ol{margin:0;padding:0;list-style:none;counter-reset:sp}
+.sp-sorte li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-top:1px solid #e3ece3;font-size:14px;line-height:1.35}
+.sp-sorte li:first-child{border-top:0}
+.sp-preis{font-weight:800;font-size:18px;color:#1B4D2E;white-space:nowrap;min-width:78px}
+.sp-preis sup{font-size:.6em}
+.sp-ort a{color:#3a4a3f}
+.sp-quelle{font-size:13px;color:#5b6b60;margin-top:10px}
+@media(max-width:760px){.sp-grid{grid-template-columns:1fr}}
