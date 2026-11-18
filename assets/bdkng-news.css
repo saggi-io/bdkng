@@ -41,3 +41,7 @@ nav.rub-nav .rub-nav-in a{display:inline-flex!important}
 .wt-regen,.wt-boe{font-size:13.5px;color:#3a4a3f}
 .wt-warn{background:#fff4e5;border-left:4px solid #e67e22;border-radius:8px;padding:8px 12px;margin:6px 0;font-weight:600}
 @media(max-width:560px){.wt-tage{grid-template-columns:1fr}.wt-tag{display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"ico kopf temp" "ico zust temp" "ico regen boe";text-align:left;column-gap:10px;align-items:center;padding:10px 12px}.wt-ico{grid-area:ico;font-size:30px;margin:0}.wt-kopf{grid-area:kopf}.wt-zust{grid-area:zust}.wt-temp{grid-area:temp;text-align:right}.wt-regen{grid-area:regen}.wt-boe{grid-area:boe;text-align:right}}
+.wt-liste{list-style:none;padding:0;margin:8px 0 12px;border:1px solid #d9e6da;border-radius:12px;overflow:hidden}
+.wt-liste li{display:flex;gap:12px;padding:7px 12px;border-top:1px solid #e6efe6;font-size:15px}
+.wt-liste li:first-child{border-top:0}.wt-liste li:nth-child(even){background:#f6faf6}
+.wt-liste b{min-width:88px;color:#1B4D2E}

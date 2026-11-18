@@ -130,3 +130,29 @@
 
 // Kopfzeile: Rubrik-Leiste – aktive Rubrik in den sichtbaren Bereich schieben
 (function () { try { var a = document.querySelector('.kopf-rub a[aria-current="page"]'); if (a) { var n = a.closest('.kopf-rub'); n.scrollLeft = Math.max(0, a.offsetLeft - 16); } } catch (e) {} })();
+// Sprung-Knöpfe zu den Abschnitten einer Seite (Termine, Verkehr) – wie bei Sport
+(function () {
+  try {
+    var P = {
+      '/termine.html': [['.service-panel', 'wasistlos', '🎉 Was ist los'], ['#freilicht', 'freilicht', '🎭 Freilichtbühne'], [function () { return [].find.call(document.querySelectorAll('.news-entry'), function (a) { return /Therme|Sauna/i.test((a.querySelector('h2') || {}).textContent || ''); }); }, 'therme', '♨️ Therme'], ['.news-list', 'meldungen', '📅 Termine & Veranstaltungen'], ['#terminMelden', 'terminMelden', '📣 Termin melden']],
+      '/verkehr.html': [['#verkehrStatus', 'verkehrStatus', '🚦 Aktuelle Lage'], ['#sprit', 'sprit', '⛽ Tanken'], ['.news-list', 'meldungen', '🚧 Meldungen'], ['#blitzer', 'blitzer', '📸 Blitzer'], ['#melder', 'melder', '📣 Melden'], ['.verkehr-links', 'links', '🔗 Links']]
+    }[location.pathname];
+    if (!P) return;
+    function bauen() {
+      var alt = document.querySelector('.sprung-nav'); if (alt) alt.remove();
+      var nav = document.createElement('nav'); nav.className = 'sprung-nav'; nav.setAttribute('aria-label', 'Abschnitte dieser Seite');
+      P.forEach(function (x) {
+        var el = typeof x[0] === 'function' ? x[0]() : document.querySelector(x[0]);
+        if (!el || el.hidden) return;
+        if (!el.id) el.id = x[1];
+        var a = document.createElement('a'); a.href = '#' + el.id; a.textContent = x[2];
+        a.addEventListener('click', function (e) { e.preventDefault(); var h = (document.querySelector('header') || {}).offsetHeight || 0; window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - h - 10, behavior: 'smooth' }); });
+        nav.appendChild(a);
+      });
+      if (!nav.children.length) return;
+      var hero = document.querySelector('main .subhero'); if (hero) hero.insertAdjacentElement('afterend', nav);
+    }
+    function los() { bauen(); setTimeout(bauen, 2500); }
+    if (document.readyState !== 'loading') los(); else document.addEventListener('DOMContentLoaded', los);
+  } catch (e) {}
+})();

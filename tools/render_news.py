@@ -45,15 +45,34 @@ def wetter_html(n):
       +('<div class="wt-regen">💧 '+e(rm.group(1))+' %'+(' · '+e(rl.group(1))+' l/m²' if rl else '')+'</div>' if rm else '')
       +('<div class="wt-boe">💨 '+e(boe)+'</div>' if boe else '')+'</div>')
  h+='</div>'
+ from datetime import datetime,timedelta,date as _d
+ try:
+  from zoneinfo import ZoneInfo; jetzt=datetime.now(ZoneInfo('Europe/Berlin')).replace(tzinfo=None)
+ except Exception: jetzt=datetime.now()
+ WT={'Mo':0,'Di':1,'Mi':2,'Do':3,'Fr':4,'Sa':5,'So':6}
+ def abgelaufen(w):
+  # "(Di 20:00 bis Mi 10:00 Uhr)": Ende ab dem Einstell-Datum auf den Wochentag rechnen
+  m=re.search(r'bis (Mo|Di|Mi|Do|Fr|Sa|So) (\d{1,2}):(\d{2})',w)
+  if not m: return False
+  try: start=_d.fromisoformat(n['checked'])
+  except Exception: return False
+  tage=(WT[m.group(1)]-start.weekday())%7
+  ende=datetime(start.year,start.month,start.day,int(m.group(2)),int(m.group(3)))+timedelta(days=tage)
+  return ende<jetzt
+ warn=[w for w in warn if not abgelaufen(w)]
  for w in warn:
   w=re.sub(r'Amtliche WARNUNG vor ([A-ZÄÖÜ]+)',lambda m:'Amtliche Warnung vor '+m.group(1).capitalize(),w)
   h+='<p class="wt-warn">⚠️ '+e(w)+'</p>'
  h+=''.join('<p>'+e(r)+'</p>' for r in rest)
  return h
+def rueck_html(n):
+ e=html.escape; tag=[p for p in n['paragraphs'] if re.match(r'^(Mo|Di|Mi|Do|Fr|Sa|So), \d',p)]; rest=[p for p in n['paragraphs'] if p not in tag]
+ if not tag: return None
+ return ''.join('<p>'+e(p)+'</p>' for p in rest)+'<ul class="wt-liste">'+''.join('<li><b>'+e(p.split(': ',1)[0])+'</b><span>'+e(p.split(': ',1)[-1])+'</span></li>' for p in tag)+'</ul>'
 def render(n):
  e=html.escape
  expiry=f' data-valid-until="{n["valid_until"]}"' if n.get('valid_until') else ''
- return f'<article class="news-entry" id="{n["id"]}"{expiry}><p class="news-meta">Eingestellt: {datum_de(n)}</p><h2>{e(re.sub(r"^WETTER · ","Wetter: ",n["title"]))}</h2><p class="expired-label" hidden>Archiv: Der angegebene Zeitraum ist abgelaufen.</p>'+((wetter_html(n) if n['id'].endswith('-wetter') else None) or ''.join(f'<p>{e(p)}</p>' for p in n['paragraphs']))+f'<p class="source">Quelle: <a href="{e(n["url"],quote=True)}" target="_blank" rel="noopener">{e(n["source"])}</a>'+''.join(f' · <a href="{e(w["url"],quote=True)}" target="_blank" rel="noopener">{e(w["source"])}</a>' for w in n.get('weitere',[]) if str(w.get('url','')).startswith('https://'))+'</p><a class="nach-oben" href="#" aria-label="Nach oben">↑ nach oben</a></article>'
+ return f'<article class="news-entry" id="{n["id"]}"{expiry}><p class="news-meta">Eingestellt: {datum_de(n)}</p><h2>{e(re.sub(r"^WETTER · ","Wetter: ",n["title"]))}</h2><p class="expired-label" hidden>Archiv: Der angegebene Zeitraum ist abgelaufen.</p>'+((wetter_html(n) if n['id'].endswith('-wetter') else rueck_html(n) if n['id'].startswith('wetter-rueckblick') else None) or ''.join(f'<p>{e(p)}</p>' for p in n['paragraphs']))+f'<p class="source">Quelle: <a href="{e(n["url"],quote=True)}" target="_blank" rel="noopener">{e(n["source"])}</a>'+''.join(f' · <a href="{e(w["url"],quote=True)}" target="_blank" rel="noopener">{e(w["source"])}</a>' for w in n.get('weitere',[]) if str(w.get('url','')).startswith('https://'))+'</p><a class="nach-oben" href="#" aria-label="Nach oben">↑ nach oben</a></article>'
 outputs={}
 for slug in categories:
  path=root/(slug+'.html');text=path.read_text(encoding='utf-8')
