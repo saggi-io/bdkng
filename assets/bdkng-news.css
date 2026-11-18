@@ -31,3 +31,13 @@ nav.rub-nav{display:block}
 nav.rub-nav .rub-nav-in a{display:inline-flex!important}
 /* 18.11.: lange Wörter in Überschriften umbrechen, damit am Handy nichts seitlich übersteht */
 .news-entry h2,.news-entry h3,.news-entry p,.subhero h1,.subpanel h2{overflow-wrap:anywhere;hyphens:auto;-webkit-hyphens:auto}
+/* 18.11.: Wetter-Vorhersage als Tageskarten */
+.wt-tage{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0 12px}
+.wt-tag{background:#f4f8f4;border:1px solid #d9e6da;border-radius:14px;padding:12px 10px;text-align:center}
+.wt-kopf{font-size:14px;color:#1B4D2E}
+.wt-ico{font-size:34px;line-height:1.2;margin:4px 0}
+.wt-zust{font-size:14px;color:#3a4a3f}
+.wt-temp{font-size:20px;font-weight:800;color:#1B4D2E;margin:2px 0 4px}
+.wt-regen,.wt-boe{font-size:13.5px;color:#3a4a3f}
+.wt-warn{background:#fff4e5;border-left:4px solid #e67e22;border-radius:8px;padding:8px 12px;margin:6px 0;font-weight:600}
+@media(max-width:560px){.wt-tage{grid-template-columns:1fr}.wt-tag{display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"ico kopf temp" "ico zust temp" "ico regen boe";text-align:left;column-gap:10px;align-items:center;padding:10px 12px}.wt-ico{grid-area:ico;font-size:30px;margin:0}.wt-kopf{grid-area:kopf}.wt-zust{grid-area:zust}.wt-temp{grid-area:temp;text-align:right}.wt-regen{grid-area:regen}.wt-boe{grid-area:boe;text-align:right}}
