@@ -156,3 +156,14 @@
     if (document.readyState !== 'loading') los(); else document.addEventListener('DOMContentLoaded', los);
   } catch (e) {}
 })();
+// Admin-Knopf (nur auf Geräten, die einmal bdkng.de/?admin=an aufgerufen haben): öffnet die Post-Liste im Cockpit (Teilen/Löschen)
+(function () {
+  try {
+    var q = new URLSearchParams(location.search).get('admin');
+    if (q === 'an') localStorage.setItem('bdkngAdmin', '1'); if (q === 'aus') localStorage.removeItem('bdkngAdmin');
+    if (localStorage.getItem('bdkngAdmin') !== '1') return;
+    var a = document.createElement('a'); a.className = 'admin-knopf'; a.href = 'https://n8n.sagmeister.io/webhook/cockpit-datei?f=posts.html'; a.target = '_blank'; a.rel = 'noopener';
+    a.innerHTML = '🛠️ <span>Posts teilen/löschen</span>';
+    (document.body ? Promise.resolve() : new Promise(function (r) { document.addEventListener('DOMContentLoaded', r); })).then(function () { document.body.appendChild(a); });
+  } catch (e) {}
+})();
