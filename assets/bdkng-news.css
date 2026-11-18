@@ -29,3 +29,5 @@
 .news-entry .nach-oben:hover{background:#eef5ef}
 nav.rub-nav{display:block}
 nav.rub-nav .rub-nav-in a{display:inline-flex!important}
+/* 18.11.: lange Wörter in Überschriften umbrechen, damit am Handy nichts seitlich übersteht */
+.news-entry h2,.news-entry h3,.news-entry p,.subhero h1,.subpanel h2{overflow-wrap:anywhere;hyphens:auto;-webkit-hyphens:auto}

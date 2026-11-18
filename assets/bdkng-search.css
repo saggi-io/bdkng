@@ -151,3 +151,7 @@
 .info-leiste a:hover{background:#eef5ef}
 .info-leiste .il-mehr{font-weight:800;margin-left:6px}.info-leiste b{white-space:nowrap}
 @media (max-width:560px){.info-leiste{flex-direction:column;align-items:stretch}.info-leiste a{justify-content:center;font-size:13.5px}}
+/* 18.11.: untere Hälfte nur so hoch wie nötig; Rubrik-Leiste am Handy wischbar */
+.bs.bs{grid-template-rows:auto auto}
+.bs .bs-unten{justify-content:flex-start}
+.bs .bs-head > .bs-rub{align-self:stretch;width:100%;max-width:100%;min-width:0;display:block!important;touch-action:pan-x pan-y}
