@@ -76,11 +76,12 @@ def inhalt(img, d, k, W, x0, x1, y, s, zeichnen=True):
 def karte(k, W, H, ziel):
     tik = H > 1500
     img = verlauf(W, H); d = ImageDraw.Draw(img)
-    lg = Image.open(os.path.join(BASE, 'assets', 'bdkng-logo.png')).convert('RGBA'); lg.thumbnail((10000, 190 if tik else 150))
-    lx = (W - lg.width) // 2; ly = 70 if tik else 34
-    d.rounded_rectangle((lx - 30, ly - 14, lx + lg.width + 30, ly + lg.height + 14), radius=40, fill='#FFFFFF')
+    # modernes Logo (Krone, Graffiti-Stil) ohne weißes Schild
+    lg = Image.open(os.path.join(BASE, 'assets', 'logos', 'bdkng-krone-gold.png')).convert('RGBA')
+    bb = lg.getbbox(); lg = lg.crop(bb) if bb else lg; lg.thumbnail((10000, 260 if tik else 200), Image.LANCZOS)
+    lx = (W - lg.width) // 2; ly = 50 if tik else 18
     img.alpha_composite(lg, (lx, ly))
-    top = ly + lg.height + 40; fuss = 360 if tik else 275
+    top = ly + lg.height + 22; fuss = 360 if tik else 275
     kx0, kx1, ky1 = 50, W - 50, H - fuss
     d.rounded_rectangle((kx0, top, kx1, ky1), radius=60, fill='#FFFFFF')
     x0, x1 = kx0 + 60, kx1 - 60; platz = (ky1 - 80) - (top + 40)
