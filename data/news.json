@@ -1,5 +1,28 @@
 [
   {
+    "id": "wetter-rueckblick-2026-11-09",
+    "checked": "2026-11-18",
+    "zeit": "16:05",
+    "valid_until": "2026-11-25",
+    "categories": [
+      "wetter"
+    ],
+    "title": "Wetterrückblick Bad König: 9. bis 15. November",
+    "paragraphs": [
+      "Die Woche in Zahlen: -2 bis 11 °C · 10,8 l/m² Regen · 15 Sonnenstunden · 4 trockene Tage.",
+      "Wärmster Tag: Mi, 11.11. mit 11 °C. Kältester Morgen: So, 15.11. mit -2 °C. Nassester Tag: Mi, 11.11. mit 9,0 l/m².",
+      "Mo, 09.11.: 3 bis 6 °C · trocken · 0 h Sonne",
+      "Di, 10.11.: 3 bis 6 °C · trocken · 3 h Sonne",
+      "Mi, 11.11.: 3 bis 11 °C · 9,0 l/m² Regen · 0 h Sonne",
+      "Do, 12.11.: 2 bis 11 °C · 0,2 l/m² Regen · 0 h Sonne",
+      "Fr, 13.11.: 1 bis 6 °C · trocken · 5 h Sonne",
+      "Sa, 14.11.: 0 bis 3 °C · trocken · 7 h Sonne",
+      "So, 15.11.: -2 bis 9 °C · 1,6 l/m² Regen · 0 h Sonne"
+    ],
+    "source": "Deutscher Wetterdienst (DWD), Messwerte über Bright Sky",
+    "url": "https://brightsky.dev/"
+  },
+  {
     "id": "q-2026-11-18-926336287",
     "checked": "2026-11-18",
     "zeit": "14:00",
@@ -664,26 +687,6 @@
     ],
     "source": "Stadt Bad König",
     "url": "https://www.badkoenig.de/aktuelle-nachrichten/gewaesserentwicklung-an-der-muemling/"
-  },
-  {
-    "id": "wetter-rueckblick-2026-11-01",
-    "checked": "2026-11-08",
-    "categories": [
-      "wetter"
-    ],
-    "title": "Wetterrückblick Bad König: 1. bis 7. November",
-    "paragraphs": [
-      "Gemessene Werte der vergangenen Woche (Tiefst- und Höchsttemperatur, Niederschlag je Tag):",
-      "So, 01.11.: 4 bis 8 °C, Niederschlag 0.0 mm",
-      "Mo, 02.11.: 2 bis 7 °C, Niederschlag 0.0 mm",
-      "Di, 03.11.: 3 bis 6 °C, Niederschlag 0.0 mm",
-      "Mi, 04.11.: 4 bis 7 °C, Niederschlag 0.0 mm",
-      "Do, 05.11.: 2 bis 8 °C, Niederschlag 0.0 mm",
-      "Fr, 06.11.: 0 bis 6 °C, Niederschlag 0.0 mm",
-      "Sa, 07.11.: 0 bis 6 °C, Niederschlag 0.0 mm"
-    ],
-    "source": "Deutscher Wetterdienst über Bright Sky",
-    "url": "https://brightsky.dev/"
   },
   {
     "id": "zell-2026-11-06-frei",
