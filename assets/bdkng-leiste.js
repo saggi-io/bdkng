@@ -9,10 +9,10 @@
     if (t.tmin != null) s += ' · heute ' + t.tmin + '–' + t.tmax + ' °C';
     if (t.regen >= 1) s += ', ' + z(Math.round(t.regen * 10) / 10) + ' mm Regen';
     if (j.boen >= 50) s += ' · Böen ' + j.boen + ' km/h';
-    var a = el.querySelector('.il-wetter'); a.innerHTML = s + ' <span class="il-mehr">→</span>'; el.hidden = false;
+    var a = el.querySelector('.il-wetter'); a.innerHTML = '<span>' + s + '</span><span class="il-mehr">→</span>'; el.hidden = false;
   }).catch(function () {});
   fetch('/data/sprit.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
     var p = d.leiste; if (!p) return;
-    var a = el.querySelector('.il-sprit'); a.innerHTML = '⛽ ' + p + ' <span class="il-mehr">→</span>'; a.hidden = false; el.hidden = false;
+    var a = el.querySelector('.il-sprit'); a.innerHTML = '<span>⛽ ' + p + '</span><span class="il-mehr">→</span>'; a.hidden = false; el.hidden = false;
   }).catch(function () {});
 })();
