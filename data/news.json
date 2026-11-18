@@ -1,5 +1,21 @@
 [
   {
+    "id": "q-2026-11-18-926336287",
+    "checked": "2026-11-18",
+    "zeit": "14:00",
+    "valid_until": "2026-12-02",
+    "categories": [
+      "verkehr",
+      "aktuell"
+    ],
+    "title": "B 45: Neubau der Talbrücke bei Bad König/Zell",
+    "paragraphs": [
+      "Betonage des Brückenüberbaus findet im Januar statt – Verkehrsfreigabetermin bleibt davon unberührt"
+    ],
+    "source": "Hessen Mobil",
+    "url": "https://mobil.hessen.de/presse/b-45-neubau-der-talbruecke-bei-bad-koenigzell-5"
+  },
+  {
     "id": "medien-2026-11-18-234851736",
     "checked": "2026-11-18",
     "valid_until": "2026-11-28",
