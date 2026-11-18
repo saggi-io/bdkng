@@ -15,3 +15,15 @@
 
 .station-host iframe{height:400px;max-width:100%}@media(min-width:760px){.station-host iframe{height:360px}}
 .k-tag{font-weight:700;color:var(--green);margin:0 0 14px}.k-rubrik{font-weight:700}
+
+/* Rubrik-Leiste auf allen Rubrikseiten (mobil wischbar) */
+.rub-nav{margin:14px 0 6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rub-nav::-webkit-scrollbar{display:none}
+.rub-nav-in{display:flex;flex-wrap:wrap;gap:8px}
+.rub-nav a{display:inline-flex;align-items:center;white-space:nowrap;padding:8px 13px;border-radius:999px;background:#fff;border:1px solid #cfdccf;color:#1B4D2E;font-weight:800;font-size:14px;text-decoration:none}
+.rub-nav a:hover,.rub-nav a:focus{background:#eef5ef}
+.rub-nav a[aria-current="page"]{background:#1B4D2E;color:#fff;border-color:#1B4D2E}
+@media(max-width:700px){.rub-nav-in{flex-wrap:nowrap;width:max-content;padding-right:20px}}
+/* Pfeil nach oben unter jeder Meldung */
+.news-entry .nach-oben{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:#1B4D2E;text-decoration:none;border:1px solid #cfdccf;border-radius:999px;padding:3px 10px}
+.news-entry .nach-oben:hover{background:#eef5ef}

@@ -22,7 +22,7 @@ def datum_de(n):
 def render(n):
  e=html.escape
  expiry=f' data-valid-until="{n["valid_until"]}"' if n.get('valid_until') else ''
- return f'<article class="news-entry" id="{n["id"]}"{expiry}><p class="news-meta">Eingestellt: {datum_de(n)}</p><h2>{e(n["title"])}</h2><p class="expired-label" hidden>Archiv: Der angegebene Zeitraum ist abgelaufen.</p>'+''.join(f'<p>{e(p)}</p>' for p in n['paragraphs'])+f'<p class="source">Quelle: <a href="{e(n["url"],quote=True)}" target="_blank" rel="noopener">{e(n["source"])}</a>'+''.join(f' · <a href="{e(w["url"],quote=True)}" target="_blank" rel="noopener">{e(w["source"])}</a>' for w in n.get('weitere',[]) if str(w.get('url','')).startswith('https://'))+'</p></article>'
+ return f'<article class="news-entry" id="{n["id"]}"{expiry}><p class="news-meta">Eingestellt: {datum_de(n)}</p><h2>{e(n["title"])}</h2><p class="expired-label" hidden>Archiv: Der angegebene Zeitraum ist abgelaufen.</p>'+''.join(f'<p>{e(p)}</p>' for p in n['paragraphs'])+f'<p class="source">Quelle: <a href="{e(n["url"],quote=True)}" target="_blank" rel="noopener">{e(n["source"])}</a>'+''.join(f' · <a href="{e(w["url"],quote=True)}" target="_blank" rel="noopener">{e(w["source"])}</a>' for w in n.get('weitere',[]) if str(w.get('url','')).startswith('https://'))+'</p><a class="nach-oben" href="#" aria-label="Nach oben">↑ nach oben</a></article>'
 outputs={}
 for slug in categories:
  path=root/(slug+'.html');text=path.read_text(encoding='utf-8')
