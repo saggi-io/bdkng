@@ -1,0 +1,25 @@
+{
+ "rubrik": "wetter",
+ "titel": "Wetter: Die nächsten 3 Tage",
+ "ueber": "Mi. 18.11. · 19:01 Uhr",
+ "art": "liste",
+ "zeilen": [
+  {
+   "t": "Donnerstag, 19.11.: Regen, 9 bis 10 °C, Regenrisiko 76 % (ca. 9 l/m²)",
+   "e": "🌧️"
+  },
+  {
+   "t": "Freitag, 20.11.: Regen, 8 bis 9 °C, Regenrisiko 77 % (ca. 16 l/m²)",
+   "e": "🌧️"
+  },
+  {
+   "t": "Samstag, 21.11.: wechselnd bewölkt, 2 bis 8 °C, Regenrisiko 21 % (ca. 3 l/m²)",
+   "e": "⛅"
+  },
+  {
+   "t": "Amtliche WARNUNG vor WINDBÖEN (Do 09:00 bis Do 20:00 Uhr)",
+   "e": "⚠️"
+  }
+ ],
+ "quelle": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev"
+}
