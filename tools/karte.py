@@ -2,7 +2,7 @@
 import json, sys, os, glob
 from PIL import Image, ImageDraw, ImageFont
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import karte2
+import karte2, karte3
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FD = os.path.join(BASE, 'tools', 'fonts')
 def f(n, s): return ImageFont.truetype(os.path.join(FD, n), s)
@@ -93,10 +93,13 @@ def main(dateien):
     out = os.path.join(BASE, 'assets', 'social', 'karten'); os.makedirs(out, exist_ok=True)
     for p in dateien:
         k = json.load(open(p, encoding='utf-8')); i = os.path.splitext(os.path.basename(p))[0]
-        if os.path.exists(os.path.join(out, i + '.jpg')): continue
+        if os.path.exists(os.path.join(out, i + '.jpg')) and os.path.exists(os.path.join(out, i + '-ig.jpg')): continue
         # Seit 18.11.2026: neues Design (Liste mit Rubrik-Kacheln), siehe tools/karte2.py
         karte2.karte(k, 1080, 1350, os.path.join(out, i + '.jpg'))
         karte2.karte(k, 1080, 1920, os.path.join(out, i + '-9x16.jpg'))
+        # Instagram/TikTok: Stil C (modern), Facebook bleibt bei karte2
+        karte3.karte(k, 1080, 1350, os.path.join(out, i + '-ig.jpg'))
+        karte3.karte(k, 1080, 1920, os.path.join(out, i + '-ig-9x16.jpg'))
         print('Karte', i)
 if __name__ == '__main__':
     main(sys.argv[1:] or glob.glob(os.path.join(BASE, 'data', 'karten', '*.json')))

@@ -1,7 +1,7 @@
 name: Social-Karten rendern
 on:
   push:
-    paths: ['data/karten/**.json', 'tools/karte.py', 'tools/karte2.py']
+    paths: ['data/karten/**.json', 'tools/karte.py', 'tools/karte2.py', 'tools/karte3.py']
   workflow_dispatch:
 permissions:
   contents: write
