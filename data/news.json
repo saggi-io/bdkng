@@ -126,21 +126,6 @@
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/sabine-hofmann-stellt-ihren-neuen-krimi-in-bad-koenig-vor-6725202"
   },
   {
-    "id": "2026-11-16-wetter",
-    "checked": "2026-11-16",
-    "valid_until": "2026-11-19",
-    "categories": [
-      "wetter"
-    ],
-    "title": "WETTER · Die nächsten 3 Tage",
-    "paragraphs": [
-      "Dienstag, 17.11.: Regen, 8 bis 12 °C, Regenrisiko 82 % (ca. 21 l/m²), Böen bis 50 km/h  Mittwoch, 18.11.: bedeckt, 9 bis 11 °C, Regenrisiko 61 % (ca. 9 l/m²), Böen bis 52 km/h  Donnerstag, 19.11.: Regen, 8 bis 10 °C, Regenrisiko 64 % (ca. 9 l/m²)",
-      "Amtliche WARNUNG vor DAUERREGEN (Mo 17:00 bis Di 14:00 Uhr)"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
-    "url": "https://bdkng.de"
-  },
-  {
     "id": "q-2026-11-16-mo528620959",
     "checked": "2026-11-16",
     "valid_until": "2026-11-26",
@@ -426,20 +411,6 @@
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/blut-spenden-und-leben-retten-6784690"
   },
   {
-    "id": "medien-2026-11-13-257913011",
-    "checked": "2026-11-07",
-    "valid_until": "2026-11-17",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Windpark Beinefeld: PNE baut vorerst nicht zwischen Höchst und Bad König",
-    "paragraphs": [
-      "Keine Windräder am Beinefeld: Wegen fehlender Wirtschaftlichkeit zieht der Projektierer PNE den Antrag für den Windpark zurück. Was das für die Kommunen bedeutet."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/hoechst-im-odenwald-odenwaldkreis/projekt-fuer-windraeder-zwischen-hoechst-und-bad-koenig-gestoppt-6713488"
-  },
-  {
     "id": "medien-2026-11-13-235775413",
     "checked": "2026-11-13",
     "valid_until": "2026-11-23",
@@ -589,22 +560,6 @@
     ]
   },
   {
-    "id": "fupa-2026-11-10-fussball-ergebnisse",
-    "checked": "2026-11-10",
-    "valid_until": "2026-11-17",
-    "categories": [
-      "sport"
-    ],
-    "title": "Fußball: SG Bad König/Zell – Ergebnisse vom Wochenende",
-    "paragraphs": [
-      "Kreisliga A, 1. Mannschaft: TSV Seckmauern II – SG Bad König/Zell 1:3 (Sonntag, 8.11.). Die SG gewann auswärts.",
-      "Kreisliga B, 2. Mannschaft: VfL Michelstadt II – SG Bad König/Zell II 3:3 (Sonntag, 8.11.).",
-      "Nächste Spiele: Samstag, 14.11., 15:00 Uhr: FV Mümling-Grumbach – SG Bad König/Zell. Sonntag, 15.11., 13:00 Uhr: SG Sandbach II – SG Bad König/Zell II."
-    ],
-    "source": "FuPa",
-    "url": "https://www.fupa.net/club/tsg-bad-koenig"
-  },
-  {
     "id": "stadt-2026-11-10-gewaesserentwicklung",
     "checked": "2026-11-10",
     "valid_until": "2026-11-24",
@@ -618,27 +573,6 @@
     ],
     "source": "Stadt Bad König",
     "url": "https://www.badkoenig.de/aktuelle-nachrichten/gewaesserentwicklung-an-der-muemling/"
-  },
-  {
-    "id": "2026-11-10-news-254806384",
-    "checked": "2026-11-10",
-    "valid_until": "2026-11-17",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Sabine Hofmann stellt ihren neuen Krimi in der Rentmeisterei in Bad König vor",
-    "paragraphs": [
-      "Im Rahmen der Leseraktion „Echo hilft“ war die in Erbach lebende Autorin auf der Lesebühne der Rentmeisterei zu Gast. Die Erlöse fließen in soziale Projekte der Region.",
-      "Frei zugänglich bei Odenwälder Journal: Bad König. Spannende Literatur genießen und dabei Gutes tun: Eine besondere Benefizlesung bringt Autorin Sabine Hofmann am Samstag, 7. November, nach Bad König. Ab 19.30 Uhr liest sie im Großen Saal der Rentmeisterei am Schlossplatz aus ihrem Roman „Weiße …"
-    ],
-    "source": "Odenwälder Journal",
-    "url": "https://www.odw-journal.de/sabine-hofmann-liest-fuer-den-guten-zweck/",
-    "weitere": [
-      {
-        "source": "Echo Online",
-        "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/sabine-hofmann-stellt-ihren-neuen-krimi-in-bad-koenig-vor-6725202"
-      }
-    ]
   },
   {
     "id": "wetter-rueckblick-2026-11-01",
@@ -659,68 +593,6 @@
     ],
     "source": "Deutscher Wetterdienst über Bright Sky",
     "url": "https://brightsky.dev/"
-  },
-  {
-    "id": "bahn-odenwaldbahn-info",
-    "checked": "2026-11-07",
-    "categories": [
-      "verkehr",
-      "aktuell"
-    ],
-    "title": "Odenwaldbahn: Fahrplan und aktuelle Störungen",
-    "paragraphs": [
-      "Die Odenwaldbahn verbindet Bad König mit Michelstadt, Erbach und Darmstadt. Aktuelle Störungen, Ersatzverkehr und Fahrplanänderungen veröffentlichen VIAS Rail und der RMV.",
-      "Zuletzt endete im Oktober der Schienenersatzverkehr zwischen Bad König und Michelstadt nach Bauarbeiten. Aktuell ist bei VIAS keine neue Meldung zur Odenwaldbahn veröffentlicht (Stand 07.11.2026). Sobald eine Meldung erscheint, steht sie hier."
-    ],
-    "source": "VIAS Rail / RMV",
-    "url": "https://www.vias-online.de/"
-  },
-  {
-    "id": "20261107-rosenhoehe-gruenderpreis",
-    "checked": "2026-11-07",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Pflegezentrum Rosenhöhe gewinnt Hessischen Gründerpreis",
-    "paragraphs": [
-      "Das Pflegezentrum Rosenhöhe in Bad König hat am Freitagabend (6.11.) in Offenbach den Hessischen Gründerpreis 2026 in der Kategorie „Zukunftsfähige Nachfolge“ gewonnen.",
-      "Ausgezeichnet wurde die Übernahme durch Sabrina Burghardt nach der Insolvenz der früheren Betreibergesellschaft. Dadurch bleiben rund 200 Pflegeplätze und über 200 Arbeitsplätze in der Region gesichert. Auch das Online-Voting aus der Bevölkerung hat zum Erfolg beigetragen."
-    ],
-    "source": "Odenwälder Journal",
-    "url": "https://www.odw-journal.de/"
-  },
-  {
-    "id": "windpark-beinefeld-2026-11-07",
-    "checked": "2026-11-07",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Windpark Beinefeld: PNE baut vorerst nicht zwischen Höchst und Bad König",
-    "paragraphs": [
-      "Der Projektierer PNE zieht seinen Antrag für den geplanten Windpark am Beinefeld zwischen Höchst und Bad König zurück. Grund ist laut Echo die fehlende Wirtschaftlichkeit.",
-      "Frei zugänglich bei Odenwälder Journal: Odenwaldkreis. Vom Dienstag, 25. Juni bis zum Freitag, 5. Juli, kommt es zwischen 22 und 5 Uhr zu mehreren Schwertransporten, die zwei weitere Windkraftanlagen zum Windpark Hainhaus/Lützelbach anliefern. Die Transporte fahren aus Richtung Darmstadt-Dieburg …"
-    ],
-    "source": "Odenwälder Journal",
-    "url": "https://www.odw-journal.de/strassen-wegen-schwertransporten-gesperrt/",
-    "weitere": [
-      {
-        "source": "Echo Online",
-        "url": "https://www.echo-online.de/lokales/odenwaldkreis/hoechst-im-odenwald-odenwaldkreis/projekt-fuer-windraeder-zwischen-hoechst-und-bad-koenig-gestoppt-6713488"
-      }
-    ]
-  },
-  {
-    "id": "bahnhofstrasse-spielhallen-2026-11-03",
-    "checked": "2026-11-07",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Bad König will keine Wettbüros und Spielhallen in der Bahnhofstraße",
-    "paragraphs": [
-      "Die Stadt möchte in der Bahnhofstraße und der Frankfurter Straße keine Wettbüros, Spielhallen oder Bordelle ansiedeln lassen und ihre künftige Entwicklung entsprechend steuern."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/bad-koenig-will-in-der-bahnhofstrasse-keine-vergnuegungsstaetten-6631713"
   },
   {
     "id": "zell-2026-11-06-frei",
@@ -753,35 +625,6 @@
     ],
     "source": "Polizeipräsidium Südhessen (Presseportal) · 6.11.2026",
     "url": "https://www.presseportal.de/blaulicht/pm/4969/6385421"
-  },
-  {
-    "id": "muntere-muemlingtal-2026-11-03",
-    "checked": "2026-11-07",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Fördermittel für das „Muntere Mümlingtal“: Bad König ist dabei",
-    "paragraphs": [
-      "Sechs Kommunen – Höchst, Bad König, Breuberg, Brombachtal, Lützelbach und Mömlingen (Bayern) – bilden die Touristische Arbeitsgemeinschaft „Munteres Mümlingtal“. Für ihre gemeinsame Markenkampagne gibt es LEADER-Fördermittel von insgesamt 67.300 Euro, davon rund 57.500 Euro für die fünf hessischen Kommunen.",
-      "Den Förderbescheid überreichte Kreisbeigeordneter Kevin Schmauß am 3.11. im Höchster Rathaus. Die Kampagne „Handshake“ kostet insgesamt 89.900 Euro; die sechs Kommunen tragen zusammen 22.600 Euro, etwa 3.700 Euro je Kommune.",
-      "Geplant sind unter anderem eine Imagebroschüre, Roll-ups, eine digitale Präsentation für Messeauftritte und eine einjährige Social-Media-Kampagne."
-    ],
-    "source": "Stadt Bad König · Meldung vom 4.11.2026",
-    "url": "https://www.badkoenig.de/aktuelle-nachrichten/gemeinsam-fuer-eine-starke-region-foerdermittel-fuer-das-muntere-muemlingtal/"
-  },
-  {
-    "id": "spendenaktion-liegebank-kimbach-2026-11-02",
-    "checked": "2026-11-07",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Kimbach: Spendenaktion für eine neue Liegebank an der Bergwachtshütte",
-    "paragraphs": [
-      "Der Ortsbeirat Kimbach sammelt über die Plattform „Gemeinsam für Euch“ Spenden für eine neue Liegebank an der Bergwachtshütte.",
-      "Wer das Projekt unterstützen möchte, findet es unter gemeinsam-fuer-euch.de (Projekt „Liegebank Bergwachtshütte“)."
-    ],
-    "source": "Stadt Bad König · Meldung vom 2.11.2026",
-    "url": "https://www.badkoenig.de/aktuelle-nachrichten/jetzt-mitmachen-bei-der-spendenaktion-gemeinsam-fuer-euch/"
   },
   {
     "id": "genuss-hinweise",
