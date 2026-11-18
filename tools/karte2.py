@@ -66,7 +66,7 @@ def plan(k, W, H, top):
             tx = 60 + (kach + 44 if liste else 0)
             rows = []; kh = int(gs * 0.62) + 8
             for t, r, e, kk in zl:
-                ls = wrap(d, t, fz, W - tx - 60)[:4]
+                ls = wrap(d, t, fz, W - tx - 60)[:4 if liste else 14]
                 rows.append((ls, r, e, max(kach, len(ls) * zh + (kh if kk else 0)) + (34 if liste else 18), kk))
             y = top + 40 + (int(ts * 0.5) + 14 if k.get('ueber') else 0) + len(tl) * int(ts * 1.08) + 26
             if y + sum(r[3] for r in rows) <= H - FUSS - 24:
