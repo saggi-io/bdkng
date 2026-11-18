@@ -1,0 +1,62 @@
+{
+ "titel": "Der Tag in Bad König",
+ "ueber": "Mi. 18.11. · 18:15 Uhr",
+ "quelle": "click-TT, Hessen Mobil, Echo Online",
+ "zeilen": [
+  {
+   "t": "Tischtennis: Die Ergebnisse der letzten Woche",
+   "r": "sport",
+   "k": "Sport"
+  },
+  {
+   "t": "B 45: Neubau der Talbrücke bei Bad König/Zell",
+   "r": "verkehr",
+   "k": "Verkehr"
+  },
+  {
+   "t": "Landratswahl: Odenwälder SPD stellt sich deutlich hinter Kandidatin Rekha Krings",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "Vetter-Weihnachtskarten erhältlich",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "Fastnacht-Party 30 Januar 2027",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "Nikolausmarkt 2026",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  }
+ ],
+ "morgen_ueber": "Do. 19.11.",
+ "morgen": [
+  [
+   "🌧️",
+   "Wetter",
+   "Regen, 9 bis 10 °C, 8,6 l/m²"
+  ]
+ ],
+ "mitmachen": [
+  [
+   "📣",
+   "Blitzer & Stau",
+   "Gesehen? Auf bdkng.de melden"
+  ],
+  [
+   "🤖",
+   "BDKNG-KI",
+   "Frag einfach: Müll, Termine, Öffnungszeiten"
+  ],
+  [
+   "📅",
+   "Termin melden",
+   "Dein Verein feiert? Einfach eintragen"
+  ]
+ ]
+}
