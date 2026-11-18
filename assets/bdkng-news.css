@@ -27,3 +27,5 @@
 /* Pfeil nach oben unter jeder Meldung */
 .news-entry .nach-oben{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:#1B4D2E;text-decoration:none;border:1px solid #cfdccf;border-radius:999px;padding:3px 10px}
 .news-entry .nach-oben:hover{background:#eef5ef}
+nav.rub-nav{display:block}
+nav.rub-nav .rub-nav-in a{display:inline-flex!important}
