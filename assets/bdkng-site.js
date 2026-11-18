@@ -40,10 +40,10 @@
 
   ready(function () {
     var nav = document.querySelector('header nav'); if (!nav || nav.querySelector('.menunav')) return;
-    var R = [['/aktuell.html','📰','Aktuelles'],['/verkehr.html','🚧','Verkehr'],['/termine.html','📅','Termine & Veranstaltungen'],['/sport.html','⚽','Sport & Vereine'],['/genuss.html','🍽️','Genuss & Gewerbe'],['/wichtig.html','⚠️','Wichtige Meldungen'],['/wetter.html','⛅','Wetter'],['/muell.html','🗑️','Müllabfuhr'],['/kontakt.html','✉️','Kontakt']];
+    var R = [['/aktuell.html','📰','Aktuelles'],['/verkehr.html','🚧','Verkehr'],['/termine.html','📅','Termine & Veranstaltungen'],['/sport.html','⚽','Sport & Vereine'],['/genuss.html','🍽️','Genuss & Gewerbe'],['/wichtig.html','⚠️','Wichtige Meldungen'],['/wetter.html','⛅','Wetter'],['/muell.html','🗑️','Müllabfuhr'],['/kompakt.html','🗞️','Kompakt – alle neuen Meldungen'],['/kontakt.html','✉️','Kontakt & Anregungen']];
     var b = document.createElement('button'); b.type = 'button'; b.className = 'menunav'; b.setAttribute('aria-expanded', 'false'); b.setAttribute('aria-label', 'Menü mit allen Rubriken');
     b.innerHTML = '<span aria-hidden="true">☰</span> Menü';
-    var logo = nav.querySelector('.brand'); nav.insertBefore(b, logo ? logo.nextSibling : nav.firstChild);
+    nav.appendChild(b); // Menü ganz rechts
     var p = document.createElement('div'); p.className = 'menupanel'; p.hidden = true;
     p.innerHTML = '<a class="mp-home" href="/">🏠 Startseite</a>' + R.map(function (r) { return '<a href="' + r[0] + '"><span aria-hidden="true">' + r[1] + '</span> ' + r[2].replace('&', '&amp;') + '</a>'; }).join('');
     document.body.appendChild(p);
@@ -127,3 +127,6 @@
     window.addEventListener('scroll', function () { f.hidden = window.scrollY < 700; }, { passive: true });
   } catch (e) {}
 })();
+
+// Kopfzeile: Rubrik-Leiste – aktive Rubrik in den sichtbaren Bereich schieben
+(function () { try { var a = document.querySelector('.kopf-rub a[aria-current="page"]'); if (a) { var n = a.closest('.kopf-rub'); n.scrollLeft = Math.max(0, a.offsetLeft - 16); } } catch (e) {} })();

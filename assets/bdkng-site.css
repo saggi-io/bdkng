@@ -51,3 +51,19 @@ nav .installnav[hidden]{display:none}
 .nach-oben-fix[hidden]{display:none}
 @media print{.nach-oben,.nach-oben-fix{display:none}}
 h1,h2,h3{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+/* 18.11.: Kopfzeile neu – Logo | App · Kaffee · WhatsApp | Menü ganz rechts; darunter eine wischbare Rubrik-Zeile; bleibt oben stehen */
+header{position:sticky!important;top:0;z-index:40}
+header .wrap > nav:first-child{display:flex!important;align-items:center;gap:10px;flex-wrap:nowrap}
+header .wrap > nav:first-child .brand{margin-right:auto}
+header nav a.channelnav{display:inline-flex!important;align-items:center;gap:7px;background:#25D366!important;color:#fff!important;border:0;font-weight:800;white-space:nowrap}
+header nav a.channelnav:hover{background:#1ebe5b!important}
+header nav a.channelnav .ico{width:18px;height:18px;flex:none}
+header nav .menunav{order:99}
+nav.kopf-rub{display:block!important;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -4px;padding:2px 4px 9px;width:auto;max-width:none;min-width:0}
+nav.kopf-rub::-webkit-scrollbar{display:none}
+nav.kopf-rub .kopf-rub-in{display:flex;flex-wrap:nowrap;gap:7px;width:max-content;padding-right:18px}
+nav.kopf-rub .kopf-rub-in a{display:inline-flex!important;align-items:center;gap:4px;white-space:nowrap;padding:6px 12px;border-radius:999px;background:#fff;border:1px solid #cfdccf;color:#1B4D2E;font-weight:800;font-size:13.5px;text-decoration:none;line-height:1.2}
+nav.kopf-rub .kopf-rub-in a:hover{background:#eef5ef}
+nav.kopf-rub .kopf-rub-in a[aria-current="page"]{background:#1B4D2E;color:#fff;border-color:#1B4D2E}
+@media(min-width:1000px){nav.kopf-rub .kopf-rub-in{width:auto;justify-content:center;padding-right:0}}
+@media(max-width:700px){header nav a.channelnav{display:inline-flex!important;padding:7px 9px!important}header nav a.channelnav .cn-t{display:none}header nav a.channelnav .ico{width:20px;height:20px}nav.kopf-rub{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}nav.kopf-rub .kopf-rub-in a{font-size:13px;padding:6px 10px}}
