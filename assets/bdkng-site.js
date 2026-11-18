@@ -134,7 +134,7 @@
 (function () {
   try {
     var P = {
-      '/termine.html': [['.service-panel', 'wasistlos', '🎉 Was ist los'], ['#freilicht', 'freilicht', '🎭 Freilichtbühne'], [function () { return [].find.call(document.querySelectorAll('.news-entry'), function (a) { return /Therme|Sauna/i.test((a.querySelector('h2') || {}).textContent || ''); }); }, 'therme', '♨️ Therme'], ['.news-list', 'meldungen', '📅 Termine & Veranstaltungen'], ['#terminMelden', 'terminMelden', '📣 Termin melden']],
+      '/termine.html': [['#terminMelden', 'terminMelden', '📣 Termin melden & prüfen'], ['#dieseWoche', 'dieseWoche', '📅 Diese Woche'], ['#kalender', 'kalender', '📆 Kalender 3 Monate', function () { var b = document.querySelector('.tk-f[data-f="alle"]'); if (b) b.click(); }], ['#kalender', 'kalender', '⛪ Kirche & Gedenken', function () { var b = document.querySelector('.tk-f[data-f="kirche"]'); if (b) b.click(); }], ['#kalender', 'kalender', '🗓️ Feiertage', function () { var b = document.querySelector('.tk-f[data-f="feiertag"]'); if (b) b.click(); }], ['#freilicht', 'freilicht', '🎭 Freilichtbühne'], [function () { return [].find.call(document.querySelectorAll('.news-entry'), function (a) { return !a.hidden && /Therme|Sauna/i.test((a.querySelector('h2') || {}).textContent || ''); }); }, 'therme', '♨️ Therme'], ['.news-list', 'meldungen', '📰 Meldungen']],
       '/verkehr.html': [['#verkehrStatus', 'verkehrStatus', '🚦 Aktuelle Behinderungen'], ['#sprit', 'sprit', '⛽ Tanken'], ['.news-list', 'meldungen', '🚧 Verkehrsmeldungen'], ['#blitzer', 'blitzer', '📸 Blitzer & Stau-Melder'], ['.verkehr-links', 'links', '🔗 Links']]
     }[location.pathname];
     if (!P) return;
@@ -154,7 +154,7 @@
         if (!el || el.hidden) return;
         if (!el.id) el.id = x[1];
         var a = document.createElement('a'); a.href = '#' + el.id; a.textContent = x[2];
-        a.addEventListener('click', function (e) { e.preventDefault(); var h = (document.querySelector('header') || {}).offsetHeight || 0; window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - h - 10, behavior: 'smooth' }); });
+        a.addEventListener('click', function (e) { e.preventDefault(); if (x[3]) x[3](); var h = (document.querySelector('header') || {}).offsetHeight || 0; window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - h - 10, behavior: 'smooth' }); });
         nav.appendChild(a);
       });
       if (!nav.children.length) return;

@@ -70,3 +70,29 @@ nav.rub-nav .rub-nav-in a{display:inline-flex!important}
 @media(max-width:520px){.sp-lok td,.sp-lok th{padding:7px 5px}.sp-lok td{font-size:14px}.sp-lok td:first-child{font-size:13px}}
 .sp-quelle{font-size:13px;color:#5b6b60;margin-top:10px}
 @media(max-width:760px){.sp-grid{grid-template-columns:1fr}}
+/* Termine-Seite: Kollisions-Check, Diese Woche, 3-Monats-Kalender */
+.kollision{background:#f4f8f4;border:1px solid #d9e6da;border-radius:14px;padding:12px 14px;margin:10px 0 14px}
+.kollision .field{max-width:260px}
+.kol-warn{color:#8a5a00;font-weight:700;margin:.6em 0 .3em}.kol-ok{color:#1B4D2E;font-weight:700;margin:.6em 0 .3em}
+.tk-liste{list-style:none;margin:0;padding:0}
+.tk-liste li{display:grid;grid-template-columns:auto auto 1fr;gap:4px 10px;align-items:baseline;padding:7px 0;border-top:1px solid #e3ece3;font-size:15px;line-height:1.35}
+.tk-liste li:first-child{border-top:0}
+.tk-liste li[hidden]{display:none}
+.tk-d{font-weight:800;color:#1B4D2E;white-space:nowrap;min-width:5.6em}
+.tk-z{color:#5b6b60;font-size:13px;white-space:nowrap;min-width:4.4em}
+.tk-t{min-width:0;overflow-wrap:anywhere}.tk-t a{color:#1d2a20;font-weight:600}
+.tk-t small{display:block;color:#5b6b60;font-size:13px;font-weight:400}
+.tk-liste li.tk-feiertag .tk-t{font-weight:700;color:#8a5a00}.tk-liste li.tk-gesetzlich .tk-z{color:#b23b2e;font-weight:700}
+.tk-woche .tk-liste{columns:2 360px;column-gap:28px}.tk-woche .tk-liste li{break-inside:avoid}
+.tk-filter{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}
+.tk-f{border:1px solid #cfdccf;background:#fff;color:#1B4D2E;border-radius:999px;padding:6px 12px;font-size:14px;cursor:pointer}
+.tk-f.an{background:#1B4D2E;color:#fff;border-color:#1B4D2E}
+.tk-spalten{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.tk-monat{background:#f9fbf9;border:1px solid #e1eae1;border-radius:14px;padding:10px 12px}
+.tk-monat h3{margin:0 0 6px;font-size:18px;color:#1B4D2E;border-bottom:2px solid #c9a227;padding-bottom:4px}
+.tk-monat .tk-liste li{grid-template-columns:auto 1fr;font-size:14px}
+.tk-monat .tk-liste .tk-z{grid-column:1;grid-row:2;font-size:12px}
+.tk-monat .tk-liste .tk-t{grid-column:2;grid-row:1/3}
+.tk-knoepfe{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
+@media(max-width:980px){.tk-spalten{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.tk-spalten{grid-template-columns:1fr}.tk-knoepfe .btn{flex:1 1 100%;text-align:center}.tk-liste li{grid-template-columns:auto 1fr}.tk-liste .tk-z{grid-column:1;grid-row:2}.tk-liste .tk-t{grid-column:2;grid-row:1/3}}

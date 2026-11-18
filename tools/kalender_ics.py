@@ -95,6 +95,19 @@ for t in k.get('termine', []):
         z.append('LOCATION:' + esc(t['ort'] + ('' if 'Bad K' in t['ort'] else ', Bad König')))
     z += ['DESCRIPTION:' + esc(desc), 'URL:' + k.get('url', 'https://bdkng.de/termine.html')]
     ev.append({'uid': uid('termin', t['datum'], t.get('uhrzeit', ''), t['titel']), 'zeilen': z})
+# Gottesdienste und Gedenkfeiern aus den Stadtnachrichten
+try:
+    kk = json.loads((root / 'data/termine-kirche.json').read_text(encoding='utf-8'))
+except Exception:
+    kk = {}
+for t in kk.get('termine', []):
+    zeit = zeitlich(t['datum'], t['uhrzeit'], 1) if t.get('uhrzeit') else ganztags(t['datum'])
+    gem = {'ev': ' (ev.)', 'kath': ' (kath.)'}.get(t.get('gemeinde', ''), '')
+    z = zeit + ['SUMMARY:' + esc('⛪ ' + t['titel'] + gem)]
+    if t.get('ort'):
+        z.append('LOCATION:' + esc(t['ort'] + ('' if 'Bad K' in t['ort'] else ', Bad König')))
+    z += ['DESCRIPTION:' + esc(' – '.join(x for x in [t.get('info', ''), 'Quelle: ' + kk.get('quelle', 'Stadtnachrichten')] if x)), 'URL:https://bdkng.de/termine.html#kalender']
+    ev.append({'uid': uid('kirche', t['datum'], t.get('uhrzeit', ''), t['titel'], t.get('ort', '')), 'zeilen': z})
 if schreiben('termine.ics', kalender('BDKNG Termine Bad König', 'Veranstaltungen in Bad König (Quelle: Veranstaltungskalender der Stadt Bad König). Privates Angebot von bdkng.de, ohne Gewähr.', ev)):
     geaendert.append('termine.ics')
 

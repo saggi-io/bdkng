@@ -1,7 +1,7 @@
 name: Kalenderdateien erzeugen
 on:
   push:
-    paths: ['data/termine-kalender.json', 'data/muell.json', 'data/sport-termine.json', 'tools/kalender_ics.py']
+    paths: ['data/termine-kalender.json', 'data/termine-kirche.json', 'data/muell.json', 'data/sport-termine.json', 'tools/kalender_ics.py']
   schedule:
     - cron: '17 4 * * *'
   workflow_dispatch:
