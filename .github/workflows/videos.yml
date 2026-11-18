@@ -1,0 +1,23 @@
+name: Abend-Video rendern
+on:
+  push:
+    paths: ['data/videos/**.json', 'tools/abendvideo.py']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: videos
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install pillow
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-color-emoji ffmpeg
+      - run: python3 tools/abendvideo.py
+      - run: |
+          git config user.name "bdkng-bot"
+          git config user.email "bot@bdkng.de"
+          git add -A assets/social/videos
+          git diff --cached --quiet || (git commit -m "Abend-Video gerendert" && git pull --rebase && git push)
