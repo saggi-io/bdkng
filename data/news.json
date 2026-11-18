@@ -1,5 +1,27 @@
 [
   {
+    "id": "hand-2026-11-18-732432836",
+    "checked": "2026-11-18",
+    "valid_until": "2026-11-28",
+    "categories": [
+      "sport"
+    ],
+    "title": "Tischtennis: Die Ergebnisse der letzten Woche",
+    "paragraphs": [
+      "• Di 10.11.: TTC Kimbach V – TSV 1875 Höchst VI 4:6 ❌",
+      "• Do 12.11.: TTC Mümling-Grumbach – TSG Bad König 1863 7:3 ❌",
+      "• Do 12.11.: TTC Kimbach – TV 1858 Beerfelden II 4:6 ❌",
+      "• Do 12.11.: SV 1972 Ober-Hainbrunn II – TTC Kimbach VI 9:1 ❌",
+      "• Fr 13.11.: TTC Kimbach III – SV Ober-Kainsbach III 1:9 ❌",
+      "• Fr 13.11.: RV-TTC Fürstengrund – TSV 1875 Höchst III 7:3 ✅",
+      "• Fr 13.11.: TSV 1963 Sensbachtal – TTC Kimbach IV 4:6 ✅",
+      "• Sa 14.11.: RV-TTC Fürstengrund II – SV 1908 Falken-Gesäß 0:10 ❌"
+    ],
+    "source": "click-TT (HeTTV)",
+    "url": "https://bdkng.de/sport.html#sp-tt",
+    "zeit": "01:33"
+  },
+  {
     "id": "hand-2026-11-17-sauna",
     "checked": "2026-11-17",
     "zeit": "08:00",
