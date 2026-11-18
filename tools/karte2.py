@@ -134,4 +134,4 @@ def karte(k, W, H, ziel):
     d.text((44, fy), 'bdkng.de · Dein Info-Kanal rund um Bad König', font=f1, fill=WEISS, anchor='lm')
     d.text((44, fy + (56 if hoch else 46)), 'Quelle: ' + str(k.get('quelle', 'BDKNG'))[:70], font=f2, fill=(205, 225, 210), anchor='lm')
     if hoch: d.text((44, fy + 112), 'Wird laufend verbessert und weiterentwickelt.', font=f2, fill=(170, 205, 180), anchor='lm')
-    im.save(ziel, quality=90)
+    im.save(ziel, quality=82, optimize=True, progressive=True)

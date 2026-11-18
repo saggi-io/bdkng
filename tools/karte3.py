@@ -105,7 +105,7 @@ def karte(k, W, H, ziel):
         ic = Image.open(os.path.join(BASE, 'assets', 'social', 'icons', n + '.png')).convert('RGBA').resize((sz, sz), Image.LANCZOS)
         img.alpha_composite(ic, (x, iy)); x += sz + gap
     d.text((W // 2, iy + sz + 16), 'WhatsApp-Kanal · Facebook · Instagram · TikTok: BDKNG', font=F(BOLD, 30 if tik else 26), fill='#FFFFFF', anchor='ma')
-    img.convert('RGB').save(ziel, quality=90)
+    img.convert('RGB').save(ziel, quality=82, optimize=True, progressive=True)
 
 if __name__ == '__main__':
     import json, sys

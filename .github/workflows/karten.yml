@@ -19,5 +19,5 @@ jobs:
       - run: |
           git config user.name "bdkng-bot"
           git config user.email "bot@bdkng.de"
-          git add assets/social/karten
+          git add -A assets/social/karten data/karten
           git diff --cached --quiet || (git commit -m "Social-Karten gerendert" && git pull --rebase && git push)

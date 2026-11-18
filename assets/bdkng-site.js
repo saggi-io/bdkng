@@ -1,3 +1,20 @@
+// Look „Jung“ (Stil C): automatisch aus Instagram/TikTok, sonst gespeicherte Wahl; ?stil=c / ?stil=klassisch zum Testen
+(function () {
+  try {
+    var KRONE = '/assets/bdkng-krone-klein.png', ALT = null;
+    window.BDKNG_STIL = function (an) {
+      document.documentElement.classList.toggle('stil-c', !!an);
+      var img = document.querySelector('.brand-logo img'); if (!img) return;
+      if (!ALT) ALT = img.getAttribute('src');
+      img.setAttribute('src', an ? KRONE : ALT);
+    };
+    var q = new URLSearchParams(location.search).get('stil'), w = null;
+    try { if (q === 'c' || q === 'klassisch') localStorage.setItem('bdkngStil', q); w = localStorage.getItem('bdkngStil'); } catch (e) {}
+    var app = /Instagram|TikTok|musical_ly|BytedanceWebview|trill/i.test(navigator.userAgent) || /instagram|tiktok/i.test(document.referrer) || /^(ig|instagram|tiktok|tt)$/i.test(new URLSearchParams(location.search).get('utm_source') || '');
+    var an = w ? w === 'c' : app;
+    if (an) { document.documentElement.classList.add('stil-c'); var los = function () { window.BDKNG_STIL(true); }; if (document.readyState !== 'loading') los(); else document.addEventListener('DOMContentLoaded', los); }
+  } catch (e) {}
+})();
 'use strict';
 (function () {
   var PP = 'https://bdkng.de/kaffee/';
@@ -43,6 +60,13 @@
     var R = [['/aktuell.html','📰','Aktuelles'],['/verkehr.html','🚧','Verkehr'],['/termine.html','📅','Termine & Veranstaltungen'],['/sport.html','⚽','Sport & Vereine'],['/genuss.html','🍽️','Genuss & Gewerbe'],['/wichtig.html','⚠️','Wichtige Meldungen'],['/wetter.html','⛅','Wetter'],['/muell.html','🗑️','Müllabfuhr'],['/kompakt.html','🗞️','Kompakt – alle neuen Meldungen'],['/kontakt.html','✉️','Kontakt & Anregungen']];
     var b = document.createElement('button'); b.type = 'button'; b.className = 'menunav'; b.setAttribute('aria-expanded', 'false'); b.setAttribute('aria-label', 'Menü mit allen Rubriken');
     b.innerHTML = '<span aria-hidden="true">☰</span> Menü';
+    // Look-Umschalter (Klassisch ↔ Jung), steht links neben dem Menü
+    try {
+      var sk = document.createElement('button'); sk.type = 'button'; sk.className = 'stil-knopf';
+      var setz = function () { var c = document.documentElement.classList.contains('stil-c'); sk.innerHTML = c ? '🎨 <span class="sk-t">Klassisch</span>' : '✨ <span class="sk-t">Neuer Look</span>'; sk.setAttribute('aria-label', c ? 'Zum klassischen Look wechseln' : 'Zum neuen Look wechseln'); };
+      sk.addEventListener('click', function () { var c = !document.documentElement.classList.contains('stil-c'); window.BDKNG_STIL(c); try { localStorage.setItem('bdkngStil', c ? 'c' : 'klassisch'); } catch (e) {} setz(); });
+      setz(); nav.appendChild(sk);
+    } catch (e) {}
     nav.appendChild(b); // Menü ganz rechts
     var p = document.createElement('div'); p.className = 'menupanel'; p.hidden = true;
     p.innerHTML = '<a class="mp-home" href="/">🏠 Startseite</a>' + R.map(function (r) { return '<a href="' + r[0] + '"><span aria-hidden="true">' + r[1] + '</span> ' + r[2].replace('&', '&amp;') + '</a>'; }).join('');

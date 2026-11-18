@@ -1,0 +1,23 @@
+/* BDKNG Look „Jung“ (Stil C wie auf Instagram/TikTok). Aktiv, wenn <html class="stil-c">.
+   Automatisch für Besucher aus der Instagram- oder TikTok-App, sonst per Umschalter oben. */
+html.stil-c{--green:#2B1E2F;--gold:#FF7A59;--cream:#FFF1EC}
+html.stil-c body{background:linear-gradient(180deg,#FFE7DE 0,#F8EAF6 60%,#F1E7FA 100%) fixed;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+html.stil-c header{background:rgba(255,241,236,.94);border-bottom:0;box-shadow:0 4px 18px rgba(255,122,89,.15)}
+html.stil-c .brand-logo img{height:58px;width:auto}
+html.stil-c nav.kopf-rub .kopf-rub-in a{border-radius:999px}
+html.stil-c nav.kopf-rub .kopf-rub-in a[aria-current="page"]{background:linear-gradient(135deg,#FF7A59,#C86DD7);border-color:transparent;color:#fff}
+html.stil-c .subhero{background:linear-gradient(135deg,#FF7A59,#C86DD7);border:0;color:#fff;box-shadow:0 14px 34px rgba(200,109,215,.25)}
+html.stil-c .subhero h1,html.stil-c .subhero p,html.stil-c .subhero strong{color:#fff}
+html.stil-c .subhero .sn-neu{color:#fff3c4}
+html.stil-c .subpanel,html.stil-c .news-entry,html.stil-c .card,html.stil-c .tk-monat,html.stil-c .wi-gruppe{border-radius:24px;border-color:transparent;box-shadow:0 10px 28px rgba(255,122,89,.12)}
+html.stil-c .subpage h2,html.stil-c .section-head h2{letter-spacing:-.02em;font-weight:900}
+html.stil-c .subpage .btn,html.stil-c .btn-primary{background:linear-gradient(135deg,#FF7A59,#E8678F);color:#fff}
+html.stil-c .bs{background:linear-gradient(135deg,#FF7A59,#C86DD7);border-color:transparent;box-shadow:0 14px 34px rgba(200,109,215,.28)}
+html.stil-c .bs .bs-unten{background:rgba(43,30,47,.18);border-top-color:rgba(255,255,255,.4)}
+html.stil-c .sprung-nav a,html.stil-c .tk-f.an{background:#2B1E2F;color:#fff;border-color:#2B1E2F}
+html.stil-c .info-leiste a{border-color:#f3c9bc}
+html.stil-c footer{background:#2B1E2F}
+/* Umschalter */
+.stil-knopf{border:1px solid #d9d3c4;background:#fff;color:#1B4D2E;border-radius:999px;padding:8px 12px;font:inherit;font-size:13px;font-weight:800;cursor:pointer;white-space:nowrap}
+html.stil-c .stil-knopf{background:#2B1E2F;color:#fff;border-color:#2B1E2F}
+@media(max-width:700px){.stil-knopf .sk-t{display:none}.stil-knopf{padding:8px 10px}}

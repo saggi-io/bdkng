@@ -101,5 +101,14 @@ def main(dateien):
         karte3.karte(k, 1080, 1350, os.path.join(out, i + '-ig.jpg'))
         karte3.karte(k, 1080, 1920, os.path.join(out, i + '-ig-9x16.jpg'))
         print('Karte', i)
+def aufraeumen(tage=14):
+    """Karten älter als 14 Tage löschen (Bilder und JSON), damit die Website klein bleibt."""
+    import datetime, re
+    grenze = (datetime.date.today() - datetime.timedelta(days=tage)).isoformat()
+    for ordner in (os.path.join(BASE, 'assets', 'social', 'karten'), os.path.join(BASE, 'data', 'karten')):
+        for f in glob.glob(os.path.join(ordner, '*')):
+            m = re.search(r'(\d{4}-\d{2}-\d{2})', os.path.basename(f))
+            if m and m.group(1) < grenze: os.remove(f)
 if __name__ == '__main__':
+    aufraeumen()
     main(sys.argv[1:] or glob.glob(os.path.join(BASE, 'data', 'karten', '*.json')))
