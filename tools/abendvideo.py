@@ -178,6 +178,18 @@ if __name__ == '__main__':
     for f in sorted(glob.glob(os.path.join(B, 'data', 'videos', '*.json'))):
         vid = os.path.splitext(os.path.basename(f))[0]; out = os.path.join(ziel, vid + '.mp4')
         if os.path.exists(out): continue
-        render(json.load(open(f, encoding='utf-8')), out + '.tmp.mp4', tmp); os.replace(out + '.tmp.mp4', out)
+        stumm = out + '.stumm.mp4'
+        render(json.load(open(f, encoding='utf-8')), stumm, tmp)
+        # Musik (lizenzfrei, Pixabay) im täglichen Wechsel, leise ausgeblendet; Ton bleibt auch ohne Musik möglich
+        titel = sorted(glob.glob(os.path.join(B, 'assets', 'musik', '*.mp3')))
+        if titel:
+            lang = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', stumm], capture_output=True, text=True).stdout.strip() or 20)
+            m = titel[sum(map(ord, vid)) % len(titel)]
+            subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', stumm, '-i', m, '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '128k',
+                            '-af', 'volume=0.7,afade=t=in:d=0.5,afade=t=out:st=%.2f:d=1.5' % max(0, lang - 1.5), '-shortest', out + '.tmp.mp4'], check=True)
+            os.remove(stumm)
+        else:
+            os.replace(stumm, out + '.tmp.mp4')
+        os.replace(out + '.tmp.mp4', out)
     # nur die letzten 4 Videos aufheben (Speicherplatz)
     for alt in sorted(glob.glob(os.path.join(ziel, '*.mp4')))[:-4]: os.remove(alt)
