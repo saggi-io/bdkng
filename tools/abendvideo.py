@@ -10,6 +10,41 @@ B = K.BASE; DK = (16, 32, 22); GOLD = (232, 184, 74)
 hd = Image.open(os.path.join(B, 'assets', 'bdkng-header-jens.png')).convert('RGB')
 q = hd.crop((1150, 40, 2172, 704))
 logo = Image.open(os.path.join(B, 'assets', 'bdkng-logo-jens.png')).convert('RGBA'); logo.thumbnail((300, 190))
+STIL = 'fb'  # 'fb' = bisheriger Look (Facebook), 'c' = moderner Stil C (Instagram Reels, TikTok)
+KRONE = Image.open(os.path.join(B, 'assets', 'logos', 'bdkng-krone-gold.png')).convert('RGBA'); KRONE = KRONE.crop(KRONE.getbbox())
+VERLAUF = None
+def verlauf_c():
+    global VERLAUF
+    if VERLAUF is None:
+        im = Image.new('RGB', (W, H)); d = ImageDraw.Draw(im)
+        for y in range(H):
+            t = y / H; d.line((0, y, W, y), fill=(int(255 - 40 * t), int(122 + 40 * t), int(89 + 120 * t)))
+        VERLAUF = im
+    return VERLAUF.copy()
+def basis_c(t):
+    im = verlauf_c(); l = KRONE.copy(); p = 1 + 0.03 * math.sin(t * 2 * math.pi * 0.8); l.thumbnail((int(330 * p), int(330 * p)), Image.LANCZOS)
+    im.paste(l, ((W - l.width) // 2, 70 + (330 - l.height) // 2), l)
+    return im, ImageDraw.Draw(im), 400
+ICONS_C = None
+def fuss(im, quelle):
+    """Fußzeile: bisher grüner Balken; Stil C: bdkng.de groß + Kanal-Symbole."""
+    global ICONS_C
+    d = ImageDraw.Draw(im)
+    if STIL != 'c':
+        FU = 420; d.rectangle([0, H - FU, W, H], fill=K.GRUEN_D)
+        d.text((W // 2 - 50, H - FU + 90), 'Alles auf bdkng.de', font=K.f('InterDisplay-Black.otf', 64), fill=K.WEISS, anchor='mm')
+        d.text((W // 2 - 50, H - FU + 165), quelle[:60], font=K.f('Inter-Medium.otf', 30), fill=(205, 225, 210), anchor='mm')
+        return
+    if ICONS_C is None:
+        ICONS_C = [Image.open(os.path.join(B, 'assets', 'social', 'icons', n + '.png')).convert('RGBA').resize((96, 96), Image.LANCZOS) for n in ('whatsapp', 'facebook', 'instagram', 'tiktok')]
+    y = H - 400
+    d.text((W // 2, y), 'bdkng.de', font=K.f('InterDisplay-Black.otf', 80), fill=K.WEISS, anchor='mt')
+    x = (W - (4 * 96 + 3 * 28)) // 2
+    for ic in ICONS_C: im.paste(ic, (x, y + 120), ic); x += 124
+    d.text((W // 2, y + 240), 'WhatsApp-Kanal · Facebook · Instagram · TikTok: BDKNG', font=K.f('Inter-Bold.otf', 30), fill=K.WEISS, anchor='mt')
+    d.text((W // 2, y + 300), quelle[:70], font=K.f('Inter-Medium.otf', 26), fill=(255, 240, 235), anchor='mt')
+def UEB(): return (255, 255, 255) if STIL == 'c' else K.GOLD
+def TIT(): return (255, 255, 255) if STIL == 'c' else K.GRUEN_D
 def ease(x): x = max(0, min(1, x)); return 1 - (1 - x) ** 3
 def kopfbild(t, h):
     z = 1.0 + 0.04 * t  # langsamer Zoom
@@ -18,6 +53,7 @@ def kopfbild(t, h):
     x = (im.width - W) // 2; y = (im.height - h) // 3
     return im.crop((x, y, x + W, y + h))
 def basis(t):
+    if STIL == 'c': return basis_c(t)
     im = Image.new('RGB', (W, H), K.CREME); d = ImageDraw.Draw(im)
     TOP = 440; im.paste(kopfbild(t, TOP + 40), (0, 0))
     welle = [(0, TOP - 4)] + [(x, TOP - 18 + int(22 * ((x / W) - 0.5) ** 2 * 4) - int(14 * (x / W))) for x in range(0, W + 1, 20)] + [(W, TOP + 60), (0, TOP + 60)]
@@ -35,8 +71,8 @@ def frame(t, n_items, auftritt):
     while ts > 50 and ImageDraw.Draw(im).textlength(data['titel'], font=K.f('InterDisplay-Black.otf', ts)) > W - 190: ts -= 4
     ft = K.f('InterDisplay-Black.otf', ts)
     a = ease(t / 0.6); dy = int(40 * (1 - a))
-    text_alpha(im, (60, TOP + 50 + dy), data['ueber'].upper(), fu, K.GOLD, a)
-    text_alpha(im, (60, TOP + 105 + dy), data['titel'], ft, K.GRUEN_D, a)
+    text_alpha(im, (60, TOP + 50 + dy), data['ueber'].upper(), fu, UEB(), a)
+    text_alpha(im, (60, TOP + 105 + dy), data['titel'], ft, TIT(), a)
     y = TOP + 250; fk = K.f('Inter-Bold.otf', 32); fz = K.f('Inter-Bold.otf', 46); KS = 140
     for i, z in enumerate(data['zeilen'][:n_items]):
         p = ease(auftritt[i]) if i < len(auftritt) else 1
@@ -53,11 +89,16 @@ def frame(t, n_items, auftritt):
             pic = K.quadrat(K.RUBRIK.get(z.get('r', 'aktuell'), K.RUBRIK['aktuell'])[1], KS - 20)
             m = K.maske(pic.size, 22).point(lambda v: int(v * p)); im.paste(pic, (x0 + 10, y + 10), m)
         y += h
-    FU = 420; d = ImageDraw.Draw(im); d.rectangle([0, H - FU, W, H], fill=K.GRUEN_D)
-    d.text((W // 2 - 50, H - FU + 90), 'Alles auf bdkng.de', font=K.f('InterDisplay-Black.otf', 64), fill=K.WEISS, anchor='mm')
-    d.text((W // 2 - 50, H - FU + 165), 'Quelle: ' + data['quelle'][:52], font=K.f('Inter-Medium.otf', 30), fill=(205, 225, 210), anchor='mm')
+    fuss(im, 'Quelle: ' + data['quelle'][:52])
     return im
 def ende(t):
+    if STIL == 'c':
+        im = verlauf_c(); d = ImageDraw.Draw(im); a = ease(t / 0.5)
+        l = KRONE.copy(); l.thumbnail((520, 520), Image.LANCZOS); im.paste(l, ((W - l.width) // 2, 300), l)
+        text_alpha(im, (W // 2 - d.textlength('Dein Info-Kanal', font=K.f('InterDisplay-Black.otf', 84)) // 2, 880), 'Dein Info-Kanal', K.f('InterDisplay-Black.otf', 84), K.WEISS, a)
+        text_alpha(im, (W // 2 - d.textlength('rund um Bad König', font=K.f('InterDisplay-Black.otf', 84)) // 2, 980), 'rund um Bad König', K.f('InterDisplay-Black.otf', 84), K.WEISS, a)
+        fuss(im, 'Folgen für mehr News aus Bad König')
+        return im
     im = Image.new('RGB', (W, H), K.GRUEN_D); d = ImageDraw.Draw(im)
     a = ease(t / 0.5)
     pad = Image.new('RGBA', (logo.width + 60, logo.height + 44), (255, 255, 255, 255)); pad.paste(logo, (30, 22), logo)
@@ -89,9 +130,10 @@ def setz(im, l, cx, cy, size, a=1.0):
     if a < 1: l.putalpha(l.getchannel('A').point(lambda v: int(v * a)))
     im.alpha_composite(l, (int(cx - l.width / 2), int(cy - l.height / 2)))
 def intro(t):  # 2,4 s: Kronen-Logo gold/weiß im Wechsel pulsierend, dann HP-Logo, dann ausblenden
-    im = Image.new('RGBA', (W, H), DK + (255,)); d = ImageDraw.Draw(im)
+    im = (verlauf_c().convert('RGBA') if STIL == 'c' else Image.new('RGBA', (W, H), DK + (255,))); d = ImageDraw.Draw(im)
     p = 1 + 0.06 * math.sin(t * 2 * math.pi * 1.4); aus = 1 - ease((t - 1.3) / 0.3)
-    if t < 0.8: setz(im, LG[0 if (t % 0.4) < 0.2 else 1], W / 2, H / 2 - 80, 700 * p, aus)
+    if STIL == 'c': setz(im, LG[0 if (t % 0.4) < 0.2 else 1], W / 2, H / 2 - 80, 760 * p, aus)
+    elif t < 0.8: setz(im, LG[0 if (t % 0.4) < 0.2 else 1], W / 2, H / 2 - 80, 700 * p, aus)
     else: setz(im, HP, W / 2, H / 2 - 80, 820 * p, aus)
     # Unter dem Logo: "BDKNG kompakt" und das Datum
     try:
@@ -106,7 +148,7 @@ def intro(t):  # 2,4 s: Kronen-Logo gold/weiß im Wechsel pulsierend, dann HP-Lo
     ta = ease(t / 0.3) * aus
     lay = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
     ld.text((W // 2, H // 2 + 330), 'BDKNG kompakt', font=K.f('InterDisplay-Black.otf', 96), fill=(255, 255, 255, int(255 * ta)), anchor='mm')
-    if datum: ld.text((W // 2, H // 2 + 440), datum, font=K.f('Inter-Bold.otf', 60), fill=GOLD + (int(255 * ta),), anchor='mm')
+    if datum: ld.text((W // 2, H // 2 + 440), datum, font=K.f('Inter-Bold.otf', 60), fill=((255, 255, 255) if STIL == 'c' else GOLD) + (int(255 * ta),), anchor='mm')
     im.alpha_composite(lay)
     return im.convert('RGB')
 def vorschau(t):
@@ -152,8 +194,8 @@ def render(D, OUT, tmp):
     def vorschau_x(t, DD, titel, gross=False):
         im, d, TOP = basis(t)
         a = ease(t / 0.5)
-        text_alpha(im, (60, TOP + 50), DD['morgen_ueber'].upper(), K.f('Inter-Bold.otf', 40), K.GOLD, a)
-        text_alpha(im, (60, TOP + 105), titel, K.f('InterDisplay-Black.otf', 84), K.GRUEN_D, a)
+        text_alpha(im, (60, TOP + 50), DD['morgen_ueber'].upper(), K.f('Inter-Bold.otf', 40), UEB(), a)
+        text_alpha(im, (60, TOP + 105), titel, K.f('InterDisplay-Black.otf', 84), TIT(), a)
         y = TOP + 250
         for i, (em, kk, txt) in enumerate(DD['morgen']):
             p = ease((t - 0.4 - i * 0.45) / 0.35)
@@ -169,9 +211,7 @@ def render(D, OUT, tmp):
             e = K.emoji(em, 84)
             if e: im.paste(e, (x0 + 70 - e.width // 2, y + 70 - e.height // 2), e.split()[3].point(lambda v: int(v * p)))
             y += h
-        FU = 420; d = ImageDraw.Draw(im); d.rectangle([0, H - FU, W, H], fill=K.GRUEN_D)
-        d.text((W // 2 - 50, H - FU + 90), 'Alles auf bdkng.de', font=K.f('InterDisplay-Black.otf', 64), fill=K.WEISS, anchor='mm')
-        d.text((W // 2 - 50, H - FU + 165), DD.get('fussquelle', 'Quelle: DWD, RESO, Stadt Bad König'), font=K.f('Inter-Medium.otf', 30), fill=(205, 225, 210), anchor='mm')
+        fuss(im, DD.get('fussquelle', 'Quelle: DWD, RESO, Stadt Bad König'))
         return im
     def vorschau2(t): return vorschau_x(t, D, 'Morgen in Bad König')
     Z = D['zeilen'][:6]; teile = [Z[i:i + 3] for i in range(0, len(Z), 3)]
@@ -190,9 +230,13 @@ def render(D, OUT, tmp):
 if __name__ == '__main__':
     ziel = os.path.join(B, 'assets', 'social', 'videos'); os.makedirs(ziel, exist_ok=True)
     tmp = '/tmp/bdkng-video'; os.makedirs(tmp, exist_ok=True)
-    for f in sorted(glob.glob(os.path.join(B, 'data', 'videos', '*.json'))):
-        vid = os.path.splitext(os.path.basename(f))[0]; out = os.path.join(ziel, vid + '.mp4')
+    auftraege = []
+    for f in sorted(glob.glob(os.path.join(B, 'data', 'videos', '*.json')))[-2:]:
+        vid = os.path.splitext(os.path.basename(f))[0]
+        auftraege += [(f, vid, 'fb', os.path.join(ziel, vid + '.mp4')), (f, vid, 'c', os.path.join(ziel, vid + '-ig.mp4'))]
+    for f, vid, stil, out in auftraege:
         if os.path.exists(out): continue
+        STIL = stil; VERLAUF = None
         stumm = out + '.stumm.mp4'
         render(json.load(open(f, encoding='utf-8')), stumm, tmp)
         # Musik (lizenzfrei, Pixabay) im täglichen Wechsel, leise ausgeblendet; Ton bleibt auch ohne Musik möglich
@@ -207,4 +251,5 @@ if __name__ == '__main__':
             os.replace(stumm, out + '.tmp.mp4')
         os.replace(out + '.tmp.mp4', out)
     # nur die letzten 4 Videos aufheben (Speicherplatz)
-    for alt in sorted(glob.glob(os.path.join(ziel, '*.mp4')))[:-4]: os.remove(alt)
+    for alt in sorted(glob.glob(os.path.join(ziel, '*[0-9].mp4')))[:-4]: os.remove(alt)
+    for alt in sorted(glob.glob(os.path.join(ziel, '*-ig.mp4')))[:-4]: os.remove(alt)
