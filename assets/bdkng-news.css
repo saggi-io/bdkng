@@ -56,5 +56,17 @@ nav.rub-nav .rub-nav-in a{display:inline-flex!important}
 .sp-preis{font-weight:800;font-size:18px;color:#1B4D2E;white-space:nowrap;min-width:78px}
 .sp-preis sup{font-size:.6em}
 .sp-ort a{color:#3a4a3f}
+.sp-lok-t{margin:14px 0 6px;font-size:18px;color:#1B4D2E}
+.sp-lok-wrap{overflow-x:auto;margin-bottom:6px}
+.sp-lok{width:100%;border-collapse:collapse;font-size:14px;background:#f4f8f4;border:1px solid #d9e6da}
+.sp-lok th{background:#1B4D2E;color:#fff;text-align:right;padding:8px 10px;font-size:13px}
+.sp-lok th:first-child{text-align:left}
+.sp-lok td{padding:8px 10px;border-top:1px solid #e3ece3;text-align:right;white-space:nowrap;font-weight:800;color:#1B4D2E;font-size:16px}
+.sp-lok td:first-child{text-align:left;white-space:normal;font-weight:400;color:#1d2a20;font-size:14px;line-height:1.35}
+.sp-lok td a{color:#3a4a3f}
+.sp-lok td sup{font-size:.6em}
+.sp-lok tr.zu td{opacity:.65}
+.sp-zu{font-size:12px;background:#e9ecea;border-radius:6px;padding:1px 6px;color:#5b6b60}
+@media(max-width:520px){.sp-lok td,.sp-lok th{padding:7px 5px}.sp-lok td{font-size:14px}.sp-lok td:first-child{font-size:13px}}
 .sp-quelle{font-size:13px;color:#5b6b60;margin-top:10px}
 @media(max-width:760px){.sp-grid{grid-template-columns:1fr}}

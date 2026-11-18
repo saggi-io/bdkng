@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-12",
+ "stand": "2026-11-18",
  "quelle_hinweis": "Wöchentlich automatisch aus den Bad Königer Stadtnachrichten und den Seiten der Stadt Bad König aktualisiert; Angaben ohne Gewähr, bitte bei Wichtigem bei der Stadt prüfen.",
  "eintraege": [
   {
@@ -150,11 +150,6 @@
    "url": "https://www.badkoenig.de/leben-wohnen/bildung/schulen/"
   },
   {
-   "titel": "Gelernt: Biergärten und Bier-Lokale in Bad König",
-   "text": "Die offizielle Website der Stadt Bad König führt die Gaststätte \"Zum Mühlenstall\" mit Biergarten \"Bruchmühle\" (Außenliegend 9, 64732 Bad König). Eine Bewertung oder Rangliste der Bier-Lokale in Bad König liegt nicht vor. (Automatisch nachgeschlagen am 16.11.2026, Stand der Quelle: nicht erkennbar (Seite der Sta. Ohne Gewähr.)",
-   "url": "https://www.badkoenig.de/tourismus-kultur/bad-koenig-erleben-entdecken/gastronomie-handel/gaststaetten-und-restaurants/"
-  },
-  {
    "titel": "Gelernt: Radsport und Radwege in und um Bad König",
    "text": "Bad König liegt an mehreren Radrouten: dem Hessischen Radfernweg R4, der Rhein-Main-Vergnügen Route 7 (Start am Bahnhof Bad König) und dem 3-Länder-Radweg, der über Bad König führt. Vom Bahnhof Bad König starten mehrere beschilderte oder GPX-dokumentierte Rundtouren, z. B. die Panoramarunde nach Michelstadt (21 km, 400 Hm) und die Runde Mümling-Gersprenztal (31 km, 540 Hm). Im Odenwaldkreis gibt es außerdem Mountainbike-Strecken. Im Kurpark an den Seen gilt ein Radfahrverbot, dort ist nur Schieben erlaubt. (Automatisch nachgeschlagen am 16.11.2026, Stand der Quelle: Undatierte Routenübersicht des. Ohne Gewähr.)",
    "url": "https://www.odenwaldkreis.de/de/projekte/fuss-und-radverkehr/fahrrad-routen/"
@@ -163,11 +158,6 @@
    "titel": "Gelernt: Quinticha-Trails: Lage im Trail Center Bad König",
    "text": "Der Quinticha-Trail ist 800 m lang und Teil des Trail Centers Bad König im Odenwald. Der Einstieg liegt am Parkplatz nach der Rosenhöhe (Kimbacher Str. 218), direkt am Ortsausgang an der L3318 Richtung Kimbach. Alle fünf Abfahrten starten von einem gemeinsamen Punkt am Grohberg. Die offizielle Eröffnung war für den 20.06.2026 angekündigt. (Automatisch nachgeschlagen am 16.11.2026. Ohne Gewähr.)",
    "url": "https://www.muemlingtalradler.de/trail-center-bad-koenig/"
-  },
-  {
-   "titel": "Gelernt: Bier in Bad König: Brauereiausschank und Biergärten",
-   "text": "Der FAFNIRKELLER in der Elisabethenstraße 10 in Bad König ist der Brauereiausschank der BannenBerger Brauerei und liegt direkt gegenüber der Odenwald-Therme. Laut Betreiber ist er an drei Tagen pro Woche am frühen Abend geöffnet, und die Brauerei beliefert auch Orte im Odenwald und im Taunus. Als Biergärten in Bad König werden unter anderem der Mühlenstall in der Bruchmühle (Bruchmühle 9) und das Restaurant Zum Grünen Baum in Kimbach (Im Kimbachtal 40) genannt. (Automatisch nachgeschlagen am 16.11.2026, Stand der Quelle: Webseite des FAFNIRKELLER, lau. Ohne Gewähr.)",
-   "url": "https://fafnirkeller.de/"
   },
   {
    "titel": "Gelernt: Mountainbike-Trails in und um Bad König",
@@ -193,6 +183,11 @@
    "titel": "Gelernt: Einwohnerzahl der Stadt Bad König",
    "text": "Die Stadt Bad König im Odenwaldkreis hatte laut Statistikportal zum Stand 31.03.2026 amtlich 9.508 Einwohner, davon 4.560 männliche und 4.948 weibliche. Die Kernstadt allein zählte laut Stadt Bad König zum 31.12.2023 5.312 Einwohner; die Gesamtstadt umfasst zusätzlich die Ortsteile. (Automatisch nachgeschlagen am 17.11.2026, Stand der Quelle: 31.03.2026. Ohne Gewähr.)",
    "url": "https://www.statistikportal.de/de/gemeindeverzeichnis/06437001"
+  },
+  {
+   "titel": "Bier trinken, Kneipen, Gaststätten und Biergärten in Bad König",
+   "text": "Wo man in Bad König ein Bier trinken kann (Auswahl, alle Angaben ohne Gewähr, Öffnungszeiten vorher beim Lokal prüfen): Kernstadt: WandelBar/Wandelhalle an der Odenwald-Therme (Elisabethenstraße); Gasthaus Schönberger Hof (Bahnhofstraße 1, griechische und deutsche Küche); Kegelbahn/Gaststätte am Bahnhofsplatz 2; Landgasthaus Pferdestall (Frankfurter Straße 40); die Scheune (Mühlstraße 11); Poseidon Zum Seeblick (An den Seen 12). Biergärten: Mühlenstall/Mümlingstad'l an der Bruchmühle (An der Bruchmühle 9, beliebter Biergarten am Mümling-Radweg); Eichelshof mit Biergarten (Außenliegend 45). Stadtteile: Gasthaus Zum grünen Baum (Gumpersberger Straße 24, urige Kneipe mit Pfungstädter Bier); Restaurant Zum Grünen Baum im Kimbachtal (Im Kimbachtal 40, Kimbach); Eulbacher Hof in Zell (Königer Straße 16); Landhotel Zur Post in Momart (Hauswiesenweg 14–16). Eine eigene Brauerei oder einen Brauereiausschank gibt es in Bad König nach unseren Quellen nicht. Eine Rangliste der Lokale führen wir nicht.",
+   "url": "https://www.dasoertliche.de/Themen/Restaurant--/Bad-König.html"
   }
  ]
 }
