@@ -1,0 +1,33 @@
+{
+ "rubrik": "wetter",
+ "titel": "Achtung: Warnung vor Dauerregen",
+ "ueber": "Do. 19.11. · 19:00 Uhr",
+ "art": "liste",
+ "zeilen": [
+  {
+   "t": "Freitag, 20.11.: Regen, 7 bis 9 °C, Regenrisiko 81 % (ca. 17 l/m²)",
+   "e": "🌧️"
+  },
+  {
+   "t": "Samstag, 21.11.: wechselnd bewölkt, 1 bis 6 °C, Regenrisiko 5 % (ca. 1 l/m²)",
+   "e": "⛅"
+  },
+  {
+   "t": "Sonntag, 22.11.: bedeckt, -1 bis 3 °C. Frost möglich",
+   "e": "☁️"
+  },
+  {
+   "t": "Amtliche WARNUNG vor DAUERREGEN (Fr 00:00 bis Sa 00:00 Uhr)",
+   "e": "⚠️"
+  },
+  {
+   "t": "Amtliche WARNUNG vor WINDBÖEN (Do 09:00 bis Do 20:00 Uhr)",
+   "e": "⚠️"
+  },
+  {
+   "t": "Amtliche WARNUNG vor WINDBÖEN (Do 20:00 bis Fr 09:00 Uhr)",
+   "e": "⚠️"
+  }
+ ],
+ "quelle": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev"
+}
