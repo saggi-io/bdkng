@@ -3,7 +3,9 @@
 html.stil-c{--green:#2B1E2F;--gold:#FF7A59;--cream:#FFF1EC}
 html.stil-c body{background:linear-gradient(180deg,#FFE7DE 0,#F8EAF6 60%,#F1E7FA 100%) fixed;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
 html.stil-c header{background:rgba(255,241,236,.94);border-bottom:0;box-shadow:0 4px 18px rgba(255,122,89,.15)}
-html.stil-c .brand-logo img{height:58px;width:auto}
+html.stil-c .brand-logo img{height:92px;width:auto;margin:4px 0;filter:drop-shadow(0 4px 10px rgba(43,30,47,.25))}
+html.stil-c header nav{height:auto;min-height:100px}
+@media(max-width:700px){html.stil-c .brand-logo img{height:70px}html.stil-c header nav{min-height:80px}}
 html.stil-c nav.kopf-rub .kopf-rub-in a{border-radius:999px}
 html.stil-c nav.kopf-rub .kopf-rub-in a[aria-current="page"]{background:linear-gradient(135deg,#FF7A59,#C86DD7);border-color:transparent;color:#fff}
 html.stil-c .subhero{background:linear-gradient(135deg,#FF7A59,#C86DD7);border:0;color:#fff;box-shadow:0 14px 34px rgba(200,109,215,.25)}
