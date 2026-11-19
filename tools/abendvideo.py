@@ -1,4 +1,4 @@
-"""BDKNG Abend-Video (9:16): Logo-Intro, "Der Tag in Bad König" (bis 6 Meldungen, 2 Seiten),
+"""BDKNG Abend-Video (9:16): Hook-Intro (Top-Meldung groß ab dem ersten Bild), "Der Tag in Bad König" (bis 6 Meldungen, 2 Seiten),
 "Morgen in Bad König" (Wetter, Müll, Termine, Tanken), "Mach mit", Abspann.
 Rendert jede data/videos/<id>.json ohne fertiges Video nach assets/social/videos/<id>.mp4 und behält nur die letzten Videos."""
 import sys, os, math, json, subprocess, glob
@@ -151,6 +151,38 @@ def intro(t):  # 2,4 s: Kronen-Logo gold/weiß im Wechsel pulsierend, dann HP-Lo
     if datum: ld.text((W // 2, H // 2 + 440), datum, font=K.f('Inter-Bold.otf', 60), fill=((255, 255, 255) if STIL == 'c' else GOLD) + (int(255 * ta),), anchor='mm')
     im.alpha_composite(lay)
     return im.convert('RGB')
+def intro_hook(t):  # 2,2 s: ab dem ERSTEN Bild sichtbar – die wichtigste Meldung des Tages groß, Logo klein oben (Hook für Reels)
+    im = (verlauf_c().convert('RGBA') if STIL == 'c' else Image.new('RGBA', (W, H), DK + (255,))); d = ImageDraw.Draw(im)
+    z0 = data.get('zeilen') or []
+    # Hook = die griffigste Meldung: Wichtiges/Verkehr zuerst, allgemeine Sammeltitel („Ergebnisse“, „Termine“) nur zur Not
+    allg = lambda x: any(w in x['t'] for w in ('Ergebnisse', 'Termine dieser Woche', 'Termine am Wochenende', 'Rückblick'))
+    rang = {'wichtig': 0, 'verkehr': 1, 'polizei': 1, 'aktuell': 2, 'sport': 3, 'termine': 4}
+    z = sorted(z0, key=lambda x: (allg(x), rang.get(x.get('r', 'aktuell'), 5)))
+    hook = str(data.get('hook') or (z[0]['t'] if z else '') or ('Morgen: ' + data['morgen'][0][2] if data.get('morgen') else 'Der Tag in Bad König'))
+    rub = (z[0].get('k') if z else '') or ''
+    p = 1 + 0.025 * math.sin(t * 2 * math.pi * 0.9)
+    setz(im, LG[0], W / 2, 250, 300 * p)
+    uv = str(data.get('ueber', '')).split(' · ')[0]
+    d.text((W // 2, 470), ('Heute in Bad König' + (' · ' + uv if uv else '')).upper(), font=K.f('Inter-Bold.otf', 44), fill=(255, 255, 255) if STIL == 'c' else GOLD, anchor='mm')
+    s = 1 + 0.06 * (1 - ease(t / 0.35))  # kleiner „Punch“ am Anfang, Text ist trotzdem sofort lesbar
+    gr = int(104 * s)
+    while gr > 64:
+        ls = K.wrap(d, hook, K.f('InterDisplay-Black.otf', gr), W - 140)
+        if len(ls) <= 4: break
+        gr -= 6
+    ft = K.f('InterDisplay-Black.otf', gr); ls = K.wrap(d, hook, ft, W - 140)[:4]
+    zh = int(gr * 1.12); y0 = 980 - len(ls) * zh // 2
+    if rub:
+        fk = K.f('Inter-Bold.otf', 40); bw = d.textlength(rub.upper(), font=fk) + 60
+        d.rounded_rectangle([W / 2 - bw / 2, y0 - 110, W / 2 + bw / 2, y0 - 40], 35, fill=(255, 255, 255) if STIL == 'c' else GOLD)
+        d.text((W // 2, y0 - 75), rub.upper(), font=fk, fill=(214, 84, 60) if STIL == 'c' else DK, anchor='mm')
+    for i, l in enumerate(ls):
+        d.text((W // 2, y0 + i * zh + zh // 2), l, font=ft, fill=(255, 255, 255), anchor='mm')
+    rest = max(0, len(z) - 1)
+    unten = ('+ ' + str(rest) + ' weitere Meldung' + ('en' if rest != 1 else '') + ' · ' if rest else '') + 'Wetter & Müll morgen'
+    a = ease((t - 0.5) / 0.4)
+    if a > 0: text_alpha(im, (W // 2 - d.textlength(unten, font=K.f('Inter-Bold.otf', 46)) // 2, 1450), unten, K.f('Inter-Bold.otf', 46), (255, 255, 255) if STIL == 'c' else (226, 239, 214), a)
+    return im.convert('RGB')
 def vorschau(t):
     im, d, TOP = basis(t)
     a = ease(t / 0.5)
@@ -215,7 +247,7 @@ def render(D, OUT, tmp):
         return im
     def vorschau2(t): return vorschau_x(t, D, 'Morgen in Bad König')
     Z = D['zeilen'][:6]; teile = [Z[i:i + 3] for i in range(0, len(Z), 3)]
-    szenen = [('b0.mp4', 1.6, intro)]
+    szenen = [('b0.mp4', 2.2, intro_hook)]  # früher: 1,6 s Logo-Intro (zu schwacher Einstieg, 18.11. nur 55 Aufrufe)
     for k, tl in enumerate(teile):
         fn, dau = seite(tl, D['titel'] + (' (%d/%d)' % (k + 1, len(teile)) if len(teile) > 1 else ''))
         szenen.append(('b%d.mp4' % (k + 1), dau, fn))
