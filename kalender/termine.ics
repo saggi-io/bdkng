@@ -28,7 +28,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:51b65acb4de1bbead424@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261120T120000
 DTEND;TZID=Europe/Berlin:20261120T140000
 SUMMARY:Orgel um 12
@@ -43,7 +43,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:46b008aac8e34800f584@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261121T120000
 DTEND;TZID=Europe/Berlin:20261121T140000
 SUMMARY:TECMUMAS Technikmuseum Bad König
@@ -59,7 +59,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:b2388642c9643fe3c954@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261122T120000
 DTEND;TZID=Europe/Berlin:20261122T140000
 SUMMARY:TECMUMAS Technikmuseum Bad König
@@ -75,7 +75,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:d7ea024cef1c9406257a@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261126T143000
 DTEND;TZID=Europe/Berlin:20261126T163000
 SUMMARY:Seniorennachmittag der AWO Tagespflege
@@ -88,7 +88,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:fe64962d8cf1e3ba6eb7@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261128T163000
 DTEND;TZID=Europe/Berlin:20261128T183000
 SUMMARY:Weihnachtsmarkt Kimbach
@@ -102,7 +102,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:9d65fb6313081a92826c@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261128T180000
 DTEND;TZID=Europe/Berlin:20261128T200000
 SUMMARY:Offenes Singen der NaturFreunde Bad König
@@ -117,7 +117,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:a8a0fc949cebb24aad4a@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261129T140000
 DTEND;TZID=Europe/Berlin:20261129T160000
 SUMMARY:Tanz & Tee
@@ -131,7 +131,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:a256d93c87cd218c5b97@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261205T160000
 DTEND;TZID=Europe/Berlin:20261205T180000
 SUMMARY:Weihnachtsmarkt mit Nikolaustag
@@ -145,7 +145,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:99b15d67dd69f353ca5a@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261206T103000
 DTEND;TZID=Europe/Berlin:20261206T123000
 SUMMARY:Heimatmuseum Bad König
@@ -159,7 +159,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:1e96ffff26a31f93db91@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261206T140000
 DTEND;TZID=Europe/Berlin:20261206T160000
 SUMMARY:Tanz & Tee
@@ -173,7 +173,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:13443791094e4229bb1a@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261214
 SUMMARY:Nikolausmarkt Bad König 2026
@@ -186,7 +186,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:cf573853b9d4b82922d4@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261214
 SUMMARY:Nikolausmarkt in und um die Rentmeisterei/Freilichtbühne
@@ -200,7 +200,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:1ad15c228ffbb7309b09@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261211T190000
 DTEND;TZID=Europe/Berlin:20261211T210000
 SUMMARY:Musikalische Adventsandacht
@@ -214,7 +214,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:83a6bfc6ea4b559f014c@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261217T143000
 DTEND;TZID=Europe/Berlin:20261217T163000
 SUMMARY:Adventscafé im Rahmen des Seniorennachmittags der AWO Tagespflege
@@ -227,7 +227,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:032fb030b9d75d80034c@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261219T120000
 DTEND;TZID=Europe/Berlin:20261219T140000
 SUMMARY:TECMUMAS Technikmuseum Bad König
@@ -243,7 +243,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:680a8f88118a72f9df1a@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261220T103000
 DTEND;TZID=Europe/Berlin:20261220T123000
 SUMMARY:Heimatmuseum Bad König
@@ -257,7 +257,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:4fa3e4628531646cdf52@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261220T120000
 DTEND;TZID=Europe/Berlin:20261220T140000
 SUMMARY:TECMUMAS Technikmuseum Bad König
@@ -273,7 +273,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:f8d8e4aa94af426dec30@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261220T140000
 DTEND;TZID=Europe/Berlin:20261220T160000
 SUMMARY:Tanz & Tee
@@ -287,7 +287,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:c73e9eed52319ccd19d5@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261226T180000
 DTEND;TZID=Europe/Berlin:20261226T200000
 SUMMARY:Offenes Singen der NaturFreunde Bad König
@@ -302,7 +302,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:d943984ca363c7e0871d@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;VALUE=DATE:20261227
 DTEND;VALUE=DATE:20261230
 SUMMARY:Silvesterturnier der TSG Bad König\, Abt. Fußball / Förderverein
@@ -320,7 +320,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:93b2882b3541f8f9efa5@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261228T143000
 DTEND;TZID=Europe/Berlin:20261228T163000
 SUMMARY:Hüttenzauber
@@ -334,7 +334,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:f65bb25d1de07ef617d4@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20270123T193000
 DTEND;TZID=Europe/Berlin:20270123T213000
 SUMMARY:Susanne Hasenstab und Emil Emaille präsentieren: "Ochsenmaulsalat"
@@ -353,7 +353,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:fbbe51c6de93a7a98774@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20270130T141100
 DTEND;TZID=Europe/Berlin:20270130T161100
 SUMMARY:Kinderfastnacht bei der TSG Bad König
@@ -367,7 +367,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:afc3226ed984381122f6@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20270130T141100
 DTEND;TZID=Europe/Berlin:20270130T161100
 SUMMARY:Kinderfastnacht der Dorfverschönerung Ober-Kinzig/Gumpersberg
@@ -381,7 +381,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:b5cf9cc37cf44892df84@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20270130T201100
 DTEND;TZID=Europe/Berlin:20270130T221100
 SUMMARY:Fastnachtsparty Vol. 2 bei der TSG Bad König
@@ -399,7 +399,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:15a5a4a0af84d475e69d@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20270213T193000
 DTEND;TZID=Europe/Berlin:20270213T213000
 SUMMARY:Mark Zak präsentiert die Stand-Up-Show: "Back to UDSSR - Warum ich
@@ -418,7 +418,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:2982e3d430d6dd7a6b34@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20270312T180000
 DTEND;TZID=Europe/Berlin:20270312T200000
 SUMMARY:Kinnicher Abend in der Kinnicher Stubb
@@ -432,7 +432,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:6979cec740e31f47a1ed@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20270313T193000
 DTEND;TZID=Europe/Berlin:20270313T213000
 SUMMARY:Peter Brandt liest aus: "Sich ändern\, um sich treu zu bleiben. Er
@@ -451,7 +451,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:93e68baad3f720beeab4@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20270611T200000
 DTEND;TZID=Europe/Berlin:20270611T220000
 SUMMARY:Pe Werner
@@ -466,7 +466,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:3ec5413f1297abe1adaa@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20270612T200000
 DTEND;TZID=Europe/Berlin:20270612T220000
 SUMMARY:The Michael Jackson Tribute Show
@@ -482,7 +482,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:94d34114a4ba2349b2e0@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20270806T200000
 DTEND;TZID=Europe/Berlin:20270806T220000
 SUMMARY:Queen Tribute Show
@@ -498,7 +498,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:8ac5b1da311baa507f0c@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20270828T200000
 DTEND;TZID=Europe/Berlin:20270828T220000
 SUMMARY:Edelle – A Night About Adele
@@ -513,7 +513,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:de9b60a4379e624f8fda@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20270829T200000
 DTEND;TZID=Europe/Berlin:20270829T220000
 SUMMARY:ANDERS – A-cappella-Deutschpoeten
@@ -527,30 +527,30 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
  kalender/
 END:VEVENT
 BEGIN:VEVENT
-UID:ccecf873c865c766ae82@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:103c433d662ba32aa3d1@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261120T180000
 DTEND;TZID=Europe/Berlin:20261120T190000
 SUMMARY:⛪ Hl. Messe (kath.)
-LOCATION:Kirche Bad König
+LOCATION:Kirche\, Bad König
 DESCRIPTION:Pfarrer Januarius Mäurer – Quelle: Bad Königer Stadtnachric
  hten (Kirchliche Nachrichten)\, LINUS WITTICH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
-UID:f8ff53f9876082b1ab31@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:d66e2784adf7d63ecc28@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261122T090000
 DTEND;TZID=Europe/Berlin:20261122T100000
-SUMMARY:⛪ Hl. Messe (Christkönigssonntag) (kath.)
-LOCATION:Kirche Bad König
+SUMMARY:⛪ Hl. Messe (kath.)
+LOCATION:Kirche\, Bad König
 DESCRIPTION:Pfarrer Januarius Mäurer – Quelle: Bad Königer Stadtnachric
  hten (Kirchliche Nachrichten)\, LINUS WITTICH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:7ee89873a24a75a53dfc@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261122T093000
 DTEND;TZID=Europe/Berlin:20261122T103000
 SUMMARY:⛪ Gottesdienst (Totensonntag) (ev.)
@@ -560,108 +560,119 @@ DESCRIPTION:Der Kirchenchor singt\, parallel Kinderkirche – Quelle: Bad K
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
-UID:abd7bbed0b3e844f4db2@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:3abf5f3b513907fc9503@bdkng.de
+DTSTAMP:20261119T143052Z
+DTSTART;TZID=Europe/Berlin:20261122T093000
+DTEND;TZID=Europe/Berlin:20261122T103000
+SUMMARY:⛪ Gottesdienst (ev.)
+LOCATION:Kirche\, Bad König
+DESCRIPTION:Kirchenchor singt\, zeitgleich Kinderkirche – Quelle: Bad Kö
+ niger Stadtnachrichten (Kirchliche Nachrichten)\, LINUS WITTICH
+URL:https://bdkng.de/termine.html#kalender
+END:VEVENT
+BEGIN:VEVENT
+UID:2419d468208cab7f07ec@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261122T100000
 DTEND;TZID=Europe/Berlin:20261122T110000
 SUMMARY:⛪ Gottesdienst zum Totensonntag (ev.)
-LOCATION:Kirche Zell\, Bad König
+LOCATION:Kirche\, Zell\, Bad König
 DESCRIPTION:Verlesung und Fürbitte für die Verstorbenen des vergangenen K
  irchenjahres – Quelle: Bad Königer Stadtnachrichten (Kirchliche Nachric
  hten)\, LINUS WITTICH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
-UID:dd71cb646daef07a308f@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:e9d8ea41d44659178dfc@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261122T110000
 DTEND;TZID=Europe/Berlin:20261122T120000
 SUMMARY:⛪ Andacht zum Totensonntag (ev.)
-LOCATION:Friedhof Etzen-Gesäß\, Bad König
+LOCATION:Friedhof\, Etzen-Gesäß\, Bad König
 DESCRIPTION:mit Posaunenchor – Quelle: Bad Königer Stadtnachrichten (Kir
  chliche Nachrichten)\, LINUS WITTICH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
-UID:63a87df55e2fcc596bee@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:a8476b5685460ff44a96@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261122T130000
 DTEND;TZID=Europe/Berlin:20261122T140000
 SUMMARY:⛪ Andacht zum Totensonntag (ev.)
-LOCATION:Friedhof Fürstengrund\, Bad König
+LOCATION:Friedhof\, Fürstengrund\, Bad König
 DESCRIPTION:mit Posaunenchor – Quelle: Bad Königer Stadtnachrichten (Kir
  chliche Nachrichten)\, LINUS WITTICH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
-UID:42616781fb56fc40dc95@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:54240f567c64aeea7500@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261122T130000
 DTEND;TZID=Europe/Berlin:20261122T140000
 SUMMARY:⛪ Andacht zum Totensonntag (ev.)
-LOCATION:Friedhof Momart\, Bad König
+LOCATION:Friedhof\, Momart\, Bad König
 DESCRIPTION:mit Posaunenchor – Quelle: Bad Königer Stadtnachrichten (Kir
  chliche Nachrichten)\, LINUS WITTICH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
-UID:21908effe62502f4174e@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:96a85aa87cbb47ac75a1@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261122T140000
 DTEND;TZID=Europe/Berlin:20261122T150000
 SUMMARY:⛪ Andacht zum Totensonntag
-LOCATION:Friedhof Nieder-Kinzig\, Bad König
+LOCATION:Friedhof\, Nieder-Kinzig\, Bad König
 DESCRIPTION:Quelle: Bad Königer Stadtnachrichten (Kirchliche Nachrichten)\
  , LINUS WITTICH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
-UID:ee4268fae755098eb516@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:37df361f8d5fa306ffbc@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261122T143000
 DTEND;TZID=Europe/Berlin:20261122T153000
-SUMMARY:⛪ Gottesdienst zum Totensonntag (ev.)
-LOCATION:Friedhof Bad König
+SUMMARY:⛪ Andacht zum Totensonntag (ev.)
+LOCATION:Friedhof\, Bad König
 DESCRIPTION:mit Posaunenchor und MGV Liederkranz – Quelle: Bad Königer S
  tadtnachrichten (Kirchliche Nachrichten)\, LINUS WITTICH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
-UID:f60df6d8bfff46535036@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:15a791e4e7f3a326bd62@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261122T150000
 DTEND;TZID=Europe/Berlin:20261122T160000
-SUMMARY:⛪ Friedhofsandacht zum Ewigkeitssonntag (ev.)
-LOCATION:Friedhof Kimbach\, Bad König
+SUMMARY:⛪ Andacht zum Totensonntag (ev.)
+LOCATION:Friedhof\, Kimbach\, Bad König
 DESCRIPTION:Prädikantin Ute Karl – Quelle: Bad Königer Stadtnachrichten
   (Kirchliche Nachrichten)\, LINUS WITTICH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
-UID:d37b3bf33f0f800e7e1d@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:67dd312190de625f8fcf@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261125T180000
 DTEND;TZID=Europe/Berlin:20261125T190000
 SUMMARY:⛪ Hl. Messe (kath.)
-LOCATION:Kirche Bad König
+LOCATION:Kirche\, Bad König
 DESCRIPTION:Pfarrer Ryszard Strojek – Quelle: Bad Königer Stadtnachricht
  en (Kirchliche Nachrichten)\, LINUS WITTICH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
-UID:e4576701309591892c20@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:071a8f1f444456ebf8b2@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261127T180000
 DTEND;TZID=Europe/Berlin:20261127T190000
 SUMMARY:⛪ Hl. Messe (kath.)
-LOCATION:Kirche Bad König
+LOCATION:Kirche\, Bad König
 DESCRIPTION:Pfarrer Januarius Mäurer – Quelle: Bad Königer Stadtnachric
  hten (Kirchliche Nachrichten)\, LINUS WITTICH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:fa27e8d7de125c05b822@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261127T190000
 DTEND;TZID=Europe/Berlin:20261127T200000
 SUMMARY:⛪ Adventsandacht (ev.)
@@ -671,19 +682,30 @@ DESCRIPTION:anschließend Mitarbeiterfeier im Gemeindehaus – Quelle: Bad
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
-UID:a37e4f45e3abc9f0c0ba@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:f1943e10cb22e56bd200@bdkng.de
+DTSTAMP:20261119T143052Z
+DTSTART;TZID=Europe/Berlin:20261127T190000
+DTEND;TZID=Europe/Berlin:20261127T200000
+SUMMARY:⛪ Adventsandacht (ev.)
+LOCATION:Kirche\, Bad König
+DESCRIPTION:anschließend Mitarbeiterfeier im Gemeindehaus – Quelle: Bad 
+ Königer Stadtnachrichten (Kirchliche Nachrichten)\, LINUS WITTICH
+URL:https://bdkng.de/termine.html#kalender
+END:VEVENT
+BEGIN:VEVENT
+UID:3e363a90cc4312af4c9a@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261129T090000
 DTEND;TZID=Europe/Berlin:20261129T100000
 SUMMARY:⛪ Hl. Messe (1. Advent) (kath.)
-LOCATION:Kirche Bad König
+LOCATION:Kirche\, Bad König
 DESCRIPTION:Pfarrer Ryszard Strojek – Quelle: Bad Königer Stadtnachricht
  en (Kirchliche Nachrichten)\, LINUS WITTICH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:9e50279c745aa8747025@bdkng.de
-DTSTAMP:20261119T132640Z
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261129T093000
 DTEND;TZID=Europe/Berlin:20261129T103000
 SUMMARY:⛪ Gottesdienst (1. Advent) (ev.)
@@ -694,49 +716,62 @@ DESCRIPTION:mit Mitarbeitervorstellung\, mitgestaltet vom MGV Liederkranz
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
-UID:7ca2df175b43b9fe391f@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:eae7558522e70e45d869@bdkng.de
+DTSTAMP:20261119T143052Z
+DTSTART;TZID=Europe/Berlin:20261129T093000
+DTEND;TZID=Europe/Berlin:20261129T103000
+SUMMARY:⛪ Gottesdienst (1. Advent) (ev.)
+LOCATION:Kirche\, Bad König
+DESCRIPTION:mit Mitarbeitervorstellung\, mitgestaltet vom MGV Liederkranz 
+ – Quelle: Bad Königer Stadtnachrichten (Kirchliche Nachrichten)\, LINUS
+  WITTICH
+URL:https://bdkng.de/termine.html#kalender
+END:VEVENT
+BEGIN:VEVENT
+UID:f42b1eaa9722366f01a5@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261129T160000
 DTEND;TZID=Europe/Berlin:20261129T170000
 SUMMARY:⛪ Hl. Messe im syro-malabarischen Ritus (kath.)
-LOCATION:Kirche Bad König
+LOCATION:Kirche\, Bad König
 DESCRIPTION:Pfarrer Alexander Chundattu O. Carm. – Quelle: Bad Königer S
  tadtnachrichten (Kirchliche Nachrichten)\, LINUS WITTICH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
-UID:19dcbce9c963856f571d@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:a1cebd43cd0690557609@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261211T190000
 DTEND;TZID=Europe/Berlin:20261211T200000
 SUMMARY:⛪ Musikalische Adventsandacht (ev.)
-LOCATION:Schlosskirche Bad König
+LOCATION:Schlosskirche\, Bad König
 DESCRIPTION:mit Johannes Schmidtke (Orgel) und Pfarrer Martin Hecker – Qu
  elle: Bad Königer Stadtnachrichten (Kirchliche Nachrichten)\, LINUS WITTI
  CH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
-UID:e35c21e2a37aba31e592@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:710576a1ec16ed3594df@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261213T150000
 DTEND;TZID=Europe/Berlin:20261213T160000
-SUMMARY:⛪ Gottesdienst zur Verabschiedung von Pfarrer Armin Hammes (ev.)
-LOCATION:Kirche Zell\, Bad König
-DESCRIPTION:anschließend Empfang – Quelle: Bad Königer Stadtnachrichten
-  (Kirchliche Nachrichten)\, LINUS WITTICH
+SUMMARY:⛪ Gottesdienst (3. Advent) mit Verabschiedung (ev.)
+LOCATION:Kirche\, Zell\, Bad König
+DESCRIPTION:Entpflichtung Pfarrer Armin Hammes\, anschließend Empfang – 
+ Quelle: Bad Königer Stadtnachrichten (Kirchliche Nachrichten)\, LINUS WIT
+ TICH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
-UID:2be1e78b960bba9a8f22@bdkng.de
-DTSTAMP:20261119T132640Z
+UID:3bc532b92739e59ffcb0@bdkng.de
+DTSTAMP:20261119T143052Z
 DTSTART;TZID=Europe/Berlin:20261220T140000
 DTEND;TZID=Europe/Berlin:20261220T150000
-SUMMARY:⛪ Adventliche Andacht im Seniorennachmittag (ev.)
-LOCATION:Kirche Zell\, Bad König
-DESCRIPTION:anschließend Kaffee und Kuchen\, zusammen mit der Stadt Bad K
- önig – Quelle: Bad Königer Stadtnachrichten (Kirchliche Nachrichten)\,
-  LINUS WITTICH
+SUMMARY:⛪ Andacht im Rahmen des Seniorennachmittags (ev.)
+LOCATION:Kirche\, Zell\, Bad König
+DESCRIPTION:zusammen mit der Stadt Bad König\, anschließend Kaffee und Ku
+ chen – Quelle: Bad Königer Stadtnachrichten (Kirchliche Nachrichten)\, 
+ LINUS WITTICH
 URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 END:VCALENDAR
