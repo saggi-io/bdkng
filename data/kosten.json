@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-18",
+ "stand": "2026-11-19",
  "hinweis": "Laufende Kosten von BDKNG pro Monat. KI-Kosten: mindestens das geplante Budget, höher, wenn der gemessene Verbrauch darüber liegt.",
  "posten": [
   {
@@ -19,7 +19,7 @@
    "monat": 7.26
   }
  ],
- "spenden_monat": 35,
+ "spenden_monat": 40,
  "spenden_stand_monat": "2026-11",
  "ki_budget": 10.17
 }
