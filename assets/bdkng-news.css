@@ -98,7 +98,8 @@ nav.rub-nav .rub-nav-in a{display:inline-flex!important}
 @media(max-width:640px){.tk-spalten{grid-template-columns:1fr}.tk-knoepfe .btn{flex:1 1 100%;text-align:center}.tk-liste li{grid-template-columns:auto 1fr}.tk-liste .tk-z{grid-column:1;grid-row:2}.tk-liste .tk-t{grid-column:2;grid-row:1/3}}
 
 /* Genuss: Wirtschaften */
-.wi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:8px}
+.wi-grid{columns:3 280px;column-gap:14px;margin-top:8px}
+.wi-grid .wi-gruppe{break-inside:avoid;margin:0 0 14px;display:inline-block;width:100%}
 .wi-gruppe{background:#f9fbf9;border:1px solid #e1eae1;border-radius:14px;padding:10px 14px}
 .wi-gruppe h3{margin:0 0 6px;font-size:17px;color:#1B4D2E}
 .wi-gruppe ul{list-style:none;margin:0;padding:0}

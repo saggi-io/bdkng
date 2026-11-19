@@ -4,9 +4,10 @@
     var KRONE = '/assets/bdkng-krone-klein.png', ALT = null;
     window.BDKNG_STIL = function (an) {
       document.documentElement.classList.toggle('stil-c', !!an);
-      var img = document.querySelector('.brand-logo img'); if (!img) return;
-      if (!ALT) ALT = img.getAttribute('src');
-      img.setAttribute('src', an ? KRONE : ALT);
+      var img = document.querySelector('.brand-logo img');
+      if (img) { if (!ALT) ALT = img.getAttribute('src'); img.setAttribute('src', an ? KRONE : ALT); }
+      var hero = document.querySelector('.hero-final > img');
+      if (hero) { if (!hero.dataset.alt) hero.dataset.alt = hero.getAttribute('src'); hero.setAttribute('src', an ? '/assets/bdkng-header-neu.jpg' : hero.dataset.alt); }
     };
     var q = new URLSearchParams(location.search).get('stil'), w = null;
     try { if (q === 'c' || q === 'klassisch') localStorage.setItem('bdkngStil', q); w = localStorage.getItem('bdkngStil'); } catch (e) {}
