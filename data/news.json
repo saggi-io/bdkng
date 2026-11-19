@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-19-291995801",
+    "checked": "2026-11-16",
+    "valid_until": "2026-11-26",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Stadtverordnete tagen",
+    "paragraphs": [
+      "Die Bad Königer Stadtverordnetenversammlung tagt am Donnerstag, 19. November, um 19.30 Uhr im großen Saal der Rentmeisterei, Schlossplatz 2. Auf der Tagesordnung stehen Mitteilunge"
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/stadtverordnete-tagen-6870673",
+    "zeit": "12:00"
+  },
+  {
     "id": "medien-2026-11-19-265388595",
     "checked": "2026-11-19",
     "valid_until": "2026-11-29",
@@ -333,20 +348,6 @@
     ],
     "source": "Echo Online",
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/landkreis-odenwaldkreis/odenwaldkreis-so-zahlt-sich-zusammenarbeit-fuer-kommunen-aus-6867510"
-  },
-  {
-    "id": "medien-2026-11-16-291995801",
-    "checked": "2026-11-16",
-    "valid_until": "2026-11-26",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Stadtverordnete tagen",
-    "paragraphs": [
-      "Die Bad Königer Stadtverordnetenversammlung tagt am Donnerstag, 19. November, um 19.30 Uhr im großen Saal der Rentmeisterei, Schlossplatz 2. Auf der Tagesordnung stehen Mitteilunge"
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/stadtverordnete-tagen-6870673"
   },
   {
     "id": "hand-2026-11-16-623342142",
