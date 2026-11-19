@@ -1,5 +1,22 @@
 [
   {
+    "id": "bahn-2026-11-19",
+    "checked": "2026-11-19",
+    "zeit": "16:20",
+    "valid_until": "2026-11-19",
+    "categories": [
+      "verkehr"
+    ],
+    "title": "Update Odenwaldbahn: Größere Verspätungen ab Bad König",
+    "paragraphs": [
+      "Auf der Odenwaldbahn gibt es neue Probleme. Das betrifft gerade die Züge ab Bad König:",
+      "Die RB 82 um 16:35 Uhr ab Bad König Richtung Erbach hat rund 42 Minuten Verspätung (Grund laut Bahn: Verspätung aus vorheriger Fahrt).",
+      "Stand: 19.11.2026, 16:20 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
+    ],
+    "source": "Echtzeitdaten der Deutschen Bahn",
+    "url": "https://dbf.finalrewind.org/Bad%20K%C3%B6nig"
+  },
+  {
     "id": "medien-2026-11-19-234850932",
     "checked": "2026-11-13",
     "valid_until": "2026-11-23",
@@ -13,23 +30,6 @@
     "source": "Echo Online",
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/erbach-odenwaldkreis/warum-mitarbeiter-wie-tom-fuer-kliniken-unentbehrlich-sind-6674087",
     "zeit": "16:00"
-  },
-  {
-    "id": "bahn-2026-11-19",
-    "checked": "2026-11-19",
-    "zeit": "13:20",
-    "valid_until": "2026-11-19",
-    "categories": [
-      "verkehr"
-    ],
-    "title": "Odenwaldbahn: Größere Verspätungen ab Bad König",
-    "paragraphs": [
-      "Auf der Odenwaldbahn läuft es gerade nicht rund. Das betrifft die Züge ab Bad König:",
-      "Die RB 82 um 13:35 Uhr ab Bad König Richtung Eberbach hat rund 20 Minuten Verspätung (Grund laut Bahn: Defekt an einem Signal).",
-      "Stand: 19.11.2026, 13:20 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
-    ],
-    "source": "Echtzeitdaten der Deutschen Bahn",
-    "url": "https://dbf.finalrewind.org/Bad%20K%C3%B6nig"
   },
   {
     "id": "medien-2026-11-19-314371725",
