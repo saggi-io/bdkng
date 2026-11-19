@@ -1,5 +1,20 @@
 [
   {
+    "id": "q-2026-11-19-mo529400179",
+    "checked": "2026-11-19",
+    "zeit": "07:00",
+    "valid_until": "2026-11-29",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Stellenausschreibung Mitarbeiter Öffentlichkeitsarbeit",
+    "paragraphs": [
+      "Alle Details stehen in der Quelle – siehe Link."
+    ],
+    "source": "Bad Königer Stadtnachrichten (meinOrt)",
+    "url": "https://meinort.de/bad-koenig/neues/stellenausschreibung-mitarbeiter-oeffentlichkeitsarbeit-2173-2026-48-0-46982916"
+  },
+  {
     "id": "2026-11-18-wetter",
     "checked": "2026-11-18",
     "zeit": "19:01",
