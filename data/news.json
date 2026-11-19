@@ -2,16 +2,17 @@
   {
     "id": "bahn-2026-11-19",
     "checked": "2026-11-19",
-    "zeit": "16:20",
+    "zeit": "16:40",
     "valid_until": "2026-11-19",
     "categories": [
       "verkehr"
     ],
-    "title": "Update Odenwaldbahn: Größere Verspätungen ab Bad König",
+    "title": "Update Odenwaldbahn: 2 Zugausfälle ab Bad König",
     "paragraphs": [
       "Auf der Odenwaldbahn gibt es neue Probleme. Das betrifft gerade die Züge ab Bad König:",
-      "Die RB 82 um 16:35 Uhr ab Bad König Richtung Erbach hat rund 42 Minuten Verspätung (Grund laut Bahn: Verspätung aus vorheriger Fahrt).",
-      "Stand: 19.11.2026, 16:20 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
+      "Die RB 82 um 16:35 Uhr ab Bad König Richtung Erbach fällt aus.",
+      "Die RE 80 um 17:09 Uhr ab Bad König Richtung Darmstadt Hbf fällt aus.",
+      "Stand: 19.11.2026, 16:40 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
     ],
     "source": "Echtzeitdaten der Deutschen Bahn",
     "url": "https://dbf.finalrewind.org/Bad%20K%C3%B6nig"
