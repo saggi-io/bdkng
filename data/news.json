@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-19-234850932",
+    "checked": "2026-11-13",
+    "valid_until": "2026-11-23",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Warum Mitarbeiter wie „Tom“ für die Asklepios in Bad König unentbehrlich sind",
+    "paragraphs": [
+      "Die Bad Königer Asklepios Schlossbergklinik bietet Perspektiven: Wie es ein Mitarbeiter aus Indien von der Putzkraft zum geschätzten Krankenpflegehelfer geschafft hat."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/erbach-odenwaldkreis/warum-mitarbeiter-wie-tom-fuer-kliniken-unentbehrlich-sind-6674087",
+    "zeit": "16:00"
+  },
+  {
     "id": "bahn-2026-11-19",
     "checked": "2026-11-19",
     "zeit": "13:20",
@@ -339,20 +354,6 @@
     ],
     "source": "Bad Königer Stadtnachrichten (meinOrt)",
     "url": "https://meinort.de/bad-koenig/neues/aus-dem-rathaus-2173-2026-48-0-46977465"
-  },
-  {
-    "id": "medien-2026-11-16-234850932",
-    "checked": "2026-11-13",
-    "valid_until": "2026-11-23",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Warum Mitarbeiter wie „Tom“ für die Asklepios in Bad König unentbehrlich sind",
-    "paragraphs": [
-      "Die Bad Königer Asklepios Schlossbergklinik bietet Perspektiven: Wie es ein Mitarbeiter aus Indien von der Putzkraft zum geschätzten Krankenpflegehelfer geschafft hat."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/erbach-odenwaldkreis/warum-mitarbeiter-wie-tom-fuer-kliniken-unentbehrlich-sind-6674087"
   },
   {
     "id": "q-2026-11-16-mo998168137",
