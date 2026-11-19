@@ -1,0 +1,62 @@
+{
+ "titel": "Der Tag in Bad König",
+ "ueber": "Do. 19.11. · 19:30 Uhr",
+ "quelle": "Echtzeitdaten der Deutschen Bahn, Echo Online",
+ "zeilen": [
+  {
+   "t": "Update Odenwaldbahn: 2 Zugausfälle ab Bad König",
+   "r": "verkehr",
+   "k": "Verkehr"
+  },
+  {
+   "t": "Erstmals hakt es bei der Zeller Brücke: Betonage wird auf Januar verschoben",
+   "r": "verkehr",
+   "k": "Verkehr"
+  },
+  {
+   "t": "Neue Anlaufstelle: Nicole Hix berät als Gemeindepflegerin in Bad König",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "Stellenausschreibung Mitarbeiter Öffentlichkeitsarbeit",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  }
+ ],
+ "morgen_ueber": "Fr. 20.11.",
+ "morgen": [
+  [
+   "🌧️",
+   "Wetter",
+   "Regen, 7 bis 9 °C, 17,1 l/m²"
+  ],
+  [
+   "📅",
+   "Termine",
+   "12:00 Uhr: Orgel um 12"
+  ],
+  [
+   "⛽",
+   "Tanken",
+   "E10 ab 1,76 € (Mossautal), Diesel ab 2,01 €"
+  ]
+ ],
+ "mitmachen": [
+  [
+   "📣",
+   "Blitzer & Stau",
+   "Gesehen? Auf bdkng.de melden"
+  ],
+  [
+   "🤖",
+   "BDKNG-KI",
+   "Frag einfach: Müll, Termine, Öffnungszeiten"
+  ],
+  [
+   "📅",
+   "Termin melden",
+   "Dein Verein feiert? Einfach eintragen"
+  ]
+ ]
+}
