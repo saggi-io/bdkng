@@ -106,3 +106,11 @@ nav.rub-nav .rub-nav-in a{display:inline-flex!important}
 .wi-gruppe li:first-child{border-top:0}
 .wi-gruppe li a{color:#1B4D2E;text-decoration:none}.wi-gruppe li a:hover{text-decoration:underline}
 .wi-gruppe li span{display:block;font-size:13px;color:#5b6b60}
+
+/* Daumen hoch je Meldung */
+.dh{display:inline-flex;align-items:center;gap:6px;margin:6px 10px 4px 0;padding:7px 14px;border-radius:999px;border:1px solid #cfdccf;background:#fff;color:#1B4D2E;font:inherit;font-size:14px;font-weight:700;cursor:pointer;line-height:1}
+.dh:hover{border-color:#1B4D2E}
+.dh.an{background:#1B4D2E;color:#fff;border-color:#1B4D2E}
+.dh .dh-n:empty{display:none}
+.dh .dh-n{font-weight:900}
+html.stil-c .dh.an{background:linear-gradient(135deg,#FF7A59,#C86DD7);border-color:transparent}
