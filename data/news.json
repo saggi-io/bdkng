@@ -70,21 +70,6 @@
     "url": "https://mobil.hessen.de/presse/b-45-neubau-der-talbruecke-bei-bad-koenigzell-5"
   },
   {
-    "id": "medien-2026-11-18-234851736",
-    "checked": "2026-11-18",
-    "valid_until": "2026-11-28",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Landratswahl: Odenwälder SPD stellt sich deutlich hinter Kandidatin Rekha Krings",
-    "paragraphs": [
-      "Die Odenwälder SPD hat Rekha Krings mit großer Mehrheit zur Kandidatin für die Landratswahl im nächsten Jahr nominiert. Welche Schwerpunkte die 40-jährige Juristin setzen will."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/landkreis-odenwaldkreis/landratswahl-spd-stellt-sich-deutlich-hinter-rekha-krings-6674135",
-    "zeit": "13:00"
-  },
-  {
     "id": "medien-2026-11-18-314367882",
     "checked": "2026-11-18",
     "valid_until": "2026-11-28",
@@ -145,28 +130,6 @@
     "url": "https://meinort.de/bad-koenig/neues/aus-dem-rathaus-2173-2026-48-0-46976760"
   },
   {
-    "id": "hand-2026-11-18-732432836",
-    "checked": "2026-11-18",
-    "valid_until": "2026-11-18",
-    "categories": [
-      "sport"
-    ],
-    "title": "Tischtennis: Die Ergebnisse der letzten Woche",
-    "paragraphs": [
-      "• Di 10.11.: TTC Kimbach V – TSV 1875 Höchst VI 4:6 ❌",
-      "• Do 12.11.: TTC Mümling-Grumbach – TSG Bad König 1863 7:3 ❌",
-      "• Do 12.11.: TTC Kimbach – TV 1858 Beerfelden II 4:6 ❌",
-      "• Do 12.11.: SV 1972 Ober-Hainbrunn II – TTC Kimbach VI 9:1 ❌",
-      "• Fr 13.11.: TTC Kimbach III – SV Ober-Kainsbach III 1:9 ❌",
-      "• Fr 13.11.: RV-TTC Fürstengrund – TSV 1875 Höchst III 7:3 ✅",
-      "• Fr 13.11.: TSV 1963 Sensbachtal – TTC Kimbach IV 4:6 ✅",
-      "• Sa 14.11.: RV-TTC Fürstengrund II – SV 1908 Falken-Gesäß 0:10 ❌"
-    ],
-    "source": "click-TT (HeTTV)",
-    "url": "https://bdkng.de/sport.html#sp-tt",
-    "zeit": "01:33"
-  },
-  {
     "id": "hand-2026-11-17-sauna",
     "checked": "2026-11-17",
     "zeit": "08:00",
@@ -183,21 +146,6 @@
     ],
     "source": "Kurgesellschaft Bad König / Odenwald-Therme (Instagram)",
     "url": "https://www.instagram.com/odenwaldtherme/"
-  },
-  {
-    "id": "2026-11-17-wetter",
-    "checked": "2026-11-17",
-    "valid_until": "2026-11-20",
-    "categories": [
-      "wetter"
-    ],
-    "title": "WETTER · Die nächsten 3 Tage",
-    "paragraphs": [
-      "Mittwoch, 18.11.: bedeckt, 9 bis 11 °C, Regenrisiko 63 % (ca. 9 l/m²), Böen bis 59 km/h  Donnerstag, 19.11.: Regen, 9 bis 10 °C, Regenrisiko 71 % (ca. 10 l/m²)  Freitag, 20.11.: bedeckt, 7 bis 9 °C, Regenrisiko 65 % (ca. 11 l/m²)",
-      "Amtliche WARNUNG vor WINDBÖEN (Di 20:00 bis Mi 10:00 Uhr)  Amtliche WARNUNG vor WINDBÖEN (Di 12:00 bis Di 20:00 Uhr)"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
-    "url": "https://bdkng.de"
   },
   {
     "id": "medien-2026-11-17-265273185",
