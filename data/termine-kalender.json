@@ -1,7 +1,7 @@
 {
- "stand": "2026-11-16T12:30",
- "von": "2026-11-16",
- "bis": "2027-03-16",
+ "stand": "2026-11-19T05:30",
+ "von": "2026-11-19",
+ "bis": "2027-03-19",
  "quelle": "Stadt Bad König, Veranstaltungskalender; Freilichtbühne Bad König (freilichtbuehne-bad-koenig.de)",
  "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/",
  "termine": [
@@ -178,12 +178,12 @@
   },
   {
    "datum": "2026-12-27",
-   "bis": "2026-12-30",
-   "uhrzeit": "10:00",
+   "bis": "2026-12-29",
+   "uhrzeit": "",
    "titel": "Silvesterturnier der TSG Bad König, Abt. Fußball / Förderverein",
    "ort": "Sportzentrum Bad König, Schwimmbadstraße 38",
    "veranstalter": "TSG Bad König, Abt. Fußball / Förderverein",
-   "info": "Genauer Turnierplan wird bei Zeit genannt; für das leibliche Wohl wird gesorgt sein"
+   "info": "65 Mannschaften7 Turniere3 TurniertageFür das leibliche Wohl wird gesorgt sein. TurnierplanDatum Turnier / Altersklasse gemeldete Mannschaften Turnierbeginn Turnierende Sonntag, 27.12.2026G-Jugend10 9:30 Uhr 12:10 Uhr E-Jugend 10 13:00 Uhr 16:25 Uhr Senioren6 17:30 Uhr Open End Montag, 28.12.2026C-J"
   },
   {
    "datum": "2026-12-28",
