@@ -117,3 +117,8 @@ nav.rub-nav .rub-nav-in a{display:inline-flex!important}
 .dh .dh-n:empty{display:none}
 .dh .dh-n{font-weight:900}
 html.stil-c .dh.an{background:linear-gradient(135deg,#FF7A59,#C86DD7);border-color:transparent}
+
+/* Verkehr: Abstand zwischen den Kästen */
+main > .subpanel{margin-bottom:24px}
+#verkehrStatus,#sprit{margin-bottom:24px}
+#verkehrStatus .nach-oben{display:inline-block;margin-top:8px}

@@ -143,12 +143,12 @@
 (function () {
   try {
     function knopf() { var a = document.createElement('a'); a.className = 'nach-oben'; a.href = '#'; a.setAttribute('aria-label', 'Nach oben'); a.textContent = '↑ nach oben'; a.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }); return a; }
-    function setzen() { [].forEach.call(document.querySelectorAll('main .subpanel, .sp-sek'), function (s) { if (s.hidden || s.querySelector(':scope > .nach-oben')) return; if (s.offsetHeight < 260) return; s.appendChild(knopf()); }); }
+    function setzen() { [].forEach.call(document.querySelectorAll('main .subpanel, .sp-sek'), function (s) { if (s.hidden || s.querySelector(':scope > .nach-oben')) return; if (s.offsetHeight < 260 && !/^(verkehrStatus|sprit)$/.test(s.id)) return; s.appendChild(knopf()); }); }
     [].forEach.call(document.querySelectorAll('.news-entry .nach-oben'), function (a) { a.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }); });
     var f = document.createElement('button'); f.type = 'button'; f.className = 'nach-oben-fix'; f.setAttribute('aria-label', 'Nach oben'); f.textContent = '↑'; f.hidden = true;
     f.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-    document.addEventListener('DOMContentLoaded', function () { document.body.appendChild(f); setzen(); setTimeout(setzen, 2500); });
-    if (document.readyState !== 'loading') { document.body.appendChild(f); setzen(); setTimeout(setzen, 2500); }
+    document.addEventListener('DOMContentLoaded', function () { document.body.appendChild(f); setzen(); setTimeout(setzen, 2500); setTimeout(setzen, 6000); });
+    if (document.readyState !== 'loading') { document.body.appendChild(f); setzen(); setTimeout(setzen, 2500); setTimeout(setzen, 6000); }
     window.addEventListener('scroll', function () { f.hidden = window.scrollY < 700; }, { passive: true });
   } catch (e) {}
 })();
