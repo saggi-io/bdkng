@@ -23,3 +23,4 @@ html.stil-c footer{background:#2B1E2F}
 .stil-knopf{border:1px solid #d9d3c4;background:#fff;color:#1B4D2E;border-radius:999px;padding:8px 12px;font:inherit;font-size:13px;font-weight:800;cursor:pointer;white-space:nowrap}
 html.stil-c .stil-knopf{background:#2B1E2F;color:#fff;border-color:#2B1E2F}
 @media(max-width:700px){.stil-knopf .sk-t{display:none}.stil-knopf{padding:8px 10px}}
+html.stil-c{scroll-padding-top:150px}
