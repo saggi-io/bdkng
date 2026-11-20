@@ -84,3 +84,10 @@ html{scroll-padding-top:120px}
 .kopf-info b{font-weight:800}
 html.stil-c .kopf-info{background:linear-gradient(90deg,#e8590c,#c2255c)}
 @media (max-width:420px){.kopf-info .ki-lang{display:none}.kopf-info{font-size:12.5px}.kopf-info .ki-in{gap:6px;padding:4px 8px}}
+/* „Überblick statt Zeitung“: angetextet + klappbar */
+.subhero-note .sn-text{display:block}
+.subhero-note.sn-zu .sn-text{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.subhero-note.sn-zu .sn-text .sn-neu{display:none}
+.subhero-note .sn-mehr{display:inline-block;margin-top:4px;padding:2px 0;border:0;background:none;color:#1B4D2E;font-weight:800;font-size:.9em;cursor:pointer;text-decoration:underline}
+html.stil-c .subhero-note .sn-mehr{color:#c2255c}
+.subhero-note:not([data-klapp]){display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}

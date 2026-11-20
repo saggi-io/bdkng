@@ -167,7 +167,89 @@ if __name__ == '__main__':
     if w == 'probe':
         fr = [karte_szene(2.0, 3.0), leiste_szene(2.0), wirtschaften(2.0), ki_chat(3.0), app_szene(1.5), karte_szene(3, 4, True), leiste_szene(3, True), ki_chat(3.5, True)]
         c = Image.new('RGB', (270 * len(fr), 480)); [c.paste(x.resize((270, 480)), (i * 270, 0)) for i, x in enumerate(fr)]; c.save('/tmp/film/probe-neu.jpg')
+    elif w == 'jungc': pass
     elif w == 'jung':
         render(JUNG2, '/tmp/film/neu-jung-stumm.mp4'); mit_musik('/tmp/film/neu-jung-stumm.mp4', B + '/assets/musik/delosound-upbeat-summer-pop-368301.mp3', '/tmp/film/bdkng-neuerungen-jung.mp4')
     else:
         render(alt_szenen(), '/tmp/film/neu-alt-stumm.mp4'); mit_musik('/tmp/film/neu-alt-stumm.mp4', B + '/assets/musik/sonican-uplifting-ukulele-334612.mp3', '/tmp/film/bdkng-neuerungen-alt.mp4')
+
+# ---------- JUNG im Stil C (wie die Instagram/TikTok-Reels seit 20.11.2026) ----------
+def jung_c():
+    import abendvideo as A
+    A.STIL = 'c'; A.VERLAUF = None
+    WEI = (255, 255, 255)
+    def hook(t):
+        im = A.verlauf_c().convert('RGBA'); d = ImageDraw.Draw(im)
+        A.setz(im, A.LG[0], W / 2, 250, 300 * (1 + 0.025 * math.sin(t * 2 * math.pi * 0.9)))
+        d.text((W // 2, 470), 'NEU AUF BDKNG.DE', font=A.K.f('Inter-Bold.otf', 44), fill=WEI, anchor='mm')
+        fk = A.K.f('Inter-Bold.otf', 40); bw = d.textlength('FÜR DICH', font=fk) + 60
+        d.rounded_rectangle([W / 2 - bw / 2, 650, W / 2 + bw / 2, 720], 35, fill=WEI); d.text((W // 2, 685), 'FÜR DICH', font=fk, fill=(214, 84, 60), anchor='mm')
+        s = 1 + 0.06 * (1 - A.ease(t / 0.35)); ft = A.K.f('InterDisplay-Black.otf', int(112 * s))
+        for i, l in enumerate(['Döner-Karte,', 'Sprit & Wetter', 'immer dabei']):
+            d.text((W // 2, 840 + i * 130), l, font=ft, fill=WEI, anchor='mm')
+        a = A.ease((t - 0.5) / 0.4)
+        u = 'Speisekarte · Sprit · Wetter · KI · Melder'
+        if a > 0: A.text_alpha(im, (W // 2 - d.textlength(u, font=A.K.f('Inter-Bold.otf', 44)) // 2, 1300), u, A.K.f('Inter-Bold.otf', 44), WEI, a)
+        return im.convert('RGB')
+    def karten(ueber, titel, liste, quelle):
+        def f(t):
+            im, d, TOP = A.basis(t); a = A.ease(t / 0.5)
+            A.text_alpha(im, (60, TOP + 50), ueber.upper(), A.K.f('Inter-Bold.otf', 40), A.UEB(), a)
+            A.text_alpha(im, (60, TOP + 105), titel, A.K.f('InterDisplay-Black.otf', 84), A.TIT(), a)
+            y = TOP + 250
+            for i, (em, kk, txt) in enumerate(liste):
+                p = A.ease((t - 0.4 - i * 0.45) / 0.35)
+                if p <= 0: continue
+                x0 = int(60 - 120 * (1 - p)); lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
+                fz = A.K.f('Inter-Bold.otf', 52); zh = 62; ls = A.K.wrap(ld, txt, fz, W - 170 - (x0 + 174))[:3]; h = max(140, 50 + len(ls) * zh) + 30
+                ld.rounded_rectangle([x0 - 16, y - 12, W - 130, y + h - 22], 30, fill=(255, 255, 255, int(235 * p)))
+                ld.rounded_rectangle([x0, y, x0 + 140, y + 140], 28, fill=A.K.HELL + (int(255 * p),))
+                ld.text((x0 + 174, y + 2), kk.upper(), font=A.K.f('Inter-Bold.otf', 36), fill=A.K.GOLD + (int(255 * p),))
+                ty = y + 50
+                for l in ls: ld.text((x0 + 174, ty), l, font=fz, fill=A.K.TEXT + (int(255 * p),)); ty += zh
+                im.paste(lay, (0, 0), lay)
+                e = A.K.emoji(em, 84)
+                if e: im.paste(e, (x0 + 70 - e.width // 2, y + 70 - e.height // 2), e.split()[3].point(lambda v: int(v * p)))
+                y += h
+            A.fuss(im, quelle); return im
+        return f
+    def karte_c(t, dur=3.2):
+        im, d, TOP = A.basis(t); a = A.ease(t / 0.5)
+        A.text_alpha(im, (60, TOP + 50), 'NEU · GENUSS'.upper(), A.K.f('Inter-Bold.otf', 40), WEI, a)
+        A.text_alpha(im, (60, TOP + 105), 'Speisekarte', A.K.f('InterDisplay-Black.otf', 84), WEI, a)
+        bw, bh = 820, 520; p = min(1, t / max(0.1, dur - 0.3))
+        pts = [(0, 0), (780, 0), (780, 1126), (0, 1126)]
+        seg = p * (len(pts) - 1); i = min(int(seg), len(pts) - 2); f = A.ease(seg - i)
+        x = int(pts[i][0] + (pts[i + 1][0] - pts[i][0]) * f); y = int(pts[i][1] + (pts[i + 1][1] - pts[i][1]) * f)
+        ab = KARTE.crop((x, y, x + bw, y + bh)).resize((960, int(960 * bh / bw)))
+        k = back_out(t / 0.45); yy = TOP + 240 + int((1 - min(1, k)) * 400)
+        fr = Image.new('RGB', (ab.width + 24, ab.height + 24), WEI); fr.paste(ab, (12, 12))
+        im.paste(fr, (48, yy), A.K.maske(fr.size, 36))
+        d = ImageDraw.Draw(im); y2 = yy + fr.height + 30
+        if t > 0.8: d.text((W // 2, y2), 'Kebab & Pizzahaus Bad König', font=A.K.f('InterDisplay-Black.otf', 56), fill=WEI, anchor='mt')
+        if t > 1.2: d.text((W // 2, y2 + 80), 'Mit Preisen – direkt anrufen', font=A.K.f('Inter-Bold.otf', 46), fill=WEI, anchor='mt')
+        A.fuss(im, 'Speisekarte: Kebab & Pizzahaus Bad König'); return im
+    def chat_c(t):
+        im, d, TOP = A.basis(t); a = A.ease(t / 0.5)
+        A.text_alpha(im, (60, TOP + 50), 'FRAG DIE BDKNG-KI', A.K.f('Inter-Bold.otf', 40), WEI, a)
+        A.text_alpha(im, (60, TOP + 105), 'Einfach fragen', A.K.f('InterDisplay-Black.otf', 84), WEI, a)
+        d = ImageDraw.Draw(im); f = A.K.f('Inter-Bold.otf', 54); y = TOP + 260
+        q = 'Was kostet ein Dürüm?'; n = int(len(q) * min(1, t / 0.8))
+        y = bubble(d, (0, y), q[:n] or ' ', f, (255, 255, 255), (214, 84, 60), True)
+        if 0.9 < t < 1.4:
+            for i in range(3): d.ellipse([90 + i * 50, y + 20, 120 + i * 50, y + 50], fill=WEI)
+        if t >= 1.4:
+            for i, s in enumerate(['Dürüm: 8,00 €', 'mit Käse: 8,50 €', 'Falafel-Dürüm: 8,00 €']):
+                if t >= 1.4 + i * 0.35: y = bubble(d, (0, y), s, f, (255, 255, 255), A.K.TEXT, False)
+        A.fuss(im, 'Auch Müll, Termine, Rathaus und Wetter'); return im
+    neu1 = [('🥙', 'Speisekarte', 'Döner, Pizza, Pide – mit Preisen'), ('⛽', 'Wetter & Sprit', 'Immer oben im Blick'), ('🍻', 'Wirtschaften', 'Kneipen, Biergärten, Restaurants')]
+    neu2 = [('🤖', 'BDKNG-KI', 'Frag: Was kostet ein Dürüm?'), ('📣', 'Blitzer & Stau', 'Gesehen? Auf bdkng.de melden'), ('📲', 'Als App', 'Mit einem Klick aufs Handy')]
+    return [(2.4, hook),
+            (0.4 + 3 * 0.45 + 2.2, karten('Neu auf bdkng.de', 'Was ist neu? (1/2)', neu1, 'Alles kostenlos auf bdkng.de')),
+            (3.4, karte_c),
+            (3.4, chat_c),
+            (0.4 + 3 * 0.45 + 2.2, karten('Neu auf bdkng.de', 'Was ist neu? (2/2)', neu2, 'Alles kostenlos auf bdkng.de')),
+            (2.4, A.ende)]
+
+if __name__ == '__main__' and sys.argv[1] == 'jungc':
+    render(jung_c(), '/tmp/film/neu-jungc-stumm.mp4'); mit_musik('/tmp/film/neu-jungc-stumm.mp4', B + '/assets/musik/delosound-upbeat-summer-pop-368301.mp3', '/tmp/film/bdkng-neuerungen-jung.mp4')

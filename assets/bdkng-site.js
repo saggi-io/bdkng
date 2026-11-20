@@ -222,3 +222,17 @@
     hoehe(); window.addEventListener('resize', hoehe);
   });
 })();
+// „Überblick statt Zeitung“ in den Rubriken: nur angetextet, aufklappbar, beim Laden immer zu (Handy + PC)
+(function () {
+  function ready(f) { if (document.readyState !== 'loading') f(); else document.addEventListener('DOMContentLoaded', f); }
+  ready(function () {
+    document.querySelectorAll('.subhero-note').forEach(function (p, i) {
+      if (p.dataset.klapp) return; p.dataset.klapp = '1';
+      var id = 'snText' + i, inner = document.createElement('span'); inner.className = 'sn-text'; inner.id = id;
+      while (p.firstChild) inner.appendChild(p.firstChild);
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'sn-mehr'; b.setAttribute('aria-expanded', 'false'); b.setAttribute('aria-controls', id); b.textContent = 'mehr ▾';
+      p.appendChild(inner); p.appendChild(b); p.classList.add('sn-zu');
+      b.addEventListener('click', function () { var zu = p.classList.toggle('sn-zu'); b.setAttribute('aria-expanded', zu ? 'false' : 'true'); b.textContent = zu ? 'mehr ▾' : 'weniger ▴'; });
+    });
+  });
+})();
