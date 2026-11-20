@@ -16,24 +16,6 @@
     "url": "https://bdkng.de"
   },
   {
-    "id": "bahn-2026-11-19",
-    "checked": "2026-11-19",
-    "zeit": "16:40",
-    "valid_until": "2026-11-19",
-    "categories": [
-      "verkehr"
-    ],
-    "title": "Update Odenwaldbahn: 2 Zugausfälle ab Bad König",
-    "paragraphs": [
-      "Auf der Odenwaldbahn gibt es neue Probleme. Das betrifft gerade die Züge ab Bad König:",
-      "Die RB 82 um 16:35 Uhr ab Bad König Richtung Erbach fällt aus.",
-      "Die RE 80 um 17:09 Uhr ab Bad König Richtung Darmstadt Hbf fällt aus.",
-      "Stand: 19.11.2026, 16:40 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
-    ],
-    "source": "Echtzeitdaten der Deutschen Bahn",
-    "url": "https://dbf.finalrewind.org/Bad%20K%C3%B6nig"
-  },
-  {
     "id": "medien-2026-11-19-234850932",
     "checked": "2026-11-13",
     "valid_until": "2026-11-23",
@@ -124,22 +106,6 @@
     ],
     "source": "Bad Königer Stadtnachrichten (meinOrt)",
     "url": "https://meinort.de/bad-koenig/neues/stellenausschreibung-mitarbeiter-oeffentlichkeitsarbeit-2173-2026-48-0-46982916"
-  },
-  {
-    "id": "2026-11-18-wetter",
-    "checked": "2026-11-18",
-    "zeit": "19:01",
-    "valid_until": "2026-11-21",
-    "categories": [
-      "wetter"
-    ],
-    "title": "WETTER · Die nächsten 3 Tage",
-    "paragraphs": [
-      "Donnerstag, 19.11.: Regen, 9 bis 10 °C, Regenrisiko 76 % (ca. 9 l/m²)  Freitag, 20.11.: Regen, 8 bis 9 °C, Regenrisiko 77 % (ca. 16 l/m²)  Samstag, 21.11.: wechselnd bewölkt, 2 bis 8 °C, Regenrisiko 21 % (ca. 3 l/m²)",
-      "Amtliche WARNUNG vor WINDBÖEN (Do 09:00 bis Do 20:00 Uhr)"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
-    "url": "https://bdkng.de"
   },
   {
     "id": "medien-2026-11-18-261694390",
