@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-19T06:00",
+ "stand": "2026-11-20T06:00",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
   {
@@ -947,6 +947,14 @@
    "team": "Männer",
    "home": "HSG Odenwald",
    "away": "HSG Sulzbach/Leidersbach"
+  },
+  {
+   "date": "2026-12-04",
+   "time": "20:00",
+   "liga": "F-BL",
+   "team": "Frauen",
+   "home": "HSG Odenwald II",
+   "away": "HSG Kahl/Kleinostheim II"
   }
  ],
  "handball_ergebnisse": [
@@ -1054,20 +1062,20 @@
   {
    "date": "2026-11-17",
    "time": "20:00",
-   "liga": "Herren, 2.Kreisklasse",
-   "verein": "TTC Kimbach",
-   "home": "TV 1858 Beerfelden III",
-   "away": "TTC Kimbach III",
-   "erg": "4:0"
-  },
-  {
-   "date": "2026-11-17",
-   "time": "20:00",
    "liga": "E3KK",
    "verein": "TTC Kimbach",
    "home": "TTC Kimbach VI",
    "away": "KSV Reichelsheim 1892 III",
    "erg": "1:9"
+  },
+  {
+   "date": "2026-11-17",
+   "time": "20:00",
+   "liga": "Herren, 2.Kreisklasse",
+   "verein": "TTC Kimbach",
+   "home": "TV 1858 Beerfelden III",
+   "away": "TTC Kimbach III",
+   "erg": "4:0"
   },
   {
    "date": "2026-11-17",
@@ -1099,15 +1107,6 @@
   {
    "date": "2026-11-26",
    "time": "20:00",
-   "liga": "E3KK",
-   "verein": "TTC Kimbach",
-   "home": "TTC Kimbach IV",
-   "away": "SV 1908 Falken-Gesäß III",
-   "erg": ""
-  },
-  {
-   "date": "2026-11-26",
-   "time": "20:00",
    "liga": "E2KK",
    "verein": "TTC Kimbach",
    "home": "KSG Hetschbach",
@@ -1116,11 +1115,11 @@
   },
   {
    "date": "2026-11-26",
-   "time": "20:30",
-   "liga": "EKL",
+   "time": "20:00",
+   "liga": "E3KK",
    "verein": "TTC Kimbach",
-   "home": "TSV 1875 Höchst III",
-   "away": "TTC Kimbach",
+   "home": "TTC Kimbach IV",
+   "away": "SV 1908 Falken-Gesäß III",
    "erg": ""
   },
   {
@@ -1175,6 +1174,15 @@
    "verein": "RV-TTC Fürstengrund",
    "home": "TTC Mümling-Grumbach II",
    "away": "RV-TTC Fürstengrund",
+   "erg": ""
+  },
+  {
+   "date": "2026-12-03",
+   "time": "20:30",
+   "liga": "EKL",
+   "verein": "TTC Kimbach",
+   "home": "TSV 1875 Höchst III",
+   "away": "TTC Kimbach",
    "erg": ""
   },
   {
@@ -1256,6 +1264,42 @@
    "verein": "TTC Kimbach",
    "home": "TSV 1875 Höchst IV",
    "away": "TTC Kimbach II",
+   "erg": ""
+  },
+  {
+   "date": "2026-12-11",
+   "time": "20:00",
+   "liga": "E2KK",
+   "verein": "TTC Kimbach",
+   "home": "TTC Kimbach II",
+   "away": "KSV Reichelsheim 1892",
+   "erg": ""
+  },
+  {
+   "date": "2026-12-11",
+   "time": "20:00",
+   "liga": "E3KK",
+   "verein": "RV-TTC Fürstengrund",
+   "home": "SV Ober-Kainsbach IV",
+   "away": "RV-TTC Fürstengrund III",
+   "erg": ""
+  },
+  {
+   "date": "2026-12-11",
+   "time": "20:00",
+   "liga": "E1KK",
+   "verein": "RV-TTC Fürstengrund",
+   "home": "RV-TTC Fürstengrund II",
+   "away": "TTC Langen-Brombach IV",
+   "erg": ""
+  },
+  {
+   "date": "2026-12-11",
+   "time": "20:30",
+   "liga": "E3KK",
+   "verein": "TTC Kimbach",
+   "home": "TSV 1963 Sensbachtal",
+   "away": "TTC Kimbach VI",
    "erg": ""
   }
  ],
