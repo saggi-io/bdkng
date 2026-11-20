@@ -122,6 +122,39 @@ def wissen_text(d):
     return ' '.join(t)
 
 
+def uebersicht(karten):
+    """speisekarten.html: alle Wirtschaften (aus genuss.html), Speisekarten und Mittagstische auf einen Blick."""
+    url = 'https://bdkng.de/speisekarten.html'
+    titel = 'Speisekarten in Bad König – Restaurants, Mittagstisch & Preise | BDKNG'
+    desc = 'Alle Speisekarten in Bad König auf einen Blick: Restaurants, Döner, Pizza, Cafés und Biergärten mit Preisen, Mittagstisch und Öffnungszeiten – kostenlos auf BDKNG.'
+    kopf, fuss = kopf_fuss(titel, desc, url)
+    g = (R / 'genuss.html').read_text()
+    nach_name = {e(d.get('genuss_name') or d['name']): (slug, d) for slug, d in karten.items()}
+    h = ['<main class="wrap subpage sk"><p class="eyebrow"><a href="/genuss.html">Genuss &amp; Gewerbe</a> / Speisekarten</p>',
+         '<section class="sk-hero"><p class="sk-kicker">🍽️ Essen gehen in Bad König</p><h1>Speisekarten in Bad König</h1><p class="sk-sub">Was gibt’s wo – mit Preisen, Mittagstisch und Öffnungszeiten. Tippe auf eine Wirtschaft.</p></section>']
+    mittag = [(slug, d) for slug, d in karten.items() if mittag_gueltig(d.get('mittagstisch'))]
+    h.append('<section class="subpanel sk-gruppe sk-mittag" id="mittag"><h2>🍲 Mittagstisch diese Woche</h2>')
+    if mittag:
+        h.append('<ul class="sk-liste">' + ''.join('<li><span class="sk-nr">' + d.get('emoji', '🍲') + '</span><div class="sk-t"><b><a href="/speisekarte-' + slug + '.html#mittag">' + e(d['name']) + '</a></b><span>' + e((d['mittagstisch'].get('titel') or 'Mittagstisch') + (' · bis ' + de(d['mittagstisch']['gueltig_bis']) if d['mittagstisch'].get('gueltig_bis') else '')) + '</span></div><div class="sk-pr"></div></li>' for slug, d in mittag) + '</ul>')
+    else:
+        h.append('<p>Gerade hat uns noch keine Wirtschaft einen aktuellen Mittagstisch geschickt.</p>')
+    h.append('</section>')
+    h.append('<section class="subpanel sk-gruppe"><h2>📋 Mit Speisekarte auf BDKNG</h2><div class="sk-kacheln">' + ''.join(
+        '<a class="sk-kachel" href="/speisekarte-' + slug + '.html"><span class="sk-k-em">' + d.get('emoji', '🍽️') + '</span><b>' + e(d['name']) + '</b><small>' + e(d.get('untertitel', '')) + '</small></a>' for slug, d in karten.items()) + '</div></section>')
+    for gm in re.finditer(r'<div class="wi-gruppe"><h3>(.*?)</h3><ul>(.*?)</ul></div>', g, re.S):
+        items = re.findall(r'<li><a href="([^"]*)"[^>]*><b>(.*?)</b></a><span>(.*?)</span>', gm.group(2))
+        if not items: continue
+        h.append('<section class="subpanel sk-gruppe"><h2>' + gm.group(1) + '</h2><ul class="sk-liste">')
+        for href, nm, info in items:
+            k = nach_name.get(nm)
+            knopf = ('<a class="wi-karte" href="/speisekarte-' + k[0] + '.html">' + k[1].get('emoji', '🍽️') + ' Speisekarte</a>') if k else '<small class="sk-fehlt">Karte folgt</small>'
+            h.append('<li><span class="sk-nr">📍</span><div class="sk-t"><b><a href="' + href + '" target="_blank" rel="noopener">' + nm + '</a></b><span>' + info + '</span></div><div class="sk-pr">' + knopf + '</div></li>')
+        h.append('</ul></section>')
+    h.append('<p class="editorial-note">Du betreibst eine Wirtschaft in Bad König? Schick deine Speisekarte oder deinen Mittagstisch als JPG oder PDF an <a href="mailto:info@bdkng.de">info@bdkng.de</a> – kurz darauf ist sie hier online und die BDKNG KI kennt sie. Kostenlos. Angaben ohne Gewähr.</p></main>')
+    kopf = kopf.replace('</head>', '<style>.sk-kacheln{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}.sk-kachel{display:flex;flex-direction:column;gap:2px;padding:14px;border-radius:16px;background:#141414;color:#fff!important;text-decoration:none}.sk-kachel:hover{background:#2a1d10}.sk-k-em{font-size:1.8rem}.sk-kachel small{color:#d4d4d4}.sk-fehlt{color:#999}.wi-karte{display:inline-block;background:#141414;color:#fff!important;border-radius:999px;padding:6px 12px;font-weight:700;font-size:.85rem;text-decoration:none;white-space:nowrap}</style></head>', 1)
+    (R / 'speisekarten.html').write_text(kopf + ''.join(h) + fuss)
+
+
 def main():
     karten = {}
     for f in sorted((R / 'data/speisekarten').glob('*.json')):
@@ -133,6 +166,7 @@ def main():
         m = d.get('mittagstisch')
         idx.append({'slug': slug, 'name': d['name'], 'url': '/speisekarte-' + slug + '.html', 'emoji': d.get('emoji', '🍽️'), 'telefon': d.get('telefon', ''),
                     'mittagstisch': m if mittag_gueltig(m) else None, 'stand': d.get('stand', '')})
+    uebersicht(karten)
     (R / 'data/speisekarten/index.json').write_text(json.dumps({'stand': HEUTE, 'karten': idx}, ensure_ascii=False, indent=1))
     if 'kebab' in karten:  # bestehende Such-Buttons
         (R / 'data/speisekarte-kebab.json').write_text(json.dumps(karten['kebab'], ensure_ascii=False, indent=2))

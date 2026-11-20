@@ -21,7 +21,7 @@ SEITEN = {
  'bildnachweise.html': ('Bildnachweise & Quellen', 'Woher die Meldungen von BDKNG stammen: Quellen, Bildnachweise und Hinweise zur Zusammenfassung.', 'monthly', '0.3'),
 }
 # Speisekarten-Seiten (tools/speisekarten.py) automatisch mitnehmen
-for _f in sorted(root.glob('speisekarte-*.html')):
+for _f in sorted(root.glob('speisekarte*.html')):
     _s = _f.read_text(encoding='utf-8')
     _t = re.search(r'<title>([^<|]*)', _s); _d = re.search(r'<meta name="description" content="([^"]*)"', _s)
     SEITEN.setdefault(_f.name, ((_t.group(1).strip() if _t else _f.stem), html.unescape(_d.group(1)) if _d else '', 'daily', '0.6'))
@@ -48,6 +48,20 @@ for f, (name, desc, freq, prio) in SEITEN.items():
         ld = {"@context": "https://schema.org", "@graph": [ORG, {"@type": "WebSite", "@id": BASE + "/#website", "url": BASE + "/", "name": "BDKNG – Bad König kompakt", "inLanguage": "de-DE", "publisher": {"@id": BASE + "/#org"}}, {"@type": "WebPage", "@id": BASE + "/#webpage", "url": BASE + "/", "name": html.unescape(titel), "description": desc, "isPartOf": {"@id": BASE + "/#website"}, "inLanguage": "de-DE", "primaryImageOfPage": {"@type": "ImageObject", "url": OG}}]}
     else:
         ld = {"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": html.unescape(titel), "description": desc, "inLanguage": "de-DE", "isPartOf": {"@type": "WebSite", "@id": BASE + "/#website", "url": BASE + "/", "name": "BDKNG – Bad König kompakt"}, "publisher": {"@type": "NewsMediaOrganization", "@id": BASE + "/#org", "name": "BDKNG – Bad König kompakt", "url": BASE + "/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Startseite", "item": BASE + "/"}, {"@type": "ListItem", "position": 2, "name": name, "item": url}]}]}
+    m_sk = re.match(r'speisekarte-(.+)\.html$', f)
+    if m_sk and (root / 'data/speisekarten' / (m_sk.group(1) + '.json')).exists():
+        d = json.loads((root / 'data/speisekarten' / (m_sk.group(1) + '.json')).read_text(encoding='utf-8'))
+        menu = {"@type": "Menu", "name": "Speisekarte " + d['name'], "url": url, "hasMenuSection": [
+            {"@type": "MenuSection", "name": re.sub(r'^\W+\s*', '', g.get('titel', '')), "hasMenuItem": [
+                {"@type": "MenuItem", "name": str(z[1]).replace('NEU ', ''), **({"description": z[2]} if len(z) > 2 and z[2] else {}),
+                 **({"offers": {"@type": "Offer", "price": str(z[3]).replace(',', '.').split('/')[0].strip(), "priceCurrency": "EUR"}} if len(z) > 3 and re.match(r'^\d+,\d{2}$', str(z[3]).strip()) else {})}
+                for z in g.get('liste', [])[:40]]} for g in (d.get('gruppen') or [])]}
+        rest = {"@type": "Restaurant", "@id": url + "#restaurant", "name": d['name'], "servesCuisine": d.get('untertitel', ''), "hasMenu": menu, "url": url}
+        if d.get('adresse'): rest["address"] = {"@type": "PostalAddress", "streetAddress": d['adresse'].split(',')[0], "postalCode": "64732", "addressLocality": "Bad König", "addressCountry": "DE"}
+        if d.get('telefon'): rest["telephone"] = d['telefon']
+        ld["@graph"] = [x for x in ld["@graph"] if x.get("@type") != "BreadcrumbList"]
+        ld["@graph"].append(rest)
+        ld["@graph"].append({"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Startseite", "item": BASE + "/"}, {"@type": "ListItem", "position": 2, "name": "Speisekarten", "item": BASE + "/speisekarten.html"}, {"@type": "ListItem", "position": 3, "name": d['name'], "item": url}]})
     s = s.replace('</head>', '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script></head>', 1)
     p.write_text(s, encoding='utf-8', newline='\n')
 for f in NOINDEX:

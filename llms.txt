@@ -8,6 +8,7 @@ Privat betriebenes lokales Informationsangebot von Felix Sagmeister, für Bad K�
 - [Termine & Veranstaltungen](https://bdkng.de/termine.html)
 - [Sport & Vereine](https://bdkng.de/sport.html)
 - [Genuss & Gewerbe](https://bdkng.de/genuss.html)
+- [Speisekarten in Bad König](https://bdkng.de/speisekarten.html): Speisekarten mit Preisen und Mittagstisch der Wirtschaften in Bad König
 - [Wichtige Meldungen](https://bdkng.de/wichtig.html)
 - [Wetter](https://bdkng.de/wetter.html)
 - [Müllabfuhr](https://bdkng.de/muell.html)

@@ -187,7 +187,7 @@
       if (!h) h = ttAntwort(q);
       if (!h) h = ergebnisAntwort(q);
       if (!h && !/handball/i.test(q) && !/gespielt|ergebnis|ausgang|gewonnen|verloren|letzte|vergangen|tabelle|torsch/i.test(q)) h = spieleAntwort(q);
-      if (!h) h = mittagAntwort(q) || karteAntwort(q) || serviceAntwort(q) || rathausAntwort(q) || sportAntwort(q) || wetterAntwort(q) || schnellAntwort(q);
+      if (!h) h = kartenAntwort(q) || mittagAntwort(q) || karteAntwort(q) || serviceAntwort(q) || rathausAntwort(q) || sportAntwort(q) || wetterAntwort(q) || schnellAntwort(q);
       if (h) return zeige(h);
       var ta = terminAntwort(q);
       if (ta && /heute|morgen|wochenende|\bwe\b/i.test(q) && /termin|veranstalt|was (ist|geht|gibt|kann|läuft|laeuft|steht)|los\b|event|fest|markt|konzert|unternehm|ausgehen|spielt|spiele|tipp/i.test(q) && !/wetter|regen|müll|muell/i.test(q)) return zeige(ta);
@@ -268,6 +268,15 @@
     return null;
   }
   // Speisekarte Kebab & Pizzahaus: Button und Preisfragen direkt aus data/speisekarte-kebab.json (ohne KI)
+  // Alle Speisekarten (Button „Speisekarten & Mittagstisch“): Übersicht aus data/speisekarten/index.json
+  function kartenAntwort(q) {
+    if (!/speisekarten|alle karten|wo kann (ich|man) essen|essen gehen|restaurants? in bad k/i.test(q)) return null;
+    var L = data.karten || [], M = L.filter(function (k) { return k.mittagstisch; });
+    var h = '<div class="bs-hit"><h3>🍽️ Speisekarten in Bad König</h3>';
+    if (M.length) h += '<p><strong>🍲 Mittagstisch:</strong> ' + M.map(function (k) { return '<a href="' + esc(k.url) + '#mittag">' + esc(k.name) + '</a>'; }).join(', ') + '</p>';
+    h += '<p>' + L.map(function (k) { return '<a class="bs-kaffee-btn bs-link-btn" href="' + esc(k.url) + '">' + esc(k.emoji || '🍽️') + ' ' + esc(k.name) + '</a>'; }).join(' ') + '</p>';
+    return h + '<p><a class="bs-kaffee-btn bs-link-btn" href="/speisekarten.html">Alle Wirtschaften &amp; Speisekarten</a></p><p><small>Frag auch einfach: „Was kostet ein Dürüm?“ oder „Wo gibt es Mittagstisch?“</small></p></div>';
+  }
   // Mittagstisch: aktuelle Wochen-/Tageskarten aller Wirtschaften (kommen per Mail an info@bdkng.de)
   function mittagAntwort(q) {
     if (!/mittagstisch|mittagessen|mittagsangebot|mittagskarte|wochenkarte|tagesessen|tagesgericht|was gibt.{0,20}mittag/i.test(q)) return null;

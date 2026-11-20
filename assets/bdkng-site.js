@@ -207,7 +207,7 @@
     var hd = document.querySelector('body > header'); if (!hd || hd.querySelector('.kopf-info')) return;
     var ICON = { 'clear-day': '☀️', 'clear-night': '🌙', 'partly-cloudy-day': '⛅', 'partly-cloudy-night': '☁️', 'cloudy': '☁️', 'fog': '🌫️', 'wind': '💨', 'rain': '🌧️', 'sleet': '🌨️', 'snow': '❄️', 'hail': '🌨️', 'thunderstorm': '⛈️' };
     var bar = document.createElement('div'); bar.className = 'kopf-info'; bar.hidden = true;
-    bar.innerHTML = '<div class="ki-in"><a class="ki-wetter" href="/wetter.html" hidden></a><a class="ki-sprit" href="/verkehr.html#sprit" hidden></a></div>';
+    bar.innerHTML = '<div class="ki-in"><a class="ki-wetter" href="/wetter.html" hidden></a><a class="ki-sprit" href="/verkehr.html#sprit" hidden></a><a class="ki-karten" href="/speisekarten.html"><span aria-hidden="true">🍽️</span> Speisekarten</a></div>'; bar.hidden = false;
     hd.insertBefore(bar, hd.firstChild);
     function hoehe() { document.documentElement.style.setProperty('--kopf-h', hd.getBoundingClientRect().height + 'px'); }
     function zeig(a, h) { a.innerHTML = h; a.hidden = false; bar.hidden = false; hoehe(); }
@@ -217,7 +217,7 @@
     }).catch(function () {});
     fetch('https://n8n.sagmeister.io/webhook/bdkng-sprit', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
       if (!d.leiste) return;
-      zeig(bar.querySelector('.ki-sprit'), '<span aria-hidden="true">⛽</span> <span class="ki-lang">Tanken: </span>' + String(d.leiste).replace(/ ab /g, ' ').replace(/ €/g, '€'));
+      zeig(bar.querySelector('.ki-sprit'), '<span aria-hidden="true">⛽</span> ' + String(d.leiste).replace(/ ab /g, ' ').replace(/ €/g, '€').replace(/ · (.*)$/, '<span class="ki-lang"> · $1</span>'));
     }).catch(function () {});
     hoehe(); window.addEventListener('resize', hoehe);
   });
