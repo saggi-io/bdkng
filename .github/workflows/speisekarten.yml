@@ -1,0 +1,30 @@
+name: Speisekarten rendern
+on:
+  push:
+    paths: ['data/speisekarten/**', 'tools/speisekarten.py', 'tools/speisekarte.css']
+  schedule:
+    - cron: '20 2 * * *'   # nachts: abgelaufene Mittagstische ausblenden
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: speisekarten-rendern
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          git config user.name "bdkng-bot"
+          git config user.email "bot@bdkng.de"
+          for i in 1 2 3 4 5; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            python3 tools/speisekarten.py && python3 tools/seo.py
+            git add -A
+            if git diff --cached --quiet; then echo "nichts zu tun"; exit 0; fi
+            git commit -q -m "Speisekarten neu gerendert"
+            if git push -q origin HEAD:main; then echo "gepusht"; exit 0; fi
+            echo "Push abgelehnt, neuer Versuch $i"; sleep $((i*5))
+          done
+          exit 1

@@ -26,7 +26,8 @@
       fetch('/data/wetter-aktuell.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/data/wissen-badkoenig.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/data/termine-kalender.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
-      fetch('/data/speisekarte-kebab.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.kal = a[5] && a[5].termine || []; data.karte = a[6]; data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.ergebnisse = a[2] && a[2].ergebnisse || []; data.hbErg = (a[2] && a[2].handball_ergebnisse || []).filter(function (x) { return x.hg + x.ag > 0; }); data.tt = a[2] && a[2].tischtennis || []; data.handball = a[2] && a[2].handball || []; data.la = a[2] && a[2].leichtathletik || []; data.wetter = a[3]; data.wissen = a[4] && a[4].eintraege || []; });
+      fetch('/data/speisekarte-kebab.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
+      fetch('/data/speisekarten/index.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.karten = a[7] && a[7].karten || []; data.kal = a[5] && a[5].termine || []; data.karte = a[6]; data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.ergebnisse = a[2] && a[2].ergebnisse || []; data.hbErg = (a[2] && a[2].handball_ergebnisse || []).filter(function (x) { return x.hg + x.ag > 0; }); data.tt = a[2] && a[2].tischtennis || []; data.handball = a[2] && a[2].handball || []; data.la = a[2] && a[2].leichtathletik || []; data.wetter = a[3]; data.wissen = a[4] && a[4].eintraege || []; });
     return loading;
   }
   function ortsteil(q, muell) {
@@ -186,7 +187,7 @@
       if (!h) h = ttAntwort(q);
       if (!h) h = ergebnisAntwort(q);
       if (!h && !/handball/i.test(q) && !/gespielt|ergebnis|ausgang|gewonnen|verloren|letzte|vergangen|tabelle|torsch/i.test(q)) h = spieleAntwort(q);
-      if (!h) h = karteAntwort(q) || serviceAntwort(q) || rathausAntwort(q) || sportAntwort(q) || wetterAntwort(q) || schnellAntwort(q);
+      if (!h) h = mittagAntwort(q) || karteAntwort(q) || serviceAntwort(q) || rathausAntwort(q) || sportAntwort(q) || wetterAntwort(q) || schnellAntwort(q);
       if (h) return zeige(h);
       var ta = terminAntwort(q);
       if (ta && /heute|morgen|wochenende|\bwe\b/i.test(q) && /termin|veranstalt|was (ist|geht|gibt|kann|läuft|laeuft|steht)|los\b|event|fest|markt|konzert|unternehm|ausgehen|spielt|spiele|tipp/i.test(q) && !/wetter|regen|müll|muell/i.test(q)) return zeige(ta);
@@ -267,6 +268,16 @@
     return null;
   }
   // Speisekarte Kebab & Pizzahaus: Button und Preisfragen direkt aus data/speisekarte-kebab.json (ohne KI)
+  // Mittagstisch: aktuelle Wochen-/Tageskarten aller Wirtschaften (kommen per Mail an info@bdkng.de)
+  function mittagAntwort(q) {
+    if (!/mittagstisch|mittagessen|mittagsangebot|mittagskarte|wochenkarte|tagesessen|tagesgericht|was gibt.{0,20}mittag/i.test(q)) return null;
+    var L = (data.karten || []).filter(function (k) { return k.mittagstisch; });
+    if (!L.length) return '<div class="bs-hit"><h3>🍲 Mittagstisch in Bad König</h3><p>Gerade hat uns noch keine Wirtschaft einen aktuellen Mittagstisch geschickt. Alle Wirtschaften mit Link findest du unter Genuss.</p><p><a class="bs-kaffee-btn bs-link-btn" href="/genuss.html#wirtschaften">🍽️ Wirtschaften in Bad König</a></p></div>';
+    return L.map(function (k) {
+      var m = k.mittagstisch, tage = (m.tage || []).map(function (t) { return '<li><strong>' + esc(t.tag || '') + ':</strong> ' + (t.gerichte || []).map(function (g) { return esc(g[1] || '') + (g[3] ? ' (' + esc(g[3]) + ' €)' : ''); }).join(', ') + '</li>'; }).join('');
+      return '<div class="bs-hit"><h3>' + esc(k.emoji || '🍲') + ' ' + esc(m.titel || 'Mittagstisch') + ' – ' + esc(k.name) + '</h3>' + (tage ? '<ul>' + tage + '</ul>' : '') + (m.text ? '<p>' + esc(m.text) + '</p>' : '') + '<p><a class="bs-kaffee-btn bs-link-btn" href="' + esc(k.url) + '#mittag">Ganze Karte</a>' + (k.telefon ? ' <a class="bs-kaffee-btn bs-link-btn" href="tel:' + esc(k.telefon.replace(/[^\d+]/g, '')) + '">📞 ' + esc(k.telefon) + '</a>' : '') + '</p></div>';
+    }).join('') + '<p class="bs-src">Quelle: die Wirtschaften selbst (per Mail an BDKNG) · Angaben ohne Gewähr</p>';
+  }
   function karteAntwort(q) {
     var k = data.karte; if (!k) return null;
     var l = q.toLowerCase(), knopf = /speisekarte|kebab ?(&|und) ?pizzahaus|dönerhaus|döner haus|dönerladen/.test(l);

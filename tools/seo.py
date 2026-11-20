@@ -15,12 +15,16 @@ SEITEN = {
  'wetter.html': ('Wetter', 'Wetter in Bad König: Vorhersage für die nächsten Tage, Live-Werte der Wetterstation und Regenradar für den Odenwald.', 'hourly', '0.8'),
  'wichtig.html': ('Wichtige Meldungen', 'Wichtige Meldungen für Bad König: Warnungen, Polizei, Feuerwehr und Bevölkerungsschutz.', 'daily', '0.8'),
  'genuss.html': ('Genuss & Gewerbe', 'Genuss und Gewerbe in Bad König: Gastronomie, Geschäfte, Handwerk und Neuigkeiten aus der lokalen Wirtschaft.', 'weekly', '0.6'),
- 'speisekarte-kebab.html': ('Speisekarte Kebab & Pizzahaus', 'Speisekarte vom Kebab & Pizzahaus Bad König: Döner, Dürüm, Pizza, Pide, Lahmacun, Falafel, Salate und Getränke mit Preisen, Öffnungszeiten und Lieferservice.', 'weekly', '0.6'),
  'kontakt.html': ('Kontakt', 'Kontakt zu BDKNG: Hinweise, Veranstaltungstipps und Anregungen für Bad König per E-Mail an info@bdkng.de.', 'monthly', '0.4'),
  'impressum.html': ('Impressum', 'Impressum von BDKNG – Bad König kompakt.', 'yearly', '0.2'),
  'datenschutz.html': ('Datenschutz', 'Datenschutzerklärung von BDKNG – Bad König kompakt.', 'yearly', '0.2'),
  'bildnachweise.html': ('Bildnachweise & Quellen', 'Woher die Meldungen von BDKNG stammen: Quellen, Bildnachweise und Hinweise zur Zusammenfassung.', 'monthly', '0.3'),
 }
+# Speisekarten-Seiten (tools/speisekarten.py) automatisch mitnehmen
+for _f in sorted(root.glob('speisekarte-*.html')):
+    _s = _f.read_text(encoding='utf-8')
+    _t = re.search(r'<title>([^<|]*)', _s); _d = re.search(r'<meta name="description" content="([^"]*)"', _s)
+    SEITEN.setdefault(_f.name, ((_t.group(1).strip() if _t else _f.stem), html.unescape(_d.group(1)) if _d else '', 'daily', '0.6'))
 NOINDEX = ['werbung.html', 'suche-test.html']
 ORG = {"@type": "NewsMediaOrganization", "@id": BASE + "/#org", "name": "BDKNG – Bad König kompakt", "alternateName": "BDKNG", "url": BASE + "/", "logo": BASE + "/assets/bdkng-logo-jens.png", "email": "info@bdkng.de", "areaServed": {"@type": "City", "name": "Bad König"}, "sameAs": ["https://www.facebook.com/bdkng.de/", "https://www.instagram.com/bd1kng/", "https://www.tiktok.com/@bdkng4", "https://whatsapp.com/channel/0029VaQq65RCxoAv42xpsi0M"]}
 def setmeta(s, attr, key, val):
