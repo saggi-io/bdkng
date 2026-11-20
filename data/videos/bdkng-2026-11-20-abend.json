@@ -1,0 +1,72 @@
+{
+ "titel": "Der Tag in Bad König",
+ "ueber": "Fr. 20.11. · 19:30 Uhr",
+ "quelle": "Echtzeitdaten der Deutschen Bahn, Stadt Bad König",
+ "zeilen": [
+  {
+   "t": "Update Odenwaldbahn: Größere Verspätungen ab Bad König",
+   "r": "verkehr",
+   "k": "Verkehr"
+  },
+  {
+   "t": "Termine am Wochenende – alle auf bdkng.de",
+   "r": "termine",
+   "k": "Termine"
+  },
+  {
+   "t": "Gemeindepflegerin für Bad König",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "Zeit der Stille – „Glück“ Eine adventliche Stunde zum Innehalten und Auftanken",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "Die TSG Bad König sucht Verstärkung für ihre Leichtathletikabteilung.",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "TSG Bad König: Gemeinsam hoch hinaus – für unsere Turnkinder!",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  }
+ ],
+ "morgen_ueber": "Sa. 21.11.",
+ "morgen": [
+  [
+   "⛅",
+   "Wetter",
+   "Wechselnd bewölkt, 1 bis 6 °C"
+  ],
+  [
+   "📅",
+   "Termine",
+   "12:00 Uhr: TECMUMAS Technikmuseum Bad König"
+  ],
+  [
+   "⛽",
+   "Tanken",
+   "E10 ab 1,76 € (Gross-Umstadt), Diesel ab 2,02 €"
+  ]
+ ],
+ "mitmachen": [
+  [
+   "📣",
+   "Blitzer & Stau",
+   "Gesehen? Auf bdkng.de melden"
+  ],
+  [
+   "🤖",
+   "BDKNG-KI",
+   "Frag einfach: Müll, Termine, Öffnungszeiten"
+  ],
+  [
+   "📅",
+   "Termin melden",
+   "Dein Verein feiert? Einfach eintragen"
+  ]
+ ]
+}
