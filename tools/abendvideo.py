@@ -151,6 +151,49 @@ def intro(t):  # 2,4 s: Kronen-Logo gold/weiß im Wechsel pulsierend, dann HP-Lo
     if datum: ld.text((W // 2, H // 2 + 440), datum, font=K.f('Inter-Bold.otf', 60), fill=((255, 255, 255) if STIL == 'c' else GOLD) + (int(255 * ta),), anchor='mm')
     im.alpha_composite(lay)
     return im.convert('RGB')
+def jung_daten(D):
+    """Für Instagram/TikTok (junge Zielgruppe, 20.11.2026): Blitzer → Sprit → Wetter → Events."""
+    import datetime as dt
+    jetzt = dt.datetime.now(dt.timezone(dt.timedelta(hours=1))).strftime('%Y-%m-%dT%H:%M')
+    morgen = (dt.date.fromisoformat(jetzt[:10]) + dt.timedelta(days=1)).isoformat()
+    lies = lambda f: json.load(open(os.path.join(B, 'data', f), encoding='utf-8')) if os.path.exists(os.path.join(B, 'data', f)) else {}
+    out = []; hook = ''
+    bz = lies('blitzer.json')
+    gem = [g for g in (bz.get('gemeldet') or []) if str(g.get('bis', '')) > jetzt]
+    if gem:
+        g = gem[0]; txt = '%s: %s%s' % (g.get('art', 'Blitzer'), g.get('ort', ''), (', ' + g['strasse']) if g.get('strasse') else '')
+        out.append(['📸', 'Blitzer & Stau', txt]); hook = g.get('art', 'Blitzer') + ' gemeldet: ' + g.get('ort', 'Bad König'); D['jung_label'] = 'Blitzer & Stau'
+    else:
+        ms = [m for m in (bz.get('messstellen') or []) if str(m.get('datum', m.get('bis', '')))[:10] >= jetzt[:10]]
+        if ms:
+            m = ms[0]; out.append(['📸', 'Blitzer angekündigt', ' '.join(str(m.get(k, '')) for k in ('ort', 'strasse')).strip() or 'Mobile Kontrollen im Kreis'])
+        else:
+            out.append(['📸', 'Blitzer', 'Fest: B45 Bad König (50 km/h)'])
+    # Sprit: nur die Tankstellen bei uns (Esso, bft, Jet Höchst, Brombachtal), günstigste zuerst
+    sp = ''
+    try:
+        import urllib.request
+        d = json.load(urllib.request.urlopen('https://n8n.sagmeister.io/webhook/bdkng-sprit', timeout=20))
+        NAME = {'ESSO': 'Esso', 'CLASSIC': 'Classic', 'JET': 'Jet', 'BFT': 'bft'}
+        lok = sorted([x for x in d.get('lokal', []) if x.get('e10') and x.get('offen', True)], key=lambda x: x['e10'])[:2]
+        if lok:
+            ort = lambda o: 'Brombachtal' if 'brombach' in o.lower() else o
+            sp = ' · '.join('%s %s %s\u00a0€' % (NAME.get(x['name'].upper(), x['name']), ort(x['ort']), ('%.2f' % x['e10']).replace('.', ',')) for x in lok)
+            if not hook: D['jung_label'] = 'Sprit'; hook = 'E10 heute ab %s€ bei %s %s' % (('%.2f' % lok[0]['e10']).replace('.', ','), NAME.get(lok[0]['name'].upper(), lok[0]['name']), ort(lok[0]['ort']))
+    except Exception:
+        pass
+    if not sp:
+        sp = next((txt for em, kk, txt in (D.get('morgen') or []) if kk == 'Tanken'), '')
+    if sp: out.append(['⛽', 'Sprit (E10)', sp])
+    for em, kk, txt in D.get('morgen') or []:
+        if kk == 'Wetter': out.append([em, 'Wetter morgen', txt])
+    tk = [t for t in (lies('termine-kalender.json').get('termine') or []) if t.get('datum', '') >= morgen][:2]
+    if tk:
+        WT = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
+        kurz = lambda x: x if len(x) <= 34 else x[:x.rfind(' ', 0, 34)] + ' …'
+        z = ' · '.join('%s: %s' % (WT[dt.date.fromisoformat(t['datum']).weekday()], kurz(t.get('titel', ''))) for t in tk)
+        out.append(['🎉', 'Events', z])
+    return out, hook
 def intro_hook(t):  # 2,2 s: ab dem ERSTEN Bild sichtbar – die wichtigste Meldung des Tages groß, Logo klein oben (Hook für Reels)
     im = (verlauf_c().convert('RGBA') if STIL == 'c' else Image.new('RGBA', (W, H), DK + (255,))); d = ImageDraw.Draw(im)
     z0 = data.get('zeilen') or []
@@ -158,8 +201,8 @@ def intro_hook(t):  # 2,2 s: ab dem ERSTEN Bild sichtbar – die wichtigste Meld
     allg = lambda x: any(w in x['t'] for w in ('Ergebnisse', 'Termine dieser Woche', 'Termine am Wochenende', 'Rückblick'))
     rang = {'wichtig': 0, 'verkehr': 1, 'polizei': 1, 'aktuell': 2, 'sport': 3, 'termine': 4}
     z = sorted(z0, key=lambda x: (allg(x), rang.get(x.get('r', 'aktuell'), 5)))
-    hook = str(data.get('hook') or (z[0]['t'] if z else '') or ('Morgen: ' + data['morgen'][0][2] if data.get('morgen') else 'Der Tag in Bad König'))
-    rub = (z[0].get('k') if z else '') or ''
+    hook = str(data.get('hook') or (data.get('jung_hook') if STIL == 'c' else '') or (z[0]['t'] if z else '') or ('Morgen: ' + data['morgen'][0][2] if data.get('morgen') else 'Der Tag in Bad König'))
+    rub = (data.get('jung_label', 'Bad König') if STIL == 'c' and data.get('jung_hook') else (z[0].get('k') if z else '')) or ''
     p = 1 + 0.025 * math.sin(t * 2 * math.pi * 0.9)
     setz(im, LG[0], W / 2, 250, 300 * p)
     uv = str(data.get('ueber', '')).split(' · ')[0]
@@ -179,7 +222,7 @@ def intro_hook(t):  # 2,2 s: ab dem ERSTEN Bild sichtbar – die wichtigste Meld
     for i, l in enumerate(ls):
         d.text((W // 2, y0 + i * zh + zh // 2), l, font=ft, fill=(255, 255, 255), anchor='mm')
     rest = max(0, len(z) - 1)
-    unten = ('+ ' + str(rest) + ' weitere Meldung' + ('en' if rest != 1 else '') + ' · ' if rest else '') + 'Wetter & Müll morgen'
+    unten = ('+ ' + str(rest) + ' weitere Meldung' + ('en' if rest != 1 else '') + ' · ' if rest else '') + ('Blitzer · Sprit · Wetter · Events' if STIL == 'c' else 'Wetter & Müll morgen')
     a = ease((t - 0.5) / 0.4)
     if a > 0: text_alpha(im, (W // 2 - d.textlength(unten, font=K.f('Inter-Bold.otf', 46)) // 2, 1450), unten, K.f('Inter-Bold.otf', 46), (255, 255, 255) if STIL == 'c' else (226, 239, 214), a)
     return im.convert('RGB')
@@ -246,6 +289,22 @@ def render(D, OUT, tmp):
         fuss(im, DD.get('fussquelle', 'Quelle: DWD, RESO, Stadt Bad König'))
         return im
     def vorschau2(t): return vorschau_x(t, D, 'Morgen in Bad König')
+    if STIL == 'c':
+        # Instagram/TikTok: erst der Check (Blitzer, Sprit, Wetter, Events), dann nur 3 Meldungen
+        J, jh = jung_daten(D); D['jung_hook'] = jh; data['jung_hook'] = jh
+        def check(t):
+            D2 = dict(D); D2['morgen_ueber'] = 'Blitzer · Sprit · Wetter · Events'; D2['morgen'] = J; D2['fussquelle'] = 'Quellen: Melder, Tankerkönig, DWD, Stadt Bad König'
+            return vorschau_x(t, D2, 'Dein Check für morgen')
+        Z = [z for z in D['zeilen'] if 'Odenwaldbahn' not in z['t']][:3]
+        szenen = [('b0.mp4', 2.2, intro_hook), ('bj.mp4', 0.4 + len(J) * 0.45 + 2.8, check)]
+        if Z:
+            fn, dau = seite(Z, 'Was heute los war'); szenen.append(('b1.mp4', dau, fn))
+        szenen.append(('bm.mp4', 0.4 + len(D['mitmachen']) * 0.45 + 2.6, mitmachen))
+        szenen.append(('be.mp4', 2.2, ende))
+        for n_, d_, f_ in szenen: szene(os.path.join(tmp, n_), d_, f_)
+        open(os.path.join(tmp, 'liste.txt'), 'w').write(''.join("file '%s'\n" % x[0] for x in szenen))
+        subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', os.path.join(tmp, 'liste.txt'), '-c', 'copy', OUT], check=True)
+        print('Länge', round(sum(x[1] for x in szenen), 1)); return
     Z = D['zeilen'][:6]; teile = [Z[i:i + 3] for i in range(0, len(Z), 3)]
     szenen = [('b0.mp4', 2.2, intro_hook)]  # früher: 1,6 s Logo-Intro (zu schwacher Einstieg, 18.11. nur 55 Aufrufe)
     for k, tl in enumerate(teile):
