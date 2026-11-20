@@ -32,7 +32,7 @@ h = ['<main class="wrap subpage sk"><p class="eyebrow"><a href="/genuss.html#wir
      '<div class="sk-knoepfe"><a class="btn sk-tel" href="tel:+49' + tel[1:] + '">📞 Bestellen: ' + e(d['telefon']) + '</a><a class="btn sk-sek" href="#karte">🖼️ Original-Karte</a><a class="btn sk-sek" href="https://www.google.com/maps/search/?api=1&amp;query=' + 'Kebab%20%26%20Pizzahaus%20Bahnhofstra%C3%9Fe%205%20Bad%20K%C3%B6nig" target="_blank" rel="noopener">📍 Bahnhofstraße 5</a></div>',
      '<ul class="sk-info"><li>🕘 ' + e(d['zeiten']) + '</li><li>🛵 ' + e(d['liefer']) + '</li></ul></section>',
      '<section class="subpanel sk-such"><label class="sk-filter"><span aria-hidden="true">🔍</span><input type="search" id="skFilter" placeholder="Was hast du Hunger drauf? z. B. Dürüm, Hawaii, vegetarisch" aria-label="Speisekarte durchsuchen" autocomplete="off"></label>',
-     '<nav class="sk-sprung" aria-label="Kategorien">' + ''.join('<a href="#k' + str(i) + '">' + e(gr['titel']) + '</a>' for i, gr in enumerate(d['gruppen'])) + '</nav></section>']
+     '<div class="sk-sprung" role="navigation" aria-label="Kategorien">' + ''.join('<a href="#k' + str(i) + '">' + e(gr['titel']) + '</a>' for i, gr in enumerate(d['gruppen'])) + '</div></section>']
 for i, gr in enumerate(d['gruppen']):
     sp = gr['spalten']
     h.append('<section class="subpanel sk-gruppe" id="k' + str(i) + '"><h2>' + e(gr['titel']) + '</h2>' + ('<p class="sk-hin">' + e(gr['hinweis']) + '</p>' if gr.get('hinweis') else ''))
