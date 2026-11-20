@@ -15,6 +15,7 @@ SEITEN = {
  'wetter.html': ('Wetter', 'Wetter in Bad König: Vorhersage für die nächsten Tage, Live-Werte der Wetterstation und Regenradar für den Odenwald.', 'hourly', '0.8'),
  'wichtig.html': ('Wichtige Meldungen', 'Wichtige Meldungen für Bad König: Warnungen, Polizei, Feuerwehr und Bevölkerungsschutz.', 'daily', '0.8'),
  'genuss.html': ('Genuss & Gewerbe', 'Genuss und Gewerbe in Bad König: Gastronomie, Geschäfte, Handwerk und Neuigkeiten aus der lokalen Wirtschaft.', 'weekly', '0.6'),
+ 'speisekarte-kebab.html': ('Speisekarte Kebab & Pizzahaus', 'Speisekarte vom Kebab & Pizzahaus Bad König: Döner, Dürüm, Pizza, Pide, Lahmacun, Falafel, Salate und Getränke mit Preisen, Öffnungszeiten und Lieferservice.', 'weekly', '0.6'),
  'kontakt.html': ('Kontakt', 'Kontakt zu BDKNG: Hinweise, Veranstaltungstipps und Anregungen für Bad König per E-Mail an info@bdkng.de.', 'monthly', '0.4'),
  'impressum.html': ('Impressum', 'Impressum von BDKNG – Bad König kompakt.', 'yearly', '0.2'),
  'datenschutz.html': ('Datenschutz', 'Datenschutzerklärung von BDKNG – Bad König kompakt.', 'yearly', '0.2'),

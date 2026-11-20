@@ -1,0 +1,114 @@
+{
+  "name": "Kebab & Pizzahaus Bad König",
+  "untertitel": "Türkische Gerichte · Döner, Pizza, Pide, Lahmacun, Falafel",
+  "adresse": "Bahnhofstraße 5, 64732 Bad König",
+  "telefon": "06063 913533",
+  "zeiten": "Dienstag–Samstag 11–22 Uhr, Sonntag 12–22 Uhr, Montag Ruhetag",
+  "liefer": "Lieferservice: ab 15 € im Stadtkern Bad König (Lieferpauschale 1,50 €), ab 25 € im Umkreis von Bad König (2,50 €). Anrufen, bestellen, abholen oder liefern lassen.",
+  "aktion": "Aktion: dienstags alle Dönerteller und samstags alle Pizzen jeweils 1 € günstiger – nur vor Ort und zum Mitnehmen, nicht beim Lieferservice.",
+  "stand": "Speisekarte (Flyer) vom 20.11.2026 – Druckfehler und Preisänderungen vorbehalten, Angaben ohne Gewähr.",
+  "hinweis": "Drehspieß aus Kalb- und Putenfleisch mit Sojaeiweiß. Zusatzstoffe und Allergene stehen in der Original-Speisekarte (Bild).",
+  "gruppen": [
+    {"titel": "🥙 Drehspieß (Döner)", "hinweis": "Je extra Käse oder Fleischbeilage +1,00 €", "spalten": ["Preis"], "liste": [
+      ["01", "Drehspieß", "im Fladenbrot mit Drehspießfleisch, Salat & Sauce", "7,50"],
+      ["02", "Drehspieß mit Weichkäse", "im Fladenbrot mit Drehspießfleisch, Weichkäse, Salat & Sauce", "8,00"],
+      ["03", "Drehspieß Dürüm", "im Yufka mit Drehspießfleisch, Salat & Sauce", "8,00"],
+      ["04", "Drehspieß Dürüm mit Weichkäse", "im Yufka mit Drehspießfleisch, Weichkäse, Salat & Sauce", "8,50"],
+      ["05", "Pomm-Döner", "mit Drehspießfleisch, Pommes & Sauce", "7,50"],
+      ["06", "Vegetarisch im Fladenbrot", "mit Weichkäse, Salat & Sauce", "7,00"],
+      ["07", "Vegetarisch im Yufka", "mit Weichkäse, Salat & Sauce", "7,50"],
+      ["08", "Junior", "im Fladenbrot mit Drehspießfleisch, Salat & Sauce", "6,50"],
+      ["09", "Junior mit Weichkäse", "im Fladenbrot mit Drehspießfleisch, Weichkäse, Salat & Sauce", "7,00"],
+      ["10", "Jumbo", "im Fladenbrot mit Drehspießfleisch, Salat & Sauce", "10,50"],
+      ["11", "Jumbo mit Weichkäse", "im Fladenbrot mit Drehspießfleisch, Weichkäse, Salat & Sauce", "11,50"],
+      ["12", "NEU Döner Bowl", "mit Drehspießfleisch, Sucuk, Cheddar, Edamer, Pommes & Sauce", "14,00"],
+      ["13", "NEU Kochkäse Döner – nur mittwochs", "mit Drehspießfleisch, Kochkäse, Zwiebeln & Bratkartoffeln", "11,00"]
+    ]},
+    {"titel": "🍽️ Drehspieß-Teller", "spalten": ["Preis"], "liste": [
+      ["14", "Drehspieß Teller", "mit Drehspießfleisch, Pommes, Salat & Sauce", "13,00"],
+      ["15", "Drehspieß Teller mit Weichkäse", "mit Drehspießfleisch, Weichkäse, Pommes, Salat & Sauce", "13,50"],
+      ["16", "Drehspieß Teller mit Reis", "mit Drehspießfleisch, Reis, Salat & Sauce", "13,00"],
+      ["17", "Drehspieß Teller mit Reis und Weichkäse", "mit Drehspießfleisch, Reis, Weichkäse, Salat & Sauce", "13,50"],
+      ["18", "Iskender Kebab", "mit Drehspießfleisch, Tomatensoße, Joghurt auf gerösteten Brotstückchen", "13,00"]
+    ]},
+    {"titel": "🫓 Lahmacun aus dem Steinofen", "hinweis": "Je extra Käse oder Fleischbeilage +1,00 €", "spalten": ["Preis"], "liste": [
+      ["19", "Lahmacun", "mit Salat & Sauce", "6,50"],
+      ["20", "Lahmacun mit Weichkäse", "mit Weichkäse, Salat & Sauce", "7,50"],
+      ["21", "Lahmacun mit Drehspießfleisch", "mit Drehspießfleisch, Salat & Sauce", "9,00"],
+      ["22", "Lahmacun mit Fleisch und Weichkäse", "mit Drehspießfleisch, Weichkäse, Salat & Sauce", "9,50"]
+    ]},
+    {"titel": "🥖 Pide aus dem Steinofen", "spalten": ["Preis"], "liste": [
+      ["23", "Pide Hackfleisch", "mit Rinderhackfleisch", "10,00"],
+      ["24", "Pide Sucuk", "mit türkischer Knoblauchwurst", "10,00"],
+      ["25", "Pide Spinat", "mit Spinat & Weichkäse", "10,00"],
+      ["26", "Pide Käse", "mit Weichkäse & Paprika", "10,00"],
+      ["27", "Pide Drehspieß", "mit Drehspießfleisch & Paprika", "10,00"]
+    ]},
+    {"titel": "🍕 Pizza aus dem Steinofen", "hinweis": "Je extra Gemüsebeilage +0,50 €, Käse oder Fleischbeilage +1,00 €", "spalten": ["Ø 26 cm", "Ø 29 cm"], "liste": [
+      ["28", "Margherita", "", "8,00", "9,50"],
+      ["29", "Funghi", "mit Pilzen", "8,50", "9,50"],
+      ["30", "Schinken", "", "8,50", "9,50"],
+      ["31", "Salami", "", "8,50", "9,50"],
+      ["32", "Peperoniwurst", "", "8,50", "9,50"],
+      ["33", "Romana", "mit Schinken & Pilzen", "9,00", "10,50"],
+      ["34", "Rustika", "mit Salami & Pilzen", "9,00", "10,50"],
+      ["35", "Hawaii", "mit Schinken & Ananas", "9,00", "10,50"],
+      ["36", "Capri", "mit Pilzen, Schinken & Ei", "9,50", "11,00"],
+      ["37", "Capricciosa", "mit Salami, Pilzen & Zwiebeln", "9,50", "11,00"],
+      ["38", "Tonno", "mit Thunfisch & Zwiebeln", "9,50", "11,00"],
+      ["39", "Mare", "mit Meeresfrüchten", "9,50", "11,00"],
+      ["40", "Dolce Vita", "mit Pilzen & Mozzarella", "9,50", "11,00"],
+      ["41", "Vegetaria", "mit Artischocken, Brokkoli, Pilzen & Zwiebeln", "9,50", "11,00"],
+      ["42", "Primo Amoro", "mit Mozzarella & frischen Tomaten", "9,50", "11,00"],
+      ["43", "Arrabbiata", "mit Salami, Pilzen, Peperoniwurst & Chili", "9,50", "11,00"],
+      ["44", "Quattro Stagioni", "mit Schinken, Ei, Pilzen, Paprika & Artischocken", "9,50", "11,00"],
+      ["45", "Mix", "mit Salami, Peperoniwurst, Paprika & Pilzen", "9,50", "11,00"],
+      ["46", "Vesuvio", "mit Salami, Peperoniwurst, Schinken & Pilzen", "9,50", "11,00"],
+      ["47", "O Sole Mio", "mit Salami, Pilzen, Oliven, Peperoni & Paprika", "9,50", "11,00"],
+      ["48", "Ararat", "mit Sucuk (türkische Knoblauchwurst) & Pilzen", "9,50", "11,00"],
+      ["49", "Drehspieß", "mit Drehspießfleisch & Pilzen", "9,50", "11,00"],
+      ["50", "NEU Quattro Formaggi", "mit Gorgonzola, Edamer, Feta & Mozzarella", "9,50", "11,00"],
+      ["51", "NEU Kentucky", "mit Hähnchenstreifen, Jalapeños, Brokkoli, Pilzen & Hollandaise-Sauce", "9,50", "12,00"],
+      ["52", "Pizza Family Ø 40 cm", "wahlweise Nr. 28–32 für 21,00 € oder Nr. 33–51 für 23,00 €", "21,00 / 23,00", ""]
+    ]},
+    {"titel": "🥟 Calzone aus dem Steinofen", "spalten": ["Preis"], "liste": [
+      ["53", "Calzone Stern", "mit Schinken, Salami & Pilzen", "10,00"],
+      ["54", "Calzone Drehspieß", "mit Käse, Zwiebeln & Drehspießfleisch", "10,00"],
+      ["55", "Calzone Vegetarisch", "mit Paprika, Pilzen & Zwiebeln", "10,00"]
+    ]},
+    {"titel": "🧆 Falafel", "spalten": ["Preis"], "liste": [
+      ["56", "Falafel", "frittierte Kichererbsenbällchen im Fladenbrot", "7,50"],
+      ["57", "NEU Falafel Dürüm", "frittierte Kichererbsenbällchen im Yufka-Brot", "8,00"],
+      ["58", "Falafel Teller", "frittierte Kichererbsenbällchen mit Reis & Salat", "11,00"]
+    ]},
+    {"titel": "🥗 Salate", "spalten": ["klein", "normal"], "liste": [
+      ["59", "Tomatensalat", "mit grünem Salat, Zwiebeln & Tomaten", "6,00", "7,00"],
+      ["60", "Gemischter Salat", "mit grünem Salat, Zwiebeln, Kraut & Tomaten", "6,00", "7,00"],
+      ["61", "Bauernsalat", "mit grünem Salat, Käse, Gurken, Paprika & Tomaten", "7,00", "9,00"],
+      ["62", "Italienischer Salat", "mit grünem Salat, Schinken, Tomaten, Gurken, Oliven, Ei & Käse", "8,00", "10,00"],
+      ["63", "Sizilianischer Salat", "mit grünem Salat, Schinken, Tomaten, Gurken, Oliven, Käse, Ei & Thunfisch", "8,50", "10,50"],
+      ["64", "Tomaten-Mozzarella-Salat", "mit grünem Salat, Tomaten & Mozzarella", "8,00", "9,50"],
+      ["65", "Fitness Salat", "mit grünem Salat, Tomaten, Gurken, Paprika, Käse & Drehspießfleisch", "9,00", "11,50"],
+      ["66", "NEU Vital-Salat", "mit grünem Salat, Tomaten, Gurken, Zwiebeln, Mais, Petersilie, Hähnchenbruststreifen & Knoblauchdressing", "9,00", "11,50"],
+      ["67", "NEU Bunter Salat", "mit Eisbergsalat, Tomaten, Gurken, Paprika, Mais & Karotten", "6,00", "8,00"],
+      ["68", "NEU Couscous Salat", "", "6,00", ""]
+    ]},
+    {"titel": "🍟 Snacks & Saucen", "spalten": ["Preis"], "liste": [
+      ["69", "Putenschnitzel (200 g)", "mit Pommes & Salat", "11,00"],
+      ["70", "Pommes frites", "", "4,00"],
+      ["71", "Chicken Nuggets (10 Stück)", "mit Pommes & Sauce", "10,00"],
+      ["72", "NEU Sigara Börek (5 Stück)", "", "5,00"],
+      ["73", "Ketchup oder Mayo", "1 Stück", "0,50"],
+      ["74", "Dönersauce", "Becher", "1,50"]
+    ]},
+    {"titel": "🥤 Getränke", "hinweis": "Zuzüglich Pfand 0,25 €", "spalten": ["Dose 0,33 l", "Flasche 1 l"], "liste": [
+      ["", "Coca-Cola, Coca-Cola Zero, Coca-Cola Light", "", "2,25", "4,00"],
+      ["", "Fanta, Mezzo Mix, Sprite, Uludağ", "", "2,25", "4,00"],
+      ["", "Wasser", "0,5 l", "1,50", ""],
+      ["", "Ayran", "0,25 l", "1,50", ""],
+      ["", "Red Bull", "0,25 l", "3,00", ""],
+      ["", "Bier Schmucker", "0,5 l", "2,50", ""],
+      ["", "Bier Bannenberger", "0,33 l", "3,50", ""]
+    ]}
+  ]
+}

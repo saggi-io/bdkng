@@ -200,3 +200,25 @@
     (document.body ? Promise.resolve() : new Promise(function (r) { document.addEventListener('DOMContentLoaded', r); })).then(function () { document.body.appendChild(a); });
   } catch (e) {}
 })();
+// Kopf-Leiste (bleibt oben stehen, alle Seiten): Wetter jetzt + günstigster Spritpreis
+(function () {
+  function ready(f) { if (document.readyState !== 'loading') f(); else document.addEventListener('DOMContentLoaded', f); }
+  ready(function () {
+    var hd = document.querySelector('body > header'); if (!hd || hd.querySelector('.kopf-info')) return;
+    var ICON = { 'clear-day': '☀️', 'clear-night': '🌙', 'partly-cloudy-day': '⛅', 'partly-cloudy-night': '☁️', 'cloudy': '☁️', 'fog': '🌫️', 'wind': '💨', 'rain': '🌧️', 'sleet': '🌨️', 'snow': '❄️', 'hail': '🌨️', 'thunderstorm': '⛈️' };
+    var bar = document.createElement('div'); bar.className = 'kopf-info'; bar.hidden = true;
+    bar.innerHTML = '<div class="ki-in"><a class="ki-wetter" href="/wetter.html" hidden></a><a class="ki-sprit" href="/verkehr.html#sprit" hidden></a></div>';
+    hd.insertBefore(bar, hd.firstChild);
+    function hoehe() { document.documentElement.style.setProperty('--kopf-h', hd.getBoundingClientRect().height + 'px'); }
+    function zeig(a, h) { a.innerHTML = h; a.hidden = false; bar.hidden = false; hoehe(); }
+    fetch('/data/wetter-aktuell.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (d) {
+      var j = d.jetzt || {}, t = (d.tage || [])[0] || {}; if (j.temp == null) return;
+      zeig(bar.querySelector('.ki-wetter'), '<span aria-hidden="true">' + (ICON[j.icon] || '🌦️') + '</span> <b>' + Math.round(j.temp) + ' °C</b>' + (t.tmin != null ? '<span class="ki-lang"> · heute ' + Math.round(t.tmin) + '–' + Math.round(t.tmax) + ' °C</span>' : '') + (t.regen >= 1 ? ' <span aria-label="Regen">☔</span>' : ''));
+    }).catch(function () {});
+    fetch('https://n8n.sagmeister.io/webhook/bdkng-sprit', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
+      if (!d.leiste) return;
+      zeig(bar.querySelector('.ki-sprit'), '<span aria-hidden="true">⛽</span> <span class="ki-lang">Tanken: </span>' + String(d.leiste).replace(/ ab /g, ' ').replace(/ €/g, '€'));
+    }).catch(function () {});
+    hoehe(); window.addEventListener('resize', hoehe);
+  });
+})();

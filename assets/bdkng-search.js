@@ -25,7 +25,8 @@
       fetch('/data/sport-termine.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/data/wetter-aktuell.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/data/wissen-badkoenig.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
-      fetch('/data/termine-kalender.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.kal = a[5] && a[5].termine || []; data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.ergebnisse = a[2] && a[2].ergebnisse || []; data.hbErg = (a[2] && a[2].handball_ergebnisse || []).filter(function (x) { return x.hg + x.ag > 0; }); data.tt = a[2] && a[2].tischtennis || []; data.handball = a[2] && a[2].handball || []; data.la = a[2] && a[2].leichtathletik || []; data.wetter = a[3]; data.wissen = a[4] && a[4].eintraege || []; });
+      fetch('/data/termine-kalender.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
+      fetch('/data/speisekarte-kebab.json').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (a) { data.kal = a[5] && a[5].termine || []; data.karte = a[6]; data.muell = a[0]; data.news = a[1] || []; data.spiele = a[2] && a[2].spiele || []; data.ergebnisse = a[2] && a[2].ergebnisse || []; data.hbErg = (a[2] && a[2].handball_ergebnisse || []).filter(function (x) { return x.hg + x.ag > 0; }); data.tt = a[2] && a[2].tischtennis || []; data.handball = a[2] && a[2].handball || []; data.la = a[2] && a[2].leichtathletik || []; data.wetter = a[3]; data.wissen = a[4] && a[4].eintraege || []; });
     return loading;
   }
   function ortsteil(q, muell) {
@@ -185,7 +186,7 @@
       if (!h) h = ttAntwort(q);
       if (!h) h = ergebnisAntwort(q);
       if (!h && !/handball/i.test(q) && !/gespielt|ergebnis|ausgang|gewonnen|verloren|letzte|vergangen|tabelle|torsch/i.test(q)) h = spieleAntwort(q);
-      if (!h) h = serviceAntwort(q) || rathausAntwort(q) || sportAntwort(q) || wetterAntwort(q) || schnellAntwort(q);
+      if (!h) h = karteAntwort(q) || serviceAntwort(q) || rathausAntwort(q) || sportAntwort(q) || wetterAntwort(q) || schnellAntwort(q);
       if (h) return zeige(h);
       var ta = terminAntwort(q);
       if (ta && /heute|morgen|wochenende|\bwe\b/i.test(q) && /termin|veranstalt|was (ist|geht|gibt|kann|läuft|laeuft|steht)|los\b|event|fest|markt|konzert|unternehm|ausgehen|spielt|spiele|tipp/i.test(q) && !/wetter|regen|müll|muell/i.test(q)) return zeige(ta);
@@ -264,6 +265,26 @@
       return '<p><strong>Wofür suchst du einen Ansprechpartner?</strong></p><div class="bs-chips">' + chips + '</div><p>Zentrale: 06063 5009-0 · <a href="mailto:stadtverwaltung@badkoenig.de">stadtverwaltung@badkoenig.de</a></p>' + (b ? '<p>' + esc(b.titel) + ': ' + esc(b.text.slice(0, 160)) + '</p>' : '') + wQuelle(a);
     }
     return null;
+  }
+  // Speisekarte Kebab & Pizzahaus: Button und Preisfragen direkt aus data/speisekarte-kebab.json (ohne KI)
+  function karteAntwort(q) {
+    var k = data.karte; if (!k) return null;
+    var l = q.toLowerCase(), knopf = /speisekarte|kebab ?(&|und) ?pizzahaus|dönerhaus|döner haus|dönerladen/.test(l);
+    var preis = /was kostet|kostet|preis|wie teuer|€|euro/.test(l);
+    var GER = /döner|drehspie|dürüm|durum|yufka|pomm-döner|jumbo|junior|bowl|kochkäse|teller|iskender|lahmacun|pide|pizza|calzone|falafel|salat|pommes|nuggets|schnitzel|börek|ayran|cola|fanta|sprite|bier|red ?bull|margherita|funghi|hawaii|salami|tonno|kentucky|formaggi|sucuk/;
+    if (!knopf && !(preis && GER.test(l))) return null;
+    var tel = k.telefon.replace(/\s/g, ''), kopf = '<div class="bs-hit"><h3>🥙 ' + esc(k.name) + '</h3>';
+    var fuss = '<p><a class="bs-kaffee-btn bs-link-btn" href="/speisekarte-kebab.html">🥙 Ganze Speisekarte</a> <a class="bs-kaffee-btn bs-link-btn" href="tel:+49' + tel.slice(1) + '">📞 ' + esc(k.telefon) + '</a></p></div><p class="bs-src">Quelle: Speisekarte des Kebab &amp; Pizzahauses Bad König · ' + esc(k.stand.replace(/^Speisekarte \(Flyer\) vom /, 'Stand ')) + '</p>';
+    var info = '<p>📍 ' + esc(k.adresse) + '<br>🕘 ' + esc(k.zeiten) + '<br>🛵 ' + esc(k.liefer) + '</p><p><strong>🔥 ' + esc(k.aktion.replace('Aktion: ', '')) + '</strong></p>';
+    if (knopf && !preis) return kopf + '<p><a href="/speisekarte-kebab.html"><img src="/assets/speisekarte/kebab-pizzahaus-bad-koenig.webp" alt="Speisekarte Kebab &amp; Pizzahaus" style="width:100%;border-radius:12px;display:block" loading="lazy"></a></p>' + info + fuss;
+    var w = l.replace(/[?!.,]/g, ' ').split(/\s+/).filter(function (x) { return x.length > 2 && !/^(was|kostet|kosten|wie|teuer|ein|eine|einen|der|die|das|beim|bei|im|mit|und|preis|euro|gibt|es|ist|bad|könig|kebab|pizzahaus|haus)$/.test(x); });
+    var hits = [];
+    k.gruppen.forEach(function (g) { g.liste.forEach(function (z) {
+      var t = (g.titel + ' ' + z[1] + ' ' + z[2]).toLowerCase().replace('durum', 'dürüm');
+      if (w.length && w.every(function (x) { return t.indexOf(x.replace('durum', 'dürüm').replace(/s$/, '')) >= 0; })) hits.push([g, z]);
+    }); });
+    if (!hits.length) return null;
+    return kopf + '<ul>' + hits.slice(0, 12).map(function (h) { var z = h[0].spalten, p = h[1].slice(3).filter(Boolean); return '<li>' + (h[1][0] ? esc(h[1][0]) + ' · ' : '') + '<strong>' + esc(h[1][1].replace(/^NEU /, '')) + '</strong>' + (h[1][2] ? ' – ' + esc(h[1][2]) : '') + ': <strong>' + p.map(function (x, i) { return esc(x) + ' €' + (z.length > 1 && p.length > 1 ? ' (' + esc(z[i]) + ')' : ''); }).join(' / ') + '</strong></li>'; }).join('') + '</ul>' + (hits.length > 12 ? '<p>… und mehr auf der Karte.</p>' : '') + '<p><small>🔥 ' + esc(k.aktion.replace('Aktion: ', '')) + '</small></p>' + fuss;
   }
   function serviceAntwort(q) {
     var l = q.toLowerCase();
