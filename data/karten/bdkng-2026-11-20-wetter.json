@@ -1,0 +1,29 @@
+{
+ "rubrik": "wetter",
+ "titel": "Achtung: Warnung vor Dauerregen",
+ "ueber": "Fr. 20.11. · 19:00 Uhr",
+ "art": "liste",
+ "zeilen": [
+  {
+   "t": "Samstag, 21.11.: wechselnd bewölkt, 1 bis 7 °C",
+   "e": "⛅"
+  },
+  {
+   "t": "Sonntag, 22.11.: bedeckt, -1 bis 3 °C. Frost möglich",
+   "e": "☁️"
+  },
+  {
+   "t": "Montag, 23.11.: wechselnd bewölkt, -2 bis 2 °C. Frost möglich",
+   "e": "⛅"
+  },
+  {
+   "t": "Amtliche WARNUNG vor DAUERREGEN (Fr 00:00 bis Sa 00:00 Uhr)",
+   "e": "⚠️"
+  },
+  {
+   "t": "Amtliche WARNUNG vor GLÄTTE (Sa 02:00 bis Sa 09:00 Uhr)",
+   "e": "⚠️"
+  }
+ ],
+ "quelle": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev"
+}
