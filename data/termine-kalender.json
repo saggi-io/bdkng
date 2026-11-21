@@ -1,19 +1,10 @@
 {
- "stand": "2026-11-20T05:30",
- "von": "2026-11-20",
- "bis": "2027-03-20",
+ "stand": "2026-11-21T05:30",
+ "von": "2026-11-21",
+ "bis": "2027-03-21",
  "quelle": "Stadt Bad König, Veranstaltungskalender; Freilichtbühne Bad König (freilichtbuehne-bad-koenig.de)",
  "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/",
  "termine": [
-  {
-   "datum": "2026-11-20",
-   "bis": "",
-   "uhrzeit": "12:00",
-   "titel": "Orgel um 12",
-   "ort": "Schlosskirche Bad König",
-   "veranstalter": "",
-   "info": "\"Das ewige Leben\" - Orgelvariationen von Pachelbel, Buxtehude und Walther Orgel: Christian Lorenz (Pfungstadt)"
-  },
   {
    "datum": "2026-11-21",
    "bis": "",
