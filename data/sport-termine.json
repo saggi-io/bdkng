@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-21T19:40",
+ "stand": "2026-11-21T21:40",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
   {
@@ -999,8 +999,8 @@
    "team": "Männer",
    "home": "HSG Odenwald II",
    "away": "TV Bürgstadt",
-   "hg": 6,
-   "ag": 9
+   "hg": 34,
+   "ag": 50
   },
   {
    "date": "2026-11-15",
