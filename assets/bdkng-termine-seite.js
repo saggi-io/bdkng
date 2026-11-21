@@ -1,7 +1,8 @@
 // Termine-Seite: Termin melden mit Kollisions-Check, „Diese Woche“, Kalender für 3 Monate (Spalten je Monat),
 // Kirche & Gedenken, Feiertage, Freilichtbühne – alles aus /data/*.json zusammengeführt.
 (function () {
-  if (location.pathname !== '/termine.html') return;
+  var EA = location.pathname === '/ehrenamt.html';
+  if (location.pathname !== '/termine.html' && !EA) return;
   var WT = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'], MON = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
   var STADT = 'https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/';
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
@@ -11,7 +12,8 @@
   function plus(d, n) { var x = new Date(d); x.setDate(x.getDate() + n); return x; }
   function kurz(s) { var d = dat(s); return WT[d.getDay()] + ' ' + p2(d.getDate()) + '.' + p2(d.getMonth() + 1) + '.'; }
   var heute = new Date(); heute.setHours(0, 0, 0, 0); var H = iso(heute);
-  var ENDE = iso(new Date(heute.getFullYear(), heute.getMonth() + 3, 0)); // Ende des dritten Monats
+  var ENDE = iso(new Date(heute.getFullYear(), heute.getMonth() + 3, 0));
+  if (!EA && !document.getElementById('kollision')) { var mm = document.getElementById('terminMelden'); if (mm) { var hl = document.createElement('div'); hl.className = 'kollision'; hl.id = 'kollision'; hl.innerHTML = '<p><strong>🔍 Für Vereine und Veranstalter: Wunschtermin prüfen</strong><br>Bevor ihr plant: Ist an eurem Tag schon etwas los in Bad König? Auf unserer Ehrenamt-Seite seht ihr alle bekannten Termine und könnt euer Datum prüfen.</p><a class="btn" href="/ehrenamt.html#kollision">Zur Terminprüfung →</a>'; var rf = mm.querySelector('.tm-open'); (rf ? rf.parentNode.insertBefore(hl, rf) : mm.appendChild(hl)); } } // Ende des dritten Monats
   // Feiertage Hessen + kirchliche Gedenktage
   function ostern(j) { var a = j % 19, b = Math.floor(j / 100), c = j % 100, d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30, i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451), mo = Math.floor((h + l - 7 * m + 114) / 31), t = ((h + l - 7 * m + 114) % 31) + 1; return new Date(j, mo - 1, t); }
   function feiertage(j) {
@@ -48,7 +50,7 @@
     var main = document.querySelector('main'); if (!main) return;
     var melden = document.getElementById('terminMelden');
     // 1) Kollisions-Check im Abschnitt „Termin melden“
-    if (melden && !document.getElementById('kollision')) {
+    if (EA && melden && !document.getElementById('kollision')) {
       var k = document.createElement('div'); k.className = 'kollision'; k.id = 'kollision';
       k.innerHTML = '<p><strong>🔍 Wunschtermin prüfen – für Vereine und Veranstalter</strong><br>Bevor ihr plant: Gibt es an eurem Wunschtag schon etwas in Bad König? Datum wählen, wir zeigen alles, was wir kennen (Stadtkalender, Freilichtbühne, Kirchen, Heimspiele, Feiertage).</p><label class="field"><span>Wunschtermin</span><input type="date" min="' + H + '" id="kolDatum"></label><div id="kolErg" aria-live="polite"></div>';
       var ref = melden.querySelector('.tm-open'); (ref ? ref.parentNode.insertBefore(k, ref) : melden.appendChild(k));
@@ -61,6 +63,17 @@
       };
       document.getElementById('kolDatum').addEventListener('change', function () { pr(this.value); });
       document.addEventListener('change', function (e) { if (e.target && e.target.name === 'datum' && e.target.closest('#tmForm')) { document.getElementById('kolDatum').value = e.target.value; pr(e.target.value); } });
+    }
+    if (EA) {
+      var box = document.getElementById('alleTermine'); if (!box) return;
+      var arten = [['alle', 'Alle'], ['veranstaltung', '🎉 Veranstaltungen'], ['kirche', '⛪ Kirche & Gedenken'], ['sport', '⚽ Heimspiele'], ['freilicht', '🎭 Freilichtbühne'], ['feiertag', '🗓️ Feiertage']];
+      var mon = {}; A.forEach(function (t) { var k = t.datum.slice(0, 7); (mon[k] = mon[k] || []).push(t); });
+      box.innerHTML = '<h2>📆 Alle bekannten Termine (' + A.length + ')</h2><p class="form-note">Stadtkalender, Freilichtbühne, Gottesdienste und Gedenkfeiern, Heimspiele, Feiertage und gemeldete Termine – automatisch aktualisiert. Ein Klick auf den Titel führt zur Quelle.</p><div class="tk-filter">' + arten.map(function (f, i) { return '<button type="button" class="tk-f' + (i ? '' : ' an') + '" data-f="' + f[0] + '">' + f[1] + '</button>'; }).join('') + '</div>' +
+        Object.keys(mon).sort().map(function (k) { var p = k.split('-'); return '<h3>' + MON[+p[1] - 1] + ' ' + p[0] + '</h3><ul class="tk-liste">' + mon[k].map(function (t) { return zeile(t, true); }).join('') + '</ul>'; }).join('') +
+        '<div class="tk-knoepfe"><a class="btn" href="webcal://bdkng.de/kalender/termine.ics">📥 Kalender abonnieren</a><a class="btn" href="/termine.html">📅 Zur Termine-Seite</a></div>';
+      box.querySelectorAll('.tk-f').forEach(function (b) { b.addEventListener('click', function () { var f = b.getAttribute('data-f'); box.querySelectorAll('.tk-f').forEach(function (x) { x.classList.toggle('an', x === b); }); box.querySelectorAll('li').forEach(function (li) { li.hidden = f !== 'alle' && li.getAttribute('data-art') !== f; }); }); });
+      if (location.hash && document.querySelector(location.hash)) setTimeout(function () { document.querySelector(location.hash).scrollIntoView(); }, 80);
+      return;
     }
     // 2) Diese Woche (heute bis Sonntag)
     var so = plus(heute, (7 - heute.getDay()) % 7), SO = iso(so);

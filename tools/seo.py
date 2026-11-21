@@ -9,6 +9,7 @@ SEITEN = {
  'aktuell.html': ('Aktuelles', 'Aktuelle Nachrichten aus Bad König und den Stadtteilen Zell, Kimbach, Etzen-Gesäß, Momart, Nieder- und Ober-Kinzig – kurz zusammengefasst, mit Quelle.', 'hourly', '0.9'),
  'kompakt.html': ('Neueste Meldungen kompakt', 'Neueste Meldungen kompakt: alles Neue des Tages aus Bad König auf einen Blick – Aktuelles, Verkehr, Termine, Sport und Wetter, mit Quelle.', 'hourly', '0.9'),
  'verkehr.html': ('Verkehr', 'Verkehr in Bad König: Staus, Unfälle, Sperrungen und Baustellen auf der B45, Zeller Brücke und Odenwaldbahn – live und mit Quelle.', 'hourly', '0.9'),
+ 'ehrenamt.html': ('Ehrenamt: Terminplanung für Vereine & Veranstalter', 'Für Vereine und Veranstalter in Bad König: Wunschtermin prüfen, Terminkollisionen vermeiden, Termin melden – mit allen bekannten Terminen auf einen Blick.', 'daily', '0.7'),
  'termine.html': ('Termine & Veranstaltungen', 'Veranstaltungen und Termine in Bad König: Was ist heute und am Wochenende los? Konzerte, Märkte, Vereinsfeste und mehr.', 'daily', '0.9'),
  'sport.html': ('Sport & Vereine', 'Sport in Bad König: Spielpläne und Ergebnisse von Fußball (SG Bad König/Zell, SpVgg Kinzigtal), Handball (HSG Odenwald), Tischtennis, Tennis, Leichtathletik – dazu Fahrrad und Mountainbike.', 'daily', '0.8'),
  'muell.html': ('Müllabfuhr', 'Müllabfuhr Bad König: Abfuhrtermine für Restmüll, Bio, Papier und Gelbe Tonne in allen Stadtteilen, dazu Grünschnitt und Hotline.', 'weekly', '0.8'),
