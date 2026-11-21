@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-21-261694390",
+    "checked": "2026-11-15",
+    "valid_until": "2026-11-25",
+    "categories": [
+      "sport"
+    ],
+    "title": "Kreisliga A Odenwald: VfL Michelstadt bleibt an Tabellenführer FSV Erbach dran",
+    "paragraphs": [
+      "Die FSV Erbach behält ihren Vorsprung mit dem Sieg gegen die KSG Vielbrunn in der Kreisliga A Odenwald. Dahinter gewinnen auch der VfL Michelstadt und die SG Bad König Zell."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/sport/fussball/fussball-odenwald/vfl-michelstadt-bleibt-an-tabellenfuehrer-fsv-erbach-dran-6756237",
+    "zeit": "18:00"
+  },
+  {
     "id": "medien-2026-11-21-234851736",
     "checked": "2026-11-18",
     "valid_until": "2026-11-28",
@@ -237,21 +252,6 @@
     ],
     "source": "Bad Königer Stadtnachrichten (meinOrt)",
     "url": "https://meinort.de/bad-koenig/neues/stellenausschreibung-mitarbeiter-oeffentlichkeitsarbeit-2173-2026-48-0-46982916"
-  },
-  {
-    "id": "medien-2026-11-18-261694390",
-    "checked": "2026-11-15",
-    "valid_until": "2026-11-25",
-    "categories": [
-      "sport"
-    ],
-    "title": "Kreisliga A Odenwald: VfL Michelstadt bleibt an Tabellenführer FSV Erbach dran",
-    "paragraphs": [
-      "Die FSV Erbach behält ihren Vorsprung mit dem Sieg gegen die KSG Vielbrunn in der Kreisliga A Odenwald. Dahinter gewinnen auch der VfL Michelstadt und die SG Bad König Zell."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/sport/fussball/fussball-odenwald/vfl-michelstadt-bleibt-an-tabellenfuehrer-fsv-erbach-dran-6756237",
-    "zeit": "19:00"
   },
   {
     "id": "wetter-rueckblick-2026-11-09",
