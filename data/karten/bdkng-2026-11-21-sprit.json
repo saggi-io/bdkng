@@ -1,0 +1,29 @@
+{
+ "rubrik": "verkehr",
+ "titel": "E10 heute ab 1,76⁹ € bei Jet Höchst",
+ "ueber": "Sa. 21.11. · 07:30 Uhr",
+ "art": "liste",
+ "zeilen": [
+  {
+   "t": "Jet Höchst: E10 1,76⁹ · Diesel 2,01⁹",
+   "e": "⛽"
+  },
+  {
+   "t": "Classic Brombachtal: E10 1,78⁹ · Diesel 2,04⁹",
+   "e": "⛽"
+  },
+  {
+   "t": "Esso Bad König: E10 1,81⁹ · Diesel 2,07⁹",
+   "e": "⛽"
+  },
+  {
+   "t": "bft Bad König: E5 1,86⁹ · Diesel 2,06⁹",
+   "e": "⛽"
+  },
+  {
+   "t": "Heute: wechselnd bewölkt, 0 bis 6 °C",
+   "e": "⛅"
+  }
+ ],
+ "quelle": "MTS-K über Tankerkönig, DWD"
+}
