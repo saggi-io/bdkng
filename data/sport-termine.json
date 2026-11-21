@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-21T17:40",
+ "stand": "2026-11-21T19:40",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
   {
@@ -990,8 +990,17 @@
    "team": "Frauen",
    "home": "HSG Odenwald",
    "away": "TuSpo Obernburg",
-   "hg": 3,
-   "ag": 3
+   "hg": 35,
+   "ag": 24
+  },
+  {
+   "date": "2026-11-21",
+   "liga": "M-BL",
+   "team": "Männer",
+   "home": "HSG Odenwald II",
+   "away": "TV Bürgstadt",
+   "hg": 6,
+   "ag": 9
   },
   {
    "date": "2026-11-15",
