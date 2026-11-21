@@ -1,22 +1,5 @@
 [
   {
-    "id": "bahn-2026-11-20",
-    "checked": "2026-11-20",
-    "zeit": "19:20",
-    "valid_until": "2026-11-20",
-    "categories": [
-      "verkehr"
-    ],
-    "title": "Update Odenwaldbahn: Größere Verspätungen ab Bad König",
-    "paragraphs": [
-      "Auf der Odenwaldbahn gibt es neue Probleme. Das betrifft gerade die Züge ab Bad König:",
-      "Die RB 82 um 19:19 Uhr ab Bad König Richtung Frankfurt Hbf hat rund 36 Minuten Verspätung (Grund laut Bahn: Kurzfristiger Personalausfall).",
-      "Stand: 20.11.2026, 19:20 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
-    ],
-    "source": "Echtzeitdaten der Deutschen Bahn",
-    "url": "https://dbf.finalrewind.org/Bad%20K%C3%B6nig"
-  },
-  {
     "id": "2026-11-20-wetter",
     "checked": "2026-11-20",
     "zeit": "19:00",
@@ -116,22 +99,6 @@
     ],
     "source": "Bad Königer Stadtnachrichten (meinOrt)",
     "url": "https://meinort.de/bad-koenig/neues/veranstaltungen-2173-2026-48-0-55576623"
-  },
-  {
-    "id": "2026-11-19-wetter",
-    "checked": "2026-11-19",
-    "zeit": "19:00",
-    "valid_until": "2026-11-22",
-    "categories": [
-      "wetter"
-    ],
-    "title": "WETTER · Die nächsten 3 Tage",
-    "paragraphs": [
-      "Freitag, 20.11.: Regen, 7 bis 9 °C, Regenrisiko 81 % (ca. 17 l/m²)  Samstag, 21.11.: wechselnd bewölkt, 1 bis 6 °C, Regenrisiko 5 % (ca. 1 l/m²)  Sonntag, 22.11.: bedeckt, -1 bis 3 °C. Frost möglich",
-      "Amtliche WARNUNG vor DAUERREGEN (Fr 00:00 bis Sa 00:00 Uhr)  Amtliche WARNUNG vor WINDBÖEN (Do 09:00 bis Do 20:00 Uhr)  Amtliche WARNUNG vor WINDBÖEN (Do 20:00 bis Fr 09:00 Uhr)"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
-    "url": "https://bdkng.de"
   },
   {
     "id": "medien-2026-11-19-234850932",
@@ -415,20 +382,6 @@
     "url": "https://www.badkoenig.de/aktuelle-nachrichten/vollsperrung-in-der-leipziger-strasse/"
   },
   {
-    "id": "medien-2026-11-16-258893938",
-    "checked": "2026-11-10",
-    "valid_until": "2026-11-20",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Sabine Hofmann stellt ihren neuen Krimi in der Rentmeisterei in Bad König vor",
-    "paragraphs": [
-      "Im Rahmen der Leseraktion „Echo hilft“ war die in Erbach lebende Autorin auf der Lesebühne der Rentmeisterei zu Gast. Die Erlöse fließen in soziale Projekte der Region."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/sabine-hofmann-stellt-ihren-neuen-krimi-in-bad-koenig-vor-6725202"
-  },
-  {
     "id": "q-2026-11-16-mo528620959",
     "checked": "2026-11-16",
     "valid_until": "2026-11-26",
@@ -626,20 +579,6 @@
     ],
     "source": "Bad Königer Stadtnachrichten (meinOrt)",
     "url": "https://meinort.de/bad-koenig/neues/veranstaltungen-2173-2026-47-0-55646358"
-  },
-  {
-    "id": "medien-2026-11-14-264409394",
-    "checked": "2026-11-10",
-    "valid_until": "2026-11-20",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Blut spenden und Leben retten",
-    "paragraphs": [
-      "Das Deutsche Rote Kreuz bietet am Dienstag, 1. Dezember, von 15.30 bis 19.30 Uhr einen Blutspendetermin in der Sporthalle der Grundschule, Martin-Luther-Straße 3, in Bad König an."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/blut-spenden-und-leben-retten-6784690"
   },
   {
     "id": "medien-2026-11-13-235775413",
