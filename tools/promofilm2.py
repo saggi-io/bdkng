@@ -69,8 +69,8 @@ def leiste_szene(t, alt=False):
         a = ease((t - 0.9) / 0.4)
         lay = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
         ld.rounded_rectangle([60, H - 560, W - 60, H - 120], 50, fill=GR + (int(240 * a),))
-        L = ['Wetter & Sprit', 'immer oben', 'im Blick'] if alt else ['Wetter & Sprit', 'bleiben oben.']
-        fs = F(BLACK, 108 if alt else 118)
+        L = ['Wetter & Spritpreise', 'immer aktuell'] if alt else ['Wetter & Spritpreise', 'immer aktuell']
+        fs = F(BLACK, 92)
         for i, s in enumerate(L): ld.text((W // 2, H - 520 + i * 125), s, font=fs, fill=(GOLD if i == 0 else WH) + (int(255 * a),), anchor='ma')
         im = im.convert('RGBA'); im.alpha_composite(lay); im = im.convert('RGB')
     return im
@@ -94,12 +94,12 @@ def ki_chat(t, alt=False):
     im = Image.new('RGB', (W, H), DK if not alt else GR); d = ImageDraw.Draw(im)
     d.text((W // 2, 230), 'Frag die BDKNG-KI', font=F(BLACK, 100), fill=GOLD, anchor='ma')
     f = F('Inter-Bold.otf', 58 if alt else 54); y = 470
-    q = 'Was kostet ein Dürüm?'; n = int(len(q) * min(1, t / 0.8))
+    q = 'Zeig mir die Speisekarte vom Kebab & Pizzahaus'; n = int(len(q) * min(1, t / 0.8))
     y = bubble(d, (0, y), q[:n] or ' ', f, GOLD, DK, True)
     if 0.9 < t < 1.4:
         for i in range(3): d.ellipse([90 + i * 50, y + 20, 120 + i * 50, y + 50], fill=CR)
     if t >= 1.4:
-        for i, a in enumerate(['Dürüm: 8,00 €', 'mit Käse: 8,50 €', 'Falafel-Dürüm: 8,00 €']):
+        for i, a in enumerate(['Hier ist die Speisekarte:', 'Döner, Pizza, Pide, Lahmacun', 'mit allen Preisen → Karte öffnen']):
             if t >= 1.4 + i * 0.35: y = bubble(d, (0, y), a, f, WH, DK, False)
     if t > 2.5:
         d.text((W // 2, H - 330), 'Auch Müll, Termine,', font=F(BLACK, 76), fill=WH, anchor='ma')
@@ -128,7 +128,7 @@ def app_szene(t, alt=False):
     d = ImageDraw.Draw(im); col = DK if not alt else WH
     d.text((W // 2, 1300), 'BDKNG als App', font=F(BLACK, 110), fill=col, anchor='ma')
     d.text((W // 2, 1440), 'Ein Klick – aufs Handy.', font=F(BLACK, 76), fill=col, anchor='ma')
-    d.text((W // 2, 1540), 'Kostenlos.', font=F(BLACK, 76), fill=col, anchor='ma')
+    d.text((W // 2, 1540), 'Eine echte App ist geplant.', font=F(BLACK, 66), fill=col, anchor='ma')
     return im
 
 JUNG2 = [(1.2, cover), (0.7, intro),
@@ -179,21 +179,39 @@ def liste_malen(im, y, kopf, text, t, fs=42, w=None):
         im.alpha_composite(lay); y += int(fs * 1.2) + len(ls) * int(fs * 1.22) + int(fs * 0.6)
     return y
 
+
+def gruen_fuss(im, quelle):
+    """Fußzeile wie im Stil C (bdkng.de + Kanal-Symbole) auch im grünen Layout."""
+    import abendvideo as AV
+    alt = AV.STIL; AV.STIL = 'c'
+    try: AV.fuss(im, '')
+    finally: AV.STIL = alt
+    d = ImageDraw.Draw(im); gs = 44
+    while F(BLACK, gs).getlength(quelle) > W - 100: gs -= 2
+    d.text((W // 2, H - 95), quelle, font=F(BLACK, gs), fill=GOLD, anchor='mm')
+
+def kopf_kurz(im, hoehe=340):
+    k = headimg().crop((0, 0, W, hoehe)); im.paste(k, (0, 60))
+    ImageDraw.Draw(im).rectangle([0, 60 + hoehe, W, 60 + hoehe + 10], fill=GOLD)
+    return 60 + hoehe + 10
+
 def alt_liste(t):
-    im = Image.new('RGB', (W, H), GR); d = ImageDraw.Draw(im)
-    im.paste(headimg(), (0, 70)); d.rectangle([0, 70 + HH, W, 70 + HH + 12], fill=GOLD)
-    top = 70 + HH + 50; im = im.convert('RGBA'); d = ImageDraw.Draw(im)
-    d.text((W // 2, top), 'Alle Wirtschaften auf bdkng.de', font=F(BLACK, 68), fill=GOLD, anchor='ma')
-    liste_malen(im, top + 110, CR, WH, t, 40)
-    return im.convert('RGB')
+    im = Image.new('RGB', (W, H), GR)
+    top = kopf_kurz(im) + 60; im = im.convert('RGBA'); d = ImageDraw.Draw(im)
+    d.text((W // 2, top), 'Auf bdkng.de', font=F('Inter-Bold.otf', 60), fill=CR, anchor='ma')
+    a = ease((t - 0.3) / 0.4); lay = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
+    for i, l in enumerate(['Und alle anderen', 'Wirtschaften', 'in Bad König']): ld.text((W // 2, top + 200 + i * 150), l, font=F(BLACK, 120), fill=(GOLD if i == 1 else WH) + (int(255 * a),), anchor='ma')
+    im.alpha_composite(lay)
+    im = im.convert('RGB'); gruen_fuss(im, 'Alle Wirtschaften auf bdkng.de/genuss.html')
+    return im
 
 def jung_liste(t):
     import abendvideo as AV
     im, d, TOP = AV.basis(t); im = im.convert('RGBA'); a = ease(t / 0.5)
     AV.text_alpha(im, (60, TOP + 50), 'UND ALLE ANDEREN', AV.K.f('Inter-Bold.otf', 40), (255, 255, 255), a)
     AV.text_alpha(im, (60, TOP + 105), 'Alle Wirtschaften', AV.K.f('InterDisplay-Black.otf', 84), (255, 255, 255), a)
-    lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); ImageDraw.Draw(lay).rounded_rectangle([40, TOP + 230, W - 40, TOP + 1085], 36, fill=(255, 255, 255, int(235 * a))); im.alpha_composite(lay)
-    liste_malen(im, TOP + 260, (214, 84, 60), AV.K.TEXT, t, 33, W - 160)
+    b = ease((t - 0.3) / 0.4)
+    for i, l in enumerate(['in Bad König', 'auf bdkng.de']): AV.text_alpha(im, (W // 2 - AV.K.f('InterDisplay-Black.otf', 76).getlength(l) // 2, TOP + 330 + i * 130), l, AV.K.f('InterDisplay-Black.otf', 76), (255, 255, 255), b)
     AV.fuss(im.convert('RGB') if False else im, 'Alle auf bdkng.de/genuss.html')
     return im.convert('RGB')
 
@@ -201,9 +219,8 @@ def alt_tafel(key):
     import abendvideo as AV
     ueber, titel, items, fuss = SEITEN[key]
     def f(t):
-        im = Image.new('RGB', (W, H), GR); d = ImageDraw.Draw(im)
-        im.paste(headimg(), (0, 70)); d.rectangle([0, 70 + HH, W, 70 + HH + 12], fill=GOLD)
-        top = 70 + HH + 70; a = ease(t / 0.4)
+        im = Image.new('RGB', (W, H), GR)
+        top = kopf_kurz(im) + 40; a = ease(t / 0.4)
         lay = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
         ld.text((W // 2, top), ueber, font=F('Inter-Bold.otf', 56), fill=CR + (int(255 * a),), anchor='ma')
         ft, L, sz = fit2(ld, titel, 86, W - 100)
@@ -225,13 +242,8 @@ def alt_tafel(key):
             e = AV.K.emoji(em, 96)
             if e: im.paste(e, (x0 + 94 - e.width // 2, y + min(h, 188) // 2 - e.height // 2), e.split()[3].point(lambda v: int(v * p)))
             y += h + 24
-        if t > 0.5 + 3 * 0.55:
-            ld = ImageDraw.Draw(im); gs = 66
-            while F(BLACK, gs).getlength(fuss) > W - 220: gs -= 4
-            fo = F(BLACK, gs); w = ld.textlength(fuss, font=fo) + 100
-            ld.rounded_rectangle([W // 2 - w // 2, H - 250, W // 2 + w // 2, H - 140], 55, fill=GOLD)
-            ld.text((W // 2, H - 195), fuss, font=fo, fill=DK, anchor='mm')
-        return im.convert('RGB')
+        im = im.convert('RGB'); gruen_fuss(im, fuss)
+        return im
     return f
 
 def alt_szenen():
@@ -239,7 +251,7 @@ def alt_szenen():
           (2.2, lambda t: alt_frame('Neu auf\nbdkng.de', t, 2.2)),
           (2.6, lambda t: alt_frame('Speisekarten\nder Königer\nRestaurants', t, 2.6)),
           (4.0, lambda t: karte_szene(t, 4.0, True)),
-          (7.0, alt_liste),
+          (3.0, alt_liste),
           (3.4, lambda t: leiste_szene(t, True)),
           (3.0, lambda t: wirtschaften(t, True)),
           (4.4, alt_tafel('wirte')),
@@ -333,20 +345,20 @@ def jung_c():
         A.text_alpha(im, (60, TOP + 50), 'FRAG DIE BDKNG-KI', A.K.f('Inter-Bold.otf', 40), WEI, a)
         A.text_alpha(im, (60, TOP + 105), 'Einfach fragen', A.K.f('InterDisplay-Black.otf', 84), WEI, a)
         d = ImageDraw.Draw(im); f = A.K.f('Inter-Bold.otf', 54); y = TOP + 260
-        q = 'Was kostet ein Dürüm?'; n = int(len(q) * min(1, t / 0.8))
+        q = 'Zeig mir die Speisekarte vom Kebab & Pizzahaus'; n = int(len(q) * min(1, t / 0.8))
         y = bubble(d, (0, y), q[:n] or ' ', f, (255, 255, 255), (214, 84, 60), True)
         if 0.9 < t < 1.4:
             for i in range(3): d.ellipse([90 + i * 50, y + 20, 120 + i * 50, y + 50], fill=WEI)
         if t >= 1.4:
-            for i, s in enumerate(['Dürüm: 8,00 €', 'mit Käse: 8,50 €', 'Falafel-Dürüm: 8,00 €']):
+            for i, s in enumerate(['Hier ist die Speisekarte:', 'Döner, Pizza, Pide, Lahmacun', 'mit allen Preisen → Karte öffnen']):
                 if t >= 1.4 + i * 0.35: y = bubble(d, (0, y), s, f, (255, 255, 255), A.K.TEXT, False)
         A.fuss(im, 'Auch Müll, Termine, Rathaus und Wetter'); return im
-    neu1 = [('🍽️', 'Speisekarten', 'Der Königer Restaurants – aktuell'), ('⛽', 'Wetter & Sprit', 'Immer oben im Blick'), ('🍻', 'Wirtschaften', 'Kneipen, Biergärten, Restaurants')]
-    neu2 = [('🤖', 'BDKNG-KI', 'Frag: Was kostet ein Dürüm?'), ('📣', 'Blitzer & Stau', 'Gesehen? Auf bdkng.de melden'), ('📲', 'Als App', 'Mit einem Klick aufs Handy')]
+    neu1 = [('🍽️', 'Speisekarten', 'Der Königer Restaurants – aktuell'), ('⛽', 'Wetter & Spritpreise', 'Immer aktuell – oben im Blick'), ('🍻', 'Wirtschaften', 'Kneipen, Biergärten, Restaurants')]
+    neu2 = [('🤖', 'BDKNG-KI', 'Frag: Zeig mir die Speisekarte von …'), ('📣', 'Blitzer & Stau', 'Gesehen? Auf bdkng.de melden'), ('📲', 'Als App', 'Ein Klick aufs Handy – echte App geplant')]
     return [(2.4, hook),
             (0.4 + 3 * 0.45 + 2.2, karten('Neu auf bdkng.de', 'Was ist neu? (1/2)', neu1, 'Alles kostenlos auf bdkng.de')),
             (3.4, karte_c),
-            (7.0, jung_liste),
+            (3.0, jung_liste),
             (3.4, chat_c),
             (0.4 + 3 * 0.45 + 2.2, karten('Neu auf bdkng.de', 'Was ist neu? (2/2)', neu2, 'Alles kostenlos auf bdkng.de')),
             *[(0.4 + 3 * 0.45 + 2.4, karten(SEITEN[k][0], SEITEN[k][1], SEITEN[k][2], SEITEN[k][3])) for k in ('wirte', 'vereine', 'bewaehrt', 'quiz')],
