@@ -1,0 +1,47 @@
+{
+ "titel": "Der Tag in Bad König",
+ "ueber": "Sa. 21.11. · 19:30 Uhr",
+ "quelle": "hessenschau.de Verkehrsservice",
+ "zeilen": [
+  {
+   "t": "B45: Michelstadt Höchst im Odenwald zwischen Zell und Bad König",
+   "r": "verkehr",
+   "k": "Verkehr"
+  }
+ ],
+ "morgen_ueber": "So. 22.11.",
+ "morgen": [
+  [
+   "☁️",
+   "Wetter",
+   "Bedeckt, -2 bis 3 °C"
+  ],
+  [
+   "📅",
+   "Termine",
+   "10:00 Uhr: Adventsbasar der Aktion behindertes Kind Odenwaldkreis e.V. · 10:30 Uhr: Georg-Vetter-Museum"
+  ],
+  [
+   "⛽",
+   "Tanken",
+   "E10 ab 1,76 € (Gross-Umstadt), Diesel ab 1,99 €"
+  ]
+ ],
+ "mitmachen": [
+  [
+   "📣",
+   "Blitzer & Stau",
+   "Gesehen? Auf bdkng.de melden"
+  ],
+  [
+   "🤖",
+   "BDKNG-KI",
+   "Frag einfach: Müll, Termine, Öffnungszeiten"
+  ],
+  [
+   "📅",
+   "Termin melden",
+   "Dein Verein feiert? Einfach eintragen"
+  ]
+ ]
+}
