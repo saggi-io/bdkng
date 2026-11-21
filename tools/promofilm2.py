@@ -12,8 +12,8 @@ def karte_szene(t, dur, alt=False):
     """Speisekarte: Karte fährt durchs Bild, darüber Überschrift."""
     im = Image.new('RGB', (W, H), SCHW); d = ImageDraw.Draw(im)
     a = ease(t / 0.4)
-    d.text((W // 2, 150 - int((1 - a) * 80)), 'NEU', font=F(BLACK, 90), fill=ORANGE, anchor='ma')
-    d.text((W // 2, 255), 'Speisekarte', font=F(BLACK, 150 if not alt else 160), fill=WH, anchor='ma')
+    d.text((W // 2, 150 - int((1 - a) * 80)), 'BEISPIEL · UNSER ERSTER EINTRAG', font=F(BLACK, 54), fill=ORANGE, anchor='ma')
+    d.text((W // 2, 255), 'Speisekarten', font=F(BLACK, 140 if not alt else 150), fill=WH, anchor='ma')
     d.text((W // 2, 430), 'Kebab & Pizzahaus Bad König', font=F('Inter-Bold.otf', 58 if not alt else 62), fill=CR, anchor='ma')
     # Kartenausschnitt: von links oben (Drehspieß) nach rechts (Pizza), dann runter (Falafel/Getränke)
     bw, bh = 820, 840; p = min(1, t / max(0.1, dur - 0.3))
@@ -26,7 +26,7 @@ def karte_szene(t, dur, alt=False):
     im.paste(ab, (60, yy), m)
     d = ImageDraw.Draw(im); y2 = yy + ab.height + 50
     if t > 0.8:
-        for j, (txt, bg, fg) in enumerate([('Döner · Pizza · Pide', ORANGE, SCHW), ('Mit Preisen – direkt anrufen', LIME, SCHW)]):
+        for j, (txt, bg, fg) in enumerate([('Döner · Pizza · Pide', ORANGE, SCHW), ('Alle Wirtschaften gelistet', LIME, SCHW)]):
             if t > 0.8 + j * 0.35:
                 fo = F(BLACK, 60 if not alt else 64); w = d.textlength(txt, font=fo) + 90
                 d.rounded_rectangle([W // 2 - w // 2, y2, W // 2 + w // 2, y2 + 105], 52, fill=bg)
@@ -146,16 +146,56 @@ JUNG2 = [(1.2, cover), (0.7, intro),
 
 # ---------- Drei zusätzliche Seiten (21.11.2026): Wirte, Vereine, Alt bewährt ----------
 SEITEN = {
-  'wirte': ('Für Wirtinnen & Wirte', 'Schickt uns eure Karte!',
-            [('🍽️', 'Alle Wirtschaften', 'Kneipe, Café, Restaurant, Imbiss'), ('📸', 'Einfach schicken', 'Speisekarte als Foto oder PDF an info@bdkng.de'), ('🥗', 'Mittagstisch', 'Wochenkarte schicken – wir stellen sie online')],
-            'Kostenlos · info@bdkng.de'),
-  'vereine': ('Für Vereine & Veranstalter', 'Keine Terminkollision',
-              [('🔍', 'Wunschtermin prüfen', 'Ist an eurem Tag schon was los in Bad König?'), ('📅', 'Termin melden', 'Euer Fest, Konzert oder Basar – nach Prüfung online'), ('🤝', 'Alle sehen es', 'Andere Vereine planen drumherum')],
-              'bdkng.de/termine.html'),
+  'wirte': ('Für Wirte, Betreiber & Eigentümer', 'Schickt uns eure Karte!',
+            [('🍽️', 'Alle Wirtschaften', 'Kneipe, Café, Restaurant, Imbiss – auf unserer Seite kompakt'), ('📸', 'Einfach schicken', 'Speisekarte als Foto oder PDF an info@bdkng.de'), ('🥗', 'Mittagstisch', 'Wochenkarte schicken – wir stellen sie online')],
+            'Kostenlos – über einen Kaffee freuen wir uns'),
+  'vereine': ('Für Vereine & Veranstalter', 'Keine Terminkollision –\nmehr Gäste für alle',
+              [('🔍', 'Wunschtermin prüfen', 'Alle bekannten Termine in Bad König auf einen Blick'), ('📅', 'Termin melden', 'Euer Fest, Konzert oder Basar – nach Prüfung online'), ('🤝', 'Alle sehen es', 'Andere Vereine planen drumherum')],
+              'bdkng.de/ehrenamt.html'),
+  'quiz': ('Geplant', 'Das BDKNG-Quiz',
+           [('🧠', 'Wie gut kennst du Bad König?', 'Geschichte, Ortsteile, Vereine'), ('📲', 'Mitraten', 'Direkt auf dem Handy'), ('🔔', 'Bald auf bdkng.de', 'Folgen, um es nicht zu verpassen')],
+           'Demnächst auf bdkng.de'),
   'bewaehrt': ('Alt bewährt', 'Jeden Tag für dich',
                [('⛽', 'Tankpreise', 'Günstigste Tankstelle rund um Bad König'), ('📅', 'Termine', 'Was ist los – heute, diese Woche, am Wochenende'), ('🚨', 'Blitzer & Stau', 'Warnen und selbst melden')],
                'Alles auf bdkng.de'),
 }
+
+
+LISTE = [('Biergärten & Gasthäuser', 'Die alte Scheune · Gasthof Zur Krone · Eulbacher Hof · Landhotel Zur Post · Zum grünen Baum (Gumpersberg) · Zum Grünen Baum (Kimbachtal) · Mühlenstall an der Bruchmühle'),
+         ('Restaurants', 'Wandelhalle · Schönberger Hof · Poseidon Zum Seeblick · Vela Luka · Wacht am Rhein · China-Restaurant Lotus · Odenwald-Therme'),
+         ('Bier, Bars & Kneipen', 'Fafnirkeller (BannenBerger) · Empire Bar · Sascha\'s Kneipsche'),
+         ('Imbiss', 'El Greco · Hey Sushi · Kebab & Pizzahaus · Keyma Grill · Döner Pizzeria Odenwald'),
+         ('Cafés & Bäckereien', 'Kaffee-Kännchen · ENDLICH · Dolce Vita · Café am See · Café Göttmann · Backhaus Bickert · Bäckerei Wilpert')]
+
+def liste_malen(im, y, kopf, text, t, fs=42, w=None):
+    d = ImageDraw.Draw(im)
+    for i, (g, n) in enumerate(LISTE):
+        p = ease((t - 0.3 - i * 0.35) / 0.4)
+        if p <= 0: continue
+        lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
+        ld.text((70, y), g.upper(), font=F('Inter-Bold.otf', int(fs * 0.85)), fill=kopf + (int(255 * p),))
+        fz = F('Inter-Bold.otf', fs); ls = wrap(ld, n, fz, (w or W - 140))
+        for j, l in enumerate(ls): ld.text((70, y + int(fs * 1.2) + j * int(fs * 1.22)), l, font=fz, fill=text + (int(255 * p),))
+        im.alpha_composite(lay); y += int(fs * 1.2) + len(ls) * int(fs * 1.22) + int(fs * 0.6)
+    return y
+
+def alt_liste(t):
+    im = Image.new('RGB', (W, H), GR); d = ImageDraw.Draw(im)
+    im.paste(headimg(), (0, 70)); d.rectangle([0, 70 + HH, W, 70 + HH + 12], fill=GOLD)
+    top = 70 + HH + 50; im = im.convert('RGBA'); d = ImageDraw.Draw(im)
+    d.text((W // 2, top), 'Alle Wirtschaften auf bdkng.de', font=F(BLACK, 68), fill=GOLD, anchor='ma')
+    liste_malen(im, top + 110, CR, WH, t, 40)
+    return im.convert('RGB')
+
+def jung_liste(t):
+    import abendvideo as AV
+    im, d, TOP = AV.basis(t); im = im.convert('RGBA'); a = ease(t / 0.5)
+    AV.text_alpha(im, (60, TOP + 50), 'UND ALLE ANDEREN', AV.K.f('Inter-Bold.otf', 40), (255, 255, 255), a)
+    AV.text_alpha(im, (60, TOP + 105), 'Alle Wirtschaften', AV.K.f('InterDisplay-Black.otf', 84), (255, 255, 255), a)
+    lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); ImageDraw.Draw(lay).rounded_rectangle([40, TOP + 230, W - 40, TOP + 1085], 36, fill=(255, 255, 255, int(235 * a))); im.alpha_composite(lay)
+    liste_malen(im, TOP + 260, (214, 84, 60), AV.K.TEXT, t, 33, W - 160)
+    AV.fuss(im.convert('RGB') if False else im, 'Alle auf bdkng.de/genuss.html')
+    return im.convert('RGB')
 
 def alt_tafel(key):
     import abendvideo as AV
@@ -166,7 +206,7 @@ def alt_tafel(key):
         top = 70 + HH + 70; a = ease(t / 0.4)
         lay = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
         ld.text((W // 2, top), ueber, font=F('Inter-Bold.otf', 56), fill=CR + (int(255 * a),), anchor='ma')
-        ft, L, sz = fit2(ld, titel, 104, W - 100)
+        ft, L, sz = fit2(ld, titel, 86, W - 100)
         for i, l in enumerate(L): ld.text((W // 2, top + 90 + i * int(sz * 1.1)), l, font=ft, fill=GOLD + (int(255 * a),), anchor='ma')
         im = im.convert('RGBA'); im.alpha_composite(lay)
         y = top + 110 + len(L) * int(sz * 1.1) + 20
@@ -174,17 +214,21 @@ def alt_tafel(key):
             p = ease((t - 0.5 - i * 0.55) / 0.4)
             if p <= 0: continue
             x0 = 60 + int((1 - p) * -200); lay = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
-            fz = F('Inter-Bold.otf', 54); ls = wrap(ld, txt, fz, W - 120 - (x0 + 190))[:2]; h = 120 + len(ls) * 66
+            fz = F('Inter-Bold.otf', 48); ls = wrap(ld, txt, fz, W - 120 - (x0 + 190))[:3]; h = 104 + len(ls) * 58
             ld.rounded_rectangle([x0, y, W - 60, y + h], 34, fill=CR + (int(250 * p),))
             ld.rounded_rectangle([x0 + 24, y + 24, x0 + 164, y + 164 if h > 180 else y + h - 24], 28, fill=WH + (int(255 * p),))
-            ld.text((x0 + 190, y + 22), kk, font=F(BLACK, 64), fill=GR + (int(255 * p),))
-            for j, l in enumerate(ls): ld.text((x0 + 190, y + 100 + j * 66), l, font=fz, fill=DK + (int(255 * p),))
+            ks = 60
+            while F(BLACK, ks).getlength(kk) > W - 120 - (x0 + 190): ks -= 4
+            ld.text((x0 + 190, y + 22), kk, font=F(BLACK, ks), fill=GR + (int(255 * p),))
+            for j, l in enumerate(ls): ld.text((x0 + 190, y + 92 + j * 58), l, font=fz, fill=DK + (int(255 * p),))
             im.alpha_composite(lay)
             e = AV.K.emoji(em, 96)
             if e: im.paste(e, (x0 + 94 - e.width // 2, y + min(h, 188) // 2 - e.height // 2), e.split()[3].point(lambda v: int(v * p)))
-            y += h + 30
+            y += h + 24
         if t > 0.5 + 3 * 0.55:
-            ld = ImageDraw.Draw(im); fo = F(BLACK, 66); w = ld.textlength(fuss, font=fo) + 100
+            ld = ImageDraw.Draw(im); gs = 66
+            while F(BLACK, gs).getlength(fuss) > W - 220: gs -= 4
+            fo = F(BLACK, gs); w = ld.textlength(fuss, font=fo) + 100
             ld.rounded_rectangle([W // 2 - w // 2, H - 250, W // 2 + w // 2, H - 140], 55, fill=GOLD)
             ld.text((W // 2, H - 195), fuss, font=fo, fill=DK, anchor='mm')
         return im.convert('RGB')
@@ -193,13 +237,16 @@ def alt_tafel(key):
 def alt_szenen():
     sc = [(1.4, cover),
           (2.2, lambda t: alt_frame('Neu auf\nbdkng.de', t, 2.2)),
+          (2.6, lambda t: alt_frame('Speisekarten\nder Königer\nRestaurants', t, 2.6)),
           (4.0, lambda t: karte_szene(t, 4.0, True)),
+          (7.0, alt_liste),
           (3.4, lambda t: leiste_szene(t, True)),
           (3.0, lambda t: wirtschaften(t, True)),
           (4.4, alt_tafel('wirte')),
           (4.4, alt_tafel('vereine')),
           (4.2, lambda t: ki_chat(t, True)),
           (4.4, alt_tafel('bewaehrt')),
+          (4.4, alt_tafel('quiz')),
           (2.8, lambda t: app_szene(t, True)),
           (2.6, lambda t: alt_social(t, 2.6)),
           (2.6, lambda t: alt_frame('bdkng.de', t, 2.6, True))]
@@ -217,8 +264,8 @@ if __name__ == '__main__':
         fr = [karte_szene(2.0, 3.0), leiste_szene(2.0), wirtschaften(2.0), ki_chat(3.0), app_szene(1.5), karte_szene(3, 4, True), leiste_szene(3, True), ki_chat(3.5, True)]
         c = Image.new('RGB', (270 * len(fr), 480)); [c.paste(x.resize((270, 480)), (i * 270, 0)) for i, x in enumerate(fr)]; c.save('/tmp/film/probe-neu.jpg')
     elif w == 'probe3':
-        fr = [alt_tafel(k)(4.0) for k in ('wirte', 'vereine', 'bewaehrt')]
-        c = Image.new('RGB', (360 * 3, 640)); [c.paste(x.resize((360, 640)), (i * 360, 0)) for i, x in enumerate(fr)]; c.save('/tmp/film/probe-alt3.jpg')
+        fr = [alt_tafel(k)(4.0) for k in ('wirte', 'vereine', 'quiz')] + [alt_liste(6.5)]
+        c = Image.new('RGB', (360 * 4, 640)); [c.paste(x.resize((360, 640)), (i * 360, 0)) for i, x in enumerate(fr)]; c.save('/tmp/film/probe-alt3.jpg')
     elif w == 'jungc': pass
     elif w == 'jung':
         render(JUNG2, '/tmp/film/neu-jung-stumm.mp4'); mit_musik('/tmp/film/neu-jung-stumm.mp4', B + '/assets/musik/delosound-upbeat-summer-pop-368301.mp3', '/tmp/film/bdkng-neuerungen-jung.mp4')
@@ -237,10 +284,10 @@ def jung_c():
         fk = A.K.f('Inter-Bold.otf', 40); bw = d.textlength('FÜR DICH', font=fk) + 60
         d.rounded_rectangle([W / 2 - bw / 2, 650, W / 2 + bw / 2, 720], 35, fill=WEI); d.text((W // 2, 685), 'FÜR DICH', font=fk, fill=(214, 84, 60), anchor='mm')
         s = 1 + 0.06 * (1 - A.ease(t / 0.35)); ft = A.K.f('InterDisplay-Black.otf', int(112 * s))
-        for i, l in enumerate(['Döner-Karte,', 'Sprit & Wetter', 'immer dabei']):
+        for i, l in enumerate(['Speisekarten', 'der Königer', 'Restaurants']):
             d.text((W // 2, 840 + i * 130), l, font=ft, fill=WEI, anchor='mm')
         a = A.ease((t - 0.5) / 0.4)
-        u = 'Speisekarte · Sprit · Wetter · KI · Melder'
+        u = 'aktuell · Ehrenamt · KI · bald: Quiz'
         if a > 0: A.text_alpha(im, (W // 2 - d.textlength(u, font=A.K.f('Inter-Bold.otf', 44)) // 2, 1300), u, A.K.f('Inter-Bold.otf', 44), WEI, a)
         return im.convert('RGB')
     def karten(ueber, titel, liste, quelle):
@@ -267,8 +314,8 @@ def jung_c():
         return f
     def karte_c(t, dur=3.2):
         im, d, TOP = A.basis(t); a = A.ease(t / 0.5)
-        A.text_alpha(im, (60, TOP + 50), 'NEU · GENUSS'.upper(), A.K.f('Inter-Bold.otf', 40), WEI, a)
-        A.text_alpha(im, (60, TOP + 105), 'Speisekarte', A.K.f('InterDisplay-Black.otf', 84), WEI, a)
+        A.text_alpha(im, (60, TOP + 50), 'BEISPIEL · UNSER ERSTER EINTRAG', A.K.f('Inter-Bold.otf', 40), WEI, a)
+        A.text_alpha(im, (60, TOP + 105), 'Speisekarten', A.K.f('InterDisplay-Black.otf', 84), WEI, a)
         bw, bh = 820, 520; p = min(1, t / max(0.1, dur - 0.3))
         pts = [(0, 0), (780, 0), (780, 1126), (0, 1126)]
         seg = p * (len(pts) - 1); i = min(int(seg), len(pts) - 2); f = A.ease(seg - i)
@@ -279,7 +326,7 @@ def jung_c():
         im.paste(fr, (48, yy), A.K.maske(fr.size, 36))
         d = ImageDraw.Draw(im); y2 = yy + fr.height + 30
         if t > 0.8: d.text((W // 2, y2), 'Kebab & Pizzahaus Bad König', font=A.K.f('InterDisplay-Black.otf', 56), fill=WEI, anchor='mt')
-        if t > 1.2: d.text((W // 2, y2 + 80), 'Mit Preisen – direkt anrufen', font=A.K.f('Inter-Bold.otf', 46), fill=WEI, anchor='mt')
+        if t > 1.2: d.text((W // 2, y2 + 80), 'Alle anderen Wirtschaften sind gelistet', font=A.K.f('Inter-Bold.otf', 46), fill=WEI, anchor='mt')
         A.fuss(im, 'Speisekarte: Kebab & Pizzahaus Bad König'); return im
     def chat_c(t):
         im, d, TOP = A.basis(t); a = A.ease(t / 0.5)
@@ -294,14 +341,15 @@ def jung_c():
             for i, s in enumerate(['Dürüm: 8,00 €', 'mit Käse: 8,50 €', 'Falafel-Dürüm: 8,00 €']):
                 if t >= 1.4 + i * 0.35: y = bubble(d, (0, y), s, f, (255, 255, 255), A.K.TEXT, False)
         A.fuss(im, 'Auch Müll, Termine, Rathaus und Wetter'); return im
-    neu1 = [('🥙', 'Speisekarte', 'Döner, Pizza, Pide – mit Preisen'), ('⛽', 'Wetter & Sprit', 'Immer oben im Blick'), ('🍻', 'Wirtschaften', 'Kneipen, Biergärten, Restaurants')]
+    neu1 = [('🍽️', 'Speisekarten', 'Der Königer Restaurants – aktuell'), ('⛽', 'Wetter & Sprit', 'Immer oben im Blick'), ('🍻', 'Wirtschaften', 'Kneipen, Biergärten, Restaurants')]
     neu2 = [('🤖', 'BDKNG-KI', 'Frag: Was kostet ein Dürüm?'), ('📣', 'Blitzer & Stau', 'Gesehen? Auf bdkng.de melden'), ('📲', 'Als App', 'Mit einem Klick aufs Handy')]
     return [(2.4, hook),
             (0.4 + 3 * 0.45 + 2.2, karten('Neu auf bdkng.de', 'Was ist neu? (1/2)', neu1, 'Alles kostenlos auf bdkng.de')),
             (3.4, karte_c),
+            (7.0, jung_liste),
             (3.4, chat_c),
             (0.4 + 3 * 0.45 + 2.2, karten('Neu auf bdkng.de', 'Was ist neu? (2/2)', neu2, 'Alles kostenlos auf bdkng.de')),
-            *[(0.4 + 3 * 0.45 + 2.4, karten(SEITEN[k][0], SEITEN[k][1], SEITEN[k][2], SEITEN[k][3])) for k in ('wirte', 'vereine', 'bewaehrt')],
+            *[(0.4 + 3 * 0.45 + 2.4, karten(SEITEN[k][0], SEITEN[k][1], SEITEN[k][2], SEITEN[k][3])) for k in ('wirte', 'vereine', 'bewaehrt', 'quiz')],
             (2.4, A.ende)]
 
 if __name__ == '__main__' and sys.argv[1] == 'jungc':
