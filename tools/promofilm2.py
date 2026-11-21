@@ -143,14 +143,63 @@ JUNG2 = [(1.2, cover), (0.7, intro),
          (2.0, app_szene),
          (2.0, folg), (2.4, endcard)]
 
+
+# ---------- Drei zusätzliche Seiten (21.11.2026): Wirte, Vereine, Alt bewährt ----------
+SEITEN = {
+  'wirte': ('Für Wirtinnen & Wirte', 'Schickt uns eure Karte!',
+            [('🍽️', 'Alle Wirtschaften', 'Kneipe, Café, Restaurant, Imbiss'), ('📸', 'Einfach schicken', 'Speisekarte als Foto oder PDF an info@bdkng.de'), ('🥗', 'Mittagstisch', 'Wochenkarte schicken – wir stellen sie online')],
+            'Kostenlos · info@bdkng.de'),
+  'vereine': ('Für Vereine & Veranstalter', 'Keine Terminkollision',
+              [('🔍', 'Wunschtermin prüfen', 'Ist an eurem Tag schon was los in Bad König?'), ('📅', 'Termin melden', 'Euer Fest, Konzert oder Basar – nach Prüfung online'), ('🤝', 'Alle sehen es', 'Andere Vereine planen drumherum')],
+              'bdkng.de/termine.html'),
+  'bewaehrt': ('Alt bewährt', 'Jeden Tag für dich',
+               [('⛽', 'Tankpreise', 'Günstigste Tankstelle rund um Bad König'), ('📅', 'Termine', 'Was ist los – heute, diese Woche, am Wochenende'), ('🚨', 'Blitzer & Stau', 'Warnen und selbst melden')],
+               'Alles auf bdkng.de'),
+}
+
+def alt_tafel(key):
+    import abendvideo as AV
+    ueber, titel, items, fuss = SEITEN[key]
+    def f(t):
+        im = Image.new('RGB', (W, H), GR); d = ImageDraw.Draw(im)
+        im.paste(headimg(), (0, 70)); d.rectangle([0, 70 + HH, W, 70 + HH + 12], fill=GOLD)
+        top = 70 + HH + 70; a = ease(t / 0.4)
+        lay = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
+        ld.text((W // 2, top), ueber, font=F('Inter-Bold.otf', 56), fill=CR + (int(255 * a),), anchor='ma')
+        ft, L, sz = fit2(ld, titel, 104, W - 100)
+        for i, l in enumerate(L): ld.text((W // 2, top + 90 + i * int(sz * 1.1)), l, font=ft, fill=GOLD + (int(255 * a),), anchor='ma')
+        im = im.convert('RGBA'); im.alpha_composite(lay)
+        y = top + 110 + len(L) * int(sz * 1.1) + 20
+        for i, (em, kk, txt) in enumerate(items):
+            p = ease((t - 0.5 - i * 0.55) / 0.4)
+            if p <= 0: continue
+            x0 = 60 + int((1 - p) * -200); lay = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
+            fz = F('Inter-Bold.otf', 54); ls = wrap(ld, txt, fz, W - 120 - (x0 + 190))[:2]; h = 120 + len(ls) * 66
+            ld.rounded_rectangle([x0, y, W - 60, y + h], 34, fill=CR + (int(250 * p),))
+            ld.rounded_rectangle([x0 + 24, y + 24, x0 + 164, y + 164 if h > 180 else y + h - 24], 28, fill=WH + (int(255 * p),))
+            ld.text((x0 + 190, y + 22), kk, font=F(BLACK, 64), fill=GR + (int(255 * p),))
+            for j, l in enumerate(ls): ld.text((x0 + 190, y + 100 + j * 66), l, font=fz, fill=DK + (int(255 * p),))
+            im.alpha_composite(lay)
+            e = AV.K.emoji(em, 96)
+            if e: im.paste(e, (x0 + 94 - e.width // 2, y + min(h, 188) // 2 - e.height // 2), e.split()[3].point(lambda v: int(v * p)))
+            y += h + 30
+        if t > 0.5 + 3 * 0.55:
+            ld = ImageDraw.Draw(im); fo = F(BLACK, 66); w = ld.textlength(fuss, font=fo) + 100
+            ld.rounded_rectangle([W // 2 - w // 2, H - 250, W // 2 + w // 2, H - 140], 55, fill=GOLD)
+            ld.text((W // 2, H - 195), fuss, font=fo, fill=DK, anchor='mm')
+        return im.convert('RGB')
+    return f
+
 def alt_szenen():
     sc = [(1.4, cover),
           (2.2, lambda t: alt_frame('Neu auf\nbdkng.de', t, 2.2)),
           (4.0, lambda t: karte_szene(t, 4.0, True)),
           (3.4, lambda t: leiste_szene(t, True)),
           (3.0, lambda t: wirtschaften(t, True)),
+          (4.4, alt_tafel('wirte')),
+          (4.4, alt_tafel('vereine')),
           (4.2, lambda t: ki_chat(t, True)),
-          (2.8, melder),
+          (4.4, alt_tafel('bewaehrt')),
           (2.8, lambda t: app_szene(t, True)),
           (2.6, lambda t: alt_social(t, 2.6)),
           (2.6, lambda t: alt_frame('bdkng.de', t, 2.6, True))]
@@ -167,6 +216,9 @@ if __name__ == '__main__':
     if w == 'probe':
         fr = [karte_szene(2.0, 3.0), leiste_szene(2.0), wirtschaften(2.0), ki_chat(3.0), app_szene(1.5), karte_szene(3, 4, True), leiste_szene(3, True), ki_chat(3.5, True)]
         c = Image.new('RGB', (270 * len(fr), 480)); [c.paste(x.resize((270, 480)), (i * 270, 0)) for i, x in enumerate(fr)]; c.save('/tmp/film/probe-neu.jpg')
+    elif w == 'probe3':
+        fr = [alt_tafel(k)(4.0) for k in ('wirte', 'vereine', 'bewaehrt')]
+        c = Image.new('RGB', (360 * 3, 640)); [c.paste(x.resize((360, 640)), (i * 360, 0)) for i, x in enumerate(fr)]; c.save('/tmp/film/probe-alt3.jpg')
     elif w == 'jungc': pass
     elif w == 'jung':
         render(JUNG2, '/tmp/film/neu-jung-stumm.mp4'); mit_musik('/tmp/film/neu-jung-stumm.mp4', B + '/assets/musik/delosound-upbeat-summer-pop-368301.mp3', '/tmp/film/bdkng-neuerungen-jung.mp4')
@@ -249,6 +301,7 @@ def jung_c():
             (3.4, karte_c),
             (3.4, chat_c),
             (0.4 + 3 * 0.45 + 2.2, karten('Neu auf bdkng.de', 'Was ist neu? (2/2)', neu2, 'Alles kostenlos auf bdkng.de')),
+            *[(0.4 + 3 * 0.45 + 2.4, karten(SEITEN[k][0], SEITEN[k][1], SEITEN[k][2], SEITEN[k][3])) for k in ('wirte', 'vereine', 'bewaehrt')],
             (2.4, A.ende)]
 
 if __name__ == '__main__' and sys.argv[1] == 'jungc':
