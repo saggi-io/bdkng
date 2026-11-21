@@ -1,0 +1,25 @@
+{
+ "rubrik": "wetter",
+ "titel": "Achtung: Warnung vor Frost",
+ "ueber": "Sa. 21.11. · 19:00 Uhr",
+ "art": "liste",
+ "zeilen": [
+  {
+   "t": "Sonntag, 22.11.: bedeckt, -2 bis 3 °C. Frost möglich",
+   "e": "☁️"
+  },
+  {
+   "t": "Montag, 23.11.: wechselnd bewölkt, -3 bis 2 °C. Frost möglich",
+   "e": "⛅"
+  },
+  {
+   "t": "Dienstag, 24.11.: wechselnd bewölkt, -5 bis 1 °C. Frost möglich",
+   "e": "⛅"
+  },
+  {
+   "t": "Amtliche WARNUNG vor FROST (Sa 22:00 bis So 09:00 Uhr)",
+   "e": "⚠️"
+  }
+ ],
+ "quelle": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev"
+}
