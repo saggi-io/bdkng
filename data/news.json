@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-21-293157622",
+    "checked": "2026-11-21",
+    "valid_until": "2026-12-01",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Fund in Bad König: Erste Ausgabe des Darmstädter Echo taucht auf",
+    "paragraphs": [
+      "Beim Aufräumen findet die 92-jährige Luise Neumeier aus Bad König die historische Zeitung vom 21. November 1945 – ein bewegendes Zeitdokument aus der Stunde null."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/landkreis-odenwaldkreis/zeitgeschichte-aus-der-schublade-echo-erstausgabe-entdeckt-6888666",
+    "zeit": "20:00"
+  },
+  {
     "id": "2026-11-21-wetter",
     "checked": "2026-11-21",
     "zeit": "19:00",
