@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-20T06:00",
+ "stand": "2026-11-21T06:00",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
   {
@@ -927,18 +927,18 @@
   {
    "date": "2026-11-28",
    "time": "17:30",
-   "liga": "F-BOL",
-   "team": "Frauen",
-   "home": "HSG Odenwald",
-   "away": "HSG Sulzbach/Leidersbach"
-  },
-  {
-   "date": "2026-11-28",
-   "time": "17:30",
    "liga": "M-BK-2",
    "team": "Männer",
    "home": "HSG Stockstadt/Mainaschaff II",
    "away": "HSG Odenwald III"
+  },
+  {
+   "date": "2026-11-28",
+   "time": "17:30",
+   "liga": "F-BOL",
+   "team": "Frauen",
+   "home": "HSG Odenwald",
+   "away": "HSG Sulzbach/Leidersbach"
   },
   {
    "date": "2026-11-28",
@@ -955,6 +955,30 @@
    "team": "Frauen",
    "home": "HSG Odenwald II",
    "away": "HSG Kahl/Kleinostheim II"
+  },
+  {
+   "date": "2026-12-05",
+   "time": "15:30",
+   "liga": "F-BOL",
+   "team": "Frauen",
+   "home": "HSG Odenwald",
+   "away": "HSG Kahl/Kleinostheim"
+  },
+  {
+   "date": "2026-12-05",
+   "time": "17:30",
+   "liga": "M-BL",
+   "team": "Männer",
+   "home": "HSG Odenwald II",
+   "away": "HSG Aschafftal II"
+  },
+  {
+   "date": "2026-12-05",
+   "time": "19:30",
+   "liga": "M-BOL",
+   "team": "Männer",
+   "home": "HSG Odenwald",
+   "away": "HSG Aschafftal"
   }
  ],
  "handball_ergebnisse": [
@@ -997,33 +1021,6 @@
  ],
  "tischtennis": [
   {
-   "date": "2026-11-12",
-   "time": "20:00",
-   "liga": "EKL",
-   "verein": "TSG Bad König",
-   "home": "TTC Mümling-Grumbach",
-   "away": "TSG Bad König 1863",
-   "erg": "7:3"
-  },
-  {
-   "date": "2026-11-12",
-   "time": "20:00",
-   "liga": "EKL",
-   "verein": "TTC Kimbach",
-   "home": "TTC Kimbach",
-   "away": "TV 1858 Beerfelden II",
-   "erg": "4:6"
-  },
-  {
-   "date": "2026-11-12",
-   "time": "20:30",
-   "liga": "E3KK",
-   "verein": "TTC Kimbach",
-   "home": "SV 1972 Ober-Hainbrunn II",
-   "away": "TTC Kimbach VI",
-   "erg": "9:1"
-  },
-  {
    "date": "2026-11-13",
    "time": "20:00",
    "liga": "E2KK",
@@ -1062,20 +1059,20 @@
   {
    "date": "2026-11-17",
    "time": "20:00",
-   "liga": "E3KK",
-   "verein": "TTC Kimbach",
-   "home": "TTC Kimbach VI",
-   "away": "KSV Reichelsheim 1892 III",
-   "erg": "1:9"
-  },
-  {
-   "date": "2026-11-17",
-   "time": "20:00",
    "liga": "Herren, 2.Kreisklasse",
    "verein": "TTC Kimbach",
    "home": "TV 1858 Beerfelden III",
    "away": "TTC Kimbach III",
    "erg": "4:0"
+  },
+  {
+   "date": "2026-11-17",
+   "time": "20:00",
+   "liga": "E3KK",
+   "verein": "TTC Kimbach",
+   "home": "TTC Kimbach VI",
+   "away": "KSV Reichelsheim 1892 III",
+   "erg": "1:9"
   },
   {
    "date": "2026-11-17",
@@ -1089,19 +1086,28 @@
   {
    "date": "2026-11-20",
    "time": "20:00",
-   "liga": "E2KK",
-   "verein": "TTC Kimbach",
-   "home": "TV 1924 Gammelsbach II",
-   "away": "TTC Kimbach III",
-   "erg": ""
-  },
-  {
-   "date": "2026-11-20",
-   "time": "20:00",
    "liga": "E3KK",
    "verein": "TTC Kimbach",
    "home": "SV Ober-Kainsbach IV",
    "away": "TTC Kimbach V",
+   "erg": "4:6"
+  },
+  {
+   "date": "2026-11-20",
+   "time": "20:00",
+   "liga": "E2KK",
+   "verein": "TTC Kimbach",
+   "home": "TV 1924 Gammelsbach II",
+   "away": "TTC Kimbach III",
+   "erg": "7:3"
+  },
+  {
+   "date": "2026-11-26",
+   "time": "20:00",
+   "liga": "E3KK",
+   "verein": "TTC Kimbach",
+   "home": "TTC Kimbach IV",
+   "away": "SV 1908 Falken-Gesäß III",
    "erg": ""
   },
   {
@@ -1111,15 +1117,6 @@
    "verein": "TTC Kimbach",
    "home": "KSG Hetschbach",
    "away": "TTC Kimbach II",
-   "erg": ""
-  },
-  {
-   "date": "2026-11-26",
-   "time": "20:00",
-   "liga": "E3KK",
-   "verein": "TTC Kimbach",
-   "home": "TTC Kimbach IV",
-   "away": "SV 1908 Falken-Gesäß III",
    "erg": ""
   },
   {
@@ -1242,19 +1239,19 @@
   {
    "date": "2026-12-10",
    "time": "20:00",
-   "liga": "E3KK",
+   "liga": "E2KK",
    "verein": "TTC Kimbach",
-   "home": "TTC Kimbach IV",
-   "away": "TV 07 Stockheim VI",
+   "home": "TV 07 Stockheim V",
+   "away": "TTC Kimbach III",
    "erg": ""
   },
   {
    "date": "2026-12-10",
    "time": "20:00",
-   "liga": "E2KK",
+   "liga": "E3KK",
    "verein": "TTC Kimbach",
-   "home": "TV 07 Stockheim V",
-   "away": "TTC Kimbach III",
+   "home": "TTC Kimbach IV",
+   "away": "TV 07 Stockheim VI",
    "erg": ""
   },
   {
