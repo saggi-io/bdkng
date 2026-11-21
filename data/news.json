@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-11-21-wetter",
+    "checked": "2026-11-21",
+    "zeit": "19:00",
+    "valid_until": "2026-11-24",
+    "categories": [
+      "wetter"
+    ],
+    "title": "WETTER · Die nächsten 3 Tage",
+    "paragraphs": [
+      "Sonntag, 22.11.: bedeckt, -2 bis 3 °C. Frost möglich  Montag, 23.11.: wechselnd bewölkt, -3 bis 2 °C. Frost möglich  Dienstag, 24.11.: wechselnd bewölkt, -5 bis 1 °C. Frost möglich",
+      "Amtliche WARNUNG vor FROST (Sa 22:00 bis So 09:00 Uhr)"
+    ],
+    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
+    "url": "https://bdkng.de"
+  },
+  {
     "id": "medien-2026-11-21-261694390",
     "checked": "2026-11-15",
     "valid_until": "2026-11-25",
