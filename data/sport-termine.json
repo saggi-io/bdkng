@@ -1,14 +1,7 @@
 {
- "stand": "2026-11-21T06:00",
+ "stand": "2026-11-21T17:40",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
-  {
-   "date": "2026-11-22",
-   "time": "13:00",
-   "home": "SG Bad König/Zell II",
-   "away": "SV Beerfelden",
-   "team": "m2"
-  },
   {
    "time": "13:00",
    "date": "2026-11-22",
@@ -982,6 +975,24 @@
   }
  ],
  "handball_ergebnisse": [
+  {
+   "date": "2026-11-21",
+   "liga": "F-BL",
+   "team": "Frauen",
+   "home": "HSG Odenwald II",
+   "away": "TuSpo Obernburg II",
+   "hg": 34,
+   "ag": 21
+  },
+  {
+   "date": "2026-11-21",
+   "liga": "F-BOL",
+   "team": "Frauen",
+   "home": "HSG Odenwald",
+   "away": "TuSpo Obernburg",
+   "hg": 3,
+   "ag": 3
+  },
   {
    "date": "2026-11-15",
    "liga": "F-BL",
