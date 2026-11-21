@@ -1,5 +1,21 @@
 [
   {
+    "id": "verkehr-live-337615240",
+    "checked": "2026-11-21",
+    "valid_until": "2026-11-22",
+    "categories": [
+      "verkehr"
+    ],
+    "title": "B45: Michelstadt Höchst im Odenwald zwischen Zell und Bad König",
+    "paragraphs": [
+      "Vorsicht auf der B45 Michelstadt Richtung Höchst im Odenwald zwischen Zell und Bad König liegt eine Mörtelwanne auf der Fahrbahn!",
+      "Stand: 21.11.2026, 12:03 Uhr"
+    ],
+    "source": "hessenschau.de Verkehrsservice",
+    "url": "https://www.hessenschau.de/verkehr/index.html#337615240",
+    "zeit": "12:05"
+  },
+  {
     "id": "medien-2026-11-21-314367882",
     "checked": "2026-11-18",
     "valid_until": "2026-11-28",
