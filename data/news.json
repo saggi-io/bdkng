@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-11-22-sport",
+    "checked": "2026-11-22",
+    "zeit": "18:31",
+    "valid_until": "2026-11-29",
+    "categories": [
+      "sport"
+    ],
+    "title": "Fußball: Die Ergebnisse vom Wochenende",
+    "paragraphs": [
+      "Fußball\n• So 22.11. · SG 1a: SG Bad König/Zell – SV Gammelsbach 4:2\n• So 22.11. · Kinzigtal: VfR Würzberg – SpVgg Kinzigtal 7:0\n• So 22.11. · Kinzigtal II: SG Vielbrunn/Würzberg II – SpVgg Kinzigtal II 8:2",
+      "Nächste Fußballspiele\n• Do 26.11., 19:30 Uhr: FC Finkenbachtal II – SpVgg Kinzigtal II\n• So 29.11., 12:30 Uhr: SpVgg Kinzigtal II – SG Rothenberg II\n• So 29.11., 14:30 Uhr: FSV Erbach – SG Bad König/Zell\n• So 29.11., 14:30 Uhr: SG Rimhorn/Neustadt II – SG Bad König/Zell II"
+    ],
+    "source": "FuPa",
+    "url": "https://bdkng.de"
+  },
+  {
     "id": "medien-2026-11-22-293123921",
     "checked": "2026-11-22",
     "valid_until": "2026-12-02",
