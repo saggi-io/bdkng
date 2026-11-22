@@ -165,7 +165,7 @@ def uebersicht(karten):
         for href, nm, info in items:
             k = nach_name.get(nm)
             knopf = ('<a class="wi-karte" href="' + ziel(k[0], k[1]) + '"' + ext_attr(k[1]) + '>' + k[1].get('emoji', '🍽️') + ' Speisekarte' + '</a>') if k else '<small class="sk-fehlt">Karte folgt</small>'
-            h.append('<li><span class="sk-nr">📍</span><div class="sk-t"><b><a href="' + href + '" target="_blank" rel="noopener">' + nm + '</a></b><span>' + info + '</span></div><div class="sk-pr">' + knopf + '</div></li>')
+            h.append('<li><span class="sk-nr">' + (k[1].get('emoji', '🍽️') if k else '📍') + '</span><div class="sk-t"><b><a href="' + (ziel(k[0], k[1]) if k else href) + '"' + ('' if k else ' target="_blank" rel="noopener"') + '>' + nm + '</a></b><span>' + info + '</span></div><div class="sk-pr">' + knopf + '</div></li>')
         h.append('</ul></section>')
     h.append('<p class="editorial-note">Du betreibst eine Wirtschaft in Bad König? Schick deine Speisekarte oder deinen Mittagstisch als JPG oder PDF an <a href="mailto:info@bdkng.de">info@bdkng.de</a> – kurz darauf ist sie hier online und die BDKNG KI kennt sie. Kostenlos. Angaben ohne Gewähr.</p></main>')
     kopf = kopf.replace('</head>', '<style>.sk-kacheln{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}.sk-kachel{display:flex;flex-direction:column;gap:2px;padding:14px;border-radius:16px;background:#141414;color:#fff!important;text-decoration:none}.sk-kachel:hover{background:#2a1d10}.sk-k-em{font-size:1.8rem}.sk-kachel small{color:#d4d4d4}.sk-fehlt{color:#999}.wi-karte{display:inline-block;background:#141414;color:#fff!important;border-radius:999px;padding:6px 12px;font-weight:700;font-size:.85rem;text-decoration:none;white-space:nowrap}</style></head>', 1)
@@ -192,6 +192,8 @@ def main():
     g = re.sub(r'<a class="wi-karte" href="[^"]*"[^>]*>[^<]*</a>', '', g)
     for slug, d in karten.items():
         nm = e(d.get('genuss_name') or d['name'])
+        # Name verlinkt auf unsere Speisekarten-Seite statt auf Google Maps (Maps-Link steht dort beim Adress-Knopf)
+        g = re.sub(r'<a href="[^"]*"(?: target="_blank" rel="noopener")?><b>' + re.escape(nm) + r'</b></a>', '<a href="' + ziel(slug, d) + '"><b>' + nm + '</b></a>', g, count=1)
         pat = re.compile(r'(<b>' + re.escape(nm) + r'</b></a><span>[^<]*</span>)')
         g, n = pat.subn(lambda m: m.group(1) + '<a class="wi-karte" href="' + ziel(slug, d) + '"' + ext_attr(d) + '>' + d.get('emoji', '🍽️') + ' Speisekarte' + (' & Mittagstisch' if mittag_gueltig(d.get('mittagstisch')) else ' ansehen') + '</a>', g, count=1)
         if not n: print('Hinweis: kein Genuss-Eintrag gefunden für', d['name'])
