@@ -1,5 +1,25 @@
 [
   {
+    "id": "2026-11-22-muell",
+    "checked": "2026-11-22",
+    "zeit": "19:05",
+    "valid_until": "2026-11-30",
+    "categories": [
+      "muell"
+    ],
+    "title": "MÜLL · Diese Woche in Bad König",
+    "paragraphs": [
+      "Dienstag, 24.11. · Restmüll Etzen-Gesäß, Fürstengrund",
+      "Freitag, 27.11. · Gelbe Säcke Etzen-Gesäß, Fürstengrund, Gumpersberg, Momart, Nieder-Kinzig, Ober-Kinzig, Zell",
+      "Danach: Nächste Woche (30.11.–06.12.)",
+      "Dienstag, 01.12. · Biotonne Kernstadt, Etzen-Gesäß, Fürstengrund, Gumpersberg, Kimbach, Momart, Nieder-Kinzig, Ober-Kinzig, Zell",
+      "Mittwoch, 02.12. · Gelbe Säcke Kernstadt, Kimbach",
+      "Behälter und Säcke laut RESO am Abfuhrtag ab 06:00 Uhr bereitstellen."
+    ],
+    "source": "https://reso-odenwald.abfallkalender.services/php/Muellkalender.php?pfad=Deutsch.muellkalender&ort=Bad%20K%C3%B6nig&ot=Alle&jahr=2026",
+    "url": "https://reso-odenwald.abfallkalender.services/php/Muellkalender.php?pfad=Deutsch.muellkalender&ort=Bad%20K%C3%B6nig&ot=Alle&jahr=2026"
+  },
+  {
     "id": "2026-11-22-wetter",
     "checked": "2026-11-22",
     "zeit": "19:00",
@@ -670,26 +690,6 @@
     ],
     "source": "FuPa",
     "url": "https://bdkng.de"
-  },
-  {
-    "id": "2026-11-15-muell",
-    "checked": "2026-11-15",
-    "valid_until": "2026-11-23",
-    "categories": [
-      "muell"
-    ],
-    "title": "MÜLL · Diese Woche in Bad König",
-    "paragraphs": [
-      "Montag, 16.11. · Papier Kernstadt, Etzen-Gesäß, Fürstengrund, Kimbach",
-      "Dienstag, 17.11. · Biotonne Kernstadt, Etzen-Gesäß, Fürstengrund, Gumpersberg, Kimbach, Momart, Nieder-Kinzig, Ober-Kinzig, Zell",
-      "Mittwoch, 18.11. · Gelbe Säcke Kernstadt, Kimbach",
-      "Danach: Nächste Woche (23.11.–29.11.)",
-      "Dienstag, 24.11. · Restmüll Etzen-Gesäß, Fürstengrund",
-      "Freitag, 27.11. · Gelbe Säcke Etzen-Gesäß, Fürstengrund, Gumpersberg, Momart, Nieder-Kinzig, Ober-Kinzig, Zell",
-      "Behälter und Säcke laut RESO am Abfuhrtag ab 06:00 Uhr bereitstellen. Für Montag also schon heute Abend rausstellen."
-    ],
-    "source": "https://reso-odenwald.abfallkalender.services/php/Muellkalender.php?pfad=Deutsch.muellkalender&ort=Bad%20K%C3%B6nig&ot=Alle&jahr=2026",
-    "url": "https://reso-odenwald.abfallkalender.services/php/Muellkalender.php?pfad=Deutsch.muellkalender&ort=Bad%20K%C3%B6nig&ot=Alle&jahr=2026"
   },
   {
     "id": "medien-2026-11-15-285802190",
