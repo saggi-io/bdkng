@@ -86,12 +86,13 @@ def seite(slug, d):
         if m.get('text'): h.append('<p>' + e(m['text']) + '</p>')
         h.append('</section>')
     gruppen = d.get('gruppen') or []
-    if gruppen and ext:
+    auswahl = bool(ext) and not (d.get('bilder') or d.get('pdf'))  # kommt eine echte Karte per Mail, wird sie voll angezeigt
+    if gruppen and auswahl:
         for i, gr in enumerate(gruppen):
             h.append('<section class="subpanel sk-gruppe" id="k' + str(i) + '"><h2>' + e(gr['titel']) + '</h2><p class="sk-hin">' + e(gr.get('hinweis') or 'Eine kleine Auswahl – alle Gerichte und aktuellen Preise auf der kompletten Speisekarte.') + '</p>' + liste_html(gr) + '</section>')
     if ext:
         h.append('<section class="subpanel sk-gruppe sk-extern"><h2>📋 Die komplette Speisekarte</h2><p>Alle Gerichte und aktuellen Preise findest du direkt ' + ('bei ' + e(d['extern_name']) if d.get('extern_name') else 'beim Lokal') + (' – dort kannst du auch online bestellen' if d.get('bestellen') else '') + '.</p><p>' + extknopf + '</p></section>')
-    if gruppen and not ext:
+    if gruppen and not auswahl:
         h.append('<section class="subpanel sk-such"><label class="sk-filter"><span aria-hidden="true">🔍</span><input type="search" id="skFilter" placeholder="Was hast du Hunger drauf?" aria-label="Speisekarte durchsuchen" autocomplete="off"></label>'
                  '<div class="sk-sprung" role="navigation" aria-label="Kategorien">' + ''.join('<a href="#k' + str(i) + '">' + e(gr['titel']) + '</a>' for i, gr in enumerate(gruppen)) + '</div></section>')
         for i, gr in enumerate(gruppen):
