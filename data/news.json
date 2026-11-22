@@ -46,21 +46,6 @@
     "zeit": "18:00"
   },
   {
-    "id": "medien-2026-11-21-234851736",
-    "checked": "2026-11-18",
-    "valid_until": "2026-11-28",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Landratswahl: Odenwälder SPD stellt sich deutlich hinter Kandidatin Rekha Krings",
-    "paragraphs": [
-      "Die Odenwälder SPD hat Rekha Krings mit großer Mehrheit zur Kandidatin für die Landratswahl im nächsten Jahr nominiert. Welche Schwerpunkte die 40-jährige Juristin setzen will."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/landkreis-odenwaldkreis/landratswahl-spd-stellt-sich-deutlich-hinter-rekha-krings-6674135",
-    "zeit": "13:00"
-  },
-  {
     "id": "verkehr-live-337615240",
     "checked": "2026-11-21",
     "valid_until": "2026-11-22",
@@ -90,22 +75,6 @@
     "source": "Echo Online",
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/vetter-weihnachtskarten-erhaeltlich-6907574",
     "zeit": "11:00"
-  },
-  {
-    "id": "2026-11-20-wetter",
-    "checked": "2026-11-20",
-    "zeit": "19:00",
-    "valid_until": "2026-11-23",
-    "categories": [
-      "wetter"
-    ],
-    "title": "WETTER · Die nächsten 3 Tage",
-    "paragraphs": [
-      "Samstag, 21.11.: wechselnd bewölkt, 1 bis 7 °C  Sonntag, 22.11.: bedeckt, -1 bis 3 °C. Frost möglich  Montag, 23.11.: wechselnd bewölkt, -2 bis 2 °C. Frost möglich",
-      "Amtliche WARNUNG vor DAUERREGEN (Fr 00:00 bis Sa 00:00 Uhr)  Amtliche WARNUNG vor GLÄTTE (Sa 02:00 bis Sa 09:00 Uhr)"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
-    "url": "https://bdkng.de"
   },
   {
     "id": "2026-11-20-termine",
@@ -385,20 +354,6 @@
     ],
     "source": "Kurgesellschaft Bad König / Odenwald-Therme (Instagram)",
     "url": "https://www.instagram.com/odenwaldtherme/"
-  },
-  {
-    "id": "medien-2026-11-17-265273185",
-    "checked": "2026-11-11",
-    "valid_until": "2026-11-21",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Pogrom-Gedenken Bad König: Antisemitismusbeauftragter warnt vor „Schon wieder“",
-    "paragraphs": [
-      "Beim Pogrom-Gedenken in Bad König sieht Hessens Antisemitismusbeauftragter Uwe Becker Deutschland auf dem Weg vom „Nie wieder“ zum „Schon wieder“."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/bad-koenig-erlebt-pogrom-gedenken-das-in-die-zukunft-weist-6792647"
   },
   {
     "id": "q-2026-11-17-mo529488835",
@@ -771,27 +726,6 @@
     "valid_until": "2026-11-26"
   },
   {
-    "id": "medien-2026-11-11-236788338",
-    "checked": "2026-11-11",
-    "valid_until": "2026-11-21",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Bad Königs Kurpark als märchenhafter Ort: „Christmas Lights“ leuchten wieder",
-    "paragraphs": [
-      "Die „Christmas Lights“ mit ihren faszinierenden Lichtinstallationen erleben ihre sechste Saison in Bad König. Wer Trubel entgehen möchte, kann diesmal feste Einlasszeiten buchen.",
-      "Frei zugänglich bei Odenwälder Journal: Bad König. Tausende Lichter, funkelnde Kunstwerke und eine Geschichte, die mitten ins Herz trifft: Vom 13. November bis zum 10. Januar verwandelt Christmas Lights 6.0 den Kurpark erneut in ein Winterwunderland. Doch hinter der märchenhaften Kulisse stecken …"
-    ],
-    "source": "Odenwälder Journal",
-    "url": "https://www.odw-journal.de/hinter-den-kulissen-von-christmas-lights-so-entsteht-bad-koenigs-magisches-wintermaerchen/",
-    "weitere": [
-      {
-        "source": "Echo Online",
-        "url": "https://www.echo-online.de/lokales/odenwaldkreis/erbach-odenwaldkreis/verzauberter-kurpark-odenwaelder-lichter-spektakel-startet-6697196"
-      }
-    ]
-  },
-  {
     "id": "stadt-2026-11-10-gewaesserentwicklung",
     "checked": "2026-11-10",
     "valid_until": "2026-11-24",
@@ -805,38 +739,6 @@
     ],
     "source": "Stadt Bad König",
     "url": "https://www.badkoenig.de/aktuelle-nachrichten/gewaesserentwicklung-an-der-muemling/"
-  },
-  {
-    "id": "zell-2026-11-06-frei",
-    "checked": "2026-11-07",
-    "valid_until": "2026-11-21",
-    "categories": [
-      "verkehr",
-      "aktuell"
-    ],
-    "title": "Zell: Ortsdurchfahrt seit Freitag wieder frei",
-    "paragraphs": [
-      "Die Vollsperrung der Ortsdurchfahrt Bad König/Zell ist aufgehoben: Seit Freitagnachmittag (6.11.) können Pkw den Abschnitt wieder befahren, nachdem er rund zwei Wochen gesperrt war.",
-      "Laut Stadtverwaltung laufen noch letzte Asphalt- und Fugenarbeiten; danach wird die Baustelle geräumt.",
-      "Die Ortsdurchfahrt bleibt weiterhin offizielle Pkw-Umleitung, bis der Neubau der benachbarten B-45-Brücke komplett abgeschlossen ist."
-    ],
-    "source": "Odenwälder Journal · 5.11.2026 (Ankündigung der Freigabe); Hessen Mobil zur Sperrung",
-    "url": "https://www.odw-journal.de/freie-fahrt-bei-bad-koenig-zell-ortsdurchfahrt-ab-freitagnachmittag-geoeffnet"
-  },
-  {
-    "id": "polizei-opel-ober-kinzig-2026-11-06",
-    "checked": "2026-11-07",
-    "valid_until": "2026-11-21",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Ober-Kinzig: Brauner Opel gestohlen – Kripo sucht Zeugen",
-    "paragraphs": [
-      "Zwischen Mittwochabend (4.11.) und Donnerstagabend (5.11.) wurde in Ober-Kinzig ein brauner Opel Insignia Kombi mit polnischen Kennzeichen gestohlen. Das Auto stand „Am Kalkofen“.",
-      "Die Kriminalpolizei Erbach (K 20) bittet um Hinweise zu den Tätern oder dem Verbleib des Wagens: Telefon 06062/953-0."
-    ],
-    "source": "Polizeipräsidium Südhessen (Presseportal) · 6.11.2026",
-    "url": "https://www.presseportal.de/blaulicht/pm/4969/6385421"
   },
   {
     "id": "genuss-hinweise",
