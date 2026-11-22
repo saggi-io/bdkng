@@ -122,6 +122,15 @@ def wissen_text(d):
     return ' '.join(t)
 
 
+def ziel(slug, d):
+    """Link zur Karte: eigene Seite oder externe Karte (z. B. Lieferando)."""
+    return d['extern'] if d.get('extern') else '/speisekarte-' + slug + '.html'
+
+
+def ext_attr(d):
+    return ' target="_blank" rel="noopener"' if d.get('extern') else ''
+
+
 def uebersicht(karten):
     """speisekarten.html: alle Wirtschaften (aus genuss.html), Speisekarten und Mittagstische auf einen Blick."""
     url = 'https://bdkng.de/speisekarten.html'
@@ -135,19 +144,19 @@ def uebersicht(karten):
     mittag = [(slug, d) for slug, d in karten.items() if mittag_gueltig(d.get('mittagstisch'))]
     h.append('<section class="subpanel sk-gruppe sk-mittag" id="mittag"><h2>🍲 Mittagstisch diese Woche</h2>')
     if mittag:
-        h.append('<ul class="sk-liste">' + ''.join('<li><span class="sk-nr">' + d.get('emoji', '🍲') + '</span><div class="sk-t"><b><a href="/speisekarte-' + slug + '.html#mittag">' + e(d['name']) + '</a></b><span>' + e((d['mittagstisch'].get('titel') or 'Mittagstisch') + (' · bis ' + de(d['mittagstisch']['gueltig_bis']) if d['mittagstisch'].get('gueltig_bis') else '')) + '</span></div><div class="sk-pr"></div></li>' for slug, d in mittag) + '</ul>')
+        h.append('<ul class="sk-liste">' + ''.join('<li><span class="sk-nr">' + d.get('emoji', '🍲') + '</span><div class="sk-t"><b><a href="' + ziel(slug, d) + ('' if d.get('extern') else '#mittag') + '"' + ext_attr(d) + '>' + e(d['name']) + '</a></b><span>' + e((d['mittagstisch'].get('titel') or 'Mittagstisch') + (' · bis ' + de(d['mittagstisch']['gueltig_bis']) if d['mittagstisch'].get('gueltig_bis') else '')) + '</span></div><div class="sk-pr"></div></li>' for slug, d in mittag) + '</ul>')
     else:
         h.append('<p>Gerade hat uns noch keine Wirtschaft einen aktuellen Mittagstisch geschickt.</p>')
     h.append('</section>')
     h.append('<section class="subpanel sk-gruppe"><h2>📋 Mit Speisekarte auf BDKNG</h2><div class="sk-kacheln">' + ''.join(
-        '<a class="sk-kachel" href="/speisekarte-' + slug + '.html"><span class="sk-k-em">' + d.get('emoji', '🍽️') + '</span><b>' + e(d['name']) + '</b><small>' + e(d.get('untertitel', '')) + '</small></a>' for slug, d in karten.items()) + '</div></section>')
+        '<a class="sk-kachel" href="' + ziel(slug, d) + '"' + ext_attr(d) + '><span class="sk-k-em">' + d.get('emoji', '🍽️') + '</span><b>' + e(d['name']) + '</b><small>' + e(d.get('untertitel', '') + (' · Karte bei ' + d.get('extern_name', 'externer Seite') if d.get('extern') else '')) + '</small></a>' for slug, d in karten.items()) + '</div></section>')
     for gm in re.finditer(r'<div class="wi-gruppe"><h3>(.*?)</h3><ul>(.*?)</ul></div>', g, re.S):
         items = re.findall(r'<li><a href="([^"]*)"[^>]*><b>(.*?)</b></a><span>(.*?)</span>', gm.group(2))
         if not items: continue
         h.append('<section class="subpanel sk-gruppe"><h2>' + gm.group(1) + '</h2><ul class="sk-liste">')
         for href, nm, info in items:
             k = nach_name.get(nm)
-            knopf = ('<a class="wi-karte" href="/speisekarte-' + k[0] + '.html">' + k[1].get('emoji', '🍽️') + ' Speisekarte</a>') if k else '<small class="sk-fehlt">Karte folgt</small>'
+            knopf = ('<a class="wi-karte" href="' + ziel(k[0], k[1]) + '"' + ext_attr(k[1]) + '>' + k[1].get('emoji', '🍽️') + ' Speisekarte' + (' ↗' if k[1].get('extern') else '') + '</a>') if k else '<small class="sk-fehlt">Karte folgt</small>'
             h.append('<li><span class="sk-nr">📍</span><div class="sk-t"><b><a href="' + href + '" target="_blank" rel="noopener">' + nm + '</a></b><span>' + info + '</span></div><div class="sk-pr">' + knopf + '</div></li>')
         h.append('</ul></section>')
     h.append('<p class="editorial-note">Du betreibst eine Wirtschaft in Bad König? Schick deine Speisekarte oder deinen Mittagstisch als JPG oder PDF an <a href="mailto:info@bdkng.de">info@bdkng.de</a> – kurz darauf ist sie hier online und die BDKNG KI kennt sie. Kostenlos. Angaben ohne Gewähr.</p></main>')
@@ -162,9 +171,9 @@ def main():
         karten[f.stem] = json.loads(f.read_text())
     idx = []
     for slug, d in karten.items():
-        seite(slug, d)
+        if not d.get('extern'): seite(slug, d)
         m = d.get('mittagstisch')
-        idx.append({'slug': slug, 'name': d['name'], 'url': '/speisekarte-' + slug + '.html', 'emoji': d.get('emoji', '🍽️'), 'telefon': d.get('telefon', ''),
+        idx.append({'slug': slug, 'name': d['name'], 'url': ziel(slug, d), 'extern': bool(d.get('extern')), 'emoji': d.get('emoji', '🍽️'), 'telefon': d.get('telefon', ''),
                     'mittagstisch': m if mittag_gueltig(m) else None, 'stand': d.get('stand', '')})
     uebersicht(karten)
     (R / 'data/speisekarten/index.json').write_text(json.dumps({'stand': HEUTE, 'karten': idx}, ensure_ascii=False, indent=1))
@@ -172,11 +181,11 @@ def main():
         (R / 'data/speisekarte-kebab.json').write_text(json.dumps(karten['kebab'], ensure_ascii=False, indent=2))
     # Genuss: Knopf beim passenden Eintrag
     g = (R / 'genuss.html').read_text()
-    g = re.sub(r'<a class="wi-karte" href="[^"]*">[^<]*</a>', '', g)
+    g = re.sub(r'<a class="wi-karte" href="[^"]*"[^>]*>[^<]*</a>', '', g)
     for slug, d in karten.items():
         nm = e(d.get('genuss_name') or d['name'])
         pat = re.compile(r'(<b>' + re.escape(nm) + r'</b></a><span>[^<]*</span>)')
-        g, n = pat.subn(lambda m: m.group(1) + '<a class="wi-karte" href="/speisekarte-' + slug + '.html">' + d.get('emoji', '🍽️') + ' Speisekarte' + (' & Mittagstisch' if mittag_gueltig(d.get('mittagstisch')) else ' ansehen') + '</a>', g, count=1)
+        g, n = pat.subn(lambda m: m.group(1) + '<a class="wi-karte" href="' + ziel(slug, d) + '"' + ext_attr(d) + '>' + d.get('emoji', '🍽️') + ' Speisekarte' + (' & Mittagstisch' if mittag_gueltig(d.get('mittagstisch')) else (' bei ' + d.get('extern_name', '') + ' ↗' if d.get('extern') else ' ansehen')) + '</a>', g, count=1)
         if not n: print('Hinweis: kein Genuss-Eintrag gefunden für', d['name'])
     if '.wi-karte{' not in g:
         g = g.replace('</head>', '<style>.wi-karte{display:inline-block;margin:6px 0 2px;background:#141414;color:#fff!important;border-radius:999px;padding:6px 12px;font-weight:700;font-size:.88rem;text-decoration:none}.wi-karte:hover{background:#b45309}</style></head>', 1)
@@ -186,7 +195,8 @@ def main():
     w['eintraege'] = [x for x in w['eintraege'] if not x.get('titel', '').startswith('Speisekarte ')]
     for slug, d in karten.items():
         w['eintraege'].append({'titel': 'Speisekarte ' + d['name'] + (' mit Mittagstisch' if mittag_gueltig(d.get('mittagstisch')) else '') + ' (Gerichte, Preise, Öffnungszeiten)',
-                               'text': wissen_text(d), 'url': 'https://bdkng.de/speisekarte-' + slug + '.html', 'fest': True})
+                               'text': ('Die Speisekarte von ' + d['name'] + (' (' + d['adresse'] + ')' if d.get('adresse') else '') + ' gibt es online bei ' + d.get('extern_name', 'einer externen Seite') + ': ' + d['extern'] + (' – ' + d['hinweis'] if d.get('hinweis') else '')) if d.get('extern') else wissen_text(d),
+                               'url': d['extern'] if d.get('extern') else 'https://bdkng.de/speisekarte-' + slug + '.html', 'fest': True})
     wp.write_text(json.dumps(w, ensure_ascii=False, indent=1))
     print('Speisekarten:', ', '.join(karten))
 

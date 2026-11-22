@@ -5,6 +5,7 @@
    "slug": "fafnirkeller",
    "name": "Fafnirkeller – BannenBerger Brauereiausschank",
    "url": "/speisekarte-fafnirkeller.html",
+   "extern": false,
    "emoji": "🍺",
    "telefon": "",
    "mittagstisch": null,
@@ -14,10 +15,21 @@
    "slug": "kebab",
    "name": "Kebab & Pizzahaus Bad König",
    "url": "/speisekarte-kebab.html",
+   "extern": false,
    "emoji": "🥙",
    "telefon": "06063 913533",
    "mittagstisch": null,
    "stand": "Speisekarte (Flyer) vom 20.11.2026 – Druckfehler und Preisänderungen vorbehalten, Angaben ohne Gewähr."
+  },
+  {
+   "slug": "wacht-am-rhein",
+   "name": "Pizzeria Wacht am Rhein",
+   "url": "https://www.lieferando.de/speisekarte/wacht-am-rhein-bad-knig",
+   "extern": true,
+   "emoji": "🍕",
+   "telefon": "",
+   "mittagstisch": null,
+   "stand": ""
   }
  ]
 }
