@@ -1,0 +1,13 @@
+{
+ "name": "Hey Sushi",
+ "untertitel": "Sushi, Bento, Poke Bowls & Suppen",
+ "adresse": "Erbacher Straße 32, 64732 Bad König",
+ "telefon": "06063 5799314",
+ "zeiten": "Mo–Fr 17–21:30 Uhr, Sa, So und Feiertag 16–21:30 Uhr",
+ "genuss_name": "Hey Sushi",
+ "emoji": "🍣",
+ "extern": "https://www.heysushi.de/speisekarte",
+ "extern_name": "heysushi.de",
+ "hinweis": "Speisekarte und Online-Bestellung (Abholung) auf heysushi.de; Öffnungszeiten: Mo–Fr 17–21:30 Uhr, Sa, So und Feiertag 16–21:30 Uhr",
+ "gruppen": []
+}

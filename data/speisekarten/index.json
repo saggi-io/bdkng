@@ -2,6 +2,16 @@
  "stand": "2026-11-22",
  "karten": [
   {
+   "slug": "da-persio",
+   "name": "Pizzeria Da Persio",
+   "url": "https://da-persio.com/",
+   "extern": true,
+   "emoji": "🍕",
+   "telefon": "06063 5031625",
+   "mittagstisch": null,
+   "stand": ""
+  },
+  {
    "slug": "fafnirkeller",
    "name": "Fafnirkeller – BannenBerger Brauereiausschank",
    "url": "/speisekarte-fafnirkeller.html",
@@ -12,6 +22,16 @@
    "stand": "Speise- und Getränkekarte vom 01.07.2026 (Website des Fafnirkellers) – Preisänderungen vorbehalten, Angaben ohne Gewähr."
   },
   {
+   "slug": "hey-sushi",
+   "name": "Hey Sushi",
+   "url": "https://www.heysushi.de/speisekarte",
+   "extern": true,
+   "emoji": "🍣",
+   "telefon": "06063 5799314",
+   "mittagstisch": null,
+   "stand": ""
+  },
+  {
    "slug": "kebab",
    "name": "Kebab & Pizzahaus Bad König",
    "url": "/speisekarte-kebab.html",
@@ -20,6 +40,16 @@
    "telefon": "06063 913533",
    "mittagstisch": null,
    "stand": "Speisekarte (Flyer) vom 20.11.2026 – Druckfehler und Preisänderungen vorbehalten, Angaben ohne Gewähr."
+  },
+  {
+   "slug": "keyma-grill",
+   "name": "Keyma Grill & Pizzahaus",
+   "url": "https://keyma-grillundpizzahaus.de/keyma-grill-pizzahaus",
+   "extern": true,
+   "emoji": "🥙",
+   "telefon": "",
+   "mittagstisch": null,
+   "stand": ""
   },
   {
    "slug": "wacht-am-rhein",
