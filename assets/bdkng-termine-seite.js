@@ -23,7 +23,7 @@
     return L.map(function (x) { return { datum: x[0].length === 5 ? j + '-' + x[0] : x[0], titel: x[1], art: 'feiertag', gesetzlich: !!x[2] }; });
   }
   function holen(u) { return fetch(u, { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
-  Promise.all([holen('/data/termine-kalender.json'), holen('/data/termine-kirche.json'), holen('/data/sport-termine.json')]).then(function (r) {
+  Promise.all([holen('/data/termine-kalender.json'), holen('/data/termine-kirche.json'), holen('/data/sport-termine.json'), holen('/data/termine-eigene.json')]).then(function (r) {
     var kal = (r[0] && r[0].termine) || [], ki = (r[1] && r[1].termine) || [], sp = (r[2] && r[2].spiele) || [];
     var A = [];
     kal.forEach(function (t) {
@@ -32,6 +32,7 @@
       A.push({ datum: t.datum, bis: t.bis || '', uhrzeit: t.uhrzeit || '', titel: t.titel, ort: t.ort || '', art: fl ? 'freilicht' : (/Gottesdienst|Messe|Andacht|Kirche/i.test(t.titel) ? 'kirche' : 'veranstaltung'), link: m ? m[0] : (fl ? '#freilicht' : STADT), quelle: fl ? 'Freilichtbühne' : 'Stadt Bad König' });
     });
     ki.forEach(function (t) { A.push({ datum: t.datum, uhrzeit: t.uhrzeit || '', titel: t.titel + (t.gemeinde === 'ev' ? ' (ev.)' : t.gemeinde === 'kath' ? ' (kath.)' : ''), ort: t.ort || '', info: t.info || '', art: 'kirche', link: (r[1] && r[1].url) || '', quelle: 'Stadtnachrichten' }); });
+    ((r[3] && r[3].termine) || []).forEach(function (t) { A.push({ datum: t.datum, bis: t.bis || '', uhrzeit: t.uhrzeit || '', titel: t.titel, ort: t.ort || '', info: t.info || '', art: 'veranstaltung', link: t.link || '/termine.html', quelle: t.quelle || 'BDKNG' }); });
     sp.forEach(function (s) { if (!/Bad K(ö|oe)nig|Kinzigtal/i.test(s.home)) return; A.push({ datum: s.date, uhrzeit: s.time || '', titel: s.home + ' – ' + s.away, ort: /Kinzigtal/i.test(s.home) ? 'Sportplatz Kinzigtal' : 'Sportplatz Bad König/Zell', art: 'sport', link: '/sport.html', quelle: 'FuPa' }); });
     [heute.getFullYear(), heute.getFullYear() + 1].forEach(function (j) { feiertage(j).forEach(function (f) { A.push(f); }); });
     // Gedenk-Tag aus dem Kirchenkalender doppelt? Dann Feiertag-Zeile behalten, Gottesdienste trotzdem zeigen

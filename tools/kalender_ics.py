@@ -83,7 +83,11 @@ geaendert = []
 # --- Veranstaltungen ---
 k = json.loads((root / 'data/termine-kalender.json').read_text(encoding='utf-8'))
 ev = []
-for t in k.get('termine', []):
+try:
+    eig = json.loads((root / 'data/termine-eigene.json').read_text(encoding='utf-8')).get('termine', [])
+except Exception:
+    eig = []
+for t in k.get('termine', []) + eig:
     if t.get('bis') or not t.get('uhrzeit'):
         zeit = ganztags(t['datum'], t.get('bis') or None)
     else:
