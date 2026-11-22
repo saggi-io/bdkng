@@ -6,6 +6,53 @@
  "emoji": "🍕",
  "extern": "https://www.lieferando.de/speisekarte/wacht-am-rhein-bad-knig",
  "extern_name": "Lieferando",
- "hinweis": "Bestellen und Preise über Lieferando; eigene Seite: https://www.wachtamrhein-badkoenig.de/",
- "gruppen": []
+ "hinweis": "",
+ "gruppen": [
+  {
+   "titel": "⭐ Eine kleine Auswahl",
+   "hinweis": "",
+   "spalten": [
+    "Preis"
+   ],
+   "liste": [
+    [
+     "",
+     "Pizza Parma",
+     "Parmaschinken, Mozzarella, Rucola, Parmesan",
+     "8,90",
+     ""
+    ],
+    [
+     "",
+     "Pizza Texas",
+     "Speck, Mais, Bolognese, BBQ-Sauce",
+     "8,50",
+     ""
+    ],
+    [
+     "",
+     "Spaghetti Carbonara",
+     "",
+     "10,50",
+     ""
+    ],
+    [
+     "",
+     "Jägerschnitzel",
+     "",
+     "12,90",
+     ""
+    ],
+    [
+     "",
+     "Butter Chicken",
+     "mit Reis",
+     "13,90",
+     ""
+    ]
+   ]
+  }
+ ],
+ "bestellen": true,
+ "stand": "Auswahl von der Website der Wacht am Rhein, Stand 22.11.2026 – Preise ohne Gewähr."
 }

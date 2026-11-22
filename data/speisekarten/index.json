@@ -4,12 +4,12 @@
   {
    "slug": "da-persio",
    "name": "Pizzeria Da Persio",
-   "url": "https://da-persio.com/",
+   "url": "/speisekarte-da-persio.html",
    "extern": true,
    "emoji": "🍕",
    "telefon": "06063 5031625",
    "mittagstisch": null,
-   "stand": ""
+   "stand": "Stand 22.11.2026 – Angaben ohne Gewähr."
   },
   {
    "slug": "fafnirkeller",
@@ -24,12 +24,12 @@
   {
    "slug": "hey-sushi",
    "name": "Hey Sushi",
-   "url": "https://www.heysushi.de/speisekarte",
+   "url": "/speisekarte-hey-sushi.html",
    "extern": true,
    "emoji": "🍣",
    "telefon": "06063 5799314",
    "mittagstisch": null,
-   "stand": ""
+   "stand": "Stand 22.11.2026 – Angaben ohne Gewähr."
   },
   {
    "slug": "kebab",
@@ -44,22 +44,22 @@
   {
    "slug": "keyma-grill",
    "name": "Keyma Grill & Pizzahaus",
-   "url": "https://keyma-grillundpizzahaus.de/keyma-grill-pizzahaus",
+   "url": "/speisekarte-keyma-grill.html",
    "extern": true,
    "emoji": "🥙",
    "telefon": "",
    "mittagstisch": null,
-   "stand": ""
+   "stand": "Stand 22.11.2026 – Angaben ohne Gewähr."
   },
   {
    "slug": "wacht-am-rhein",
    "name": "Pizzeria Wacht am Rhein",
-   "url": "https://www.lieferando.de/speisekarte/wacht-am-rhein-bad-knig",
+   "url": "/speisekarte-wacht-am-rhein.html",
    "extern": true,
    "emoji": "🍕",
    "telefon": "",
    "mittagstisch": null,
-   "stand": ""
+   "stand": "Auswahl von der Website der Wacht am Rhein, Stand 22.11.2026 – Preise ohne Gewähr."
   }
  ]
 }

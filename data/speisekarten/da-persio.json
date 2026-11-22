@@ -7,6 +7,8 @@
  "emoji": "🍕",
  "extern": "https://da-persio.com/",
  "extern_name": "da-persio.com",
- "hinweis": "Speisekarte und Online-Bestellung auf da-persio.com",
- "gruppen": []
+ "hinweis": "",
+ "gruppen": [],
+ "bestellen": true,
+ "stand": "Stand 22.11.2026 – Angaben ohne Gewähr."
 }

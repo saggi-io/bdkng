@@ -8,6 +8,53 @@
  "emoji": "🍣",
  "extern": "https://www.heysushi.de/speisekarte",
  "extern_name": "heysushi.de",
- "hinweis": "Speisekarte und Online-Bestellung (Abholung) auf heysushi.de; Öffnungszeiten: Mo–Fr 17–21:30 Uhr, Sa, So und Feiertag 16–21:30 Uhr",
- "gruppen": []
+ "hinweis": "",
+ "gruppen": [
+  {
+   "titel": "🍣 Was es gibt",
+   "hinweis": "Die Kategorien auf der Speisekarte – Preise und alle Gerichte auf heysushi.de.",
+   "spalten": [
+    "Preis"
+   ],
+   "liste": [
+    [
+     "",
+     "Bento-Menüs",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "Poke Bowls",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "Makis & Uramakis",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "Nigiri & Sashimi",
+     "Nigiri je 2 Stück",
+     "",
+     ""
+    ],
+    [
+     "",
+     "Suppen",
+     "",
+     "",
+     ""
+    ]
+   ]
+  }
+ ],
+ "bestellen": true,
+ "stand": "Stand 22.11.2026 – Angaben ohne Gewähr."
 }
