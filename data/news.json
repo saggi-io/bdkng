@@ -1,5 +1,20 @@
 [
   {
+    "id": "hand-2026-11-22-486440396",
+    "checked": "2026-11-22",
+    "valid_until": "2026-12-02",
+    "categories": [
+      "termine"
+    ],
+    "title": "Blutspende am 1. Dezember in der Sporthalle Grundschule",
+    "paragraphs": [
+      "Am Dienstag, 01.12.2026, findet in Bad König eine Blutspendeaktion statt. Sie läuft von 15:30 bis 19:30 Uhr in der Sporthalle der Grundschule in der Martin-Luther-Straße 3. Die Teilnahme ist nur mit vorheriger Terminreservierung möglich. Unter allen Spenderinnen und Spendern werden 10 Gutscheine für die Odenwaldtherme verlost."
+    ],
+    "source": "Blutspende Bad König (Plakat, Quelle im Screenshot nicht erkennbar)",
+    "url": "https://bdkng.de",
+    "zeit": "11:20"
+  },
+  {
     "id": "hand-2026-11-22-406826216",
     "checked": "2026-11-22",
     "valid_until": "2026-12-02",
