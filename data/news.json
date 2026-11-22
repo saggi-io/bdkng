@@ -1,5 +1,21 @@
 [
   {
+    "id": "medien-2026-11-22-314371725",
+    "checked": "2026-11-19",
+    "valid_until": "2026-11-29",
+    "categories": [
+      "verkehr",
+      "aktuell"
+    ],
+    "title": "Erstmals hakt es bei der Zeller Brücke: Betonage wird auf Januar verschoben",
+    "paragraphs": [
+      "An der Zeller B45-Brücke wird das Betonieren des Überbaus verschoben. Auf die angestrebte Verkehrsfreigabe im Juni soll das aber keine Auswirkungen haben."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/erstmals-hakt-es-bei-der-zeller-bruecke-6907973",
+    "zeit": "12:00"
+  },
+  {
     "id": "hand-2026-11-22-324900447",
     "checked": "2026-11-22",
     "valid_until": "2026-12-02",
@@ -266,22 +282,6 @@
     "source": "Echo Online",
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/erbach-odenwaldkreis/warum-mitarbeiter-wie-tom-fuer-kliniken-unentbehrlich-sind-6674087",
     "zeit": "16:00"
-  },
-  {
-    "id": "medien-2026-11-19-314371725",
-    "checked": "2026-11-19",
-    "valid_until": "2026-11-29",
-    "categories": [
-      "verkehr",
-      "aktuell"
-    ],
-    "title": "Erstmals hakt es bei der Zeller Brücke: Betonage wird auf Januar verschoben",
-    "paragraphs": [
-      "An der Zeller B45-Brücke wird das Betonieren des Überbaus verschoben. Auf die angestrebte Verkehrsfreigabe im Juni soll das aber keine Auswirkungen haben."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/erstmals-hakt-es-bei-der-zeller-bruecke-6907973",
-    "zeit": "13:00"
   },
   {
     "id": "medien-2026-11-19-291995801",
