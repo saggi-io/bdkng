@@ -1,0 +1,67 @@
+{
+ "titel": "Der Tag in Bad König",
+ "ueber": "So. 22.11. · 19:30 Uhr",
+ "quelle": "FuPa, Restaurant Wandelhalle, TSG Bad König 1863 e.V.",
+ "zeilen": [
+  {
+   "t": "Fußball: Die Ergebnisse vom Wochenende",
+   "r": "sport",
+   "k": "Sport"
+  },
+  {
+   "t": "Weihnachtslotterie in der Wandelhalle ab 1. Dezember",
+   "r": "termine",
+   "k": "Termine"
+  },
+  {
+   "t": "TSG Bad König lädt zur außerordentlichen Versammlung",
+   "r": "termine",
+   "k": "Termine"
+  },
+  {
+   "t": "Blutspende am 1. Dezember in der Sporthalle Grundschule",
+   "r": "termine",
+   "k": "Termine"
+  },
+  {
+   "t": "Workshop Chromatographie am 26.11.2026",
+   "r": "termine",
+   "k": "Termine"
+  },
+  {
+   "t": "Annorlunda Dekoladen: Verkauf am 5. Dezember",
+   "r": "termine",
+   "k": "Termine"
+  }
+ ],
+ "morgen_ueber": "Mo. 23.11.",
+ "morgen": [
+  [
+   "⛅",
+   "Wetter",
+   "Wechselnd bewölkt, -3 bis 1 °C"
+  ],
+  [
+   "⛽",
+   "Tanken",
+   "E10 ab 1,75 € (Brensbach), Diesel ab 2,00 €"
+  ]
+ ],
+ "mitmachen": [
+  [
+   "📣",
+   "Blitzer & Stau",
+   "Gesehen? Auf bdkng.de melden"
+  ],
+  [
+   "🤖",
+   "BDKNG-KI",
+   "Frag einfach: Müll, Termine, Öffnungszeiten"
+  ],
+  [
+   "📅",
+   "Termin melden",
+   "Dein Verein feiert? Einfach eintragen"
+  ]
+ ]
+}
