@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-21T21:40",
+ "stand": "2026-11-22T06:00",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
   {
@@ -886,30 +886,6 @@
  ],
  "handball": [
   {
-   "date": "2026-11-21",
-   "time": "15:30",
-   "liga": "F-BL",
-   "team": "Frauen",
-   "home": "HSG Odenwald II",
-   "away": "TuSpo Obernburg II"
-  },
-  {
-   "date": "2026-11-21",
-   "time": "17:30",
-   "liga": "F-BOL",
-   "team": "Frauen",
-   "home": "HSG Odenwald",
-   "away": "TuSpo Obernburg"
-  },
-  {
-   "date": "2026-11-21",
-   "time": "19:30",
-   "liga": "M-BL",
-   "team": "Männer",
-   "home": "HSG Odenwald II",
-   "away": "TV Bürgstadt"
-  },
-  {
    "date": "2026-11-28",
    "time": "15:30",
    "liga": "F-BL",
@@ -920,18 +896,18 @@
   {
    "date": "2026-11-28",
    "time": "17:30",
-   "liga": "M-BK-2",
-   "team": "Männer",
-   "home": "HSG Stockstadt/Mainaschaff II",
-   "away": "HSG Odenwald III"
-  },
-  {
-   "date": "2026-11-28",
-   "time": "17:30",
    "liga": "F-BOL",
    "team": "Frauen",
    "home": "HSG Odenwald",
    "away": "HSG Sulzbach/Leidersbach"
+  },
+  {
+   "date": "2026-11-28",
+   "time": "17:30",
+   "liga": "M-BK-2",
+   "team": "Männer",
+   "home": "HSG Stockstadt/Mainaschaff II",
+   "away": "HSG Odenwald III"
   },
   {
    "date": "2026-11-28",
@@ -1041,33 +1017,6 @@
  ],
  "tischtennis": [
   {
-   "date": "2026-11-13",
-   "time": "20:00",
-   "liga": "E2KK",
-   "verein": "TTC Kimbach",
-   "home": "TTC Kimbach III",
-   "away": "SV Ober-Kainsbach III",
-   "erg": "1:9"
-  },
-  {
-   "date": "2026-11-13",
-   "time": "20:00",
-   "liga": "EKL",
-   "verein": "RV-TTC Fürstengrund",
-   "home": "RV-TTC Fürstengrund",
-   "away": "TSV 1875 Höchst III",
-   "erg": "7:3"
-  },
-  {
-   "date": "2026-11-13",
-   "time": "20:30",
-   "liga": "E3KK",
-   "verein": "TTC Kimbach",
-   "home": "TSV 1963 Sensbachtal",
-   "away": "TTC Kimbach IV",
-   "erg": "4:6"
-  },
-  {
    "date": "2026-11-14",
    "time": "19:00",
    "liga": "E1KK",
@@ -1124,19 +1073,19 @@
   {
    "date": "2026-11-26",
    "time": "20:00",
-   "liga": "E3KK",
+   "liga": "E2KK",
    "verein": "TTC Kimbach",
-   "home": "TTC Kimbach IV",
-   "away": "SV 1908 Falken-Gesäß III",
+   "home": "KSG Hetschbach",
+   "away": "TTC Kimbach II",
    "erg": ""
   },
   {
    "date": "2026-11-26",
    "time": "20:00",
-   "liga": "E2KK",
+   "liga": "E3KK",
    "verein": "TTC Kimbach",
-   "home": "KSG Hetschbach",
-   "away": "TTC Kimbach II",
+   "home": "TTC Kimbach IV",
+   "away": "SV 1908 Falken-Gesäß III",
    "erg": ""
   },
   {
@@ -1178,19 +1127,19 @@
   {
    "date": "2026-12-03",
    "time": "20:00",
-   "liga": "E3KK",
+   "liga": "EKL",
    "verein": "RV-TTC Fürstengrund",
-   "home": "RV-TTC Fürstengrund III",
-   "away": "SG Sandbach V",
+   "home": "TTC Mümling-Grumbach II",
+   "away": "RV-TTC Fürstengrund",
    "erg": ""
   },
   {
    "date": "2026-12-03",
    "time": "20:00",
-   "liga": "EKL",
+   "liga": "E3KK",
    "verein": "RV-TTC Fürstengrund",
-   "home": "TTC Mümling-Grumbach II",
-   "away": "RV-TTC Fürstengrund",
+   "home": "RV-TTC Fürstengrund III",
+   "away": "SG Sandbach V",
    "erg": ""
   },
   {
@@ -1295,19 +1244,19 @@
   {
    "date": "2026-12-11",
    "time": "20:00",
-   "liga": "E3KK",
+   "liga": "E1KK",
    "verein": "RV-TTC Fürstengrund",
-   "home": "SV Ober-Kainsbach IV",
-   "away": "RV-TTC Fürstengrund III",
+   "home": "RV-TTC Fürstengrund II",
+   "away": "TTC Langen-Brombach IV",
    "erg": ""
   },
   {
    "date": "2026-12-11",
    "time": "20:00",
-   "liga": "E1KK",
+   "liga": "E3KK",
    "verein": "RV-TTC Fürstengrund",
-   "home": "RV-TTC Fürstengrund II",
-   "away": "TTC Langen-Brombach IV",
+   "home": "SV Ober-Kainsbach IV",
+   "away": "RV-TTC Fürstengrund III",
    "erg": ""
   },
   {
