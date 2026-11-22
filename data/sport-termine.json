@@ -1,28 +1,7 @@
 {
- "stand": "2026-11-22T06:00",
+ "stand": "2026-11-22T17:40",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
-  {
-   "time": "13:00",
-   "date": "2026-11-22",
-   "home": "SG Vielbrunn/Würzberg II",
-   "away": "Spvgg Kinzigtal II",
-   "team": "k2"
-  },
-  {
-   "time": "14:30",
-   "date": "2026-11-22",
-   "home": "VfR Würzberg",
-   "away": "Spvgg Kinzigtal",
-   "team": "k1"
-  },
-  {
-   "date": "2026-11-22",
-   "time": "15:00",
-   "home": "SG Bad König/Zell",
-   "away": "SV Gammelsbach",
-   "team": "m1"
-  },
   {
    "time": "19:30",
    "date": "2026-11-26",
@@ -403,6 +382,30 @@
   }
  ],
  "ergebnisse": [
+  {
+   "date": "2026-11-22",
+   "home": "SG Bad König/Zell",
+   "away": "SV Gammelsbach",
+   "hg": 4,
+   "ag": 2,
+   "team": "m1"
+  },
+  {
+   "date": "2026-11-22",
+   "home": "VfR Würzberg",
+   "away": "Spvgg Kinzigtal",
+   "team": "k1",
+   "hg": 7,
+   "ag": 0
+  },
+  {
+   "date": "2026-11-22",
+   "home": "SG Vielbrunn/Würzberg II",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2",
+   "hg": 8,
+   "ag": 2
+  },
   {
    "date": "2026-11-15",
    "home": "SG Sandbach II",
@@ -858,30 +861,6 @@
    "hg": 3,
    "ag": 5,
    "team": "m1"
-  },
-  {
-   "date": "2026-08-09",
-   "home": "SV Beerfelden",
-   "away": "SG Bad König/Zell II",
-   "hg": 2,
-   "ag": 5,
-   "team": "m2"
-  },
-  {
-   "date": "2026-08-09",
-   "home": "Spvgg Kinzigtal",
-   "away": "VfR Würzberg",
-   "team": "k1",
-   "hg": 2,
-   "ag": 2
-  },
-  {
-   "date": "2026-08-09",
-   "home": "Spvgg Kinzigtal II",
-   "away": "SG Vielbrunn/Würzberg II",
-   "team": "k2",
-   "hg": 3,
-   "ag": 1
   }
  ],
  "handball": [
