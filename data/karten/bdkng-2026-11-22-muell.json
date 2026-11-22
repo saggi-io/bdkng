@@ -1,0 +1,41 @@
+{
+ "rubrik": "muell",
+ "titel": "Welche Tonne ist diese Woche dran?",
+ "ueber": "So. 22.11. · 19:05 Uhr",
+ "art": "liste",
+ "zeilen": [
+  {
+   "t": "Dienstag, 24.11. · Restmüll",
+   "e": "⚫"
+  },
+  {
+   "t": "Etzen-Gesäß, Fürstengrund",
+   "e": "🗑️"
+  },
+  {
+   "t": "Freitag, 27.11. · Gelbe Säcke",
+   "e": "🟡"
+  },
+  {
+   "t": "Etzen-Gesäß, Fürstengrund, Gumpersberg, Momart, Nieder-Kinzig, Ober-Kinzig, Zell",
+   "e": "🗑️"
+  },
+  {
+   "t": "Danach: Nächste Woche (30.11.–06.12.)",
+   "e": "📆"
+  },
+  {
+   "t": "Dienstag, 01.12. · Biotonne",
+   "e": "🟤"
+  },
+  {
+   "t": "Kernstadt, Etzen-Gesäß, Fürstengrund, Gumpersberg, Kimbach, Momart, Nieder-Kinzig, Ober-Kinzig, Zell",
+   "e": "🗑️"
+  },
+  {
+   "t": "Mittwoch, 02.12. · Gelbe Säcke",
+   "e": "🟡"
+  }
+ ],
+ "quelle": "BDKNG"
+}
