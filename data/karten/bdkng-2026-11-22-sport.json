@@ -1,0 +1,41 @@
+{
+ "rubrik": "sport",
+ "titel": "Fußball: Ergebnisse vom Wochenende",
+ "ueber": "So. 22.11. · 18:31 Uhr",
+ "art": "liste",
+ "zeilen": [
+  {
+   "t": "So 22.11. · SG 1a: SG Bad König/Zell – SV Gammelsbach 4:2",
+   "e": "⚽"
+  },
+  {
+   "t": "So 22.11. · Kinzigtal: VfR Würzberg – SpVgg Kinzigtal 7:0",
+   "e": "⚽"
+  },
+  {
+   "t": "So 22.11. · Kinzigtal II: SG Vielbrunn/Würzberg II – SpVgg Kinzigtal II 8:2",
+   "e": "⚽"
+  },
+  {
+   "t": "Nächste Fußballspiele",
+   "e": "📅"
+  },
+  {
+   "t": "Do 26.11., 19:30 Uhr: FC Finkenbachtal II – SpVgg Kinzigtal II",
+   "e": "⚽"
+  },
+  {
+   "t": "So 29.11., 12:30 Uhr: SpVgg Kinzigtal II – SG Rothenberg II",
+   "e": "⚽"
+  },
+  {
+   "t": "So 29.11., 14:30 Uhr: FSV Erbach – SG Bad König/Zell",
+   "e": "⚽"
+  },
+  {
+   "t": "So 29.11., 14:30 Uhr: SG Rimhorn/Neustadt II – SG Bad König/Zell II",
+   "e": "⚽"
+  }
+ ],
+ "quelle": "FuPa"
+}
