@@ -2,6 +2,15 @@
  "stand": "2026-11-22",
  "karten": [
   {
+   "slug": "fafnirkeller",
+   "name": "Fafnirkeller – BannenBerger Brauereiausschank",
+   "url": "/speisekarte-fafnirkeller.html",
+   "emoji": "🍺",
+   "telefon": "",
+   "mittagstisch": null,
+   "stand": "Speise- und Getränkekarte vom 01.07.2026 (Website des Fafnirkellers) – Preisänderungen vorbehalten, Angaben ohne Gewähr."
+  },
+  {
    "slug": "kebab",
    "name": "Kebab & Pizzahaus Bad König",
    "url": "/speisekarte-kebab.html",

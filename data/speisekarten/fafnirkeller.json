@@ -1,0 +1,346 @@
+{
+ "name": "Fafnirkeller – BannenBerger Brauereiausschank",
+ "untertitel": "Hausbrauerei · eigenes Bier, Kochkäse, Wurst & Brezeln",
+ "adresse": "Elisabethenstraße 10, 64732 Bad König",
+ "telefon": "",
+ "zeiten": "Donnerstag–Samstag 17–22 Uhr (bitte vorher auf fafnirkeller.de prüfen)",
+ "liefer": "",
+ "aktion": "",
+ "stand": "Speise- und Getränkekarte vom 01.07.2026 (Website des Fafnirkellers) – Preisänderungen vorbehalten, Angaben ohne Gewähr.",
+ "hinweis": "Saisonbiere mit Preisen an der Tafel. Leberkäse mindestens eine Woche vorher bestellen.",
+ "genuss_name": "Fafnirkeller – BannenBerger Brauereiausschank",
+ "bilder": [],
+ "pdf": [
+  "https://fafnirkeller.de/wp-content/uploads/2026/08/FAFNIRKELLER_Speise_und_Getraenkekarte_20260701.pdf"
+ ],
+ "download": "",
+ "emoji": "🍺",
+ "gruppen": [
+  {
+   "titel": "🍺 Fassbier",
+   "hinweis": "",
+   "spalten": [
+    "Preis"
+   ],
+   "liste": [
+    [
+     "",
+     "BannenBerger Vollbier Hell",
+     "5,4 % Vol. · 0,3 l",
+     "3,00",
+     ""
+    ],
+    [
+     "",
+     "BannenBerger Vollbier Hell",
+     "5,4 % Vol. · 0,5 l",
+     "4,50",
+     ""
+    ],
+    [
+     "",
+     "BannenBerger BBB – Märzen",
+     "5,5 % Vol. · 0,25 l",
+     "3,00",
+     ""
+    ],
+    [
+     "",
+     "BannenBerger BBB – Märzen",
+     "5,5 % Vol. · 0,4 l",
+     "4,00",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🍻 Saisonbier & selber zapfen",
+   "hinweis": "Saisonbier: wechselnd, von BannenBerger oder als Gastbier – Preise an der Tafel",
+   "spalten": [
+    "Preis"
+   ],
+   "liste": [
+    [
+     "",
+     "Zum selber Zapfen",
+     "10 Liter",
+     "80,00",
+     ""
+    ],
+    [
+     "",
+     "Zum selber Zapfen",
+     "15 Liter",
+     "120,00",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🍾 Aus der Flasche",
+   "hinweis": "",
+   "spalten": [
+    "Preis"
+   ],
+   "liste": [
+    [
+     "",
+     "BannenBerger Quinticha",
+     "alkoholfreies Bier · <0,5 % Vol. · 0,5 l",
+     "4,50",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🍺 Gastbier",
+   "hinweis": "Wechselnde Gastbiere in der Flasche oder vom Fass – beim Personal fragen",
+   "spalten": [
+    "Preis"
+   ],
+   "liste": [
+    [
+     "",
+     "Wechselnde Gastbiere",
+     "0,3 l",
+     "3,00",
+     ""
+    ],
+    [
+     "",
+     "Wechselnde Gastbiere",
+     "0,5 l",
+     "5,00",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🍷 Wein & Apfelwein",
+   "hinweis": "",
+   "spalten": [
+    "Preis"
+   ],
+   "liste": [
+    [
+     "",
+     "Dölp Apfelwein naturtrüb (vom Fass)",
+     "5,5 % Vol. · 0,25 l",
+     "3,00",
+     ""
+    ],
+    [
+     "",
+     "Dölp Apfelwein naturtrüb (vom Fass)",
+     "5,5 % Vol. · 0,5 l",
+     "4,50",
+     ""
+    ],
+    [
+     "",
+     "Eymann Riesling",
+     "12 % Vol. · 0,1 l",
+     "3,00",
+     ""
+    ],
+    [
+     "",
+     "Eymann Riesling",
+     "12 % Vol. · 0,2 l",
+     "5,00",
+     ""
+    ],
+    [
+     "",
+     "Eymann Riesling",
+     "12 % Vol. · 1 l",
+     "20,00",
+     ""
+    ],
+    [
+     "",
+     "Rieslingschorle",
+     "2/3 + 1/3 · 0,3 l",
+     "5,50",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🥃 Spirituosen",
+   "hinweis": "",
+   "spalten": [
+    "Preis"
+   ],
+   "liste": [
+    [
+     "",
+     "Odenwälder Obstbrand",
+     "ca. 40 % Vol. · 2 cl",
+     "3,50",
+     ""
+    ],
+    [
+     "",
+     "Whisky: St. Kilian Classic",
+     "Single Malt, mild & fruity · 46 % Vol. · 4 cl",
+     "8,00",
+     ""
+    ],
+    [
+     "",
+     "Whisky: Dalwhinnie 15 Jahre",
+     "Heidehonig, Malz, Anflug von Torf · 43 % Vol. · 4 cl",
+     "8,00",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🥤 Alkoholfrei",
+   "hinweis": "",
+   "spalten": [
+    "Preis"
+   ],
+   "liste": [
+    [
+     "",
+     "Dölp Apfelsaft naturtrüb oder Apfelsaftschorle",
+     "0,25 l",
+     "2,70",
+     ""
+    ],
+    [
+     "",
+     "Dölp Apfelsaft naturtrüb oder Apfelsaftschorle",
+     "0,5 l",
+     "4,20",
+     ""
+    ],
+    [
+     "",
+     "Dölp Johannisbeerschorle",
+     "0,3 l",
+     "3,00",
+     ""
+    ],
+    [
+     "",
+     "Bionade Zitrone",
+     "0,3 l",
+     "3,50",
+     ""
+    ],
+    [
+     "",
+     "Bionade Holunder",
+     "0,3 l",
+     "3,50",
+     ""
+    ],
+    [
+     "",
+     "Paulaner Spezi",
+     "0,3 l",
+     "3,50",
+     ""
+    ],
+    [
+     "",
+     "Malzbier",
+     "0,3 l",
+     "3,50",
+     ""
+    ],
+    [
+     "",
+     "Sprudelwasser",
+     "0,25 l",
+     "2,30",
+     ""
+    ],
+    [
+     "",
+     "Sprudelwasser",
+     "0,5 l",
+     "4,00",
+     ""
+    ],
+    [
+     "",
+     "Sprudelwasser",
+     "0,7 l",
+     "6,50",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🧀 Speisen",
+   "hinweis": "",
+   "spalten": [
+    "Preis"
+   ],
+   "liste": [
+    [
+     "",
+     "Kochkäse mit Brot oder Brezel",
+     "",
+     "7,00",
+     ""
+    ],
+    [
+     "",
+     "Rindswurst mit Brötchen",
+     "",
+     "4,50",
+     ""
+    ],
+    [
+     "",
+     "Pfefferbeißer",
+     "pro Stück",
+     "2,30",
+     ""
+    ],
+    [
+     "",
+     "Brezel",
+     "",
+     "2,20",
+     ""
+    ],
+    [
+     "",
+     "Schmalzbrot",
+     "",
+     "3,50",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🥖 Zum Vorbestellen",
+   "hinweis": "mindestens 1 Woche vorher",
+   "spalten": [
+    "Preis"
+   ],
+   "liste": [
+    [
+     "",
+     "Leberkäse",
+     "1 kg mit 5 Brötchen",
+     "25,00",
+     ""
+    ],
+    [
+     "",
+     "Leberkäse",
+     "2 kg mit 10 Brötchen",
+     "45,00",
+     ""
+    ]
+   ]
+  }
+ ]
+}
