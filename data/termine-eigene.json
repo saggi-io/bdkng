@@ -1,5 +1,14 @@
 {
  "stand": "2026-11-22",
  "quelle": "Von BDKNG eingetragen (z. B. aus Beiträgen von Vereinen und Geschäften)",
- "termine": []
+ "termine": [
+  {
+   "datum": "2026-12-05",
+   "bis": "",
+   "uhrzeit": "14:00",
+   "titel": "Annorlunda Dekoladen: Verkauf mit Lebkuchen und Glögg",
+   "ort": "Holztechnik Kling, Schwimmbadstraße 20, Bad König",
+   "quelle": "Annorlunda Dekoladen Bad König (Facebook)"
+  }
+ ]
 }
