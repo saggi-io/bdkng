@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-11-22-wetter",
+    "checked": "2026-11-22",
+    "zeit": "19:00",
+    "valid_until": "2026-11-25",
+    "categories": [
+      "wetter"
+    ],
+    "title": "WETTER · Die nächsten 3 Tage",
+    "paragraphs": [
+      "Montag, 23.11.: wechselnd bewölkt, -3 bis 1 °C. Frost möglich  Dienstag, 24.11.: wechselnd bewölkt, -5 bis 2 °C. Frost möglich  Mittwoch, 25.11.: bedeckt, -4 bis 0 °C. Frost möglich",
+      "Amtliche WARNUNG vor FROST (So 20:00 bis Mo 11:00 Uhr)"
+    ],
+    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
+    "url": "https://bdkng.de"
+  },
+  {
     "id": "2026-11-22-sport",
     "checked": "2026-11-22",
     "zeit": "18:31",
