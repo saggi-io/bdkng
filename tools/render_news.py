@@ -98,7 +98,7 @@ for slug in categories:
 # Neueste Meldungen kompakt: alles vom neuesten Tag aus allen Rubriken (mind. 3 Meldungen, sonst Vortag dazu)
 RUBRIK={'aktuell':'📰 Aktuelles','verkehr':'🚧 Verkehr','termine':'📅 Termine','sport':'⚽ Sport','genuss':'🍽️ Genuss','wichtig':'⚠️ Wichtig','wetter':'🌤️ Wetter','muell':'🗑️ Müll'}
 def neu_am(n):
- m=re.search(r'(\d{4}-\d{2}-\d{2})',n['id']);return max(m.group(1) if m else n['checked'],n['checked'])
+ return n['checked']  # tatsächliches Datum der Meldung (nicht das Datum der Übernahme)
 mitdatum=[n for n in news if n.get('valid_until')]
 tage=sorted({neu_am(n) for n in mitdatum},reverse=True)
 kompakt=[];gezeigt=[]
