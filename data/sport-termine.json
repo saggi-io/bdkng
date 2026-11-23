@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-22T17:40",
+ "stand": "2026-11-23T06:00",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
   {
@@ -996,15 +996,6 @@
  ],
  "tischtennis": [
   {
-   "date": "2026-11-14",
-   "time": "19:00",
-   "liga": "E1KK",
-   "verein": "RV-TTC Fürstengrund",
-   "home": "RV-TTC Fürstengrund II",
-   "away": "SV 1908 Falken-Gesäß",
-   "erg": "0:10"
-  },
-  {
    "date": "2026-11-17",
    "time": "20:00",
    "liga": "Herren, 2.Kreisklasse",
@@ -1223,19 +1214,19 @@
   {
    "date": "2026-12-11",
    "time": "20:00",
-   "liga": "E1KK",
+   "liga": "E3KK",
    "verein": "RV-TTC Fürstengrund",
-   "home": "RV-TTC Fürstengrund II",
-   "away": "TTC Langen-Brombach IV",
+   "home": "SV Ober-Kainsbach IV",
+   "away": "RV-TTC Fürstengrund III",
    "erg": ""
   },
   {
    "date": "2026-12-11",
    "time": "20:00",
-   "liga": "E3KK",
+   "liga": "E1KK",
    "verein": "RV-TTC Fürstengrund",
-   "home": "SV Ober-Kainsbach IV",
-   "away": "RV-TTC Fürstengrund III",
+   "home": "RV-TTC Fürstengrund II",
+   "away": "TTC Langen-Brombach IV",
    "erg": ""
   },
   {
