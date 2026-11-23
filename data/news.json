@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-23-316098613",
+    "checked": "2026-11-23",
+    "valid_until": "2026-12-03",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Kinderbetreuung in Bad Königer Kitas soll 2027 in zwei Schritten teurer werden",
+    "paragraphs": [
+      "Eine Steigerung der Kita-Gebühren um zehn Prozent winkt das Bad Königer Parlament nicht ohne Diskussionen durch. Weitere Themen: Toilettenanlage im Kurpark und Müllblitzer."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/kinderbetreuung-in-bad-koenig-soll-teurer-werden-6923865",
+    "zeit": "20:00"
+  },
+  {
     "id": "2026-11-23-wetter",
     "checked": "2026-11-23",
     "zeit": "19:00",
