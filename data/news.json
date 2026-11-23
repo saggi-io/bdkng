@@ -1,5 +1,28 @@
 [
   {
+    "id": "wetter-rueckblick-2026-11-16",
+    "checked": "2026-11-23",
+    "zeit": "06:30",
+    "valid_until": "2026-11-30",
+    "categories": [
+      "wetter"
+    ],
+    "title": "Wetterrückblick Bad König: 16. bis 22. November",
+    "paragraphs": [
+      "Die Woche in Zahlen: -3 bis 13 °C · 69,0 l/m² Regen · 9 Sonnenstunden · 1 trockene Tage.",
+      "Wärmster Tag: Di, 17.11. mit 13 °C. Kältester Morgen: So, 22.11. mit -3 °C. Nassester Tag: Di, 17.11. mit 23,1 l/m².",
+      "Mo, 16.11.: 7 bis 9 °C · 6,6 l/m² Regen · 2 h Sonne",
+      "Di, 17.11.: 7 bis 13 °C · 23,1 l/m² Regen · 0 h Sonne",
+      "Mi, 18.11.: 8 bis 12 °C · 7,7 l/m² Regen · 1 h Sonne",
+      "Do, 19.11.: 7 bis 9 °C · 11,4 l/m² Regen · 0 h Sonne",
+      "Fr, 20.11.: 6 bis 8 °C · 19,8 l/m² Regen · 0 h Sonne",
+      "Sa, 21.11.: 0 bis 6 °C · 0,4 l/m² Regen · 6 h Sonne",
+      "So, 22.11.: -3 bis 5 °C · trocken · 0 h Sonne"
+    ],
+    "source": "Deutscher Wetterdienst (DWD), Messwerte über Bright Sky",
+    "url": "https://brightsky.dev/"
+  },
+  {
     "id": "2026-11-22-muell",
     "checked": "2026-11-22",
     "zeit": "19:05",
@@ -347,29 +370,6 @@
     ],
     "source": "Bad Königer Stadtnachrichten (meinOrt)",
     "url": "https://meinort.de/bad-koenig/neues/stellenausschreibung-mitarbeiter-oeffentlichkeitsarbeit-2173-2026-48-0-46982916"
-  },
-  {
-    "id": "wetter-rueckblick-2026-11-09",
-    "checked": "2026-11-18",
-    "zeit": "16:05",
-    "valid_until": "2026-11-25",
-    "categories": [
-      "wetter"
-    ],
-    "title": "Wetterrückblick Bad König: 9. bis 15. November",
-    "paragraphs": [
-      "Die Woche in Zahlen: -2 bis 11 °C · 10,8 l/m² Regen · 15 Sonnenstunden · 4 trockene Tage.",
-      "Wärmster Tag: Mi, 11.11. mit 11 °C. Kältester Morgen: So, 15.11. mit -2 °C. Nassester Tag: Mi, 11.11. mit 9,0 l/m².",
-      "Mo, 09.11.: 3 bis 6 °C · trocken · 0 h Sonne",
-      "Di, 10.11.: 3 bis 6 °C · trocken · 3 h Sonne",
-      "Mi, 11.11.: 3 bis 11 °C · 9,0 l/m² Regen · 0 h Sonne",
-      "Do, 12.11.: 2 bis 11 °C · 0,2 l/m² Regen · 0 h Sonne",
-      "Fr, 13.11.: 1 bis 6 °C · trocken · 5 h Sonne",
-      "Sa, 14.11.: 0 bis 3 °C · trocken · 7 h Sonne",
-      "So, 15.11.: -2 bis 9 °C · 1,6 l/m² Regen · 0 h Sonne"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Messwerte über Bright Sky",
-    "url": "https://brightsky.dev/"
   },
   {
     "id": "q-2026-11-18-926336287",
