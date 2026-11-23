@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-11-23-termine",
+    "checked": "2026-11-23",
+    "zeit": "09:21",
+    "valid_until": "2026-11-30",
+    "categories": [
+      "termine"
+    ],
+    "title": "TERMINE & VERANSTALTUNGEN · Diese Woche",
+    "paragraphs": [
+      "• Donnerstag, 26.11., 14:30 Uhr: Seniorennachmittag der AWO Tagespflege – AWO Tagespflege, Schwimmbadstraße 2b",
+      "Änderungen bitte beim Veranstalter prüfen. Quellen: Stadt Bad König, Veranstaltungskalender https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/ Stand: 23.11.2026. Automatisch zusammengestellt."
+    ],
+    "source": "Stadt Bad König, Veranstaltungskalender",
+    "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/"
+  },
+  {
     "id": "2026-11-23-sport",
     "checked": "2026-11-23",
     "zeit": "09:02",
@@ -271,31 +287,6 @@
     "source": "Echo Online",
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/vetter-weihnachtskarten-erhaeltlich-6907574",
     "zeit": "11:00"
-  },
-  {
-    "id": "2026-11-20-termine",
-    "checked": "2026-11-20",
-    "zeit": "10:01",
-    "valid_until": "2026-11-27",
-    "categories": [
-      "termine"
-    ],
-    "title": "TERMINE & VERANSTALTUNGEN · Das Wochenende",
-    "paragraphs": [
-      "• Freitag, 20.11., 12:00 Uhr: Orgel um 12 – Schlosskirche Bad König",
-      "• Samstag, 21.11., 12:00 Uhr: TECMUMAS Technikmuseum Bad König – Kulturdenkmal \"Hamburger Zigarrenfabrik\", Kimbacher Straße 79 (TECMUMAS Technikmuseum Bad König)",
-      "• Sonntag, 22.11., 10:00 Uhr: Adventsbasar der Aktion behindertes Kind Odenwaldkreis e.V. – Großer Saal, Rentmeisterei, Schlossplatz",
-      "• Sonntag, 22.11., 10:30 Uhr: Georg-Vetter-Museum – Georg-Vetter-Museum, Alexanderstraße 2",
-      "• Sonntag, 22.11., 12:00 Uhr: TECMUMAS Technikmuseum Bad König – Kulturdenkmal \"Hamburger Zigarrenfabrik\", Kimbacher Straße 79 (TECMUMAS Technikmuseum Bad König)",
-      "• Sonntag, 22.11., 13:00 Uhr: Fußball (Kreisliga B): SG Bad König/Zell II – SV Beerfelden",
-      "• Sonntag, 22.11., 15:00 Uhr: Fußball (Kreisliga A): SG Bad König/Zell – SV Gammelsbach",
-      "• Samstag, 21.11., 15:30 Uhr: Handball (Frauen): HSG Odenwald II – TuSpo Obernburg II",
-      "• Samstag, 21.11., 17:30 Uhr: Handball (Frauen): HSG Odenwald – TuSpo Obernburg",
-      "• Samstag, 21.11., 19:30 Uhr: Handball (Männer): HSG Odenwald II – TV Bürgstadt",
-      "Änderungen bitte beim Veranstalter prüfen. Quellen: Stadt Bad König, Veranstaltungskalender; FuPa (Fußball); nuLiga (Handball) https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/ Stand: 20.11.2026. Automatisch zusammengestellt."
-    ],
-    "source": "Stadt Bad König, Veranstaltungskalender; FuPa (Fußball); nuLiga (Handball)",
-    "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/"
   },
   {
     "id": "q-2026-11-20-613838823",
