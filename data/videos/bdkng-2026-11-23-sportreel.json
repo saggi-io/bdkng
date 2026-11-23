@@ -1,0 +1,72 @@
+{
+ "typ": "sport",
+ "titel": "Die Ergebnisse",
+ "ueber": "Wochenende 20.–22.11.",
+ "quelle": "FuPa, nuLiga Handball, nuLiga Tennis, click-TT",
+ "kopfzeile": "Sport-Wochenende in Bad König",
+ "hook": "Sieg! SG Bad König/Zell – SV Gammelsbach 4:2",
+ "hook_label": "Fußball · SG 1a",
+ "unten": "+ 11 weitere Ergebnisse",
+ "zeilen": [
+  {
+   "t": "SG Bad König/Zell – SV Gammelsbach 4:2",
+   "r": "sport",
+   "k": "Fußball · SG 1a · So"
+  },
+  {
+   "t": "VfR Würzberg – SpVgg Kinzigtal 7:0",
+   "r": "sport",
+   "k": "Fußball · Kinzigtal · So"
+  },
+  {
+   "t": "SG Vielbrunn/Würzberg II – SpVgg Kinzigtal II 8:2",
+   "r": "sport",
+   "k": "Fußball · Kinzigtal II · So"
+  },
+  {
+   "t": "HSG Odenwald – TuSpo Obernburg 35:24",
+   "r": "sport",
+   "k": "Handball · Frauen · Sa"
+  },
+  {
+   "t": "HSG Odenwald II – TuSpo Obernburg II 34:21",
+   "r": "sport",
+   "k": "Handball · Frauen II · Sa"
+  },
+  {
+   "t": "HSG Odenwald II – TV Bürgstadt 34:50",
+   "r": "sport",
+   "k": "Handball · Männer II · Sa"
+  },
+  {
+   "t": "TC Bad König – SVS Griesheim 2:1",
+   "r": "sport",
+   "k": "Tennis · Damen 30 · Sa"
+  },
+  {
+   "t": "TV 1858 Beerfelden III – TTC Kimbach III 4:0",
+   "r": "sport",
+   "k": "Tischtennis · Herren, 2.Kreisklasse · Di"
+  },
+  {
+   "t": "TTC Kimbach VI – KSV Reichelsheim 1892 III 1:9",
+   "r": "sport",
+   "k": "Tischtennis · E3KK · Di"
+  },
+  {
+   "t": "RV-TTC Fürstengrund III – TSV 1875 Höchst VI 7:3",
+   "r": "sport",
+   "k": "Tischtennis · E3KK · Di"
+  },
+  {
+   "t": "SV Ober-Kainsbach IV – TTC Kimbach V 4:6",
+   "r": "sport",
+   "k": "Tischtennis · E3KK · Fr"
+  },
+  {
+   "t": "TV 1924 Gammelsbach II – TTC Kimbach III 7:3",
+   "r": "sport",
+   "k": "Tischtennis · E2KK · Fr"
+  }
+ ]
+}
