@@ -1,22 +1,5 @@
 [
   {
-    "id": "bahn-2026-11-22",
-    "checked": "2026-11-22",
-    "zeit": "20:00",
-    "valid_until": "2026-11-22",
-    "categories": [
-      "verkehr"
-    ],
-    "title": "Odenwaldbahn: Größere Verspätungen ab Bad König",
-    "paragraphs": [
-      "Auf der Odenwaldbahn läuft es gerade nicht rund. Das betrifft die Züge ab Bad König:",
-      "Die RB 82 um 20:35 Uhr ab Bad König Richtung Erbach hat rund 23 Minuten Verspätung (Grund laut Bahn: Verspätung aus vorheriger Fahrt).",
-      "Stand: 22.11.2026, 20:00 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
-    ],
-    "source": "Echtzeitdaten der Deutschen Bahn",
-    "url": "https://dbf.finalrewind.org/Bad%20K%C3%B6nig"
-  },
-  {
     "id": "2026-11-22-muell",
     "checked": "2026-11-22",
     "zeit": "19:05",
@@ -67,21 +50,6 @@
     ],
     "source": "FuPa",
     "url": "https://bdkng.de"
-  },
-  {
-    "id": "medien-2026-11-22-293123921",
-    "checked": "2026-11-22",
-    "valid_until": "2026-12-02",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Streuobstwiesen-Initiative pflanzt in Beerfelden zwei neue Bäume",
-    "paragraphs": [
-      "Hitze und lang anhaltende Trockenheit setzen den Bäumen am Solarfeld in Beerfelden zu. Die Streuobstwiesen-Initiative hat jetzt zwei abgestorbene Bäume ersetzt."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/oberzent-odenwaldkreis/streuobstwiesen-initiative-pflanzt-zwei-neue-baeume-6887242",
-    "zeit": "15:00"
   },
   {
     "id": "medien-2026-11-19-265388595",
@@ -221,22 +189,6 @@
     "zeit": "20:00"
   },
   {
-    "id": "2026-11-21-wetter",
-    "checked": "2026-11-21",
-    "zeit": "19:00",
-    "valid_until": "2026-11-24",
-    "categories": [
-      "wetter"
-    ],
-    "title": "WETTER · Die nächsten 3 Tage",
-    "paragraphs": [
-      "Sonntag, 22.11.: bedeckt, -2 bis 3 °C. Frost möglich  Montag, 23.11.: wechselnd bewölkt, -3 bis 2 °C. Frost möglich  Dienstag, 24.11.: wechselnd bewölkt, -5 bis 1 °C. Frost möglich",
-      "Amtliche WARNUNG vor FROST (Sa 22:00 bis So 09:00 Uhr)"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
-    "url": "https://bdkng.de"
-  },
-  {
     "id": "medien-2026-11-15-261694390",
     "checked": "2026-11-15",
     "valid_until": "2026-11-25",
@@ -250,22 +202,6 @@
     "source": "Echo Online",
     "url": "https://www.echo-online.de/sport/fussball/fussball-odenwald/vfl-michelstadt-bleibt-an-tabellenfuehrer-fsv-erbach-dran-6756237",
     "zeit": "18:00"
-  },
-  {
-    "id": "verkehr-live-337615240",
-    "checked": "2026-11-21",
-    "valid_until": "2026-11-22",
-    "categories": [
-      "verkehr"
-    ],
-    "title": "B45: Michelstadt Höchst im Odenwald zwischen Zell und Bad König",
-    "paragraphs": [
-      "Vorsicht auf der B45 Michelstadt Richtung Höchst im Odenwald zwischen Zell und Bad König liegt eine Mörtelwanne auf der Fahrbahn!",
-      "Stand: 21.11.2026, 12:03 Uhr"
-    ],
-    "source": "hessenschau.de Verkehrsservice",
-    "url": "https://www.hessenschau.de/verkehr/index.html#337615240",
-    "zeit": "12:05"
   },
   {
     "id": "medien-2026-11-18-314367882",
@@ -677,38 +613,6 @@
     "url": "https://meinort.de/bad-koenig/neues/veranstaltungen-2173-2026-48-0-55764819"
   },
   {
-    "id": "2026-11-15-news-211151833",
-    "checked": "2026-11-15",
-    "valid_until": "2026-11-22",
-    "categories": [
-      "sport"
-    ],
-    "title": "Handball: Die Ergebnisse vom Wochenende",
-    "paragraphs": [
-      "• So 15.11. · Frauen II: HSG Bachgau III – HSG Odenwald II 18:35",
-      "• So 15.11. · Männer III: HSG Bachgau IV – HSG Odenwald III 21:21",
-      "• So 15.11. · Männer: HSG Bachgau II – HSG Odenwald 31:38",
-      "• So 15.11. · Männer II: TV Niedernberg – HSG Odenwald II 42:37"
-    ],
-    "source": "nuLiga Handball (HHV)",
-    "url": "https://hhv-handball.liga.nu"
-  },
-  {
-    "id": "2026-11-15-sport",
-    "checked": "2026-11-15",
-    "valid_until": "2026-11-22",
-    "categories": [
-      "sport"
-    ],
-    "title": "Fußball: Die Ergebnisse vom Wochenende",
-    "paragraphs": [
-      "• Sa 14.11. · SG 1a: FV Mümling-Grumbach – SG Bad König/Zell 2:4\n• So 15.11. · SG 1b: SG Sandbach II – SG Bad König/Zell II 3:4",
-      "Nächste Fußballspiele\n• So 22.11., 13:00 Uhr: SG Bad König/Zell II – SV Beerfelden\n• So 22.11., 15:00 Uhr: SG Bad König/Zell – SV Gammelsbach"
-    ],
-    "source": "FuPa",
-    "url": "https://bdkng.de"
-  },
-  {
     "id": "medien-2026-11-15-285802190",
     "checked": "2026-11-15",
     "valid_until": "2026-11-25",
@@ -804,34 +708,6 @@
         "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/zeller-ortsdurchfahrt-wird-wieder-freigegeben-6701675"
       }
     ]
-  },
-  {
-    "id": "medien-2026-11-12-235775224",
-    "checked": "2026-11-12",
-    "valid_until": "2026-11-22",
-    "categories": [
-      "sport"
-    ],
-    "title": "HSG Odenwald im Derby „überall ein bisschen besser“",
-    "paragraphs": [
-      "Für die HSG Odenwald ist im Handball-Derby gegen Rodenstein die breite Bank der Schlüssel zum Erfolg. Dem TV Beerfelden reicht ein treffsicherer Marek Beysel nicht."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/sport/handball/handball-odenwald-spessart/hsg-odenwald-im-derby-ueberall-ein-bisschen-besser-6684123"
-  },
-  {
-    "id": "q-2026-11-12-mo795506023",
-    "checked": "2026-11-12",
-    "valid_until": "2026-11-22",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Gemeinsame Pressemitteilung der Städte Bad König und Breuberg und der Gemeinden Höchst i. Odw. und Lützelbach",
-    "paragraphs": [
-      "Starkes Signal für Digitalisierung und Bürgerfreundlichkeit Die Städte Bad König und Breuberg und die Gemeinden Höchst i. Odw. und Lützelbach haben im Rahmen ihrer seit Jahren bestehenden interkommunalen Zusammenarbeit (IKZ) ein erneutes Highlight vorbereitet: Gemeinsam wurde beim Land Hessen beantragt, eine neue Homepage für alle vier Kommunen einschließlich einer …"
-    ],
-    "source": "Bad Königer Stadtnachrichten (meinOrt)",
-    "url": "https://meinort.de/neues/2173-2026-48-0-00000000000046933800?ort=2307"
   },
   {
     "categories": [
