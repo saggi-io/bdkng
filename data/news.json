@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-11-23-sport",
+    "checked": "2026-11-23",
+    "zeit": "09:02",
+    "valid_until": "2026-11-30",
+    "categories": [
+      "sport"
+    ],
+    "title": "SPORT & VEREINE · Der Wochenend-Rückblick",
+    "paragraphs": [
+      "Tischtennis\n• Di 17.11. · Herren, 2.Kreisklasse: TV 1858 Beerfelden III – TTC Kimbach III 4:0\n• Di 17.11. · E3KK: TTC Kimbach VI – KSV Reichelsheim 1892 III 1:9\n• Di 17.11. · E3KK: RV-TTC Fürstengrund III – TSV 1875 Höchst VI 7:3\n• Fr 20.11. · E3KK: SV Ober-Kainsbach IV – TTC Kimbach V 4:6\n• Fr 20.11. · E2KK: TV 1924 Gammelsbach II – TTC Kimbach III 7:3",
+      "Tennis\n• Sa 21.11. · Damen 30: TC Bad König – SVS Griesheim 2:1\n• Sa 21.11. · Herren: TuS Makkabi Ffm – TC Bad König (Ergebnis noch offen)"
+    ],
+    "source": "click-TT (HeTTV), nuLiga Tennis (HTV)",
+    "url": "https://bdkng.de"
+  },
+  {
     "id": "q-2026-11-23-mo995373643",
     "checked": "2026-11-23",
     "zeit": "07:00",
