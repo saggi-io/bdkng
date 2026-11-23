@@ -1,5 +1,20 @@
 [
   {
+    "id": "q-2026-11-23-mo995373643",
+    "checked": "2026-11-23",
+    "zeit": "07:00",
+    "valid_until": "2026-12-03",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Veranstaltungen",
+    "paragraphs": [
+      "Alle Details stehen in der Quelle – siehe Link."
+    ],
+    "source": "Bad Königer Stadtnachrichten (meinOrt)",
+    "url": "https://meinort.de/bad-koenig/neues/veranstaltungen-2173-2026-48-0-55761744"
+  },
+  {
     "id": "wetter-rueckblick-2026-11-16",
     "checked": "2026-11-23",
     "zeit": "06:30",
