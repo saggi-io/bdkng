@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-23-322559234",
+    "checked": "2026-11-23",
+    "valid_until": "2026-12-03",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Scheunenbrand in Bad König: Hunde retten Familie das Leben",
+    "paragraphs": [
+      "Ein verheerendes Feuer zerstörte Sonntagnacht in Bad König eine Scheune samt Lager der Laufhunderettung. Auch in Höchst und Lützelbach brannte es."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/drei-braende-im-odenwald-hunde-retten-familie-das-leben-6993409",
+    "zeit": "12:00"
+  },
+  {
     "id": "bahn-2026-11-23",
     "checked": "2026-11-23",
     "zeit": "10:00",
