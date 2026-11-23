@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-11-23-polizei-6395680",
+    "checked": "2026-11-23",
+    "zeit": "09:59",
+    "valid_until": "2026-12-07",
+    "categories": [
+      "aktuell",
+      "wichtig"
+    ],
+    "title": "Bad König: Brand einer Scheune in der Schwimmbadstraße / Kriminalpolizei ermittelt zur Brandursache",
+    "paragraphs": [
+      "Beim Brand einer Scheune in der Schwimmbadstraße ist am Samstag (23.11.) ein Schaden von mehreren zehntausend Euro entstanden. Zeugen hatten das Feuer gegen 23.20 Uhr bemerkt und alarmierten daraufhin Feuerwehr und Polizei. Als ..."
+    ],
+    "source": "Polizeipräsidium Südhessen über Presseportal · 23.11.2026, 09:12 Uhr",
+    "url": "https://www.presseportal.de/blaulicht/pm/4969/6395680"
+  },
+  {
     "id": "2026-11-23-termine",
     "checked": "2026-11-23",
     "zeit": "09:21",
