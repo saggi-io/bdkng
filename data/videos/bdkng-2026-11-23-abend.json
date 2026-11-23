@@ -1,0 +1,72 @@
+{
+ "titel": "Der Tag in Bad König",
+ "ueber": "Mo. 23.11. · 19:30 Uhr",
+ "quelle": "click-TT, Echtzeitdaten der Deutschen Bahn, Echo Online",
+ "zeilen": [
+  {
+   "t": "Der Wochenend-Rückblick",
+   "r": "sport",
+   "k": "Sport"
+  },
+  {
+   "t": "Odenwaldbahn: Größere Verspätungen ab Bad König",
+   "r": "verkehr",
+   "k": "Verkehr"
+  },
+  {
+   "t": "Termine dieser Woche – alle auf bdkng.de",
+   "r": "termine",
+   "k": "Termine"
+  },
+  {
+   "t": "Scheunenbrand in Bad König: Hunde retten Familie das Leben",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "Bad König: Brand einer Scheune in der Schwimmbadstraße / Kriminalpolizei …",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "Veranstaltungen",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  }
+ ],
+ "morgen_ueber": "Di. 24.11.",
+ "morgen": [
+  [
+   "⛅",
+   "Wetter",
+   "Wechselnd bewölkt, -5 bis 2 °C"
+  ],
+  [
+   "🗑️",
+   "Müll",
+   "Restmüll: Etzen-Gesäß, Fürstengrund"
+  ],
+  [
+   "⛽",
+   "Tanken",
+   "E10 ab 1,71 € (Gross-Umstadt), Diesel ab 1,95 €"
+  ]
+ ],
+ "mitmachen": [
+  [
+   "📣",
+   "Blitzer & Stau",
+   "Gesehen? Auf bdkng.de melden"
+  ],
+  [
+   "🤖",
+   "BDKNG-KI",
+   "Frag einfach: Müll, Termine, Öffnungszeiten"
+  ],
+  [
+   "📅",
+   "Termin melden",
+   "Dein Verein feiert? Einfach eintragen"
+  ]
+ ]
+}
