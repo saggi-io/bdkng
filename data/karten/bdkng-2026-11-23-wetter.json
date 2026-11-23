@@ -1,0 +1,29 @@
+{
+ "rubrik": "wetter",
+ "titel": "Achtung: Warnung vor Frost",
+ "ueber": "Mo. 23.11. · 19:00 Uhr",
+ "art": "liste",
+ "zeilen": [
+  {
+   "t": "Dienstag, 24.11.: wechselnd bewölkt, -5 bis 2 °C. Frost möglich",
+   "e": "⛅"
+  },
+  {
+   "t": "Mittwoch, 25.11.: bedeckt, -3 bis 1 °C. Frost möglich",
+   "e": "☁️"
+  },
+  {
+   "t": "Donnerstag, 26.11.: bedeckt, -3 bis 0 °C. Frost möglich",
+   "e": "☁️"
+  },
+  {
+   "t": "Amtliche WARNUNG vor FROST (Mo 18:00 bis Di 12:00 Uhr)",
+   "e": "⚠️"
+  },
+  {
+   "t": "Amtliche WARNUNG vor GLÄTTE (Mo 20:00 bis Di 10:00 Uhr)",
+   "e": "⚠️"
+  }
+ ],
+ "quelle": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev"
+}
