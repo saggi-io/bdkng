@@ -24,3 +24,17 @@ html.stil-c footer{background:#2B1E2F}
 html.stil-c .stil-knopf{background:#2B1E2F;color:#fff;border-color:#2B1E2F}
 @media(max-width:700px){.stil-knopf .sk-t{display:none}.stil-knopf{padding:8px 10px}}
 html.stil-c{scroll-padding-top:185px}
+
+/* Neuer Look: Rubriken ohne Bilder, als schlanke Text-Auswahl (23.11.2026) */
+html.stil-c #kompakt .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media(min-width:900px){html.stil-c #kompakt .grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+html.stil-c #kompakt .cardtop{display:none}
+html.stil-c #kompakt .card{position:relative;min-height:0;border-radius:18px;transition:transform .15s}
+html.stil-c #kompakt .card:active{transform:scale(.98)}
+html.stil-c #kompakt .cardbody{padding:14px 14px 12px}
+html.stil-c #kompakt .cardbody h3{font-size:1.02rem;margin:0 0 4px;line-height:1.25}
+html.stil-c #kompakt .cardbody p{font-size:.82rem;margin:0;line-height:1.35;opacity:.8}
+html.stil-c #kompakt .cardbody .more{position:static;font-size:0;padding:0;margin:0}
+html.stil-c #kompakt .cardbody .more::after{content:'';position:absolute;inset:0;border-radius:inherit}
+html.stil-c #aktuell h3::before{content:'📰 '}html.stil-c #verkehr h3::before{content:'🚧 '}html.stil-c #termine h3::before{content:'📅 '}html.stil-c #sport h3::before{content:'⚽ '}
+html.stil-c #genuss h3::before{content:'🍴 '}html.stil-c #wichtig h3::before{content:'⚠️ '}html.stil-c #wetter h3::before{content:'🌤️ '}html.stil-c #muell h3::before{content:'🗑️ '}
