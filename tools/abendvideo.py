@@ -202,11 +202,11 @@ def intro_hook(t):  # 2,2 s: ab dem ERSTEN Bild sichtbar – die wichtigste Meld
     rang = {'wichtig': 0, 'verkehr': 1, 'polizei': 1, 'aktuell': 2, 'sport': 3, 'termine': 4}
     z = sorted(z0, key=lambda x: (allg(x), rang.get(x.get('r', 'aktuell'), 5)))
     hook = str(data.get('hook') or (data.get('jung_hook') if STIL == 'c' else '') or (z[0]['t'] if z else '') or ('Morgen: ' + data['morgen'][0][2] if data.get('morgen') else 'Der Tag in Bad König'))
-    rub = (data.get('jung_label', 'Bad König') if STIL == 'c' and data.get('jung_hook') else (z[0].get('k') if z else '')) or ''
+    rub = data.get('hook_label') or (data.get('jung_label', 'Bad König') if STIL == 'c' and data.get('jung_hook') else (z[0].get('k') if z else '')) or ''
     p = 1 + 0.025 * math.sin(t * 2 * math.pi * 0.9)
     setz(im, LG[0], W / 2, 250, 300 * p)
     uv = str(data.get('ueber', '')).split(' · ')[0]
-    d.text((W // 2, 470), ('Heute in Bad König' + (' · ' + uv if uv else '')).upper(), font=K.f('Inter-Bold.otf', 44), fill=(255, 255, 255) if STIL == 'c' else GOLD, anchor='mm')
+    d.text((W // 2, 470), (data.get('kopfzeile') or ('Heute in Bad König' + (' · ' + uv if uv else ''))).upper(), font=K.f('Inter-Bold.otf', 44), fill=(255, 255, 255) if STIL == 'c' else GOLD, anchor='mm')
     s = 1 + 0.06 * (1 - ease(t / 0.35))  # kleiner „Punch“ am Anfang, Text ist trotzdem sofort lesbar
     gr = int(104 * s)
     while gr > 64:
@@ -222,7 +222,7 @@ def intro_hook(t):  # 2,2 s: ab dem ERSTEN Bild sichtbar – die wichtigste Meld
     for i, l in enumerate(ls):
         d.text((W // 2, y0 + i * zh + zh // 2), l, font=ft, fill=(255, 255, 255), anchor='mm')
     rest = max(0, len(z) - 1)
-    unten = ('+ ' + str(rest) + ' weitere Meldung' + ('en' if rest != 1 else '') + ' · ' if rest else '') + ('Blitzer · Sprit · Wetter · Events' if STIL == 'c' else 'Wetter & Müll morgen')
+    unten = data.get('unten') or ('+ ' + str(rest) + ' weitere Meldung' + ('en' if rest != 1 else '') + ' · ' if rest else '') + ('Blitzer · Sprit · Wetter · Events' if STIL == 'c' else 'Wetter & Müll morgen')
     a = ease((t - 0.5) / 0.4)
     if a > 0: text_alpha(im, (W // 2 - d.textlength(unten, font=K.f('Inter-Bold.otf', 46)) // 2, 1450), unten, K.f('Inter-Bold.otf', 46), (255, 255, 255) if STIL == 'c' else (226, 239, 214), a)
     return im.convert('RGB')
@@ -255,6 +255,28 @@ def render(D, OUT, tmp):
     global data
     data = D
     STEP = 1.4
+    if D.get('typ') == 'sport':
+        # Sport-Reel (Wochenend-Ergebnisse): Hook mit dem Top-Ergebnis, dann je 3 Ergebnisse pro Seite, Abspann
+        def seite_s(zeilen, titel):
+            n = len(zeilen)
+            def f(t):
+                D2 = dict(D); D2['zeilen'] = zeilen; D2['titel'] = titel
+                globals()['data'] = D2
+                return frame(t, n, [(t - 0.6 - i * 1.0) / 0.4 for i in range(n)])
+            return f, 0.6 + n * 1.0 + 2.4
+        def hook_s(t):
+            globals()['data'] = D
+            return intro_hook(t)
+        Z = D['zeilen'][:12]; teile = [Z[i:i + 3] for i in range(0, len(Z), 3)]
+        szenen = [('s0.mp4', 2.6, hook_s)]
+        for k, tl in enumerate(teile):
+            fn, dau = seite_s(tl, D['titel'] + (' (%d/%d)' % (k + 1, len(teile)) if len(teile) > 1 else ''))
+            szenen.append(('s%d.mp4' % (k + 1), dau, fn))
+        szenen.append(('se.mp4', 2.2, ende))
+        for n_, d_, f_ in szenen: szene(os.path.join(tmp, n_), d_, f_)
+        open(os.path.join(tmp, 'liste.txt'), 'w').write(''.join("file '%s'\n" % x[0] for x in szenen))
+        subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', os.path.join(tmp, 'liste.txt'), '-c', 'copy', OUT], check=True)
+        print('Länge', round(sum(x[1] for x in szenen), 1)); return
     def seite(zeilen, titel):
         n = len(zeilen)
         def f(t):
