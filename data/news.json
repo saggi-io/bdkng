@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-11-24-wetter",
+    "checked": "2026-11-24",
+    "zeit": "19:00",
+    "valid_until": "2026-11-27",
+    "categories": [
+      "wetter"
+    ],
+    "title": "WETTER · Die nächsten 3 Tage",
+    "paragraphs": [
+      "Mittwoch, 25.11.: wechselnd bewölkt, -3 bis 1 °C. Frost möglich  Donnerstag, 26.11.: bedeckt, -3 bis 0 °C. Frost möglich  Freitag, 27.11.: bedeckt, -3 bis 0 °C. Frost möglich",
+      "Amtliche WARNUNG vor FROST (Di 16:00 bis Mi 12:00 Uhr)"
+    ],
+    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
+    "url": "https://bdkng.de"
+  },
+  {
     "id": "bahn-2026-11-24",
     "checked": "2026-11-24",
     "zeit": "17:20",
