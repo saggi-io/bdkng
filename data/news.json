@@ -1,5 +1,22 @@
 [
   {
+    "id": "bahn-2026-11-24",
+    "checked": "2026-11-24",
+    "zeit": "10:10",
+    "valid_until": "2026-11-24",
+    "categories": [
+      "verkehr"
+    ],
+    "title": "Update Odenwaldbahn: Größere Verspätungen ab Bad König",
+    "paragraphs": [
+      "Auf der Odenwaldbahn gibt es neue Probleme. Das betrifft gerade die Züge ab Bad König:",
+      "Die RB 82 um 10:35 Uhr ab Bad König Richtung Erbach hat rund 20 Minuten Verspätung (Grund laut Bahn: Verspätung aus vorheriger Fahrt).",
+      "Stand: 24.11.2026, 10:10 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
+    ],
+    "source": "Echtzeitdaten der Deutschen Bahn",
+    "url": "https://dbf.finalrewind.org/Bad%20K%C3%B6nig"
+  },
+  {
     "id": "medien-2026-11-23-293122031",
     "checked": "2026-11-23",
     "valid_until": "2026-12-03",
@@ -28,23 +45,6 @@
     ],
     "source": "Bad Königer Stadtnachrichten (meinOrt)",
     "url": "https://meinort.de/bad-koenig/neues/bevoelkerungsschutz-stadt-bad-koenig-2173-2026-49-0-47078220"
-  },
-  {
-    "id": "bahn-2026-11-24",
-    "checked": "2026-11-24",
-    "zeit": "07:50",
-    "valid_until": "2026-11-24",
-    "categories": [
-      "verkehr"
-    ],
-    "title": "Odenwaldbahn: Größere Verspätungen ab Bad König",
-    "paragraphs": [
-      "Auf der Odenwaldbahn läuft es gerade nicht rund. Das betrifft die Züge ab Bad König:",
-      "Die RE 85 um 07:51 Uhr ab Bad König Richtung Erbach hat rund 22 Minuten Verspätung.",
-      "Stand: 24.11.2026, 07:50 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
-    ],
-    "source": "Echtzeitdaten der Deutschen Bahn",
-    "url": "https://dbf.finalrewind.org/Bad%20K%C3%B6nig"
   },
   {
     "id": "medien-2026-11-24-236790231",
