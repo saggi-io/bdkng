@@ -1,0 +1,52 @@
+{
+ "titel": "Der Tag in Bad König",
+ "ueber": "Di. 24.11. · 19:30 Uhr",
+ "quelle": "Echtzeitdaten der Deutschen Bahn, Echo Online",
+ "zeilen": [
+  {
+   "t": "Update Odenwaldbahn: Größere Verspätungen ab Bad König",
+   "r": "verkehr",
+   "k": "Verkehr"
+  },
+  {
+   "t": "Bevölkerungsschutz Stadt Bad König",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "Bewusster einkaufen: Wie Biohöfe im Odenwald auf Kostendruck reagieren",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  }
+ ],
+ "morgen_ueber": "Mi. 25.11.",
+ "morgen": [
+  [
+   "⛅",
+   "Wetter",
+   "Wechselnd bewölkt, -3 bis 1 °C"
+  ],
+  [
+   "⛽",
+   "Tanken",
+   "E10 ab 1,70 € (Reichelsheim), Diesel ab 1,93 €"
+  ]
+ ],
+ "mitmachen": [
+  [
+   "📣",
+   "Blitzer & Stau",
+   "Gesehen? Auf bdkng.de melden"
+  ],
+  [
+   "🤖",
+   "BDKNG-KI",
+   "Frag einfach: Müll, Termine, Öffnungszeiten"
+  ],
+  [
+   "📅",
+   "Termin melden",
+   "Dein Verein feiert? Einfach eintragen"
+  ]
+ ]
+}
