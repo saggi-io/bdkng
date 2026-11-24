@@ -1,0 +1,25 @@
+{
+ "rubrik": "wetter",
+ "titel": "Achtung: Warnung vor Frost",
+ "ueber": "Di. 24.11. · 19:00 Uhr",
+ "art": "liste",
+ "zeilen": [
+  {
+   "t": "Mittwoch, 25.11.: wechselnd bewölkt, -3 bis 1 °C. Frost möglich",
+   "e": "⛅"
+  },
+  {
+   "t": "Donnerstag, 26.11.: bedeckt, -3 bis 0 °C. Frost möglich",
+   "e": "☁️"
+  },
+  {
+   "t": "Freitag, 27.11.: bedeckt, -3 bis 0 °C. Frost möglich",
+   "e": "☁️"
+  },
+  {
+   "t": "Amtliche WARNUNG vor FROST (Di 16:00 bis Mi 12:00 Uhr)",
+   "e": "⚠️"
+  }
+ ],
+ "quelle": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev"
+}
