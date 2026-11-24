@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-23T06:00",
+ "stand": "2026-11-24T06:00",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
   {
@@ -956,42 +956,6 @@
    "away": "TV Bürgstadt",
    "hg": 34,
    "ag": 50
-  },
-  {
-   "date": "2026-11-15",
-   "liga": "F-BL",
-   "team": "Frauen",
-   "home": "HSG Bachgau III",
-   "away": "HSG Odenwald II",
-   "hg": 18,
-   "ag": 35
-  },
-  {
-   "date": "2026-11-15",
-   "liga": "M-BK-2",
-   "team": "Männer",
-   "home": "HSG Bachgau IV",
-   "away": "HSG Odenwald III",
-   "hg": 21,
-   "ag": 21
-  },
-  {
-   "date": "2026-11-15",
-   "liga": "M-BOL",
-   "team": "Männer",
-   "home": "HSG Bachgau II",
-   "away": "HSG Odenwald",
-   "hg": 31,
-   "ag": 38
-  },
-  {
-   "date": "2026-11-15",
-   "liga": "M-BL",
-   "team": "Männer",
-   "home": "TV Niedernberg",
-   "away": "HSG Odenwald II",
-   "hg": 42,
-   "ag": 37
   }
  ],
  "tischtennis": [
