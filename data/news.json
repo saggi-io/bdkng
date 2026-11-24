@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-24-236790231",
+    "checked": "2026-11-24",
+    "valid_until": "2026-12-04",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Bewusster einkaufen: Wie Biohöfe im Odenwald auf Kostendruck reagieren",
+    "paragraphs": [
+      "Die Kunden sparen, das stellen Bio-Landwirte wie Alexander Kern in Ober-Mossau und Hans Trumpfheller in Momart durchaus fest. So reagieren sie auf die Zurückhaltung des Markts."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/landkreis-odenwaldkreis/kunden-kaufen-bewusster-ein-odenwaelder-biobauern-reagieren-6697388",
+    "zeit": "07:00"
+  },
+  {
     "id": "medien-2026-11-23-316098613",
     "checked": "2026-11-23",
     "valid_until": "2026-12-03",
