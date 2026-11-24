@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-23-293122031",
+    "checked": "2026-11-23",
+    "valid_until": "2026-12-03",
+    "categories": [
+      "sport"
+    ],
+    "title": "HSG Odenwald bleibt oben dran, Rodenstein verliert an Boden",
+    "paragraphs": [
+      "Die HSG Odenwald setzt sich gegen Obernburg nach der Pause ab und bleibt am Führungsquartett dran. Rodenstein verliert in Wallstadt trotz starker erster Hälfte den Anschluss."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/sport/handball/handball-odenwald-spessart/odenwald-bleibt-oben-dran-rodenstein-verliert-an-boden-6887053",
+    "zeit": "10:00"
+  },
+  {
     "id": "q-2026-11-24-mo254894855",
     "checked": "2026-11-24",
     "zeit": "10:00",
