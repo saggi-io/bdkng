@@ -46,23 +46,6 @@
     "zeit": "12:00"
   },
   {
-    "id": "bahn-2026-11-23",
-    "checked": "2026-11-23",
-    "zeit": "10:00",
-    "valid_until": "2026-11-23",
-    "categories": [
-      "verkehr"
-    ],
-    "title": "Odenwaldbahn: Größere Verspätungen ab Bad König",
-    "paragraphs": [
-      "Auf der Odenwaldbahn läuft es gerade nicht rund. Das betrifft die Züge ab Bad König:",
-      "Die RB 82 um 10:35 Uhr ab Bad König Richtung Erbach hat rund 26 Minuten Verspätung (Grund laut Bahn: Verspätung aus vorheriger Fahrt).",
-      "Stand: 23.11.2026, 10:00 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
-    ],
-    "source": "Echtzeitdaten der Deutschen Bahn",
-    "url": "https://dbf.finalrewind.org/Bad%20K%C3%B6nig"
-  },
-  {
     "id": "2026-11-23-polizei-6395680",
     "checked": "2026-11-23",
     "zeit": "09:59",
@@ -167,22 +150,6 @@
     ],
     "source": "https://reso-odenwald.abfallkalender.services/php/Muellkalender.php?pfad=Deutsch.muellkalender&ort=Bad%20K%C3%B6nig&ot=Alle&jahr=2026",
     "url": "https://reso-odenwald.abfallkalender.services/php/Muellkalender.php?pfad=Deutsch.muellkalender&ort=Bad%20K%C3%B6nig&ot=Alle&jahr=2026"
-  },
-  {
-    "id": "2026-11-22-wetter",
-    "checked": "2026-11-22",
-    "zeit": "19:00",
-    "valid_until": "2026-11-25",
-    "categories": [
-      "wetter"
-    ],
-    "title": "WETTER · Die nächsten 3 Tage",
-    "paragraphs": [
-      "Montag, 23.11.: wechselnd bewölkt, -3 bis 1 °C. Frost möglich  Dienstag, 24.11.: wechselnd bewölkt, -5 bis 2 °C. Frost möglich  Mittwoch, 25.11.: bedeckt, -4 bis 0 °C. Frost möglich",
-      "Amtliche WARNUNG vor FROST (So 20:00 bis Mo 11:00 Uhr)"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
-    "url": "https://bdkng.de"
   },
   {
     "id": "2026-11-22-sport",
@@ -426,21 +393,6 @@
     ],
     "source": "Bad Königer Stadtnachrichten (meinOrt)",
     "url": "https://meinort.de/bad-koenig/neues/veranstaltungen-2173-2026-48-0-55576623"
-  },
-  {
-    "id": "medien-2026-11-13-234850932",
-    "checked": "2026-11-13",
-    "valid_until": "2026-11-23",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Warum Mitarbeiter wie „Tom“ für die Asklepios in Bad König unentbehrlich sind",
-    "paragraphs": [
-      "Die Bad Königer Asklepios Schlossbergklinik bietet Perspektiven: Wie es ein Mitarbeiter aus Indien von der Putzkraft zum geschätzten Krankenpflegehelfer geschafft hat."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/erbach-odenwaldkreis/warum-mitarbeiter-wie-tom-fuer-kliniken-unentbehrlich-sind-6674087",
-    "zeit": "16:00"
   },
   {
     "id": "medien-2026-11-16-291995801",
@@ -740,54 +692,6 @@
     ],
     "source": "Bad Königer Stadtnachrichten (meinOrt)",
     "url": "https://meinort.de/bad-koenig/neues/veranstaltungen-2173-2026-47-0-55646358"
-  },
-  {
-    "id": "medien-2026-11-13-235775413",
-    "checked": "2026-11-13",
-    "valid_until": "2026-11-23",
-    "categories": [
-      "sport"
-    ],
-    "title": "HSG Odenwald fährt ungefährdeten Derbysieg ein",
-    "paragraphs": [
-      "Die Frauen-Handballerinnen der HSG Odenwald feiern einen deutlichen Erfolg im Bezirksoberliga-Derby gegen die HSG Rodenstein."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/sport/handball/handball-odenwald-spessart/hsg-odenwald-faehrt-ungefaehrdeten-derbysieg-ein-6684186"
-  },
-  {
-    "id": "medien-2026-11-13-262590224",
-    "checked": "2026-11-13",
-    "valid_until": "2026-11-23",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Kreativität und Handarbeit machen Bad Königs „Christmas Lights“ zur Attraktion",
-    "paragraphs": [
-      "Bad Königs „Christmas Lights“ starten. Die sind dank Kreativität und viel Handarbeit weit über den Odenwald hinaus etabliert und gut für die ganze Region, meint Jörg Schwinn."
-    ],
-    "source": "Odenwälder Journal",
-    "url": "https://www.odw-journal.de/hinter-den-kulissen-von-christmas-lights-so-entsteht-bad-koenigs-magisches-wintermaerchen/",
-    "weitere": [
-      {
-        "source": "Echo Online",
-        "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/als-attraktion-weit-ueber-den-odenwald-hinaus-etabliert-6765493"
-      }
-    ]
-  },
-  {
-    "id": "q-2026-11-13-mo532424961",
-    "checked": "2026-11-13",
-    "valid_until": "2026-11-23",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Katholische Kirchengemeinde Guter Hirte im Odenwaldkreis",
-    "paragraphs": [
-      "Gottesdienste und Veranstaltungen Pfarrvikar Ryszard Strojek Kontaktstelle, Friedrichstr.12, 64732 Bad König Tel. 06063 1539 Öffnungszeiten Montag von 9:00 – 12:00 Uhr Email: verwaltung.im-odenwaldkreis@bistum-mainz.de https://pfarrei-guter-hirte-im-odenwaldkreis.de Liebe Gottesdienstbesucher, wenn Sie sonntags mit dem Kirchenbus (Bad König und Ortsteile) fahren möchten, …"
-    ],
-    "source": "Bad Königer Stadtnachrichten (meinOrt)",
-    "url": "https://meinort.de/neues/2173-2026-47-0-00000000000055429269?ort=2307"
   },
   {
     "id": "medien-2026-11-12-256931796",
