@@ -1,0 +1,52 @@
+{
+ "titel": "Der Tag in Bad König",
+ "ueber": "Mi. 25.11. · 19:30 Uhr",
+ "quelle": "Echo Online",
+ "zeilen": [
+  {
+   "t": "Vortrag über Chinas Wirtschaftsweg",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "Emotionale Botschaft: Christmas Lights in Bad König erzählen von Erinnerungen",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  }
+ ],
+ "morgen_ueber": "Do. 26.11.",
+ "morgen": [
+  [
+   "☁️",
+   "Wetter",
+   "Bedeckt, -3 bis 0 °C"
+  ],
+  [
+   "📅",
+   "Termine",
+   "14:30 Uhr: Seniorennachmittag der AWO Tagespflege"
+  ],
+  [
+   "⛽",
+   "Tanken",
+   "E10 ab 1,66 € (Gross-Umstadt), Diesel ab 1,92 €"
+  ]
+ ],
+ "mitmachen": [
+  [
+   "📣",
+   "Blitzer & Stau",
+   "Gesehen? Auf bdkng.de melden"
+  ],
+  [
+   "🤖",
+   "BDKNG-KI",
+   "Frag einfach: Müll, Termine, Öffnungszeiten"
+  ],
+  [
+   "📅",
+   "Termin melden",
+   "Dein Verein feiert? Einfach eintragen"
+  ]
+ ]
+}
