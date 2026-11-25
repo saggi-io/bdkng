@@ -16,23 +16,6 @@
     "url": "https://bdkng.de"
   },
   {
-    "id": "bahn-2026-11-24",
-    "checked": "2026-11-24",
-    "zeit": "17:20",
-    "valid_until": "2026-11-24",
-    "categories": [
-      "verkehr"
-    ],
-    "title": "Update Odenwaldbahn: Größere Verspätungen ab Bad König",
-    "paragraphs": [
-      "Auf der Odenwaldbahn gibt es neue Probleme. Das betrifft gerade die Züge ab Bad König:",
-      "Die RE 85 um 17:51 Uhr ab Bad König Richtung Erbach hat rund 21 Minuten Verspätung (Grund laut Bahn: Defekt an einem Signal).",
-      "Stand: 24.11.2026, 17:20 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
-    ],
-    "source": "Echtzeitdaten der Deutschen Bahn",
-    "url": "https://dbf.finalrewind.org/Bad%20K%C3%B6nig"
-  },
-  {
     "id": "medien-2026-11-23-293122031",
     "checked": "2026-11-23",
     "valid_until": "2026-12-03",
@@ -91,22 +74,6 @@
     "source": "Echo Online",
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/kinderbetreuung-in-bad-koenig-soll-teurer-werden-6923865",
     "zeit": "20:00"
-  },
-  {
-    "id": "2026-11-23-wetter",
-    "checked": "2026-11-23",
-    "zeit": "19:00",
-    "valid_until": "2026-11-26",
-    "categories": [
-      "wetter"
-    ],
-    "title": "WETTER · Die nächsten 3 Tage",
-    "paragraphs": [
-      "Dienstag, 24.11.: wechselnd bewölkt, -5 bis 2 °C. Frost möglich  Mittwoch, 25.11.: bedeckt, -3 bis 1 °C. Frost möglich  Donnerstag, 26.11.: bedeckt, -3 bis 0 °C. Frost möglich",
-      "Amtliche WARNUNG vor FROST (Mo 18:00 bis Di 12:00 Uhr)  Amtliche WARNUNG vor GLÄTTE (Mo 20:00 bis Di 10:00 Uhr)"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
-    "url": "https://bdkng.de"
   },
   {
     "id": "medien-2026-11-23-322559234",
@@ -758,20 +725,6 @@
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/landkreis-odenwaldkreis/bei-wasserverbaenden-muemlinggersprenzgebiet-endet-eine-aera-6809986"
   },
   {
-    "id": "q-2026-11-14-mo968637765",
-    "checked": "2026-11-14",
-    "valid_until": "2026-11-24",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Verabschiedung langjähriger Vorstandsmitglieder Der VdK-Ortsverband Kirch-Brombach verabschiedet zwei …",
-    "paragraphs": [
-      "Verabschiedung langjähriger Vorstandsmitglieder Der VdK-Ortsverband Kirch-Brombach verabschiedet zwei verdiente Mitglieder aus dem Vorstand. 1. von links: Helmut Hotz 6. von links: Doris Heidenreich Wir bedanken uns ganz herzlich bei Helmut Hotz, der sich 4 Jahre , und Doris Heidenreich, die sich 12 Jahre , mit großem Engagement und unermüdlichem Einsatz für unseren …"
-    ],
-    "source": "Bad Königer Stadtnachrichten (meinOrt)",
-    "url": "https://meinort.de/bad-koenig/neues/veranstaltungen-2173-2026-47-0-55646358"
-  },
-  {
     "id": "medien-2026-11-12-256931796",
     "checked": "2026-11-12",
     "valid_until": "2026-11-26",
@@ -822,21 +775,6 @@
     "title": "B45: Sperrung zwischen Asselbrunn und Bad König-Zell bis Ende Juni 2027",
     "url": "https://www.hessenschau.de/verkehr/index.html#837739352",
     "valid_until": "2026-11-26"
-  },
-  {
-    "id": "stadt-2026-11-10-gewaesserentwicklung",
-    "checked": "2026-11-10",
-    "valid_until": "2026-11-24",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Bürgerinformation zur Gewässerentwicklung an der Mümling",
-    "paragraphs": [
-      "Am 9. November fand in Bad König die Bürgerinformation zur Gewässerentwicklung an der Mümling statt.",
-      "Die Präsentation der Stadt fasst die wichtigsten Inhalte zusammen: Gewässerökologie, Anforderungen der Wasserrahmenrichtlinie sowie Förder- und Unterstützungsangebote des Landes, zum Beispiel „100 Wilde Bäche“ und der Gewässermanager."
-    ],
-    "source": "Stadt Bad König",
-    "url": "https://www.badkoenig.de/aktuelle-nachrichten/gewaesserentwicklung-an-der-muemling/"
   },
   {
     "id": "genuss-hinweise",
