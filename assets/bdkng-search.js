@@ -184,7 +184,7 @@
     out.innerHTML = '<p class="bs-load">Ich suche …</p>'; out.hidden = false;
     laden().then(function () {
       var h = null;
-      if (!/grünschnitt|gruenschnitt|bauhof/i.test(q) && /müll|muell|abfall|abfuhr|tonne|sack|säcke|saecke|papier|\bbio\b|biotonne|restmüll|restmuell|\brest\b|gelbe?r? sa|sperrmüll|schadstoff|sonderabfall/i.test(q)) h = muellAntwort(q);
+      if (!/grünschnitt|gruenschnitt|bauhof/i.test(q) && /müll|muell|abfall|abfuhr|tonne|sack|säcke|saecke|papier|biotonne|bio-?tonne|restmüll|restmuell|rest-?müll|gelbe?r? sa|sperrmüll|schadstoff|sonderabfall/i.test(q)) h = muellAntwort(q);
       if (!h) h = ttAntwort(q);
       if (!h) h = ergebnisAntwort(q);
       if (!h && !/handball/i.test(q) && !/gespielt|ergebnis|ausgang|gewonnen|verloren|letzte|vergangen|tabelle|torsch/i.test(q)) h = spieleAntwort(q);
