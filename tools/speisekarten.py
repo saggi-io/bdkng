@@ -192,6 +192,7 @@ def main():
     g = re.sub(r'<a class="wi-karte" href="[^"]*"[^>]*>[^<]*</a>', '', g)
     for slug, d in karten.items():
         nm = e(d.get('genuss_name') or d['name'])
+        if '<b>' + nm + '</b>' not in g: nm = html.escape(str(d.get('genuss_name') or d['name']), quote=False)  # z. B. Apostroph unescaped
         # Name verlinkt auf unsere Speisekarten-Seite statt auf Google Maps (Maps-Link steht dort beim Adress-Knopf)
         g = re.sub(r'<a href="[^"]*"(?: target="_blank" rel="noopener")?><b>' + re.escape(nm) + r'</b></a>', '<a href="' + ziel(slug, d) + '"><b>' + nm + '</b></a>', g, count=1)
         pat = re.compile(r'(<b>' + re.escape(nm) + r'</b></a><span>[^<]*</span>)')
