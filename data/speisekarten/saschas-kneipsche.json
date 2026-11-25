@@ -1,0 +1,536 @@
+{
+ "name": "Sascha's Kneipsche",
+ "untertitel": "Kneipe in Kinzig · Bier vom Fass, Apfelwein, Hütchen & Tower",
+ "adresse": "Sandbergstraße 2, 64732 Bad König-Kinzig",
+ "telefon": "0151 61206718",
+ "zeiten": "Mo Ruhetag · Di ab 15 Uhr · Mi ab 13 Uhr · Do–Sa ab 15 Uhr · Sonn- und Feiertage 10–12:30 Uhr und nach Vereinbarung",
+ "stand": "Getränkekarte, fotografiert am 25.11.2026 – Preisänderungen vorbehalten, Angaben ohne Gewähr.",
+ "hinweis": "Zusatzstoffe laut Karte (z. B. Farbstoffe, Koffein, Chinin) bitte vor Ort erfragen. Bei Beschädigung des Bembels: 1 l 10 €, 2 l 15 €, 3 l 25 €.",
+ "genuss_name": "Sascha's Kneipsche",
+ "emoji": "🍺",
+ "bilder": [
+  "/assets/speisekarte/saschas-kneipsche-20261125-1.jpg",
+  "/assets/speisekarte/saschas-kneipsche-20261125-2.jpg",
+  "/assets/speisekarte/saschas-kneipsche-20261125-3.jpg"
+ ],
+ "download": "",
+ "gruppen": [
+  {
+   "titel": "🥤 Alkoholfreie Getränke",
+   "hinweis": "",
+   "spalten": [
+    "0,2 l",
+    "0,4 l"
+   ],
+   "liste": [
+    [
+     "1",
+     "Wasser",
+     "",
+     "1,20",
+     "2,10"
+    ],
+    [
+     "2",
+     "Cola, Cola Zero, Fanta, Sprite, Mezzo",
+     "",
+     "2,00",
+     "3,40"
+    ],
+    [
+     "3",
+     "Apfelsaft / -schorle",
+     "",
+     "2,10",
+     "3,50"
+    ],
+    [
+     "4",
+     "Orangensaft",
+     "",
+     "2,10",
+     "3,50"
+    ],
+    [
+     "5",
+     "Red Bull",
+     "0,33 l",
+     "3,00",
+     ""
+    ],
+    [
+     "6",
+     "Kleiner Kaffee",
+     "",
+     "2,00",
+     ""
+    ],
+    [
+     "7",
+     "Großer Kaffee",
+     "",
+     "3,10",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🍺 Bier vom Fass",
+   "hinweis": "",
+   "spalten": [
+    "0,3 l",
+    "0,5 l"
+   ],
+   "liste": [
+    [
+     "8",
+     "Pils",
+     "",
+     "2,70",
+     "4,10"
+    ],
+    [
+     "9",
+     "Hefeweizen",
+     "nur im Sommer",
+     "2,70",
+     "4,10"
+    ],
+    [
+     "10",
+     "Tower Bier",
+     "2,5 l",
+     "21,00",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🍾 Flaschenbier",
+   "hinweis": "",
+   "spalten": [
+    "0,33 l",
+    "0,5 l"
+   ],
+   "liste": [
+    [
+     "11",
+     "Pils",
+     "",
+     "2,40",
+     "3,10"
+    ],
+    [
+     "12",
+     "Hefeweizen",
+     "nur im Winter",
+     "",
+     "3,60"
+    ],
+    [
+     "13",
+     "Colaweizen",
+     "nur im Winter",
+     "",
+     "3,70"
+    ],
+    [
+     "14",
+     "Landbier",
+     "",
+     "",
+     "3,10"
+    ],
+    [
+     "15",
+     "Faust Radler",
+     "",
+     "2,60",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🍻 Alkoholfreies Bier",
+   "hinweis": "",
+   "spalten": [
+    "0,5 l"
+   ],
+   "liste": [
+    [
+     "16",
+     "Pils",
+     "",
+     "3,10",
+     ""
+    ],
+    [
+     "17",
+     "Hefeweizen",
+     "",
+     "3,60",
+     ""
+    ],
+    [
+     "18",
+     "Karamalz",
+     "",
+     "3,10",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🍏 Apfelwein",
+   "hinweis": "Auch im Bembel: 1 l 6,20 € · 2 l 11,40 € · 3 l 17,20 €",
+   "spalten": [
+    "0,25 l",
+    "0,5 l"
+   ],
+   "liste": [
+    [
+     "19",
+     "Pur",
+     "",
+     "2,30",
+     "3,60"
+    ],
+    [
+     "20",
+     "Sauer",
+     "",
+     "2,30",
+     "3,60"
+    ],
+    [
+     "21",
+     "Süß",
+     "",
+     "2,30",
+     "3,60"
+    ],
+    [
+     "22",
+     "Cola",
+     "",
+     "2,30",
+     "3,60"
+    ]
+   ]
+  },
+  {
+   "titel": "🍷 Wein & Sekt",
+   "hinweis": "",
+   "spalten": [
+    "Preis"
+   ],
+   "liste": [
+    [
+     "23",
+     "Weißwein",
+     "0,25 l",
+     "3,30",
+     ""
+    ],
+    [
+     "24",
+     "Lillet mit Wildberry",
+     "4 cl",
+     "4,10",
+     ""
+    ],
+    [
+     "25",
+     "Sekt",
+     "",
+     "3,00",
+     ""
+    ],
+    [
+     "26",
+     "Aperol Spritz",
+     "4 cl",
+     "4,10",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🎩 Hütchen",
+   "hinweis": "",
+   "spalten": [
+    "2 cl",
+    "6 cl"
+   ],
+   "liste": [
+    [
+     "27",
+     "Asbach",
+     "",
+     "2,20",
+     "5,80"
+    ],
+    [
+     "28",
+     "Bacardi weiß/schwarz",
+     "",
+     "2,20",
+     "5,80"
+    ],
+    [
+     "29",
+     "Captain Morgan",
+     "",
+     "2,20",
+     "5,80"
+    ],
+    [
+     "30",
+     "Pfirsich",
+     "",
+     "2,20",
+     "5,80"
+    ],
+    [
+     "31",
+     "Wodka Red Bull",
+     "",
+     "3,00",
+     "8,30"
+    ],
+    [
+     "32",
+     "Gin Tonic",
+     "",
+     "2,50",
+     "6,70"
+    ],
+    [
+     "33",
+     "Jack Daniels",
+     "",
+     "3,20",
+     "8,50"
+    ],
+    [
+     "34",
+     "Malibu Maracuja oder O-Saft",
+     "2 cl / 4 cl",
+     "2,50",
+     "4,70"
+    ]
+   ]
+  },
+  {
+   "titel": "🗼 Tower",
+   "hinweis": "",
+   "spalten": [
+    "2,7 l"
+   ],
+   "liste": [
+    [
+     "35",
+     "Jack Daniels",
+     "",
+     "65,00",
+     ""
+    ],
+    [
+     "36",
+     "Bacardi / Asbach / Captain Morgan",
+     "",
+     "55,00",
+     ""
+    ],
+    [
+     "37",
+     "Gin Tonic",
+     "",
+     "60,00",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🥃 Schnäpse",
+   "hinweis": "",
+   "spalten": [
+    "2 cl"
+   ],
+   "liste": [
+    [
+     "38",
+     "Wodka",
+     "37,5 %",
+     "1,90",
+     ""
+    ],
+    [
+     "39",
+     "Korn",
+     "32 %",
+     "1,90",
+     ""
+    ],
+    [
+     "40",
+     "Kümmel",
+     "32 %",
+     "1,90",
+     ""
+    ],
+    [
+     "41",
+     "Ouzo",
+     "37,5 %",
+     "1,90",
+     ""
+    ],
+    [
+     "42",
+     "Wildsau",
+     "36 %",
+     "1,90",
+     ""
+    ],
+    [
+     "43",
+     "Ramazzotti",
+     "30 %",
+     "2,20",
+     ""
+    ],
+    [
+     "44",
+     "Jägermeister",
+     "35 %",
+     "2,20",
+     ""
+    ],
+    [
+     "45",
+     "Sambuca",
+     "40 %",
+     "2,20",
+     ""
+    ],
+    [
+     "46",
+     "Underberg",
+     "44 %",
+     "2,20",
+     ""
+    ],
+    [
+     "47",
+     "Alte Marille",
+     "41 %",
+     "2,70",
+     ""
+    ],
+    [
+     "48",
+     "Alte Williams Christ Birne",
+     "41 %",
+     "2,70",
+     ""
+    ],
+    [
+     "49",
+     "Alte Himbeere",
+     "41 %",
+     "2,70",
+     ""
+    ],
+    [
+     "50",
+     "Alte Kirsche",
+     "41 %",
+     "2,70",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🍬 Liköre",
+   "hinweis": "",
+   "spalten": [
+    "2 cl"
+   ],
+   "liste": [
+    [
+     "51",
+     "Saurer Apfel",
+     "15 %",
+     "1,90",
+     ""
+    ],
+    [
+     "52",
+     "Pfeffi",
+     "18 %",
+     "1,90",
+     ""
+    ],
+    [
+     "53",
+     "Ficken",
+     "15 %",
+     "1,90",
+     ""
+    ],
+    [
+     "54",
+     "Feigling Kokos",
+     "15 %",
+     "1,90",
+     ""
+    ],
+    [
+     "55",
+     "Kirsch",
+     "16 %",
+     "2,20",
+     ""
+    ]
+   ]
+  },
+  {
+   "titel": "🥨 Snacks",
+   "hinweis": "",
+   "spalten": [
+    "Preis"
+   ],
+   "liste": [
+    [
+     "56",
+     "Chio Chips",
+     "40 g",
+     "1,70",
+     ""
+    ],
+    [
+     "57",
+     "Huober Brezel",
+     "40 g",
+     "1,70",
+     ""
+    ],
+    [
+     "58",
+     "Ültje Erdnüsse",
+     "50 g",
+     "1,70",
+     ""
+    ],
+    [
+     "59",
+     "Nic Nac's",
+     "35 g",
+     "1,70",
+     ""
+    ]
+   ]
+  }
+ ]
+}

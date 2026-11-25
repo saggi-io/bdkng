@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-24",
+ "stand": "2026-11-25",
  "karten": [
   {
    "slug": "da-persio",
@@ -50,6 +50,16 @@
    "telefon": "",
    "mittagstisch": null,
    "stand": "Stand 22.11.2026 – Angaben ohne Gewähr."
+  },
+  {
+   "slug": "saschas-kneipsche",
+   "name": "Sascha's Kneipsche",
+   "url": "/speisekarte-saschas-kneipsche.html",
+   "extern": false,
+   "emoji": "🍺",
+   "telefon": "0151 61206718",
+   "mittagstisch": null,
+   "stand": "Getränkekarte, fotografiert am 25.11.2026 – Preisänderungen vorbehalten, Angaben ohne Gewähr."
   },
   {
    "slug": "wacht-am-rhein",
