@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-24T06:00",
+ "stand": "2026-11-25T06:00",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
   {
@@ -10,7 +10,7 @@
    "team": "k2"
   },
   {
-   "time": "12:30",
+   "time": "14:00",
    "date": "2026-11-29",
    "home": "Spvgg Kinzigtal II",
    "away": "SG Rothenberg II",
@@ -31,13 +31,6 @@
    "team": "m2"
   },
   {
-   "time": "14:30",
-   "date": "2026-11-29",
-   "home": "Spvgg Kinzigtal",
-   "away": "TSV Bullau",
-   "team": "k1"
-  },
-  {
    "date": "2026-12-06",
    "time": "14:00",
    "home": "SG Bad König/Zell",
@@ -50,6 +43,13 @@
    "home": "GSV Breitenbrunn",
    "away": "SG Bad König/Zell",
    "team": "m1"
+  },
+  {
+   "time": "14:30",
+   "date": "2027-02-21",
+   "home": "Spvgg Kinzigtal",
+   "away": "TSV Bullau",
+   "team": "k1"
   },
   {
    "date": "2027-02-28",
