@@ -28,7 +28,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:d7ea024cef1c9406257a@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261126T143000
 DTEND;TZID=Europe/Berlin:20261126T163000
 SUMMARY:Seniorennachmittag der AWO Tagespflege
@@ -41,7 +41,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:fe64962d8cf1e3ba6eb7@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261128T163000
 DTEND;TZID=Europe/Berlin:20261128T183000
 SUMMARY:Weihnachtsmarkt Kimbach
@@ -55,7 +55,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:225d067b06ebef82c055@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261130
 SUMMARY:Zeller Weihnachtsmarkt am Dorfhaus
@@ -70,7 +70,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:9d65fb6313081a92826c@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261128T180000
 DTEND;TZID=Europe/Berlin:20261128T200000
 SUMMARY:Offenes Singen der NaturFreunde Bad König
@@ -85,7 +85,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:91af8dc9a6058baf04fd@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261129T103000
 DTEND;TZID=Europe/Berlin:20261129T123000
 SUMMARY:Georg-Vetter-Museum
@@ -99,7 +99,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:a8a0fc949cebb24aad4a@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261129T140000
 DTEND;TZID=Europe/Berlin:20261129T160000
 SUMMARY:Tanz & Tee
@@ -113,7 +113,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:a256d93c87cd218c5b97@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261205T160000
 DTEND;TZID=Europe/Berlin:20261205T180000
 SUMMARY:Weihnachtsmarkt mit Nikolaustag
@@ -127,7 +127,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:3ae8d9baf36e2841faf3@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261206T103000
 DTEND;TZID=Europe/Berlin:20261206T123000
 SUMMARY:Georg-Vetter-Museum
@@ -141,7 +141,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:99b15d67dd69f353ca5a@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261206T103000
 DTEND;TZID=Europe/Berlin:20261206T123000
 SUMMARY:Heimatmuseum Bad König
@@ -155,7 +155,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:1e96ffff26a31f93db91@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261206T140000
 DTEND;TZID=Europe/Berlin:20261206T160000
 SUMMARY:Tanz & Tee
@@ -169,7 +169,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:13443791094e4229bb1a@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261214
 SUMMARY:Nikolausmarkt Bad König 2026
@@ -182,7 +182,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:1ad15c228ffbb7309b09@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261211T190000
 DTEND;TZID=Europe/Berlin:20261211T210000
 SUMMARY:Musikalische Adventsandacht
@@ -196,7 +196,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:efe0d4b10df9d6c654e9@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261213T103000
 DTEND;TZID=Europe/Berlin:20261213T123000
 SUMMARY:Georg-Vetter-Museum
@@ -210,7 +210,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:83a6bfc6ea4b559f014c@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261217T143000
 DTEND;TZID=Europe/Berlin:20261217T163000
 SUMMARY:Adventscafé im Rahmen des Seniorennachmittags der AWO Tagespflege
@@ -223,7 +223,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:032fb030b9d75d80034c@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261219T120000
 DTEND;TZID=Europe/Berlin:20261219T140000
 SUMMARY:TECMUMAS Technikmuseum Bad König
@@ -239,7 +239,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:b70f5410a211403fc3ee@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261220T103000
 DTEND;TZID=Europe/Berlin:20261220T123000
 SUMMARY:Georg-Vetter-Museum
@@ -253,7 +253,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:680a8f88118a72f9df1a@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261220T103000
 DTEND;TZID=Europe/Berlin:20261220T123000
 SUMMARY:Heimatmuseum Bad König
@@ -267,7 +267,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:4fa3e4628531646cdf52@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261220T120000
 DTEND;TZID=Europe/Berlin:20261220T140000
 SUMMARY:TECMUMAS Technikmuseum Bad König
@@ -283,7 +283,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:c5a7ae950ca788102ea8@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261220T140000
 DTEND;TZID=Europe/Berlin:20261220T160000
 SUMMARY:Seniorennachmittag im Stadtteil Zell
@@ -299,7 +299,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:f8d8e4aa94af426dec30@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261220T140000
 DTEND;TZID=Europe/Berlin:20261220T160000
 SUMMARY:Tanz & Tee
@@ -313,7 +313,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:c73e9eed52319ccd19d5@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261226T180000
 DTEND;TZID=Europe/Berlin:20261226T200000
 SUMMARY:Offenes Singen der NaturFreunde Bad König
@@ -328,7 +328,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:d943984ca363c7e0871d@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;VALUE=DATE:20261227
 DTEND;VALUE=DATE:20261230
 SUMMARY:Silvesterturnier der TSG Bad König\, Abt. Fußball / Förderverein
@@ -346,7 +346,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:07ec6f7939208bd5040b@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261227T103000
 DTEND;TZID=Europe/Berlin:20261227T123000
 SUMMARY:Georg-Vetter-Museum
@@ -360,7 +360,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:93b2882b3541f8f9efa5@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261228T143000
 DTEND;TZID=Europe/Berlin:20261228T163000
 SUMMARY:Hüttenzauber
@@ -374,7 +374,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:d175efd9513f3805865d@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20270110T110000
 DTEND;TZID=Europe/Berlin:20270110T130000
 SUMMARY:Neujahrsempfang des OGV Bad König
@@ -388,7 +388,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:f65bb25d1de07ef617d4@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20270123T193000
 DTEND;TZID=Europe/Berlin:20270123T213000
 SUMMARY:Susanne Hasenstab und Emil Emaille präsentieren: "Ochsenmaulsalat"
@@ -407,7 +407,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:ade5779e11b91c8633e1@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20270124T110000
 DTEND;TZID=Europe/Berlin:20270124T130000
 SUMMARY:Neujahrsempfang der Stadt Bad König
@@ -421,7 +421,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:fbbe51c6de93a7a98774@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20270130T141100
 DTEND;TZID=Europe/Berlin:20270130T161100
 SUMMARY:Kinderfastnacht bei der TSG Bad König
@@ -435,7 +435,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:afc3226ed984381122f6@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20270130T141100
 DTEND;TZID=Europe/Berlin:20270130T161100
 SUMMARY:Kinderfastnacht der Dorfverschönerung Ober-Kinzig/Gumpersberg
@@ -449,7 +449,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:b5cf9cc37cf44892df84@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20270130T201100
 DTEND;TZID=Europe/Berlin:20270130T221100
 SUMMARY:Fastnachtsparty Vol. 2 bei der TSG Bad König
@@ -467,7 +467,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:15a5a4a0af84d475e69d@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20270213T193000
 DTEND;TZID=Europe/Berlin:20270213T213000
 SUMMARY:Mark Zak präsentiert die Stand-Up-Show: "Back to UDSSR - Warum ich
@@ -486,7 +486,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:2982e3d430d6dd7a6b34@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20270312T180000
 DTEND;TZID=Europe/Berlin:20270312T200000
 SUMMARY:Kinnicher Abend in der Kinnicher Stubb
@@ -500,7 +500,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:6979cec740e31f47a1ed@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20270313T193000
 DTEND;TZID=Europe/Berlin:20270313T213000
 SUMMARY:Peter Brandt liest aus: "Sich ändern\, um sich treu zu bleiben. Er
@@ -519,7 +519,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:93e68baad3f720beeab4@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20270611T200000
 DTEND;TZID=Europe/Berlin:20270611T220000
 SUMMARY:Pe Werner
@@ -534,7 +534,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:3ec5413f1297abe1adaa@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20270612T200000
 DTEND;TZID=Europe/Berlin:20270612T220000
 SUMMARY:The Michael Jackson Tribute Show
@@ -550,7 +550,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:94d34114a4ba2349b2e0@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20270806T200000
 DTEND;TZID=Europe/Berlin:20270806T220000
 SUMMARY:Queen Tribute Show
@@ -566,7 +566,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:8ac5b1da311baa507f0c@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20270828T200000
 DTEND;TZID=Europe/Berlin:20270828T220000
 SUMMARY:Edelle – A Night About Adele
@@ -581,7 +581,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:de9b60a4379e624f8fda@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20270829T200000
 DTEND;TZID=Europe/Berlin:20270829T220000
 SUMMARY:ANDERS – A-cappella-Deutschpoeten
@@ -596,7 +596,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:531987855763a1a29e59@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261126T160000
 DTEND;TZID=Europe/Berlin:20261126T180000
 SUMMARY:Workshop Chromatographie (bis 17:30 Uhr\, 15 €)
@@ -608,7 +608,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:e813b8eeb3870d8a3215@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Start der Weihnachtslotterie im Restaurant Wandelhalle
@@ -621,7 +621,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:67eb0e7aec65c257a866@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261201T153000
 DTEND;TZID=Europe/Berlin:20261201T173000
 SUMMARY:Blutspende (bis 19:30 Uhr\, nur mit Terminreservierung)
@@ -634,7 +634,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:b7e36b1ec3a3a9a48cfc@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261205T140000
 DTEND;TZID=Europe/Berlin:20261205T160000
 SUMMARY:Annorlunda Dekoladen: Verkauf mit Lebkuchen und Glögg
@@ -647,7 +647,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:b95fd34f9e7794a9745f@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261205T170000
 DTEND;TZID=Europe/Berlin:20261205T190000
 SUMMARY:Büdchenzauber am Café ENDLICH – Glühwein\, Schmalzbrote\, hei
@@ -661,7 +661,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:4a859b3e59a343f9546a@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20270114T193000
 DTEND;TZID=Europe/Berlin:20270114T213000
 SUMMARY:Außerordentliche Mitgliederversammlung der TSG Bad König
@@ -674,7 +674,7 @@ URL:https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungs
 END:VEVENT
 BEGIN:VEVENT
 UID:103c433d662ba32aa3d1@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261120T180000
 DTEND;TZID=Europe/Berlin:20261120T190000
 SUMMARY:⛪ Hl. Messe (kath.)
@@ -685,7 +685,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:d66e2784adf7d63ecc28@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261122T090000
 DTEND;TZID=Europe/Berlin:20261122T100000
 SUMMARY:⛪ Hl. Messe (kath.)
@@ -696,7 +696,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:7ee89873a24a75a53dfc@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261122T093000
 DTEND;TZID=Europe/Berlin:20261122T103000
 SUMMARY:⛪ Gottesdienst (Totensonntag) (ev.)
@@ -707,7 +707,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:3abf5f3b513907fc9503@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261122T093000
 DTEND;TZID=Europe/Berlin:20261122T103000
 SUMMARY:⛪ Gottesdienst (ev.)
@@ -718,7 +718,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:2419d468208cab7f07ec@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261122T100000
 DTEND;TZID=Europe/Berlin:20261122T110000
 SUMMARY:⛪ Gottesdienst zum Totensonntag (ev.)
@@ -730,7 +730,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:e9d8ea41d44659178dfc@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261122T110000
 DTEND;TZID=Europe/Berlin:20261122T120000
 SUMMARY:⛪ Andacht zum Totensonntag (ev.)
@@ -741,7 +741,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:a8476b5685460ff44a96@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261122T130000
 DTEND;TZID=Europe/Berlin:20261122T140000
 SUMMARY:⛪ Andacht zum Totensonntag (ev.)
@@ -752,7 +752,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:54240f567c64aeea7500@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261122T130000
 DTEND;TZID=Europe/Berlin:20261122T140000
 SUMMARY:⛪ Andacht zum Totensonntag (ev.)
@@ -763,7 +763,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:96a85aa87cbb47ac75a1@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261122T140000
 DTEND;TZID=Europe/Berlin:20261122T150000
 SUMMARY:⛪ Andacht zum Totensonntag
@@ -774,7 +774,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:37df361f8d5fa306ffbc@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261122T143000
 DTEND;TZID=Europe/Berlin:20261122T153000
 SUMMARY:⛪ Andacht zum Totensonntag (ev.)
@@ -785,7 +785,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:15a791e4e7f3a326bd62@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261122T150000
 DTEND;TZID=Europe/Berlin:20261122T160000
 SUMMARY:⛪ Andacht zum Totensonntag (ev.)
@@ -796,7 +796,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:67dd312190de625f8fcf@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261125T180000
 DTEND;TZID=Europe/Berlin:20261125T190000
 SUMMARY:⛪ Hl. Messe (kath.)
@@ -807,7 +807,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:071a8f1f444456ebf8b2@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261127T180000
 DTEND;TZID=Europe/Berlin:20261127T190000
 SUMMARY:⛪ Hl. Messe (kath.)
@@ -818,7 +818,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:fa27e8d7de125c05b822@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261127T190000
 DTEND;TZID=Europe/Berlin:20261127T200000
 SUMMARY:⛪ Adventsandacht (ev.)
@@ -829,7 +829,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:f1943e10cb22e56bd200@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261127T190000
 DTEND;TZID=Europe/Berlin:20261127T200000
 SUMMARY:⛪ Adventsandacht (ev.)
@@ -840,7 +840,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:3e363a90cc4312af4c9a@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261129T090000
 DTEND;TZID=Europe/Berlin:20261129T100000
 SUMMARY:⛪ Hl. Messe (1. Advent) (kath.)
@@ -851,7 +851,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:9e50279c745aa8747025@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261129T093000
 DTEND;TZID=Europe/Berlin:20261129T103000
 SUMMARY:⛪ Gottesdienst (1. Advent) (ev.)
@@ -863,7 +863,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:eae7558522e70e45d869@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261129T093000
 DTEND;TZID=Europe/Berlin:20261129T103000
 SUMMARY:⛪ Gottesdienst (1. Advent) (ev.)
@@ -875,7 +875,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:f42b1eaa9722366f01a5@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261129T160000
 DTEND;TZID=Europe/Berlin:20261129T170000
 SUMMARY:⛪ Hl. Messe im syro-malabarischen Ritus (kath.)
@@ -886,7 +886,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:a1cebd43cd0690557609@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261211T190000
 DTEND;TZID=Europe/Berlin:20261211T200000
 SUMMARY:⛪ Musikalische Adventsandacht (ev.)
@@ -898,7 +898,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:710576a1ec16ed3594df@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261213T150000
 DTEND;TZID=Europe/Berlin:20261213T160000
 SUMMARY:⛪ Gottesdienst (3. Advent) mit Verabschiedung (ev.)
@@ -910,7 +910,7 @@ URL:https://bdkng.de/termine.html#kalender
 END:VEVENT
 BEGIN:VEVENT
 UID:3bc532b92739e59ffcb0@bdkng.de
-DTSTAMP:20261125T070943Z
+DTSTAMP:20261125T143334Z
 DTSTART;TZID=Europe/Berlin:20261220T140000
 DTEND;TZID=Europe/Berlin:20261220T150000
 SUMMARY:⛪ Andacht im Rahmen des Seniorennachmittags (ev.)
