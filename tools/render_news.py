@@ -20,6 +20,26 @@ def datum_de(n):
     z = str(n.get("zeit", "") or "")
     return d + (", " + z + " Uhr" if z else "")
 WICON=[('gewitter','⛈️'),('schneeregen','🌨️'),('schnee','❄️'),('regen','🌧️'),('nebel','🌫️'),('wind','💨'),('bedeckt','☁️'),('bewölkt','⛅'),('wolkig','⛅'),('heiter','🌤️'),('sonn','☀️'),('klar','☀️'),('trocken','🌤️')]
+SPORT_EMO={'tischtennis':'🏓','tennis':'🎾','fußball':'⚽','fussball':'⚽','handball':'🤾','leichtathletik':'🏃','basketball':'🏀','volleyball':'🏐'}
+def absatz_html(p):
+ """Absätze mit Aufzählungen (a • b • c) als gegliederte Liste statt Fließtext; Ergebnisse fett."""
+ e=html.escape
+ teile=[t.strip() for t in re.split(r'\s*•\s*',str(p)) if t.strip()]
+ if len(teile)<3 and not (len(teile)==2 and str(p).lstrip().startswith('•')==False and len(teile[0])<40):
+  return f'<p>{e(p)}</p>'
+ kopf=''
+ if len(teile[0])<40 and not re.search(r'\d:\d',teile[0]): kopf=teile.pop(0)
+ def li(t):
+  m=re.match(r'^((?:Mo|Di|Mi|Do|Fr|Sa|So)\.? \d{1,2}\.\d{1,2}\.(?:,? \d{1,2}:\d{2}(?: Uhr)?)?):?\s*[,·]?\s*(.*)$',t)
+  dat,rest=(m.group(1),m.group(2)) if m else ('',t)
+  rest=e(rest)
+  rest=re.sub(r'(\d{1,3}:\d{1,3})(\s*[✅❌➖]?)\s*$',r'<b class="ne-erg">\1</b>\2',rest)
+  rest=re.sub(r'\((Ergebnis noch offen)\)',r'<span class="ne-offen">\1</span>',rest)
+  rest=re.sub(r'^([^:]{2,60}):\s',r'<span class="ne-liga">\1</span> ',rest,count=1)
+  return '<li>'+(f'<span class="ne-dat">{e(dat)}</span>' if dat else '')+f'<span class="ne-txt">{rest}</span></li>'
+ h=''
+ if kopf: h+=f'<h3 class="ne-sub">{SPORT_EMO.get(kopf.lower(),"")+" " if SPORT_EMO.get(kopf.lower()) else ""}{e(kopf)}</h3>'
+ return h+'<ul class="ne-liste">'+''.join(li(t) for t in teile)+'</ul>'
 def wetter_html(n):
  """Wetter-Vorhersage als übersichtliche Tageskarten statt Fließtext."""
  e=html.escape
@@ -72,7 +92,7 @@ def rueck_html(n):
 def render(n):
  e=html.escape
  expiry=f' data-valid-until="{n["valid_until"]}"' if n.get('valid_until') else ''
- return f'<article class="news-entry" id="{n["id"]}"{expiry}><p class="news-meta">Eingestellt: {datum_de(n)}</p><h2>{e(re.sub(r"^WETTER · ","Wetter: ",n["title"]))}</h2><p class="expired-label" hidden>Archiv: Der angegebene Zeitraum ist abgelaufen.</p>'+((wetter_html(n) if n['id'].endswith('-wetter') else rueck_html(n) if n['id'].startswith('wetter-rueckblick') else None) or ''.join(f'<p>{e(p)}</p>' for p in n['paragraphs']))+f'<p class="source">Quelle: <a href="{e(n["url"],quote=True)}" target="_blank" rel="noopener">{e(n["source"])}</a>'+''.join(f' · <a href="{e(w["url"],quote=True)}" target="_blank" rel="noopener">{e(w["source"])}</a>' for w in n.get('weitere',[]) if str(w.get('url','')).startswith('https://'))+'</p><a class="nach-oben" href="#" aria-label="Nach oben">↑ nach oben</a></article>'
+ return f'<article class="news-entry" id="{n["id"]}"{expiry}><p class="news-meta">Eingestellt: {datum_de(n)}</p><h2>{e(re.sub(r"^WETTER · ","Wetter: ",n["title"]))}</h2><p class="expired-label" hidden>Archiv: Der angegebene Zeitraum ist abgelaufen.</p>'+((wetter_html(n) if n['id'].endswith('-wetter') else rueck_html(n) if n['id'].startswith('wetter-rueckblick') else None) or ''.join(absatz_html(p) for p in n['paragraphs']))+f'<p class="source">Quelle: <a href="{e(n["url"],quote=True)}" target="_blank" rel="noopener">{e(n["source"])}</a>'+''.join(f' · <a href="{e(w["url"],quote=True)}" target="_blank" rel="noopener">{e(w["source"])}</a>' for w in n.get('weitere',[]) if str(w.get('url','')).startswith('https://'))+'</p><a class="nach-oben" href="#" aria-label="Nach oben">↑ nach oben</a></article>'
 outputs={}
 for slug in categories:
  path=root/(slug+'.html');text=path.read_text(encoding='utf-8')
