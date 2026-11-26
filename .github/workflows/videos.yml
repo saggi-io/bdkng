@@ -20,4 +20,11 @@ jobs:
           git config user.name "bdkng-bot"
           git config user.email "bot@bdkng.de"
           git add -A assets/social/videos
-          git diff --cached --quiet || (git commit -m "Abend-Video gerendert" && git pull --rebase && git push)
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -q -m "Abend-Video gerendert"
+          for i in 1 2 3 4 5 6; do
+            if git pull -q --rebase origin main && git push -q origin HEAD:main; then echo "gepusht"; exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            echo "Push abgelehnt, neuer Versuch $i"; sleep $((i*4))
+          done
+          exit 1
