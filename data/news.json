@@ -46,22 +46,6 @@
     "zeit": "17:00"
   },
   {
-    "id": "2026-11-24-wetter",
-    "checked": "2026-11-24",
-    "zeit": "19:00",
-    "valid_until": "2026-11-27",
-    "categories": [
-      "wetter"
-    ],
-    "title": "WETTER · Die nächsten 3 Tage",
-    "paragraphs": [
-      "Mittwoch, 25.11.: wechselnd bewölkt, -3 bis 1 °C. Frost möglich  Donnerstag, 26.11.: bedeckt, -3 bis 0 °C. Frost möglich  Freitag, 27.11.: bedeckt, -3 bis 0 °C. Frost möglich",
-      "Amtliche WARNUNG vor FROST (Di 16:00 bis Mi 12:00 Uhr)"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
-    "url": "https://bdkng.de"
-  },
-  {
     "id": "medien-2026-11-23-293122031",
     "checked": "2026-11-23",
     "valid_until": "2026-12-03",
@@ -394,21 +378,6 @@
     "source": "Echo Online",
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/landkreis-odenwaldkreis/zeitgeschichte-aus-der-schublade-echo-erstausgabe-entdeckt-6888666",
     "zeit": "20:00"
-  },
-  {
-    "id": "medien-2026-11-15-261694390",
-    "checked": "2026-11-15",
-    "valid_until": "2026-11-25",
-    "categories": [
-      "sport"
-    ],
-    "title": "Kreisliga A Odenwald: VfL Michelstadt bleibt an Tabellenführer FSV Erbach dran",
-    "paragraphs": [
-      "Die FSV Erbach behält ihren Vorsprung mit dem Sieg gegen die KSG Vielbrunn in der Kreisliga A Odenwald. Dahinter gewinnen auch der VfL Michelstadt und die SG Bad König Zell."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/sport/fussball/fussball-odenwald/vfl-michelstadt-bleibt-an-tabellenfuehrer-fsv-erbach-dran-6756237",
-    "zeit": "18:00"
   },
   {
     "id": "medien-2026-11-18-314367882",
@@ -755,20 +724,6 @@
     ],
     "source": "Bad Königer Stadtnachrichten (meinOrt)",
     "url": "https://meinort.de/bad-koenig/neues/veranstaltungen-2173-2026-48-0-55764819"
-  },
-  {
-    "id": "medien-2026-11-15-285802190",
-    "checked": "2026-11-15",
-    "valid_until": "2026-11-25",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Bei den Wasserverbänden Mümling/Gersprenzgebiet endet eine Ära",
-    "paragraphs": [
-      "Michael Reuter gibt nach Jahrzehnten im Ehrenamt die Führung der Wasserverbände Mümling/Gersprenzgebiet ab. Regierungspräsident Jan Hilligardt würdigt sein Wirken."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/landkreis-odenwaldkreis/bei-wasserverbaenden-muemlinggersprenzgebiet-endet-eine-aera-6809986"
   },
   {
     "id": "medien-2026-11-12-256931796",
