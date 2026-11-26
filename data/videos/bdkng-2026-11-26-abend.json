@@ -1,0 +1,52 @@
+{
+ "titel": "Der Tag in Bad König",
+ "ueber": "Do. 26.11. · 19:30 Uhr",
+ "quelle": "Bad Königer Stadtnachrichten, Echo Online",
+ "zeilen": [
+  {
+   "t": "Hofweihnacht Etzen-Gesäß",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "Neue SPD-Spitze Gernot Hofmann will Bad König sozial stärken",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  }
+ ],
+ "morgen_ueber": "Fr. 27.11.",
+ "morgen": [
+  [
+   "⛅",
+   "Wetter",
+   "Wechselnd bewölkt, -3 bis 0 °C"
+  ],
+  [
+   "🗑️",
+   "Müll",
+   "Gelber Sack: mehrere Ortsteile"
+  ],
+  [
+   "⛽",
+   "Tanken",
+   "E10 ab 1,67 € (Gross-Umstadt), Diesel ab 1,94 €"
+  ]
+ ],
+ "mitmachen": [
+  [
+   "📣",
+   "Blitzer & Stau",
+   "Gesehen? Auf bdkng.de melden"
+  ],
+  [
+   "🤖",
+   "BDKNG-KI",
+   "Frag einfach: Müll, Termine, Öffnungszeiten"
+  ],
+  [
+   "📅",
+   "Termin melden",
+   "Dein Verein feiert? Einfach eintragen"
+  ]
+ ]
+}
