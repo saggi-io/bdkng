@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-25T06:00",
+ "stand": "2026-11-26T06:00",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
   {
@@ -960,33 +960,6 @@
  ],
  "tischtennis": [
   {
-   "date": "2026-11-17",
-   "time": "20:00",
-   "liga": "Herren, 2.Kreisklasse",
-   "verein": "TTC Kimbach",
-   "home": "TV 1858 Beerfelden III",
-   "away": "TTC Kimbach III",
-   "erg": "4:0"
-  },
-  {
-   "date": "2026-11-17",
-   "time": "20:00",
-   "liga": "E3KK",
-   "verein": "TTC Kimbach",
-   "home": "TTC Kimbach VI",
-   "away": "KSV Reichelsheim 1892 III",
-   "erg": "1:9"
-  },
-  {
-   "date": "2026-11-17",
-   "time": "20:30",
-   "liga": "E3KK",
-   "verein": "RV-TTC Fürstengrund",
-   "home": "RV-TTC Fürstengrund III",
-   "away": "TSV 1875 Höchst VI",
-   "erg": "7:3"
-  },
-  {
    "date": "2026-11-20",
    "time": "20:00",
    "liga": "E3KK",
@@ -1007,19 +980,19 @@
   {
    "date": "2026-11-26",
    "time": "20:00",
-   "liga": "E2KK",
+   "liga": "E3KK",
    "verein": "TTC Kimbach",
-   "home": "KSG Hetschbach",
-   "away": "TTC Kimbach II",
+   "home": "TTC Kimbach IV",
+   "away": "SV 1908 Falken-Gesäß III",
    "erg": ""
   },
   {
    "date": "2026-11-26",
    "time": "20:00",
-   "liga": "E3KK",
+   "liga": "E2KK",
    "verein": "TTC Kimbach",
-   "home": "TTC Kimbach IV",
-   "away": "SV 1908 Falken-Gesäß III",
+   "home": "KSG Hetschbach",
+   "away": "TTC Kimbach II",
    "erg": ""
   },
   {
