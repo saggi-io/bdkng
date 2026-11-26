@@ -1,5 +1,20 @@
 [
   {
+    "id": "medien-2026-11-26-285739540",
+    "checked": "2026-11-26",
+    "valid_until": "2026-12-06",
+    "categories": [
+      "aktuell"
+    ],
+    "title": "Neue SPD-Spitze Gernot Hofmann will Bad König sozial stärken",
+    "paragraphs": [
+      "Politische Köpfe: Der neue SPD‑Fraktionsvorsitzende in Bad König hat ein soziales Gewissen, das ihn in der Kommunalpolitik immer wieder antreibt. Das sind seine Ziele."
+    ],
+    "source": "Echo Online",
+    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/hofmann-man-muss-was-tun-damits-auch-anderen-gut-geht-6807627",
+    "zeit": "10:00"
+  },
+  {
     "id": "2026-11-25-wetter",
     "checked": "2026-11-25",
     "zeit": "19:00",
