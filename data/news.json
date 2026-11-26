@@ -1,5 +1,22 @@
 [
   {
+    "id": "bahn-2026-11-26",
+    "checked": "2026-11-26",
+    "zeit": "21:10",
+    "valid_until": "2026-11-26",
+    "categories": [
+      "verkehr"
+    ],
+    "title": "Odenwaldbahn: Störung ab Bad König",
+    "paragraphs": [
+      "RB 82 (Zug 25185) Bad König → Erbach, 21:35: +13 Min – Defekt an einem Signal",
+      "RB 82 (Zug 25187) Bad König → Erbach, 22:35: +4 Min – Defekt an einem Signal",
+      "Stand: 26.11.2026, 21:10 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
+    ],
+    "source": "Echtzeitdaten der Deutschen Bahn",
+    "url": "https://dbf.finalrewind.org/Bad%20K%C3%B6nig"
+  },
+  {
     "id": "2026-11-26-wetter",
     "checked": "2026-11-26",
     "zeit": "19:00",
