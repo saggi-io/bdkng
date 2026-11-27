@@ -99,7 +99,7 @@ def karte(k, W, H, ziel):
     d.text((W // 2, ky1 - 56), ('Quelle: ' + str(k.get('quelle', 'BDKNG')))[:80], font=F(MED, 24), fill='#9A9A9A', anchor='ma')
     # Werbung unten: Homepage + Kanäle
     fy = ky1 + (50 if tik else 34)
-    d.text((W // 2, fy), 'bdkng.de', font=F(BLACK, 72 if tik else 64), fill='#FFFFFF', anchor='ma')
+    d.text((W // 2, fy), 'niu.bdkng.de', font=F(BLACK, 72 if tik else 64), fill='#FFFFFF', anchor='ma')
     sz = 96 if tik else 76; gap = 26; tw = len(ICONS) * sz + (len(ICONS) - 1) * gap; x = (W - tw) // 2; iy = fy + (112 if tik else 92)
     for n, _ in ICONS:
         ic = Image.open(os.path.join(BASE, 'assets', 'social', 'icons', n + '.png')).convert('RGBA').resize((sz, sz), Image.LANCZOS)

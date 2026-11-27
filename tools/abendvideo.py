@@ -38,7 +38,7 @@ def fuss(im, quelle):
     if ICONS_C is None:
         ICONS_C = [Image.open(os.path.join(B, 'assets', 'social', 'icons', n + '.png')).convert('RGBA').resize((96, 96), Image.LANCZOS) for n in ('whatsapp', 'facebook', 'instagram', 'tiktok')]
     y = H - 400
-    d.text((W // 2, y), 'bdkng.de', font=K.f('InterDisplay-Black.otf', 80), fill=K.WEISS, anchor='mt')
+    d.text((W // 2, y), 'niu.bdkng.de', font=K.f('InterDisplay-Black.otf', 80), fill=K.WEISS, anchor='mt')
     x = (W - (4 * 96 + 3 * 28)) // 2
     for ic in ICONS_C: im.paste(ic, (x, y + 120), ic); x += 124
     d.text((W // 2, y + 240), 'WhatsApp-Kanal · Facebook · Instagram · TikTok: BDKNG', font=K.f('Inter-Bold.otf', 30), fill=K.WEISS, anchor='mt')
