@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-11-27-wetter",
+    "checked": "2026-11-27",
+    "zeit": "19:00",
+    "valid_until": "2026-11-30",
+    "categories": [
+      "wetter"
+    ],
+    "title": "WETTER · Die nächsten 3 Tage",
+    "paragraphs": [
+      "Samstag, 28.11.: wechselnd bewölkt, -3 bis 1 °C. Frost möglich  Sonntag, 29.11.: bedeckt, -2 bis 1 °C, Regenrisiko 32 %. Frost möglich  Montag, 30.11.: bedeckt, 0 bis 3 °C",
+      "Amtliche WARNUNG vor FROST (Fr 16:00 bis Sa 12:00 Uhr)"
+    ],
+    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
+    "url": "https://bdkng.de"
+  },
+  {
     "id": "medien-2026-11-27-948675992",
     "checked": "2026-11-27",
     "valid_until": "2026-12-07",
