@@ -1,0 +1,67 @@
+{
+ "titel": "Der Tag in Bad König",
+ "ueber": "Fr. 27.11. · 19:30 Uhr",
+ "quelle": "Echo Online, Bad Königer Stadtnachrichten",
+ "zeilen": [
+  {
+   "t": "Wie Bad König ein Zeichen gegen Gewalt an Frauen setzt",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "Bad König.",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "Autoren in der Rentmeisterei 2027",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "Restmüll: Dienstag, 08.12.2026 - Kernstadt, Kimbach, Momart, Zell Papier …",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  },
+  {
+   "t": "Die 2.",
+   "r": "aktuell",
+   "k": "Aktuelles"
+  }
+ ],
+ "morgen_ueber": "Sa. 28.11.",
+ "morgen": [
+  [
+   "⛅",
+   "Wetter",
+   "Wechselnd bewölkt, -3 bis 1 °C"
+  ],
+  [
+   "📅",
+   "Termine",
+   "16:30 Uhr: Weihnachtsmarkt Kimbach · 17:00 Uhr: Zeller Weihnachtsmarkt am Dorfhaus"
+  ],
+  [
+   "⛽",
+   "Tanken",
+   "E10 ab 1,66 € (Reichelsheim), Diesel ab 1,96 €"
+  ]
+ ],
+ "mitmachen": [
+  [
+   "📣",
+   "Blitzer & Stau",
+   "Gesehen? Auf bdkng.de melden"
+  ],
+  [
+   "🤖",
+   "BDKNG-KI",
+   "Frag einfach: Müll, Termine, Öffnungszeiten"
+  ],
+  [
+   "📅",
+   "Termin melden",
+   "Dein Verein feiert? Einfach eintragen"
+  ]
+ ]
+}
