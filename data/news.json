@@ -1,22 +1,5 @@
 [
   {
-    "id": "bahn-2026-11-26",
-    "checked": "2026-11-26",
-    "zeit": "21:10",
-    "valid_until": "2026-11-26",
-    "categories": [
-      "verkehr"
-    ],
-    "title": "Odenwaldbahn: Störung ab Bad König",
-    "paragraphs": [
-      "RB 82 (Zug 25185) Bad König → Erbach, 21:35: +13 Min – Defekt an einem Signal",
-      "RB 82 (Zug 25187) Bad König → Erbach, 22:35: +4 Min – Defekt an einem Signal",
-      "Stand: 26.11.2026, 21:10 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
-    ],
-    "source": "Echtzeitdaten der Deutschen Bahn",
-    "url": "https://dbf.finalrewind.org/Bad%20K%C3%B6nig"
-  },
-  {
     "id": "2026-11-26-wetter",
     "checked": "2026-11-26",
     "zeit": "19:00",
@@ -61,22 +44,6 @@
     "source": "Echo Online",
     "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/hofmann-man-muss-was-tun-damits-auch-anderen-gut-geht-6807627",
     "zeit": "10:00"
-  },
-  {
-    "id": "2026-11-25-wetter",
-    "checked": "2026-11-25",
-    "zeit": "19:00",
-    "valid_until": "2026-11-28",
-    "categories": [
-      "wetter"
-    ],
-    "title": "WETTER · Die nächsten 3 Tage",
-    "paragraphs": [
-      "Donnerstag, 26.11.: bedeckt, -3 bis 0 °C. Frost möglich  Freitag, 27.11.: wechselnd bewölkt, -3 bis 0 °C. Frost möglich  Samstag, 28.11.: wechselnd bewölkt, -3 bis 1 °C. Frost möglich",
-      "Amtliche WARNUNG vor FROST (Mi 16:00 bis Do 12:00 Uhr)"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
-    "url": "https://bdkng.de"
   },
   {
     "id": "medien-2026-11-25-946977877",
@@ -412,22 +379,6 @@
     "zeit": "11:10"
   },
   {
-    "id": "medien-2026-11-16-286539060",
-    "checked": "2026-11-16",
-    "valid_until": "2026-11-26",
-    "categories": [
-      "verkehr",
-      "aktuell"
-    ],
-    "title": "Zeller Brücke: Neubau der kleinen Schwester an Bad Königs Kurpark verzögert sich",
-    "paragraphs": [
-      "In Höhe des Bad Königer Kurparks soll die B45 während Brückenbauarbeiten auf eine Behelfsumfahrung verlegt werden. Das verzögert sich nun auf das kommende Frühjahr."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/zeller-bruecke-bei-der-kleinen-schwester-dauerts-laenger-6813116",
-    "zeit": "10:00"
-  },
-  {
     "id": "medien-2026-11-21-293157622",
     "checked": "2026-11-21",
     "valid_until": "2026-12-01",
@@ -516,21 +467,6 @@
     ],
     "source": "Bad Königer Stadtnachrichten (meinOrt)",
     "url": "https://meinort.de/bad-koenig/neues/veranstaltungen-2173-2026-48-0-55576623"
-  },
-  {
-    "id": "medien-2026-11-16-291995801",
-    "checked": "2026-11-16",
-    "valid_until": "2026-11-26",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Stadtverordnete tagen",
-    "paragraphs": [
-      "Die Bad Königer Stadtverordnetenversammlung tagt am Donnerstag, 19. November, um 19.30 Uhr im großen Saal der Rentmeisterei, Schlossplatz 2. Auf der Tagesordnung stehen Mitteilunge"
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/stadtverordnete-tagen-6870673",
-    "zeit": "12:00"
   },
   {
     "id": "q-2026-11-19-mo529400179",
@@ -668,177 +604,6 @@
     ],
     "source": "Stadt Bad König",
     "url": "https://www.badkoenig.de/aktuelle-nachrichten/vollsperrung-in-der-leipziger-strasse/"
-  },
-  {
-    "id": "q-2026-11-16-mo528620959",
-    "checked": "2026-11-16",
-    "valid_until": "2026-11-26",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Zeller Weihnachtsmarkt",
-    "paragraphs": [
-      "Die Stadtnachrichten haben das Plakat zum Zeller Weihnachtsmarkt 2026 veröffentlicht. Alle Details stehen im Aushang – siehe Quelle."
-    ],
-    "source": "Bad Königer Stadtnachrichten (meinOrt)",
-    "url": "https://meinort.de/bad-koenig/neues/zeller-weihnachtsmarkt-2173-2026-48-0-46977462"
-  },
-  {
-    "id": "q-2026-11-16-mo528620962",
-    "checked": "2026-11-16",
-    "valid_until": "2026-11-26",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Zu den Öffnungszeiten des Rathauses kann die Ausstellung „Bäume und Bäche“ des Freundeskreises Georg …",
-    "paragraphs": [
-      "Zu den Öffnungszeiten des Rathauses kann die Ausstellung „Bäume und Bäche“ des Freundeskreises Georg Vetter besichtigt werden. Jeden ersten Samstag im Monat lädt der VdK OV Bad König zum „Stammcafé“ im Kaffee Kännchen Bad König, Treffpunkt 15.00 Uhr ein. Jeden Dienstag lädt der Verein zur Förderung von Kur- und Tourismus (VKT) Bad König zu Bürger- und Gästewanderungen ein. …"
-    ],
-    "source": "Bad Königer Stadtnachrichten (meinOrt)",
-    "url": "https://meinort.de/bad-koenig/neues/aus-dem-rathaus-2173-2026-48-0-46977465"
-  },
-  {
-    "id": "q-2026-11-16-mo998168137",
-    "checked": "2026-11-16",
-    "valid_until": "2026-11-26",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Am Freitag, den 6.",
-    "paragraphs": [
-      "Am Freitag, den 6. November herrschte Trubel in der Hans-Neidig-Halle. Zum Tag des Kinderturnens hatte „Kinder-Joy of moving“ in Zusammenarbeit mit dem Deutschen Turnerbund und der Deutschen Kinderturnstiftung eingeladen. Die Aktion hatte das Thema ZirkusKind. Janine Kaplan, die das Kinderturnen der SG Nieder-Kinzig leitet, hatte einen Parcours aufgebaut, in dem die Kinder …"
-    ],
-    "source": "Bad Königer Stadtnachrichten (meinOrt)",
-    "url": "https://meinort.de/bad-koenig/neues/veranstaltungen-2173-2026-48-0-55792113"
-  },
-  {
-    "id": "medien-2026-11-16-291279667",
-    "checked": "2026-11-16",
-    "valid_until": "2026-11-26",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Odenwaldkreis: So zahlt sich Zusammenarbeit für Kommunen und ihre Bürger aus",
-    "paragraphs": [
-      "Bad König, Breuberg, Höchst und Lützelbach streben gemeinsam eine neue Homepage mit Bürger-App an. Damit wollen sie ein Signal für Digitalisierung und Bürgerfreundlichkeit setzen."
-    ],
-    "source": "Echo Online",
-    "url": "https://www.echo-online.de/lokales/odenwaldkreis/landkreis-odenwaldkreis/odenwaldkreis-so-zahlt-sich-zusammenarbeit-fuer-kommunen-aus-6867510"
-  },
-  {
-    "id": "hand-2026-11-16-623342142",
-    "checked": "2026-11-16",
-    "valid_until": "2026-11-26",
-    "categories": [
-      "sport"
-    ],
-    "title": "Mountainbike & Radfahren in Bad König: Das gibt es",
-    "paragraphs": [
-      "🚵 Trail Center Bad König am Grohberg: fünf naturbelassene Abfahrten plus Uphill, überwiegend leicht bis mittel (S0–S1). Einstieg am Parkplatz nach der Rosenhöhe (Kimbacher Straße 218, L3318 Richtung Kimbach).",
-      "🗺️ Offizielle MTB-Tour: Geo-Naturpark-Strecke Brombachtal BR1 (ca. 32 km).",
-      "🚴 Radwege: Hessischer Radfernweg R4, Rhein-Main-Vergnügen-Route 7 ab Bahnhof und 3-Länder-Radweg. Rundtouren ab Bahnhof: Panoramarunde Michelstadt (21 km) und Mümling-Gersprenztal (31 km).",
-      "ℹ️ Im Kurpark an den Seen bitte schieben – dort gilt Radfahrverbot.",
-      "Neu bei BDKNG: Alle Infos unter Sport → Fahrrad. Die BDKNG-KI beantwortet jetzt auch deine Fragen dazu."
-    ],
-    "source": "Mümlingtalradler, Odenwaldkreis, Outdooractive",
-    "url": "https://bdkng.de/sport.html#sp-rad"
-  },
-  {
-    "id": "hand-2026-11-16-491401418",
-    "checked": "2026-11-16",
-    "valid_until": "2026-11-26",
-    "categories": [
-      "sport"
-    ],
-    "title": "Fußball: SpVgg Kinzigtal – Ergebnisse vom Wochenende",
-    "paragraphs": [
-      "• So 15.11.: SpVgg Kinzigtal – SG Hainstadt/Rai-Breitenbach 1:0 ✅",
-      "• So 15.11.: SpVgg Kinzigtal II – SG Hainstadt/Rai-Breitenbach II 1:3 ❌",
-      "Nächste Spiele am Sonntag, 22.11.:",
-      "• 13:00 Uhr: SG Vielbrunn/Würzberg II – SpVgg Kinzigtal II",
-      "• 14:30 Uhr: VfR Würzberg – SpVgg Kinzigtal",
-      "Neu bei BDKNG: Die SpVgg Kinzigtal ist ab sofort fest im Sport-Überblick dabei."
-    ],
-    "source": "FuPa",
-    "url": "https://bdkng.de/sport.html#sp-fussball"
-  },
-  {
-    "id": "q-2026-11-16-mo995367751",
-    "checked": "2026-11-16",
-    "valid_until": "2026-11-26",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "TSG Bad König lädt zur außerordentlichen Mitgliederversammlung ein",
-    "paragraphs": [],
-    "source": "Bad Königer Stadtnachrichten (meinOrt)",
-    "url": "https://meinort.de/bad-koenig/neues/tsg-bad-koenig-laedt-zur-ausserordentlichen-mitgliederversammlung-ein-2173-2026-48-0-55761102"
-  },
-  {
-    "id": "q-2026-11-16-mo995463889",
-    "checked": "2026-11-16",
-    "valid_until": "2026-11-26",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "„Ohne Warum“ – zu einem Song von Konstantin Wecker, ein Abend auch für Menschen, die nach dem Sinn ihres …",
-    "paragraphs": [
-      "„Ohne Warum“ – zu einem Song von Konstantin Wecker, ein Abend auch für Menschen, die nach dem Sinn ihres Lebens fragen am Donnerstag, den 3. Dezember um 19:15 Uhr im Mühlenraum gegenüber vom Gasthaus „Alte Scheune“, Mühlstraße 28 in Bad König Welchen Sinn hat das Leben, wenn es keinen Sinn mehr zu haben scheint? Der Song „Ohne Warum“ („Absichtslos“) von Konstantin Wecker …"
-    ],
-    "source": "Bad Königer Stadtnachrichten (meinOrt)",
-    "url": "https://meinort.de/bad-koenig/neues/veranstaltungen-2173-2026-48-0-55764819"
-  },
-  {
-    "id": "medien-2026-11-12-256931796",
-    "checked": "2026-11-12",
-    "valid_until": "2026-11-26",
-    "categories": [
-      "verkehr"
-    ],
-    "title": "Nach zwei Wochen Sperrung: Zeller Ortsdurchfahrt wird wieder für Pkw freigegeben",
-    "paragraphs": [
-      "Autofahrer können ab Freitagnachmittag wieder durch Bad König-Zell fahren. Die sanierte Ortsdurchfahrt dient weiter als Umleitung für Pkw, bis die neue B45-Brücke fertig ist.",
-      "Frei zugänglich bei Odenwälder Journal · 5.11.2026 (Ankündigung der Freigabe); Hessen Mobil zur Sperrung: Die Vollsperrung der Ortsdurchfahrt Bad König/Zell ist aufgehoben: Seit Freitagnachmittag (6.11.) können Pkw den Abschnitt wieder befahren, nachdem er rund zwei Wochen gesperrt war. Laut Stadtverwaltung laufen noch letzte Asphalt- und Fugenarbeiten; danach …"
-    ],
-    "source": "Odenwälder Journal",
-    "url": "https://www.odw-journal.de/freie-fahrt-bei-bad-koenig-zell-ortsdurchfahrt-ab-freitagnachmittag-geoeffnet",
-    "weitere": [
-      {
-        "source": "Echo Online",
-        "url": "https://www.echo-online.de/lokales/odenwaldkreis/bad-koenig-odenwaldkreis/zeller-ortsdurchfahrt-wird-wieder-freigegeben-6701675"
-      }
-    ]
-  },
-  {
-    "categories": [
-      "verkehr",
-      "aktuell"
-    ],
-    "checked": "2026-11-12",
-    "id": "q-2026-11-12-164387793",
-    "paragraphs": [
-      "Fertigstellung der Behelfsumfahrung im Frühjahr 2027 – Brückenprüfung in der kommenden Woche.",
-      "Seit Ende 2025 wird im Auftrag von Hessen Mobil an einer Behelfsumfahrung samt Behelfsbrücke über die Mümling im Zuge der B 45 auf Höhe des Kurparks gebaut. Das alte Bauwerk ist nicht mehr instand zu setzen und wird durch einen Neubau ersetzt."
-    ],
-    "source": "Hessen Mobil · 12.11.2026",
-    "title": "B 45: Ersatzneubau der Unterführung Mümling bei Bad König",
-    "url": "https://mobil.hessen.de/presse/b-45-ersatzneubau-der-unterfuehrung-muemling-bei-bad-koenig-0",
-    "valid_until": "2026-11-26"
-  },
-  {
-    "categories": [
-      "verkehr"
-    ],
-    "checked": "2026-11-12",
-    "id": "verkehr-live-837739352",
-    "paragraphs": [
-      "Die B45 Michelstadt – Höchst im Odenwald ist zwischen dem Abzweig nach Asselbrunn und Bad König-Zell wegen einer Baustelle in beiden Richtungen bis Ende Juni 2027 gesperrt. Umleitungen sind eingerichtet.",
-      "Stand: 12.11.2026, 12:42 Uhr"
-    ],
-    "source": "hessenschau.de Verkehrsservice",
-    "title": "B45: Sperrung zwischen Asselbrunn und Bad König-Zell bis Ende Juni 2027",
-    "url": "https://www.hessenschau.de/verkehr/index.html#837739352",
-    "valid_until": "2026-11-26"
   },
   {
     "id": "genuss-hinweise",
