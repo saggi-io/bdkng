@@ -1,0 +1,29 @@
+{
+ "rubrik": "verkehr",
+ "titel": "E10 heute ab 1,70⁹ € bei Classic Brombachtal",
+ "ueber": "Fr. 27.11. · 07:30 Uhr",
+ "art": "liste",
+ "zeilen": [
+  {
+   "t": "Classic Brombachtal: E10 1,70⁹ · Diesel 1,96⁹",
+   "e": "⛽"
+  },
+  {
+   "t": "Jet Höchst: E10 1,70⁹ · Diesel 1,95⁹",
+   "e": "⛽"
+  },
+  {
+   "t": "Esso Bad König: E10 1,72⁹ · Diesel 1,99⁹",
+   "e": "⛽"
+  },
+  {
+   "t": "bft Bad König: E5 1,77⁹ · Diesel 1,97⁹",
+   "e": "⛽"
+  },
+  {
+   "t": "Heute: wechselnd bewölkt, -3 bis 1 °C",
+   "e": "⛅"
+  }
+ ],
+ "quelle": "MTS-K über Tankerkönig, DWD"
+}
