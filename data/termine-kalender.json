@@ -1,19 +1,10 @@
 {
- "stand": "2026-11-25T05:30",
- "von": "2026-11-25",
- "bis": "2027-03-25",
+ "stand": "2026-11-27T05:30",
+ "von": "2026-11-27",
+ "bis": "2027-03-27",
  "quelle": "Stadt Bad König, Veranstaltungskalender; Freilichtbühne Bad König (freilichtbuehne-bad-koenig.de)",
  "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/",
  "termine": [
-  {
-   "datum": "2026-11-26",
-   "bis": "",
-   "uhrzeit": "14:30",
-   "titel": "Seniorennachmittag der AWO Tagespflege",
-   "ort": "AWO Tagespflege, Schwimmbadstraße 2b",
-   "veranstalter": "",
-   "info": ""
-  },
   {
    "datum": "2026-11-28",
    "bis": "",
@@ -96,6 +87,15 @@
    "info": ""
   },
   {
+   "datum": "2026-12-06",
+   "bis": "",
+   "uhrzeit": "17:00",
+   "titel": "Der Nikolaus kommt nach Fürstengrund",
+   "ort": "Oberdorf / Dorfgemeinschaftshaus Fürstengrund",
+   "veranstalter": "RV-TTC",
+   "info": "Der Laternenumzug startet um 17 Uhr ab Oberdorf und läuft dann für die Bescherung bis zum DGH. Für das leibwliche Wohl ist bestens gesorgt."
+  },
+  {
    "datum": "2026-12-11",
    "bis": "2026-12-13",
    "uhrzeit": "",
@@ -130,6 +130,15 @@
    "ort": "AWO Tagespflege, Schwimmbadstraße 2b",
    "veranstalter": "",
    "info": ""
+  },
+  {
+   "datum": "2026-12-18",
+   "bis": "",
+   "uhrzeit": "19:00",
+   "titel": "Vortrag der Naturfreunde Bad König",
+   "ort": "Alte Schule Bad König, Schulstraße 7",
+   "veranstalter": "Naturfreunde Bad König",
+   "info": "\"China - Kapitalismus oder Sozialismus\" Referent: Willi Bischoff www.naturfreunde-bad-koenig.de"
   },
   {
    "datum": "2026-12-19",
@@ -247,6 +256,15 @@
    "ort": "Wandelhalle, Elisabethenstraße 7",
    "veranstalter": "",
    "info": "nähere Infos folgen!"
+  },
+  {
+   "datum": "2027-01-26",
+   "bis": "",
+   "uhrzeit": "19:00",
+   "titel": "Vortrag: \"Landnutzung in Zeiten des Klimawandels\"",
+   "ort": "Großer Saal der Rentmeisterei, Schlossplatz",
+   "veranstalter": "Naturfreunde Bad König",
+   "info": "Dr. Felix Prinz zu Löwenstein vom Hofgut - Habitzheim Eine Veranstaltung der Naturfreunde Bad König Eintritt ist frei!"
   },
   {
    "datum": "2027-01-30",
