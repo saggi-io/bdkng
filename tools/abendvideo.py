@@ -295,7 +295,7 @@ def render(D, OUT, tmp):
         text_alpha(im, (60, TOP + 105), titel, K.f('InterDisplay-Black.otf', 84), TIT(), a)
         y = TOP + 250
         for i, (em, kk, txt) in enumerate(DD['morgen']):
-            p = ease((t - 0.4 - i * 0.45) / 0.35)
+            p = ease((t - 0.4 - i * DD.get('schritt', 0.45)) / 0.35)
             if p <= 0: continue
             x0 = int(60 - 120 * (1 - p)); lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
             fz = K.f('Inter-Bold.otf', 54 if gross else 46); zh = 64 if gross else 56; ls = K.wrap(ld, txt, fz, W - 170 - (x0 + 140 + 34))[:3]; h = max(140, 50 + len(ls) * zh) + 30
@@ -311,6 +311,27 @@ def render(D, OUT, tmp):
         fuss(im, DD.get('fussquelle', 'Quelle: DWD, RESO, Stadt Bad König'))
         return im
     def vorschau2(t): return vorschau_x(t, D, 'Morgen in Bad König')
+    if D.get('typ') == 'woche':
+        # Wochenend-Werbevideo: starker Hook, dann schnelle Kartenseiten (Seite x/y), Abspann
+        def kartenseite(sei, nr, gesamt):
+            def f(t):
+                D2 = dict(D); D2['morgen_ueber'] = sei['ueber'] + '  ·  %d/%d' % (nr, gesamt); D2['morgen'] = sei['karten']; D2['fussquelle'] = sei.get('quelle', 'bdkng.de'); D2['schritt'] = schritt
+                return vorschau_x(t, D2, sei['titel'], sei.get('gross', False))
+            return f, 0.4 + len(sei['karten']) * schritt + sei.get('stand', 2.0) + extra
+        # Facebook (ältere Zuschauer): ruhiger – Karten langsamer, Seiten länger stehen lassen
+        schritt, extra = (0.45, 0.0) if STIL == 'c' else (0.65, 0.9)
+        def hook_w(t):
+            globals()['data'] = D
+            return intro_hook(t)
+        szenen = [('w0.mp4', 2.4 if STIL == 'c' else 3.0, hook_w)]
+        S = D['seiten']
+        for k, sei in enumerate(S):
+            fn, dau = kartenseite(sei, k + 1, len(S)); szenen.append(('w%d.mp4' % (k + 1), dau, fn))
+        szenen.append(('we.mp4', 2.2, ende))
+        for n_, d_, f_ in szenen: szene(os.path.join(tmp, n_), d_, f_)
+        open(os.path.join(tmp, 'liste.txt'), 'w').write(''.join("file '%s'\n" % x[0] for x in szenen))
+        subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', os.path.join(tmp, 'liste.txt'), '-c', 'copy', OUT], check=True)
+        print('Länge', round(sum(x[1] for x in szenen), 1)); return
     if STIL == 'c':
         # Instagram/TikTok: erst der Check (Blitzer, Sprit, Wetter, Events), dann nur 3 Meldungen
         J, jh = jung_daten(D); D['jung_hook'] = jh; data['jung_hook'] = jh

@@ -12,7 +12,9 @@
     var q = new URLSearchParams(location.search).get('stil'), w = null;
     try { if (q === 'c' || q === 'klassisch') localStorage.setItem('bdkngStil', q); w = localStorage.getItem('bdkngStil'); } catch (e) {}
     var app = /Instagram|TikTok|musical_ly|BytedanceWebview|trill/i.test(navigator.userAgent) || /instagram|tiktok/i.test(document.referrer) || /^(ig|instagram|tiktok|tt)$/i.test(new URLSearchParams(location.search).get('utm_source') || '');
-    var an = w ? w === 'c' : app;
+    // niu.bdkng.de: neuer Look als Standard (klassisch nur, wenn dort ausdrücklich gewählt)
+    var niu = /^niu\./i.test(location.hostname);
+    var an = niu ? w !== 'klassisch' : (w ? w === 'c' : app);
     if (an) { document.documentElement.classList.add('stil-c'); var los = function () { window.BDKNG_STIL(true); }; if (document.readyState !== 'loading') los(); else document.addEventListener('DOMContentLoaded', los); }
   } catch (e) {}
 })();

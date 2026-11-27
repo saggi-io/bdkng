@@ -38,3 +38,6 @@ html.stil-c #kompakt .cardbody .more{position:static;font-size:0;padding:0;margi
 html.stil-c #kompakt .cardbody .more::after{content:'';position:absolute;inset:0;border-radius:inherit}
 html.stil-c #aktuell h3::before{content:'📰 '}html.stil-c #verkehr h3::before{content:'🚧 '}html.stil-c #termine h3::before{content:'📅 '}html.stil-c #sport h3::before{content:'⚽ '}
 html.stil-c #genuss h3::before{content:'🍴 '}html.stil-c #wichtig h3::before{content:'⚠️ '}html.stil-c #wetter h3::before{content:'🌤️ '}html.stil-c #muell h3::before{content:'🗑️ '}
+html.stil-c .sozial-breit{background:linear-gradient(135deg,#FF7A59,#C86DD7);border:0;color:#fff;box-shadow:0 14px 34px rgba(200,109,215,.25)}
+html.stil-c .sozial-breit h2,html.stil-c .sozial-breit p{color:#fff}
+html.stil-c .sozial-breit .kicker{background:#fff;color:#C2456B}
