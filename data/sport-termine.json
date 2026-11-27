@@ -1,14 +1,7 @@
 {
- "stand": "2026-11-26T06:00",
+ "stand": "2026-11-27T06:00",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
-  {
-   "time": "19:30",
-   "date": "2026-11-26",
-   "home": "FC Finkenbachtal II",
-   "away": "Spvgg Kinzigtal II",
-   "team": "k2"
-  },
   {
    "time": "14:00",
    "date": "2026-11-29",
@@ -36,6 +29,13 @@
    "home": "SG Bad König/Zell",
    "away": "VfL Michelstadt",
    "team": "m1"
+  },
+  {
+   "time": "19:30",
+   "date": "2027-02-18",
+   "home": "FC Finkenbachtal II",
+   "away": "Spvgg Kinzigtal II",
+   "team": "k2"
   },
   {
    "date": "2027-02-21",
@@ -984,7 +984,7 @@
    "verein": "TTC Kimbach",
    "home": "TTC Kimbach IV",
    "away": "SV 1908 Falken-Gesäß III",
-   "erg": ""
+   "erg": "5:5"
   },
   {
    "date": "2026-11-26",
@@ -993,7 +993,7 @@
    "verein": "TTC Kimbach",
    "home": "KSG Hetschbach",
    "away": "TTC Kimbach II",
-   "erg": ""
+   "erg": "6:4"
   },
   {
    "date": "2026-11-28",
