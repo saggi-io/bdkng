@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-25",
+ "stand": "2026-11-27",
  "quelle": "Von BDKNG eingetragen (z. B. aus Beiträgen von Vereinen und Geschäften)",
  "termine": [
   {
@@ -27,6 +27,14 @@
    "quelle": "Blutspende Bad König (Plakat, Quelle im Screenshot nicht erkennbar)"
   },
   {
+   "datum": "2026-12-02",
+   "bis": "",
+   "uhrzeit": "16:00",
+   "titel": "Budenzauber auf der Weihnachtsmarkt-Terrasse (bis 19 Uhr) – Weihnachtsmusik, Leckereien wie auf dem Weihnachtsmarkt, warme Decken; bei Kälte auch drinnen im Café & Restaurant „Parkblick“",
+   "ort": "Residenz & Hotel „Am Kurpark“ Bad König",
+   "quelle": "Residenz & Hotel „Am Kurpark“ (Facebook)"
+  },
+  {
    "datum": "2026-12-05",
    "bis": "",
    "uhrzeit": "14:00",
@@ -41,6 +49,30 @@
    "titel": "Büdchenzauber am Café ENDLICH – Glühwein, Schmalzbrote, heiße Würstchen und Brezeln (bis 21 Uhr)",
    "ort": "Café ENDLICH, Schulstraße 3",
    "quelle": "Café ENDLICH (Flyer)"
+  },
+  {
+   "datum": "2026-12-09",
+   "bis": "",
+   "uhrzeit": "16:00",
+   "titel": "Budenzauber auf der Weihnachtsmarkt-Terrasse (bis 19 Uhr) – Weihnachtsmusik, Leckereien wie auf dem Weihnachtsmarkt, warme Decken; bei Kälte auch drinnen im Café & Restaurant „Parkblick“",
+   "ort": "Residenz & Hotel „Am Kurpark“ Bad König",
+   "quelle": "Residenz & Hotel „Am Kurpark“ (Facebook)"
+  },
+  {
+   "datum": "2026-12-16",
+   "bis": "",
+   "uhrzeit": "16:00",
+   "titel": "Budenzauber auf der Weihnachtsmarkt-Terrasse (bis 19 Uhr) – Weihnachtsmusik, Leckereien wie auf dem Weihnachtsmarkt, warme Decken; bei Kälte auch drinnen im Café & Restaurant „Parkblick“",
+   "ort": "Residenz & Hotel „Am Kurpark“ Bad König",
+   "quelle": "Residenz & Hotel „Am Kurpark“ (Facebook)"
+  },
+  {
+   "datum": "2026-12-23",
+   "bis": "",
+   "uhrzeit": "16:00",
+   "titel": "Budenzauber auf der Weihnachtsmarkt-Terrasse (bis 19 Uhr) – Weihnachtsmusik, Leckereien wie auf dem Weihnachtsmarkt, warme Decken; bei Kälte auch drinnen im Café & Restaurant „Parkblick“",
+   "ort": "Residenz & Hotel „Am Kurpark“ Bad König",
+   "quelle": "Residenz & Hotel „Am Kurpark“ (Facebook)"
   },
   {
    "datum": "2027-01-14",
