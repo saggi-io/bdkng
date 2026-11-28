@@ -1,0 +1,52 @@
+{
+ "titel": "Der Tag in Bad König",
+ "ueber": "Sa. 28.11. · 19:30 Uhr",
+ "quelle": "Feuerwehr Bad König, Echo Online",
+ "zeilen": [
+  {
+   "t": "Zwei Feuerwehreinsätze: Kaminbrand-Alarm in Kimbach, CO-Alarm in Bad König",
+   "r": "wichtig",
+   "k": "Wichtig"
+  },
+  {
+   "t": "Spitzenreiter FSV Erbach auch gegen Bad König/Zell gewarnt",
+   "r": "sport",
+   "k": "Sport"
+  }
+ ],
+ "morgen_ueber": "So. 29.11.",
+ "morgen": [
+  [
+   "☁️",
+   "Wetter",
+   "Bedeckt, -2 bis 1 °C"
+  ],
+  [
+   "📅",
+   "Termine",
+   "10:30 Uhr: Georg-Vetter-Museum · 14:00 Uhr: Tanz & Tee"
+  ],
+  [
+   "⛽",
+   "Tanken",
+   "E10 ab 1,67 € (Reichelsheim), Diesel ab 1,96 €"
+  ]
+ ],
+ "mitmachen": [
+  [
+   "📣",
+   "Blitzer & Stau",
+   "Gesehen? Auf bdkng.de melden"
+  ],
+  [
+   "🤖",
+   "BDKNG-KI",
+   "Frag einfach: Müll, Termine, Öffnungszeiten"
+  ],
+  [
+   "📅",
+   "Termin melden",
+   "Dein Verein feiert? Einfach eintragen"
+  ]
+ ]
+}
