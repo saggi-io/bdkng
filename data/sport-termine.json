@@ -1,27 +1,13 @@
 {
- "stand": "2026-11-28T17:40",
+ "stand": "2026-11-28T19:40",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
-  {
-   "time": "14:00",
-   "date": "2026-11-29",
-   "home": "Spvgg Kinzigtal II",
-   "away": "SG Rothenberg II",
-   "team": "k2"
-  },
   {
    "date": "2026-11-29",
    "time": "14:30",
    "home": "FSV Erbach",
    "away": "SG Bad König/Zell",
    "team": "m1"
-  },
-  {
-   "date": "2026-11-29",
-   "time": "14:30",
-   "home": "SG Rimhorn/Neustadt II",
-   "away": "SG Bad König/Zell II",
-   "team": "m2"
   },
   {
    "date": "2026-12-06",
@@ -961,8 +947,8 @@
    "team": "Frauen",
    "home": "HSG Odenwald",
    "away": "HSG Sulzbach/Leidersbach",
-   "hg": 4,
-   "ag": 4
+   "hg": 24,
+   "ag": 35
   },
   {
    "date": "2026-11-28",
@@ -970,8 +956,26 @@
    "team": "Männer",
    "home": "HSG Stockstadt/Mainaschaff II",
    "away": "HSG Odenwald III",
+   "hg": 32,
+   "ag": 30
+  },
+  {
+   "date": "2026-11-28",
+   "liga": "M-BOL",
+   "team": "Männer",
+   "home": "HSG Odenwald",
+   "away": "HSG Sulzbach/Leidersbach",
+   "hg": 5,
+   "ag": 5
+  },
+  {
+   "date": "2026-11-28",
+   "liga": "M-BL",
+   "team": "Männer",
+   "home": "HSG Stockstadt/Mainaschaff",
+   "away": "HSG Odenwald II",
    "hg": 8,
-   "ag": 4
+   "ag": 3
   },
   {
    "date": "2026-11-21",
