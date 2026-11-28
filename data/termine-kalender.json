@@ -1,7 +1,7 @@
 {
- "stand": "2026-11-27T05:30",
- "von": "2026-11-27",
- "bis": "2027-03-27",
+ "stand": "2026-11-28T05:30",
+ "von": "2026-11-28",
+ "bis": "2027-03-28",
  "quelle": "Stadt Bad König, Veranstaltungskalender; Freilichtbühne Bad König (freilichtbuehne-bad-koenig.de)",
  "url": "https://www.badkoenig.de/kultur-freizeit/veranstaltungen/veranstaltungskalender/",
  "termine": [
@@ -49,6 +49,15 @@
    "ort": "Wandelhalle Bad König",
    "veranstalter": "Kurgesellschaft Bad König",
    "info": ""
+  },
+  {
+   "datum": "2026-12-05",
+   "bis": "",
+   "uhrzeit": "16:00",
+   "titel": "Hofweihnacht in Etzen-Gesäß",
+   "ort": "Erbacher Straße 12 / 12a",
+   "veranstalter": "",
+   "info": "kleiner, familiärer Weihnachtsmarkt mit: verschiedene WürstchenartenWaffeln mit verschiedenen ToppingsKinderpunschGlühweinKakao - optional mit SahneKakao mit Amaretto - optional mit SahneKalte GetränkeKinderkarussell auf Spendenbasis mit wunderschöner Weihnachtsmusik für Kinder Der gesamte Erlös wir"
   },
   {
    "datum": "2026-12-05",
