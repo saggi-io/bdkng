@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-28T06:00",
+ "stand": "2026-11-28T17:40",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
   {
@@ -947,6 +947,33 @@
  ],
  "handball_ergebnisse": [
   {
+   "date": "2026-11-28",
+   "liga": "F-BL",
+   "team": "Frauen",
+   "home": "HSG Odenwald II",
+   "away": "HSG Sulzbach/Leidersbach II",
+   "hg": 38,
+   "ag": 31
+  },
+  {
+   "date": "2026-11-28",
+   "liga": "F-BOL",
+   "team": "Frauen",
+   "home": "HSG Odenwald",
+   "away": "HSG Sulzbach/Leidersbach",
+   "hg": 4,
+   "ag": 4
+  },
+  {
+   "date": "2026-11-28",
+   "liga": "M-BK-2",
+   "team": "Männer",
+   "home": "HSG Stockstadt/Mainaschaff II",
+   "away": "HSG Odenwald III",
+   "hg": 8,
+   "ag": 4
+  },
+  {
    "date": "2026-11-21",
    "liga": "F-BL",
    "team": "Frauen",
@@ -1200,6 +1227,14 @@
    "veranstalter": "TSG Bad König",
    "ort": "Sportzentrum Bad König",
    "url": "https://odenwald.hlv.de/home/veranstaltungen/sportveranstaltungen"
+  },
+  {
+   "date": "2027-01-16",
+   "time": "",
+   "titel": "Ehrungsabend für 2026",
+   "veranstalter": "",
+   "ort": "Wandelhalle Bad König",
+   "url": "https://odenwald.hlv.de/home/veranstaltungen/alle-veranstaltungen-1-4"
   }
  ]
 }
