@@ -1,5 +1,22 @@
 [
   {
+    "id": "hand-2026-11-28-231335657",
+    "checked": "2026-11-28",
+    "valid_until": "2026-12-08",
+    "categories": [
+      "wichtig",
+      "aktuell"
+    ],
+    "title": "Zwei Feuerwehreinsätze: Kaminbrand-Alarm in Kimbach, CO-Alarm in Bad König",
+    "paragraphs": [
+      "Am Freitagnachmittag (27.11.) wurde in Kimbach ein Kaminbrand gemeldet. Vor Ort stellte sich heraus, dass ein Ofen ordnungsgemäß lief – beim Anheizen war nur kurzzeitig mehr Rauch entstanden. Alarmiert waren die Wehren aus Kimbach, Bad König, Fürstengrund, Kinzigtal, Zell und Höchst.",
+      "Gegen 22:30 Uhr meldete dann ein Warnmelder in einem Gartenhaus in Bad König Alarm. Es handelte sich um einen CO-Melder, und tatsächlich lag eine erhöhte Kohlenmonoxid-Konzentration vor. Die Feuerwehr erinnert: CO ist unsichtbar und geruchlos – ein CO-Melder kann Leben retten."
+    ],
+    "source": "Feuerwehr Bad König (Facebook)",
+    "url": "https://bdkng.de",
+    "zeit": "10:17"
+  },
+  {
     "id": "bahn-2026-11-28",
     "checked": "2026-11-28",
     "zeit": "09:00",
