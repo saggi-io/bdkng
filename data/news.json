@@ -91,22 +91,6 @@
     "url": "https://meinort.de/bad-koenig/neues/veranstaltungen-2173-2026-49-0-55180149"
   },
   {
-    "id": "2026-11-26-wetter",
-    "checked": "2026-11-26",
-    "zeit": "19:00",
-    "valid_until": "2026-11-29",
-    "categories": [
-      "wetter"
-    ],
-    "title": "WETTER · Die nächsten 3 Tage",
-    "paragraphs": [
-      "Freitag, 27.11.: wechselnd bewölkt, -3 bis 0 °C. Frost möglich  Samstag, 28.11.: wechselnd bewölkt, -3 bis 1 °C. Frost möglich  Sonntag, 29.11.: bedeckt, -3 bis 1 °C. Frost möglich",
-      "Amtliche WARNUNG vor FROST (Do 16:00 bis Fr 12:00 Uhr)"
-    ],
-    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
-    "url": "https://bdkng.de"
-  },
-  {
     "id": "q-2026-11-26-mo199697334",
     "checked": "2026-11-26",
     "zeit": "12:00",
@@ -652,34 +636,6 @@
     ],
     "source": "Kurgesellschaft Bad König / Odenwald-Therme (Instagram)",
     "url": "https://www.instagram.com/odenwaldtherme/"
-  },
-  {
-    "id": "q-2026-11-17-mo529488835",
-    "checked": "2026-11-17",
-    "valid_until": "2026-11-27",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Verkauf von Georg Vetter Weihnachtskarten",
-    "paragraphs": [
-      "Die besonderen Georg Vetter-Weihnachtskarten sind auch dieses Jahr wieder in der Literaturhandlung Paperback Steiger, Bad König, Bahnhofsstraße 43 zu erhalten. Auch im Georg Vetter Museum, sonntags von 10 Uhr 30 bis 12 Uhr können Sie sie erwerben, -ein liebevoller Gruß aus dem Odenwald für Verwandte, Freunde und Bekannte. Das Georg Vetter Schaufenster wird wie immer von …"
-    ],
-    "source": "Bad Königer Stadtnachrichten (meinOrt)",
-    "url": "https://meinort.de/bad-koenig/neues/verkauf-von-georg-vetter-weihnachtskarten-2173-2026-48-0-46985892"
-  },
-  {
-    "id": "q-2026-11-17-mo529393510",
-    "checked": "2026-11-17",
-    "valid_until": "2026-11-27",
-    "categories": [
-      "aktuell"
-    ],
-    "title": "Zeugenaufruf Sachbeschädigung",
-    "paragraphs": [
-      "Am späten Montagvormittag wurde die Blumenschale, die zum Gedenken an die Pogromnacht an der ehemaligen Synagoge in der Alexanderstraße niedergelegt wurde, in die Kimbach geworfen. Wer hat etwas gesehen? Hinweise werden an die Polizei Erbach Telefon 06062-953-0 oder an die Ordnungsbehörde Bad König Telefon 06063-5009-22 oder 06063-5009-47 erbeten. Frank Hofferbert Bürgermeister"
-    ],
-    "source": "Bad Königer Stadtnachrichten (meinOrt)",
-    "url": "https://meinort.de/bad-koenig/neues/zeugenaufruf-sachbeschaedigung-2173-2026-48-0-46982232"
   },
   {
     "id": "q-2026-11-17-615276112",
