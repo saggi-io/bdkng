@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-27T06:00",
+ "stand": "2026-11-28T06:00",
  "quelle": "FuPa, nuLiga, click-TT, HLV Kreis Odenwald",
  "spiele": [
   {
@@ -875,18 +875,18 @@
   {
    "date": "2026-11-28",
    "time": "17:30",
-   "liga": "F-BOL",
-   "team": "Frauen",
-   "home": "HSG Odenwald",
-   "away": "HSG Sulzbach/Leidersbach"
-  },
-  {
-   "date": "2026-11-28",
-   "time": "17:30",
    "liga": "M-BK-2",
    "team": "Männer",
    "home": "HSG Stockstadt/Mainaschaff II",
    "away": "HSG Odenwald III"
+  },
+  {
+   "date": "2026-11-28",
+   "time": "17:30",
+   "liga": "F-BOL",
+   "team": "Frauen",
+   "home": "HSG Odenwald",
+   "away": "HSG Sulzbach/Leidersbach"
   },
   {
    "date": "2026-11-28",
@@ -927,6 +927,22 @@
    "team": "Männer",
    "home": "HSG Odenwald",
    "away": "HSG Aschafftal"
+  },
+  {
+   "date": "2026-12-12",
+   "time": "13:00",
+   "liga": "F-BL",
+   "team": "Frauen",
+   "home": "HSG Haibach/Glattbach II",
+   "away": "HSG Odenwald II"
+  },
+  {
+   "date": "2026-12-12",
+   "time": "17:00",
+   "liga": "M-BOL",
+   "team": "Männer",
+   "home": "HSG Haibach/Glattbach",
+   "away": "HSG Odenwald"
   }
  ],
  "handball_ergebnisse": [
