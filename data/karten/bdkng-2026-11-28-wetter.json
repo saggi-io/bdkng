@@ -1,0 +1,25 @@
+{
+ "rubrik": "wetter",
+ "titel": "Achtung: Warnung vor Frost",
+ "ueber": "Sa. 28.11. · 19:00 Uhr",
+ "art": "liste",
+ "zeilen": [
+  {
+   "t": "Sonntag, 29.11.: bedeckt, -2 bis 1 °C. Frost möglich",
+   "e": "☁️"
+  },
+  {
+   "t": "Montag, 30.11.: bedeckt, 0 bis 3 °C",
+   "e": "☁️"
+  },
+  {
+   "t": "Dienstag, 01.12.: bedeckt, 0 bis 2 °C. Frost möglich",
+   "e": "☁️"
+  },
+  {
+   "t": "Amtliche WARNUNG vor FROST (Sa 16:00 bis So 11:00 Uhr)",
+   "e": "⚠️"
+  }
+ ],
+ "quelle": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev"
+}
