@@ -2,15 +2,15 @@
   {
     "id": "bahn-2026-11-28",
     "checked": "2026-11-28",
-    "zeit": "06:30",
+    "zeit": "09:00",
     "valid_until": "2026-11-28",
     "categories": [
       "verkehr"
     ],
     "title": "Odenwaldbahn: Zugausfall ab Bad König",
     "paragraphs": [
-      "RE 85 (Zug 25154) Bad König → Frankfurt Hbf, 08:04: fällt aus",
-      "Stand: 28.11.2026, 06:30 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
+      "RB 82 (Zug 25163) Bad König → Erbach, 10:35: fällt aus",
+      "Stand: 28.11.2026, 09:00 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
     ],
     "source": "Echtzeitdaten der Deutschen Bahn",
     "url": "https://dbf.finalrewind.org/Bad%20K%C3%B6nig"
