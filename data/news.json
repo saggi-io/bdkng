@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-11-28-wetter",
+    "checked": "2026-11-28",
+    "zeit": "19:00",
+    "valid_until": "2026-12-01",
+    "categories": [
+      "wetter"
+    ],
+    "title": "WETTER · Die nächsten 3 Tage",
+    "paragraphs": [
+      "Sonntag, 29.11.: bedeckt, -2 bis 1 °C. Frost möglich  Montag, 30.11.: bedeckt, 0 bis 3 °C  Dienstag, 01.12.: bedeckt, 0 bis 2 °C. Frost möglich",
+      "Amtliche WARNUNG vor FROST (Sa 16:00 bis So 11:00 Uhr)"
+    ],
+    "source": "Deutscher Wetterdienst (DWD), Vorhersage über brightsky.dev",
+    "url": "https://bdkng.de"
+  },
+  {
     "id": "bahn-2026-11-28",
     "checked": "2026-11-28",
     "zeit": "17:30",
