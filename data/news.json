@@ -1,5 +1,22 @@
 [
   {
+    "id": "bahn-2026-11-28",
+    "checked": "2026-11-28",
+    "zeit": "17:30",
+    "valid_until": "2026-11-28",
+    "categories": [
+      "verkehr"
+    ],
+    "title": "Odenwaldbahn: Störung ab Bad König",
+    "paragraphs": [
+      "RE 85 (Zug 25145) Bad König → Erbach, 17:51: +14 Min – Unbefugte Personen auf der Strecke",
+      "RB 82 (Zug 25184) Bad König → Frankfurt Hbf, 18:19: +0 Min – Unbefugte Personen auf der Strecke",
+      "Stand: 28.11.2026, 17:30 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
+    ],
+    "source": "Echtzeitdaten der Deutschen Bahn",
+    "url": "https://dbf.finalrewind.org/Bad%20K%C3%B6nig"
+  },
+  {
     "id": "medien-2026-11-28-322647917",
     "checked": "2026-11-28",
     "valid_until": "2026-12-08",
@@ -30,22 +47,6 @@
     "url": "https://bdkng.de",
     "valid_until": "2026-12-08",
     "zeit": "10:17"
-  },
-  {
-    "id": "bahn-2026-11-28",
-    "checked": "2026-11-28",
-    "zeit": "09:00",
-    "valid_until": "2026-11-28",
-    "categories": [
-      "verkehr"
-    ],
-    "title": "Odenwaldbahn: Zugausfall ab Bad König",
-    "paragraphs": [
-      "RB 82 (Zug 25163) Bad König → Erbach, 10:35: fällt aus",
-      "Stand: 28.11.2026, 09:00 Uhr. Bitte vor der Fahrt die aktuelle Verbindung prüfen."
-    ],
-    "source": "Echtzeitdaten der Deutschen Bahn",
-    "url": "https://dbf.finalrewind.org/Bad%20K%C3%B6nig"
   },
   {
     "id": "2026-11-27-wetter",
